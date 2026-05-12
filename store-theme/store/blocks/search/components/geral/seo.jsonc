@@ -1,0 +1,17 @@
+{
+  "flex-layout.row#text-seo-search": {
+    "title": "Texto SEO",
+    "children": ["flex-layout.col#text-seo-search"],
+    "props": {
+      "blockClass": "text-seo-search"
+    }
+  },
+  "flex-layout.col#text-seo-search": {
+    "children": ["collapsible-text#text-seo-search"],
+    "props": {
+      "blockClass": "text-seo-search"
+    }
+  },
+
+  "collapsible-text#text-seo-search": {}
+}

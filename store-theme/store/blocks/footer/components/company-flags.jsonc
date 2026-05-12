@@ -1,0 +1,36 @@
+{
+    "flex-layout.row#company-flags": {
+      "children": [
+        "rich-text#company-text",
+        "image-new-custom#group-company-logo"
+      ],
+      "props": {
+        "blockClass": "company-flags",
+        "preserveLayoutOnMobile": true,
+        "preventHorizontalStretch": true,
+        "colSizing": "auto",
+        "fullWidth": true
+      }
+    },
+    "rich-text#company-text": {
+        "title": "Texto Grupo GG10",
+        "props": {
+            "text": "UMA EMPRESA",
+            "blockClass": "company-text"
+        }
+    },
+    "image-new-custom#group-company-logo": {
+      "title": "Logo Grupo GG10",
+      "props": {
+        "width": "116px",
+        "height": "24px",
+        "alt": "Logo Grupo GG10",
+        "src": "assets/imgs/logo-grupo-gg10.png",
+        "blockClass": "company-flag",
+        "link": {
+          "url": "https://grupogg10.com.br/",
+          "newTab": true
+        }
+      }
+    }
+  }

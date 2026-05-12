@@ -1,0 +1,34 @@
+@import "../../../global/";
+
+.heading--header-floating-buttons-customer-support-title,
+.paragraph--header-floating-buttons-customer-support-title {
+  margin: 0;
+}
+
+.wrapper--header-floating-buttons-customer-support-title {
+  @include text(5, $white, $fontBold);
+  line-height: 16px; 
+}
+
+.heading--header-floating-buttons-customer-support-title {
+  font-size: inherit; 
+  font-weight: $fontExtraBold;
+  text-transform: uppercase;
+}
+
+.container--customer-support-item {
+  max-width: 270px;
+  margin: 0 auto 0 0;
+}
+
+.heading--customer-support-item {
+  margin: 0 0 8px 0;
+
+  @include text(4, $black, $fontExtraBold);
+}
+
+.paragraph--customer-support-item {
+  margin: 0;
+
+  @include textConfig($dark-grey, 13, $fontRegular, 16, left, initial, 0);
+}

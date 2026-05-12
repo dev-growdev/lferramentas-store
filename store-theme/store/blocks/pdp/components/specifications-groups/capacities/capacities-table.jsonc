@@ -1,0 +1,15 @@
+{
+  "product-specification-group#capacities": {
+    "props": {
+      "filter": {
+        "type": "show",
+        "specificationGroups": [
+          "Capacidades"
+        ]
+      }
+    },
+    "children": [
+      "flex-layout.row#spec-group-no-title"
+    ]
+  }
+}

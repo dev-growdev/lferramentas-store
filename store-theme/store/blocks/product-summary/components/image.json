@@ -1,0 +1,37 @@
+{
+  "stack-layout#prodsum": {
+    "title": "Container Imagem Produto",
+    "children": [
+      "product-summary-image-custom#main-product-summary",
+      "add-to-list-btn#prodsum-wishlist",
+      "app-flags--desktop-render-product-summary",
+      "app-flags--mobile-render-product-summary",
+      "flex-layout.row#container-highlights",
+      "flex-layout.row#container-highlights-bottom-mob",
+      "similar-products-variants-helper" 
+    ]
+  },
+  "product-summary-image-custom#main-product-summary": {
+    "props": {
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "blockClass": "main-product-summary"
+    }
+  },
+  "app-flags--desktop-render-product-summary": {
+    "props": {
+      "blockClass": [
+        "container__custom-flag",
+        "container__custom-flag--desktop"
+      ]
+    }
+  },
+  "app-flags--mobile-render-product-summary": {
+    "props": {
+      "blockClass": [
+        "container__custom-flag",
+        "container__custom-flag--mobile"
+      ]
+    }
+  }
+}

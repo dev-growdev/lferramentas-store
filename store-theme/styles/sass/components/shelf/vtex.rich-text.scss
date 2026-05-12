@@ -1,0 +1,20 @@
+@import '../../global';
+
+.container--unavailable {
+  .paragraph--unavailable {
+    margin-top: 20px;
+    @include textConfig($dark-gray-03, 14, $fontBold, 20, center, initial, 0);
+  }
+}
+
+.paragraph {
+  &--container__main-selling-price {
+    font-size: 0;
+    line-height: 1;
+
+    @include mq('1024') {
+      @include textConfig($black, 12, $fontRegular, 18);
+      margin: 0;
+    }
+  }
+}

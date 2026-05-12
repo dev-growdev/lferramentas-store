@@ -1,0 +1,92 @@
+@import '../../../global';
+
+.infoCardContainer {
+  &--info-card-coupons-black {
+    border: 2px solid $secondary-color;
+  }
+}
+
+.infoCardHeadline,
+.infoCardSubhead {
+  &--info-card-coupons {
+    &.infoCardHeadline--info-card-coupons-black {
+      @include textConfig($white, 20, $fontBold, 25, center, uppercase, 0);
+
+      @include mq('1026') {
+        @include textConfig($white, 35, $fontBold, 44, left, uppercase, 0);
+      }
+    }
+
+    &.infoCardSubhead--info-card-coupons-black {
+      @include textConfig($white, 20, $fontRegular, 25, center, uppercase, 0);
+      width: 100%;
+
+      @include mq('1026') {
+        @include textConfig($white, 35, $fontRegular, 44, left, uppercase, 0);
+        width: fit-content;
+      }
+    }
+  }
+}
+
+.infoCardTextContainer {
+  &--info-card-coupons {
+    &.infoCardTextContainer--info-card-coupons-black {
+      padding: 20px 0;
+
+      @media (min-width: 376px) {
+        margin-left: 31%;
+      }
+
+      @include mq('1026') {
+        padding: 54px 0;
+        margin-left: 20%;
+      }
+    }
+  }
+}
+
+.imageElement {
+  &--banner-whatsapp-lp-bf {
+    @include mq('1026', max) {
+      padding: 0 16px;
+      box-sizing: border-box;
+    }
+
+    margin: auto;
+    margin-top: 5px;
+  }
+
+  &--lp-bf-deals {
+    display: block;
+  }
+
+  &--social-media-icons-lp-bf {
+    @include mq('1026', max) {
+      &--instagram {
+        max-width: 32px;
+        max-height: 32px;
+      }
+
+      &--facebook {
+        max-width: 20px;
+        max-height: 37px;
+      }
+
+      &--youtube {
+        max-width: 33px;
+        max-height: 23px;
+      }
+
+      &--linkedin {
+        max-width: 30px;
+        max-height: 30px;
+      }
+
+      &--blog {
+        max-width: 29px;
+        max-height: 29px;
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "product-summary.shelf#search-autocomplete": {
+    "props": {
+      "blockClass": "summary-search"
+    },
+    "children": ["flex-layout.row#product-summary-search"]
+  },
+  "flex-layout.row#product-summary-search": {
+    "children": [
+      "flex-layout.col#product-summary-search-image",
+      "flex-layout.col#product-summary-search"
+    ],
+    "props": {
+      "blockClass": "container__product-summary-search",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "flex-layout.col#product-summary-search-image": {
+    "props": {
+      "blockClass": "container__product-summary-search-image"
+    },
+    "children": ["product-summary-image#product-summary-search"]
+  },
+  "product-summary-image#product-summary-search": {
+    "props": {
+      "showBadge": false,
+      "height": 220
+    }
+  },
+  "flex-layout.col#product-summary-search": {
+    "props": {
+      "blockClass": "container__product-summary-search",
+      "preventVerticalStretch": true,
+      "width": "grow"
+    },
+    "children": [
+      "flex-layout.row#product-summary-name",
+      "condition-layout.product#availability-product-summary-search"
+    ]
+  },
+  "condition-layout.product#availability-product-summary-search": {
+    "title": "Condição Do Produto Shelf",
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "flex-layout.row#product-summary-available-search",
+      "Else": "flex-layout.row#product-summary-unavailable"
+    }
+  },
+  "flex-layout.row#product-summary-available-search": {
+    "children": [
+      "flex-layout.col#product-summary-container-prices-search",
+      "flex-layout.col#product-summary-container-prices-button"
+    ],
+    "props": {
+      "blockClass": "available__shelf-search",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "flex-layout.col#product-summary-container-prices-search": {
+    "props": {
+      "blockClass": "container__search-prices-col",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#product-summary-list-price",
+      "flex-layout.row#product-summary-selling-price-savings"
+    ]
+  },
+  "flex-layout.col#product-summary-container-prices-button": {
+    "props": {
+      "blockClass": "container__search-button-col",
+      "preventVerticalStretch": true
+    },
+    "children": ["add-to-cart-button"]
+  }
+}

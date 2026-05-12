@@ -1,0 +1,11 @@
+{
+  "form-input.text#inst-contact-us-input-name": {
+    "props": {
+      "blockClass": [
+        "inst-contact-us-input",
+        "inst-contact-us-input-name"
+      ],
+      "pointer": "#/properties/name"
+    }
+  }
+}

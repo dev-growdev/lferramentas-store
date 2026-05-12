@@ -1,0 +1,115 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.nameContainer {
+  padding-top: 8px;
+  padding-bottom: 0px;
+}
+
+.container--main {
+  background-color: #ffffff;
+}
+.container--main .nameContainer {
+  padding-top: 5px;
+}
+@media only screen and (min-width: 1026px) {
+  .container--main .nameContainer {
+    padding-top: 8px;
+  }
+}
+.container--main .brandName {
+  color: #000000;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin-bottom: 8px;
+  min-height: 48px;
+  -webkit-line-clamp: 3;
+}
+
+.brandName {
+  min-height: 60px;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  margin-bottom: 0px;
+}
+@media only screen and (min-width: 1026px) {
+  .brandName {
+    min-height: 40px;
+    -webkit-line-clamp: 2;
+  }
+}
+
+.container :global(.vtex-modal-layout-0-x-triggerContainer--quickview) {
+  opacity: 1;
+  display: inline-block;
+}
+
+.clearLink {
+  text-decoration: none;
+}
+
+.element {
+  border-radius: 10px;
+  padding: 12px 8px;
+  border: 1px solid #dddddd;
+}
+.element--main {
+  border: 1px solid transparent;
+  padding: 12px 8px;
+  max-width: 238px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  .element--main {
+    border: 1px solid #ffffff;
+  }
+}
+@media only screen and (min-width: 1026px) {
+  .element--main {
+    padding: 6px 8px 8px;
+  }
+}
+.element--main :global(.vtex-stack-layout-0-x-stackContainer) {
+  border-radius: 7px;
+}
+.element--main :global(.vtex-stack-layout-0-x-stackItem):last-child {
+  bottom: 0;
+  top: auto;
+  width: 100%;
+  border-radius: 7px;
+  display: none;
+}
+.element--main:hover {
+  border: 1px solid rgba(85, 90, 68, 0.5);
+}
+.element--main:hover :global(.vtex-stack-layout-0-x-stackItem):last-child {
+  display: block;
+}
+.element--main:hover :global(.vtex-flex-layout-0-x-flexRow--main-summary-buy-btn) :global(.vtex-button) {
+  background-color: #005a30;
+  border-radius: 8px;
+}
+@media only screen and (min-width: 1026px) {
+  .element--main .image {
+    aspect-ratio: 222/211;
+    max-height: 211px;
+  }
+}

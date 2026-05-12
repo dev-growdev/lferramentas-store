@@ -1,0 +1,39 @@
+{
+  "flex-layout.row#lp-bf-form": {
+    "title": "Formulário",
+    "props": {
+      "blockClass": "lp-bf-form"
+    },
+    "children": ["flex-layout.col#lp-bf-form-top"]
+  },
+  "flex-layout.col#lp-bf-form-top": {
+    "title": "Conteúdo a esquerda",
+    "props": {
+      "blockClass": "lp-bf-form-top"
+    },
+    "children": ["flex-layout.row#lp-bf-form-top", "news-bf"]
+  },
+  "flex-layout.row#lp-bf-form-top": {
+    "children": ["flex-layout.col#lp-bf-form-top-content"]
+  },
+  "flex-layout.col#lp-bf-form-top-content": {
+    "props": {
+      "blockClass": "lp-bf-form-top-content"
+    },
+    "children": ["rich-text#lp-bf-form-text-1", "rich-text#lp-bf-form-text-2"]
+  },
+  "rich-text#lp-bf-form-text-1": {
+    "title": "Texto de cima",
+    "props": {
+      "blockClass": "lp-bf-form-text-1",
+      "text": "Que tal receber as melhores promoções da Black Friday da LF Máquinas e Ferramentas antes de todo mundo?"
+    }
+  },
+  "rich-text#lp-bf-form-text-2": {
+    "title": "Texto de baixo",
+    "props": {
+      "blockClass": "lp-bf-form-text-2",
+      "text": "Cadastre-se agora para essa exclusividade:"
+    }
+  }
+}

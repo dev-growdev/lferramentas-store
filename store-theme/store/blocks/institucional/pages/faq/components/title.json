@@ -1,0 +1,9 @@
+{
+  "rich-text#inst-title-faq": {
+    "title": "Título Principal",
+    "props": {
+      "text": "Perguntas frequentes",
+      "blockClass": "inst-title"
+    }
+  }
+}

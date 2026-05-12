@@ -1,0 +1,7 @@
+:global(.vtex-disclosure-layout-1-x-trigger--lp-bf-question) :global(.vtex-store-icons-0-x-caretIcon) > * {
+  display: none;
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--lp-bf-deals-item) > :first-child {
+  flex-shrink: 0;
+}

@@ -1,0 +1,41 @@
+{
+  "store.custom#inst-page-shipping-policy": {
+    "blocks": [
+      "toggle-layout#inst-banner",
+      "flex-layout.row#inst-breadcrumb-shipping-policy",
+      "flex-layout.row#inst-body-shipping-policy"
+    ]
+  },
+  "flex-layout.row#inst-body-shipping-policy": {
+    "title": "Container Política de Entrega",
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": [
+        "inst-body",
+        "inst-body--shipping-policy"
+      ]
+    },
+    "children": [
+      "flex-layout.col#inst-menu",
+      "flex-layout.col#inst-content-and-title-shipping-policy"
+    ]
+  },
+  "flex-layout.col#inst-content-and-title-shipping-policy": {
+    "title": "Container Título e Conteúdo",
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "inst-content-container"
+      ]
+    },
+    "children": [
+      "rich-text#inst-title-shipping-policy",
+      "rich-text#inst-text-shipping-policy-01",
+      "rich-text#inst-text-shipping-policy-02",
+      "rich-text#inst-text-shipping-policy-03",
+      "rich-text#inst-text-shipping-policy-04"
+    ]
+  }
+}

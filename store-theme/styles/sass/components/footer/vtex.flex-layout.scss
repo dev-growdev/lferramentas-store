@@ -1,0 +1,246 @@
+@import '../../global';
+
+.flexRow {
+  &--footer-social-media {
+    padding: 8px;
+    margin-top: 28px;
+
+    @include mq('1026') {
+      margin: 0;
+      padding: 0 {
+        top: 16px;
+      }
+    }
+  }
+
+  &--footer-payment-methods {
+    padding-top: 34px;
+
+    @include mq('1026') {
+      padding-top: 0;
+    }
+  }
+
+  &--footer-menu {
+    padding-top: 12px;
+
+    @include mq('1026') {
+      padding-top: 15px;
+    }
+  }
+
+  &--footer-menu-desktop {
+    padding: 36px 0 26px;
+  }
+
+  &--footer-logo-container {
+    margin-top: 33px;
+  }
+
+  &--newsletter-footer {
+    @include grid();
+  }
+}
+
+.flexRowContent {
+  &--footer-logo-container,
+  &--footer-social-media,
+  &--footer-menu,
+  &--footer-payment-methods,
+  &--footer-description,
+  &--security-flags,
+  &--company-flags,
+  &--avanti-flags,
+  &--footer-menu-desktop,
+  &--general-flags {
+    @include grid();
+  }
+
+  &--footer-menu {
+    padding: 0 31.5px;
+  }
+
+  &--newsletter-footer {
+    background-color: $primary-color;
+    border-radius: 15px;
+    padding: 21px 16px;
+    flex-direction: column;
+
+    @include mq('640') {
+      padding: 40px 16px;
+    }
+
+    @include mq('1026') {
+      flex-direction: row;
+      padding: 33px 40px;
+    }
+
+    @include mq('1300') {
+      padding: 33px 90px;
+    }
+
+    .stretchChildrenWidth:last-child {
+      @include mq('1026') {
+        width: 60.3% !important;
+      }
+    }
+  }
+
+  &--general-flags {
+    max-width: 1112px;
+    display: flex;
+    align-items: center;
+  }
+
+  &--footer-menu-desktop {
+    @include grid();
+  }
+
+  &--footer-social-media {
+    @include display-flex(center, flex, center, row);
+
+    @include mq('1024') {
+      padding: 0 0 0 1px;
+    }
+
+    .stretchChildrenWidth {
+      margin-right: 56px;
+      width: auto !important;
+
+      @include mq('1026') {
+        margin-right: 24px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &--footer-payment-methods {
+    max-width: 330px;
+    @include display-flex(center, flex, center, row);
+    flex-wrap: wrap;
+
+    @include mq('1026') {
+      max-width: unset;
+    }
+
+    .stretchChildrenWidth {
+      width: auto !important;
+
+      &:nth-child(5n),
+      &:last-child {
+        & :first-child {
+          margin-right: 0;
+        }
+      }
+
+      &:nth-child(5n) {
+        & :first-child {
+          @include mq('1026') {
+            margin-right: 33px;
+          }
+        }
+      }
+    }
+  }
+
+  &--footer-description {
+    padding: 34px 16px;
+    max-width: 1112px;
+
+    @include mq('1026') {
+      padding: 23px 16px;
+    }
+  }
+
+  &--company-flags {
+    @media (max-width: 999px) {
+      flex-direction: row !important;
+    }
+  }
+
+  &--company-flags,
+  &--security-flags {
+    @include display-flex(end, flex, center, row);
+    margin-bottom: 20px;
+
+    @include mq('1026') {
+      padding: 0;
+    }
+
+    @media (max-width: 999px) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &--security-flags {
+    align-items: center;
+
+    @media (max-width: 999px) {
+      flex-wrap: wrap;
+      column-gap: 24px;
+      row-gap: 30px;
+    }
+  }
+
+  .flexRowContent--security-pci-encrypt,
+  .flexRowContent--security-ebit-selo_ra {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+  }
+
+  &--avanti-flags {
+    @include display-flex(center, flex, center, row);
+    margin-bottom: 36px;
+  }
+}
+
+.flexCol {
+  &--collumn__institutional {
+    &--menu {
+      @include mq('1024') {
+        margin-top: 16px;
+        flex-wrap: wrap;
+        height: max-content;
+        align-items: stretch;
+      }
+    }
+  }
+}
+
+.flexColChild {
+  &--footer-menu-col {
+    border-bottom: 1px solid $white;
+  }
+
+  &--collumn__institutional {
+    &--menu {
+      @include mq('1024') {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+.flexRow--footer-row-revista-ofertas {
+  @include mq('1024', max) {
+    padding-top: 1.3rem;
+  }
+}
+
+.flexCol--footer-col-revista-ofertas,
+.flexRow--footer-solicitar-cotacao {
+  @media (max-width: 999px) {
+    padding: 0 25px;
+    gap: 1rem;
+  }
+
+  gap: 1.2rem;
+
+  :global(.vtex-store-components-3-x-imageElement--image-card-revista-ofertas) {
+    width: fit-content !important;
+  }
+}

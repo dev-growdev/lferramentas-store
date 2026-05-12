@@ -1,0 +1,80 @@
+{
+  "toggle-layout#shelf-03": {
+    "title": "Ativar/Desativar - Vitrine 03",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "flex-layout.row#shelf-03"
+    ]
+  },
+  "flex-layout.row#shelf-03": {
+    "title": "Vitrine 03",
+    "props": {
+      "blockClass": [
+        "container__shelf-row",
+        "grid1252",
+        "grid-mobile"
+      ],
+      "fullWidth": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.col#shelf-03"
+    ]
+  },
+  "flex-layout.col#shelf-03": {
+    "props": {
+      "blockClass": "container__shelf-col",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.row#shelf-03-title",
+      "flex-layout.row#shelf-demo-03"
+    ]
+  },
+  "flex-layout.row#shelf-03-title": {
+    "props": {
+      "blockClass": "container__shelf-row-text",
+      "fullWidth": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#shelf-title-03",
+      "rich-text#shelf-link-03"
+    ]
+  },
+  "rich-text#shelf-title-03": {
+    "title": "Título",
+    "props": {
+      "text": "## Hora de cuidar do jardim",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "rich-text#shelf-link-03": {
+    "title": "Link",
+    "props": {
+      "text": "[Ver mais](/jardim-e-lazer/ferramentas-de-jardinagem)",
+      "blockClass": "shelfLink"
+    }
+  },
+  "flex-layout.row#shelf-demo-03": {
+    "children": [
+      "list-context.product-list#demo3"
+    ]
+  },
+  "list-context.product-list#demo3": {
+    "blocks": [
+      "product-summary.shelf#main"
+    ],
+    "children": [
+      "slider-layout#demo-products"
+    ],
+    "props": {
+      "orderBy": "OrderByBestDiscountDESC",
+      "installmentCriteria": "MAX_WITHOUT_INTEREST",
+      "hideUnavailableItems": true,
+      "category": ""
+    }
+  }
+}

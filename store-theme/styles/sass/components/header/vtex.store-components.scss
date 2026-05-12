@@ -1,0 +1,136 @@
+@import '../../global';
+
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
+.logoContainer {
+  display: block;
+  margin-right: 2rem;
+  padding: 0;
+}
+
+.logoImage {
+  display: block;
+}
+
+.searchBarContainer {
+  padding: 0 {
+    bottom: 16px;
+  }
+
+  @include mq('1026') {
+    margin: auto;
+    padding: 0;
+  }
+
+  .autoCompleteOuterContainer {
+    width: 100%;
+
+    :global(.vtex-input) {
+      display: flex;
+      justify-content: flex-start;
+      border-radius: 0;
+
+      @include mq('1026') {
+        align-self: center;
+        min-width: 200px;
+      }
+    }
+  }
+
+  .resultsList {
+    position: fixed;
+    right: 50%;
+    left: 50%;
+    width: 90vw;
+    transform: translateX(-50%);
+
+    @include mq('1026') {
+      @include abs-position(auto, 0, auto, unset);
+      width: 285px;
+      transform: unset;
+    }
+  }
+
+  :global(.vtex-input-prefix__group) {
+    background-color: $dark-grey;
+    border: none;
+    border-radius: 0.625rem;
+    height: 2.5rem;
+    width: 100%;
+    max-width: 42.75rem;
+
+    :global(.vtex-styleguide-9-x-input) {
+      background-color: $dark-grey;
+      color: $medium-grey;
+      @include textConfig($medium-grey, 14, $fontSemiBold, 16);
+
+      &::placeholder {
+        @include textConfig($medium-grey, 14, $fontSemiBold, 16);
+
+        @include mq('1025', max) {
+          letter-spacing: -0.2px;
+        }
+      }
+    }
+
+    :global(.vtex-input__suffix) {
+      background-color: $dark-grey;
+
+      @include mq('1025', max) {
+        padding: 0 8px;
+      }
+    }
+  }
+}
+
+.searchBarInnerContainer {
+  @include mq('1026') {
+    .portalContainer {
+      z-index: 11 !important;
+    }
+
+    .portalContainer,
+    .portalWrapper {
+      position: absolute !important;
+      width: 100%;
+    }
+
+    .portalWrapper {
+      & :global(.vtex-search-2-x-biggy-autocomplete-wrapper) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.searchBarIcon {
+  width: 22px;
+  background: $icon-search no-repeat center;
+  padding: 0;
+
+  .searchIcon {
+    display: none;
+  }
+}
+
+.sizeDesktop {
+  @include mq('1026') {
+    padding-right: 3rem;
+    padding-left: 0;
+  }
+}
+
+.sizeMobile {
+  max-width: 131px;
+  margin: auto;
+}
+
+.imageElement--container-icon-wishlist {
+  align-items: center;
+  display: flex;
+  padding: 0 10px;
+  height: 100%;
+}

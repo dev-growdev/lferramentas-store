@@ -1,0 +1,108 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.infoCardContainer--info-card-coupons-black {
+  border: 2px solid #ffe72e;
+}
+
+.infoCardHeadline--info-card-coupons.infoCardHeadline--info-card-coupons-black,
+.infoCardSubhead--info-card-coupons.infoCardHeadline--info-card-coupons-black {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  line-height: 1.5625rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 1026px) {
+  .infoCardHeadline--info-card-coupons.infoCardHeadline--info-card-coupons-black,
+  .infoCardSubhead--info-card-coupons.infoCardHeadline--info-card-coupons-black {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 44px;
+    line-height: 2.75rem;
+    letter-spacing: 0rem;
+    text-align: left;
+    text-transform: uppercase;
+  }
+}
+.infoCardHeadline--info-card-coupons.infoCardSubhead--info-card-coupons-black,
+.infoCardSubhead--info-card-coupons.infoCardSubhead--info-card-coupons-black {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  line-height: 1.5625rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+@media only screen and (min-width: 1026px) {
+  .infoCardHeadline--info-card-coupons.infoCardSubhead--info-card-coupons-black,
+  .infoCardSubhead--info-card-coupons.infoCardSubhead--info-card-coupons-black {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 44px;
+    line-height: 2.75rem;
+    letter-spacing: 0rem;
+    text-align: left;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+}
+
+.infoCardTextContainer--info-card-coupons.infoCardTextContainer--info-card-coupons-black {
+  padding: 20px 0;
+}
+@media (min-width: 376px) {
+  .infoCardTextContainer--info-card-coupons.infoCardTextContainer--info-card-coupons-black {
+    margin-left: 31%;
+  }
+}
+@media only screen and (min-width: 1026px) {
+  .infoCardTextContainer--info-card-coupons.infoCardTextContainer--info-card-coupons-black {
+    padding: 54px 0;
+    margin-left: 20%;
+  }
+}
+
+.imageElement--banner-whatsapp-lp-bf {
+  margin: auto;
+  margin-top: 5px;
+}
+@media only screen and (max-width: 1025px) {
+  .imageElement--banner-whatsapp-lp-bf {
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+}
+.imageElement--lp-bf-deals {
+  display: block;
+}
+@media only screen and (max-width: 1025px) {
+  .imageElement--social-media-icons-lp-bf--instagram {
+    max-width: 32px;
+    max-height: 32px;
+  }
+  .imageElement--social-media-icons-lp-bf--facebook {
+    max-width: 20px;
+    max-height: 37px;
+  }
+  .imageElement--social-media-icons-lp-bf--youtube {
+    max-width: 33px;
+    max-height: 23px;
+  }
+  .imageElement--social-media-icons-lp-bf--linkedin {
+    max-width: 30px;
+    max-height: 30px;
+  }
+  .imageElement--social-media-icons-lp-bf--blog {
+    max-width: 29px;
+    max-height: 29px;
+  }
+}

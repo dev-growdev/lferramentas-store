@@ -1,0 +1,40 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+@media only screen and (max-width: 1025px) {
+  .couponsList--hasSlider .sliderTrackContainer {
+    margin-bottom: 24px;
+  }
+}
+@media only screen and (max-width: 1025px) {
+  .couponsList--hasSlider .paragraph {
+    font-size: 11px;
+    line-height: 12px;
+  }
+  .couponsList--hasSlider .paragraph .strong {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .couponsList--hasSlider .couponDiscount {
+    font-size: 22px;
+    line-height: 29px;
+  }
+  .couponsList--hasSlider .couponDiscountInteger {
+    font-size: 58px;
+    line-height: 76px;
+  }
+  .couponsList--hasSlider .couponDiscountDecimal {
+    font-size: 26px;
+    line-height: 33px;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .imageElement--lp-bf-promotion-cards-left {
+    display: flex;
+    margin: auto;
+  }
+}
+.imageElement--lp-bf-scrollcontent-left, .imageElement--lp-bf-scrollcontent-right {
+  display: block;
+}

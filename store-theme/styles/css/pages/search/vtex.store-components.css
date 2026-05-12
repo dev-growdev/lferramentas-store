@@ -1,0 +1,49 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.imageElement--banner-departamento {
+  margin: 12px 0 0;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.imageElement--banner-departamento-mobile {
+  --horizontal-padding-mobile: 11.2px;
+  width: 100vw;
+  max-width: 100vw;
+  height: auto;
+  object-fit: contain;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 14px;
+  margin-bottom: 8px;
+  margin-left: calc(var(--horizontal-padding-mobile) * -1);
+}
+
+.imageElementLink--banner-departamento {
+  display: flex;
+  margin-right: 11px;
+}
+.imageElementLink--banner-departamento-mobile {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+}
+
+.backToTopButtonContainer {
+  bottom: unset;
+  top: 50%;
+  right: 24px;
+}
+.backToTopButtonContainer :global(.vtex-button) {
+  height: 42px;
+  width: 42px;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='13' viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.965667 5.50512L2.38422 6.9332L5.48216 3.83526L5.48216 12.0386L7.48458 12.0386L7.48458 3.83526L10.5825 6.9332L12.0011 5.50512L6.48337 -4.50639e-05L0.965667 5.50512Z' fill='%23FFE72E'/%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border-color: #000000;
+}
+.backToTopButtonContainer :global(.vtex-button) :global(.vtex-button__label) {
+  display: none;
+}

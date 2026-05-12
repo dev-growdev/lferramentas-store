@@ -1,0 +1,90 @@
+@import '../../global/';
+
+.groupName {
+  @include text(4, $primary-color);
+  margin: 0 0 16px 0;
+
+  @include mq('1024') {
+    @include text(3, $primary-color, $fontBold);
+  }
+}
+
+.specification {
+  &Name {
+    @include textConfig($dark-gray, 13, $fontRegular, 19, left, initial, 0);
+
+    :global(.vtex-flex-layout-0-x-flexRow--container__description-pdp) & {
+      @include textConfig($dark-gray, 14, $fontBold, 17, left, initial, 0);
+    }
+  }
+
+  &Value {
+    @include textConfig($dark-gray, 14, $fontBold, 17, left, initial, 0);
+
+    :global(.vtex-flex-layout-0-x-flexRow--container__description-pdp) & {
+      @include textConfig($primary-color, 14, $fontBold, 17, left, initial, 0);
+      white-space: pre;
+    }
+  }
+}
+
+.specificationName {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 14px;
+  line-height: 22px;
+
+  &[data-specification-name="Peso"]
+  &[data-specification-name="Altura"],
+  &[data-specification-name="Largura"],
+  &[data-specification-name="Comprimento"] {
+    &::before {
+      content: "";
+
+      display: inline-block;
+      vertical-align: middle;
+      @include size(18px);
+
+      margin: 0 10px 0 0;
+
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &[data-specification-name="Altura"]::before {
+    // background-image: url(assets/icons/icon-measure-height.svg);
+    display: none;
+  }
+
+  &[data-specification-name="Largura"]::before {
+    // background-image: url(assets/icons/icon-measure-width.svg);
+    display: none;
+  }
+
+  &[data-specification-name="Comprimento"]::before {
+    // background-image: url(assets/icons/icon-measure-depth.svg);
+    display: none;
+  }
+
+  &[data-specification-name="Peso"]::before {
+    // background-image: url(assets/icons/icon-measure-weight.svg);
+    display: none;
+  }
+}
+
+.specificationValue {
+  word-wrap: break-word; 
+  word-break: break-word;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+
+  &:not(:last-child)::after {
+    /* '\00a0' is the character for white-space */
+    content: ',\00a0';
+  }
+}

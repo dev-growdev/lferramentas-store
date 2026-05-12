@@ -1,0 +1,34 @@
+{
+  "toggle-layout#text-seo-home": {
+    "title": "Ativar/Desativar text seo home",
+    "props": {
+      "renderChildren": true
+    },
+    "children": ["flex-layout.row#seo"]
+  },
+  "flex-layout.row#seo": {
+    "title": "SEO",
+    "props": {
+      "blockClass": ["container__seo"],
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#seo-col"]
+  },
+
+  "flex-layout.col#seo-col": {
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": "container__seo--content"
+    },
+    "children": ["collapsible-text#text-seo-home"]
+  },
+
+  "collapsible-text#text-seo-home": {
+    "props": {
+      "showContent": true,
+      "title": "##  LF Máquinas e Ferramentas",
+      "subtitle": "### A casa da indústria e do profissional",
+      "text": "### A LF Máquinas e Ferramentas é especializada no fornecimento de suprimentos que atende desde as grandes indústrias aos prestadores de serviços e empresas de diversos setores, fornece equipamentos e materiais para todo tipo de obra e trabalhos industriais que exigem qualidade, segurança e alto desempenho. A LF busca constantemente oferecer a melhor solução aos seus clientes e para isto, fortalece sua parceria junto às principais marcas de máquinas e ferramentas do mercado. Desde grandes obras até pequenas reformas, você encontra tudo o que precisa em um só lugar!"
+    }
+  }
+}

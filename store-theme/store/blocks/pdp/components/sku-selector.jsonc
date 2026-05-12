@@ -1,0 +1,20 @@
+{
+  "flex-layout.row#sku-selector": {
+    "title": "Container Seletor De SKU",
+    "props": {
+      "blockClass": "container__sku-selector",
+      "fullWidth": true
+    },
+    "children": [
+      "sku-selector"
+    ]
+  },
+  "sku-selector": {
+    "props": {
+      "variationsSpacing": 3,
+      "showValueNameForImageVariation": true,
+      "sortVariationsByLabel": true,
+      "maxItems": 20
+    }
+  }
+}

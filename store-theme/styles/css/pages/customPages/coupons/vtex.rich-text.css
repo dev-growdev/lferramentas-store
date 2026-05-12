@@ -1,0 +1,98 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.container--how-to-use-coupons {
+  background: #ffffff;
+}
+.container--requirements-coupons-text {
+  margin-top: 10px;
+}
+
+.paragraph--title-coupons {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  line-height: 1.5625rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin-top: 39px;
+  margin-bottom: 0;
+  padding: 0 16px;
+}
+@media only screen and (min-width: 1026px) {
+  .paragraph--title-coupons {
+    color: #000000;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    line-height: 2.5rem;
+    letter-spacing: 0rem;
+    text-align: left;
+    text-transform: initial;
+  }
+}
+.paragraph--how-to-use-coupons {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  line-height: 1.5625rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin-top: 39px;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1026px) {
+  .paragraph--how-to-use-coupons {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+.paragraph--how-to-use-coupons-card-number {
+  color: #ffffff;
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 100px;
+  line-height: 6.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin: 0;
+  margin-right: 15px;
+}
+.paragraph--how-to-use-coupons-card-text {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 20px 0 0;
+}
+.paragraph--requirements-coupons-title {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  line-height: 1.875rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 0;
+}
+.paragraph--requirements-coupons-text {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  line-height: 1.875rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 0;
+}

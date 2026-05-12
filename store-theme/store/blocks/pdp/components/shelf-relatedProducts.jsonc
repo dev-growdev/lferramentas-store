@@ -1,0 +1,37 @@
+{
+  "flex-layout.row#releated-shelf": {
+    "title": "Prateleira Relacionados",
+    "children": ["flex-layout.col#releated-shelf"],
+    "props": {
+      "blockClass": "container__releated-pdp",
+      "fullWidth": true
+    }
+  },
+  "flex-layout.col#releated-shelf": {
+    "children": ["rich-text#related-shelf-title", "related-shelf-custom"]
+  },
+  "rich-text#related-shelf-title": {
+    "title": "Título",
+    "props": {
+      "text": "## Quem viu, viu também!",
+      "blockClass": ["related-shelf__title", "shelfTitle"]
+    }
+  },
+  "related-shelf-custom": {
+    "title": "Slider",
+    "props": {
+      "recommendation": "view",
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 2
+      },
+      "showNavigationArrows": "desktopOnly",
+      "infinite": true,
+      "fullWidth": true,
+      "shelfTitle": "Quem viu, viu também",
+      "showTitle": true
+    },
+    "blocks": ["product-summary.shelf#main"]
+  }
+}

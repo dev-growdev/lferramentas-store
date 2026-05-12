@@ -1,0 +1,300 @@
+@import '../../../global';
+
+.wrapper {
+  &--text-lp-bf-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 0 16px;
+
+    @include mq('1026') {
+      padding: 0;
+    }
+  }
+
+  &--lp-bf-form-text-1,
+  &--lp-bf-form-text-2,
+  &--lp-bf-promotion-cards-right-title,
+  &--lp-bf-promotion-cards-right-description,
+  &--scroll-lp-bf-title {
+    width: 100%;
+  }
+
+  &--scroll-lp-bf-title {
+    padding-top: 45px;
+    margin-top: 45px;
+    background-color: $secondary-color;
+  }
+}
+
+.heading {
+  // titles
+  &--shelfTitle {
+    &.heading--title-brand-lp-bf,
+    &.heading--title-shelf-lp-bf {
+      color: $white;
+      margin-top: 40px;
+
+      @include mq('1026') {
+        margin-top: 72px;
+      }
+    }
+  }
+
+  &--lp-bf-social-media-title {
+    @include textConfig(#151515, 18, $fontBold, 23, center, initial, 0);
+    margin: 0;
+
+    @include mq('1026') {
+      font-size: 28px;
+      line-height: 35px;
+    }
+  }
+
+  &--lp-bf-faq-title {
+    @include textConfig($white, 18, $fontBold, 23, center, initial, 0);
+    margin: 0 {
+      bottom: 40px;
+    }
+
+    @include mq('1026') {
+      font-size: 28px;
+      line-height: 35px;
+    }
+  }
+
+  &--title-lp-bf {
+    @include textConfig($white, 18, $fontBold, 23, center, initial, 0);
+    margin: 42px 0 0;
+
+    @include mq('1026') {
+      margin: 51px 0 17px;
+      font-size: 28px;
+      line-height: 35px;
+    }
+  }
+}
+
+.paragraph {
+  // breadcrumb
+  &--inst-breadcrumb {
+    &-home {
+      &.paragraph--inst-breadcrumb-home-black {
+        color: $white;
+
+        .paragraph--inst-breadcrumb-home--link {
+          color: $white;
+        }
+      }
+    }
+
+    &-term {
+      &.paragraph--lp-bf-breadcrumb {
+        color: $white;
+        font-weight: $fontExtraBold;
+      }
+    }
+  }
+
+  &--title-categories-item {
+    &.paragraph--title-categories-item-lp-bf {
+      color: $white;
+      font-size: 15px;
+      line-height: 19px;
+    }
+  }
+
+  // texts
+
+  &--text-lp-bf-categories {
+    @include textConfig($white, 16, $fontRegular, 20, center, initial, 0);
+    margin: 0;
+    max-width: 1000px;
+
+    @include mq('1026') {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &--link-lp-bf-coupons {
+    @include textConfig($white, 16, $fontRegular, 20, center, initial, 0);
+    margin: 27px 0 0;
+    padding: 0 16px;
+
+    @include mq('1026') {
+      font-size: 18px;
+      line-height: 23px;
+      padding: 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &--lp-bf-slider-brand {
+    @include textConfig($white, 16, $fontRegular, 20, center, initial, 0);
+    margin: 0;
+    padding: 0 16px 0 8px;
+
+    @include mq('1026') {
+      font-size: 18px;
+      line-height: 23px;
+      padding: 0;
+    }
+  }
+
+  &--lp-bf-faq-question {
+    @include textConfig($white, 16, $fontBold, 20, left, initial, 0);
+    margin: 0;
+
+    @include mq('1026') {
+      font-size: 22px;
+      line-height: 28px;
+      text-align: center;
+    }
+  }
+
+  &--lp-bf-faq-answer {
+    @include textConfig($white, 16, $fontRegular, 20, left, initial, 0);
+    margin: 0;
+
+    @include mq('1026') {
+      font-size: 18px;
+      line-height: 23px;
+    }
+  }
+
+  &--lp-bf-deals {
+    @include textConfig($white, 18, $fontBold, 22, left, initial, 0);
+    margin: 0;
+
+    @include mq('1024', max) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &--lp-bf-form-text-1 {
+    margin: 0 auto;
+    margin-bottom: 13px;
+    font-family: $primaryFont;
+    color: $secondary-color;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    max-width: 583px;
+  }
+
+  &--lp-bf-form-text-2 {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    font-family: $primaryFont;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+
+  &--timer-bf-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    color: rgba(255, 255, 255, 1);
+    font-family: $primaryFont;
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-align: center;
+
+    @media (max-width: 1024px) {
+      font-size: 20px;
+      line-height: 25px;
+      width: auto;
+      padding: 0px 10px;
+    }
+  }
+
+  &--timer-bf-text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    color: rgba(255, 255, 255, 1);
+    font-family: $primaryFont;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 26px;
+
+    @media (max-width: 1024px) {
+      font-size: 16px;
+      line-height: 20px;
+      width: auto;
+      padding: 0px 34px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &--lp-bf-promotion-cards-right-title {
+    margin: 0;
+    @include textConfig($white, 22, $fontExtraBold, 22, left, initial, 0);
+
+    @include mq('1026', max) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &--lp-bf-promotion-cards-right-description {
+    margin: 0;
+    margin-top: 8px;
+    @include textConfig($white, 18, $fontRegular, 22, left, initial, 0);
+    max-width: 286px;
+
+    @include mq('1026', max) {
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &--scroll-lp-bf-title {
+    @include textConfig($black, 28, $fontBold, 35, center, uppercase, 0);
+    margin: 0;
+
+    @include mq('1026', max) {
+      font-size: 18px;
+      line-height: 21px;
+      max-width: 308px;
+      margin: auto;
+    }
+  }
+}
+
+.italic--lp-bf-promotion-cards-right-description {
+  font-style: normal;
+  text-decoration: underline;
+}
+
+.container {
+  &--timer-bf-title,
+  &--timer-bf-text {
+    justify-content: center;
+  }
+}
+
+.link {
+  &--lp-bf-promotion-cards-right-description {
+    color: white !important;
+  }
+}

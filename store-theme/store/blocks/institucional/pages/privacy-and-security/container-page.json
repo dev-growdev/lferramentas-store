@@ -1,0 +1,39 @@
+{
+  "store.custom#inst-page-privacy-and-security": {
+    "blocks": [
+      "toggle-layout#inst-banner",
+      "flex-layout.row#inst-breadcrumb-privacy-and-security",
+      "flex-layout.row#inst-body-privacy-and-security"
+    ]
+  },
+  "flex-layout.row#inst-body-privacy-and-security": {
+    "title": "Container Privacidade e Segurança",
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": [
+        "inst-body",
+        "inst-body--privacy-and-security"
+      ]
+    },
+    "children": [
+      "flex-layout.col#inst-menu",
+      "flex-layout.col#inst-content-and-title-privacy-and-security"
+    ]
+  },
+  "flex-layout.col#inst-content-and-title-privacy-and-security": {
+    "title": "Container Título e Conteúdo",
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": ["inst-content-container"]
+    },
+    "children": [
+      "rich-text#inst-title-privacy-and-security",
+      "rich-text#inst-text-privacy-and-security-01",
+      "rich-text#inst-text-privacy-and-security-02",
+      "rich-text#inst-text-privacy-and-security-03",
+      "rich-text#inst-text-privacy-and-security-04"
+    ]
+  }
+}

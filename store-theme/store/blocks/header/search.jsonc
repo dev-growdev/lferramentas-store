@@ -1,0 +1,28 @@
+{
+  "flex-layout.row#search-mobile": {
+    "title": "Container Busca",
+    "children": ["search-bar"],
+    "props": {
+      "blockClass": ["container__search-mobile"]
+    }
+  },
+  "search-bar": {
+    "title": "Header - Barra de busca",
+    "blocks": ["autocomplete-result-list.v2"],
+    "props": {
+      "openAutocompleteOnFocus": true,
+      "width": "grow",
+      "productLayout": "HORIZONTAL",
+      "placeholder": "Digite aqui o que você procura",
+      "displayMode": "search-button"
+    }
+  },
+  "autocomplete-result-list.v2": {
+    "blocks": ["product-summary.shelf#search-autocomplete"],
+    "props": {
+      "maxSuggestedProducts": 2,
+      "maxSuggestedTerms": 3,
+      "HorizontalProductSummary": "product-summary.shelf#search-autocomplete"
+    }
+  }
+}

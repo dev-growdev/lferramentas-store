@@ -1,0 +1,156 @@
+@import '../../global/';
+
+// Adjust shipping style when form is invalid
+
+:global(.vtex-store-components-3-x-shippingContainer):has(
+    :global(.vtex-input__error)
+  ) {
+  @include mq('1026') {
+    align-items: center;
+  }
+
+  :global(.vtex-button) {
+    @include mq('1026') {
+      margin-top: 0;
+    }
+  }
+}
+
+// Hide `download link` from specification group
+// TODO: revisite this when change specifications
+
+:global(.vtex-flex-layout-0-x-flexRow--container__specification-item):has(
+    :global(
+        .vtex-product-specifications-1-x-specificationName[data-specification-name='Download']
+      )
+  ) {
+  display: none;
+}
+
+// Adjust PDP Banner Collection styles
+
+:global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) {
+  :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderLayoutContainer) {
+    padding: 0;
+    padding-top: 15px;
+
+    @include mq('1026', max) {
+      padding-bottom: 30px;
+    }
+  }
+
+  :global(.lfmaquinaseferramentas-custom-apps-0-x-paginationDotsContainer) {
+    bottom: 20px;
+
+    @include mq('1026') {
+      display: none;
+    }
+  }
+
+  :global(.lfmaquinaseferramentas-custom-apps-0-x-slide) {
+    padding: 0;
+
+    @media (max-width: 768px) {
+      padding: 0 15px;
+
+      img,
+      picture {
+        width: 100%;
+      }
+    }
+
+    :global(.lfmaquinaseferramentas-custom-apps-0-x-slideChildrenContainer) {
+      > a {
+        width: 100%;
+      }
+
+      img,
+      picture {
+        display: block;
+      }
+    }
+  }
+
+  :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderLeftArrow),
+  :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderRightArrow) {
+    :global(.lfmaquinaseferramentas-custom-apps-0-x-caretIcon) {
+      display: none;
+    }
+
+    @include dataArrow();
+  }
+
+  :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderLeftArrow) {
+    &::after {
+      rotate: 180deg;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderRightArrow) {
+      right: -8.5px;
+      background-repeat: no-repeat !important;
+    }
+
+    :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderLeftArrow) {
+      left: -8.5px;
+      background-repeat: no-repeat !important;
+    }
+  }
+}
+
+// Style Modal Confirmation VTEX buttons
+
+:global(#modalConfirmContainer) :global(.vtex-modal__confirmation) {
+  @include mq('1026', max) {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+  }
+
+  :global(.vtex-button:not([data-testid='cancel-button'])) {
+    cursor: pointer;
+    background-color: $success-green;
+    border: 1px solid $success-green;
+    border-radius: 8px;
+    @include size(100%, 48px);
+
+    @include textConfig($white, 16, $fontExtraBold, 20, center, uppercase, 0);
+
+    &:hover {
+      background-color: $success-dark-green;
+      border-color: $success-dark-green;
+    }
+
+    :global(.vtex-button__label) {
+      padding-inline: 12px;
+    }
+  }
+
+  > span {
+    width: 100%;
+  }
+
+  :global(.vtex-button[data-testid='cancel-button']) {
+    cursor: pointer;
+    background-color: $white;
+    border: 1px solid $medium-grey;
+    border-radius: 8px;
+
+    @include size(100%, 48px);
+
+    @include textConfig(
+      $dark-grey,
+      16,
+      $fontExtraBold,
+      20,
+      center,
+      uppercase,
+      0
+    );
+
+    :global(.vtex-button__label) {
+      padding-inline: 12px;
+    }
+  }
+}

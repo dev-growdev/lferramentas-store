@@ -1,0 +1,9 @@
+{
+  "rich-text#inst-title-ourstores": {
+    "title": "Título Principal",
+    "props": {
+      "text": "Nossas lojas",
+      "blockClass": "inst-title"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "flex-layout.row#product-reviews": {
+    "props": {
+      "blockClass": "container__product-reviews",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": false,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": ["product-reviews"]
+  }
+}

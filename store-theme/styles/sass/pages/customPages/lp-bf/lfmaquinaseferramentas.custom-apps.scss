@@ -1,0 +1,52 @@
+@import '../../../global';
+
+.couponsList {
+  &--hasSlider {
+    .sliderTrackContainer {
+      @include mq('1026', max) {
+        margin-bottom: 24px;
+      }
+    }
+
+    @include mq('1026', max) {
+      .paragraph {
+        font-size: 11px;
+        line-height: 12px;
+
+        .strong {
+          font-size: 18px;
+          line-height: 25px;
+        }
+      }
+
+      .couponDiscount {
+        font-size: 22px;
+        line-height: 29px;
+      }
+
+      .couponDiscountInteger {
+        font-size: 58px;
+        line-height: 76px;
+      }
+
+      .couponDiscountDecimal {
+        font-size: 26px;
+        line-height: 33px;
+      }
+    }
+  }
+}
+
+.imageElement {
+  &--lp-bf-promotion-cards-left {
+    @include mq('1026', max) {
+      display: flex;
+      margin: auto;
+    }
+  }
+
+  &--lp-bf-scrollcontent-left,
+  &--lp-bf-scrollcontent-right {
+    display: block;
+  }
+}

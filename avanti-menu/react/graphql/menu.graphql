@@ -1,0 +1,25 @@
+query GET_MENU_DATA {
+   categories @context(provider: "vtex.store-graphql"){
+    id
+    name
+    href
+    hasChildren
+    metaTagDescription
+    titleTag
+    children {
+      name
+      href
+      id
+      metaTagDescription
+      titleTag
+      hasChildren
+      children {
+        name
+        href
+        id
+        metaTagDescription
+        titleTag
+      }
+    }
+  }
+}

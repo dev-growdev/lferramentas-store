@@ -1,0 +1,44 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.drawer--customer-support {
+  max-width: 395px !important;
+  background-color: #ffffff;
+}
+
+.openIconContainer--customer-support {
+  padding: 0;
+  margin: 0 0 8px 0;
+}
+
+.overlay--customer-support {
+  background: #303030;
+}
+
+.drawerHeader--customer-support {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background: #000000;
+  padding: 17px 16px;
+  position: relative;
+}
+.drawerHeader--customer-support .closeIconButton {
+  padding: 6px;
+  position: absolute;
+  right: 10px;
+}
+.drawerHeader--customer-support .closeIconButton::before {
+  content: "";
+  display: block;
+  height: 12px;
+  width: 12px;
+  background-image: url(assets/icons/icon-close-white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.drawerHeader--customer-support .closeIconButton :first-child {
+  display: none;
+}

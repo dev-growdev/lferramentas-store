@@ -1,0 +1,15 @@
+{
+  "product-specification-group#specifications-table": {
+    "props": {
+      "filter": {
+        "type": "show",
+        "specificationGroups": [
+          "Especificações"
+        ]
+      }
+    },
+    "children": [
+      "flex-layout.row#spec-group-no-title"
+    ]
+  }
+}

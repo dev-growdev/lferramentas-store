@@ -1,0 +1,51 @@
+@import "../../global";
+
+.imageElement {
+  &--payment-flags-icons {
+    margin-right: 33px;
+    margin-bottom: 22px;
+
+    @include mq("1026") {
+      margin-bottom: 0;
+    }
+  }
+
+  &--security-flag {
+    margin: 0 12px;
+    width: auto;
+    height: 100%;
+
+    @media only screen and (min-width: 999px) and (max-width: 1350px) {
+      margin: 0 24px 0 0;
+      width: auto;
+      height: 55px;
+    }
+
+    @media only screen and (min-width: 1355px) {
+      margin: 0 24px 0 0;
+      width: auto;
+      height: 55px;
+    }
+  }
+
+  &--company-flag {
+    margin-left: 16px;
+
+    @include mq("1026") {
+      margin-left: 28px;
+    }
+  }
+
+  &--avanti-flag {
+    padding-right: 12px;
+    margin-right: 12px;
+    border-right: 1px solid $white;
+
+    @include mq("1026") {
+      border-right: 0;
+      border-left: 1px solid $white;
+      margin: 0;
+      padding: 0 24px;
+    }
+  }
+}

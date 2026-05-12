@@ -1,0 +1,40 @@
+{
+  "rich-text#atendimento-footer": {
+    "title": "Título Menu Rodapé 01",
+    "props": {
+      "text": "#### Atendimento",
+      "blockClass": [
+        "footer-item-title",
+        "footer-item-title-atendimento"
+      ]
+    }
+  }, 
+  "rich-text#a-empresa-footer": {
+    "title": "Título Menu Rodapé 02",
+    "props": {
+      "text": "#### A Empresa",
+      "blockClass": "footer-item-title"
+    }
+  },
+  "rich-text#politicas-footer": {
+    "title": "Título Menu Rodapé 03",
+    "props": {
+      "text": "#### Institucional",
+      "blockClass": "footer-item-title"
+    }
+  },
+  "rich-text#social-media": {
+    "title": "Título Redes sociais",
+    "props": {
+      "text": "#### Redes Sociais",
+      "blockClass": "footer-item-title"
+    }
+  },
+  "rich-text#revista-ofertas": {
+    "title": "Título Revista de Ofertas",
+    "props": {
+      "text": "# Revista de Ofertas",
+      "blockClass": "footer-item-title"
+    }
+  }
+}

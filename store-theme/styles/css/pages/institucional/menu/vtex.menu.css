@@ -1,0 +1,50 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.menuItem--inst-menu-mobile-title {
+  margin: 16px 0;
+  border: 1px solid #dddddd;
+  padding: 14px 16px;
+  border-radius: 8px;
+}
+.menuItem--inst-menu-mobile-title--isOpen .styledLinkIcon {
+  transform: rotate(-180deg);
+}
+
+.styledLinkContainer {
+  padding: 0;
+  margin: 0;
+}
+.styledLinkContent--inst-menu-mobile-title {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  line-height: 1.1875rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+.styledLinkContent--inst-menu-item-link {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  line-height: 1.1875rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  padding: 8px 0;
+}
+.styledLinkIcon {
+  margin: 0;
+  transition: 300ms ease-in-out;
+}
+
+.accordionIcon--inst-menu-mobile-title {
+  display: none;
+}
+
+.submenuAccordion--inst-menu-mobile-submenu {
+  padding: 0;
+}

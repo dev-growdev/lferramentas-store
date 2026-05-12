@@ -1,0 +1,44 @@
+{
+  "rich-text#link-politicas-01": {
+    "title": "Menu Link 01",
+    "props": {
+      "blockClass": ["footer-submenu-item", "footerSubmenuItem--to-replace"],
+      "text": "##### <a href='https://www.planalto.gov.br/ccivil_03/leis/l8078.htm' target='_blank' class='vtex-rich-text-0-x-paragraph--footer-submenu-item'>Código de Defesa do Consumidor</a>"
+    }
+  },
+  "rich-text#link-politicas-02": {
+    "title": "Menu Link 02",
+    "props": {
+      "blockClass": ["footer-submenu-item", "footerSubmenuItem--to-replace"],
+      "text": "##### <a href='https://saclf.zendesk.com/hc/pt-br/categories/360003122333-Entrega-e-Prazo' target='_blank' class='vtex-rich-text-0-x-paragraph--footer-submenu-item'>Política de Entrega</a>"
+    }
+  },
+  "rich-text#link-politicas-03": {
+    "title": "Menu Link 03",
+    "props": {
+      "blockClass": ["footer-submenu-item", "footerSubmenuItem--to-replace"],
+      "text": "##### <a href='https://saclf.zendesk.com/hc/pt-br/categories/360003125233-Trocas-e-Devolu%C3%A7%C3%B5es' target='_blank' class='vtex-rich-text-0-x-paragraph--footer-submenu-item'>Trocas e Devoluções</a>"
+    }
+  },
+  "rich-text#link-politicas-04": {
+    "title": "Menu Link 04",
+    "props": {
+      "blockClass": ["footer-submenu-item", "footerSubmenuItem--to-replace"],
+      "text": "##### <a href='https://saclf.zendesk.com/hc/pt-br/categories/360003111993-Formas-de-pagamento' target='_blank' class='vtex-rich-text-0-x-paragraph--footer-submenu-item'>Formas de Pagamento</a>"
+    }
+  },
+  "rich-text#link-politicas-05": {
+    "title": "Menu Link 05",
+    "props": {
+      "blockClass": ["footer-submenu-item", "footerSubmenuItem--to-replace"],
+      "text": "##### <a href='https://ajuda.lfmaquinaseferramentas.com.br/hc/pt-br' target='_blank' class='vtex-rich-text-0-x-paragraph--footer-submenu-item'>Promoções</a>"
+    }
+  },
+  "rich-text#link-politicas-06": {
+    "title": "Menu Link 06",
+    "props": {
+      "blockClass": ["footer-submenu-item", "footerSubmenuItem--to-replace"],
+      "text": "##### <a href='/cupons-de-desconto' target='_blank' class='vtex-rich-text-0-x-paragraph--footer-submenu-item'>Cupons de Desconto</a>"
+    }
+  }
+}

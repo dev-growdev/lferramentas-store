@@ -1,0 +1,49 @@
+{
+  "flex-layout.col#how-to-use-coupons-card-3": {
+    "title": "Card 3",
+    "children": [
+      "flex-layout.row#how-to-use-coupons-card-text-3",
+      "flex-layout.row#how-to-use-coupons-card-image-3"
+    ],
+    "props": {
+      "blockClass": "how-to-use-coupons-card"
+    }
+  },
+  "flex-layout.row#how-to-use-coupons-card-image-3": {
+    "props": {
+      "blockClass": "how-to-use-coupons-card-image"
+    },
+    "children": ["image-new-custom#how-to-use-coupons-card-image-3"]
+  },
+  "flex-layout.row#how-to-use-coupons-card-text-3": {
+    "children": [
+      "rich-text#how-to-use-coupons-card-number-3",
+      "rich-text#how-to-use-coupons-card-text-3"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "rich-text#how-to-use-coupons-card-number-3": {
+    "title": "Número",
+    "props": {
+      "text": "3.",
+      "blockClass": "how-to-use-coupons-card-number"
+    }
+  },
+  "rich-text#how-to-use-coupons-card-text-3": {
+    "title": "Texto",
+    "props": {
+      "text": "Pronto! Seu desconto foi **aplicado com sucesso** e você pode finalizar a sua compra.",
+      "blockClass": "how-to-use-coupons-card-text"
+    }
+  },
+  "image-new-custom#how-to-use-coupons-card-image-3": {
+    "props": {
+      "blockClass": "how-to-use-coupons-card-image",
+      "alt": "Compartilhe o link de sua compra",
+      "src": "/assets/vtex.file-manager-graphql/images/a5a28bc8-721e-4c7d-8a01-164997bba61b___1f6666003251bd1ee2acf11a0c7a8b4a.png"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "../../global";
+
+.productHighlightWrapper {
+  &--collection {
+    &__generic {
+      margin-bottom: 10px;
+
+      &[data-highlight-id='141'] {
+        display: none;
+      }
+
+      @include textConfig($yellow, 10, $fontExtraBold, 22, left, initial, 0);
+
+      @include mq('1026') {
+        @include textConfig($yellow, 11, $fontExtraBold, 22, left, initial, 0);
+      }
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+
+      .productHighlightText {
+        border-radius: 4px;
+        background-color: $black;
+        padding: 4.5px 4px;
+      }
+    }
+
+    &__bottom {
+      display: none;
+
+      &[data-highlight-id='141'] {
+        display: block;
+        width: 100%;
+        background-color: $primary-color;
+        @include textConfig($sand, 11, $fontMedium, 22, center, initial, 0);
+        border-radius: 4px;
+      }
+    }
+  }
+}

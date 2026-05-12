@@ -1,0 +1,62 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.flexRow--banner-coupons, .flexRow--html-content-coupons, .flexRow--how-to-use-coupons, .flexRow--banner-middle-coupons, .flexRow--requirements-coupons {
+  margin: 0;
+  margin-top: 26px;
+}
+.flexRow--banner-coupons :global(.vtex-store-components-3-x-container), .flexRow--html-content-coupons :global(.vtex-store-components-3-x-container), .flexRow--how-to-use-coupons :global(.vtex-store-components-3-x-container), .flexRow--banner-middle-coupons :global(.vtex-store-components-3-x-container), .flexRow--requirements-coupons :global(.vtex-store-components-3-x-container) {
+  padding: 0;
+}
+.flexRow--banner-middle-coupons {
+  margin-top: 16px;
+  background: linear-gradient(to bottom, #f2f2f2 54%, #ffffff 46%);
+}
+@media only screen and (min-width: 1026px) {
+  .flexRow--banner-middle-coupons {
+    background: linear-gradient(to bottom, #f2f2f2 65%, #ffffff 35%);
+  }
+}
+.flexRow--how-to-use-coupons {
+  margin: 0;
+  padding: 26px 0 22px;
+  background: #ffffff;
+}
+.flexRow--html-content-coupons-2 {
+  margin: 0;
+  padding: 22px 0 27px;
+  background: #ffffff;
+}
+.flexRow--requirements-coupons {
+  margin-top: 38px;
+}
+
+.flexRowContent--banner-coupons, .flexRowContent--html-content-coupons, .flexRowContent--how-to-use-coupons, .flexRowContent--banner-middle-coupons, .flexRowContent--requirements-coupons {
+  margin: 0 auto;
+  max-width: 1292px;
+  padding: 0 16px;
+  width: 100%;
+}
+.flexRowContent--how-to-use-coupons {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRowContent--how-to-use-coupons {
+    flex-direction: row;
+    gap: 70px;
+  }
+}
+
+.flexCol--how-to-use-coupons-card {
+  background-color: #f2f1f0;
+  border-radius: 15px;
+  padding: 28px 22px 33px;
+  gap: 22px;
+}
+@media only screen and (min-width: 1026px) {
+  .flexCol--how-to-use-coupons-card {
+    padding: 18px 44px 22px;
+  }
+}

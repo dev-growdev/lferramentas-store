@@ -1,0 +1,46 @@
+{
+  "rich-text#how-to-use-coupons": {
+    "title": "Texto - Como usar o seu cupom",
+    "props": {
+      "text": "Como usar o seu cupom:",
+      "blockClass": "how-to-use-coupons",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER"
+    }
+  },
+
+  "flex-layout.row#requirements-coupons": {
+    "title": "Regulamentos",
+    "children": ["flex-layout.col#requirements-coupons"],
+    "props": {
+      "blockClass": "requirements-coupons"
+    }
+  },
+
+  "flex-layout.col#requirements-coupons": {
+    "children": [
+      "rich-text#requirements-coupons-title",
+      "rich-text#requirements-coupons-text"
+    ]
+  },
+
+  "rich-text#requirements-coupons-title": {
+    "title": "Título - Regulamentos",
+    "props": {
+      "text": "Regulamento geral dos cupons de desconto:",
+      "blockClass": "requirements-coupons-title",
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT"
+    }
+  },
+
+  "rich-text#requirements-coupons-text": {
+    "title": "Texto - Regulamentos",
+    "props": {
+      "text": "1\\. Cupons de primeira compra são válidos somente para uma compra por CPF/CNPJ; \n 2\\. Cupons válidos somente para produtos que não estejam com selo de promoção, produtos de Black Friday, Oferta Relâmpago e Ofertas de Final de Semana; \n 3\\. Cupons podem encerrar a qualquer momento sem aviso prévio.",
+      "blockClass": "requirements-coupons-text",
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT"
+    }
+  }
+}

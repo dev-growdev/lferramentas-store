@@ -1,0 +1,14 @@
+{
+  "flex-layout.row#shipping-simulator": {
+    "title": "Container Simulador De Entrega",
+
+    "props": {
+      "blockClass": "container__shipping-simulator",
+      "preventHorizontalStretch": false,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": ["shipping-simulator"]
+  }
+}

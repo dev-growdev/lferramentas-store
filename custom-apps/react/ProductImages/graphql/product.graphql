@@ -1,0 +1,12 @@
+query specificationGroups($identifier: ProductUniqueIdentifier) {
+    product(identifier: $identifier)
+    @context(provider: "vtex.store-graphql") {
+    specificationGroups {
+      name
+      specifications {
+        name
+        values
+      }
+    }
+  }
+}

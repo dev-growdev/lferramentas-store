@@ -1,0 +1,17 @@
+{
+  "store.custom#coupons": {
+    "blocks": [
+      "flex-layout.row#inst-breadcrumb-coupons",
+      "flex-layout.row#banner-coupons",
+      "toggle-layout#html-content-coupons",
+      "rich-text#title-coupons",
+      "coupons-list",
+      "__fold__",
+      "flex-layout.row#banner-middle-coupons",
+      "rich-text#how-to-use-coupons",
+      "flex-layout.row#how-to-use-coupons",
+      "toggle-layout#html-content-coupons-2",
+      "flex-layout.row#requirements-coupons"
+    ]
+  }
+}

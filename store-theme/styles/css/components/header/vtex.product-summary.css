@@ -1,0 +1,8 @@
+.container--summary-search {
+  margin: 0;
+  max-width: none !important;
+}
+.container--summary-search .element {
+  border: none;
+  padding: 10px 0 0 0;
+}

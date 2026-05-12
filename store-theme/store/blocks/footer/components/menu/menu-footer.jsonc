@@ -1,0 +1,42 @@
+{
+  // MOBILE
+  "flex-layout.row#footer-menu-mobile": {
+    "children": [
+      "flex-layout.col#footer-menu-mobile"
+    ],
+    "props": {
+      "blockClass": [
+        "footer-menu"
+      ],
+      "fullWidth": true
+    }
+  },
+  "flex-layout.col#footer-menu-mobile": {
+    "children": [
+      "disclosure-layout#atendimento-submenu",
+      "disclosure-layout#politicas-submenu",
+      "disclosure-layout#a-empresa-submenu"
+    ],
+    "props": {
+      "blockClass": "footer-menu-col",
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    }
+  },
+  //DESKTOP
+  "flex-layout.row#footer-menu-desktop": { 
+    "children": [
+      /* "flex-layout.col#footer-logo", */
+      "flex-layout.col#footer-menu-desktop-01", 
+      "flex-layout.col#footer-menu-desktop-03",
+      "flex-layout.col#footer-menu-desktop-02",
+      "flex-layout.col#footer-social-media",
+      "flex-layout.row#footer-revista-ofertas"
+    ],
+    "props": {
+      "blockClass": "footer-menu-desktop",
+      "colSizing": "auto",
+      "fullWidth": true
+    }
+  }
+}

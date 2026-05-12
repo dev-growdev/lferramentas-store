@@ -1,0 +1,288 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.inst-representantes--filterContainer,
+.inst-stores--filterContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-block: 24px;
+}
+@media only screen and (min-width: 1026px) {
+  .inst-representantes--filterContainer,
+  .inst-stores--filterContainer {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+.inst-representantes--filterTitle,
+.inst-stores--filterTitle {
+  margin: 0;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+@media only screen and (min-width: 1026px) {
+  .inst-representantes--filterTitle,
+  .inst-stores--filterTitle {
+    max-width: 11ch;
+    margin-right: 8px;
+  }
+}
+.inst-representantes--select,
+.inst-stores--select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-color: #b2b2b2;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1;
+  height: 48px;
+  padding: 12px 16px;
+  width: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.87793 5.64282C4.62201 5.64282 4.36609 5.54909 4.17082 5.36164L0.29289 1.63882C-0.09763 1.26392 -0.09763 0.656081 0.29289 0.281183C0.683421 -0.0937267 1.31658 -0.0937276 1.70711 0.281183L4.87793 3.32517L8.04875 0.281183C8.43928 -0.0937276 9.07244 -0.0937276 9.46297 0.281183C9.85349 0.656081 9.85349 1.26392 9.46297 1.63882L5.58504 5.36164C5.38977 5.54909 5.13385 5.64282 4.87793 5.64282Z' fill='black'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+@media only screen and (min-width: 1026px) {
+  .inst-representantes--select,
+  .inst-stores--select {
+    width: auto;
+  }
+}
+.inst-representantes--option,
+.inst-stores--option {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  padding: 8px;
+}
+.inst-representantes--list,
+.inst-stores--list {
+  list-style: none;
+  padding: 0;
+}
+.inst-representantes--listItem,
+.inst-stores--listItem {
+  background-color: #ffffff;
+  border-radius: 8px;
+  row-gap: 14px;
+  grid-template-columns: auto 1fr;
+  margin-bottom: 16px;
+  padding: 16px 14px;
+  display: grid;
+}
+@media only screen and (min-width: 1026px) {
+  .inst-representantes--listItem,
+  .inst-stores--listItem {
+    row-gap: unset;
+    grid-template-columns: auto 1fr 1fr 2fr;
+    justify-content: space-between;
+    padding: 34px 16px;
+  }
+}
+.inst-representantes--listItemContainer--third, .inst-representantes--listItemContainer--fourth,
+.inst-stores--listItemContainer--third,
+.inst-stores--listItemContainer--fourth {
+  grid-column: -1/1;
+}
+@media only screen and (min-width: 1026px) {
+  .inst-representantes--listItemContainer--third, .inst-representantes--listItemContainer--fourth,
+  .inst-stores--listItemContainer--third,
+  .inst-stores--listItemContainer--fourth {
+    grid-column: auto;
+  }
+}
+.inst-representantes--listItemContainer--first,
+.inst-stores--listItemContainer--first {
+  align-self: center;
+  display: flex;
+}
+@media only screen and (min-width: 1026px) {
+  .inst-representantes--listItemContainer--fourth,
+  .inst-stores--listItemContainer--fourth {
+    padding: 0 60px;
+    border-left: 1px solid #dddddd;
+  }
+}
+.inst-representantes--listItemState,
+.inst-stores--listItemState {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 0;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 1026px) {
+  .inst-representantes--listItemState,
+  .inst-stores--listItemState {
+    margin-left: 18px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.inst-representantes--listItemCity,
+.inst-stores--listItemCity {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 0;
+  margin-left: 10px;
+  margin-bottom: 6px;
+}
+.inst-representantes--listItemCity:last-child,
+.inst-stores--listItemCity:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1026px) {
+  .inst-representantes--listItemCity,
+  .inst-stores--listItemCity {
+    margin-left: 18px;
+  }
+}
+.inst-representantes--listItemName, .inst-representantes--listItemPhone,
+.inst-stores--listItemName,
+.inst-stores--listItemPhone {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 0;
+  margin-bottom: 5px;
+}
+@media only screen and (min-width: 1026px) {
+  .inst-representantes--listItemName, .inst-representantes--listItemPhone,
+  .inst-stores--listItemName,
+  .inst-stores--listItemPhone {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.inst-representantes--listItemAddress, .inst-representantes--listItemEmail,
+.inst-stores--listItemAddress,
+.inst-stores--listItemEmail {
+  color: #4d4d4d;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  line-height: 0.9375rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 0;
+}
+@media only screen and (min-width: 1026px) {
+  .inst-representantes--listItemAddress, .inst-representantes--listItemEmail,
+  .inst-stores--listItemAddress,
+  .inst-stores--listItemEmail {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.inst-representantes--listItemPhone::before,
+.inst-stores--listItemPhone::before {
+  content: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.9497 0.169922C1.71144 0.170954 1.47621 0.223292 1.25999 0.323376C1.04377 0.42346 0.851653 0.568941 0.696695 0.749922C0.432411 1.04859 0.295011 1.43855 0.313695 1.83692C0.476854 4.43297 1.58175 6.88026 3.42106 8.71956C5.26036 10.5589 7.70765 11.6638 10.3037 11.8269C10.7018 11.8462 11.0917 11.7095 11.3907 11.4459C11.5717 11.291 11.7172 11.0988 11.8172 10.8826C11.9173 10.6664 11.9697 10.4312 11.9707 10.1929V9.01892C11.9707 8.75895 11.8838 8.50644 11.7238 8.30152C11.5638 8.0966 11.3399 7.95102 11.0877 7.88792L9.2787 7.43492C9.12822 7.3972 8.97173 7.38989 8.81839 7.41342C8.66505 7.43694 8.51795 7.49083 8.3857 7.57192L7.0407 8.39692C6.94576 8.45649 6.83497 8.4858 6.72299 8.48098C6.61102 8.47616 6.50316 8.43743 6.4137 8.36992C5.92511 7.9806 5.45777 7.56533 5.0137 7.12592C4.57649 6.68364 4.16324 6.21831 3.7757 5.73192C3.7068 5.64219 3.66707 5.53349 3.66189 5.42048C3.6567 5.30747 3.6863 5.19558 3.7467 5.09992L4.5717 3.75492C4.65279 3.62267 4.70668 3.47557 4.7302 3.32223C4.75372 3.16889 4.74641 3.0124 4.7087 2.86192L4.2557 1.05292C4.1926 0.800719 4.04702 0.576838 3.8421 0.416852C3.63718 0.256865 3.38467 0.169952 3.1247 0.169922H1.9497Z' fill='black'/%3E%3C/svg%3E%0A");
+  padding-right: 4px;
+}
+.inst-representantes--listItemName,
+.inst-stores--listItemName {
+  padding-right: 30px;
+}
+.inst-representantes--button,
+.inst-stores--button {
+  cursor: pointer;
+  background-color: #008345;
+  border: 1px solid #008345;
+  border-radius: 8px;
+  font-family: "Mulish", sans-serif;
+  transition: all 0.3s ease-in-out;
+  height: 48px;
+  padding: 14px 24px;
+  text-align: center;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.inst-representantes--button:hover,
+.inst-stores--button:hover {
+  background-color: #005a30;
+  border-color: #005a30;
+}
+.inst-representantes--icon-inactive,
+.inst-stores--icon-inactive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37px;
+}
+
+@media only screen and (min-width: 1026px) {
+  .inst-stores--filterTitle {
+    max-width: 13ch;
+  }
+}
+@media only screen and (min-width: 1026px) {
+  .inst-stores--listItemState {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.inst-stores--listItemContainer--second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inst-stores--listItemContainer--third, .inst-stores--listItemContainer--fourth {
+  align-self: center;
+}
+@media only screen and (min-width: 1026px) {
+  .inst-stores--listItemContainer--third {
+    padding-left: 35px;
+    padding-right: 15px;
+  }
+}
+.inst-stores--listItemImage {
+  border-radius: 8px;
+}

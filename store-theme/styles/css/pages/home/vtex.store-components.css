@@ -1,0 +1,67 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.infoCardContainer--info-card-home {
+  margin: 0 auto;
+  max-width: 1292px;
+  padding: 0 16px;
+  width: 100%;
+}
+.infoCardContainer--info-card-home .infoCardTextContainer {
+  padding: 20px;
+}
+.infoCardContainer--info-card-home .infoCardTextContainer .infoCardHeadline,
+.infoCardContainer--info-card-home .infoCardTextContainer .infoCardCallActionContainer {
+  margin: 0;
+}
+.infoCardContainer--info-card-home .infoCardTextContainer .infoCardHeadline {
+  margin-bottom: 10px;
+}
+
+.imageElementLink--avanti-flag {
+  padding-bottom: 4px;
+}
+
+.imageElementLink {
+  line-height: 0;
+}
+.imageElementLink--main-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.imageElementLink--banner-top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.imageElement--banner-top-bar {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media only screen and (min-width: 450px) {
+  .imageElement--main-banner {
+    width: unset;
+    aspect-ratio: 15/14;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .imageElement--main-banner {
+    height: 364px;
+  }
+}
+@media only screen and (min-width: 1026px) {
+  .imageElement--main-banner {
+    width: 100%;
+    aspect-ratio: unset;
+    border-radius: 13px;
+  }
+}
+.imageElement--category-item {
+  border-radius: 21px;
+}
+.imageElement--deals {
+  display: block;
+}

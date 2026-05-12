@@ -1,0 +1,141 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+@media only screen and (min-width: 1026px) {
+  :global(.vtex-store-components-3-x-shippingContainer):has(:global(.vtex-input__error)) {
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 1026px) {
+  :global(.vtex-store-components-3-x-shippingContainer):has(:global(.vtex-input__error)) :global(.vtex-button) {
+    margin-top: 0;
+  }
+}
+
+:global(.vtex-flex-layout-0-x-flexRow--container__specification-item):has(:global(.vtex-product-specifications-1-x-specificationName[data-specification-name="Download"])) {
+  display: none;
+}
+
+:global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderLayoutContainer) {
+  padding: 0;
+  padding-top: 15px;
+}
+@media only screen and (max-width: 1025px) {
+  :global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderLayoutContainer) {
+    padding-bottom: 30px;
+  }
+}
+:global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-paginationDotsContainer) {
+  bottom: 20px;
+}
+@media only screen and (min-width: 1026px) {
+  :global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-paginationDotsContainer) {
+    display: none;
+  }
+}
+:global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-slide) {
+  padding: 0;
+}
+@media (max-width: 768px) {
+  :global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-slide) {
+    padding: 0 15px;
+  }
+  :global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-slide) img,
+  :global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-slide) picture {
+    width: 100%;
+  }
+}
+:global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-slide) :global(.lfmaquinaseferramentas-custom-apps-0-x-slideChildrenContainer) > a {
+  width: 100%;
+}
+:global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-slide) :global(.lfmaquinaseferramentas-custom-apps-0-x-slideChildrenContainer) img,
+:global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-slide) :global(.lfmaquinaseferramentas-custom-apps-0-x-slideChildrenContainer) picture {
+  display: block;
+}
+:global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderLeftArrow) :global(.lfmaquinaseferramentas-custom-apps-0-x-caretIcon),
+:global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderRightArrow) :global(.lfmaquinaseferramentas-custom-apps-0-x-caretIcon) {
+  display: none;
+}
+:global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderLeftArrow):hover,
+:global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderRightArrow):hover {
+  background: #000000 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+:global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderLeftArrow):hover::after,
+:global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderRightArrow):hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.82 0.290312C5.42 0.680312 5.42 1.32031 5.82 1.71031L8.2 4.09031H1C0.45 4.09031 0 4.54031 0 5.09031C0 5.64031 0.45 6.09031 1 6.09031H8.2L5.82 8.47031C5.43 8.86031 5.43 9.50031 5.82 9.89031C6.21 10.2803 6.85 10.2803 7.24 9.89031L11.32 5.80031C11.72 5.40031 11.72 4.76031 11.32 4.37031L7.24 0.300312C6.85 -0.0896875 6.21 -0.0896875 5.82 0.300312V0.290312Z' fill='%23FFE72E'/%3E%3C/svg%3E%0A") no-repeat center;
+}
+:global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderLeftArrow)::after {
+  rotate: 180deg;
+}
+@media (min-width: 1200px) {
+  :global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderRightArrow) {
+    right: -8.5px;
+    background-repeat: no-repeat !important;
+  }
+  :global(.vtex-flex-layout-0-x-flexRow--banner-principal-pdp) :global(.lfmaquinaseferramentas-custom-apps-0-x-sliderLeftArrow) {
+    left: -8.5px;
+    background-repeat: no-repeat !important;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  :global(#modalConfirmContainer) :global(.vtex-modal__confirmation) {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+  }
+}
+:global(#modalConfirmContainer) :global(.vtex-modal__confirmation) :global(.vtex-button:not([data-testid="cancel-button"])) {
+  cursor: pointer;
+  background-color: #008345;
+  border: 1px solid #008345;
+  border-radius: 8px;
+  height: 48px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+:global(#modalConfirmContainer) :global(.vtex-modal__confirmation) :global(.vtex-button:not([data-testid="cancel-button"])):hover {
+  background-color: #005a30;
+  border-color: #005a30;
+}
+:global(#modalConfirmContainer) :global(.vtex-modal__confirmation) :global(.vtex-button:not([data-testid="cancel-button"])) :global(.vtex-button__label) {
+  padding-inline: 12px;
+}
+:global(#modalConfirmContainer) :global(.vtex-modal__confirmation) > span {
+  width: 100%;
+}
+:global(#modalConfirmContainer) :global(.vtex-modal__confirmation) :global(.vtex-button[data-testid="cancel-button"]) {
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #b2b2b2;
+  border-radius: 8px;
+  height: 48px;
+  width: 100%;
+  color: #4d4d4d;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+:global(#modalConfirmContainer) :global(.vtex-modal__confirmation) :global(.vtex-button[data-testid="cancel-button"]) :global(.vtex-button__label) {
+  padding-inline: 12px;
+}

@@ -1,0 +1,16 @@
+@import '../../global';
+
+.closeIconButton-- {
+  &footer__ {
+    &minicart {
+      width: fit-content;
+      @include textConfig($dark-grey, 16, $fontBold, 20, center);
+      font-family: $primaryFont;
+      padding: 0;
+      &::before {
+        content: $icon-minicart-left-arrow;
+        margin-right: 8px;
+      }
+    }
+  }
+}

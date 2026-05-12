@@ -1,0 +1,82 @@
+{
+  "store.search#department": {
+    "blocks": ["search-result-layout#departamento"],
+    "props": {
+      "context": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "installmentCriteria": "MAX_WITHOUT_INTEREST"
+      }
+    }
+  },
+  "search-result-layout#departamento": {
+    "title": "Página Departamento",
+    "blocks": [
+      "search-result-layout.desktop#departamento",
+      "search-result-layout.mobile#departamento",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "blockClass": "department"
+    }
+  },
+  "search-result-layout.desktop#departamento": {
+    "title": "Página Departamento Desktop",
+    "children": [
+      "flex-layout.row#search-breadcrumb",
+      "toggle-layout#banner-departamento",
+      "countdown-plp-custom",
+      "flex-layout.row#result-departament",
+      "flex-layout.row#text-seo-search"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": false,
+      "defaultGalleryLayout": "grid",
+      "hiddenFacets": {
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "SAC"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "search-result-layout.mobile#departamento": {
+    "title": "Página Departamento Mobile",
+    "children": [
+      "flex-layout.row#search-breadcrumb",
+      "toggle-layout#banner-departamento-mobile",
+      "countdown-plp-custom",
+      "flex-layout.row#searchtitle-departament",
+      "flex-layout.row#searchinfomobile",
+      "flex-layout.row#productCount",
+      "flex-layout.row#contentmobile",
+      "search-products-count-per-page",
+      "search-products-progress-bar",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#text-seo-search"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "defaultGalleryLayout": "grid",
+      "hiddenFacets": {
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "SAC"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

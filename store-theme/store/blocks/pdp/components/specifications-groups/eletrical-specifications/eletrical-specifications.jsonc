@@ -1,0 +1,115 @@
+{
+  "conditional-spec-group#eletrical-specifications": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "eletrical-specifications"
+      ],
+      "propertyName": "Especificações Elétricas"
+    },
+    "children": [
+      "flex-layout.row#eletrical-specifications"
+    ]
+  },
+  "flex-layout.row#eletrical-specifications": {
+    "title": "Especificações Elétricas",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "eletrical-specifications"
+      ],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#eletrical-specifications"
+    ]
+  },
+  "flex-layout.col#eletrical-specifications": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "eletrical-specifications"
+      ],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#eletrical-specifications-content"
+    ]
+  },
+  "flex-layout.row#eletrical-specifications-content": {
+    "title": "Itens inclusos",
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "eletrical-specifications-content"
+      ],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#eletrical-specifications-content"
+    ]
+  },
+  "flex-layout.col#eletrical-specifications-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "eletrical-specifications-content"
+      ],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "disclosure-layout#eletrical-specifications-content"
+    ]
+  },
+  "disclosure-layout#eletrical-specifications-content": {
+    "props": {
+      "initialVisibility": "visible",
+      "blockClass": [
+        "generic-specification-group-content",
+        "eletrical-specifications-content"
+      ]
+    },
+    "children": [
+      "disclosure-trigger#eletrical-specifications-content",
+      "disclosure-content#eletrical-specifications-content"
+    ]
+  },
+  "disclosure-trigger#eletrical-specifications-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "eletrical-specifications-content"
+      ]
+    },
+    "children": [
+      "rich-text#eletrical-specifications-title"
+    ]
+  },
+  "disclosure-content#eletrical-specifications-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "eletrical-specifications-content"
+      ]
+    },
+    "children": [
+      "product-specification-group#eletrical-specifications"
+    ]
+  },
+  "rich-text#eletrical-specifications-title": {
+    "title": "Especificações Elétricas - Título",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "generic-specification-group-title",
+        "eletrical-specifications",
+        "eletrical-specifications-title"
+      ],
+      "text": "##### Especificações Elétricas"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "flex-layout.row#banner-coupons-black": {
+    "title": "Banner Principal",
+    "children": ["info-card#coupons-black"],
+    "props": {
+      "blockClass": ["banner-coupons", "banner-coupons-black"]
+    }
+  },
+  "info-card#coupons-black": {
+    "props": {
+      "blockClass": ["info-card-coupons", "info-card-coupons-black"],
+      "callToActionMode": "none",
+      "fetchpriority": "auto",
+      "headline": "APROVEITE OS CUPONS DE DESCONTO",
+      "id": "info-card-coupons-black",
+      "imageUrl": "https://lfmaquinaseferramentas.vtexassets.com/assets/vtex.file-manager-graphql/images/76a7da07-4503-4ba9-89e4-7896665e3124___096355ae563909496b6f0a83ac714d0d.png",
+      "mobileImageUrl": "/arquivos/lf-maquinas-cupom-bf-mobile.png",
+      "isFullModeStyle": true,
+      "preload": true,
+      "subhead": "NA SUA PRIMEIRA COMPRA",
+      "textPosition": "left"
+    }
+  }
+}

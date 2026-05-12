@@ -1,0 +1,35 @@
+{
+  "minicart-empty-state": {
+    "title": "Minicart Vazio",
+    "props": {
+      "blockClass": "empty__minicart"
+    },
+    "children": [
+      "flex-layout.col#minicart-text-empty"
+    ]
+  },
+  "flex-layout.col#minicart-text-empty": {
+    "title": "Container Minicart Vazio Textos",
+    "props": {
+      "blockClass": "empty__minicart--container"
+    },
+    "children": [
+      "rich-text#titulo-minicart-default-empty-state",
+      "rich-text#texto-minicart-default-empty-state"
+    ]
+  },
+  "rich-text#titulo-minicart-default-empty-state": {
+    "title": "Título de carrinho vazio",
+    "props": {
+      "text": "Seu carrinho está vazio!",
+      "blockClass": "empty__minicart--titulo"
+    }
+  },
+  "rich-text#texto-minicart-default-empty-state": {
+    "title": "Texto de carrinho vazio",
+    "props": {
+      "text": "Navegue pelo site e \n adicione os produtos que deseja.",
+      "blockClass": "empty__minicart--text"
+    }
+  }
+}

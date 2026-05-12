@@ -1,0 +1,201 @@
+{
+  "toggle-layout#slider-brand-lp-bf": {
+    "title": "Ativar/Desativar Marcas Slider Home",
+    "props": {
+      "renderChildren": true
+    },
+    "children": ["flex-layout.row#row-slider-brand-lp-bf"]
+  },
+  "flex-layout.row#row-slider-brand-lp-bf": {
+    "title": "Marcas em Slider",
+    "children": [
+      "flex-layout.row#brand-slider-title-lp-bf",
+      "list-context.image-list-custom#brands-slider-lp-bf",
+      "rich-text#lp-bf-slider-brand"
+    ],
+    "props": {
+      "fullWidth": true,
+      "blockClass": ["row-slider-brand-home"]
+    }
+  },
+  "list-context.image-list-custom#brands-slider-lp-bf": {
+    "title": "Lista de banners de marcas",
+    "children": ["slider-layout#slider-brand-lp-bf"],
+    "props": {
+      "preload": true,
+      "height": 103,
+      "images": [
+        {
+          "image": "/assets/vtex.file-manager-graphql/images/8c920b39-be6e-4f15-8e01-ca86c5490abb___0cc26d19c82134a06913a18fab9c7866.png",
+          "description": "Banner 01",
+          "title": "Banner 01",
+          "link": {
+            "url": "/bosch",
+            "attributeNofollow": false
+          },
+          "experimentalPreventLayoutShift": true,
+          "experimentalSetExplicitDimensions": true,
+          "width": "190px",
+          "height": "103px",
+          "analyticsProperties": "none"
+        },
+        {
+          "loading": "lazy",
+          "image": "/assets/vtex.file-manager-graphql/images/8c920b39-be6e-4f15-8e01-ca86c5490abb___0cc26d19c82134a06913a18fab9c7866.png",
+          "description": "Banner 02",
+          "title": "Banner 02",
+          "link": {
+            "url": "/schulz",
+            "attributeNofollow": false
+          },
+          "experimentalPreventLayoutShift": true,
+          "experimentalSetExplicitDimensions": true,
+          "width": "190px",
+          "height": "103px",
+          "analyticsProperties": "none"
+        },
+        {
+          "loading": "lazy",
+          "image": "/assets/vtex.file-manager-graphql/images/8c920b39-be6e-4f15-8e01-ca86c5490abb___0cc26d19c82134a06913a18fab9c7866.png",
+          "description": "Banner 03",
+          "title": "Banner 03",
+          "link": {
+            "url": "/wap",
+            "attributeNofollow": false
+          },
+          "experimentalPreventLayoutShift": true,
+          "experimentalSetExplicitDimensions": true,
+          "width": "190px",
+          "height": "103px",
+          "analyticsProperties": "none"
+        },
+        {
+          "image": "/assets/vtex.file-manager-graphql/images/8c920b39-be6e-4f15-8e01-ca86c5490abb___0cc26d19c82134a06913a18fab9c7866.png",
+          "description": "Banner 04",
+          "title": "Banner 04",
+          "link": {
+            "url": "/bosch",
+            "attributeNofollow": false
+          },
+          "height": "103px",
+          "width": "190px",
+          "analyticsProperties": "none"
+        },
+        {
+          "loading": "lazy",
+          "image": "/assets/vtex.file-manager-graphql/images/8c920b39-be6e-4f15-8e01-ca86c5490abb___0cc26d19c82134a06913a18fab9c7866.png",
+          "description": "Banner 05",
+          "title": "Banner 05",
+          "link": {
+            "url": "/schulz",
+            "attributeNofollow": false
+          },
+          "experimentalPreventLayoutShift": true,
+          "experimentalSetExplicitDimensions": true,
+          "width": "190px",
+          "height": "103px",
+          "analyticsProperties": "none"
+        },
+        {
+          "loading": "lazy",
+          "image": "/assets/vtex.file-manager-graphql/images/8c920b39-be6e-4f15-8e01-ca86c5490abb___0cc26d19c82134a06913a18fab9c7866.png",
+          "description": "Banner 06",
+          "title": "Banner 06",
+          "link": {
+            "url": "/wap",
+            "attributeNofollow": false
+          },
+          "experimentalPreventLayoutShift": true,
+          "experimentalSetExplicitDimensions": true,
+          "width": "190px",
+          "height": "103px",
+          "analyticsProperties": "none"
+        },
+        {
+          "image": "/assets/vtex.file-manager-graphql/images/8c920b39-be6e-4f15-8e01-ca86c5490abb___0cc26d19c82134a06913a18fab9c7866.png",
+          "description": "Banner 07",
+          "title": "Banner 07",
+          "link": {
+            "url": "/bosch",
+            "attributeNofollow": false
+          },
+          "experimentalPreventLayoutShift": true,
+          "experimentalSetExplicitDimensions": true,
+          "width": "190px",
+          "height": "103px",
+          "analyticsProperties": "none"
+        },
+        {
+          "loading": "lazy",
+          "image": "/assets/vtex.file-manager-graphql/images/8c920b39-be6e-4f15-8e01-ca86c5490abb___0cc26d19c82134a06913a18fab9c7866.png",
+          "description": "Banner 08",
+          "title": "Banner 08",
+          "link": {
+            "url": "/schulz",
+            "attributeNofollow": false
+          },
+          "experimentalPreventLayoutShift": true,
+          "experimentalSetExplicitDimensions": true,
+          "width": "190px",
+          "height": "103px",
+          "analyticsProperties": "none"
+        },
+        {
+          "loading": "lazy",
+          "image": "/assets/vtex.file-manager-graphql/images/8c920b39-be6e-4f15-8e01-ca86c5490abb___0cc26d19c82134a06913a18fab9c7866.png",
+          "description": "Banner 09",
+          "title": "Banner 09",
+          "link": {
+            "url": "/wap",
+            "attributeNofollow": false
+          },
+          "experimentalPreventLayoutShift": true,
+          "experimentalSetExplicitDimensions": true,
+          "width": "190px",
+          "height": "103px",
+          "analyticsProperties": "none"
+        }
+      ]
+    }
+  },
+  "flex-layout.row#brand-slider-title-lp-bf": {
+    "props": {
+      "blockClass": "container__shelf-row-text",
+      "fullWidth": true,
+      "preventHorizontalStretch": true
+    },
+    "children": ["rich-text#title-brand-lp-bf"]
+  },
+  "rich-text#title-brand-lp-bf": {
+    "title": "Título",
+    "props": {
+      "blockClass": ["title-brand-home", "shelfTitle", "title-brand-lp-bf"],
+      "text": "## Marcas garantidas na Black Friday de 2024:"
+    }
+  },
+  "rich-text#brand-lp-bf-link": {
+    "title": "Link",
+    "props": {
+      "text": "[Ver mais](/)",
+      "blockClass": "shelfLink"
+    }
+  },
+  "slider-layout#slider-brand-lp-bf": {
+    "props": {
+      "blockClass": ["container__shelf-slider", "slider-brand-home", "slider-brand-lp-bf"],
+      "infinite": true,
+      "itemsPerPage": {
+        "desktop": 6,
+        "tablet": 4,
+        "mobile": 2
+      },
+      "centerMode": {
+        "phone": "to-the-left",
+        "desktop": "disabled"
+      },
+      "centerModeSlidesGap": 16,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "mobileOnly"
+    }
+  }
+}

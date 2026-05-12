@@ -1,0 +1,56 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.infoCardContainer--info-card-coupons {
+  border-radius: 15px;
+  justify-content: center;
+}
+
+.infoCardTextContainer--info-card-coupons {
+  width: fit-content;
+  padding: 54px 0;
+  margin-left: 20%;
+}
+
+.infoCardHeadline--info-card-coupons {
+  color: #ffe72e;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 34px;
+  line-height: 2.125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+@media only screen and (min-width: 1026px) {
+  .infoCardHeadline--info-card-coupons {
+    font-size: 40px;
+    line-height: 50px;
+    text-align: left;
+  }
+}
+
+.infoCardSubhead--info-card-coupons {
+  color: #ffe72e;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 30px;
+  line-height: 1.875rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+@media only screen and (min-width: 1026px) {
+  .infoCardSubhead--info-card-coupons {
+    font-size: 35px;
+    line-height: 44px;
+    text-align: left;
+  }
+}
+
+.imageElement--banner-middle-coupons-image {
+  height: auto;
+  display: block;
+}

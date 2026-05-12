@@ -1,0 +1,5 @@
+@import '../../global/';
+
+.product-identifier {
+  @include text(4, $dark-gray, $fontRegular);
+}

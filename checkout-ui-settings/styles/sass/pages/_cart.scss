@@ -1,0 +1,1511 @@
+.container-cart {
+  @include mq('768') {
+    margin-bottom: 30px;
+  }
+
+  .cart-template {
+    display: grid;
+    grid-template-columns: 69% 29%;
+    grid-template-rows: auto auto 1fr;
+    gap: 0 2%;
+    grid-template-areas:
+      'cart resume'
+      'cart links'
+      'cart blank';
+    align-items: start;
+
+    &:before {
+      content: '';
+      grid-area: blank;
+    }
+
+    .empty-cart {
+      &-content {
+        margin-bottom: 14px;
+        font-family: $primaryFont;
+        text-align: center;
+
+        #cart-choose-products {
+          @include size(280px, 48px);
+          @include display-flex(center, center, row);
+          @include textConfig($white, $primaryFont, 16, $fontExtraBold, 20, center, uppercase, 0);
+          text-shadow: none;
+          padding: 0 ;
+          margin: 15px auto 0;
+          border: none;
+          border-radius: 8px;
+          box-sizing: border-box;
+          box-shadow: none;
+          background-image: none;
+          background-color: $green !important;
+    
+          &:hover {
+            background-color: $green-dark !important;
+            transition: all 300ms ease-in-out;
+          }
+        }
+
+        .empty-cart-links {
+          width: 100%;
+        }
+      }
+
+      &-title {
+        color: $black;
+        line-height: 40px;
+      }
+
+      &-message {
+        color: $black;
+        font-size: 14px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+    }
+
+    .cart-template-holder {
+      grid-area: cart;
+
+      .cart {
+        margin-bottom: 24px;
+        padding: 0;
+        overflow: hidden;
+        border: none;
+
+        @include mq('768') {
+          border: 1px solid $light-gray;
+          border-radius: 8px;
+          border-top: none;
+          margin-bottom: 32px;
+          background: $white;
+        }
+
+        .cart-items {
+          overflow: hidden;
+
+          & > thead {
+            display: none;
+
+            @include mq('768') {
+              display: table-header-group;
+              background-color: $black;
+            }
+
+            & tr {
+              th {
+                padding: 20px 8px;
+                vertical-align: middle;
+                @include textConfig($white, $primaryFont, 16, $fontBold, 0, center, initial, 0);
+                white-space: nowrap;
+                box-sizing: border-box;
+              }
+
+              .product {
+                padding-left: 33px;
+                font-size: 0;
+
+                &::before {
+                  content: 'Produto';
+                  font-size: 16px;
+                  vertical-align: middle;
+                }
+
+                text-align: left;
+              }
+
+              .shipping-date {
+                display: none;
+                font-size: 0;
+
+                &::before {
+                  content: 'Frete';
+                  font-size: 14px;
+                  vertical-align: middle;
+                }
+              }
+
+              .product-price {
+                display: none;
+                font-size: 0;
+
+                &::before {
+                  content: 'Preço';
+                  font-size: 14px;
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+
+          .item-unavailable {
+            padding: 0;
+            margin: 0;
+            @include textConfig($primary-color, $primaryFont, 13, $fontBold, 0, center, initial, 0);
+            text-shadow: none;
+
+            @include mq('768') {
+              position: relative;
+
+              .item-unavailable-message {
+                position: absolute;
+                inset: auto auto -13px 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+          }
+
+          .product-item {
+            border-top: 1px solid $light-gray-02;
+            box-sizing: border-box;
+            padding: 22px 0 32px 0;
+            height: 160px;
+            margin: 0;
+
+            @include mq('490') {
+              padding: 0;
+              height: auto;
+            }
+
+            @include mq('768') {
+              border-top: none;
+            }
+
+            &:first-child {
+              border-top: none;
+            }
+
+            &.unavailable,
+            &:last-child {
+              border-bottom: 1px solid $light-gray-02;
+
+              @include mq('768') {
+                border-bottom: none;
+              }
+            }
+
+            & td {
+              @include mq('490') {
+                padding: 24px 0;
+              }
+
+              @include mq('768') {
+                padding: 32px 0px;
+              }
+            }
+
+            .product-image {
+              width: 90px;
+
+              @include mq('490') {
+                padding-right: 20px;
+              }
+
+              @include mq('768') {
+                padding: 0 24px;
+                width: 80px;
+              }
+
+              & img {
+                @include size(90px);
+                max-width: none;
+
+                @include mq('768') {
+                  @include size(80px);
+                }
+              }
+            }
+
+            .shipping-date {
+              display: none;
+            }
+
+            .product-price,
+            .quantity,
+            .quantity-price {
+              @include mq('768') {
+                width: 15%;
+              }
+
+              @include mq('1024') {
+                width: auto;
+              }
+            }
+
+            .product-name {
+              margin-left: 98px;
+              padding-bottom: 17px;
+              padding-right: 30px;
+
+              @include mq('490') {
+                margin: 0;
+                padding: 0;
+                padding-right: 0;
+              }
+
+              & a {
+                @include textConfig($black, $primaryFont, 14, $fontRegular, 18, left, initial, 0);
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                min-height: 54px;
+                padding-right: 50px;
+
+                @include mq('490') {
+                  min-height: unset;
+                }
+
+                @include mq('1024') {
+                  max-width: 248px;
+                  padding-right: 0;
+                }
+              }
+
+              .seller.muted {
+                display: none;
+              }
+
+              .brand {
+                display: none;
+              }
+            }
+
+            .product-price {
+              display: none !important;
+              position: absolute;
+              right: 0;
+              top: 6rem;
+              @include textConfig($black, $primaryFont, 14, $fontRegular, 21, center, initial, 0);
+
+              .old-product-price {
+                font-weight: $fontBold;
+              }
+
+              .old-product-price-label,
+              .new-product-price-label,
+              .price-details {
+                display: none;
+              }
+            }
+
+            .quantity-price {
+              display: table-cell;
+              position: absolute;
+              right: 0;
+              bottom: 42px;
+              padding: 0;
+              @include textConfig($black, $primaryFont, 14, $fontRegular, 21, end, initial, 0);
+              white-space: nowrap;
+
+              @include mq('490') {
+                position: static;
+                padding: 22px 0;
+                bottom: unset;
+              }
+
+              @include mq('1024') {
+                font-family: $primaryFont;
+                text-align: center;
+              }
+
+              .total-price {
+                font-weight: $fontExtraBold;
+
+                span {
+                  display: none;
+
+                  @include mq('1024') {
+                    display: initial;
+                    font-weight: $fontRegular;
+                  }
+                }
+              }
+
+              .total-selling-price {
+                display: none;
+
+                @include mq('1024') {
+                  position: relative;
+                  top: 8px;
+                  @include display-flex(flex-end, center, row);
+                  align-items: center;
+                  position: static;
+                }
+              }
+            }
+
+            .quantity {
+              min-width: 140px;
+              margin-left: 94px !important;
+
+              @include mq('490') {
+                margin: 0 !important;
+              }
+
+              .item-quantity-change {
+                padding: 0;
+                border: 1px solid $medium-gray;
+
+                &-decrement {
+                  max-width: 40px;
+                  @include size(40px);
+                  border-radius: 8px 0 0 8px;
+                  border-right: none;
+                  bottom: 0;
+                  box-sizing: border-box;
+                  display: inline-block;
+                  left: 4px;
+                  position: relative;
+
+                  @include mq('768') {
+                    @include size(40px);
+                  }
+
+                  .icon-minus-sign:before {
+                    @include size(auto, 100%);
+                    content: '-';
+                    @include display-flex(center, center, row);
+                    @include textConfig($black, $primaryFont, 14, $fontBold, 6, center, initial, 0);
+                  }
+                }
+
+                &-increment {
+                  max-width: 40px;
+                  @include size(40px);
+                  border-radius: 0 8px 8px 0;
+                  border-left: none;
+                  box-sizing: border-box;
+                  display: inline-block;
+                  left: -4px;
+                  position: relative;
+                  top: 0;
+
+                  .icon-plus-sign:before {
+                    @include size(auto, 100%);
+                    content: '+';
+                    @include display-flex(center, center, row);
+                    @include textConfig($black, $primaryFont, 14, $fontBold, 6, center, initial, 0);
+                  }
+                }
+              }
+
+              input {
+                background: $white;
+                @include size(40px, 40px);
+                margin: auto;
+                display: inline-block;
+                box-sizing: border-box;
+                border: none;
+                box-shadow: none;
+                border-radius: 0;
+                padding: 0;
+                @include textConfig($black, $primaryFont, 16, $fontBold, 6, center, initial, 0);
+                border-top: 1px solid $medium-gray;
+                border-bottom: 1px solid $medium-gray;
+
+                @include mq('1024') {
+                  font-family: $primaryFont;
+                }
+              }
+            }
+
+            .item-remove {
+              right: 0;
+              top: 20px;
+
+              @include mq('490') {
+                position: relative;
+                top: unset;
+              }
+
+              @include mq('768') {
+                padding-right: 30px;
+              }
+
+              .item-link-remove {
+                padding: 0;
+                background: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.06518 1.99043V3.0622H10.1226V1.99043H6.06518ZM12.113 3.0622V0.91866C12.113 0.411298 11.7017 0 11.1944 0H4.99341C4.48605 0 4.07475 0.411298 4.07475 0.91866V3.0622H3.07954H1.0891H0.170444C0.0858837 3.0622 0.017334 3.13075 0.017334 3.21531V4.89952C0.017334 4.98408 0.0858837 5.05263 0.170444 5.05263H1.0891V15.0813C1.0891 15.5887 1.5004 16 2.00776 16H14.18C14.6874 16 15.0987 15.5887 15.0987 15.0813V5.05263H15.9408C16.0253 5.05263 16.0939 4.98408 16.0939 4.89952V3.21531C16.0939 3.13075 16.0253 3.0622 15.9408 3.0622H15.0987H13.1082H12.113ZM4.07475 5.05263H3.07954V14.0096H13.1082V5.05263H12.113H10.1226H6.06518H4.07475ZM5.06997 6.96651H7.13695V13.0144H5.06997V6.96651ZM11.1178 6.96651H9.05083V13.0144H11.1178V6.96651Z' fill='%237C7C7B'/%3E%3C/svg%3E%0A")
+                  no-repeat center;
+                float: right;
+                @include size(17px);
+                display: block;
+              }
+
+              .icon-remove {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include mq('980', max) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        'cart'
+        'resume'
+        'links';
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  .item-unit-label {
+    display: none;
+  }
+
+  .item-multiplier-label {
+    display: flex;
+    width: 100%;
+    position: relative;
+    left: 24%;
+    @include textConfig($black, $primaryFont, 11, $fontRegular, 14, center, initial, 0);
+
+    @include mq('490') {
+      position: static;
+      justify-content: center;
+    }
+
+    @include mq('768') {
+      margin-top: 3px;
+      display: block;
+    }
+  }
+}
+
+.summary-template-holder {
+  padding: 0 16px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  grid-area: resume;
+
+  .row-fluid {
+    &::after,
+    &::before {
+      display: none !important;
+    }
+
+    @include mq('768') {
+      @include display-flex(center, space-between, row);
+    }
+  }
+
+  .summary {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 12px;
+
+    .cart-totalizers {
+      @include display-flex(stretch, center, column);
+      margin-top: 0;
+
+      @include mq('980') {
+        padding: 0px 16px;
+      }
+    }
+
+    .cart-more-options {
+      margin: 0;
+      width: 100%;
+
+      @include mq('1024', max) {
+        width: 100%;
+      }
+
+      .srp-container {
+        max-width: none;
+
+        .srp-main-title {
+          font-size: 0;
+          line-height: 30px;
+          margin-bottom: 24px;
+          padding: 0px 16px;
+          background: $black;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+
+          &::before {
+            display: inline;
+            content: 'Política de Entrega';
+            @include textConfig($white, $secondaryFont, 16, $fontExtraBold, 40, center, initial, 0);
+          }
+
+          @include mq('980', max) {
+            background: transparent;
+            padding: 0px;
+            line-height: 20px;
+            height: 20px;
+
+            &:before {
+              color: $black;
+              line-height: 20px;
+            }
+          }
+        }
+
+        .srp-description {
+          max-width: none;
+          @include textConfig($black, $primaryFont, 14, $fontRegular, 16, left, initial, 0);
+          margin-bottom: 14px;
+          padding: 0;
+
+          @include mq('1024') {
+            padding: 0 16px;
+          }
+        }
+
+        .srp-data {
+          margin: 0;
+
+          @include mq('980') {
+            padding: 0px 16px;
+          }
+
+          @include mq('1024') {
+            max-width: 375px;
+            margin-bottom: 40px;
+          }
+
+          .srp-postal-code,
+          .srp-postal-code__form {
+            width: 100%;
+          }
+
+          .shp-open-options {
+            box-sizing: border-box;
+            padding: 0 30px;
+            margin: 0;
+            @include size(auto, 40px);
+            border: 1px solid $green;
+            background: transparent;
+            border-radius: 8px;
+            @include textConfig($green, $primaryFont, 14, $fontBold, 20, center, capitalize, 0);
+          }
+
+          .srp-postal-code__form {
+            .vtex-shipping-preview-0-x-postalCodeForgotten {
+              margin: 0 0 24px 0;
+              @include display-flex(flex-start, center, row);
+
+              @include mq('768') {
+                margin: 0;
+              }
+
+              & label {
+                display: none;
+              }
+
+              & > .input {
+                width: 100%;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                & > input {
+                  font-family: $primaryFont;
+                  box-shadow: none;
+                  @include size(100%, 40px);
+                  border-radius: 8px;
+                  padding-left: 12px;
+                  margin-bottom: 8px;
+                  background: transparent;
+                  border: 1px solid $medium-gray;
+                  background-image: none;
+
+                  &::placeholder {
+                    @include textConfig($dark-gray, $primaryFont, 12, $fontRegular, 14, left, initial, 0);
+                  }
+
+                  @include mq('768') {
+                    background-color: $white;
+                    border: 1px solid $medium-gray;
+                  }
+                }
+
+                & > small > a {
+                  @include textConfig($darkest-gray, $primaryFont, 12, $fontBold, 14, left, initial, 0);
+                  text-decoration: underline;
+                }
+              }
+
+              #cart-shipping-calculate {
+                box-sizing: border-box;
+                padding: 0 16px;
+                margin: 0 0 0 7px;
+                @include size(auto, 40px);
+                border: 1px solid $medium-gray;
+                background: transparent;
+                border-radius: 8px;
+                @include textConfig($darkest-gray, $primaryFont, 14, $fontExtraBold, 20, center, uppercase, 0);
+
+                @include mq('1024') {
+                  font-size: 12px;
+                }
+              }
+
+              .help.error {
+                display: none;
+              }
+            }
+          }
+
+          .srp-result {
+            @include mq('1024') {
+              max-width: 375px;
+            }
+
+            .srp-items {
+              @include textConfig($black, $primaryFont, 14, $fontRegular, 18, left, initial, 0);
+
+              & strong {
+                font-weight: $fontRegular;
+              }
+            }
+
+            .srp-address-title {
+              text-decoration: underline;
+              @include textConfig($black, $primaryFont, 14, $fontBold, 18, left, initial, 0);
+            }
+
+            .srp-delivery-header {
+              margin-bottom: 18px;
+            }
+
+            .srp-delivery-select {
+              border: none;
+              padding: 0;
+
+              &-container {
+                background: transparent;
+                width: 100%;
+                border: none;
+                @include display-flex(center, center, row);
+              }
+            }
+
+            .srp-delivery-current-many {
+              padding: 14px 16px;
+              font-family: $primaryFont;
+              font-size: 13px;
+              border: 1px solid $light-gray;
+              border-radius: 15px;
+
+              svg g path {
+                fill: $black;
+              }
+
+              &__text {
+                border: none;
+              }
+
+              &__name {
+                @include textConfig($black, $primaryFont, 12, $fontBold, 14, left, initial, 0);
+              }
+
+              &__sla {
+                margin-top: 2px;
+                @include textConfig($black, $primaryFont, 14, $fontRegular, 16, left, initial, 0);
+              }
+
+              &__price {
+                padding: 0 {
+                  left: 21px;
+                }
+
+                border-left: 1px solid $light-gray;
+
+                @include textConfig($black, $primaryFont, 13, $fontExtraBold, 23, left, initial, 0);
+              }
+
+              > div.flex {
+                &::before {
+                  content: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7.5' cy='7.5' r='7' stroke='%23FFE72E'/%3E%3Cellipse cx='7.5' cy='7.50024' rx='5' ry='5' fill='%23FFE72E'/%3E%3C/svg%3E%0A");
+                  margin: auto {
+                    right: 14px;
+                  }
+                  height: 15px;
+                }
+              }
+            }
+
+            .srp-pickup-info {
+              .srp-shipping-current-single {
+                width: auto !important;
+                margin: 18px 0 0 0 !important;
+              }
+            }
+
+            .srp-delivery-info,
+            .srp-shipping-current-single {
+              @include size(100%, 60px);
+              margin-bottom: 33px;
+              max-width: none;
+              border: none;
+              background: $white;
+              border-radius: 8px;
+              @include display-flex(center, space-between, row);
+
+              @include mq('768') {
+                margin: 0;
+                padding: 0 20px;
+              }
+
+              .srp-shipping-current-single {
+                width: 100%;
+                border: none;
+                padding: 0;
+                margin: 0;
+
+                &__wrapper {
+                  margin: 0;
+                  width: 100%;
+                  padding: 0;
+                }
+
+                &__bullet {
+                  path {
+                    fill: $secondary-color;
+                  }
+                }
+
+                &__description {
+                  justify-content: space-between;
+
+                  .srp-shipping-current-single__text {
+                    max-width: 164.5px;
+                    min-height: 20px;
+                    @include display-flex(center, flex-start, row);
+                    padding-right: 12px;
+                    border: none;
+
+                    .srp-shipping-current-single__sla {
+                      white-space: normal;
+                      @include textConfig($black-03, $primaryFont, 14, $fontRegular, 16, left, initial, 0);
+                    }
+                  }
+
+                  .srp-shipping-current-single__price {
+                    padding: 0;
+                    width: 100%;
+                    max-width: 93px;
+                    @include textConfig($black, $primaryFont, 13, $fontBold, 23, right, initial, 0);
+                  }
+                }
+              }
+            }
+
+            .srp-delivery-info {
+              flex-direction: column;
+              height: 100%;
+            }
+          }
+        }
+
+        .vtex-shipping-preview-0-x- {
+          &alertPickup {
+            margin: 0;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid $primary-color;
+          }
+
+          &alertIcon {
+            border: 1px solid $primary-color;
+
+            svg g {
+              fill: $primary-color;
+            }
+          }
+
+          &content {
+            @include display-flex(center, center, row);
+            @include textConfig($black, $primaryFont, 13, $fontMedium, 20, left, initial, 0);
+          }
+
+          &unavailable {
+            opacity: 0.6;
+          }
+
+          &removeItemsButton {
+            margin-top: 16px;
+            border-radius: 8px;
+            border: none;
+            background: $primary-color;
+            @include size(100%, 40px);
+            @include textConfig($primary-color, $primaryFont, 13, $fontBold, 20, center, initial, 0);
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include mq('980') {
+    padding: 0;
+    background: #fff;
+  }
+}
+
+.summary-totalizers {
+  width: 100% !important;
+  padding: 0;
+
+  @include mq('1024') {
+    max-width: 375px;
+  }
+
+  .summary-coupon {
+    margin: 0 0 19px 0;
+
+    @media (max-width: 767px) {
+      margin: 20px 0 10px !important;
+    }
+
+    .coupon-data {
+      margin: 0;
+      border: 1px solid $medium-gray;
+      background-color: rgba(0, 0, 0, 0);
+      border-radius: 8px;
+      color: rgb(48, 48, 48);
+      height: 40px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .link-coupon-add {
+        display: block;
+        padding: 0;
+        text-decoration: none;
+        @include textConfig($black, $primaryFont, 14, $fontBold, 20, center, initial, 0);
+      }
+    }
+
+    .coupon-form {
+      .coupon-label {
+        & > label {
+          display: flex;
+          padding: 12px 12px 0;
+          @include textConfig($black, $primaryFont, 14, $fontBold, 19, left, initial, 0);
+        }
+      }
+
+      .coupon-fields {
+        position: relative;
+        margin: 0;
+        padding: 0 12px 15px;
+
+        & > span {
+          height: fit-content;
+          display: flex;
+        }
+
+        .input-small {
+          @include size(100%, 40px);
+          margin-right: 8.5px;
+          padding: 10px 15px;
+          box-sizing: border-box;
+          box-shadow: none;
+          border-radius: 8px;
+          @include textConfig($black, $primaryFont, 13, $fontRegular, initial, left, initial, 0);
+          background: transparent;
+          border: none;
+
+          @include mq('768') {
+            border: none;
+            background-color: $white;
+          }
+
+          &:focus-visible {
+            background-color: #e8f0fe;
+          }
+
+          &::placeholder {
+            color: transparent;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA5IiBoZWlnaHQ9IjE0IiB2aWV3Qm94PSIwIDAgMTA5IDE0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNS40MzIgMTEuMTEyQzQuNDk4NjcgMTEuMTEyIDMuNjg2NjcgMTAuOTExMyAyLjk5NiAxMC41MUMyLjMwNTMzIDEwLjA5OTMgMS43NzMzMyA5LjUxNiAxLjQgOC43NkMxLjAzNiA3Ljk5NDY3IDAuODU0IDcuMDk0IDAuODU0IDYuMDU4QzAuODU0IDUuMDIyIDEuMDM2IDQuMTI2IDEuNCAzLjM3QzEuNzczMzMgMi42MTQgMi4zMDUzMyAyLjAzNTMzIDIuOTk2IDEuNjM0QzMuNjg2NjcgMS4yMjMzMyA0LjQ5ODY3IDEuMDE4IDUuNDMyIDEuMDE4QzYuMTEzMzMgMS4wMTggNi43Mzg2NyAxLjEyNTMzIDcuMzA4IDEuMzRDNy44NzczMyAxLjU0NTMzIDguMzcyIDEuODUzMzMgOC43OTIgMi4yNjRMOC4zNTggMy4xNDZDNy44ODIgMi43NDQ2NyA3LjQxNTMzIDIuNDU1MzMgNi45NTggMi4yNzhDNi41MDA2NyAyLjEwMDY3IDUuOTk2NjcgMi4wMTIgNS40NDYgMi4wMTJDNC4zNjMzMyAyLjAxMiAzLjUyMzMzIDIuMzY2NjcgMi45MjYgMy4wNzZDMi4zMzggMy43NzYgMi4wNDQgNC43NyAyLjA0NCA2LjA1OEMyLjA0NCA3LjM1NTMzIDIuMzM4IDguMzU4NjcgMi45MjYgOS4wNjhDMy41MjMzMyA5Ljc2OCA0LjM2MzMzIDEwLjExOCA1LjQ0NiAxMC4xMThDNS45OTY2NyAxMC4xMTggNi41MDA2NyAxMC4wMjkzIDYuOTU4IDkuODUyQzcuNDE1MzMgOS42NzQ2NyA3Ljg4MiA5LjM4NTMzIDguMzU4IDguOTg0TDguNzkyIDkuODY2QzguMzcyIDEwLjI3NjcgNy44NzczMyAxMC41ODkzIDcuMzA4IDEwLjgwNEM2LjczODY3IDExLjAwOTMgNi4xMTMzMyAxMS4xMTIgNS40MzIgMTEuMTEyWk0xMy4yMTU5IDExLjA5OEMxMi41NzE5IDExLjA5OCAxMi4wMDI2IDEwLjk1MzMgMTEuNTA3OSAxMC42NjRDMTEuMDIyNiAxMC4zNzQ3IDEwLjY0NDYgOS45NjQgMTAuMzczOSA5LjQzMkMxMC4xMTI2IDguODkwNjcgOS45ODE4OSA4LjI2NTMzIDkuOTgxODkgNy41NTZDOS45ODE4OSA2Ljg0NjY3IDEwLjExMjYgNi4yMjYgMTAuMzczOSA1LjY5NEMxMC42NDQ2IDUuMTUyNjcgMTEuMDIyNiA0LjczNzMzIDExLjUwNzkgNC40NDhDMTIuMDAyNiA0LjE1ODY3IDEyLjU3MTkgNC4wMTQgMTMuMjE1OSA0LjAxNEMxMy44NTk5IDQuMDE0IDE0LjQyOTIgNC4xNTg2NyAxNC45MjM5IDQuNDQ4QzE1LjQxODYgNC43MzczMyAxNS43OTY2IDUuMTUyNjcgMTYuMDU3OSA1LjY5NEMxNi4zMjg2IDYuMjI2IDE2LjQ2MzkgNi44NDY2NyAxNi40NjM5IDcuNTU2QzE2LjQ2MzkgOC4yNjUzMyAxNi4zMjg2IDguODkwNjcgMTYuMDU3OSA5LjQzMkMxNS43OTY2IDkuOTY0IDE1LjQxODYgMTAuMzc0NyAxNC45MjM5IDEwLjY2NEMxNC40MjkyIDEwLjk1MzMgMTMuODU5OSAxMS4wOTggMTMuMjE1OSAxMS4wOThaTTEzLjIxNTkgMTAuMTZDMTMuODg3OSAxMC4xNiAxNC40MDEyIDkuOTQwNjcgMTQuNzU1OSA5LjUwMkMxNS4xMTk5IDkuMDU0IDE1LjMwMTkgOC40MDUzMyAxNS4zMDE5IDcuNTU2QzE1LjMwMTkgNi43MjUzMyAxNS4xMTk5IDYuMDg2IDE0Ljc1NTkgNS42MzhDMTQuMzkxOSA1LjE4MDY3IDEzLjg3ODYgNC45NTIgMTMuMjE1OSA0Ljk1MkMxMi41NTMyIDQuOTUyIDEyLjAzOTkgNS4xODA2NyAxMS42NzU5IDUuNjM4QzExLjMxMTkgNi4wODYgMTEuMTI5OSA2LjcyNTMzIDExLjEyOTkgNy41NTZDMTEuMTI5OSA4LjM5NiAxMS4zMDcyIDkuMDQgMTEuNjYxOSA5LjQ4OEMxMi4wMjU5IDkuOTM2IDEyLjU0MzkgMTAuMTYgMTMuMjE1OSAxMC4xNlpNMTIuODIzOSAzLjI4NkwxNC4yMDk5IDAuNDU4SDE1LjUxMTlMMTMuNjA3OSAzLjI4NkgxMi44MjM5Wk0yNC4yMDE1IDEuMTNWMTFIMjMuMDY3NVY5Ljc1NEMyMi44NjIyIDEwLjE4MzMgMjIuNTU4OCAxMC41MTQ3IDIyLjE1NzUgMTAuNzQ4QzIxLjc2NTUgMTAuOTgxMyAyMS4zMDM1IDExLjA5OCAyMC43NzE1IDExLjA5OEMyMC4xNzQyIDExLjA5OCAxOS42NDY4IDEwLjk0ODcgMTkuMTg5NSAxMC42NUMxOC43MzIyIDEwLjM1MTMgMTguMzc3NSA5LjkzNiAxOC4xMjU1IDkuNDA0QzE3Ljg3MzUgOC44NjI2NyAxNy43NDc1IDguMjM3MzMgMTcuNzQ3NSA3LjUyOEMxNy43NDc1IDYuODI4IDE3Ljg3MzUgNi4yMTIgMTguMTI1NSA1LjY4QzE4LjM3NzUgNS4xNDggMTguNzMyMiA0LjczNzMzIDE5LjE4OTUgNC40NDhDMTkuNjQ2OCA0LjE1ODY3IDIwLjE3NDIgNC4wMTQgMjAuNzcxNSA0LjAxNEMyMS4zMDM1IDQuMDE0IDIxLjc2NTUgNC4xMzA2NyAyMi4xNTc1IDQuMzY0QzIyLjU1ODggNC41OTczMyAyMi44NjIyIDQuOTI4NjcgMjMuMDY3NSA1LjM1OFYxLjEzSDI0LjIwMTVaTTIwLjk5NTUgMTAuMTZDMjEuNjU4MiAxMC4xNiAyMi4xNjY4IDkuOTM2IDIyLjUyMTUgOS40ODhDMjIuODg1NSA5LjAzMDY3IDIzLjA2NzUgOC4zODY2NyAyMy4wNjc1IDcuNTU2QzIzLjA2NzUgNi43MjUzMyAyMi44ODU1IDYuMDg2IDIyLjUyMTUgNS42MzhDMjIuMTY2OCA1LjE5IDIxLjY1ODIgNC45NjYgMjAuOTk1NSA0Ljk2NkMyMC4zMzI4IDQuOTY2IDE5LjgxNDggNS4xOSAxOS40NDE1IDUuNjM4QzE5LjA3NzUgNi4wODYgMTguODk1NSA2LjcxNiAxOC44OTU1IDcuNTI4QzE4Ljg5NTUgOC4zNTg2NyAxOS4wNzc1IDkuMDA3MzMgMTkuNDQxNSA5LjQ3NEMxOS44MTQ4IDkuOTMxMzMgMjAuMzMyOCAxMC4xNiAyMC45OTU1IDEwLjE2Wk0yNi4zMDIgNC4xODJIMjcuNDM2VjExSDI2LjMwMlY0LjE4MlpNMjcuNTYyIDEuMjI4VjIuNTAySDI2LjE5VjEuMjI4SDI3LjU2MlpNMzUuNjU5OSA0LjE4MlYxMC41MzhDMzUuNjU5OSAxMS41NTUzIDM1LjM5ODUgMTIuMzIwNyAzNC44NzU5IDEyLjgzNEMzNC4zNTMyIDEzLjM1NjcgMzMuNTc4NSAxMy42MTggMzIuNTUxOSAxMy42MThDMzEuMzU3MiAxMy42MTggMzAuMzUzOSAxMy4zMSAyOS41NDE5IDEyLjY5NEwyOS45MTk5IDExLjg1NEMzMC4zNzcyIDEyLjE1MjcgMzAuODA2NSAxMi4zNjczIDMxLjIwNzkgMTIuNDk4QzMxLjYwOTIgMTIuNjI4NyAzMi4wNTcyIDEyLjY5NCAzMi41NTE5IDEyLjY5NEMzMy4yMDUyIDEyLjY5NCAzMy42OTk5IDEyLjUxNjcgMzQuMDM1OSAxMi4xNjJDMzQuMzcxOSAxMS44MTY3IDM0LjUzOTkgMTEuMzA4IDM0LjUzOTkgMTAuNjM2VjkuNDMyQzM0LjM0MzkgOS44NzA2NyAzNC4wNDA1IDEwLjIwNjcgMzMuNjI5OSAxMC40NEMzMy4yMjg1IDEwLjY3MzMgMzIuNzUyNSAxMC43OSAzMi4yMDE5IDEwLjc5QzMxLjYwNDUgMTAuNzkgMzEuMDcyNSAxMC42NSAzMC42MDU5IDEwLjM3QzMwLjE0ODUgMTAuMDkgMjkuNzg5MiA5LjY5MzMzIDI5LjUyNzkgOS4xOEMyOS4yNzU5IDguNjY2NjcgMjkuMTQ5OSA4LjA3NCAyOS4xNDk5IDcuNDAyQzI5LjE0OTkgNi43MyAyOS4yNzU5IDYuMTM3MzMgMjkuNTI3OSA1LjYyNEMyOS43ODkyIDUuMTEwNjcgMzAuMTQ4NSA0LjcxNCAzMC42MDU5IDQuNDM0QzMxLjA3MjUgNC4xNTQgMzEuNjA0NSA0LjAxNCAzMi4yMDE5IDQuMDE0QzMyLjc0MzIgNC4wMTQgMzMuMjE0NSA0LjEzMDY3IDMzLjYxNTkgNC4zNjRDMzQuMDE3MiA0LjU5NzMzIDM0LjMyMDUgNC45Mjg2NyAzNC41MjU5IDUuMzU4VjQuMTgySDM1LjY1OTlaTTMyLjQyNTkgOS44NTJDMzMuMDc5MiA5Ljg1MiAzMy41OTI1IDkuNjM3MzMgMzMuOTY1OSA5LjIwOEMzNC4zMzkyIDguNzY5MzMgMzQuNTI1OSA4LjE2NzMzIDM0LjUyNTkgNy40MDJDMzQuNTI1OSA2LjY0NiAzNC4zMzkyIDYuMDUzMzMgMzMuOTY1OSA1LjYyNEMzMy42MDE5IDUuMTg1MzMgMzMuMDg4NSA0Ljk2NiAzMi40MjU5IDQuOTY2QzMxLjc2MzIgNC45NjYgMzEuMjQwNSA1LjE4NTMzIDMwLjg1NzkgNS42MjRDMzAuNDg0NSA2LjA1MzMzIDMwLjI5NzkgNi42NDYgMzAuMjk3OSA3LjQwMkMzMC4yOTc5IDguMTY3MzMgMzAuNDg0NSA4Ljc2OTMzIDMwLjg1NzkgOS4yMDhDMzEuMjQwNSA5LjYzNzMzIDMxLjc2MzIgOS44NTIgMzIuNDI1OSA5Ljg1MlpNNDAuNTg3IDExLjA5OEMzOS45NDMgMTEuMDk4IDM5LjM3MzcgMTAuOTUzMyAzOC44NzkgMTAuNjY0QzM4LjM5MzcgMTAuMzc0NyAzOC4wMTU3IDkuOTY0IDM3Ljc0NSA5LjQzMkMzNy40ODM3IDguODkwNjcgMzcuMzUzIDguMjY1MzMgMzcuMzUzIDcuNTU2QzM3LjM1MyA2Ljg0NjY3IDM3LjQ4MzcgNi4yMjYgMzcuNzQ1IDUuNjk0QzM4LjAxNTcgNS4xNTI2NyAzOC4zOTM3IDQuNzM3MzMgMzguODc5IDQuNDQ4QzM5LjM3MzcgNC4xNTg2NyAzOS45NDMgNC4wMTQgNDAuNTg3IDQuMDE0QzQxLjIzMSA0LjAxNCA0MS44MDAzIDQuMTU4NjcgNDIuMjk1IDQuNDQ4QzQyLjc4OTcgNC43MzczMyA0My4xNjc3IDUuMTUyNjcgNDMuNDI5IDUuNjk0QzQzLjY5OTcgNi4yMjYgNDMuODM1IDYuODQ2NjcgNDMuODM1IDcuNTU2QzQzLjgzNSA4LjI2NTMzIDQzLjY5OTcgOC44OTA2NyA0My40MjkgOS40MzJDNDMuMTY3NyA5Ljk2NCA0Mi43ODk3IDEwLjM3NDcgNDIuMjk1IDEwLjY2NEM0MS44MDAzIDEwLjk1MzMgNDEuMjMxIDExLjA5OCA0MC41ODcgMTEuMDk4Wk00MC41ODcgMTAuMTZDNDEuMjU5IDEwLjE2IDQxLjc3MjMgOS45NDA2NyA0Mi4xMjcgOS41MDJDNDIuNDkxIDkuMDU0IDQyLjY3MyA4LjQwNTMzIDQyLjY3MyA3LjU1NkM0Mi42NzMgNi43MjUzMyA0Mi40OTEgNi4wODYgNDIuMTI3IDUuNjM4QzQxLjc2MyA1LjE4MDY3IDQxLjI0OTcgNC45NTIgNDAuNTg3IDQuOTUyQzM5LjkyNDMgNC45NTIgMzkuNDExIDUuMTgwNjcgMzkuMDQ3IDUuNjM4QzM4LjY4MyA2LjA4NiAzOC41MDEgNi43MjUzMyAzOC41MDEgNy41NTZDMzguNTAxIDguMzk2IDM4LjY3ODMgOS4wNCAzOS4wMzMgOS40ODhDMzkuMzk3IDkuOTM2IDM5LjkxNSAxMC4xNiA0MC41ODcgMTAuMTZaTTU1LjE4MiAxLjEzVjExSDU0LjA0OFY5Ljc1NEM1My44NDI3IDEwLjE4MzMgNTMuNTM5MyAxMC41MTQ3IDUzLjEzOCAxMC43NDhDNTIuNzQ2IDEwLjk4MTMgNTIuMjg0IDExLjA5OCA1MS43NTIgMTEuMDk4QzUxLjE1NDcgMTEuMDk4IDUwLjYyNzMgMTAuOTQ4NyA1MC4xNyAxMC42NUM0OS43MTI3IDEwLjM1MTMgNDkuMzU4IDkuOTM2IDQ5LjEwNiA5LjQwNEM0OC44NTQgOC44NjI2NyA0OC43MjggOC4yMzczMyA0OC43MjggNy41MjhDNDguNzI4IDYuODI4IDQ4Ljg1NCA2LjIxMiA0OS4xMDYgNS42OEM0OS4zNTggNS4xNDggNDkuNzEyNyA0LjczNzMzIDUwLjE3IDQuNDQ4QzUwLjYyNzMgNC4xNTg2NyA1MS4xNTQ3IDQuMDE0IDUxLjc1MiA0LjAxNEM1Mi4yODQgNC4wMTQgNTIuNzQ2IDQuMTMwNjcgNTMuMTM4IDQuMzY0QzUzLjUzOTMgNC41OTczMyA1My44NDI3IDQuOTI4NjcgNTQuMDQ4IDUuMzU4VjEuMTNINTUuMTgyWk01MS45NzYgMTAuMTZDNTIuNjM4NyAxMC4xNiA1My4xNDczIDkuOTM2IDUzLjUwMiA5LjQ4OEM1My44NjYgOS4wMzA2NyA1NC4wNDggOC4zODY2NyA1NC4wNDggNy41NTZDNTQuMDQ4IDYuNzI1MzMgNTMuODY2IDYuMDg2IDUzLjUwMiA1LjYzOEM1My4xNDczIDUuMTkgNTIuNjM4NyA0Ljk2NiA1MS45NzYgNC45NjZDNTEuMzEzMyA0Ljk2NiA1MC43OTUzIDUuMTkgNTAuNDIyIDUuNjM4QzUwLjA1OCA2LjA4NiA0OS44NzYgNi43MTYgNDkuODc2IDcuNTI4QzQ5Ljg3NiA4LjM1ODY3IDUwLjA1OCA5LjAwNzMzIDUwLjQyMiA5LjQ3NEM1MC43OTUzIDkuOTMxMzMgNTEuMzEzMyAxMC4xNiA1MS45NzYgMTAuMTZaTTYwLjExMDQgMTEuMDk4QzU5LjQ2NjQgMTEuMDk4IDU4Ljg5NzEgMTAuOTUzMyA1OC40MDI0IDEwLjY2NEM1Ny45MTcxIDEwLjM3NDcgNTcuNTM5MSA5Ljk2NCA1Ny4yNjg0IDkuNDMyQzU3LjAwNzEgOC44OTA2NyA1Ni44NzY0IDguMjY1MzMgNTYuODc2NCA3LjU1NkM1Ni44NzY0IDYuODQ2NjcgNTcuMDA3MSA2LjIyNiA1Ny4yNjg0IDUuNjk0QzU3LjUzOTEgNS4xNTI2NyA1Ny45MTcxIDQuNzM3MzMgNTguNDAyNCA0LjQ0OEM1OC44OTcxIDQuMTU4NjcgNTkuNDY2NCA0LjAxNCA2MC4xMTA0IDQuMDE0QzYwLjc1NDQgNC4wMTQgNjEuMzIzOCA0LjE1ODY3IDYxLjgxODQgNC40NDhDNjIuMzEzMSA0LjczNzMzIDYyLjY5MTEgNS4xNTI2NyA2Mi45NTI0IDUuNjk0QzYzLjIyMzEgNi4yMjYgNjMuMzU4NCA2Ljg0NjY3IDYzLjM1ODQgNy41NTZDNjMuMzU4NCA4LjI2NTMzIDYzLjIyMzEgOC44OTA2NyA2Mi45NTI0IDkuNDMyQzYyLjY5MTEgOS45NjQgNjIuMzEzMSAxMC4zNzQ3IDYxLjgxODQgMTAuNjY0QzYxLjMyMzggMTAuOTUzMyA2MC43NTQ0IDExLjA5OCA2MC4xMTA0IDExLjA5OFpNNjAuMTEwNCAxMC4xNkM2MC43ODI0IDEwLjE2IDYxLjI5NTggOS45NDA2NyA2MS42NTA0IDkuNTAyQzYyLjAxNDQgOS4wNTQgNjIuMTk2NCA4LjQwNTMzIDYyLjE5NjQgNy41NTZDNjIuMTk2NCA2LjcyNTMzIDYyLjAxNDQgNi4wODYgNjEuNjUwNCA1LjYzOEM2MS4yODY0IDUuMTgwNjcgNjAuNzczMSA0Ljk1MiA2MC4xMTA0IDQuOTUyQzU5LjQ0NzggNC45NTIgNTguOTM0NCA1LjE4MDY3IDU4LjU3MDQgNS42MzhDNTguMjA2NCA2LjA4NiA1OC4wMjQ0IDYuNzI1MzMgNTguMDI0NCA3LjU1NkM1OC4wMjQ0IDguMzk2IDU4LjIwMTggOS4wNCA1OC41NTY0IDkuNDg4QzU4LjkyMDQgOS45MzYgNTkuNDM4NCAxMC4xNiA2MC4xMTA0IDEwLjE2Wk03MS41NDE0IDExLjA5OEM3MC44Njk0IDExLjA5OCA3MC4yODYxIDEwLjk1MzMgNjkuNzkxNCAxMC42NjRDNjkuMjk2OCAxMC4zNzQ3IDY4LjkxNDEgOS45Njg2NyA2OC42NDM0IDkuNDQ2QzY4LjM4MjEgOC45MTQgNjguMjUxNCA4LjI5MzMzIDY4LjI1MTQgNy41ODRDNjguMjUxNCA2Ljg3NDY3IDY4LjM4NjggNi4yNTQgNjguNjU3NCA1LjcyMkM2OC45Mzc0IDUuMTgwNjcgNjkuMzI0OCA0Ljc2MDY3IDY5LjgxOTQgNC40NjJDNzAuMzIzNCA0LjE2MzMzIDcwLjkxMTQgNC4wMTQgNzEuNTgzNCA0LjAxNEM3Mi4wNDA4IDQuMDE0IDcyLjQ4ODggNC4wOTggNzIuOTI3NCA0LjI2NkM3My4zNjYxIDQuNDI0NjcgNzMuNzIwOCA0LjYzOTMzIDczLjk5MTQgNC45MUw3My42MTM0IDUuNzVDNzIuOTY5NCA1LjIyNzMzIDcyLjMxNjEgNC45NjYgNzEuNjUzNCA0Ljk2NkM3MC45NTM0IDQuOTY2IDcwLjQwNzQgNS4xOTQ2NyA3MC4wMTU0IDUuNjUyQzY5LjYyMzQgNi4xMDkzMyA2OS40Mjc0IDYuNzUzMzMgNjkuNDI3NCA3LjU4NEM2OS40Mjc0IDguNDA1MzMgNjkuNjIzNCA5LjA0IDcwLjAxNTQgOS40ODhDNzAuNDA3NCA5LjkzNiA3MC45NTM0IDEwLjE2IDcxLjY1MzQgMTAuMTZDNzIuMzE2MSAxMC4xNiA3Mi45Njk0IDkuODk4NjcgNzMuNjEzNCA5LjM3Nkw3My45OTE0IDEwLjIxNkM3My43MDIxIDEwLjQ4NjcgNzMuMzM4MSAxMC43MDEzIDcyLjg5OTQgMTAuODZDNzIuNDYwOCAxMS4wMTg3IDcyLjAwODEgMTEuMDk4IDcxLjU0MTQgMTEuMDk4Wk04MS4wOTY2IDQuMTgyVjExSDc5Ljk5MDZWOS44MzhDNzkuNzc2IDEwLjI0ODcgNzkuNDcyNiAxMC41NjEzIDc5LjA4MDYgMTAuNzc2Qzc4LjY5OCAxMC45OTA3IDc4LjI2NCAxMS4wOTggNzcuNzc4NiAxMS4wOThDNzYuOTY2NiAxMS4wOTggNzYuMzU1MyAxMC44NzQgNzUuOTQ0NiAxMC40MjZDNzUuNTM0IDkuOTY4NjcgNzUuMzI4NiA5LjI5NjY3IDc1LjMyODYgOC40MVY0LjE4Mkg3Ni40NjI2VjguMzgyQzc2LjQ2MjYgOC45ODg2NyA3Ni41ODQgOS40MzY2NyA3Ni44MjY2IDkuNzI2Qzc3LjA2OTMgMTAuMDA2IDc3LjQ1MiAxMC4xNDYgNzcuOTc0NiAxMC4xNDZDNzguNTcyIDEwLjE0NiA3OS4wNTI2IDkuOTU0NjcgNzkuNDE2NiA5LjU3MkM3OS43ODA2IDkuMTggNzkuOTYyNiA4LjY2NjY3IDc5Ljk2MjYgOC4wMzJWNC4xODJIODEuMDk2NlpNODYuNjM0MyA0LjAxNEM4Ny4yMzE2IDQuMDE0IDg3Ljc1OSA0LjE2MzMzIDg4LjIxNjMgNC40NjJDODguNjczNiA0Ljc2MDY3IDg5LjAyODMgNS4xODA2NyA4OS4yODAzIDUuNzIyQzg5LjUzMjMgNi4yNTQgODkuNjU4MyA2Ljg3NDY3IDg5LjY1ODMgNy41ODRDODkuNjU4MyA4LjI5MzMzIDg5LjUzMjMgOC45MTQgODkuMjgwMyA5LjQ0NkM4OS4wMjgzIDkuOTY4NjcgODguNjczNiAxMC4zNzQ3IDg4LjIxNjMgMTAuNjY0Qzg3Ljc2ODMgMTAuOTUzMyA4Ny4yNDEgMTEuMDk4IDg2LjYzNDMgMTEuMDk4Qzg2LjEwMjMgMTEuMDk4IDg1LjYzNTYgMTAuOTgxMyA4NS4yMzQzIDEwLjc0OEM4NC44NDIzIDEwLjUxNDcgODQuNTQzNiAxMC4xODMzIDg0LjMzODMgOS43NTRWMTMuNTJIODMuMjA0M1Y0LjE4Mkg4NC4zMzgzVjUuMzU4Qzg0LjU0MzYgNC45Mjg2NyA4NC44NDIzIDQuNTk3MzMgODUuMjM0MyA0LjM2NEM4NS42MzU2IDQuMTMwNjcgODYuMTAyMyA0LjAxNCA4Ni42MzQzIDQuMDE0Wk04Ni40MTAzIDEwLjE2Qzg3LjA3MyAxMC4xNiA4Ny41ODYzIDkuOTM2IDg3Ljk1MDMgOS40ODhDODguMzE0MyA5LjA0IDg4LjQ5NjMgOC40MDUzMyA4OC40OTYzIDcuNTg0Qzg4LjQ5NjMgNi43NjI2NyA4OC4zMTQzIDYuMTIzMzMgODcuOTUwMyA1LjY2NkM4Ny41ODYzIDUuMTk5MzMgODcuMDczIDQuOTY2IDg2LjQxMDMgNC45NjZDODUuNzQ3NiA0Ljk2NiA4NS4yMzQzIDUuMTkgODQuODcwMyA1LjYzOEM4NC41MTU2IDYuMDg2IDg0LjMzODMgNi43MjUzMyA4NC4zMzgzIDcuNTU2Qzg0LjMzODMgOC4zODY2NyA4NC41MTU2IDkuMDMwNjcgODQuODcwMyA5LjQ4OEM4NS4yMzQzIDkuOTM2IDg1Ljc0NzYgMTAuMTYgODYuNDEwMyAxMC4xNlpNOTQuMTgwNyAxMS4wOThDOTMuNTM2NyAxMS4wOTggOTIuOTY3NCAxMC45NTMzIDkyLjQ3MjcgMTAuNjY0QzkxLjk4NzQgMTAuMzc0NyA5MS42MDk0IDkuOTY0IDkxLjMzODcgOS40MzJDOTEuMDc3NCA4Ljg5MDY3IDkwLjk0NjcgOC4yNjUzMyA5MC45NDY3IDcuNTU2QzkwLjk0NjcgNi44NDY2NyA5MS4wNzc0IDYuMjI2IDkxLjMzODcgNS42OTRDOTEuNjA5NCA1LjE1MjY3IDkxLjk4NzQgNC43MzczMyA5Mi40NzI3IDQuNDQ4QzkyLjk2NzQgNC4xNTg2NyA5My41MzY3IDQuMDE0IDk0LjE4MDcgNC4wMTRDOTQuODI0NyA0LjAxNCA5NS4zOTQxIDQuMTU4NjcgOTUuODg4NyA0LjQ0OEM5Ni4zODM0IDQuNzM3MzMgOTYuNzYxNCA1LjE1MjY3IDk3LjAyMjcgNS42OTRDOTcuMjkzNCA2LjIyNiA5Ny40Mjg3IDYuODQ2NjcgOTcuNDI4NyA3LjU1NkM5Ny40Mjg3IDguMjY1MzMgOTcuMjkzNCA4Ljg5MDY3IDk3LjAyMjcgOS40MzJDOTYuNzYxNCA5Ljk2NCA5Ni4zODM0IDEwLjM3NDcgOTUuODg4NyAxMC42NjRDOTUuMzk0MSAxMC45NTMzIDk0LjgyNDcgMTEuMDk4IDk0LjE4MDcgMTEuMDk4Wk05NC4xODA3IDEwLjE2Qzk0Ljg1MjcgMTAuMTYgOTUuMzY2MSA5Ljk0MDY3IDk1LjcyMDcgOS41MDJDOTYuMDg0NyA5LjA1NCA5Ni4yNjY3IDguNDA1MzMgOTYuMjY2NyA3LjU1NkM5Ni4yNjY3IDYuNzI1MzMgOTYuMDg0NyA2LjA4NiA5NS43MjA3IDUuNjM4Qzk1LjM1NjcgNS4xODA2NyA5NC44NDM0IDQuOTUyIDk0LjE4MDcgNC45NTJDOTMuNTE4MSA0Ljk1MiA5My4wMDQ3IDUuMTgwNjcgOTIuNjQwNyA1LjYzOEM5Mi4yNzY3IDYuMDg2IDkyLjA5NDcgNi43MjUzMyA5Mi4wOTQ3IDcuNTU2QzkyLjA5NDcgOC4zOTYgOTIuMjcyMSA5LjA0IDkyLjYyNjcgOS40ODhDOTIuOTkwNyA5LjkzNiA5My41MDg3IDEwLjE2IDk0LjE4MDcgMTAuMTZaTTEwNi43MDYgNC4wMTRDMTA4LjIxOCA0LjAxNCAxMDguOTc0IDQuOTE0NjcgMTA4Ljk3NCA2LjcxNlYxMUgxMDcuODRWNi43NzJDMTA3Ljg0IDYuMTQ2NjcgMTA3LjcyOCA1LjY4OTMzIDEwNy41MDQgNS40QzEwNy4yOSA1LjExMDY3IDEwNi45NCA0Ljk2NiAxMDYuNDU0IDQuOTY2QzEwNS44ODUgNC45NjYgMTA1LjQzNyA1LjE1NzMzIDEwNS4xMSA1LjU0QzEwNC43ODQgNS45MjI2NyAxMDQuNjIgNi40NDUzMyAxMDQuNjIgNy4xMDhWMTFIMTAzLjQ4NlY2Ljc3MkMxMDMuNDg2IDYuMTM3MzMgMTAzLjM3NCA1LjY4IDEwMy4xNSA1LjRDMTAyLjkyNiA1LjExMDY3IDEwMi41NzIgNC45NjYgMTAyLjA4NiA0Ljk2NkMxMDEuNTE3IDQuOTY2IDEwMS4wNjkgNS4xNTczMyAxMDAuNzQyIDUuNTRDMTAwLjQxNiA1LjkyMjY3IDEwMC4yNTIgNi40NDUzMyAxMDAuMjUyIDcuMTA4VjExSDk5LjExODRWNC4xODJIMTAwLjIzOFY1LjI2QzEwMC40NDQgNC44NTg2NyAxMDAuNzI4IDQuNTUwNjcgMTAxLjA5MiA0LjMzNkMxMDEuNDU2IDQuMTIxMzMgMTAxLjg3NiA0LjAxNCAxMDIuMzUyIDQuMDE0QzEwMy40MDcgNC4wMTQgMTA0LjEwMiA0LjQ2MiAxMDQuNDM4IDUuMzU4QzEwNC42MzQgNC45MzggMTA0LjkzMyA0LjYxMTMzIDEwNS4zMzQgNC4zNzhDMTA1LjczNiA0LjEzNTMzIDEwNi4xOTMgNC4wMTQgMTA2LjcwNiA0LjAxNFoiIGZpbGw9IiM2NTY1NjUiLz4KPC9zdmc+Cg==');
+            background-repeat: no-repeat;
+            background-position: left center;
+          }
+        }
+
+        #cart-coupon-add {
+          @include display-flex(center, center, row);
+          outline: none;
+          border: none;
+          box-shadow: none;
+          background: $green;
+          border-radius: 8px;
+          @include size(38px, 40px);
+          padding: 0 10.5px;
+          font-size: 0;
+
+          &::before {
+            content: 'OK';
+            @include textConfig($white, $primaryFont, 12, $fontBold, initial, center, uppercase, 0);
+          }
+        }
+
+        .info {
+          @include textConfig($black, $primaryFont, 14, $fontMedium, 20, left, initial, 0);
+          gap: 3px;
+          float: none;
+
+          > span {
+            text-decoration: underline;
+            padding-left: 6px;
+          }
+        }
+
+        .delete {
+          margin-left: 6px;
+          text-decoration: none;
+
+          a {
+            color: $primary-color;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .loading-inline {
+      height: 13px;
+      margin-top: 12px;
+    }
+  }
+
+  .accordion-body {
+    padding: 0;
+  }
+
+  .table {
+    .info {
+      text-align: left;
+      width: 40%;
+    }
+
+    .monetary {
+      text-align: right;
+      padding: 8px 0 0 0;
+      width: 60%;
+      color: $black !important;
+
+      .subtotal-product {
+        font-weight: $fontExtraBold;
+
+        span {
+          font-weight: $fontRegular;
+        }
+      }
+
+      span {
+        font: {
+          size: 12px;
+          weight: $fontRegular;
+        }
+      }
+    }
+
+    .empty {
+      display: none;
+    }
+
+    & > tbody > tr > td {
+      padding: 8px 0 0 0;
+      @include textConfig($black, $primaryFont, 14, $fontRegular, 16, left, initial, 0);
+    }
+
+    & > tfoot > tr > td {
+      padding: 8px 0 0 0;
+      @include textConfig($black, $primaryFont, 16, $fontExtraBold, initial, left, initial, 0);
+    }
+  }
+
+  & tr {
+    border: none !important;
+  }
+}
+
+.cart-links {
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 0;
+  grid-area: links;
+
+  @include display-flex(center, center, column);
+
+  @include mq('1024') {
+    @include display-flex(flex-end, center, column);
+  }
+
+  @include mq('1025') {
+    flex-direction: column-reverse;
+  }
+
+  @include mq('980', max) {
+    width: 100%;
+  }
+
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  .btn-place-order-wrapper {
+    width: 100%;
+    margin-top: 20px;
+
+    @include mq('1024') {
+      max-width: 375px;
+    }
+
+    #cart-to-orderform {
+      @include size(100%, 48px);
+      @include display-flex(center, center, row);
+      padding: 0;
+      margin: 0;
+      border: none;
+      border-radius: 8px;
+      box-sizing: border-box;
+      box-shadow: none;
+      background-image: none;
+      background-color: $green !important;
+      font-size: 0;
+
+      &:hover {
+        background-color: $green-dark !important;
+        transition: all 300ms ease-in-out;
+      }
+
+      &::before {
+        content: 'Finalizar pedido';
+        @include textConfig($white, $primaryFont, 16, $fontExtraBold, 20, center, uppercase, 0);
+        text-shadow: none;
+      }
+    }
+  }
+
+  .link-choose-more-products-wrapper {
+    padding: 0;
+    width: 100%;
+    margin-top: 14px;
+
+    &::before {
+      margin-right: 6px;
+      content: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.48583 11.5176L7.91391 10.099L4.81597 7.00109L13.0193 7.00109L13.0193 4.99866L4.81597 4.99867L7.91391 1.90073L6.48583 0.482177L0.980668 5.99988L6.48583 11.5176Z' fill='%234D4D4D'/%3E%3C/svg%3E%0A");
+    }
+
+    @include mq('768') {
+      padding: 0;
+      @include display-flex(center, center, row);
+      max-width: 375px;
+    }
+
+    & a {
+      margin: 0;
+      font-size: 0;
+
+      &::before {
+        content: 'Continuar comprando';
+        @include textConfig($darkest-gray, $primaryFont, 14, $fontBold, 20, center, initial, 0);
+      }
+
+      @include mq('768') {
+        margin-right: 19px;
+      }
+    }
+  }
+}
+
+.srp-toggle {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 16px !important;
+  padding: 0;
+
+  .srp-toggle__wrapper {
+    box-shadow: none !important;
+
+    .srp-toggle__delivery,
+    .srp-toggle__pickup {
+      border: 1px solid $light-gray-05;
+      background: $white;
+      @include textConfig($black, $primaryFont, 16, $fontExtraBold, 22, center, initial, 0);
+
+      @include mq('768') {
+        border: none;
+      }
+
+      &.blue {
+        background: $black;
+        border: none;
+        color: $white;
+      }
+    }
+
+    .srp-toggle__delivery {
+      border-radius: 8px 0 0 8px;
+      color: $black;
+      border: 1px solid $black;
+
+      &.blue {
+        color: $white;
+        border: none;
+      }
+    }
+
+    .srp-toggle__pickup {
+      border-radius: 0 8px 8px 0;
+      border: 1px solid $black;
+    }
+
+    .srp-toggle__current {
+      border: none;
+      box-shadow: none;
+    }
+  }
+}
+
+//pickup
+
+.srp-pickup-my-location__button {
+  @include size(100%, 40px);
+  background: transparent !important;
+  border: 1px solid $green !important;
+  border-radius: 8px;
+  transition: all 300ms ease-in;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  span {
+    font-size: 0;
+
+    &::before {
+      content: 'Buscar endereço';
+      @include textConfig($green, $primaryFont, 14, $fontExtraBold, 20, center, uppercase, 0);
+    }
+  }
+}
+
+.pkpmodal {
+  border: none !important;
+
+  @include mq('1024', max) {
+    @include size(90% !important, 50% !important);
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.vtex-pickup-points-modal-3-x-modalBackdrop {
+  background-color: #303030 !important;
+}
+
+.vtex-pickup-points-modal-3-x-modalfullPage {
+  background: $white !important;
+
+  .pkpmodal-locating-image-waiting-pin {
+    margin-bottom: 12px;
+
+    path {
+      &:first-child {
+        fill: $green;
+      }
+
+      &:nth-child(2) {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  .pkpmodal-search-alone {
+    @include display-flex(center, center, column);
+    margin: 0;
+    padding: 0 16px;
+
+    &-title {
+      margin: 0;
+      max-width: 330px;
+      font-size: 0 !important;
+
+      &::before {
+        content: 'Busque por lojas próximas a sua região';
+        @include textConfig($green, $primaryFont, 22, $fontBold, 25, center, initial, 0);
+      }
+    }
+
+    &-subtitle {
+      max-width: 435px;
+      margin: 16px 0;
+      font-size: 0 !important;
+
+      &::before {
+        content: 'Digite seu CEP para encontrar as lojas mais próximas de você.';
+        @include textConfig($black, $primaryFont, 16, $fontBold, 22, center, initial, 0);
+      }
+    }
+  }
+
+  .pkpmodal-postal-code {
+    margin: 0 !important;
+  }
+
+  .pkpmodal-postal-code {
+    width: 100%;
+    max-width: 435px;
+
+    .ship-postalCode {
+      margin: 0;
+
+      input#ship-postalCode {
+        @include textConfig($black, $primaryFont, 14, $fontRegular, 22, left, initial, 0);
+        width: 100%;
+        border: 1px solid $light-gray-03;
+        border-radius: 8px;
+        box-shadow: none;
+        margin: 0 0 8px 0;
+      }
+
+      label {
+        display: none;
+      }
+
+      a {
+        @include textConfig($black, $primaryFont, 12, $fontBold, 14, left, initial, 0);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.pkpmodal-close {
+  box-shadow: none !important;
+  background: transparent !important;
+
+  svg {
+    color: $black;
+  }
+}
+
+.vtex-pickup-points-modal-3-x-askGeolocationBtn {
+  display: none !important;
+}
+
+.pkpmodal-header {
+  border: none;
+  background-color: $primary-color;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+
+  .pkpmodal-title {
+    @include textConfig($white, $primaryFont, 16, $fontBold, 22, left, initial, 0);
+  }
+}
+
+.vtex-pickup-points-modal-3-x-locationSummary {
+  padding: 16px !important;
+
+  svg > path {
+    fill: $primary-color;
+  }
+
+  .pkpmodal-location-summary-btn {
+    @include textConfig($black, $primaryFont, 14, $fontRegular, 20, left, initial, 0);
+  }
+
+  .pkpmodal-location-reset {
+    @include textConfig($black, $primaryFont, 14, $fontBold, 20, left, initial, 0);
+    text-decoration: underline;
+    padding: 0 0 0 12px;
+    width: max-content;
+    margin-left: auto;
+  }
+}
+
+.vtex-pickup-points-modal-3-x-pickupListTitle {
+  margin: 0 0 8px 0 !important;
+  @include textConfig($black !important, $primaryFont, 14, $fontBold, 20, left, initial, 0);
+  font-size: 14px !important;
+}
+
+.pkpmodal-points-list {
+  padding: 0 16px !important;
+  margin: 0 !important;
+}
+
+.pkpmodal-pickup-point {
+  margin-top: 14px;
+  border-radius: 8px !important;
+  background: $white;
+
+  @include mq('1024') {
+    transition: all 200ms ease-in-out;
+    border: 1px solid $light-gray-03 !important;
+    background: transparent;
+
+    &:hover {
+      border: 1px solid transparent !important;
+      background: $white-02;
+    }
+  }
+
+  &-name {
+    @include textConfig($green, $primaryFont, 16, $fontBold, 20, left, initial, 0);
+    margin-bottom: 10px;
+  }
+
+  &-address {
+    .address-summary {
+      @include textConfig($black, $primaryFont, 14, $fontBold, 20, left, initial, 0);
+    }
+  }
+
+  &-available {
+    @include textConfig($black, $primaryFont, 12, $fontRegular, 20, left, initial, 10);
+  }
+}
+
+.pkpmodal-pickup-point-sla-availability {
+  @include display-flex(center, space-between, row);
+
+  .pkpmodal-pickup-point {
+    &-price {
+      @include textConfig($light-green, $primaryFont, 13, $fontRegular, 20, left, initial, 0);
+    }
+
+    &-sla {
+      @include textConfig($black, $primaryFont, 13, $fontRegular, 20, left, initial, 0);
+    }
+  }
+}
+
+.pkpmodal-details-back-lnk {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 0 16px !important;
+  @include textConfig($green !important, $primaryFont !important, 14, $fontRegular, 20, left, initial, 0);
+  font-size: 14px !important;
+
+  svg > path {
+    fill: $green;
+  }
+}
+
+.pkpmodal-details-header {
+  padding-left: 16px !important;
+
+  &-title {
+    color: $black !important;
+    font-size: 13px !important;
+  }
+}
+
+.pkpmodal-details-info-title {
+  color: $black !important;
+  font-size: 14px !important;
+}
+
+.pkpmodal-details-store,
+.pkpmodal-details-info {
+  padding: 16px !important;
+}
+
+.pkpmodal-details-group {
+  @include textConfig($black, $primaryFont, 12, $fontRegular, 22, left, initial, 0);
+}
+
+.pkpmodal-details-hours td {
+  border: none !important;
+}
+
+.pkpmodal-details-bottom {
+  padding: 16px !important;
+
+  .pkp-modal-btn {
+    background: $green;
+    border: none;
+    font-size: 0;
+    transition: all 300ms ease-in;
+
+    &::before {
+      content: 'Retirar nessa loja';
+      @include textConfig($white, $primaryFont, 14, $fontBold, 20, center, initial, 0);
+    }
+
+    &:hover {
+      background: $green-dark;
+    }
+  }
+}
+
+.pkpmodal-pickup-point-marker {
+  @include display-flex(center, center, column);
+
+  svg > path:first-child {
+    fill: $primary-color;
+  }
+}
+
+.vtex-pickup-points-modal-3-x-errorWrapper {
+  width: auto !important;
+
+  .vtex-pickup-points-modal-3-x-errorTitle {
+    margin: 16px 0;
+    @include textConfig($black, $primaryFont, 16, $fontSemiBold, 22, center, initial, 0);
+  }
+
+  .vtex-pickup-points-modal-3-x-errorSubtitle {
+    display: none;
+  }
+
+  .pkpmodal-back-to-search {
+    background: $green;
+    border: none;
+    border-radius: 8px;
+    font-size: 0;
+    transition: all 300ms ease-in;
+
+    &::before {
+      content: 'Voltar';
+      @include textConfig($white, $primaryFont, 14, $fontBold, 20, center, uppercase, 0);
+    }
+
+    &:hover {
+      background: $green-dark;
+    }
+  }
+
+  svg {
+    & > path {
+      fill: $primary-color;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        fill: $green !important;
+        stroke: none;
+      }
+    }
+
+    & > g > path {
+      fill: $white !important;
+    }
+
+    circle {
+      fill: rgb(235, 235, 235);
+      stroke: none;
+    }
+  }
+}

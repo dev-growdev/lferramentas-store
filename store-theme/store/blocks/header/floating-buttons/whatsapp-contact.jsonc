@@ -1,0 +1,16 @@
+{
+  "image-new-custom#header-floating-buttons-whatsapp": {
+    "title": "Ícone Whatsapp",
+    "props": {
+      "width": "40px",
+      "height": "40px",
+      "alt": "Contato Whatsapp",
+      "blockClass": ["header-floating-buttons"],
+      "src": "assets/icons/icon-whatsapp-big.svg",
+      "link": {
+        "url": "https://api.whatsapp.com/send?1=pt_BR&phone=555131030100",
+        "newTab": true
+      }
+    }
+  }
+}

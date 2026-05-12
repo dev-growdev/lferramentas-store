@@ -1,0 +1,108 @@
+@import "../../global";
+
+.nameContainer {
+  padding-top: 8px;
+  padding-bottom: 0px;
+}
+
+.container--main {
+  background-color: $white;
+
+  .nameContainer {
+    padding-top: 5px;
+
+    @include mq('1026') {
+      padding-top: 8px;
+    }
+  }
+
+  .brandName {
+    @include textConfig($black, 13, $fontSemiBold, 16, left, initial, 0);
+    margin-bottom: 8px;
+    min-height: 48px;
+    -webkit-line-clamp: 3;
+  }
+
+}
+
+.brandName {
+  min-height: 60px;
+  @include textConfig($black, 14, $fontRegular, 18, left, initial, 0);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  margin-bottom: 0px;
+
+  @include mq('1026') {
+    min-height: 40px;
+    -webkit-line-clamp: 2;
+  }
+}
+
+.container {
+  & :global(.vtex-modal-layout-0-x-triggerContainer--quickview) {
+    opacity: 1;
+    display: inline-block;
+  }
+}
+
+.clearLink {
+  text-decoration: none;
+}
+
+.element {
+  border-radius: 10px;
+  padding: 12px 8px;
+  border: 1px solid $light-gray;
+
+  &--main {
+    border: 1px solid transparent;
+    padding: 12px 8px;
+    max-width: 238px;
+    margin: 0 auto;
+
+    @include mq("768") {
+      border: 1px solid $white;
+    }
+
+    @include mq("1026") {
+      padding: 6px 8px 8px;
+    }
+
+    :global(.vtex-stack-layout-0-x-stackContainer) {
+      border-radius: 7px;
+    }
+
+    :global(.vtex-stack-layout-0-x-stackItem):last-child {
+      bottom: 0;
+      top: auto;
+      width: 100%;
+      border-radius: 7px;
+      display: none;
+    }
+
+    &:hover {
+      border: 1px solid rgb(85 90 68 / 50%);
+
+      :global(.vtex-stack-layout-0-x-stackItem):last-child {
+        display: block;
+      }
+
+      :global(.vtex-flex-layout-0-x-flexRow--main-summary-buy-btn) :global(.vtex-button) {
+        background-color: $success-dark-green; 
+        border-radius: 8px;
+      }
+    }
+
+    .image {
+      @include mq("1026") {
+        aspect-ratio: 222 / 211;
+        max-height: 211px;
+      }
+    }
+  }
+}

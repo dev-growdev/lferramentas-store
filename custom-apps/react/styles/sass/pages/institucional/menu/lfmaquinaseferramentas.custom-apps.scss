@@ -1,0 +1,77 @@
+.container-content--mobile,
+.container-component--desktop {
+	width: 100%;
+	border-radius: 8px;
+	background-color: $white;
+
+	@include mq('1025') {
+		background-color: transparent;
+	}
+
+	.container-content--title {
+		border: none;
+		background-color: $white;
+		margin: 0;
+		display: flex;
+		border-radius: 8px;
+		padding: 0 16px;
+		justify-content: space-between;
+		align-items: center;
+		@include size(100%, 48px);
+		@include text(5, $dark-green, $fontBold);
+		font-family: $secondaryFont;
+		line-height: 19px;
+	}
+
+	.list--options {
+		border: none;
+		border-radius: 8px;
+		background-color: $white;
+		padding: 10px 16px 37px 16px;
+		display: flex;
+		flex-direction: column;
+
+		@include mq('1025') {
+			padding: 0;
+			background-color: transparent;
+		}
+	}
+
+	.list-item {
+		&--title {
+			margin: 0 0 16px;
+			@include text(4, $black02, $fontBold);
+		}
+
+		&--link {
+			@include text(5, $black02, $fontRegular);
+			text-decoration: none;
+			margin-bottom: 16px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&:hover {
+				color: $dark-green;
+				font-weight: $fontBold;
+			}
+		}
+
+		&--active {
+			color: $dark-green;
+			font-weight: $fontBold;
+		}
+	}
+}
+
+.container-content--opened {
+	.icon--instmenumobile {
+		color: $primary-color;
+		transform: rotate(-180deg);
+		}
+
+	.container-content--title {
+		color: $primary-color;
+	}
+}

@@ -1,0 +1,15 @@
+{
+  "app-flags--desktop-render-product-summary": {
+    "component": "RenderDesktopFlagProductSummary"
+  },
+  "app-flags--mobile-render-product-summary": {
+    "component": "RenderMobileFlagProductSummary"
+  },
+  "app-flags-global-context": {
+    "component": "GlobalProvider",
+    "composition": "children",
+    "content": {
+      "$ref": "app:lfmaquinaseferramentas.custom-flags#/definitions/GlobalProvider"
+    }
+  }
+}

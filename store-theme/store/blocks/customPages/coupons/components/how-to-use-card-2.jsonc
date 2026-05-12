@@ -1,0 +1,49 @@
+{
+  "flex-layout.col#how-to-use-coupons-card-2": {
+    "title": "Card 2",
+    "children": [
+      "flex-layout.row#how-to-use-coupons-card-text-2",
+      "flex-layout.row#how-to-use-coupons-card-image-2"
+    ],
+    "props": {
+      "blockClass": "how-to-use-coupons-card"
+    }
+  },
+  "flex-layout.row#how-to-use-coupons-card-image-2": {
+    "props": {
+      "blockClass": "how-to-use-coupons-card-image"
+    },
+    "children": ["image-new-custom#how-to-use-coupons-card-image-2"]
+  },
+  "flex-layout.row#how-to-use-coupons-card-text-2": {
+    "children": [
+      "rich-text#how-to-use-coupons-card-number-2",
+      "rich-text#how-to-use-coupons-card-text-2"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "rich-text#how-to-use-coupons-card-number-2": {
+    "title": "Número",
+    "props": {
+      "text": "2.",
+      "blockClass": "how-to-use-coupons-card-number"
+    }
+  },
+  "rich-text#how-to-use-coupons-card-text-2": {
+    "title": "Texto",
+    "props": {
+      "text": "Clique em um cupom acima _(ele copiará automaticamente)_ e cole ou escreva o código do cupom no campo indicado e clique em **OK.**",
+      "blockClass": "how-to-use-coupons-card-text"
+    }
+  },
+  "image-new-custom#how-to-use-coupons-card-image-2": {
+    "props": {
+      "blockClass": "how-to-use-coupons-card-image",
+      "alt": "Compartilhe o link de sua compra",
+      "src": "/assets/vtex.file-manager-graphql/images/5bb88072-2e3c-4d60-8acf-3f804a7918ad___ba7f15cc5afcc6246d1334f484d8235d.png"
+    }
+  }
+}

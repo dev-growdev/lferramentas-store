@@ -1,0 +1,444 @@
+/* PRIMEIRO TEMA <theme1> ESTILO DELUPO */
+.mobile {
+
+  &-container,
+  &-overlay,
+  &-menuArrowIcon {
+    transition: 0.3s;
+  }
+
+  &-hamburguer,
+  &-closeButton,
+  &-menuBackButton {
+    display: flex;
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  &-closeButton {
+    padding: 20px;
+  }
+
+  &-hamburguerImage {
+    @include size(37px, 25px);
+  }
+
+  &-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: $white;
+    @include size(100%, 110vh);
+    padding-bottom: 10vh;
+    min-width: 290px;
+    pointer-events: none;
+    transform: translate3d(-100%, 0px, 0px);
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    @include size(100%);
+  }
+
+  &-container--Opened {
+    pointer-events: initial;
+    transform: translate3d(0%, 0px, 0px);
+  }
+
+  &-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    background-color: rgba(3, 4, 78, 0.5);
+    pointer-events: none;
+    opacity: 0;
+
+    &--Opened {
+      pointer-events: initial;
+      opacity: 1;
+    }
+  }
+
+  &-headerContainer {
+    height: fit-content;
+    background-color: $secondary-color;
+  }
+
+  &-titleContainer {
+    position: absolute;
+    right: 0px;
+    top: 51px;
+    padding: 0;
+  }
+
+  &-titleContent {
+    display: none;
+  }
+
+  &-buttonsContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  &-logoutButton {
+    color: $white;
+    font-weight: 500;
+    font-size: 12px;
+    padding-left: 15px;
+  }
+
+  &-title {
+    color: $black;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 20px;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  &-itemsContainer {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  &-itemsContent,
+  &-subItemsContent {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &-itemsContent {
+    padding: 50px 0 13px 0;
+  }
+
+  &-subItem {
+    padding: 2vh 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $black;
+    font-size: 12px;
+  }
+
+  &-itemLink {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $white;
+    justify-content: space-between;
+  }
+
+  &-subItemsContent {
+    padding: 0 20px;
+  }
+
+  &-itemTextContent {
+    display: flex;
+    align-items: center;
+  }
+
+  &-itemIcon {
+    padding-right: 12px;
+    display: flex;
+    align-items: center;
+  }
+
+  &-itemText {
+    display: flex;
+    border: none;
+    font-family: 'Nunito Sans', sans-serif;
+    @include textConfig($black, 14, $fontSemiBold, 14, left, initial, 0);
+  }
+
+  &-subItemLink {
+    display: flex;
+    align-items: center;
+  }
+
+  &-subItemLink {
+    text-decoration: none;
+  }
+
+  &-itemLink--meusfavoritos {
+    .mobile-itemText {
+      font-size: 0;
+
+      &::after {
+        content: 'Wishlist';
+        font-family: 'Nunito Sans', sans-serif;
+        @include textConfig($black, 14, $fontSemiBold, 14, left, initial, 0);
+      }
+    }
+  }
+
+  &-subItemText {
+    font-weight: 500;
+    line-height: 16px;
+    text-align: left;
+    color: $white;
+  }
+
+  &-itemButtonAttendanceContent {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-itemButtonAttendance {
+    margin: 21px 28px;
+    min-height: 45px;
+    background-color: $yellow-02;
+    border: none;
+    border-radius: 9px;
+    width: 100%;
+    max-width: 264px;
+    color: $white;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &-menuContainer {
+    color: inherit;
+    height: 100%;
+    overflow: auto !important;
+    position: relative;
+  }
+
+  &-menuItemsWrapper {
+    height: inherit;
+  }
+
+  &-subItems {
+    max-height: 0;
+    pointer-events: none;
+    transition: max-height 1s;
+    overflow: hidden;
+  }
+
+  &-item--Opened .mobile-subItems {
+    max-height: 280px;
+    pointer-events: auto;
+  }
+
+  &-itemLink .mobile-menuArrowIcon {
+    transform: rotate(0deg);
+    transition: 0.3s;
+    max-width: 9px;
+    fill: $white;
+  }
+
+  &-item--Opened .mobile-itemLink .mobile-menuArrowIcon {
+    transform: rotate(180deg);
+  }
+
+  &-menuItemsWrapper,
+  &-menuSecondItemsWrapper,
+  &-menuThirdItemsWrapper {
+    padding: 2vh 0;
+  }
+
+  &-menuSecondItems,
+  &-menuThirdItems {
+    display: grid;
+    padding-bottom: 11vh;
+    margin: 0;
+    height: 100%;
+    overflow: auto !important;
+  }
+
+  &-menuSecondItems,
+  &-menuThirdItems {
+    padding-left: 0;
+    height: auto;
+  }
+
+  &-menuItems {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: auto !important;
+  }
+
+  &-menuItem,
+  &-menuSecondItem,
+  &-menuThirdItem {
+    list-style: none;
+    padding: 13px 20px;
+  }
+
+  &-menuItem--novidades .mobile-menuItemLink {
+    color: $orange;
+    font-weight: 700;
+  }
+
+  &-menuSecondItemLink,
+  &-menuThirdItemLink {
+    .mobile-menuArrowIconContent {
+      background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.69238 7.80945L1.92059 12.6671C1.48138 13.1149 0.769531 13.1149 0.329407 12.6671C-0.109802 12.2209 -0.109802 11.4956 0.329407 11.0487L4.3067 6.99988L0.329407 2.95166C-0.109802 2.50476 -0.109802 1.7804 0.329407 1.33252C0.769531 0.885498 1.48138 0.885498 1.92059 1.33252L6.69238 6.19019C6.91248 6.41418 7.02246 6.70715 7.02246 7.00012C7.02246 7.29309 6.91248 7.58594 6.69238 7.80945Z' fill='%23656565'/%3E%3C/svg%3E%0A");
+      height: 15px;
+    }
+  }
+
+  &-menuItemLink,
+  &-menuSecondItemLink {
+    text-decoration: none;
+    display: block;
+  }
+
+  &-menuArrowIcon {
+    max-width: 13px;
+    fill: $orange;
+    height: auto;
+  }
+
+  &-menuItemLink,
+  &-menuSecondItemLink,
+  &-menuThirdItemLink {
+    @include textConfig($black04, 12, $fontRegular, 14, left, initial, 0);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    border: 0;
+    box-shadow: none;
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  &-menuItemLink,
+  &-menuSecondItemLink,
+  &-menuThirdItemLink {
+    font-weight: $fontRegular;
+  }
+
+  &-menuItemLinkText {
+    @include textConfig($black, 16, $fontRegular, 22, left, initial, -40);
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+  &-menuSecondItemLinkText {
+    @include textConfig($dark-gray-01, 16, $fontRegular, 22, left, initial, -40);
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+  &-menuItemLink--promocoes {
+    color: $red-01;
+  }
+
+  &-menuItem,
+  &-menuSecondItem,
+  &-menuThirdItem {
+    border-bottom: 1px solid $secondary-color;
+  }
+
+  &-menuSecondItemsWrapper,
+  &-menuThirdItemsWrapper {
+    position: absolute;
+    left: 0;
+    @include size(100%);
+    visibility: hidden;
+    pointer-events: none;
+    background-color: $white;
+    transform: translate3d(-100%, 0px, 0px);
+    z-index: 999;
+    transition: 0.3s;
+  }
+
+  &-menuSecondItemsWrapper {
+    top: 0;
+  }
+
+  &-menuThirdItemsWrapper {
+    top: 0;
+  }
+
+  &-menuItem--Opened .mobile-menuSecondItemsWrapper,
+  &-menuSecondItem--Opened .mobile-menuThirdItemsWrapper {
+    transform: translate3d(0%, 0px, 0px);
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  &-menuItemLink,
+  &-menuSecondItemLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-menuArrowIconContent {
+    display: flex;
+    background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.69238 7.80945L1.92059 12.6671C1.48138 13.1149 0.769531 13.1149 0.329407 12.6671C-0.109802 12.2209 -0.109802 11.4956 0.329407 11.0487L4.3067 6.99988L0.329407 2.95166C-0.109802 2.50476 -0.109802 1.7804 0.329407 1.33252C0.769531 0.885498 1.48138 0.885498 1.92059 1.33252L6.69238 6.19019C6.91248 6.41418 7.02246 6.70715 7.02246 7.00012C7.02246 7.29309 6.91248 7.58594 6.69238 7.80945Z' fill='%23191818'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    @include size(8px, 20px);
+
+    :first-child {
+      display: none;
+    }
+  }
+
+  &-menuBackButton .mobile-menuArrowIconContent {
+    padding-right: 6px;
+    background: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.50512 12.0176L6.9332 10.599L3.83526 7.50109L12.0386 7.50109L12.0386 5.49866L3.83526 5.49867L6.9332 2.40073L5.50512 0.982177L-4.53051e-05 6.49988L5.50512 12.0176Z' fill='%23303030'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    @include size(20px, 15px);
+  }
+
+  &-menuArrowIcon {
+    transform: rotate(270deg);
+  }
+
+  &-menuBackButton .mobile-menuArrowIcon {
+    transform: rotate(90deg);
+    fill: $orange;
+    max-width: 13px;
+  }
+
+  &-menuBackButton {
+    @include textConfig($dark-gray, 14, $fontBold, 22, left, initial, 0);
+    font-family: 'Nunito Sans', sans-serif;
+    align-items: center;
+    font-family: $primaryFont;
+  }
+
+  &-menuItemsTitleContent {
+    padding: 0 20px;
+  }
+
+  &-menuItemsTitleLink {
+    text-decoration: none;
+  }
+
+  &-menuItemsTitle {
+    @include textConfig($black, 16, $fontBold, 22, left, initial, 0);
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 0;
+    margin: 14px 0;
+  }
+
+  &-menuSeeAllButton {
+    display: block;
+    @include textConfig($black, 14, $fontBold, 20, left, initial, 0);
+    font-family: 'Nunito Sans', sans-serif;
+    text-decoration: underline;
+    padding: 0 20px 13px;
+  }
+
+  &-footerContainer {
+    margin-top: 5vh;
+  }
+
+  &-footerContainer {
+    display: none;
+  }
+}

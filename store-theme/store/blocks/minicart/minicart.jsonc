@@ -1,0 +1,28 @@
+{
+  "minicart.v2": {
+    "title": "Minicart",
+    "children": ["minicart-base-content"],
+    "props": {
+      "variation": "drawer",
+      "drawerSlideDirection": "rightToLeft",
+      "quantityDisplay": "not-empty",
+      "itemCountMode": "total",
+      "backdropMode": "visible",
+      "maxDrawerWidth": 440,
+      "customPixelEventId": "add-to-cart-button"
+    }
+  },
+  "add-to-cart-button": {
+    "props": {
+      "text": "Comprar",
+      "addToCartFeedback": "customEvent",
+      "customPixelEventId": "add-to-cart-button",
+      "isOneClickBuy": false
+    }
+  },
+  "minicart-base-content": {
+    "title": "Container Minicart",
+    "blocks": ["minicart-empty-state"],
+    "children": ["minicart-product-list", "flex-layout.row#minicart-footer"]
+  }
+}

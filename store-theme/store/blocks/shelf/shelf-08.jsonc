@@ -1,0 +1,90 @@
+{
+  "toggle-layout#shelf-08": {
+    "title": "Ativar/Desativar - Vitrine 08",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "flex-layout.row#shelf-08"
+    ]
+  },
+  "flex-layout.row#shelf-08": {
+    "title": "Vitrine 08",
+    "props": {
+      "blockClass": [
+        "container__shelf-row",
+        "grid1252",
+        "grid-mobile"
+      ],
+      "fullWidth": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.col#shelf-08"
+    ]
+  },
+  "flex-layout.col#shelf-08": {
+    "props": {
+      "blockClass": "container__shelf-col",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.row#shelf-08-title",
+      "flex-layout.row#shelf-demo-08"
+    ]
+  },
+  "flex-layout.row#shelf-08-title": {
+    "props": {
+      "blockClass": "container__shelf-row-text",
+      "fullWidth": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#shelf-title-08",
+      "rich-text#shelf-link-08"
+    ]
+  },
+  "rich-text#shelf-title-08": {
+    "title": "Título",
+    "props": {
+      "text": "## Mais cor com Coral",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "rich-text#shelf-link-08": {
+    "title": "Link",
+    "props": {
+      "text": "[Ver mais](/tintas-e-acessorios/tintas/coral-tintas?initialMap=c&initialQuery=tintas-e-acessorios&map=category-1,category-2,brand)",
+      "blockClass": "shelfLink"
+    }
+  },
+  "flex-layout.row#shelf-demo-08": {
+    "children": [
+      "list-context.product-list#demo8"
+    ]
+  },
+  "list-context.product-list#demo8": {
+    "blocks": [
+      "product-summary.shelf#main"
+    ],
+    "children": [
+      "slider-layout#demo-products"
+    ],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "installmentCriteria": "MAX_WITHOUT_INTEREST",
+      "hideUnavailableItems": true,
+      "category": ""
+/*       "specificationFilters": [
+        {
+          "id": "Marca",
+          "value": "Cora Tintas"
+        },
+        {
+          "id": "Marca",
+          "value": "Coral Tintas"
+        }
+      ] */
+    }
+  }
+}

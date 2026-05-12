@@ -1,0 +1,50 @@
+@import "../../../global";
+
+.menuItem {
+  &--inst-menu-mobile-title {
+    margin: 16px 0;
+    border: 1px solid $light-gray;
+    padding: 14px 16px;
+    border-radius: 8px;
+
+    &--isOpen {
+      .styledLinkIcon {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+.styledLink {
+
+  &Container {
+    padding: 0;
+    margin: 0;
+  }
+
+  &Content {
+    &--inst-menu-mobile-title {
+      @include textConfig($primary-color, 14, $fontBold, 19, left, initial, 0);
+    }
+
+    &--inst-menu-item-link {
+      @include textConfig($dark-gray, 14, $fontRegular, 19, left, initial, 0);
+      padding: 8px 0;
+    }
+  }
+
+  &Icon {
+    margin: 0;
+    transition: 300ms ease-in-out;
+  }
+}
+
+.accordionIcon--inst-menu-mobile-title {
+  display: none;
+}
+
+.submenuAccordion {
+  &--inst-menu-mobile-submenu {
+    padding: 0;
+  }
+}

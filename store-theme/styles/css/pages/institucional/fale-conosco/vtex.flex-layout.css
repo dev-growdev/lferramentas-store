@@ -1,0 +1,81 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.flexCol--inst-body--box {
+  background-color: #ebe6d7;
+  padding: 40px 44px;
+  margin: 16px 0;
+  height: fit-content;
+  border-radius: 8px;
+}
+.flexCol--inst-body--box-contacts .stretchChildrenWidth {
+  justify-content: center;
+}
+@media only screen and (min-width: 1026px) {
+  .flexCol--inst-form-and-text {
+    gap: 20px;
+  }
+}
+
+.flexRowContent--inst-contact-us-container {
+  flex-direction: column;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRowContent--inst-contact-us-container {
+    width: 50%;
+  }
+}
+.flexRowContent--inst-contact-us-container .stretchChildrenWidth {
+  width: 100% !important;
+}
+.flexRowContent--inst-contact-us-container :global(.vtex-input) {
+  display: block;
+  margin: 16px 0;
+}
+.flexRowContent--inst-contact-us-container :global(.vtex-input__label),
+.flexRowContent--inst-contact-us-container :global(.vtex-textarea__label) {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+.flexRowContent--inst-contact-us-container :global(.vtex-input-prefix__group),
+.flexRowContent--inst-contact-us-container :global(.vtex-textarea__input) {
+  border: none;
+  border-radius: 8px;
+}
+.flexRowContent--inst-contact-us-container :global(.vtex-styleguide-9-x-input),
+.flexRowContent--inst-contact-us-container :global(.vtex-textarea__input) {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  border-radius: 8px;
+  background: #ffffff;
+  resize: vertical !important;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRowContent--inst-contact-us-container {
+    flex-direction: row;
+  }
+}
+.flexRowContent :global(.vtex-textarea__input) {
+  min-height: 173px;
+}
+.flexRowContent--contact-us-info-box-contacts {
+  margin: 16px 0;
+}
+.flexRowContent--contact-us-info-box-contacts, .flexRowContent--contact-us-info-box-opening-hours {
+  flex-direction: column;
+}
+.flexRowContent--contact-us-info-box-contacts .stretchChildrenWidth, .flexRowContent--contact-us-info-box-opening-hours .stretchChildrenWidth {
+  width: 100% !important;
+}

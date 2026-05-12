@@ -1,0 +1,9 @@
+{
+  "rich-text#inst-title-exchanges-and-returns": {
+    "title": "Título Principal",
+    "props": {
+      "text": "Trocas e devoluções",
+      "blockClass": "inst-title"
+    }
+  }
+}

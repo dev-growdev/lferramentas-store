@@ -1,0 +1,8 @@
+{
+  "form-submit#inst-contact-us-form-button": {
+    "props": {
+      "blockClass": "inst-contact-us-form-button",
+      "label": "Enviar" 
+    }
+  }
+}

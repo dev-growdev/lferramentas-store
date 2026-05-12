@@ -1,0 +1,47 @@
+{
+  "flex-layout.row#specialist-button": {
+    "title": "Banner Especialista",
+    "props": {
+      "blockClass": "container__specialist-button",
+      "experimentalHideEmptyCols": true
+    },
+    "children": [
+      "responsive-layout.desktop#specialist-button",
+      "responsive-layout.mobile#specialist-button"
+    ]
+  },
+  "responsive-layout.desktop#specialist-button": {
+    "title": "Banner Especialista - Desktop",
+    "children": ["image-new-custom#specialist-button"]
+  },
+  "responsive-layout.mobile#specialist-button": {
+    "title": "Banner Especialista - Mobile",
+    "children": ["image-new-custom#specialist-button-mobile"]
+  },
+  "image-new-custom#specialist-button": {
+    "title": "Banner",
+    "props": {
+      "blockClass": "container__specialist-button-image",
+      "title": "Ficou com dúvida sobre este produto?",
+      "src": "/assets/vtex.file-manager-graphql/images/ff637e8e-1de8-4c3e-8c77-7197f6704bcf___421590ebdda4b81ebf7c7f97e5ce2f8f.png",
+      "link": {
+        "url": "https://api.whatsapp.com/send?1=pt_BR&phone=555131030100",
+        "newTab": "true",
+        "attributeNofollow": false
+      }
+    }
+  },
+  "image-new-custom#specialist-button-mobile": {
+    "title": "Banner Especialista",
+    "props": {
+      "blockClass": "container__specialist-button-image",
+      "title": "Ficou com dúvida sobre este produto?",
+      "src": "/assets/vtex.file-manager-graphql/images/9cb6cba1-b97d-4c87-b363-9ef002e636fd___2dc7725489bc3043ab7532c8ff034456.png",
+      "link": {
+        "url": "https://api.whatsapp.com/send?1=pt_BR&phone=555131030100",
+        "newTab": "true",
+        "attributeNofollow": false
+      }
+    }
+  }
+}

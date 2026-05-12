@@ -1,0 +1,87 @@
+{
+  "flex-layout.row#footer-social-media": {
+    "title": "Footer - Redes sociais",
+    "props": {
+      "blockClass": "footer-social-media",
+      "fullWidth": true,
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "image-new-custom#facebook",
+      "image-new-custom#instagram",
+      "image-new-custom#youtube",
+      "image-new-custom#linkedin",
+      "image-new-custom#last-social-media"
+    ]
+  },
+  "image-new-custom#instagram": {
+    "title": "Ícone Rede Social - 1",
+    "props": {
+      "width": "23px",
+      "height": "23px",
+      "alt": "Ícone do Instagram",
+      "blockClass": ["social-media-icons"],
+      "src": "assets/icons/instagram.svg",
+      "link": {
+        "url": "https://www.instagram.com/lfmaquinas.oficial/",
+        "newTab": true
+      }
+    }
+  },
+  "image-new-custom#facebook": {
+    "title": "Ícone Rede Social - 2",
+    "props": {
+      "width": "13px",
+      "height": "27px",
+      "alt": "Ícone do Facebook",
+      "blockClass": ["social-media-icons"],
+      "src": "assets/icons/facebook.svg",
+      "link": {
+        "url": "https://www.facebook.com/lfmaquinaseferramentas.oficial/",
+        "newTab": true
+      }
+    }
+  },
+  "image-new-custom#youtube": {
+    "title": "Ícone Rede Social - 3",
+    "props": {
+      "width": "31px",
+      "height": "31px",
+      "alt": "Ícone do Youtube",
+      "blockClass": ["social-media-icons"],
+      "src": "assets/icons/youtube-logo.svg",
+      "link": {
+        "url": "https://www.youtube.com/channel/UCPi68EcrKYbVyI92wUYaVMA",
+        "newTab": true
+      }
+    }
+  },
+  "image-new-custom#linkedin": {
+    "title": "Ícone Rede Social - 4",
+    "props": {
+      "width": "22px",
+      "height": "25px",
+      "alt": "Ícone do linkedin",
+      "blockClass": ["social-media-icons"],
+      "src": "assets/icons/linkedin.svg",
+      "link": {
+        "url": "https://www.linkedin.com/company/lfm%C3%A1quinaseferramentas",
+        "newTab": true
+      }
+    }
+  },
+  "image-new-custom#last-social-media": {
+    "title": "Ícone Rede Social - 5",
+    "props": {
+      "width": "22px",
+      "height": "25px",
+      "alt": "Ícone do linkedin",
+      "blockClass": ["social-media-icons"],
+      "src": "assets/icons/social-media-icon.svg",
+      "link": {
+        "url": "https://blog.lfmaquinaseferramentas.com.br/",
+        "newTab": true
+      }
+    }
+  }
+}

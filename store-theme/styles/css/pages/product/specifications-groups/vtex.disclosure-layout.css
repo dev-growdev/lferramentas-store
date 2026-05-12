@@ -1,0 +1,38 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.trigger--generic-specification-group-content {
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  cursor: pointer;
+}
+.trigger--generic-specification-group-content--visible {
+  margin: 0 0 18px 0;
+}
+.trigger--generic-specification-group-content::after {
+  content: "";
+  display: block;
+  height: 9px;
+  width: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: none;
+  transition: 200ms ease;
+}
+@media only screen and (min-width: 1026px) {
+  .trigger--generic-specification-group-content::after {
+    height: 12px;
+    width: 18px;
+  }
+}
+.trigger--generic-specification-group-content--visible::after {
+  transform: rotate(180deg);
+}

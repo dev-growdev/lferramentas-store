@@ -1,0 +1,47 @@
+{
+  "store.custom#inst-page-about-us": {
+    "path": "/sobre-nos"
+  },
+  "store.custom#inst-page-ourstores": {
+    "path": "/nossas-lojas"
+  },
+  "store.custom#inst-page-privacy-and-security": {
+    "path": "/privacidade-e-seguranca"
+  },
+  "store.custom#inst-page-work-with-us": {
+    "path": "/trabalhe-conosco"
+  },
+  "store.custom#inst-page-contact-us": {
+    "path": "/fale-conosco"
+  },
+  "store.custom#inst-page-shipping-policy": {
+    "path": "/politica-de-entrega"
+  },
+  "store.custom#inst-page-exchanges-and-returns": {
+    "path": "/trocas-e-devolucoes"
+  },
+  "store.custom#inst-page-payment-methods": {
+    "path": "/formas-de-pagamento"
+  },
+  "store.custom#inst-page-faq": {
+    "path": "/faq"
+  },
+  "store.custom#collections": {
+    "path": "/colection-page"
+  },
+  "store.custom#issu-revista-ofertas": {
+    "path": "/issu" 
+  },
+  "store.custom#representates": {
+    "path": "/institucional/representantes"
+  },
+  "store.custom#shop-by-brand": {
+    "path": "/compre-por-marca"
+  },
+  "store.custom#coupons": {
+    "path": "/cupons-de-desconto"
+  },
+  "store.custom#lp-bf": {
+    "path": "/black-friday"
+  }
+}

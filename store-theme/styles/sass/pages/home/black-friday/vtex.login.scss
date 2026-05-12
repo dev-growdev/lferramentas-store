@@ -1,0 +1,49 @@
+@import '../../../global';
+
+:global(.render-route-store-home) {
+  :global(.black-friday) {
+    :global(.flex.flex-grow-1.w-100.flex-column) {
+      background: #151515;
+
+      // Color texts and titles
+
+      :global(.vtex-rich-text-0-x-paragraph--deals),
+      :global(.vtex-rich-text-0-x-heading--shelfTitle),
+      :global(.vtex-rich-text-0-x-link--shelfLink),
+      :global(.vtex-rich-text-0-x-paragraph--title-categories-item),
+      :global(.yourviews-yourviewsreviews-1-x-title),
+      :global(
+          .yourviews-yourviewsreviews-1-x-newTestimonialItemWrapper
+            .yourviews-yourviewsreviews-1-x-userName
+        ),
+      :global(
+          .lfmaquinaseferramentas-custom-apps-0-x-clps-subtitle-container
+            .lfmaquinaseferramentas-custom-apps-0-x-heading
+        ),
+      :global(.lfmaquinaseferramentas-custom-apps-0-x-headingLevel3) {
+        color: $white;
+      }
+
+      // Yourviews
+      :global(
+          .yourviews-yourviewsreviews-1-x-newTestimonialItemWrapper
+            .yourviews-yourviewsreviews-1-x-userLocalization
+        ) {
+        color: $medium-grey;
+      }
+
+      :global(.yourviews-yourviewsreviews-1-x-newTestimonialUserImage) {
+        background: white;
+        border-radius: 50%;
+        padding: 3px;
+      }
+
+      // End of Yourviews
+
+      // SEO text
+      :global(.lfmaquinaseferramentas-custom-apps-0-x-headingLevel2) {
+        color: $secondary-color;
+      }
+    }
+  }
+}

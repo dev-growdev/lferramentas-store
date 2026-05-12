@@ -1,0 +1,29 @@
+{
+  "vendor": "lfmaquinaseferramentas",
+  "name": "similar-products-variants",
+  "version": "0.0.10",
+  "title": "similar-products-variants",
+  "description": "similar-products-variants",
+  "defaultLocale": "pt-BR",
+  "builders": {
+    "docs": "0.x",
+    "messages": "1.x",
+    "store": "0.x",
+    "react": "3.x"
+  },
+  "mustUpdateAt": "2019-04-02",
+  "scripts": {
+    "postreleasy": "vtex publish --verbose"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.css-handles": "0.x",
+    "vtex.store-resources": "0.x",
+    "vtex.order-manager": "0.x",
+    "vtex.order-items": "0.x",
+    "vtex.product-context": "0.x",
+    "vtex.search-graphql": "0.x",
+    "vtex.store-graphql": "2.x"
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

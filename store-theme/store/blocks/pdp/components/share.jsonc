@@ -1,0 +1,26 @@
+{
+  "flex-layout.row#pdp-share": {
+    "props": {
+      "blockClass": "container__pdp-share",
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": ["share#pdp"]
+  },
+
+  "share#pdp": {
+    "props": {
+      "blockClass": ["pdp"],
+      "social": {
+        "Facebook": true,
+        "WhatsApp": true,
+        "Twitter": false,
+        "Pinterest": false
+      }
+    }
+  }
+}

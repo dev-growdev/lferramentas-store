@@ -1,0 +1,46 @@
+{
+/*   "flex-layout.row#logo-footer": {
+    "title": "Logo Footer",
+    "children": ["image-new-custom#logo-footer"],
+    "props": {
+      "blockClass": "footer-logo-container",
+      "fullWidth": true,
+      "colSizing": "auto",
+      "horizontalAlign": "center",
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true
+    }
+  },
+  "image-new-custom#logo-footer": {
+    "title": "Imagem",
+    "props": {
+      "maxWidth": "171px",
+      "maxHeight": "29px",
+      "width": "100%",
+      "height": "29px",
+      "alt": "G-Haus Logo Footer",
+      "blockClass": ["footer-logo"],
+      "srcSet": "assets/imgs/ghaus-logo-footer-mob.svg",
+      "link": {
+        "url": "/",
+        "newTab": false
+      }
+    }
+  },
+  "image-new-custom#logo-footer-desktop": {
+    "title": "Imagem",
+    "props": {
+      "maxWidth": "94px",
+      "maxHeight": "144px",
+      "width": "100%",
+      "height": "144px",
+      "alt": "G-Haus Logo Footer",
+      "blockClass": ["footer-logo"],
+      "srcSet": "https://placehold.co/80x82",
+      "link": {
+        "url": "/",
+        "newTab": false
+      }
+    }
+  } */
+}

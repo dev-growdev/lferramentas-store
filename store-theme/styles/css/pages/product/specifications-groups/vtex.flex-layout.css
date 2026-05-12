@@ -1,0 +1,70 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.flexRow--generic-specification-group-content {
+  border-radius: 8px;
+  border: 1px solid #dedede;
+  padding: 16px;
+}
+@media only screen and (min-width: 1024px) {
+  .flexRow--generic-specification-group-content {
+    padding: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .flexRow--measures, .flexRow--measures-table {
+    height: 100%;
+  }
+}
+
+.flexRowContent--generic-specification-group {
+  margin: 0 auto;
+  max-width: 1292px;
+  padding: 0 16px;
+  width: 100%;
+  padding-top: 12px;
+}
+@media only screen and (min-width: 1024px) {
+  .flexRowContent--generic-specification-group {
+    padding-top: 20px;
+  }
+}
+.flexRowContent--measures {
+  margin-top: 12px;
+  padding: 0;
+}
+@media only screen and (min-width: 1024px) {
+  .flexRowContent--measures {
+    margin-top: 0;
+    padding-left: 20px;
+    height: 100%;
+  }
+}
+.flexRowContent--tech-support {
+  padding-bottom: 30px;
+}
+@media only screen and (min-width: 1024px) {
+  .flexRowContent--tech-support {
+    padding-bottom: 34px;
+  }
+}
+.flexRowContent--tech-support .stretchChildrenWidth {
+  display: flex;
+  justify-content: flex-start;
+}
+.flexRowContent--container__reviews-pdp {
+  margin: 0 auto;
+  max-width: 1292px;
+  padding: 0 16px;
+  width: 100%;
+  padding-top: 12px;
+}
+@media only screen and (min-width: 1024px) {
+  .flexRowContent--container__reviews-pdp {
+    padding-top: 20px;
+  }
+}
+
+.flexRowContent--container__specification-name-no-title {
+  display: none;
+}

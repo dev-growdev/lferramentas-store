@@ -1,0 +1,114 @@
+.countdownContainer {
+  margin-bottom: 16px;
+}
+
+.countdownItem {
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  align-items: center;
+  padding: 10px 17px 10px 17px;
+  height: 94px;
+}
+
+.countdownPdpContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.countdownPdpContainerBottom {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.timerBfNumbers {
+  width: 54px;
+  max-width: 54px;
+  min-width: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleCountdownPdpTop {
+  margin: 0;
+  font-weight: 600;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.titleCountdownPdpDown {
+  margin: 0;
+  font-weight: 800;
+  font-size: 31px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.countdownPdpNumberContent {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 34px;
+  text-align: center;
+}
+
+.countdownPdpText {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.countdownPdpContainerTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 800;
+}
+
+.countdownPdpTitle {
+  width: 100%;
+}
+
+.countdownPdpTitle > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media (max-width: 1024px) {
+  .titleCountdownPdpTop {
+    font-size: 10px;
+  }
+  .titleCountdownPdpDown {
+    font-size: 23px;
+  }
+  .countdownPdpNumberContent {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .countdownPdpText {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .countdownItem {
+    padding: 10px;
+    background-size: 100%;
+  }
+  .countdownPdpContainerBottom {
+    gap: 5px
+  }
+  .timerBfNumbers {
+    width: 46px;
+    max-width: 46px;
+    min-width: 46px;
+  }
+}

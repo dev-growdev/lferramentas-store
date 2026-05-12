@@ -1,0 +1,21 @@
+{
+  "toggle-layout#top-bar-text": {
+    "title": "Toggle Texto Topo",
+    "props": {
+      "blockClass": "top-bar-container-desktop"
+    },
+    "children": ["flex-layout.row#header-notification"]
+  },
+  "flex-layout.row#header-notification": {
+    "children": ["rich-text#notification-bar"],
+    "props": {
+      "blockClass": "header-notification"
+    }
+  },
+  "rich-text#notification-bar": {
+    "props": {
+      "blockClass": "header-notification",
+      "text": "**Frete Grátis** nas compras acima de **R$299**"
+    }
+  }
+}

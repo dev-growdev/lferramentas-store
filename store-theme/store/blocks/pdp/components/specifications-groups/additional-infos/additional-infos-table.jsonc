@@ -1,0 +1,15 @@
+{
+  "product-specification-group#additional-infos": {
+    "props": {
+      "filter": {
+        "type": "show",
+        "specificationGroups": [
+          "Informações Adicionais"
+        ]
+      }
+    },
+    "children": [
+      "flex-layout.row#spec-group-no-title"
+    ]
+  }
+}

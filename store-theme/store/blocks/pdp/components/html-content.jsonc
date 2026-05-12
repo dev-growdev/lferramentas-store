@@ -1,0 +1,17 @@
+{
+  "toggle-layout#html-content-pdp": {
+    "title": "Ativar/Desativar - Conteúdo HTML",
+    "props": {
+      "renderChildren": false,
+      "blockClass": "html-content-pdp"
+    },
+    "children": ["html-content#pdp"]
+  },
+  "html-content#pdp": {
+    "title": "Conteúdo HTML",
+    "props": {
+      "blockClass": "html-content-pdp",
+      "content": ""
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import '../../../global';
+
+.flexCol {
+  &--inst-body--box {
+    background-color: $sand;
+    padding: 40px 44px;
+    margin: 16px 0;
+    height: fit-content;
+    @include border-radius();
+
+    &-contacts {
+      .stretchChildrenWidth {
+        justify-content: center;
+      }
+    }
+  }
+
+  &--inst-form-and-text {
+    @include mq('1026') {
+      gap: 20px;
+    }
+  }
+}
+
+.flexRow {
+  &Content {
+    &--inst-contact-us-container {
+      flex-direction: column;
+
+      @include mq('1026') {
+        width: 50%;
+      }
+
+      .stretchChildrenWidth {
+        width: 100% !important;
+      }
+
+      :global(.vtex-input) {
+        display: block;
+        margin: 16px 0;
+      }
+
+      :global(.vtex-input__label),
+      :global(.vtex-textarea__label) {
+        @include textConfig($black, 14, $fontRegular, 18, left, initial, 0);
+      }
+
+      :global(.vtex-input-prefix__group),
+      :global(.vtex-textarea__input) {
+        border: none;
+        @include border-radius();
+      }
+
+      :global(.vtex-styleguide-9-x-input),
+      :global(.vtex-textarea__input) {
+        @include textConfig($black, 16, $fontRegular, 20, left, initial, 0);
+        @include border-radius();
+        background: $white;
+        resize: vertical !important;
+      }
+
+      @include mq('1026') {
+        flex-direction: row;
+      }
+    }
+
+    :global(.vtex-textarea__input) {
+      min-height: 173px;
+    }
+
+    &--contact-us-info-box {
+      &-contacts {
+        margin: 16px 0;
+      }
+
+      &-contacts,
+      &-opening-hours {
+        flex-direction: column;
+
+        .stretchChildrenWidth {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}

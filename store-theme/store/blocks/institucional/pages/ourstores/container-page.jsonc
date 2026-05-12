@@ -1,0 +1,29 @@
+{
+  "store.custom#inst-page-ourstores": {
+    "blocks": [
+      "toggle-layout#inst-banner",
+      "flex-layout.row#inst-breadcrumb-ourstores",
+      "flex-layout.row#body-institucional-nossas-lojas"
+    ]
+  },
+  "flex-layout.row#body-institucional-nossas-lojas": {
+    "title": "Container Nossas Lojas",
+    "props": {
+      "colSizing": "auto",
+      "fullWidth": true,
+      "blockClass": ["inst-body", "inst-body--ourstores"]
+    },
+    "children": [
+      "flex-layout.col#inst-menu",
+      "flex-layout.col#inst-content-and-title-ourstores"
+    ]
+  },
+  "flex-layout.col#inst-content-and-title-ourstores": {
+    "title": "Container Título e Conteúdo",
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": ["inst-content-container"]
+    },
+    "children": ["rich-text#inst-title-ourstores", "inst-our-stores"]
+  }
+}

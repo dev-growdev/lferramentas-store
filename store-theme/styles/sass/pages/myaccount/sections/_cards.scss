@@ -1,0 +1,75 @@
+@import '../../../global/';
+
+:global(.vtex-my-cards-1-x-paymentsList) {
+  &:first-child {
+    :global(.vtex-my-cards-1-x-boxContainer) {
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+
+  :global(.vtex-my-cards-1-x-boxContainer) {
+    width: 100%;
+
+    @include mq('1024') {
+      max-width: 407px;
+    }
+
+    :global(.vtex-my-cards-1-x-boxContainerBody) {
+      padding: 24px 16px 0;
+
+      > div > div {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 18px;
+
+        > div {
+          :global(.black-80) {
+            @include textConfig($black, 16, $fontBold, 20, left, initial, 0);
+          }
+
+          :global(.black-60) {
+            @include textConfig(
+              $dark-grey,
+              14,
+              $fontRegular,
+              18,
+              left,
+              initial,
+              0
+            );
+          }
+        }
+
+        > label {
+          > div,
+          svg {
+            height: 32px !important;
+          }
+        }
+      }
+    }
+
+    :global(.vtex-my-cards-1-x-boxContainerFooter) {
+      padding: 0 16px 16px;
+
+      :global(.vtex-button) {
+        min-height: unset;
+
+        :global(.vtex-button__label) {
+          @include textConfig(
+            $dark-grey,
+            14,
+            $fontBold,
+            20,
+            center,
+            initial,
+            0
+          );
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+}

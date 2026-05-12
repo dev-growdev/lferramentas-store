@@ -1,0 +1,47 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.triggerContainer--quickview :global(.vtex-store-icons-0-x-expandIcon) {
+  vertical-align: middle;
+}
+.triggerContainer--quickview :global(.vtex-store-components-3-x-imageElement) {
+  max-width: 24px;
+  max-height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.actionsContainer--quickview {
+  border: 0;
+  box-shadow: none;
+  padding: 0 16px 20px;
+}
+
+.actionsContentWrapper--quickview {
+  border: 0;
+  box-shadow: none;
+}
+.actionsContentWrapper--quickview :global(.vtex-store-link-0-x-buttonLink) {
+  transition: all 300ms ease-in-out;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  transition-property: background-color, border-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+.actionsContentWrapper--quickview :global(.vtex-store-link-0-x-buttonLink):hover {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 700;
+}

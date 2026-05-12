@@ -1,0 +1,12 @@
+{
+    "similar-products-variants-helper": {
+        "children": [
+          "similar-products-variants#main-summary"
+        ]
+      },
+    "similar-products-variants#main-summary": {
+        "props": {
+            "blockClass": "main-summary"
+        }
+    }
+}

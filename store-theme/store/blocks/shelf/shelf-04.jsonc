@@ -1,0 +1,80 @@
+{
+  "toggle-layout#shelf-04": {
+    "title": "Ativar/Desativar - Vitrine 04",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "flex-layout.row#shelf-04"
+    ]
+  },
+  "flex-layout.row#shelf-04": {
+    "title": "Vitrine 04",
+    "props": {
+      "blockClass": [
+        "container__shelf-row",
+        "grid1252",
+        "grid-mobile"
+      ],
+      "fullWidth": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.col#shelf-04"
+    ]
+  },
+  "flex-layout.col#shelf-04": {
+    "props": {
+      "blockClass": "container__shelf-col",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.row#shelf-04-title",
+      "flex-layout.row#shelf-demo-04"
+    ]
+  },
+  "flex-layout.row#shelf-04-title": {
+    "props": {
+      "blockClass": "container__shelf-row-text",
+      "fullWidth": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#shelf-title-04",
+      "rich-text#shelf-link-04"
+    ]
+  },
+  "rich-text#shelf-title-04": {
+    "title": "Título",
+    "props": {
+      "text": "## Cozinha e lavanderia de torneira nova",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "rich-text#shelf-link-04": {
+    "title": "Link",
+    "props": {
+      "text": "[Ver mais](/cozinhas-e-lavanderias/torneiras?initialMap=c&initialQuery=cozinhas-e-lavanderias&map=category-1,category-2)",
+      "blockClass": "shelfLink"
+    }
+  },
+  "flex-layout.row#shelf-demo-04": {
+    "children": [
+      "list-context.product-list#demo4"
+    ]
+  },
+  "list-context.product-list#demo4": {
+    "blocks": [
+      "product-summary.shelf#main"
+    ],
+    "children": [
+      "slider-layout#demo-products"
+    ],
+    "props": {
+      "orderBy": "OrderByBestDiscountDESC",
+      "installmentCriteria": "MAX_WITHOUT_INTEREST",
+      "hideUnavailableItems": true,
+      "category": ""
+    }
+  }
+}

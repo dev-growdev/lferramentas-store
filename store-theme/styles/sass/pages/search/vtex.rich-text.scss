@@ -1,0 +1,52 @@
+@import '../../global';
+
+.container--shelf-not-found-title {
+  display: block;
+  text-align: center;
+
+  .paragraph--shelf-slider-title {
+    @include textConfig($primary-color, 22, $fontBold, 26, center, initial, 100);
+  }
+}
+
+.heading {
+  &--text-seo-departament-title {
+    margin-top: 55px;
+    @include textConfig($black02, 16, $fontBold, 20, center, initial, 62);
+    font-family: $tertiaryFont;
+
+    @include mq("1026") {
+      margin-top: 52px;
+      @include font-size(20);
+      @include line-height(26);
+    }
+  }
+
+  &--text-seo-departament {
+    margin-top: 4px;
+    @include textConfig($black03, 14, $fontRegular, 18, center, initial, 0);
+  }
+}
+
+.container {
+  &--not-found-title,
+  &--not-found {
+    @include grid();
+  }
+
+  &--not-found-title {
+    margin-top: 40px;
+  }
+}
+
+.paragraph {
+  &--not-found-title {
+    @include textConfig($black02, 24, $fontBold, 26, center, initial, 20);
+    margin: 0;
+  }
+
+  &--not-found {
+    @include textConfig($black02, 20, $fontRegular, 22, center, initial, 0);
+    margin: 30px 0;
+  }
+}

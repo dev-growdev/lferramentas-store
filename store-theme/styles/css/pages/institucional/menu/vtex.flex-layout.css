@@ -1,0 +1,17 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.flexCol--inst-menu-desktop-container {
+  padding-right: 50px;
+}
+.flexCol--wrapper__menu-institucional {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+@media only screen and (min-width: 1025px) {
+  .flexCol--wrapper__menu-institucional {
+    margin: 24px 50px 0 0;
+    width: auto;
+    width: 165px !important;
+  }
+}

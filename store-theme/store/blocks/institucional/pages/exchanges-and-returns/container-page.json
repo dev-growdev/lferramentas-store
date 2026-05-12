@@ -1,0 +1,39 @@
+{
+  "store.custom#inst-page-exchanges-and-returns": {
+    "blocks": [
+      "toggle-layout#inst-banner",
+      "flex-layout.row#inst-breadcrumb-exchanges-and-returns",
+      "flex-layout.row#inst-body-exchanges-and-returns"
+    ]
+  },
+  "flex-layout.row#inst-body-exchanges-and-returns": {
+    "title": "Container Trocas e Devoluções",
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": [
+        "inst-body",
+        "inst-body--exchanges-and-returns"
+      ]
+    },
+    "children": [
+      "flex-layout.col#inst-menu",
+      "flex-layout.col#inst-content-and-title-exchanges-and-returns"
+    ]
+  },
+  "flex-layout.col#inst-content-and-title-exchanges-and-returns": {
+    "title": "Container Título e Conteúdo",
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": ["inst-content-container"]
+    },
+    "children": [
+      "rich-text#inst-title-exchanges-and-returns",
+      "rich-text#inst-text-exchanges-and-returns-01",
+      "rich-text#inst-text-exchanges-and-returns-02",
+      "rich-text#inst-text-exchanges-and-returns-03",
+      "rich-text#inst-text-exchanges-and-returns-04"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "condition-layout.product#datasheet": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "Download Ficha Técnica"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#datasheet" 
+    }
+  },
+  "flex-layout.row#datasheet": {
+    "title": "Ficha Técnica",
+    "props": {
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "product-property-link#datasheet"
+    ]
+  },
+  "product-property-link#datasheet": {
+    "title": "Suporte Técnico - Download  Ficha Técnica",
+    "props": {
+      "blockClass": [
+        "tech-support-manual"
+      ],
+      "propertyName": "Download Ficha Técnica"
+    },
+    "children": [
+      "rich-text#datasheet-link-text",
+      "image-new-custom#datasheet-link-text"
+    ]
+  },
+  "rich-text#datasheet-link-text": {
+    "title": "Suporte Técnico - Download  Ficha Técnica",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "generic-specification-group-manual-link-text" ,
+        "tech-support",
+        "tech-support-manual-link-text"
+      ],
+      "text": "Download da ficha técnica"
+    }
+  },
+  "image-new-custom#datasheet-link-text": {
+    "title": "Suporte Técnico - Download  Ficha Técnica Ícone",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "generic-specification-group-manual-link-text",
+        "tech-support",
+        "tech-support-manual-link-text" 
+      ],
+      "maxWidth": "16px",
+      "maxHeight": "17px",
+      "width": "100%",
+      "src": "assets/icons/icon-download.svg"
+    }
+  }
+}

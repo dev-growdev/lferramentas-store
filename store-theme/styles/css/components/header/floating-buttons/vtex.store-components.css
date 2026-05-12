@@ -1,0 +1,10 @@
+.imageElement--customer-support-item {
+  display: block;
+  margin: 0 0.5625rem 0 0;
+}
+
+.imageElement--header-floating-buttons {
+  display: block;
+  -webkit-filter: drop-shadow(0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
+}

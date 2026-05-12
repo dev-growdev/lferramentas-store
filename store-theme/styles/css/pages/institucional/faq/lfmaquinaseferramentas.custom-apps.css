@@ -1,0 +1,80 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.customFaq-containerQuestions {
+  height: fit-content;
+  overflow: hidden;
+  border: 1px solid #dddddd;
+  padding: 2px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+.customFaq-containerQuestions:last-child {
+  margin-bottom: 0;
+}
+.customFaq-containerQuestions.customFaq-containerQuestions--Active .customFaq-containerQuestion {
+  pointer-events: auto;
+  opacity: 1;
+  transform: none;
+  height: auto;
+  transition: 0.2s;
+}
+.customFaq-containerQuestions.customFaq-containerQuestions--Active .customFaq-icon {
+  transform: rotate(180deg);
+}
+.customFaq-containerQuestions.customFaq-containerQuestions--Active .customFaq-QuestionsTitle {
+  color: #000000;
+}
+.customFaq-containerQuestions .customFaq-QuestionsTitle {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  line-height: 1.1875rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0;
+  cursor: pointer;
+}
+.customFaq-containerQuestions .customFaq-QuestionsTitle .customFaq-icon {
+  max-width: 16px;
+  max-height: 16px;
+  transition: 0.3s;
+  fill: #303030;
+}
+.customFaq-containerQuestions .customFaq-QuestionsTitleContent--text {
+  margin: 0;
+}
+.customFaq-containerQuestions .customFaq-containerQuestion {
+  opacity: 0;
+  transform: scaleY(0);
+  overflow: hidden;
+  pointer-events: none;
+  transform-origin: top;
+  transition: 0.2s;
+  overflow: hidden;
+  height: 0;
+}
+.customFaq-containerQuestions .customFaq-containerQuestion .customFaq-ResponseText {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  line-height: 0.875rem;
+  letter-spacing: 0.001rem;
+  text-align: left;
+  text-transform: initial;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+@media only screen and (min-width: 1024px) {
+  .customFaq-containerQuestions .customFaq-containerQuestion .customFaq-ResponseText {
+    margin-bottom: 32px;
+  }
+}

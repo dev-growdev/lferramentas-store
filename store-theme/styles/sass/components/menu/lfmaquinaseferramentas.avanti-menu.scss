@@ -1,0 +1,583 @@
+@import '../../global/';
+
+.desktop {
+  &-navbar {
+    @include grid();
+    z-index: 9;
+    background-color: $black;
+    position: relative;
+
+    .menuItemsNav {
+      flex-direction: column;
+
+      @include mq('1024') {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &-menuItem,
+  &-departmentsItem,
+  &-menuSecondItemsWrapper,
+  &-menuThirdItemsWrapper,
+  &-departmentsItem .desktop-menuItemsWrapper {
+    transition: 0.3s;
+  }
+
+  &-menuItems {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: transparent;
+  }
+
+  &-menuSecondItemsContainer {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: $white;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 12px 12px;
+  }
+
+  &-departmentsItem .desktop-menuSecondItemsContainer {
+    max-height: 330px;
+    border-right: none;
+  }
+
+  &-menuSecondItems,
+  &-menuThirdItems,
+  &-departmentItems,
+  &-departmentsItem .desktop-menuItems {
+    width: 292px;
+    height: 100%;
+    padding: 0px;
+    background: transparent;
+    overflow-y: auto;
+    overflow-x: hidden;
+    list-style: none;
+  }
+
+  &-menuSecondItems {
+    padding-top: 70px;
+    background-color: $white;
+  }
+
+  &-departmentsItem .desktop-menuSecondItems {
+    background-color: $white;
+  }
+
+  &-departmentsItem .desktop-menuSecondItemsWrapper::before,
+  &-menuThirdItemsWrapper::before {
+    content: '';
+    background-color: transparent;
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    left: -18px;
+    z-index: 1;
+  }
+
+  &-menuItem,
+  &-departmentsItem {
+    font-size: 13px;
+    color: $red;
+    border: 0px;
+    text-transform: initial;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+  }
+
+  &-menuSecondItemsSubWrapper,
+  &-menuThirdItemsSubWrapper {
+    max-width: 292px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 47px;
+  }
+
+  &-menuItemsTitle--Second,
+  &-menuItemsTitle--Third {
+    z-index: 2;
+    @include textConfig($black, 16, $fontExtraBold, 20, left, initial, 0);
+    position: absolute;
+    left: 20px;
+    top: 5px;
+    width: 175px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  &-departmentsItem .desktop-menuItemsTitle--Second {
+    display: block;
+  }
+
+  &-menuItemLink,
+  &-departmentsItemLink {
+    padding: 12px 0px 17px 0px;
+    @include textConfig($black, 16, $fontMedium, 24, center, initial, -10);
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+  }
+
+  &-menuItemLink--highlight {
+    color: $dark-green;
+  }
+
+  &-menuItems .desktop-arrowIconContent {
+    display: none;
+  }
+
+  &-departmentsItem .desktop-menuItems .desktop-arrowIconContent,
+  &-menuSecondItem .desktop-arrowIconContent {
+    display: block;
+  }
+
+  &-arrowIconContent {
+    &::after {
+      content: url("data:image/svg+xml,%3Csvg width='5' height='9' viewBox='0 0 5 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.45948 5.03932L1.27979 8.27623C0.987123 8.57459 0.512778 8.57459 0.219501 8.27623C-0.0731669 7.97892 -0.0731669 7.49559 0.219501 7.1978L2.86978 4.49986L0.219501 1.80232C-0.0731669 1.50453 -0.0731669 1.02185 0.219501 0.723405C0.512778 0.425531 0.987123 0.425531 1.27979 0.723405L4.45948 3.96032C4.60614 4.10958 4.67943 4.3048 4.67943 4.50002C4.67943 4.69524 4.60614 4.89038 4.45948 5.03932Z' fill='%23303030'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  &-menuIcon {
+    max-width: 22px;
+  }
+
+  &-menuIconContent {
+    display: none;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    align-items: flex-end;
+  }
+
+  &-departmentsItem .desktop-menuIconContent {
+    display: flex;
+    align-items: center;
+  }
+
+  &-menuSecondItems .desktop-menuSecondItemLinkText,
+  &-menuSecondItems .desktop-menuThirdItemLinkText {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &-menuItem:hover .desktop-menuItemLinkText {
+    color: $secondary-color;
+    font-weight: $fontBold;
+  }
+
+  &-menuItem:hover .desktop-menuItemLink .desktop-arrowIconContent::after {
+    content: url("data:image/svg+xml,%3Csvg width='5' height='8' viewBox='0 0 5 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.45948 4.53932L1.27979 7.77623C0.987123 8.07459 0.512778 8.07459 0.219501 7.77623C-0.0731669 7.47892 -0.0731669 6.99559 0.219501 6.6978L2.86978 3.99986L0.219501 1.30232C-0.0731669 1.00453 -0.0731669 0.521848 0.219501 0.223405C0.512778 -0.0744686 0.987123 -0.0744686 1.27979 0.223405L4.45948 3.46032C4.60614 3.60958 4.67943 3.8048 4.67943 4.00002C4.67943 4.19524 4.60614 4.39038 4.45948 4.53932Z' fill='%23555A44'/%3E%3C/svg%3E%0A");
+  }
+
+  &-menuSecondItem:hover .desktop-arrowIconContent::after {
+    content: url("data:image/svg+xml,%3Csvg width='5' height='9' viewBox='0 0 5 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.45948 5.03932L1.27979 8.27623C0.987123 8.57459 0.512778 8.57459 0.219501 8.27623C-0.0731669 7.97892 -0.0731669 7.49559 0.219501 7.1978L2.86978 4.49986L0.219501 1.80232C-0.0731669 1.50453 -0.0731669 1.02185 0.219501 0.723405C0.512778 0.425531 0.987123 0.425531 1.27979 0.723405L4.45948 3.96032C4.60614 4.10958 4.67943 4.3048 4.67943 4.50002C4.67943 4.69524 4.60614 4.89038 4.45948 5.03932Z' fill='%23555A44'/%3E%3C/svg%3E%0A");
+  }
+
+  &-departmentsItem .desktop-menuItemLink,
+  &-departmentsItem .desktop-departmentsItemLink {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &-departmentsItem .desktop-menuItemLink {
+    align-items: center;
+  }
+
+  &-departmentsItem .desktop-departmentsItemLink {
+    align-items: center;
+  }
+
+  &-departmentsIconContent {
+    display: flex;
+    align-items: center;
+  }
+
+  &-departmentsItem .desktop-menuItemLink {
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  &-departmentsItem .desktop-departmentsItemLink {
+    @include textConfig($white, 14, $fontExtraBold, 22, left, initial, 0);
+  }
+
+  &-menuItem:hover .desktop-menuItemLink::after,
+  &-departmentsItem:hover .desktop-departmentsItemLink::after {
+    transform: scaleX(1);
+    background: $dark-green;
+  }
+
+  &-departmentsItem .desktop-menuItem:hover .desktop-menuItemLink::after {
+    transform: scaleX(0.2);
+    background: transparent;
+  }
+
+  &-menuSecondItemsWrapper {
+    left: 0px;
+    top: 85%;
+  }
+
+  &-menuThirdItemsWrapper {
+    left: 333px;
+    top: 0;
+    display: block;
+    margin-left: -41px;
+  }
+
+  &-menuSeeAllButton {
+    background: $white;
+    @include textConfig($dark-grey, 12, $fontBold, 20, left, initial, 0);
+    text-decoration: none;
+    width: 272px;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    height: 70px;
+    padding-top: 23px;
+    padding-right: 10px;
+    z-index: 1;
+  }
+
+  &-menuSecondItemsWrapper {
+    height: 330px;
+    position: absolute;
+    width: 100%;
+    background: $white;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    display: flex;
+    flex-flow: row;
+    flex-direction: column;
+  }
+
+  &-menuThirdItemsWrapper {
+    height: 330px;
+    position: absolute;
+    width: 100%;
+    background: $white;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    display: flex;
+    flex-flow: row;
+    flex-direction: column;
+    padding-top: 70px;
+    width: 292px;
+    border-left: 1px solid $lighest-grey;
+  }
+
+  &-menuSecondItems {
+    border-right: 1px solid $lighest-grey;
+  }
+
+  &-departmentsItem .desktop-menuSecondItemsWrapper {
+    border-right: none;
+  }
+
+  &-menuItem:hover,
+  &-menuItem:hover .desktop-menuSecondItemsWrapper,
+  &-menuSecondItem:hover .desktop-menuThirdItemsWrapper {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  &-departmentsItem .desktop-menuItems {
+    &::-webkit-scrollbar {
+      width: 16px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $white;
+      border: none;
+      border-right: 13px solid $white; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $dark-gray-04;
+      border-radius: 0;
+      border: none;
+      border-right: 13px solid $white;
+    }
+  }
+
+  &-menuThirdItems,
+  &-menuSecondItems {
+    &::-webkit-scrollbar {
+      width: 16px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $white;
+      border: none;
+      border-right: 13px solid $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $dark-gray-04;
+      border-radius: 0;
+      border: none;
+      border-right: 13px solid $white;
+    }
+  }
+
+  &-menuSecondItem,
+  &-menuThirdItem,
+  &-departmentsItem .desktop-menuItem {
+    padding: 0px 20px;
+    @include textConfig($black, 14, $fontSemiBold, 21, left, initial, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-menuSecondItemLink,
+  &-menuThirdItemLink {
+    @include textConfig($black, 14, $fontRegular, 22, left, initial, 0);
+    text-decoration: none;
+    display: flex;
+  }
+
+  &-menuSecondItem:hover .desktop-menuSecondItemLink,
+  &-menuThirdItem:hover .desktop-menuThirdItemLink,
+  &-departmentsItem .desktop-menuItem:hover .desktop-menuItemLink {
+    font-weight: $fontExtraBold;
+  }
+
+  &-menuSecondItemLink,
+  &-menuThirdItemLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    padding: 8px 0;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &-arrowIcon {
+    display: none;
+  }
+
+  &-departmentsItem .desktop-menuItemsWrapper {
+    height: 330px;
+    position: absolute;
+    width: 100%;
+    background: $white;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    display: flex;
+    flex-flow: row;
+    top: 98%;
+    left: 0;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 12px 12px;
+  }
+
+  &-departmentsItem .desktop-menuItems {
+    width: 292px;
+    height: 100%;
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+    background-color: $white;
+
+    &::before {
+      content: '';
+      background: $white;
+      width: 292px;
+      height: 20px;
+      z-index: 1;
+      top: 0;
+      position: absolute;
+    }
+
+    &::after {
+      content: '';
+      background: $white;
+      width: 292px;
+      height: 20px;
+      z-index: 1;
+      bottom: 0;
+      position: absolute;
+    }
+  }
+
+  &-menuThirdItems,
+  &-menuSecondItems {
+    padding-bottom: 35px;
+
+    &::before {
+      content: '';
+      background: $white;
+      width: 292px;
+      height: 20px;
+      z-index: 9999;
+      top: 0;
+      position: absolute;
+    }
+
+    &::after {
+      content: '';
+      background: $white;
+      width: 286px;
+      height: 35px;
+      z-index: 9999;
+      bottom: 0;
+      position: absolute;
+    }
+
+    &::after {
+      content: '';
+      background: $white;
+      width: 292px;
+      height: 10px;
+      z-index: 9999;
+      bottom: 0;
+      position: absolute;
+    }
+  }
+
+  &-departmentsItem .desktop-menuItems {
+    flex-direction: column;
+    justify-content: initial;
+    background: $white;
+  }
+
+  &-departmentsItem .desktop-menuItem {
+    width: 100%;
+    display: block;
+    position: initial;
+    border-radius: 0;
+  }
+
+  &-menuItemLink,
+  &-menuItemLinkText {
+    display: flex;
+    gap: 10px;
+  }
+
+  &-menuItemLink {
+    @include textConfig($black, 14, $fontMedium, 22);
+  }
+
+  &-menuItemLinkText {
+    @include textConfig($white, 14, $fontMedium, 22);
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  &-menuSecondItem .desktop-menuSecondItemLink,
+  &-menuThirdItem .desktop-menuThirdItemLink,
+  &-departmentsItem .desktop-menuItem .desktop-menuItemLink {
+    padding: 0 {
+      bottom: 12px;
+    }
+  }
+
+  &-menuSecondItem .desktop-menuSecondItemLink,
+  &-menuThirdItem .desktop-menuThirdItemLink,
+  &-departmentsItem .desktop-menuItem .desktop-menuItemLinkText {
+    color: $dark-grey;
+  }
+  /* 
+  &-menuSecondItem .desktop-menuIconContent,
+  &-departmentsItem .desktop-menuItem .desktop-menuIconContent {
+    padding: 5px 0;
+  }
+ */
+  &-departmentsItem:hover .desktop-menuItemsWrapper {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  &-departmentsItem .desktop-menuSecondItemsWrapper {
+    top: 0;
+    left: 292px;
+    flex-direction: column;
+  }
+
+  &-departmentsItem .desktop-menuSecondItemsWrapper,
+  &-departmentsItem .desktop-menuThirdItemsWrapper {
+    width: 292px;
+  }
+
+  &-departmentsItem .desktop-menuSecondItemsWrapper {
+    width: 100%;
+    max-width: 968px;
+    border-bottom-right-radius: 15px;
+  }
+
+  &-departmentsItem .desktop-departmentsIcon {
+    padding-right: 8px;
+    fill: $white;
+  }
+
+  &-bannerContent {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+
+    .desktop-bannerImage {
+      max-height: 298px !important;
+      width: auto;
+    }
+  }
+
+  &-departmentsItem .desktop-bannerContent {
+    @include mq('1300', max) {
+      display: none;
+    }
+  }
+
+  &-departmentsItem .desktop-menuSecondItemsWrapper {
+    @include mq('1300', max) {
+      width: 292px;
+    }
+  }
+}
+
+.theme5 {
+  // Second menu
+  :global(.vtex-flex-layout-0-x-flexRowContent--second-menu) {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    $menuWidth: 292px;
+
+    .desktop-departmentsItem {
+      .desktop-menuItemsWrapper {
+        width: calc($menuWidth * 2);
+        top: 100%;
+
+        .desktop-bannerContent {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* FIM DO QUINTO TEMA </theme5> */

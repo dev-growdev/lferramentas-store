@@ -1,0 +1,24 @@
+{
+  //mobile
+  "flex-layout.row#security-flags": {
+    "children": ["loja-confiavel-badge", "selo-ra", "confi-badge"],
+    "props": {
+      "blockClass": "security-flags",
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "colSizing": "auto",
+      "fullWidth": true
+    }
+  },
+  //desktop
+  "flex-layout.row#security-avanti-flags": {
+    "children": ["loja-confiavel-badge", "selo-ra", "confi-badge"],
+    "props": {
+      "blockClass": "security-flags",
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "colSizing": "auto",
+      "fullWidth": true 
+    }
+  }
+}

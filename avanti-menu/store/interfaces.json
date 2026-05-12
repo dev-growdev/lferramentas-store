@@ -1,0 +1,33 @@
+{
+  "avanti-menu-context": {
+    "component": "AvantiMenuContext",
+    "render": "server",
+    "content": {
+      "$ref": "app:lfmaquinaseferramentas.avanti-menu#/definitions/AvantiMenuContext"
+    }
+  },
+  "avanti-menu-desktop": {
+    "component": "AvantiMenuDesktop",
+    "render": "server",
+    "content": {
+      "$ref": "app:lfmaquinaseferramentas.avanti-menu#/definitions/AvantiMenuDesktop"
+    },
+    "preview": {
+      "type": "block",
+      "height": 51
+    },
+    "hydration": "always"
+  },
+  "avanti-menu-mobile": {
+    "component": "AvantiMenuMobile",
+    "render": "server",
+    "content": {
+      "$ref": "app:lfmaquinaseferramentas.avanti-menu#/definitions/AvantiMenuMobile"
+    },
+    "preview": {
+      "type": "block",
+      "height": 25
+    },
+    "hydration": "always"
+  }
+}

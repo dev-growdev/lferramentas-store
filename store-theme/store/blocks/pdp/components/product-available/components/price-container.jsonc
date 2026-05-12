@@ -1,0 +1,45 @@
+{
+  "flex-layout.col#price-container": {
+    "title": "Container com preço, desconto e parcelas",
+    "props": {
+      "blockClass": "container__price-savings-selling-price-installments",
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#list-price-savings-with-price-savings",
+      "flex-layout.row#selling-price",
+      "condition-layout.product#pix-text",
+      "flex-layout.row#installments",
+      "trigger-floorcalculator",
+      "flex-layout.row#buy-button"
+    ]
+  },
+  "condition-layout.product#pix-text": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "productClusters",
+          "arguments": {
+            "id": "402"
+          }
+        }
+      ],
+      "Then": "rich-text#text-pix-pdp-optional",
+      "Else": "rich-text#text-pix-pdp"
+    }
+  },
+  "rich-text#text-pix-pdp": {
+    "props": {
+      "blockClass": "text-pix-pdp",
+      "text": "Já com **5% de desconto à vista** no Pix"
+    }
+  },
+  "rich-text#text-pix-pdp-optional": {
+    "props": {
+      "blockClass": "text-pix-pdp-optional",
+      "text": ""
+    }
+  }
+}

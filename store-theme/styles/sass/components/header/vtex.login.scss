@@ -1,0 +1,279 @@
+@import '../../global';
+
+.portalContainer {
+  @include size(100%);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.accessCodeOptionBtn {
+  :global(.vtex-button__label) {
+    :first-child {
+      display: none;
+    }
+
+    &::after {
+      @include textConfig($black, 12, $fontBold, 20, center, initial, 0);
+      content: 'Código de acesso por e-mail';
+    }
+  }
+}
+
+.accountOptions {
+  text-align: center;
+
+  :nth-child(2n),
+  &SectionTitle {
+    display: none;
+  }
+
+  :first-child {
+    :nth-child(2n),
+    :nth-child(3n) {
+      @include size(100%, 2.5rem);
+      @include textConfig($black, 12, $fontBold, 14, center, initial, 0);
+      align-items: center;
+      background: transparent;
+      border-radius: 0.5rem;
+      border: 0.0625rem solid $medium-grey;
+      justify-content: center;
+      margin-bottom: 0.625rem;
+    }
+
+    :nth-child(2n),
+    :nth-child(3n) {
+      display: flex;
+    }
+  }
+
+  > :first-child {
+    margin-bottom: 1rem;
+  }
+}
+
+.arrowUp {
+  left: 45%;
+  top: -0.1875rem;
+  background-color: $white;
+  border-radius: 4px;
+}
+
+.backButton {
+  :global(.vtex-button__label) {
+    color: $primary-color;
+  }
+
+  :global(.vtex-button) {
+    &:hover,
+    &:focus {
+      background: transparent;
+    }
+  }
+}
+
+.button {
+  background-color: $white;
+  text-transform: capitalize;
+}
+
+.box {
+  left: -6.25rem;
+  right: auto !important;
+  top: 1.0625rem;
+}
+
+.container {
+  :global(.vtex-button__label) {
+    @include size(max-content, auto);
+    padding: 0;
+    margin: 0 0.625rem;
+  }
+
+  :global(.vtex-button) {
+    @include display-flex(center, flex, center, row);
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}
+
+.content {
+  padding: 0.9375rem 1.625rem;
+  background-color: $white;
+  border-radius: 16px;
+
+  &--accountOptions {
+    margin-top: 0.0625rem;
+  }
+
+  &Container {
+    margin: 0;
+
+    .contentForm {
+      min-width: 15.625rem;
+    }
+  }
+
+  &--emailAndPassword {
+    .contentFormVisible {
+      padding-left: 0rem;
+    }
+  }
+
+  &Form {
+    @include size(100%, auto);
+    padding: 0;
+  }
+}
+
+.contentContainer {
+  border-radius: 16px;
+}
+
+.emailPasswordOptionBtn {
+  :global(.vtex-button__label) {
+    @include textConfig($black, 12, $fontBold, 20, center, initial, 0);
+  }
+}
+
+.formTitle {
+  @include textConfig($black, 14, $fontExtraBold, 20, center, initial, 0);
+}
+
+.label,
+.profile {
+  display: flex;
+  align-items: center;
+  @include textConfig($white, 13, $fontRegular, 16, left, initial, 0);
+
+  &::before {
+    content: $iconLogin;
+    @include size(1.5rem);
+    margin-right: 0.5rem;
+  }
+}
+
+.logoutButton {
+  background-color: $success-green;
+  border: 0.0625rem solid $success-green;
+  border-radius: 0.5rem;
+  color: $white !important;
+  @include size(100%, 3rem);
+  @include textConfig($white, 14, $fontBold, 20, center, uppercase, 0);
+  transition: {
+    property: background-color, border-color;
+    duration: 400ms;
+    timing-function: ease-in-out;
+  }
+
+  &:hover {
+    background-color: $success-dark-green;
+    border-color: $success-dark-green;
+  }
+}
+
+.profile {
+  max-width: 30vw;
+  text-align: left;
+  white-space: break-spaces;
+}
+
+.oauthLabel {
+  @include textConfig($black, 12, $fontBold, 24, center, initial, 0);
+}
+
+.options {
+  min-width: 18.3125rem;
+
+  &List {
+    margin: 0;
+
+    &Item {
+      :global(.vtex-button) {
+        background: transparent;
+        cursor: pointer;
+        border: 0.0625rem solid $medium-grey;
+        border-radius: 0.5rem;
+      }
+
+      margin-bottom: 0.625rem;
+    }
+  }
+}
+
+.loading {
+  min-width: 18.3125rem;
+  background-color: $white;
+}
+
+.contentAlwaysWithOptions {
+  .loginOptionsContainer {
+    @include size(100%, auto);
+
+    @include mq('640') {
+      margin-right: 1.25rem;
+    }
+
+    @include mq('1026') {
+      margin-right: 6.25rem;
+    }
+  }
+
+  .contentForm {
+    min-width: 304px;
+  }
+}
+
+.formFooter {
+  border: none;
+}
+
+.inputContainer {
+  @include input-general();
+
+  :global(.vtex-styleguide-9-x-input) {
+    background-color: $white;
+  }
+
+  :global(.vtex-styleguide-9-x-input)::placeholder {
+    @include textConfig($black, 14, $fontSemiBold, 15, left, initial, 0);
+  }
+}
+
+.dontHaveAccount,
+.forgotPasswordLink {
+  color: $primary-color;
+}
+
+/* TODO: Move logic to specific file */
+/* Header Fix */
+@media only screen and (min-width: 1026px) {
+  :global(.vtex-store-components-3-x-portalWrapper) {
+    > :first-child,
+    > :first-child > :first-child {
+      left: 0 !important;
+      top: 18px !important;
+      z-index: 2;
+      width: inherit;
+    }
+  }
+}
+
+:global(.vtex-search-2-x-biggy-autocomplete):not(
+    :has(:global(.vtex-search-2-x-tileList))
+  ) {
+  :global(.vtex-search-2-x-itemList--suggestion) {
+    :global(.vtex-search-2-x-itemListTitle) {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  :global(.vtex-search-2-x-itemListItem) {
+    > ul {
+      display: none;
+    }
+  }
+}

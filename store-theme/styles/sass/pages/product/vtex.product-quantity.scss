@@ -1,0 +1,54 @@
+@import '../../global/';
+
+.quantitySelectorContainer {
+  height: 100%;
+
+  margin: 0 6px 0 0;
+
+  .availableQuantityContainer {
+    display: none;
+  }
+}
+
+.quantitySelectorStepper {
+  border: 1px solid $dark-green;
+  @include border-radius();
+
+  &,
+  & :global(.vtex-numeric-stepper-container),
+  & :global(.vtex-numeric-stepper-wrapper) {
+    @include size(100%);
+  }
+
+  & :global(.vtex-numeric-stepper-container) {
+    padding: 4px 15px;
+
+    @include display-flex(center, flex, center, row);
+  }
+
+  & :global(.vtex-numeric-stepper-wrapper),
+  & :global(.vtex-numeric-stepper-container),
+  & :global(.vtex-numeric-stepper__input),
+  & :global(.vtex-numeric-stepper__plus-button),
+  & :global(.vtex-numeric-stepper__minus-button) {
+    border: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  & :global(.vtex-numeric-stepper__input) {
+    flex: 1;
+
+    overflow: hidden;
+    // width: unset;
+
+    @include textConfig($dark-gray, 16, $fontBold, 20, center);
+  }
+
+  & :global(.vtex-numeric-stepper__plus-button),
+  & :global(.vtex-numeric-stepper__minus-button) {
+    width: unset !important;
+
+    @include textConfig($dark-green, 22, $fontBold, 26);
+  }
+}

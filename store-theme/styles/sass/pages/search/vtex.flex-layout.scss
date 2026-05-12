@@ -1,0 +1,112 @@
+@import '../../global';
+
+.flexRow {
+  &--searchbread,
+  &--title-search-result,
+  &--filter-mobile,
+  &--title-departament,
+  &--fetchmore {
+    padding: 0 0.3rem;
+
+    @include mq('1026') {
+      padding: 0;
+    }
+  }
+
+  &--fetchmore {
+    padding-right: 11px;
+
+    .flexRowContent--fetchmore {
+      margin: 10px auto;
+    }
+  }
+
+  &--search-result {
+    margin-top: 13px;
+  }
+
+  &--shelf-not-found {
+    .flexRow--container__shelf-row {
+      margin-bottom: 0;
+
+      @include mq('1024') {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &Content {
+    &--filter-mobile {
+      @include display-flex(center, flex, space-between, row);
+    }
+  }
+
+  &--orderByAndSwitcher {
+    @include mq('1026') {
+      padding-right: 11px !important;
+    }
+  }
+
+  &--shelf-not-found {
+    @include grid(1260px, 0 5px, 0 auto);
+  }
+
+  &--title-departament {
+    display: block;
+  }
+
+  &--contentmobile-search {
+    :global(.vtex-store-components-3-x-container) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &--filter-mobile {
+    :global(.vtex-store-components-3-x-container) {
+      padding: 0;
+    }
+  }
+
+  &--row-infos-search {
+    @include mq('1026') {
+      margin-bottom: 11px;
+    }
+  }
+
+  &--empty-search-banner {
+    @include grid();
+    padding-top: 26px;
+
+    :global(.vtex-store-components-3-x-imageElement--banner-departamento-mobile) {
+      --horizontal-padding-mobile: 16px;
+    }
+
+    @include mq('1026') {
+      padding-top: 12px;
+
+      :global(.vtex-store-components-3-x-imageElementLink--banner-departamento) { 
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.flexCol {
+  &--filterCol {
+    max-width: 285px;
+    padding-right: 26px;
+  }
+
+  &--text-seo-departament {
+    @include display-flex(center, flex, center, column);
+  }
+}
+
+.flexRowContent {
+  &--title-departament {
+    @include mq('1026') {
+      justify-content: flex-start;
+    }
+  }
+}

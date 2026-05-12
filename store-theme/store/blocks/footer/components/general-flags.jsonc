@@ -1,0 +1,25 @@
+{
+    "flex-layout.row#general-flags": {
+        "children": [
+          "flex-layout.col#security-flags",
+          "flex-layout.col#company-flags"
+        ],
+        "props": {
+          "blockClass": "general-flags", 
+          "preserveLayoutOnMobile": true,
+          "preventHorizontalStretch": true,
+          "colSizing": "auto",
+          "fullWidth": true
+        }
+      },
+      "flex-layout.col#security-flags": {
+        "children": [
+            "flex-layout.row#security-avanti-flags"
+        ] 
+      },
+      "flex-layout.col#company-flags": {
+        "children": [
+            "flex-layout.row#company-flags"
+        ]
+      }
+}

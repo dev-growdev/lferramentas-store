@@ -1,0 +1,388 @@
+{
+  "drawer#header-floating-buttons-customer-support": {
+    "blocks": [
+      "drawer-header#header-floating-buttons-customer-support",
+      "drawer-trigger#header-floating-buttons-customer-support"
+    ],
+    "children": [
+      "flex-layout.row#customer-support"
+    ],
+    "props": {
+      "blockClass": [
+        "customer-support"
+      ],
+      "slideDirection": "rightToLeft",
+      "isFullWidth": true
+    }
+  },
+  "drawer-trigger#header-floating-buttons-customer-support": {
+    "children": [
+      "image-new-custom#header-floating-buttons-customer-support"
+    ]
+  },
+  "image-new-custom#header-floating-buttons-customer-support": {
+    "title": "Ícone Atendimento ao Cliente",
+    "props": {
+      "width": "40px",
+      "height": "40px",
+      "alt": "Atendimento ao Cliente",
+      "blockClass": [
+        "header-floating-buttons"
+      ],
+      "src": "assets/icons/icon-customer-support.svg" 
+    }
+  },
+  "drawer-header#header-floating-buttons-customer-support": {
+    "props": {
+      "blockClass": [
+        "customer-support"
+      ]
+    },
+    "children": [
+      "drawer-close-button",
+      "rich-text#header-floating-buttons-customer-support-title"
+    ]
+  },
+  "rich-text#header-floating-buttons-customer-support-title": {
+    "title": "Atendimento ao Cliente - Texto",
+    "props": {
+      "blockClass": [
+        "header-floating-buttons-customer-support-title"
+      ],
+      "text": "##### Olá, estamos aqui para ajudar"
+    }
+  },
+  "flex-layout.row#customer-support": {
+    "title": "Atendimento ao Cliente",
+    "props": {
+      "blockClass": [
+        "customer-support"
+      ],
+      "preserveLayoutOnMobile": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.col#customer-support"
+    ]
+  },
+  "flex-layout.col#customer-support": {
+    "props": {
+      "blockClass": [
+        "customer-support"
+      ],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#customer-support-item-01",
+      "flex-layout.row#customer-support-item-02",
+      "flex-layout.row#customer-support-item-03",
+      "flex-layout.row#customer-support-item-04",
+      "flex-layout.row#customer-support-item-05",
+      "flex-layout.row#customer-support-item-06"
+    ]
+  },
+  /* Item 01 */
+  "flex-layout.row#customer-support-item-01": {
+    "title": "Atendimento ao Cliente - Item 01",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-01"
+      ],
+      "preserveLayoutOnMobile": true,
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "link#customer-support-item-01"
+    ]
+  },
+  "link#customer-support-item-01": {
+    "title": "Atendimento ao Cliente - Item 01 Link",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-01"
+      ],
+      "target": "_blank",
+      "href": "http://ajuda.lfmaquinaseferramentas.com.br/"
+    },
+    "children": [
+      "image-new-custom#customer-support-item-01",
+      "rich-text#customer-support-item-01"
+    ]
+  },
+  "image-new-custom#customer-support-item-01": {
+    "title": "Atendimento ao Cliente - Item 01 Imagem",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-01"
+      ],
+      "width": "28px",
+      "height": "29px",
+      "src": "assets/icons/customer-support-01.svg"
+    }
+  },
+  "rich-text#customer-support-item-01": {
+    "title": "Atendimento ao Cliente - Item 01 Texto",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-01"
+      ],
+      "text": "###### Perguntas Frequentes \n\n Saiba tudo sobre formas de pagamento, \n entrega e outras dúvidas."
+    }
+  },
+  /* Item 02 */
+  "flex-layout.row#customer-support-item-02": {
+    "title": "Atendimento ao Cliente - Item 02",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-02"
+      ],
+      "preserveLayoutOnMobile": true,
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "link#customer-support-item-02"
+    ]
+  },
+  "link#customer-support-item-02": {
+    "title": "Atendimento ao Cliente - Item 02 Link",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-02"
+      ],
+      "target": "_blank",
+      "href": "https://api.whatsapp.com/send?1=pt_BR&phone=555131030100"
+    },
+    "children": [
+      "image-new-custom#customer-support-item-02",
+      "rich-text#customer-support-item-02"
+    ]
+  },
+  "image-new-custom#customer-support-item-02": {
+    "title": "Atendimento ao Cliente - Item 02 Imagem",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-02"
+      ],
+      "width": "27px",
+      "height": "27px",
+      "src": "assets/icons/customer-support-02.svg"
+    }
+  },
+  "rich-text#customer-support-item-02": {
+    "title": "Atendimento ao Cliente - Item 02 Texto",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-02"
+      ],
+      "text": "###### WhatsApp \n\n Converse agora com nossos atendentes pelo WhatsApp com retorno de até 1 dia útil."
+    }
+  },
+  /* Item 03 */
+  "flex-layout.row#customer-support-item-03": {
+    "title": "Atendimento ao Cliente - Item 03",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-03"
+      ],
+      "preserveLayoutOnMobile": true,
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "link#customer-support-item-03"
+    ]
+  },
+  "link#customer-support-item-03": {
+    "title": "Atendimento ao Cliente - Item 03 Link",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-03"
+      ],
+      "target": "_blank",
+      "href": "tel:555131030100"
+    },
+    "children": [
+      "image-new-custom#customer-support-item-03",
+      "rich-text#customer-support-item-03"
+    ]
+  },
+  "image-new-custom#customer-support-item-03": {
+    "title": "Atendimento ao Cliente - Item 03 Imagem",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-03"
+      ],
+      "width": "34px",
+      "height": "34px",
+      "src": "assets/icons/customer-support-03.svg"
+    }
+  },
+  "rich-text#customer-support-item-03": {
+    "title": "Atendimento ao Cliente - Item 03 Texto",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-03"
+      ],
+      "text": "###### Fale Conosco \n\n Fale com nosso time! \n (51) 3103-0100"
+    }
+  },
+  /* Item 04 */
+  "flex-layout.row#customer-support-item-04": {
+    "title": "Atendimento ao Cliente - Item 04",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-04"
+      ],
+      "preserveLayoutOnMobile": true,
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "link#customer-support-item-04"
+    ]
+  },
+  "link#customer-support-item-04": {
+    "title": "Atendimento ao Cliente - Item 04 Link",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-04"
+      ],
+      "target": "_blank",
+      "href": "https://saclf.zendesk.com/hc/pt-br/articles/360042610674-Como-solicito-a-troca-devolu%C3%A7%C3%A3o-de-um-produto-adquirido-na-loja-online"
+    },
+    "children": [
+      "image-new-custom#customer-support-item-04",
+      "rich-text#customer-support-item-04"
+    ]
+  },
+  "image-new-custom#customer-support-item-04": {
+    "title": "Atendimento ao Cliente - Item 04 Imagem",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-04"
+      ],
+      "width": "26px",
+      "height": "26px",
+      "src": "assets/icons/customer-support-04.svg"
+    }
+  },
+  "rich-text#customer-support-item-04": {
+    "title": "Atendimento ao Cliente - Item 04 Texto",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-04"
+      ],
+      "text": "###### Trocas e Devoluções \n\n O produto não era exatamente o que você espera? Confira nossa política de trocas e devoluções"
+    }
+  },
+  /* Item 05 */
+  "flex-layout.row#customer-support-item-05": {
+    "title": "Atendimento ao Cliente - Item 05",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-05"
+      ],
+      "preserveLayoutOnMobile": true,
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "link#customer-support-item-05"
+    ]
+  },
+  "link#customer-support-item-05": {
+    "title": "Atendimento ao Cliente - Item 05 Link",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-05"
+      ],
+      "href": "https://saclf.zendesk.com/hc/pt-br/requests/new?ticket_form_id=9506437163671",
+      "target": "_blank"
+    },
+    "children": [
+      "image-new-custom#customer-support-item-05",
+      "rich-text#customer-support-item-05"
+    ]
+  },
+  "image-new-custom#customer-support-item-05": {
+    "title": "Atendimento ao Cliente - Item 05 Imagem",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-05"
+      ],
+      "width": "28px",
+      "height": "28px",
+      "src": "assets/icons/customer-support-05.svg"
+    }
+  },
+  "rich-text#customer-support-item-05": {
+    "title": "Atendimento ao Cliente - Item 05 Texto",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-05"
+      ],
+      "text": "###### Solicitar cotação \n\n Faça sua solicitação aqui!"
+    }
+  },
+  /* Item 06 */
+  "flex-layout.row#customer-support-item-06": {
+    "title": "Atendimento ao Cliente - Item 06",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-06"
+      ],
+      "preserveLayoutOnMobile": true,
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "image-new-custom#customer-support-item-06",
+      "rich-text#customer-support-item-06"
+    ]
+  },
+  "image-new-custom#customer-support-item-06": {
+    "title": "Atendimento ao Cliente - Item 06 Imagem",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-06"
+      ],
+      "width": "25px",
+      "height": "25px",
+      "src": "assets/icons/customer-support-06.svg"
+    }
+  },
+  "rich-text#customer-support-item-06": {
+    "title": "Atendimento ao Cliente - Item 06 Texto",
+    "props": {
+      "blockClass": [
+        "customer-support-item",
+        "customer-support-item-06"
+      ],
+      "text": "###### Horário \n\n Segunda à quinta das 08h às 18h \n Sexta das 08h às 17h"
+    }
+  }
+}

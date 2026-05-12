@@ -1,0 +1,33 @@
+{
+  "flex-layout.row#timer-bf": {
+    "title": "Timer Bf",
+    "props": {
+      "blockClass": "timer-bf"
+    },
+    "children": ["flex-layout.col#timer-bf-col"]
+  },
+  "flex-layout.col#timer-bf-col": {
+    "props": {
+      "blockClass": "timer-bf-col"
+    },
+    "children": [
+      "rich-text#timer-bf-title",
+      "rich-text#timer-bf-text-2025",
+      "timer-bf"
+    ]
+  },
+  "rich-text#timer-bf-title": {
+    "title": "Título do timer",
+    "props": {
+      "blockClass": "timer-bf-title",
+      "text": "A Black Friday 2025 está chegando na LF Máquinas e Ferramentas!"
+    }
+  },
+  "rich-text#timer-bf-text-2025": {
+    "title": "Texto do timer",
+    "props": {
+      "blockClass": "timer-bf-text",
+      "text": "Garanta os melhores produtos com descontos únicos na Black Friday 2025. \n A maior promoção do ano começa em:"
+    }
+  }
+}

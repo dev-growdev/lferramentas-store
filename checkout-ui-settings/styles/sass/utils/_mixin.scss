@@ -1,0 +1,149 @@
+@mixin font-size($size-value: $font-size) {
+  font-size: $size-value + px;
+  font-size: calc($size-value / $font-size) + rem;
+}
+
+//  Define a base da fonte que pretende utilizar (valores ja são convertidos em rem).
+//  @mixin Font Size
+//  @section Font
+//  @param $size-value Seta o tamanho da fonte definido na variavel '$font-size'
+//  @example
+//    @include font-size($font-size);
+//    @include font-size(16);
+
+$font-size: 16;
+$line-height: 16;
+
+@mixin line-height($size-value: $line-height) {
+  line-height: $size-value + px;
+  line-height: calc($size-value / $line-height) + rem;
+}
+
+@mixin letter-spacing($letterspacing) {
+  letter-spacing: calc($letterspacing / 1000) * 1em;
+}
+
+//  @mixin Fonte Padrão
+//  @example
+//  @include textConfig($black, $primaryFont, 16, $fontRegular, 100%, left, initial, 100);
+
+@mixin textConfig(
+  $color: $black,
+  $font: $primaryFont,
+  $fontSize: $font-size,
+  $fontWeight: $fontRegular,
+  $line-height: $line-height,
+  $textAlign: left,
+  $textTransform: initial,
+  $letterspacing: $letterspacing
+) {
+  color: $color;
+  font-family: $font;
+  @include font-size($fontSize);
+  font-weight: $fontWeight;
+  @include line-height($line-height);
+  @include letter-spacing($letterspacing);
+  text-align: $textAlign;
+  text-transform: $textTransform;
+}
+
+//  Define o 'width' e 'height' do elemento.
+//  @mixin Size Elements
+//  @section Size
+//  @param $width Largura a ser definido
+//  @param $height Altura a ser definido
+//  @example
+//   @include size(10)
+//   @include size(auto, 2)
+
+ @mixin size($width, $height: $width) {
+  @if _is-size($height) {
+    height: $height;
+  } @else {
+    @error '`#{$height}` is not a valid length for the `$height` argument ' +
+           'in the `size` mixin.';
+  }
+
+  @if _is-size($width) {
+    width: $width;
+  } @else {
+    @error '`#{$width}` is not a valid length for the `$width` argument ' +
+           'in the `size` mixin.';
+  }
+}
+
+
+// *  Define o breakpoin minimo pro desenvolvimento.
+//  * @mixin Breakpoints responsivos
+//  * @example
+//  *  @include mq('tablet-wide') {
+//         padding-top: 4rem;
+//         font-size: 2.4rem;
+//     }
+//  */
+
+ $breakpoints: (
+  "360": 360px,
+  "390": 390px,
+  "400": 400px,
+  "480": 480px,
+  "490": 491px,
+  "640": 640px,
+  "768": 768px,
+  "992": 992px,
+  "979": 979px,
+  "980": 980px,
+  "981": 981px,
+  "1000": 1000px,
+  "1024": 1024px,
+  "1025": 1025px,
+  "1026": 1026px,
+  "1200": 1200px,
+  "1440": 1440px,
+  "1500": 1500px,
+  "1800": 1800px,
+);
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+//  Define posicionamento absoluto.
+//  @mixin Position Absolute
+//  @example
+//   @include abs-position(100px, 100px, auto, auto);
+
+@mixin abs-position($top, $right, $bottom, $left) {
+  bottom: $bottom;
+  left: $left;
+  margin: auto;
+  position: absolute;
+  right: $right;
+  top: $top;
+}
+
+@mixin display-flex($align, $justify, $direction) {
+  align-items: $align;
+  display: flex;
+  justify-content: $justify;
+  @if($direction) {
+    flex-direction: $direction;
+  } @else {
+    flex-direction: row;
+  }
+}
+
+@mixin grid($max-width: 1260px, $padding: 0 16px, $margin: 0 auto) {
+  width: 100%;
+  max-width: $max-width;
+  padding: $padding;
+  margin: $margin;
+}

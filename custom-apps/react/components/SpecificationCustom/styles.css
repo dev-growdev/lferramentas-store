@@ -1,0 +1,130 @@
+.containerComposition {
+
+  display: flex;
+  align-items: baseline;
+  padding: 0 16px;
+
+}
+.titleComposition {
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: left;
+  color: #000;
+  margin: 0px;
+
+}
+
+.textComposition p{
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: left;
+  text-transform: lowercase;
+  color: #000;
+  margin: 0px 5px 0px 5px;
+}
+.containerAccordionSpecificationCustom{
+  padding: 0px 16px;
+  margin-top: 30px;
+}
+.accordionItemSpecificationCustom:first-child{
+  border-top:  1px solid #f5f5f5;
+}
+.accordionItemSpecificationCustom{
+  padding: 20px 0px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.accordionTitleSpecificationCustom{
+
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  color: #000;
+  margin: 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.accordionTitleSpecificationCustom::after{
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='7.996' viewBox='0 0 16 7.996'%3E%3Cpath id='Caminho_21280' data-name='Caminho 21280' d='M234.348,40.508a.906.906,0,0,0-.221-.521l-6.156-7.062a.905.905,0,1,0-1.364,1.188l5.636,6.467-5.636,6.467h0a.905.905,0,1,0,1.364,1.188l6.156-7.062h0a.905.905,0,0,0,.221-.668Z' transform='translate(48.581 -226.354) rotate(90)'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 16px;
+  cursor: pointer;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.accordionTextContainerSpecificationCustom {
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: left;
+  color: #000;
+  margin: 5px 0px;
+  animation: slideInFromTop 0.5s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+.accordionTextContainerSpecificationCustom ul{
+  padding: 0px;
+  margin: 0px;
+}
+.accordionTextContainerSpecificationCustom li{
+  list-style: none;
+}
+
+.accordionValuesSpecificationCustom{
+  display: flex;
+  align-items: center;
+  margin: 5px 0px;
+}
+.accordionValuesSpecificationCustom strong {
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: left;
+  color: #000;
+  margin-right: 5px;
+
+}
+.accordionTextContainerSpecificationCustom p {
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: left;
+  color: #000;
+
+}
+
+@media (min-width: 1026px) {
+
+  .containerAccordionSpecificationCustom,
+  .containerComposition{
+    padding: 0px;
+  }
+}
+
+.accordionItemSpecificationCustom-Cuidados .accordionTextContainerSpecificationCustom p{
+  white-space: break-spaces;
+}

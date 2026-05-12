@@ -1,0 +1,39 @@
+{
+  "store.custom#inst-page-payment-methods": {
+    "blocks": [
+      "toggle-layout#inst-banner",
+      "flex-layout.row#inst-breadcrumb-payment-methods",
+      "flex-layout.row#inst-body-payment-methods"
+    ]
+  },
+  "flex-layout.row#inst-body-payment-methods": {
+    "title": "Container Formas de Pagamento",
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": [
+        "inst-body",
+        "inst-body--payment-methods"
+      ]
+    },
+    "children": [
+      "flex-layout.col#inst-menu",
+      "flex-layout.col#inst-content-and-title-payment-methods"
+    ]
+  },
+  "flex-layout.col#inst-content-and-title-payment-methods": {
+    "title": "Container Título e Conteúdo",
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": ["inst-content-container"]
+    },
+    "children": [
+      "rich-text#inst-title-payment-methods",
+      "rich-text#inst-text-payment-methods-01",
+      "rich-text#inst-text-payment-methods-02",
+      "rich-text#inst-text-payment-methods-03",
+      "rich-text#inst-text-payment-methods-04"
+    ]
+  }
+}

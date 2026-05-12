@@ -1,0 +1,24 @@
+{
+  "yv-testimonials": {
+    "props": {
+      "slidesToShow": {
+        "tinyMobile": 1,
+        "mobile": 1,
+        "desktop": 2,
+        "bigDesktop": 4
+      },
+      "slidesToScroll": {
+        "tinyMobile": 1,
+        "mobile": 1,
+        "desktop": 1,
+        "bigDesktop": 1
+      }
+    },
+    "children": ["yv-title#testimonial", "yv-testimonials-content"]
+  },
+  "yv-title#testimonial": {
+    "props": {
+      "text": "Avaliações dos clientes"
+    }
+  }
+}

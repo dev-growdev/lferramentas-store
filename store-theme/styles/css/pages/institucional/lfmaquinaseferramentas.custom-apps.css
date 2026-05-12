@@ -1,0 +1,101 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.container-content--mobile,
+.container-component--desktop {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+@media only screen and (min-width: 1025px) {
+  .container-content--mobile,
+  .container-component--desktop {
+    background-color: transparent;
+  }
+}
+.container-content--mobile .container-content--title,
+.container-component--desktop .container-content--title {
+  border: none;
+  background-color: #ffffff;
+  margin: 0;
+  display: flex;
+  border-radius: 8px;
+  padding: 0 16px;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  font-family: #000000;
+  line-height: 19px;
+}
+.container-content--mobile .list--options,
+.container-component--desktop .list--options {
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 10px 16px 37px 16px;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1025px) {
+  .container-content--mobile .list--options,
+  .container-component--desktop .list--options {
+    padding: 0;
+    background-color: transparent;
+  }
+}
+.container-content--mobile .list-item--title,
+.container-component--desktop .list-item--title {
+  margin: 0 0 16px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+.container-content--mobile .list-item--link,
+.container-component--desktop .list-item--link {
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+.container-content--mobile .list-item--link:last-child,
+.container-component--desktop .list-item--link:last-child {
+  margin-bottom: 0;
+}
+.container-content--mobile .list-item--link:hover,
+.container-component--desktop .list-item--link:hover {
+  color: #4d4d4d;
+  font-weight: 700;
+}
+.container-content--mobile .list-item--active,
+.container-component--desktop .list-item--active {
+  color: #000000;
+  font-weight: 700;
+}
+
+.container-content--opened .icon--instmenumobile {
+  color: #000000;
+  transform: rotate(-180deg);
+}
+.container-content--opened .container-content--title {
+  color: #000000;
+}

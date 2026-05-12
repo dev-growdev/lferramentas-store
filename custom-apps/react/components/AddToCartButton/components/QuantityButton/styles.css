@@ -1,0 +1,24 @@
+.adtc-button-add-to-cart{
+  align-items: center;
+  background-color: #0f3e99;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  padding: 6px 10px;
+  width: 100%;
+  height: 40px;
+}
+.adtc-button-add-to-cart:disabled{
+  cursor: not-allowed;
+}
+.adtc-button-add-to-cart:disabled .adtc-button-text-add{
+  color: #979899;
+}
+.adtc-button-text-add{
+  color: #fff;
+  margin: 0;
+}

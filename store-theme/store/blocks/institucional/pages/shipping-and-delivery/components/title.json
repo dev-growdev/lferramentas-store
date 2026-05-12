@@ -1,0 +1,9 @@
+{
+  "rich-text#inst-title-shipping-policy": {
+    "title": "Título Principal",
+    "props": {
+      "text": "Política de Entrega",
+      "blockClass": "inst-title"
+    }
+  }
+}

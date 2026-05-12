@@ -1,0 +1,9 @@
+{
+  "rich-text#inst-title-work-with-us": {
+    "title": "Título Principal",
+    "props": {
+      "text": "Trabalhe Conosco",
+      "blockClass": "inst-title"
+    }
+  }
+}

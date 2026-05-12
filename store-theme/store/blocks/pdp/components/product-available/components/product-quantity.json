@@ -1,0 +1,38 @@
+{
+  "flex-layout.row#product-quantity": {
+    "title": "Container Seletor Quantidade",
+    "props": {
+      "blockClass": "container__product-quantity",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "product-quantity"
+    ]
+  },
+  "flex-layout.col#product-quantity": {
+    "title": "Container Seletor Quantidade",
+    "props": {
+      "blockClass": "container__product-quantity",
+      "preserveLayoutOnMobile": true,
+      "width": {
+        "mobile": "35%",
+        "desktop": "35%"
+      }
+    },
+    "children": [
+      "product-quantity"
+    ]
+  },
+  "product-quantity": {
+    "props": {
+      "warningQuantityThreshold": 10,
+      "showUnit": true,
+      "showLabel": false,
+      "selectorType": "stepper",
+      "quantitySelectorStep": "unitMultiplier",
+      "size": "small"
+    }
+  }
+}

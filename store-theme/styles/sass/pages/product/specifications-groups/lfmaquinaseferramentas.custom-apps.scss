@@ -1,0 +1,23 @@
+@import '../../../global/';
+
+.propertyLink {
+  &--tech-support-manual {
+    width: 100%;
+
+    margin: 10px 0 0 0;
+    padding: 12px 10px;
+
+    @include mq('360') {
+      padding: 12px 24px;
+    }
+
+    @include display-flex(center, flex, center, row);
+
+    background: $success-green;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+  }
+}

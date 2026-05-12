@@ -1,0 +1,65 @@
+@import '../../../global';
+
+.infoCardContainer {
+  &--info-card-coupons {
+    border-radius: 15px;
+    justify-content: center;
+  }
+}
+
+.infoCardTextContainer {
+  &--info-card-coupons {
+    width: fit-content;
+    padding: 54px 0;
+    margin-left: 20%;
+  }
+}
+
+.infoCardHeadline {
+  &--info-card-coupons {
+    @include textConfig(
+      $secondary-color,
+      30,
+      $fontExtraBold,
+      34,
+      center,
+      uppercase,
+      0
+    );
+    margin: 0;
+
+    @include mq('1026') {
+      font-size: 40px;
+      line-height: 50px;
+      text-align: left;
+    }
+  }
+}
+
+.infoCardSubhead {
+  &--info-card-coupons {
+    @include textConfig(
+      $secondary-color,
+      25,
+      $fontRegular,
+      30,
+      center,
+      uppercase,
+      0
+    );
+    margin: 0;
+
+    @include mq('1026') {
+      font-size: 35px;
+      line-height: 44px;
+      text-align: left;
+    }
+  }
+}
+
+.imageElement {
+  &--banner-middle-coupons-image {
+    height: auto;
+    display: block;
+  }
+}

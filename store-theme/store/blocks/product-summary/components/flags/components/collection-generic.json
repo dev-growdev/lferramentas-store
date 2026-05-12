@@ -1,0 +1,25 @@
+{
+  "vtex.product-highlights@2.x:product-highlights#collection-generic": {
+    "title": "Container Coleção Generica",
+    "props": {
+      "type": "collection"
+    },
+    "children": [
+      "product-highlight-wrapper#collection-generic"
+    ]
+
+  },
+  "product-highlight-wrapper#collection-generic": {
+    "props": {
+      "blockClass": "collection__generic"
+    },
+    "children": [
+      "product-highlight-text#collection-generic"
+    ]
+  },
+  "product-highlight-text#collection-generic": {
+    "props": {
+      "message": "{highlightName}"
+    }
+  }
+}

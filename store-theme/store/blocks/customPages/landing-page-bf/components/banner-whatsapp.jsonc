@@ -1,0 +1,33 @@
+{
+  "flex-layout.row#banner-whatsapp-lp-bf": {
+    "title": "Banner abaixo dos cupons",
+    "children": [
+      "responsive-layout.desktop#banner-whatsapp-lp-bf",
+      "responsive-layout.mobile#banner-whatsapp-lp-bf"
+    ],
+    "props": {
+      "blockClass": "banner-whatsapp-lp-bf",
+      "experimentalHideEmptyCols": true
+    }
+  },
+  "responsive-layout.desktop#banner-whatsapp-lp-bf": {
+    "title": "Desktop",
+    "children": ["image-new-custom#banner-whatsapp-lp-bf"]
+  },
+  "responsive-layout.mobile#banner-whatsapp-lp-bf": {
+    "title": "Mobile",
+    "children": ["image-new-custom#banner-whatsapp-lp-bf"]
+  },
+  "image-new-custom#banner-whatsapp-lp-bf": {
+    "props": {
+      "blockClass": ["banner-middle-coupons-image", "banner-whatsapp-lp-bf"],
+      "src": "/assets/vtex.file-manager-graphql/images/a6978812-dca2-428a-9cf9-396804460510___6c03ebc3b6443bcd9d6c639c54e2e8e8.png",
+      "link": {
+        "url": "https://api.whatsapp.com/send?1=pt_BR&phone=555131030100",
+        "newTab": true
+      },
+      "title": "Fale conosco",
+      "alt": "Fale conosco"
+    }
+  }
+}

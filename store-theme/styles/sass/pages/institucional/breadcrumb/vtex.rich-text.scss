@@ -1,0 +1,21 @@
+@import "../../../global";
+
+.paragraph {
+  &--inst-breadcrumb {
+    &-home {
+      margin: 0;
+      @include textConfig($black, 14, $fontRegular, 19, left, initial, 0);
+
+      &--link {
+        text-decoration: none;
+        color: $black;
+      }
+    }
+
+    &-term {
+      margin: 0;
+      @include textConfig($black, 14, $fontRegular, 19, left, initial, 0);
+      font-weight: $fontBold;
+    }
+  }
+}

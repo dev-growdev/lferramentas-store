@@ -1,0 +1,734 @@
+@import '../../global';
+
+.imageElement {
+  &--container__specialist-button-image {
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.carouselGaleryCursor {
+  @include mq('1026') {
+    width: calc(100% - 116px);
+    margin-left: auto !important;
+    padding: 0;
+
+    border: 1px solid $white01;
+    border-radius: 25px;
+  }
+}
+
+.productImagesThumb,
+.productImagesThumbCaret {
+  max-width: 86px;
+}
+
+.productImagesThumb {
+  @include size(86px !important);
+  border: 1px solid #f2f1f0;
+  border-radius: 8px;
+}
+
+.gradientBaseTop {
+  background: none;
+
+  .caretIcon {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.07863 0.439928L15.5525 6.79931C16.1492 7.38464 16.1492 8.33333 15.5525 8.91989C14.9578 9.50522 13.9912 9.50522 13.3956 8.91989L7.99972 3.61933L2.60464 8.91988C2.00906 9.50522 1.0437 9.50522 0.446809 8.91988C-0.148937 8.33333 -0.148937 7.38464 0.44681 6.79931L6.92064 0.439928C7.21916 0.14661 7.6096 3.21033e-05 8.00004 3.21374e-05C8.39048 3.21716e-05 8.78076 0.14661 9.07863 0.439928Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    @include size(16px, 10px);
+
+    & :first-child {
+      display: none;
+    }
+  }
+}
+
+.gradientBaseBottom {
+  background: none;
+
+  .caretIcon {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.92137 9.27784L0.447542 2.91847C-0.149181 2.33313 -0.149181 1.38444 0.447542 0.797888C1.04215 0.212553 2.00882 0.212553 2.6044 0.797888L8.00029 6.09844L13.3954 0.797888C13.9909 0.212553 14.9563 0.212553 15.5532 0.797888C16.1489 1.38444 16.1489 2.33313 15.5532 2.91847L9.07936 9.27784C8.78084 9.57116 8.3904 9.71774 7.99996 9.71774C7.60952 9.71774 7.21924 9.57116 6.92137 9.27784Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    @include size(16px, 10px);
+
+    & :first-child {
+      display: none;
+    }
+  }
+}
+
+.productImagesThumbActive {
+  border: 2px solid $secondary-color !important;
+  border-radius: 8px;
+}
+
+.thumbImg {
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.productNameContainer {
+  @include textConfig($black, 22, $fontBlack, 24, left, initial, 0);
+
+  margin: 18px 0 14px 0;
+
+  @include mq('1025') {
+    margin-top: 0;
+  }
+}
+
+.skuSelectorName {
+  @include textConfig($black, 14, $fontBlack, 16, left, initial, 0);
+}
+
+.skuSelectorSelectorImageValue,
+.skuSelectorNameSeparator {
+  display: none;
+}
+
+.skuSelectorContainer {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.frameAround,
+.diagonalCross {
+  display: none;
+}
+
+.skuSelectorNameContainer {
+  @include display-flex(flex-start, flex, flex-start, column);
+}
+
+.skuSelectorItem {
+  margin: 0 12px 0 0;
+  min-height: 26px;
+  min-width: 52px;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 8px;
+  background: $white;
+  margin-left: 0;
+}
+
+.skuSelectorSubcontainer--cor {
+  display: none;
+}
+
+.skuSelectorItemImage {
+  @include size(56px);
+}
+
+.skuSelectorOptionsList {
+  margin-left: 0;
+}
+
+.skuSelectorItemTextValue {
+  padding: 4px 8px;
+  @include textConfig($dark-gray, 14, $fontBold, 16, center, initial, 0);
+  white-space: nowrap;
+}
+
+.skuSelectorItem--selected {
+  border: 2px solid $secondary-color;
+}
+
+.skuSelectorInternalBox,
+.skuSelectorItem--selected,
+.skuSelectorItem {
+  box-shadow: none;
+  border-radius: 8px;
+}
+
+.skuSelectorInternalBox {
+  border: 0;
+}
+
+.valueWrapper--unavailable {
+  line-height: 26px;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background: $white02;
+  color: $light-gray-02 !important;
+}
+
+.shippingContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+  @include button-primary-white-bg();
+
+  @include mq('1026') {
+    grid-template-columns: 1fr 0.33fr max-content;
+    grid-template-areas: 'input button text';
+    gap: 4px;
+    align-items: flex-end;
+    margin-top: 20px;
+    padding-top: 22px;
+    border-top: 1px solid #f2f1f0;
+
+    :global(.vtex-input) {
+      grid-area: input;
+    }
+
+    :global(.vtex-button) {
+      grid-area: button;
+    }
+
+    :global(.vtex-address-form__postalCode-forgottenURL) {
+      grid-area: text;
+    }
+  }
+
+  & :global(.vtex-button) {
+    @include size(100%, 40px);
+    border-radius: 8px;
+    margin-top: 28px;
+    padding: 6px 0;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: #008345;
+      border-color: #008345;
+    }
+  }
+
+  :global(.vtex-button__label) {
+    font-size: 0 !important;
+
+    &::after {
+      content: 'Calcular';
+      font-size: 14px;
+    }
+  }
+}
+
+.shippingTable {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  box-shadow: none;
+}
+
+.shippingTableRow {
+  display: flex;
+}
+
+.shippingTableCellDelivery {
+  &Name,
+  &Estimate,
+  &Price {
+    flex: 1;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  &Estimate {
+    order: 1;
+
+    @include textConfig($dark-blue, 12, $fontRegular, 16, left, initial, 0);
+
+    padding-left: 0;
+  }
+
+  &Name {
+    order: 2;
+
+    @include textConfig($dark-blue, 12, $fontBold, 16, left, initial, 0);
+  }
+
+  &Price {
+    order: 3;
+
+    @include textConfig($dark-blue, 12, $fontBold, 16, right, initial, 0);
+
+    padding-right: 0;
+  }
+}
+
+.shippingTableLabel {
+  display: block;
+}
+
+.shippingTableRadioBtn {
+  display: none;
+}
+
+.productDescriptionContainer {
+  @include mq('1025') {
+    padding: 20px;
+  }
+
+  @include border-radius();
+  border: 1px solid $light-gray-09;
+
+  padding: 16px;
+}
+
+.productDescriptionTitle {
+  @include text(4, $primary-color, $fontBold);
+  margin: 0 0 16px 0;
+
+  @include mq('1026') {
+    @include text(3, $primary-color, $fontBold);
+  }
+}
+
+.productDescriptionText {
+  @include textConfig($dark-gray, 14, $fontRegular, 24, left, initial, 0);
+  display: inline !important;
+}
+
+.carouselGaleryThumbs {
+  @include mq('1026') {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+}
+
+.productImagesContainer {
+  .carouselContainer {
+    display: flex;
+
+    .carouselGaleryThumbs {
+      width: auto;
+    }
+  }
+}
+
+.swiperCaret .caretIcon {
+  @media (min-width: 640px) {
+    display: none;
+  }
+}
+
+.swiperBullet {
+  background-color: #f2f1f0;
+  border: 1px solid #4d4d4d;
+}
+
+.swiperBullet--active {
+  background-color: #ffe72e;
+}
+
+.mobileButton360 {
+  padding: 10px;
+}
+
+.mobileButton360img {
+  filter: drop-shadow(0 0 1px #ffffff) drop-shadow(0 0 1px #ffffff)
+    drop-shadow(0 0 1px #ffffff) drop-shadow(0 0 1px #ffffff);
+}
+
+// Start - Floor Calculator
+
+.floorcalc {
+  &-wrapper {
+    @include border-radius();
+    @include display-flex(center, flex, center, row);
+    margin-bottom: 16px;
+    border: 1px solid $success-green;
+    cursor: pointer;
+
+    .floorcalc-modal-title-icon {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &-button-trigger {
+    @include text(5, $success-green, $fontBold);
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: $primaryFont;
+    font-size: 13px;
+    line-height: 1;
+    margin-left: 7px;
+    padding: 16px 0;
+    text-transform: uppercase;
+  }
+
+  &-overflow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $dark-gray;
+    opacity: 0.5;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+  }
+
+  &-modal {
+    position: fixed;
+    top: 50%;
+    bottom: 50%;
+    margin: auto;
+    background: $white;
+    z-index: 1010;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    width: 90%;
+    height: max-content;
+    max-height: 90%;
+    overflow: auto;
+
+    @include mq('480') {
+      @include size(480px, max-content);
+    }
+
+    &__header {
+      @include display-flex(center, flex, flex-start, row);
+    }
+
+    &__title {
+      @include text(4, $black, $fontExtraBold);
+      margin-left: 8px;
+    }
+
+    &-close {
+      background-color: transparent;
+      border: 0;
+      padding: 0;
+      line-height: inherit;
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      cursor: pointer;
+    }
+
+    &-subTitle {
+      margin-top: 16px;
+      display: block;
+      @include text(5, $black, $fontRegular);
+      text-align: center;
+
+      @include mq('480') {
+        margin-top: 24px;
+      }
+    }
+
+    &-body {
+      margin: 16px 0;
+      padding: 16px;
+      border: 1px solid $lighest-grey;
+      border-radius: 4px;
+
+      @include mq('480') {
+        padding: 24px;
+        margin-bottom: 24px;
+      }
+
+      &__title {
+        @include text(4, $black);
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      &__container-input {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__element-versus {
+        @include text(4, $black);
+        margin: 0 0 12px;
+      }
+
+      &__double-input,
+      &__single-input {
+        flex-wrap: wrap;
+        @include display-flex(flex-end, flex, space-between, row);
+
+        .floorcalc-modal-text {
+          @include text(5, $black, $fontBold);
+          text-align: center;
+          margin-bottom: 8px;
+          display: block;
+        }
+
+        .floorcalc-modal-input {
+          @include size(131px, 44px);
+          background-color: $lighest-grey;
+          border: 1px solid $lighest-grey;
+          border-radius: 4px;
+          padding: 0 0 0 16px;
+          @include text(5, $black, $fontRegular);
+          font-family: $primaryFont;
+          appearance: textfield;
+          -webkit-appearance: textfield;
+          -moz-appearance: textfield;
+          outline: none;
+
+          &::placeholder {
+            @include text(5, $black, $fontRegular);
+            font-family: $primaryFont;
+            opacity: 0.5;
+          }
+
+          &::-webkit-inner-spin-button,
+          &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          @include mq('480') {
+            @include size(172px, 44px);
+          }
+        }
+      }
+
+      &__single-input {
+        justify-content: center;
+      }
+
+      &__or {
+        position: relative;
+        width: 100%;
+        border: 1px solid $lighest-grey;
+        margin: 35px 0 25px;
+        @include display-flex(center, flex, flex-start, row);
+
+        &-text {
+          @include text(5, $black, $fontSemiBold);
+          background: $white;
+          @include size(60px, 20px);
+          text-align: center;
+          @include abs-position(0, auto, 0, 50%);
+          transform: translateX(-50%);
+          z-index: 1;
+        }
+      }
+    }
+
+    &-footer {
+      &__primary-button {
+        @include border-radius();
+        @include size(100%, 44px);
+        @include textConfig($white, 16, $fontExtraBold, 20, center, initial, 0);
+        @include transition();
+        background-color: $success-green;
+        border: 1px solid $success-green;
+        cursor: pointer;
+        font-family: $primaryFont;
+        text-transform: uppercase;
+
+        &:hover {
+          border-color: $success-dark-green;
+          background-color: $success-dark-green;
+        }
+
+        :global(.vtex-button) {
+          cursor: pointer;
+          background-color: $success-green;
+          border: 1px solid $success-green;
+          @include size(100%);
+
+          :global(.vtex-add-to-cart-button-0-x-buttonText) {
+            @include textConfig(
+              $white,
+              16,
+              $fontExtraBold,
+              20,
+              center,
+              uppercase,
+              0
+            );
+          }
+
+          :global(.vtex-button__label) {
+            @include textConfig(
+              $white,
+              16,
+              $fontExtraBold,
+              20,
+              center,
+              uppercase,
+              0
+            );
+          }
+
+          &:hover {
+            border-color: $success-dark-green;
+            background-color: $success-dark-green;
+          }
+        }
+      }
+
+      &__secondary-button {
+        background-color: $white;
+        border-radius: 4px;
+        border: 1px solid $primary-color;
+        @include text(4, $primary-color);
+        @include size(100%, 44px);
+        text-align: center;
+        margin: 8px 0;
+
+        @include mq('480') {
+          @include size(215px, 44px);
+          margin: 0;
+          cursor: pointer;
+        }
+      }
+
+      &__final-result-1,
+      &__final-result-2,
+      &__final-result-3 {
+        @include display-flex(center, flex, space-between, row);
+      }
+
+      &__final-result-1 {
+        @include text(5, $dark-grey, $fontRegular);
+      }
+
+      &__final-result-2 {
+        @include text(5, $primary-color, $fontSemiBold);
+        margin: 4px 0;
+      }
+
+      &__final-result-3 {
+        @include text(5, $dark-grey, $fontBold);
+      }
+
+      &__warning {
+        background-color: $yellow;
+        border-radius: 4px;
+        border: 0;
+        margin: 16px 0 12px;
+        padding: 8px 0;
+        @include display-flex(center, flex, center, row);
+
+        @include mq('480') {
+          margin: 20px 0;
+        }
+
+        &-icon {
+          background-image: url("data:image/svg+xml,%3Csvg width='13' height='18' viewBox='0 0 13 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6365 1.49006C9.88921 0.87121 9.01409 0.428144 8.07503 0.193188C7.13597 -0.0417674 6.15666 -0.062687 5.20855 0.131956C3.94612 0.388704 2.78788 1.01724 1.8808 1.93781C0.973723 2.85838 0.358681 4.02949 0.113713 5.30256C-0.0651778 6.2571 -0.0326705 7.23962 0.208916 8.18005C0.450502 9.12048 0.895216 9.99565 1.51134 10.7432C2.08314 11.3928 2.41089 12.2236 2.43767 13.0912V15.5456C2.43767 16.1965 2.6945 16.8208 3.15167 17.2811C3.60883 17.7414 4.22887 18 4.8754 18H8.12569C8.77221 18 9.39226 17.7414 9.84942 17.2811C10.3066 16.8208 10.5634 16.1965 10.5634 15.5456V13.2466C10.5907 12.2887 10.9402 11.3686 11.5548 10.6368C12.6315 9.29569 13.1391 7.58092 12.9671 5.86513C12.7952 4.14935 11.9577 2.57121 10.6365 1.4737V1.49006ZM8.93826 15.5456C8.93826 15.7626 8.85265 15.9707 8.70027 16.1241C8.54788 16.2775 8.3412 16.3637 8.12569 16.3637H4.8754C4.65989 16.3637 4.45321 16.2775 4.30082 16.1241C4.14843 15.9707 4.06282 15.7626 4.06282 15.5456V14.7275H8.93826V15.5456ZM10.2953 9.62231C9.47822 10.598 9.00153 11.8166 8.93826 13.0912H7.31312V10.6368C7.31312 10.4198 7.22751 10.2117 7.07512 10.0583C6.92273 9.90486 6.71605 9.81866 6.50054 9.81866C6.28504 9.81866 6.07835 9.90486 5.92597 10.0583C5.77358 10.2117 5.68797 10.4198 5.68797 10.6368V13.0912H4.06282C4.04138 11.8379 3.58092 10.6325 2.7627 9.68776C2.22286 9.03652 1.85985 8.25555 1.70905 7.421C1.55825 6.58644 1.62482 5.72678 1.90226 4.92584C2.1797 4.1249 2.65855 3.41001 3.29211 2.85088C3.92568 2.29175 4.69233 1.90747 5.51733 1.7355C6.22634 1.58852 6.95897 1.60234 7.66201 1.77597C8.36506 1.9496 9.02088 2.27868 9.58186 2.73931C10.1428 3.19994 10.5949 3.78057 10.9052 4.43904C11.2156 5.0975 11.3764 5.81729 11.376 6.54613C11.382 7.66686 10.9998 8.75465 10.2953 9.62231Z' fill='black'/%3E%3C/svg%3E%0A");
+          @include size(27px, 18px);
+          background-repeat: no-repeat;
+          margin: 0 16px;
+
+          @include mq('1026') {
+            @include size(18px);
+          }
+        }
+
+        &-text {
+          @include text(5, $primary-color, $fontRegular);
+          line-height: 18px;
+          margin-right: 15px;
+          text-wrap-style: balance;
+
+          @include mq('1026') {
+            @include text(6, $primary-color, $fontRegular);
+            margin-right: 24px;
+            text-wrap-style: auto;
+          }
+        }
+      }
+
+      &__error {
+        @include text(5, $red, $fontSemiBold);
+        margin: 8px auto 0;
+        @include display-flex(center, flex, center, row);
+      }
+
+      &__multi-option {
+        display: block;
+        margin: 24px 0;
+
+        .floorcalc-modal-footer__option-ten,
+        .floorcalc-modal-footer__option-fifteen {
+          display: inline-block;
+          @include text(5, $black, $fontRegular);
+          vertical-align: middle;
+          cursor: pointer;
+
+          @include mq('1026') {
+            display: flex;
+          }
+
+          &::before {
+            content: '';
+            display: inline-block;
+            @include size(17px);
+            border: 1px solid $black;
+            border-radius: 4px;
+            margin-right: 8px;
+            vertical-align: middle;
+          }
+
+          &--active {
+            &::before {
+              background-color: $black;
+              content: url("data:image/svg+xml,%3Csvg class='vtex__icon-check ' width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='none'%3E%3Cpath d='M10.8 4.4L9.4 3L5.4 7L3.4 5L2 6.4L5.4 9.8L10.8 4.4Z' fill='%23fff'%3E%3C/path%3E%3C/svg%3E");
+              text-align: center;
+            }
+          }
+        }
+
+        .floorcalc-modal-footer__option-fifteen {
+          margin-top: 21px;
+        }
+      }
+    }
+  }
+}
+
+:global(.vtex-product-summary-2-x-containerNormal) {
+  .floorcalc-wrapper {
+    margin: 8px 0 0;
+
+    @include mq('1026') {
+      margin: 0;
+    }
+  }
+}
+
+// End - Floor Calculator
+
+// Start - Modal Confirm Buy
+
+.modalConfirmTitle {
+  @include textConfig($black, 18, $fontSemiBold, 20, center, initial, 0);
+}
+
+.modalConfirmProductName {
+  @include textConfig($black, 14, $fontRegular, 20, center, initial, 0);
+  display: flex;
+  gap: 8px;
+}
+
+.modalConfirmProductVariationValue {
+  @include textConfig($black, 18, $fontBold, 20, center, initial, 0);
+}
+
+.modalConfirmProductQuantity {
+  @include text(5, $dark-grey, $fontRegular);
+}
+
+.modalConfirmDescription {
+  @include text(5, $black, $fontRegular);
+  text-align: center;
+  margin-top: 8px;
+}
+
+.modalConfirmProductContainer {
+  @include mq('1026', max) {
+    padding: 0;
+  }
+}
+
+// End - Modal Confirm Buy

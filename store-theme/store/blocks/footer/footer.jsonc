@@ -1,0 +1,32 @@
+{
+  "footer": {
+    "blocks": [
+      "footer-layout.desktop",
+      "footer-layout.mobile"
+    ]
+  },
+  "footer-layout.desktop": {
+    "title": "Conteúdo Footer Desktop",
+    "children": [
+      "flex-layout.row#newsletter-footer",
+      "flex-layout.row#footer-menu-desktop",
+      "flex-layout.row#footer-payment-methods",
+      "flex-layout.row#footer-description",
+      "flex-layout.row#general-flags"
+    ]
+  },
+  "footer-layout.mobile": {
+    "title": "Conteúdo Footer Mobile",
+    "children": [
+      "flex-layout.row#newsletter-footer",
+      "flex-layout.row#footer-social-media",
+      "flex-layout.row#footer-menu-mobile",
+      "flex-layout.row#footer-revista-ofertas",
+      "flex-layout.row#solicitar-cotacao-link",
+      "flex-layout.row#footer-payment-methods",
+      "flex-layout.row#footer-description", 
+      "flex-layout.row#security-flags",
+      "flex-layout.row#company-flags"
+    ]
+  }
+}

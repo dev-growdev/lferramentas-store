@@ -1,0 +1,82 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.shop-by-brand--container {
+  margin: 0 auto;
+  max-width: 1292px;
+  padding: 0 16px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 18px;
+  row-gap: 35px;
+}
+@media only screen and (min-width: 1026px) {
+  .shop-by-brand--container {
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 24px;
+    row-gap: 50px;
+  }
+}
+.shop-by-brand--url {
+  text-decoration: none;
+}
+.shop-by-brand--image {
+  border-radius: 0.75rem;
+  width: 100%;
+  height: auto;
+}
+.shop-by-brand--name {
+  color: #4d4d4d;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: none;
+  margin: 6px 0 0;
+  text-decoration: none;
+}
+.shop-by-brand--show-more {
+  max-width: 242px;
+  margin: 55px auto 0;
+}
+.shop-by-brand--show-more-text {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: none;
+  margin: 0 0 12px;
+}
+.shop-by-brand--show-more-progress {
+  background-color: #b2b2b2;
+  border-radius: 2px;
+  height: 3px;
+  width: 100%;
+  margin-bottom: 23px;
+}
+.shop-by-brand--show-more-button {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #008345;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  min-height: 2.6875rem;
+  width: 100%;
+  transition: background-color 300ms ease-in-out;
+}
+.shop-by-brand--show-more-button:hover {
+  background-color: #005a30;
+}

@@ -1,0 +1,33 @@
+@import '../../global';
+
+.link {
+    &--cta-back-to-home {
+        display: flex;
+        margin: 0 16px;
+        max-width: 400px;
+        background-color: $dark-green;
+        color: $white;
+        border: 1px solid $dark-green;
+        transition: all 500ms ease-in-out;
+
+        &:hover, 
+        &:active {
+            background-color: $dark-green-01;
+            border: 1px solid $dark-green-01;
+        }
+
+        @include mq("428") {
+            margin: 0 auto;
+        }
+
+        @include mq("1026") {
+            max-width: 250px;
+        }
+    }
+}
+
+.label {
+    &--cta-back-to-home {
+        text-transform: initial;
+    }
+}

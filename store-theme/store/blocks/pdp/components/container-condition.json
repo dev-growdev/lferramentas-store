@@ -1,0 +1,14 @@
+{
+  "condition-layout.product#availability": {
+    "title": "Condição Do Produto",
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "flex-layout.row#product-available",
+      "Else": "flex-layout.row#product-unavailable"
+    }
+  }
+}

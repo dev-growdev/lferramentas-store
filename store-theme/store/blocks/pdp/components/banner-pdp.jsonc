@@ -1,0 +1,15 @@
+{
+  "flex-layout.row#banner-principal-pdp": {
+    "title": "Banner Principal PDP",
+    "children": [
+      "banner-collection-pdp"
+    ],
+    "props": {
+      "blockClass": [
+        "banner-principal-pdp",
+        "grid-1252",
+        "container__main-banner-home"
+      ]
+    }
+  }
+}

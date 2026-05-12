@@ -1,0 +1,15 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+/* Adjust border of filters on mobile */
+:global(.vtex-search-result-3-x-accordionFilterContainer--filter-nav):has(:global(+ .ReactCollapse--collapse):last-child) {
+  border-bottom: 1px solid #f2f1f0;
+}
+:global(.vtex-search-result-3-x-accordionFilterContainer--filter-nav):has(:global(+ .ReactCollapse--collapse):last-child):has(:global(+ .ReactCollapse--collapse[aria-hidden="false"])) {
+  border-bottom: none;
+}
+
+/* Adjust price slider on mobile */
+:global(.ReactCollapse--collapse):last-child :global(.vtex-search-result-3-x-accordionFilterItemOptions) {
+  margin-left: -3rem;
+}

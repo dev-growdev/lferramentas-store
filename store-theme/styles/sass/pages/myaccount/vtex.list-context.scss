@@ -1,0 +1,29 @@
+
+@import "../../global/";
+
+.list {
+    &--wishlist {
+        list-style: none;
+        display: grid;
+        padding-left: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        margin-top: 8px;
+
+        @include mq("640") {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include mq("1026") {
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 30px;
+            margin-top: 23px;
+        }
+    }
+}
+
+.item {
+    &--wishlist {
+        margin-bottom: 24px;
+    }
+}

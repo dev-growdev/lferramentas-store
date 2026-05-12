@@ -1,0 +1,17 @@
+{
+  "flex-layout.row#tech-support": {
+    "children": [
+      "condition-layout.product#instructions-manual",
+      "condition-layout.product#datasheet"
+    ],
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "tech-support"
+      ],
+      "colSizing": "auto",
+      "colJustify": "left",
+      "colGap": 4
+    }
+  }
+}

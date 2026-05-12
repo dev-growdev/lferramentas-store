@@ -1,0 +1,13 @@
+{
+  "admin/editor.product-highlights.filter": "Filter",
+  "admin/editor.product-highlights.type": "Query Type",
+  "admin/editor.product-highlights.type.collection": "Collection",
+  "admin/editor.product-highlights.type.promotion": "Promotion",
+  "admin/editor.product-highlights.type.teaser": "Teaser",
+  "admin/editor.product-highlights.filter.type": "Type",
+  "admin/editor.product-highlights.filter.type.hide": "Hide",
+
+  "admin/editor.product-highlights.filter.type.show": "Show",
+  "admin/editor.product-highlights.filter.highlight-names": "Highlight Names",
+  "admin/editor.product-highlights.filter.highlight-names.item": "Highlight name"
+}

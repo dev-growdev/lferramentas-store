@@ -1,0 +1,253 @@
+@import "../../global";
+
+.sku-selector-list {
+  margin: 0 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  max-height: calc((48px + 18px) * 5);
+}
+
+
+.sku-selector-list-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 7px 10px;
+
+  &-selected {
+    background-color: #F5F5F5;
+    border-radius: 8px;
+
+  }
+}
+
+.sku-selector-list-item:last-child {
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sku-selector-list-item:not(:first-child),
+.sku-selector-list-item:not(:last-child) {
+  margin: 0.5rem 4px;
+}
+
+.sku-selector-list-item-name {
+  @include textConfig($dark-gray, 20, $fontRegular, 24);
+  margin-right: 16px;
+  min-width: 78px;
+
+  @media screen and (min-width: 641px) and (max-width: 850px) {
+    @include textConfig($dark-gray, 16, $fontRegular, 24);
+  }
+
+  @include mq("1200") {
+    margin-right: 20px;
+    min-width: 85px;
+  }
+
+  width: 10%;
+  text-align: left;
+}
+
+.sku-selector-list-item-installments {
+  @include font-size(12);
+}
+
+.sku-selector-list-item-discount {
+  color: $white;
+  background-color: $primary-color;
+  border-radius: 8px;
+  padding: 2px 8px;
+  text-wrap: nowrap;
+}
+
+.adtc-button-add-to-cart {
+  cursor: pointer;
+  background-color: $dark-green;
+  border: 1px solid $dark-green;
+
+  &:hover {
+    background-color: $dark-green-01;
+  }
+
+  .adtc-button-text-add {
+    @include textConfig($white, 16, $fontBold, 20, center, initial, 0);
+
+    @media screen and (min-width: 641px) and (max-width: 850px) {
+      font-size: 12px;
+    }
+
+    text-transform: capitalize;
+  }
+}
+
+.adtc-container-stepper {
+  border-color: #30303030;
+  margin-left: 16px;
+  max-width: 101px;
+  height: 48px;
+}
+
+.adtc-container-stepper,
+.adtc-button-quantity {
+  background-color: $white;
+}
+
+.sku-selector-list::-webkit-scrollbar {
+  width: 0.4rem;
+  background-color: $dark-gray;
+  border-radius: 50px;
+}
+
+.sku-selector-list::-webkit-scrollbar-track {
+  background-color: #D9D9D9;
+  border-radius: 50px;
+}
+
+.sku-selector-list::-webkit-scrollbar-thumb {
+  background-color: #828282;
+  border-radius: 50px;
+}
+
+.sku-selector-list::-webkit-scrollbar-corner {
+  border-radius: 50px;
+}
+
+.seller-p {
+  @include text(6, $dark-gray, $fontRegular);
+
+  margin: 0 0 8px 0;
+}
+
+.seller-link {
+  font-weight: $fontBold;
+}
+
+.sku-selector-price-wrapper {
+  @include font-size(12);
+}
+
+.sku-selector-list-price {
+  text-decoration: line-through;
+  margin-right: 20px;
+
+  @include mq("1026") {
+    margin-right: 4px;
+  }
+}
+
+.sku-selector-price {
+  @include font-size(14);
+  display: block;
+
+  @include mq("1200") {
+    display: inline;
+  }
+}
+
+.sku-selector-price-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include mq("1200") {
+    margin: 0 16px 0 0;
+  }
+}
+
+.adtc-unavailable-item {
+  @include font-size(12);
+  font-family: $primaryFont;
+  font-weight: $fontSemiBold;
+
+  @include mq("1026") {
+    @include font-size(14);
+  }
+}
+
+.add-to-cart-btn {
+  @include size(100%, 48px);
+  background-color: $success-green;
+  border-radius: 8px;
+  @include display-flex(center, flex, center, row);
+  border: none;
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    background-color: $success-dark-green;
+  }
+}
+
+.add-to-cart-btn-label {
+  @include textConfig($white, 16, $fontBold, 20, left, initial, 10);
+  display: block;
+  width: fit-content;
+  font-family: $primaryFont;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+
+  @include mq("1026") {
+    @include font-size(18);
+  }
+
+  &::after {
+    content: "";
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none"><path d="M8.89647 15.8506C8.90224 15.172 8.65676 14.519 8.2141 14.0355C7.77143 13.552 7.1682 13.278 6.53735 13.2737C5.90662 13.2696 5.30023 13.5357 4.85208 14.0133C4.40397 14.4909 4.15104 15.1408 4.14906 15.8192C4.14708 16.4978 4.39637 17.1493 4.84174 17.6299C5.28697 18.1103 5.89188 18.3805 6.52277 18.3805C7.14848 18.3805 7.74895 18.1147 8.1936 17.641C8.6381 17.1671 8.89072 16.5237 8.89647 15.8506ZM5.47733 15.8506C5.47156 15.5436 5.58047 15.2468 5.77962 15.0267C5.97878 14.8066 6.25161 14.6816 6.53705 14.6795C6.82264 14.6775 7.09697 14.7986 7.29888 15.0158C7.50076 15.2329 7.61332 15.528 7.61135 15.8351C7.60938 16.1423 7.49317 16.4357 7.28855 16.65C7.08408 16.864 6.8082 16.9812 6.5228 16.975C6.24557 16.975 5.97957 16.8565 5.78361 16.6457C5.58749 16.4347 5.47733 16.1488 5.47733 15.8506Z" fill="white"/><path d="M15.4513 15.8508C15.4513 15.1797 15.2036 14.5362 14.7624 14.0618C14.3214 13.5873 13.7232 13.3208 13.0993 13.3208C12.4756 13.3208 11.8774 13.5873 11.4362 14.0618C10.9952 14.5362 10.7473 15.1797 10.7473 15.8508C10.7473 16.5217 10.9952 17.1652 11.4362 17.6397C11.8774 18.1141 12.4756 18.3807 13.0993 18.3807C13.7232 18.3807 14.3214 18.1141 14.7624 17.6397C15.2036 17.1652 15.4513 16.5217 15.4513 15.8508ZM12.0541 15.8508C12.0597 15.5544 12.1715 15.2718 12.3664 15.0623C12.5613 14.8527 12.824 14.7323 13.0994 14.7264C13.3766 14.7264 13.6426 14.8449 13.8386 15.0556C14.0347 15.2664 14.1448 15.5526 14.1448 15.8508C14.1507 16.1509 14.0426 16.4407 13.8452 16.6529C13.6479 16.8652 13.3784 16.9817 13.0994 16.9751C12.8221 16.9751 12.5563 16.8567 12.3603 16.6459C12.1642 16.4349 12.0541 16.149 12.0541 15.8508Z" fill="white"/><path d="M16.7798 3.9977H4.10529L3.6043 1.23343C3.5727 1.09764 3.50738 0.973622 3.41532 0.8746C3.32327 0.775578 3.20797 0.705314 3.08173 0.671327L0.79506 0.202863V0.2027C0.622038 0.168059 0.443241 0.207438 0.296823 0.312342C0.150385 0.417409 0.047848 0.57983 0.011083 0.764952C-0.0206659 0.948289 0.0163996 1.13767 0.114534 1.29144C0.212513 1.4452 0.363357 1.55075 0.533789 1.5849L2.40665 1.95958L3.99637 10.5801V10.5803C4.10635 11.1654 4.40015 11.6919 4.82838 12.0716C5.25678 12.4512 5.79344 12.6608 6.34837 12.6651H13.4914C14.0106 12.6674 14.5164 12.4881 14.9328 12.1545C15.3492 11.8206 15.6535 11.3504 15.7998 10.8144L17.4113 4.8644C17.4615 4.6541 17.4215 4.43057 17.3024 4.25538C17.1745 4.08708 16.9816 3.99198 16.7797 3.9977H16.7798ZM14.5367 10.4396C14.4775 10.687 14.3417 10.9054 14.1516 11.0586C13.9616 11.2119 13.7289 11.291 13.4914 11.283H6.3484C6.0973 11.283 5.85409 11.1897 5.65949 11.0189C5.46505 10.8482 5.33153 10.6104 5.28124 10.3459L4.36659 5.40312H15.9086L14.5367 10.4396Z" fill="white"/></svg>');
+    @include size(17.5px, 18.2px);
+    position: absolute;
+    margin-left: 4px;
+  }
+}
+
+.loading-add-to-cart {
+  content: '';
+  display: block;
+  animation: rotation 0.6s linear infinite;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  border-top-color: #ffffff;
+  width: 10px;
+  height: 10px;
+  left: calc(50% - 5px);
+  top: calc(50% - 5px);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.installments {
+  @include textConfig($black, 11, $fontRegular, 14, left, none, 0);
+  margin-bottom: 0;
+  display: block;
+
+  @include mq("1026") {
+    @include font-size(12);
+  }
+}
+
+.number-of-installments,
+.installments-value {
+  font-weight: $fontBold;
+}

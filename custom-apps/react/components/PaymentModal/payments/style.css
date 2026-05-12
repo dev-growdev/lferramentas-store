@@ -1,0 +1,201 @@
+.label {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+  line-height: normal;
+  font-size: 14px;
+  color: #000000;
+}
+
+.mt0 {
+  margin-top: 0;
+}
+
+.mt1 {
+  margin-top: 10px;
+}
+
+.wrapperTable {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 10px 0 0 0;
+}
+
+.mt2 .label {
+  margin-bottom: 0;
+}
+
+.mt2.Boleto {
+  margin: 18px 30px 32px 30px;
+  color: #4d4d4d;
+}
+
+.wrapperTable {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.wrapperTable::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.wrapperTable::-webkit-scrollbar-track {
+  background-color: #f2f1f0;
+  border-radius: 8px;
+}
+
+.wrapperTable::-webkit-scrollbar-thumb {
+  background: #b2b2b2;
+  border-radius: 8px;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.tablePaymentCard {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tablePaymentCard td {
+  height: 47px;
+  padding-left: 12px;
+}
+
+.tablePaymentCard tr td:last-child {
+  text-align: right;
+  padding-right: 17px;
+}
+
+.tablePaymentCard tr td:nth-child(3) {
+  color: #656565;
+}
+
+.tablePaymentCard tr:nth-child(even) {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.containerCartaoCredito::-webkit-scrollbar-thumb {
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  border: 3px solid #fff;
+}
+
+.textDesconto {
+  color: #7c7c7b;
+  font-weight: 700;
+  display: inline;
+}
+
+@media (min-width: 1024px) {
+  .textDesconto {
+    display: inline-block;
+  }
+}
+
+.textValue {
+  font-weight: 600;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cards img:first-child {
+  margin: 0 15px 5px 0;
+}
+
+.card {
+  border-bottom: 3px solid transparent;
+  padding-bottom: 8px !important;
+}
+
+.cardActive {
+  border-bottom: 3px solid #ffe72e;
+  padding-bottom: 8px !important;
+}
+
+.flagDiference,
+.flagTax {
+  font-size: 11px;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.flagDiference {
+  color: white;
+  background-color: #7ccc2c;
+  border-radius: 4px;
+  padding: 3px 8px;
+}
+
+.flagTax {
+  background-color: #e96b20;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.containerPixInfo span ol {
+  padding: 0;
+  list-style-position: inside;
+}
+
+.containerPixInfo span ol li {
+  padding: 2px 0;
+}
+
+.containerPixInfo span ol li::marker {
+  font-weight: 600;
+}
+
+@media (min-width: 425px) {
+  .flagDiference,
+  .flagTax {
+    margin: 0;
+  }
+}
+
+.containerPix li {
+  font-weight: 600;
+}
+
+.tabWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 16px 30px 0 30px;
+}
+
+.tabWrapper span:first-child {
+  color: #000000;
+  font-weight: bold;
+}
+
+.pixSteps {
+  display: block;
+  margin: 16px auto 0 auto;
+}
+
+.tabContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tabContent::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  border-radius: 8px;
+}
+
+.tabContent::-webkit-scrollbar-thumb {
+  background: #cd3c26;
+  border-radius: 8px;
+}
+
+.containerNumeroVezes {
+  margin-top: 18px;
+}

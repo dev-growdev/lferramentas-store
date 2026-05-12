@@ -1,0 +1,32 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.container--unavailable .paragraph--unavailable {
+  margin-top: 20px;
+  color: #656565;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+
+.paragraph--container__main-selling-price {
+  font-size: 0;
+  line-height: 1;
+}
+@media only screen and (min-width: 1024px) {
+  .paragraph--container__main-selling-price {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    line-height: 1.125rem;
+    letter-spacing: 0rem;
+    text-align: left;
+    text-transform: initial;
+    margin: 0;
+  }
+}

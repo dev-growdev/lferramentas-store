@@ -1,0 +1,46 @@
+@import '../../global';
+
+:global(.vtex-order-placed-2-x-orderOptionsWrapper) {
+  > div:not(
+      :global(.vtex-order-placed-2-x-myOrdersButton),
+      :global(.vtex-order-placed-2-x-updateOrderButton)
+    ) {
+    :global(.vtex-button) {
+      background: transparent;
+      height: 48px;
+
+      &:hover {
+        border: none;
+      }
+    }
+
+    :global(.vtex-button__label) {
+      @include textConfig($dark-grey, 16, $fontBold, 20, center, none, 0);
+    }
+  }
+
+  > div:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+:global(.vtex-order-placed-2-x-orderPaymentItem) {
+  p:not(:global(.vtex-order-placed-2-x-paymentGroup)) {
+    @include textConfig($dark-grey-02, 14, $fontSemiBold, 18, left, initial, 0);
+    margin: 4px 0;
+  }
+}
+
+:global(.vtex-order-placed-2-x-addressContainer) {
+  @include textConfig($dark-grey, 14, $fontRegular 18, left, initial, 0);
+}
+
+// Adjust container width for all elements
+:global(.vtex-order-placed-2-x-orderPlacedWrapper) {
+  @include mq('1026') {
+    :global(.w-80-ns) {
+      width: 100%;
+    }
+  }
+}

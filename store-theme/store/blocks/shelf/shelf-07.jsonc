@@ -1,0 +1,80 @@
+{
+  "toggle-layout#shelf-07": {
+    "title": "Ativar/Desativar - Vitrine 07",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "flex-layout.row#shelf-07"
+    ]
+  },
+  "flex-layout.row#shelf-07": {
+    "title": "Vitrine 07",
+    "props": {
+      "blockClass": [
+        "container__shelf-row",
+        "grid1252",
+        "grid-mobile"
+      ],
+      "fullWidth": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.col#shelf-07"
+    ]
+  },
+  "flex-layout.col#shelf-07": {
+    "props": {
+      "blockClass": "container__shelf-col",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.row#shelf-07-title",
+      "flex-layout.row#shelf-demo-07"
+    ]
+  },
+  "flex-layout.row#shelf-07-title": {
+    "props": {
+      "blockClass": "container__shelf-row-text",
+      "fullWidth": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#shelf-title-07",
+      "rich-text#shelf-link-07"
+    ]
+  },
+  "rich-text#shelf-title-07": {
+    "title": "Título",
+    "props": {
+      "text": "## Mais cor com Coral",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "rich-text#shelf-link-07": {
+    "title": "Link",
+    "props": {
+      "text": "[Ver mais](/tintas-e-acessorios/tintas/coral-tintas?initialMap=c&initialQuery=tintas-e-acessorios&map=category-1,category-2,brand)",
+      "blockClass": "shelfLink"
+    }
+  },
+  "flex-layout.row#shelf-demo-07": {
+    "children": [
+      "list-context.product-list#demo7"
+    ]
+  },
+  "list-context.product-list#demo7": {
+    "blocks": [
+      "product-summary.shelf#main"
+    ],
+    "children": [
+      "slider-layout#demo-products"
+    ],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "installmentCriteria": "MAX_WITHOUT_INTEREST",
+      "hideUnavailableItems": true,
+      "category": ""
+    }
+  }
+}

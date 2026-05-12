@@ -1,0 +1,29 @@
+{
+  "store.search#category": {
+    "blocks": [
+      "search-result-layout#departamento"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "installmentCriteria": "MAX_WITHOUT_INTEREST"
+      }
+    }
+  },
+  "store.search#subcategory": {
+    "blocks": [
+      "search-result-layout#result-title-default"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "installmentCriteria": "MAX_WITHOUT_INTEREST"
+      }
+      
+    }
+  }
+}

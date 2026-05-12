@@ -1,0 +1,13 @@
+{
+  "flex-layout.row#availability": {
+    "title": "Container Form",
+
+    "props": {
+      "blockClass": "container__form-unavailable"
+    },
+
+    "children": [
+      "availability-notify"
+    ]
+  }
+}

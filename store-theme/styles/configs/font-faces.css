@@ -1,0 +1,67 @@
+/* Mulish */
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('assets/fonts/Mulish-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('assets/fonts/Mulish-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('assets/fonts/Mulish-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('assets/fonts/Mulish-SemiBold.ttf');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('assets/fonts/Mulish-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('assets/fonts/Mulish-ExtraBold.ttf');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Sora  */
+
+@font-face {
+  font-family: 'Sora';
+  src: url('assets/fonts/Sora-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('assets/fonts/Sora-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,56 @@
+@import '../../global';
+
+.outline,
+.fill {
+  @include size(17.5px, 16px);
+
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.wishlistIcon--pdp-wishlist {
+  @include size(20px, 19px);
+}
+
+.outline {
+  &.wishlistIcon {
+    &--prodsum-wishlist,
+    &--pdp-wishlist {
+      background-image: $icon-wishlist-shelf;
+      background-position: top;
+      background-repeat: no-repeat;
+
+      transition: all 250ms ease-in-out;
+    }
+  }
+}
+
+.fill {
+  &.wishlistIcon {
+    &--prodsum-wishlist,
+    &--pdp-wishlist {
+      background-image: $icon-wishlist-fill-shelf;
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.wishlistIconContainer {
+  :global(.vtex-button) {
+    min-height: unset;
+
+    &:hover {
+      background-color: transparent;
+
+      .outline {
+        background-image: $icon-wishlist-fill-shelf;
+      }
+    }
+
+    :global(.vtex-button__label) {
+      padding: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "toggle-layout#slider-categories-home": {
+    "title": "Ativar/Desativar Slider home",
+    "props": {
+      "renderChildren": true,
+      "blockClass": "toggle-slider-categories-home"
+    },
+    "children": [
+      "flex-layout.row#slider-categories-home"
+    ]
+  },
+  "flex-layout.row#slider-categories-home": {
+    "children": [
+      "slider-layout#slider-categories-home"
+    ],
+    "props": {
+      "fullWidth": true,
+      "blockClass": [
+        "slider-categories-home"
+      ]
+    }
+  },
+  "slider-layout#slider-categories-home": {
+    "children": [
+      "flex-layout.col#categories-item-01",
+      "flex-layout.col#categories-item-02",
+      "flex-layout.col#categories-item-03",
+      "flex-layout.col#categories-item-04",
+      "flex-layout.col#categories-item-05",
+      "flex-layout.col#categories-item-06",
+      "flex-layout.col#categories-item-07",
+      "flex-layout.col#categories-item-08"
+    ],
+    "props": {
+      "blockClass": "slider-categories-home",
+      "infinite": true,
+      "itemsPerPage": {
+        "desktop": 8,
+        "tablet": 4,
+        "mobile": 2
+      },
+      "centerMode": {
+        "phone": "to-the-left",
+        "desktop": "disabled"
+      },
+      "centerModeSlidesGap": 16,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "mobileOnly",
+      "fullWidth": true
+    }
+  },
+  "flex-layout.col#categories-item-01": {
+    "title": "Item 01",
+    "children": [
+      "image-new-custom#categories-item-01",
+      "rich-text#title-categories-item-01"
+    ],
+    "props": {
+      "blockClass": [
+        "category-item"
+      ]
+    }
+  },
+  "image-new-custom#categories-item-01": {
+    "title": "Imagem Categorias Home 01",
+    "props": {
+      "src": "/assets/vtex.file-manager-graphql/images/baedf5a7-40d5-43c9-9e98-fc8eb05da92b___d9706eba98eb84fc72ac58b770807af4.png",
+      "height": "133px",
+      "width": "133px",
+      "link": {
+        "attributeNofollow": false,
+        "url": "/"
+      },
+      "alt": "Imagem categorias home 1",
+      "blockClass": [
+        "category-item"
+      ]
+    }
+  },
+  "rich-text#title-categories-item-01": {
+    "title": "Texto Categorias Home 01",
+    "props": {
+      "blockClass": [
+        "title-categories-item"
+      ],
+      "text": "Quimicos"
+    }
+  },
+  "flex-layout.col#categories-item-02": {
+    "title": "Item 02",
+    "children": [
+      "image-new-custom#categories-item-02",
+      "rich-text#title-categories-item-02"
+    ],
+    "props": {
+      "blockClass": [
+        "category-item"
+      ]
+    }
+  },
+  "image-new-custom#categories-item-02": {
+    "title": "Imagem Categorias Home 02",
+    "props": {
+      "src": "/assets/vtex.file-manager-graphql/images/0e8356f1-53b4-4619-baa6-b1f843c98659___feec574b686f5106c9e7d731556f11af.png",
+      "height": "133px",
+      "width": "133px",
+      "link": {
+        "attributeNofollow": false,
+        "url": "/"
+      },
+      "alt": "Imagem categorias home 2",
+      "blockClass": [
+        "category-item",
+        "grid-item-highlight"
+      ]
+    }
+  },
+  "rich-text#title-categories-item-02": {
+    "title": "Texto Categorias Home 02",
+    "props": {
+      "blockClass": [
+        "title-categories-item"
+      ],
+      "text": "Compressores"
+    }
+  },
+  "flex-layout.col#categories-item-03": {
+    "title": "Item 03",
+    "children": [
+      "image-new-custom#categories-item-03",
+      "rich-text#title-categories-item-03"
+    ],
+    "props": {
+      "blockClass": [
+        "category-item"
+      ]
+    }
+  },
+  "image-new-custom#categories-item-03": {
+    "title": "Imagem Categorias Home 03",
+    "props": {
+      "blockClass": [
+        "category-item"
+      ],
+      "src": "/assets/vtex.file-manager-graphql/images/6638d66a-df39-4ef1-a819-05e55c722dbf___364bb7ffd41d620df0630e3b56ee616f.png",
+      "height": "133px",
+      "width": "133px",
+      "link": {
+        "attributeNofollow": false,
+        "url": "/"
+      },
+      "alt": "Imagem categorias home 3"
+    }
+  },
+  "rich-text#title-categories-item-03": {
+    "title": "Texto Categorias Home 03",
+    "props": {
+      "blockClass": [
+        "title-categories-item"
+      ],
+      "text": "Medição e Teste"
+    }
+  },
+  "flex-layout.col#categories-item-04": {
+    "title": "Item 04",
+    "children": [
+      "image-new-custom#categories-item-04",
+      "rich-text#title-categories-item-04"
+    ],
+    "props": {
+      "blockClass": [
+        "category-item"
+      ]
+    }
+  },
+  "image-new-custom#categories-item-04": {
+    "title": "Imagem Categorias Home 04",
+    "props": {
+      "blockClass": [
+        "category-item"
+      ],
+      "src": "/assets/vtex.file-manager-graphql/images/15f7af37-207d-4d1d-bfed-2dada9a97826___9b8aad59f1d6e16fdd020a6f3886a16e.png",
+      "height": "133px",
+      "width": "133px",
+      "link": {
+        "attributeNofollow": false,
+        "url": "/"
+      },
+      "alt": "Imagem categorias home 4"
+    }
+  },
+  "rich-text#title-categories-item-04": {
+    "title": "Texto Categorias Home 04",
+    "props": {
+      "blockClass": [
+        "title-categories-item"
+      ],
+      "text": "Limpeza"
+    }
+  },
+  "flex-layout.col#categories-item-05": {
+    "title": "Item 05",
+    "children": [
+      "image-new-custom#categories-item-05",
+      "rich-text#title-categories-item-05"
+    ],
+    "props": {
+      "blockClass": [
+        "category-item"
+      ]
+    }
+  },
+  "image-new-custom#categories-item-05": {
+    "title": "Imagem Categorias Home 05",
+    "props": {
+      "blockClass": [
+        "category-item"
+      ],
+      "src": "/assets/vtex.file-manager-graphql/images/2b7474d7-3109-4e3a-b10f-ddbc716e47c1___6bc6bbba44e7fe3888720c3827614a6f.png",
+      "height": "133px",
+      "width": "133px",
+      "link": {
+        "attributeNofollow": false,
+        "url": "/"
+      },
+      "alt": "Imagem categorias home 5"
+    }
+  },
+  "rich-text#title-categories-item-05": {
+    "title": "Texto Categorias Home 05",
+    "props": {
+      "blockClass": [
+        "title-categories-item"
+      ],
+      "text": "Ferramentas Elétricas"
+    }
+  },
+  "flex-layout.col#categories-item-06": {
+    "title": "Item 06",
+    "children": [
+      "image-new-custom#categories-item-06",
+      "rich-text#title-categories-item-06"
+    ],
+    "props": {
+      "blockClass": [
+        "category-item"
+      ]
+    }
+  },
+  "image-new-custom#categories-item-06": {
+    "title": "Imagem Categorias Home 06",
+    "props": {
+      "blockClass": [
+        "category-item",
+        "grid-item-highlight"
+      ],
+      "src": "/assets/vtex.file-manager-graphql/images/50efa19b-b408-4159-aef1-f209c3abb638___4d2956eec3f2fb8e7f47583634a52883.png",
+      "height": "133px",
+      "width": "133px",
+      "link": {
+        "attributeNofollow": false,
+        "url": "/"
+      },
+      "alt": "Imagem categorias home 6"
+    }
+  },
+  "rich-text#title-categories-item-06": {
+    "title": "Texto Categorias Home 06",
+    "props": {
+      "blockClass": [
+        "title-categories-item"
+      ],
+      "text": "Soldas"
+    }
+  },
+  "flex-layout.col#categories-item-07": {
+    "title": "Item 07",
+    "children": [
+      "image-new-custom#categories-item-07",
+      "rich-text#title-categories-item-07"
+    ],
+    "props": {
+      "blockClass": [
+        "category-item"
+      ]
+    }
+  },
+  "image-new-custom#categories-item-07": {
+    "title": "Imagem Categorias Home 07",
+    "props": {
+      "blockClass": [
+        "category-item",
+        "grid-item-highlight"
+      ],
+      "src": "/assets/vtex.file-manager-graphql/images/45b2519c-d8fe-412c-8802-9942cde31925___d735a33e33c8d57d7e502daf6c73d5bc.png",
+      "height": "133px",
+      "width": "133px",
+      "link": {
+        "attributeNofollow": false,
+        "url": "/"
+      },
+      "alt": "Imagem categorias home 7"
+    }
+  },
+  "rich-text#title-categories-item-07": {
+    "title": "Texto Categorias Home 07",
+    "props": {
+      "blockClass": [
+        "title-categories-item"
+      ],
+      "text": "Mecânica"
+    }
+  },
+  "flex-layout.col#categories-item-08": {
+    "title": "Item 08",
+    "children": [
+      "image-new-custom#categories-item-08",
+      "rich-text#title-categories-item-08"
+    ],
+    "props": {
+      "blockClass": [
+        "category-item"
+      ]
+    }
+  },
+  "image-new-custom#categories-item-08": {
+    "title": "Imagem Categorias Home 08",
+    "props": {
+      "blockClass": [
+        "category-item",
+        "grid-item-highlight"
+      ],
+      "src": "/assets/vtex.file-manager-graphql/images/016efc3c-0eb9-425e-b2f7-38458dfcc076___a9ca76f1334639a35a41a6936ac3b1b6.png",
+      "height": "133px",
+      "width": "133px",
+      "link": {
+        "attributeNofollow": false,
+        "url": "/"
+      },
+      "alt": "Imagem categorias home 8"
+    }
+  },
+  "rich-text#title-categories-item-08": {
+    "title": "Texto Categorias Home 08",
+    "props": {
+      "blockClass": [
+        "title-categories-item"
+      ],
+      "text": "EPI's"
+    }
+  }
+}

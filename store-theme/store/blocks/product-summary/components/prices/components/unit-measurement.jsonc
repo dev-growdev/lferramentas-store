@@ -1,0 +1,16 @@
+{
+  "conditional-measurement-unit#summary-unit-measurement": {
+    "props": {
+      "measurementUnits": ["m", "M", "m2", "M2", "m²", "M²"],
+      "type": "show",
+      "Then": "product-selling-price#main-product-summary"
+    }
+  },
+  "conditional-measurement-unit#autocomplete-summary-unit-measurement": {
+    "props": {
+      "measurementUnits": ["m", "M", "m2", "M2", "m²", "M²"],
+      "type": "show",
+      "Then": "product-selling-price#product-summary"
+    }
+  }
+}

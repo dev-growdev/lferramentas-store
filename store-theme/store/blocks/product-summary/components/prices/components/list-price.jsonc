@@ -1,0 +1,56 @@
+{
+  "flex-layout.row#product-summary-list-price": {
+    "title": "Container List Price",
+    "props": {
+      "blockClass": "container__list-price",
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": ["conditional-measurement-unit#product-list-prodsum"]
+  },
+  "conditional-measurement-unit#product-list-prodsum": {
+    "props": {
+      "measurementUnits": ["m", "M", "m2", "M2", "m²", "M²"],
+      "type": "show",
+      "Then": "product-list-price#prodsum-measurement-unit",
+      "Else": "product-list-price#prodsum"
+    }
+  },
+  "product-list-price#prodsum-measurement-unit": {
+    "props": {
+      "blockClass": "prodsum",
+      "message": "{listPriceValue}/{measurementUnit}"
+    }
+  },
+  "product-list-price#prodsum": {
+    "props": {
+      "blockClass": "prodsum",
+      "message": "{listPriceValue}"
+    }
+  },
+
+  // TODO: remove this later
+
+  "conditional-measurement-unit#product-list-summary-measurement-unit": {
+    "props": {
+      "measurementUnits": ["m", "M", "m2", "M2", "m²", "M²"],
+      "type": "show",
+      "Then": "product-list-price#summary-measurement-unit",
+      "Else": "product-list-price#summary"
+    }
+  },
+  "product-list-price#summary-measurement-unit": {
+    "props": {
+      "blockClass": "prodsum",
+      "message": "{listPriceValue}/{measurementUnit}"
+    }
+  },
+  "product-list-price#summary": {
+    "props": {
+      "blockClass": "prodsum",
+      "message": "{listPriceValue}"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "flex-layout.row#banner-middle-coupons": {
+    "title": "Banner abaixo dos cupons",
+    "children": [
+      "responsive-layout.desktop#banner-middle-coupons",
+      "responsive-layout.mobile#banner-middle-coupons"
+    ],
+    "props": {
+      "blockClass": "banner-middle-coupons",
+      "experimentalHideEmptyCols": true
+    }
+  },
+  "responsive-layout.desktop#banner-middle-coupons": {
+    "title": "Desktop",
+    "children": ["image-new-custom#banner-middle-coupons"]
+  },
+  "responsive-layout.mobile#banner-middle-coupons": {
+    "title": "Mobile",
+    "children": ["image-new-custom#banner-middle-coupons"]
+  },
+  "image-new-custom#banner-middle-coupons": {
+    "props": {
+      "blockClass": "banner-middle-coupons-image",
+      "src": "/assets/vtex.file-manager-graphql/images/6b08093d-89dc-437f-8a62-aba6ebe7f31d___5fa0e51d21751e12758ffa2b576a8cc6.png",
+      "link": {
+        "url": "https://api.whatsapp.com/send?1=pt_BR&phone=555131030100",
+        "newTab": true
+      },
+      "title": "Fale conosco",
+      "alt": "Fale conosco"
+    }
+  }
+}

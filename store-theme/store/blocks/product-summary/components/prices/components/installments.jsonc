@@ -1,0 +1,37 @@
+{
+  "conditional-measurement-unit#installments-pdp-square-meter": {
+    "props": {
+      "measurementUnits": ["m", "M", "m2", "M2", "m²", "M²"],
+      "type": "show",
+      "Then": "product-installments#pdp-square-meter",
+      "Else": "product-installments#pdp"
+    }
+  },
+  "product-installments#pdp": {
+    "title": "Container Parcelas",
+    "props": {
+      "blockClass": "pdp-installments",
+      "installmentsCriteria": "max-quantity-without-interest",
+      "message": "Ou {installmentsTotalValue} em {installmentsNumber}{installmentValue}{hasInterest, select, true {, {interestRate} de juros} false { sem juros}}"
+    }
+  },
+  "product-installments#pdp-square-meter": {
+    "title": "Container Parcelas",
+    "props": {
+      "blockClass": "pdp-installments",
+      "installmentsCriteria": "max-quantity-without-interest",
+      "message": "Ou em até {installmentsNumber}{installmentValue}{hasInterest, select, true {, {interestRate} de juros} false { sem juros}}"
+    }
+  },
+
+  // TODO: remove this later
+
+  "product-installments#summary": {
+    "title": "Container Parcelas",
+    "props": {
+      "blockClass": "summary-installments",
+      "installmentsCriteria": "max-quantity-without-interest",
+      "message": "Ou em até {installmentsNumber}{installmentValue}"
+    }
+  }
+}

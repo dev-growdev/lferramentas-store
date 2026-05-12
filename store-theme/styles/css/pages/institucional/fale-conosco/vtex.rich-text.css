@@ -1,0 +1,78 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.paragraph--contact-us-info-box-title {
+  margin: 0;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  line-height: 1.3125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+.paragraph--contact-us-info-box-phone {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+.paragraph--contact-us-info-box-email {
+  display: inline-block;
+  color: #303030;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  line-height: 1.375rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+.paragraph--contact-us-info-box-email .link {
+  text-decoration: none;
+  color: #303030;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  line-height: 1.375rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+.paragraph--contact-us-info-box-email, .paragraph--contact-us-info-box-phone {
+  margin: 0;
+}
+.paragraph--contact-us-opening-hours-title {
+  margin: 0;
+  color: #303030;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+.paragraph--contact-us-opening-hours--01, .paragraph--contact-us-opening-hours--02 {
+  margin: 0;
+  color: #303030;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+
+.container--contact-us-info-box-title, .container--contact-us-info-box-email, .container--contact-us-info-box-phone {
+  justify-content: center;
+}
+.container--contact-us-opening-hours-title, .container--contact-us-opening-hours--01, .container--contact-us-opening-hours--02 {
+  justify-content: center;
+}

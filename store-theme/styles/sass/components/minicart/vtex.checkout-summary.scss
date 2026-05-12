@@ -1,0 +1,80 @@
+@import '../../global';
+
+.summaryItemContainer-- {
+  &footer__ {
+    &minicart {
+      .summaryItemLabel,
+      .price {
+        @include textConfig($black, 14, $fontRegular, 22, initial, initial, 10);
+      }
+
+      .summaryItemLabel {
+        text-align: left;
+      }
+
+      .price {
+        text-align: right;
+      }
+
+      &:last-child {
+        .summaryItemLabel,
+        .price {
+          @include textConfig(
+            $black,
+            16,
+            $fontExtraBold,
+            22,
+            initial,
+            initial,
+            10
+          );
+        }
+
+        .summaryItemLabel {
+          text-align: left;
+        }
+
+        .price {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+.summarySmallDisclaimer {
+  display: none;
+}
+
+.summaryItemContainer--footer__minicart:first-child {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.summaryItemContainer--footer__minicart:last-child {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.summaryItemLabel,
+.summaryItemPrice {
+  &--footer__minicart {
+    @include textConfig($black, 16, $fontExtraBold, 22, initial, initial, 10);
+  }
+}
+
+.summaryItemPrice {
+  &--footer__minicart {
+    text-align: right;
+
+    .summaryItemPriceAuxiliaryText {
+      @include textConfig($black, 14, $fontRegular, 22, initial, initial, 10);
+    }
+  }
+}
+
+.summaryItemListPrice {
+  &--footer__minicart {
+    @include textConfig($black, 14, $fontRegular, 22, initial, initial, 10);
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "toggle-layout#deals": {
+    "title": "Ativar/Desativar - Mosaico de Ofertas",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "flex-layout.row#deals"
+    ]
+  },
+  "flex-layout.row#deals": {
+    "title": "Mosaico de Ofertas",
+    "props": {
+      "blockClass": "deals",
+      "fullWidth": true
+    },
+    "children": [
+      "slider-layout#deals"
+    ]
+  },
+  "slider-layout#deals": {
+    "children": [
+      "flex-layout.row#deals01",
+      "flex-layout.row#deals02",
+      "flex-layout.row#deals03",
+      "flex-layout.row#deals04"
+    ],
+    "props": {
+      "blockClass": "slider-deals",
+      "infinite": false,
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 4,
+        "mobile": 1
+      },
+      "centerMode": {
+        "phone": "to-the-left",
+        "desktop": "disabled"
+      },
+      "centerModeSlidesGap": 16,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never"
+    }
+  },
+  "flex-layout.row#deals01": {
+    "children": [
+      "image-new-custom#deal1",
+      "rich-text#deal1"
+    ],
+    "props": {
+      "blockClass": [
+        "deals-item"
+      ],
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
+  "image-new-custom#deal1": {
+    "title": "Mosaico Home Imagem 01",
+    "props": {
+      "blockClass": [
+        "deals"
+      ],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "25px",
+      "height": "16px",
+      "src": "assets/icons/icon-truck.svg",
+      "alt": "mosaico home imagem 1"
+    }
+  },
+  "rich-text#deal1": {
+    "title": "Mosaico Home Texto 01",
+    "props": {
+      "text": "Frete grátis acima de R$ 299",
+      "blockClass": "deals"
+    }
+  },
+  "flex-layout.row#deals02": {
+    "children": [
+      "image-new-custom#deal2",
+      "rich-text#deal2"
+    ],
+    "props": {
+      "blockClass": [
+        "deals-item"
+      ],
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
+  "image-new-custom#deal2": {
+    "title": "Mosaico Home Imagem 02",
+    "props": {
+      "blockClass": [
+        "deals"
+      ],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "25px",
+      "height": "14px",
+      "src": "assets/icons/icon-ticket.svg",
+      "alt": "mosaico home imagem 2"
+    }
+  },
+  "rich-text#deal2": {
+    "title": "Mosaico Home Texto 02",
+    "props": {
+      "text": "5% de desconto no pix",
+      "blockClass": "deals"
+    }
+  },
+  "flex-layout.row#deals03": {
+    "children": [
+      "image-new-custom#deal3",
+      "rich-text#deal3"
+    ],
+    "props": {
+      "blockClass": [
+        "deals-item"
+      ],
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
+  "image-new-custom#deal3": {
+    "title": "Mosaico Home Imagem 03",
+    "props": {
+      "blockClass": [
+        "deals"
+      ],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "20px",
+      "height": "20px",
+      "src": "assets/icons/icon-exchange.svg",
+      "alt": "mosaico home imagem 3"
+    }
+  },
+  "rich-text#deal3": {
+    "title": "Mosaico Home Texto 03",
+    "props": {
+      "text": "Primeira troca grátis",
+      "blockClass": "deals"
+    }
+  },
+  "flex-layout.row#deals04": {
+    "children": [
+      "image-new-custom#deal4",
+      "rich-text#deal4"
+    ],
+    "props": {
+      "blockClass": [
+        "deals-item"
+      ],
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
+  "image-new-custom#deal4": {
+    "title": "Mosaico Home Imagem 04",
+    "props": {
+      "blockClass": [
+        "deals"
+      ],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "20px",
+      "height": "20px",
+      "src": "assets/icons/icon-credit-card.svg",
+      "alt": "mosaico home imagem 4"
+    }
+  },
+  "rich-text#deal4": {
+    "title": "Mosaico Home Texto 04",
+    "props": {
+      "text": "Tudo em até 10x sem juros",
+      "blockClass": "deals"
+    }
+  }
+}

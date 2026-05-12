@@ -1,0 +1,123 @@
+@import '../../global';
+
+.newsletterForm {
+  &--newsletter-form-footer {
+    @include display-flex(center, flex, center, column);
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 8px;
+
+    @include mq('1026') {
+      flex-direction: row;
+      margin: 0;
+    }
+
+    & :global(.vtex-input-prefix__group) {
+      @include size(100%);
+      border: none;
+      border-radius: 8px;
+    }
+
+    & :global(.vtex-styleguide-9-x-input) {
+      @include textConfig($dark-grey, 14, $fontRegular, 24, left, initial, 0);
+      border-radius: 0;
+      box-shadow: none;
+      background-color: $white;
+
+      @include mq('1026') {
+        background-color: $white;
+      }
+
+      &::placeholder {
+        @include textConfig($dark-grey, 14, $fontRegular, 24, left, initial, 0);
+      }
+    }
+  }
+}
+
+.nameInputContainer {
+  max-width: 400px;
+  @include size(100%, 48px);
+  margin-bottom: 16px;
+
+  @include mq('1026') {
+    margin-bottom: 0;
+    margin-right: 13px;
+    max-width: 225px;
+  }
+
+  & :global(.vtex-input__error) {
+    margin: 0;
+    color: $white;
+    @include font-size(12);
+
+    @include mq('1026') {
+      margin-top: 5px;
+    }
+  }
+}
+
+.emailInputContainer {
+  max-width: 400px;
+  @include size(100%, 48px);
+  margin-bottom: 16px;
+
+  @include mq('1026') {
+    margin-bottom: 0;
+    margin-right: 13px;
+    max-width: 225px;
+  }
+
+  & :global(.vtex-input__error) {
+    margin: 0;
+    color: $red;
+    @include font-size(12);
+
+    @include mq('1026') {
+      margin-top: 5px;
+    }
+  }
+}
+
+.confirmationCheckboxContainer {
+  margin-bottom: 24px;
+
+  @include mq('1026') {
+    margin-bottom: unset;
+  }
+
+  .labelLink--first,
+  :global(.vtex-checkbox__label) {
+    @include textConfig($dark-gray-03, 12, $fontBold, 14, left, initial, 0);
+  }
+
+  :global(.vtex-checkbox__line-container) {
+    align-items: center;
+
+    :global(.vtex__icon-check) {
+      color: $white;
+      background-color: $primary-color;
+      border: 1px solid $primary-color;
+    }
+  }
+}
+
+.formSubmitContainer {
+  @include size(100%, 48px);
+  @include button-primary();
+  max-width: 400px;
+
+  @include mq('1026') {
+    max-width: 209px;
+  }
+
+  :global(.vtex-button) {
+    border: none;
+    border-radius: 0.5rem;
+
+    :global(.vtex-button__label) {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+  }
+}

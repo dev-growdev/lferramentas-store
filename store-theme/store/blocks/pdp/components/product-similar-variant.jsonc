@@ -1,0 +1,12 @@
+{
+  "flex-layout.row#product-similar-variants": {
+    "title": "Container Similar Variants",
+    "props": {
+      "blockClass": "container__product-similar-variants",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": ["custom-similar-products-variants"]
+  }
+}

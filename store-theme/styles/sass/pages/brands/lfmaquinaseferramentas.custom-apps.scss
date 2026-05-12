@@ -1,0 +1,66 @@
+@import '../../global/';
+
+.shop-by-brand {
+  &--container {
+    @include grid();
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 18px;
+    row-gap: 35px;
+
+    @include mq('1026') {
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: 24px;
+      row-gap: 50px;
+    }
+  }
+
+  &--url {
+    text-decoration: none;
+  }
+
+  &--image {
+    border-radius: 0.75rem;
+    width: 100%;
+    height: auto;
+  }
+
+  &--name {
+    @include textConfig($dark-grey, 16, $fontBold, 20, center, none, 0);
+    margin: 6px 0 0;
+    text-decoration: none;
+  }
+
+  &--show-more {
+    max-width: 242px;
+    margin: 55px auto 0;
+
+    &-text {
+      @include textConfig($black, 14, $fontRegular, 18, center, none, 0);
+      margin: 0 0 12px;
+    }
+
+    &-progress {
+      background-color: $medium-grey;
+      border-radius: 2px;
+      height: 3px;
+      width: 100%;
+      margin-bottom: 23px;
+    }
+
+    &-button {
+      @include textConfig($white, 14, $fontExtraBold, 18, center, uppercase, 0);
+      background-color: $success-green;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      min-height: 2.6875rem;
+      width: 100%;
+      transition: background-color 300ms ease-in-out;
+
+      &:hover {
+        background-color: $success-dark-green;
+      }
+    }
+  }
+}

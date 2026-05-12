@@ -1,0 +1,54 @@
+@import "../../global";
+
+.slide {
+  padding: 0 5px;
+}
+
+.title {
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.relatedProducts {
+  @include grid();
+  margin: 10px auto 20px auto;
+  padding: 0 11px;
+
+  .title {
+    justify-content: left;
+    font-size: 0;
+
+    &::before {
+      content: 'Quem viu, viu também';
+      @include textConfig($black, 16, $fontBold, 24, left, initial, 0);
+
+      @include mq('1026') {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.arrowRight,
+.arrowLeft {
+  display: none; // !! Remove if necessary, not recommended << --
+}
+
+@include mq('1350') {
+  .arrowRight {
+    right: -5px;
+  }
+
+  .arrowLeft {
+    left: -5px;
+  }
+}
+
+@include mq('1026') {
+
+  .arrowRight,
+  .arrowLeft {
+    display: flex;
+  }
+}

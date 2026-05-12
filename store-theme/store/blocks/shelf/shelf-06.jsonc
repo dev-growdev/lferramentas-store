@@ -1,0 +1,80 @@
+{
+  "toggle-layout#shelf-06": {
+    "title": "Ativar/Desativar - Vitrine 06",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "flex-layout.row#shelf-06"
+    ]
+  },
+  "flex-layout.row#shelf-06": {
+    "title": "Vitrine 06",
+    "props": {
+      "blockClass": [
+        "container__shelf-row",
+        "grid1252",
+        "grid-mobile"
+      ],
+      "fullWidth": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.col#shelf-06"
+    ]
+  },
+  "flex-layout.col#shelf-06": {
+    "props": {
+      "blockClass": "container__shelf-col",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.row#shelf-06-title",
+      "flex-layout.row#shelf-demo-06"
+    ]
+  },
+  "flex-layout.row#shelf-06-title": {
+    "props": {
+      "blockClass": "container__shelf-row-text",
+      "fullWidth": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#shelf-title-06",
+      "rich-text#shelf-link-06"
+    ]
+  },
+  "rich-text#shelf-title-06": {
+    "title": "Título",
+    "props": {
+      "text": "## Parafusadeiras com os melhores preços",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "rich-text#shelf-link-06": {
+    "title": "Link",
+    "props": {
+      "text": "[Ver mais](/ferramentas-e-epis/ferramentas-eletricas-para-furar-e-parafusar/parafusadeiras)",
+      "blockClass": "shelfLink"
+    }
+  },
+  "flex-layout.row#shelf-demo-06": {
+    "children": [
+      "list-context.product-list#demo6"
+    ]
+  },
+  "list-context.product-list#demo6": {
+    "blocks": [
+      "product-summary.shelf#main"
+    ],
+    "children": [
+      "slider-layout#demo-products"
+    ],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "installmentCriteria": "MAX_WITHOUT_INTEREST",
+      "hideUnavailableItems": true,
+      "category": ""
+    }
+  }
+}

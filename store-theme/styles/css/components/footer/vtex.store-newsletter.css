@@ -1,0 +1,202 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.newsletterForm--newsletter-form-footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 25px;
+  border-radius: 8px;
+}
+@media only screen and (min-width: 1026px) {
+  .newsletterForm--newsletter-form-footer {
+    flex-direction: row;
+    margin: 0;
+  }
+}
+.newsletterForm--newsletter-form-footer :global(.vtex-input-prefix__group) {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+}
+.newsletterForm--newsletter-form-footer :global(.vtex-styleguide-9-x-input) {
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #ffffff;
+}
+@media only screen and (min-width: 1026px) {
+  .newsletterForm--newsletter-form-footer :global(.vtex-styleguide-9-x-input) {
+    background-color: #ffffff;
+  }
+}
+.newsletterForm--newsletter-form-footer :global(.vtex-styleguide-9-x-input)::placeholder {
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.nameInputContainer {
+  max-width: 400px;
+  height: 48px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+@media only screen and (min-width: 1026px) {
+  .nameInputContainer {
+    margin-bottom: 0;
+    margin-right: 13px;
+    max-width: 225px;
+  }
+}
+.nameInputContainer :global(.vtex-input__error) {
+  margin: 0;
+  color: #ffffff;
+  font-size: 12px;
+}
+@media only screen and (min-width: 1026px) {
+  .nameInputContainer :global(.vtex-input__error) {
+    margin-top: 5px;
+  }
+}
+
+.emailInputContainer {
+  max-width: 400px;
+  height: 48px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+@media only screen and (min-width: 1026px) {
+  .emailInputContainer {
+    margin-bottom: 0;
+    margin-right: 13px;
+    max-width: 225px;
+  }
+}
+.emailInputContainer :global(.vtex-input__error) {
+  margin: 0;
+  color: #d20404;
+  font-size: 12px;
+}
+@media only screen and (min-width: 1026px) {
+  .emailInputContainer :global(.vtex-input__error) {
+    margin-top: 5px;
+  }
+}
+
+.confirmationCheckboxContainer {
+  margin-bottom: 24px;
+}
+@media only screen and (min-width: 1026px) {
+  .confirmationCheckboxContainer {
+    margin-bottom: unset;
+  }
+}
+.confirmationCheckboxContainer .labelLink--first,
+.confirmationCheckboxContainer :global(.vtex-checkbox__label) {
+  color: #656565;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  line-height: 0.875rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+.confirmationCheckboxContainer :global(.vtex-checkbox__line-container) {
+  align-items: center;
+}
+.confirmationCheckboxContainer :global(.vtex-checkbox__line-container) :global(.vtex__icon-check) {
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #000000;
+}
+
+.formSubmitContainer {
+  height: 48px;
+  width: 100%;
+  max-width: 400px;
+}
+.formSubmitContainer :global(.vtex-button) {
+  cursor: pointer;
+  background-color: #008345;
+  border: 1px solid #008345;
+  height: 100%;
+  width: 100%;
+}
+.formSubmitContainer :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 370px) {
+  .formSubmitContainer :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20px;
+    line-height: 1.25rem;
+    letter-spacing: 0rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .formSubmitContainer :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    line-height: 1.25rem;
+    letter-spacing: 0rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+.formSubmitContainer :global(.vtex-button) :global(.vtex-button__label) {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.formSubmitContainer :global(.vtex-button):hover {
+  background-color: #005a30;
+  border-color: #005a30;
+}
+@media only screen and (min-width: 1026px) {
+  .formSubmitContainer {
+    max-width: 209px;
+  }
+}
+.formSubmitContainer :global(.vtex-button) {
+  border: none;
+  border-radius: 0.5rem;
+}
+.formSubmitContainer :global(.vtex-button) :global(.vtex-button__label) {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}

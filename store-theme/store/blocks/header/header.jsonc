@@ -1,0 +1,198 @@
+{
+  "header": {
+    "title": "Header",
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header-layout.desktop": {
+    "title": "Header - Desktop",
+    "children": [
+      "flex-layout.row#1-desktop",
+      "toggle-layout#top-bar-text",
+      "toggle-layout#top-bar-banner",
+      "sticky-layout#header-desktop",
+      "flex-layout.row#desktop-menu",
+      "flex-layout.row#header-floating-buttons",
+      "meta-tag",
+      "custom-add-to-cart-function",
+      "login-event"
+    ]
+  },
+
+  "flex-layout.row#1-desktop": {
+    "children": ["telemarketing"],
+    "props": {
+      "fullWidth": true
+    }
+  },
+
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "sticky-layout#header-desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": ["flex-layout.row#header-desktop"]
+  },
+
+  "flex-layout.row#header-desktop": {
+    "title": "Container Logo-Menu-Login-Minicart",
+    "props": {
+      "blockClass": "main-header",
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "search-bar",
+      "custom-link#corporate-selling",
+      "login",
+      "menu-item#wishlist",
+      "minicart.v2"
+    ]
+  },
+  "custom-link#corporate-selling": {
+    "props": {
+      "to": "https://ajuda.lfmaquinaseferramentas.com.br/hc/pt-br/requests/new?ticket_form_id=9506437163671",
+      "text": "Venda para Empresas e Licitações",
+      "openInNewTab": true,
+      "noFollow": true,
+      "blockClass": "venda-para-empresas"
+    }
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["logo#desktop"]
+  },
+  "flex-layout.row#desktop-menu": {
+    "children": ["avanti-menu-desktop"],
+    "props": {
+      "blockClass": "desktop-menu"
+    }
+  },
+  "logo#desktop": {
+    "title": "Logo Desktop",
+    "props": {
+      "width": 150,
+      "height": 34,
+      "url": "assets/icons/logo-lf.svg",
+      "href": "/",
+      "title": "LF Logo"
+    }
+  },
+  "header-layout.mobile": {
+    "children": [
+      "flex-layout.row#content-header",
+      "sticky-layout#header-mobile",
+      "flex-layout.row#header-floating-buttons",
+      "meta-tag",
+      "custom-add-to-cart-function",
+      "login-event"
+    ]
+  },
+  "sticky-layout#header-mobile": {
+    "title": "Header - Mobile",
+    "props": {
+      "blockClass": "container__header-mobile"
+    },
+    "children": ["avanti-menu-mobile", "search-bar", "flex-layout.row#minicart"]
+  },
+  "flex-layout.row#minicart": {
+    "children": ["minicart.v2"]
+  },
+  "flex-layout.row#content-header": {
+    "title": "Header Content - Mobile",
+    "props": {
+      "blockClass": "container__content-header-row",
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#content-header"]
+  },
+  "flex-layout.col#content-header": {
+    "props": {
+      "blockClass": "container__content-header-col",
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "toggle-layout#top-bar-text",
+      "toggle-layout#top-bar-banner",
+      "flex-layout.row#content-principal-header-mobile",
+      "flex-layout.row#search-mobile"
+    ]
+  },
+  "flex-layout.row#content-principal-header-mobile": {
+    "title": "Container Menu-Logo-Minicart",
+    "children": ["avanti-menu-mobile", "logo#mobile", "minicart.v2"],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "login": {
+    "props": {
+      "accountOptionLinks": [
+        {
+          "label": "Minha Conta",
+          "path": "/account#"
+        },
+        {
+          "label": "Meus pedidos",
+          "path": "/account#/orders"
+        }
+      ]
+    }
+  },
+  "menu-item#wishlist": {
+    "props": {
+      "type": "custom",
+      "highlight": false,
+      "blockClass": "text-wishlist",
+      "itemProps": {
+        "type": "internal",
+        "href": "/account#/wishlist",
+        "noFollow": true,
+        "tagTitle": "Menus",
+        "text": "Meus Favoritos"
+      }
+    }
+  },
+  "drawer": {
+    "children": ["menu#drawer"]
+  },
+
+  "menu#drawer": {
+    "children": [
+      "menu-item#category-apparel",
+      "menu-item#category-home",
+      "menu-item#more"
+    ],
+    "props": {
+      "orientation": "vertical"
+    }
+  },
+
+  "logo#mobile": {
+    "title": "Logo Mobile",
+    "props": {
+      "width": 136,
+      "height": 31,
+      "url": "assets/icons/logo-lf.svg",
+      "href": "/",
+      "title": "LF Logo"
+    }
+  }
+}

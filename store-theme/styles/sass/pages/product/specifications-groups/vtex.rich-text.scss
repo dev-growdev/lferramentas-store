@@ -1,0 +1,53 @@
+@import '../../../global/';
+
+.heading--generic-specification-group,
+.paragraph--generic-specification-group {
+  margin: 0;
+}
+
+.heading--generic-specification-group-title {
+  @include text(4, $primary-color);
+  margin: 0;
+  font-weight: bold;
+
+  @include mq('1024') {
+    @include text(3, $primary-color);
+    font-weight: bold;
+  }
+}
+
+.link--generic-specification-group,
+.heading--generic-specification-group-text {
+  @include text(5, $dark-gray, $fontBold);
+}
+
+.link--generic-specification-group {
+  text-decoration: none;
+}
+
+@include mq('1024') {
+  .link--generic-specification-group-link {
+    font-weight: $fontRegular;
+  }
+}
+
+.heading--generic-specification-group-text {
+  margin: 0 0 6px 0;
+}
+
+.paragraph--generic-specification-group-text {
+  @include text(5, $dark-gray, $fontRegular);
+  margin: 0 0 14px 0;
+}
+
+.paragraph--generic-specification-group-manual-link-text {
+  @include textConfig($white, 13, $fontExtraBold, 16, center, uppercase, 0);
+  text-decoration: underline;
+
+  margin: 0 4px 0 0;
+
+  @include mq('360') {
+    @include textConfig($white, 13, $fontExtraBold, 16, center, uppercase, 0);
+    margin: 0 8px 0 0;
+  }
+}

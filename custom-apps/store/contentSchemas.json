@@ -1,0 +1,446 @@
+{
+  "definitions": {
+    "CustomFaq": {
+      "type": "object",
+      "properties": {
+        "questions": {
+          "title": "admin/editor.custom-faq-question.title",
+          "description": "admin/editor.custom-faq-question.desc",
+          "type": "array",
+          "items": {
+            "$ref": "app:lfmaquinaseferramentas.custom-apps#/definitions/CustomFaqQuestions"
+          }
+        },
+        "direction": {
+          "title": "admin/editor.custom-faq-direction",
+          "type": "string",
+          "enum": ["row", "row-reverse", "column", "column-reverse"],
+          "enumNames": ["row", "row-reverse", "column", "column-reverse"],
+          "default": "row"
+        },
+        "justify": {
+          "title": "admin/editor.custom-faq-justify",
+          "type": "string",
+          "enum": [
+            "space-between",
+            "space-around",
+            "space-evenly",
+            "flex-start",
+            "flex-end"
+          ],
+          "enumNames": [
+            "space-between",
+            "space-around",
+            "space-evenly",
+            "flex-start",
+            "flex-end"
+          ],
+          "default": "space-between"
+        },
+        "align": {
+          "title": "admin/editor.custom-faq-align",
+          "type": "string",
+          "enum": ["center", "start", "end", "flex-start", "flex-end"],
+          "enumNames": ["center", "start", "end", "flex-start", "flex-end"],
+          "default": "center"
+        },
+        "closePrev": {
+          "title": "admin/editor.custom-faq-closePrev",
+          "description": "admin/editor.custom-faq-closePrev.desc",
+          "type": "boolean",
+          "default": false
+        },
+        "iconColor": {
+          "title": "admin/editor.custom-faq-iconColor",
+          "description": "admin/editor.custom-faq-iconColor.desc",
+          "type": "string",
+          "default": "#000"
+        },
+        "icon": {
+          "title": "admin/editor.custom-faq-icon",
+          "type": "string",
+          "default": null,
+          "widget": {
+            "ui:widget": "image-uploader"
+          }
+        }
+      }
+    },
+    "CustomFaqQuestions": {
+      "properties": {
+        "__editorItemTitle": {
+          "title": "admin/editor.custom-faq-question",
+          "description": "admin/editor.custom-faq-question.desc",
+          "$ref": "app:vtex.native-types#/definitions/richText",
+          "default": ""
+        },
+        "response": {
+          "title": "admin/editor.custom-faq-response",
+          "description": "admin/editor.custom-faq-response.desc",
+          "$ref": "app:vtex.native-types#/definitions/richText",
+          "default": ""
+        },
+        "colorQ": {
+          "title": "admin/editor.custom-faq-colorQ",
+          "description": "admin/editor.custom-faq-colorQ.desc",
+          "type": "string"
+        },
+        "colorQIcon": {
+          "title": "admin/editor.custom-faq-colorQIcon",
+          "type": "boolean",
+          "default": false
+        },
+        "colorR": {
+          "title": "admin/editor.custom-faq-colorR",
+          "description": "admin/editor.custom-faq-colorR.desc",
+          "type": "string"
+        }
+      }
+    },
+    "ImageCustom": {
+      "title": "admin/editor.store-image.title",
+      "properties": {
+        "src": {
+          "title": "admin/editor.image.src.title",
+          "$ref": "app:vtex.native-types#/definitions/url",
+          "default": "",
+          "widget": {
+            "ui:widget": "image-uploader"
+          }
+        },
+        "link": {
+          "$ref": "app:vtex.native-types#/definitions/link",
+          "default": ""
+        },
+        "alt": {
+          "title": "admin/editor.image.alt.title",
+          "$ref": "app:vtex.native-types#/definitions/text",
+          "default": ""
+        },
+        "title": {
+          "title": "admin/editor.image.title.title",
+          "description": "admin/editor.image.title.description",
+          "$ref": "app:vtex.native-types#/definitions/text",
+          "default": ""
+        },
+        "width": {
+          "title": "admin/editor.image.width.title",
+          "description": "admin/editor.image.width.description",
+          "$ref": "app:vtex.native-types#/definitions/text"
+        },
+        "height": {
+          "title": "admin/editor.image.height.title",
+          "description": "admin/editor.image.height.description",
+          "$ref": "app:vtex.native-types#/definitions/text"
+        },
+        "analyticsProperties": {
+          "title": "admin/editor.image.analytics.title",
+          "description": "admin/editor.image.analytics.description",
+          "enum": ["none", "provide"],
+          "enumNames": [
+            "admin/editor.image.analytics.none",
+            "admin/editor.image.analytics.provide"
+          ],
+          "widget": {
+            "ui:widget": "radio"
+          },
+          "default": "none"
+        }
+      },
+      "dependencies": {
+        "analyticsProperties": {
+          "oneOf": [
+            {
+              "properties": {
+                "analyticsProperties": {
+                  "enum": ["provide"]
+                },
+                "promotionId": {
+                  "title": "admin/editor.image.analytics.promotionId",
+                  "type": "string",
+                  "default": ""
+                },
+                "promotionName": {
+                  "title": "admin/editor.image.analytics.promotionName",
+                  "type": "string",
+                  "default": ""
+                },
+                "promotionPosition": {
+                  "title": "admin/editor.image.analytics.promotionPosition",
+                  "type": "string",
+                  "default": ""
+                }
+              }
+            },
+            {
+              "properties": {
+                "analyticsProperties": {
+                  "enum": ["none"]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "ImagesCustom": {
+      "type": "array",
+      "title": "admin/editor.image-list.images.title",
+      "items": {
+        "properties": {
+          "image": {
+            "$ref": "app:vtex.native-types#/definitions/url",
+            "default": "",
+            "title": "admin/editor.image-list.images.image.title",
+            "widget": {
+              "ui:widget": "image-uploader"
+            }
+          },
+          "mobileImage": {
+            "$ref": "app:vtex.native-types#/definitions/url",
+            "default": "",
+            "title": "admin/editor.image-list.images.mobileImage.title",
+            "widget": {
+              "ui:widget": "image-uploader"
+            }
+          },
+          "description": {
+            "$ref": "app:vtex.native-types#/definitions/text",
+            "default": "",
+            "title": "admin/editor.image-list.images.description.title"
+          },
+          "title": {
+            "title": "admin/editor.image-list.images.title.title",
+            "$ref": "app:vtex.native-types#/definitions/text",
+            "default": ""
+          },
+          "link": {
+            "default": "",
+            "title": "",
+            "$ref": "app:vtex.native-types#/definitions/link"
+          },
+          "width": {
+            "title": "admin/editor.image-list.images.width.title",
+            "description": "admin/editor.image-list.images.width.description",
+            "$ref": "app:vtex.native-types#/definitions/text",
+            "default": "100%"
+          },
+          "analyticsProperties": {
+            "title": "admin/editor.image.analytics.title",
+            "description": "admin/editor.image.analytics.description",
+            "enum": ["none", "provide"],
+            "enumNames": [
+              "admin/editor.image.analytics.none",
+              "admin/editor.image.analytics.provide"
+            ],
+            "widget": {
+              "ui:widget": "radio"
+            },
+            "default": "none"
+          },
+          "isActive": {
+            "title": "Banner ativo",
+            "description": "O banner será exibido na loja",
+            "type": "boolean",
+            "default": true
+          },
+          "enableStartDate": {
+            "title": "Definir data de início",
+            "type": "boolean",
+            "default": false
+          },
+          "startDate": {
+            "title": "Data de início",
+            "type": "string",
+            "format": "date-time",
+            "default": "",
+            "widget": {
+              "ui:widget": "date-time"
+            }
+          },
+          "enableEndDate": {
+            "title": "Definir data de término",
+            "type": "boolean",
+            "default": false
+          },
+          "endDate": {
+            "title": "Data de término",
+            "type": "string",
+            "format": "date-time",
+            "default": "",
+            "widget": {
+              "ui:widget": "date-time"
+            }
+          }
+        },
+        "dependencies": {
+          "analyticsProperties": {
+            "oneOf": [
+              {
+                "properties": {
+                  "analyticsProperties": {
+                    "enum": ["provide"]
+                  },
+                  "promotionId": {
+                    "title": "admin/editor.image.analytics.promotionId",
+                    "type": "string",
+                    "default": ""
+                  },
+                  "promotionName": {
+                    "title": "admin/editor.image.analytics.promotionName",
+                    "type": "string",
+                    "default": ""
+                  },
+                  "promotionPosition": {
+                    "title": "admin/editor.image.analytics.promotionPosition",
+                    "type": "string",
+                    "default": ""
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "analyticsProperties": {
+                    "enum": ["none"]
+                  }
+                }
+              }
+            ]
+          },
+          "enableStartDate": {
+            "oneOf": [
+              {
+                "properties": {
+                  "enableStartDate": {
+                    "enum": [true]
+                  },
+                  "startDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                },
+                "required": ["startDate"]
+              },
+              {
+                "properties": {
+                  "enableStartDate": {
+                    "enum": [false]
+                  }
+                }
+              }
+            ]
+          },
+          "enableEndDate": {
+            "oneOf": [
+              {
+                "properties": {
+                  "enableEndDate": {
+                    "enum": [true]
+                  },
+                  "endDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                },
+                "required": ["endDate"]
+              },
+              {
+                "properties": {
+                  "enableEndDate": {
+                    "enum": [false]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "ProductSummaryCustom": {
+      "properties": {
+        "badgeText": {
+          "title": "admin/editor.productSummary.badgeText.title",
+          "$ref": "app:vtex.native-types#/definitions/text"
+        }
+      }
+    },
+    "instMenu": {
+      "title": "Configurar Pagina Institucional",
+      "type": "array",
+      "maxItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "schemaAppInstitutionalMenu": {
+            "title": "Lista De Menus",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "title": "Escolha uma opção",
+                  "enumNames": ["Rota", "Título"],
+                  "enum": ["rota", "titulo"],
+                  "default": "rota",
+                  "widget": {
+                    "ui:widget": "radio"
+                  }
+                }
+              },
+              "dependencies": {
+                "type": {
+                  "oneOf": [
+                    {
+                      "properties": {
+                        "type": {
+                          "enum": ["rota"]
+                        },
+                        "__editorItemTitle": {
+                          "title": "Título do Site Editor",
+                          "type": "string"
+                        },
+                        "text": {
+                          "title": "Texto a ser exibido",
+                          "type": "string"
+                        },
+                        "href": {
+                          "title": "Redirecionamento do link",
+                          "type": "string"
+                        }
+                      }
+                    },
+                    {
+                      "properties": {
+                        "type": {
+                          "enum": ["titulo"]
+                        },
+                        "__editorItemTitle": {
+                          "title": "Título do Site Editor",
+                          "type": "string"
+                        },
+                        "text": {
+                          "title": "Texto a ser exibido",
+                          "type": "string"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "CustomHTMLContent": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "title": "HTML",
+          "$ref": "app:vtex.native-types#/definitions/richText",
+          "default": ""
+        }
+      }
+    }
+  }
+}

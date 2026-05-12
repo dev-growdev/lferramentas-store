@@ -1,0 +1,8 @@
+@import '../../../global';
+
+.paragraph {
+  &--inst-subtitle {
+    margin: 18px 0 0 0;
+    @include textConfig($dark-grey, 16, $fontBold, 20, left, initial, 0);
+  }
+}

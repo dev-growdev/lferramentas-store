@@ -1,0 +1,41 @@
+{
+  "store.product": {
+    "children": ["flex-layout.row#pdp-main"]
+  },
+  "flex-layout.row#pdp-main": {
+    "props": {
+      "blockClass": ["container__pdp-main"],
+      "fullWidth": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true
+    },
+    "children": ["flex-layout.col#pdp-main"]
+  },
+  "flex-layout.col#pdp-main": {
+    "props": {
+      "blockClass": ["container__pdp-main"],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      // "get-breadcrumb-info",
+      // "get-product-info",
+      // "get-website-info",
+      // "get-product-info-custom",
+      "flex-layout.row#banner-principal-pdp",
+      "flex-layout.row#product-breadcrumb",
+      "condition-layout.product#availability",
+      "toggle-layout#html-content-pdp",
+      "flex-layout.row#description",
+      "conditional-spec-group#specifications-pdp",
+      "conditional-spec-group#eletrical-specifications",
+      "conditional-spec-group#tires-specifications",
+      "conditional-spec-group#indications",
+      "conditional-spec-group#included-items",
+      "conditional-spec-group#capacities",
+      "conditional-spec-group#additional-infos",
+      "flex-layout.row#tech-support",
+      "flex-layout.row#reviews-pdp",
+      "flex-layout.row#releated-shelf"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "product-specification-group#eletrical-specifications": {
+    "props": {
+      "filter": {
+        "type": "show",
+        "specificationGroups": [
+          "Especificações Elétricas"
+        ]
+      }
+    },
+    "children": [
+      "flex-layout.row#spec-group-no-title"
+    ]
+  }
+}

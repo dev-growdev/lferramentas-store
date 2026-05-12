@@ -1,0 +1,16 @@
+{
+  "rich-text#inst-title-about-us": {
+    "title": "Título Principal",
+    "props": {
+      "text": "Sobre nós",
+      "blockClass": "inst-title"
+    }
+  },
+  "rich-text#inst-subtitle-about-us": {
+    "title": "Subtítulo",
+    "props": {
+      "text": "",
+      "blockClass": "inst-subtitle"
+    }
+  }
+}

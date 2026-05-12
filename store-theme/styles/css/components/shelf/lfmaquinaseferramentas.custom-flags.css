@@ -1,0 +1,13 @@
+.containerquadrantTopRight,
+.containerquadrantTopRightMobile {
+  margin-top: 26px;
+}
+
+.containerQuadrantFlagsAvanti--container__custom-flag-pdp .containerquadrantTopRight,
+.containerQuadrantFlagsAvanti--container__custom-flag-pdp .containerquadrantTopRightMobile {
+  margin-top: 34px;
+}
+.containerQuadrantFlagsAvanti--container__custom-flag-pdp .containerquadrantBottom,
+.containerQuadrantFlagsAvanti--container__custom-flag-pdp .containerquadrantBottomMobile {
+  margin-bottom: 34px;
+}

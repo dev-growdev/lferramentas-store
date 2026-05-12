@@ -1,0 +1,70 @@
+@import "../../../global";
+
+.customFaq-containerQuestions {
+  height: fit-content;
+  overflow: hidden;
+  border: 1px solid $light-gray;
+  padding: 2px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  &:last-child {
+    margin-bottom: 0;
+  }   
+
+  &.customFaq-containerQuestions--Active {
+    .customFaq-containerQuestion {
+      pointer-events: auto;
+      opacity: 1;
+      transform: none;
+      height: auto;
+      transition: 0.2s;
+    }
+
+    .customFaq-icon {
+      transform: rotate(180deg);
+    }
+
+    .customFaq-QuestionsTitle {
+      color: $primary-color;
+    }
+  }
+
+  .customFaq-QuestionsTitle {
+    @include textConfig($dark-gray, 14, $fontBold, 19, left, initial, 0);
+    @include display-flex(center, flex, flex-start, row);
+    gap: 10px;
+    margin: 0;
+    cursor: pointer;
+
+    .customFaq-icon {
+      max-width: 16px;
+      max-height: 16px;
+      transition: 0.3s;
+      fill: $dark-gray;
+    }
+  }
+
+  .customFaq-QuestionsTitleContent--text {
+    margin: 0;
+  }
+
+  .customFaq-containerQuestion {
+    opacity: 0;
+    transform: scaleY(0);
+    overflow: hidden;
+    pointer-events: none;
+    transform-origin: top;
+    transition: 0.2s;
+    overflow: hidden;
+    height: 0;
+
+    .customFaq-ResponseText {
+      @include textConfig($black, 14, $fontRegular, 14, left, initial, 1);
+      margin-bottom: 20px;
+      margin-top: 0;
+      @include mq("1024") {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}

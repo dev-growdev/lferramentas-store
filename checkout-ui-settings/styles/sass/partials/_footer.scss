@@ -1,0 +1,143 @@
+.footer-checkout {
+  margin-bottom: 40px;
+
+  @include mq('768') {
+    padding: 0 16px;
+  }
+}
+
+.footer-main-content {
+  padding: 0 16px;
+
+  @include mq('768') {
+    background: $white;
+    border-radius: 18px;
+    @include display-flex(center, center, column);
+    @include grid();
+    padding: 28px 95px;
+    box-sizing: border-box;
+  }
+}
+
+.payment-flags-container-desktop {
+  border-radius: 12px;
+  @include display-flex(center, center, column);
+
+  @include mq('768') {
+    border-radius: 0;
+    background: transparent;
+  }
+}
+
+.payment-flags-list {
+  &-desktop {
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    @include mq('768', max) {
+      display: none;
+    }
+  }
+
+  &-mobile {
+    @include display-flex(center, center, column);
+    padding: 0;
+    margin: 0 {
+      top: 34px;
+    }
+
+    @include mq('768') {
+      display: none;
+    }
+
+    .top-col,
+    .bottom-col {
+      @include display-flex(center, center, row);
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.payment-flag {
+  list-style: none;
+  margin-right: 26px;
+
+  @include mq('360') {
+    margin-right: 36px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.copyright {
+  &-container {
+    margin-top: 28px;
+
+    @include mq('768') {
+      margin-top: 16px;
+    }
+  }
+
+  &-text {
+    margin: 0;
+    @include textConfig($black-03, $primaryFont, 12, $fontRegular, 20, center, initial, 0);
+  }
+}
+
+.logos-container {
+  margin-top: 23px;
+}
+
+.logos-list {
+  margin: 0;
+  padding: 0 16px;
+  @include display-flex(center, center, row);
+  flex-wrap: wrap;
+}
+
+.bottom-logo {
+  list-style: none;
+  margin-right: 24px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.infos-container-mobile {
+  background-color: $black;
+  border-radius: 12px;
+  padding: 18px;
+  width: 100%;
+
+  @include mq('768') {
+    display: none;
+  }
+
+  h3 {
+    @include textConfig($secondary-color, $primaryFont, 16, $fontExtraBold, 20, center, initial, 0);
+    margin: 0;
+  }
+}
+
+.contacts-container,
+.time-container {
+  @include display-flex(center, center, column);
+
+  span {
+    @include textConfig($white, $primaryFont, 16, $fontRegular, 20, center, initial, 0);
+  }
+}
+
+.contacts-container {
+  margin-top: 7px;
+}
+
+.time-container {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 12px;
+}

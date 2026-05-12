@@ -1,0 +1,96 @@
+@import '../../global';
+
+.currencyContainer {
+  &--container {
+    &__selling-price {
+      @include textConfig($black, 16, $fontBold, 16, left, none, 0);
+      margin-bottom: 4px;
+    }
+
+    &__main-selling-price {
+      @include textConfig($black, 14, $fontExtraBold, 16, left, none, 0);
+      font-family: $primary-color;
+
+      @include mq('1026') {
+        @include font-size(18);
+      }
+    }
+  }
+}
+
+.listPrice,
+.listPriceValue {
+  &--prodsum {
+    @include textConfig($black, 12, $fontRegular, 14);
+    margin: 0 0 2px 0;
+  }
+}
+
+.sellingPrice,
+.spotPrice,
+.sellingPriceValue,
+.spotPriceValue {
+  &--container__main-selling-price {
+    @include textConfig($black, 14, $fontExtraBold, 16);
+
+    @include mq('1024') {
+      @include textConfig($black, 18, $fontExtraBold, 22);
+    }
+  }
+}
+
+.installments {
+  @include textConfig($dark-gray, 11, $fontRegular, 14, left, none, 0);
+  margin-bottom: 0;
+
+  @include mq('1026') {
+    @include font-size(12);
+  }
+
+  &--pdp-installments {
+    @include font-size(14);
+  }
+
+  .installmentsNumber::after {
+    content: 'x de ';
+  }
+
+  .installmentValue,
+  .installmentsTotalValue,
+  .installmentsNumber {
+    font-weight: $fontBold;
+  }
+}
+
+.savings,
+.spotPriceSavings {
+  &--container {
+    &__price-savings {
+      background-color: $red;
+      @include textConfig($white, 10, $fontBold, 22, left, uppercase, 0);
+      border-radius: 4px;
+      padding: 0 5px;
+    }
+
+    &__main-price-savings {
+      background-color: $black;
+      @include textConfig($yellow, 11, $fontExtraBold, 12, left, uppercase, 0);
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: flex;
+      gap: 3px;
+
+      @include mq('1026') {
+        @include textConfig(
+          $yellow,
+          12,
+          $fontExtraBold,
+          14,
+          left,
+          uppercase,
+          0
+        );
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "gallery": {
+    "title": "Container Galeria De Produto",
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "desktop": 4,
+            "tablet": 3,
+            "phone": 2
+          }
+        }
+      ],
+      "GridSummary": "product-summary.shelf#main"
+    }
+  }
+}

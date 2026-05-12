@@ -1,0 +1,19 @@
+{
+  "flex-layout.row#footer-description": {
+    "title": "Footer Texto",
+    "props": {
+      "blockClass": "footer-description",
+      "fullWidth": true
+    },
+    "children": [
+      "rich-text#footer-description"
+    ]
+  },
+  "rich-text#footer-description": {
+    "title": "Footer Texto",
+    "props": {
+      "text": "Preços e condições exclusivos para o site www.lfmaquinaseferramentas.com.br, podendo sofrer alterações sem prévia notificação. LF Comercial de Bens LTDA / CNPJ: 91.845.735/0004-14. Rodovia BR 116, Nº 5003 – Bairro Travessão - Dois Irmãos - RS / CEP 93950-000 / Telefone: (51) 3103.0100",
+      "blockClass": "footer-description-text"
+    }
+  }
+}

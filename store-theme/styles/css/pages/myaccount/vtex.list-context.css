@@ -1,0 +1,27 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.list--wishlist {
+  list-style: none;
+  display: grid;
+  padding-left: 0;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  margin-top: 8px;
+}
+@media only screen and (min-width: 640px) {
+  .list--wishlist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 1026px) {
+  .list--wishlist {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    margin-top: 23px;
+  }
+}
+
+.item--wishlist {
+  margin-bottom: 24px;
+}

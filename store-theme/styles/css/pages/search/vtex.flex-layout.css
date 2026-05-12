@@ -1,0 +1,95 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.flexRow--searchbread, .flexRow--title-search-result, .flexRow--filter-mobile, .flexRow--title-departament, .flexRow--fetchmore {
+  padding: 0 0.3rem;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRow--searchbread, .flexRow--title-search-result, .flexRow--filter-mobile, .flexRow--title-departament, .flexRow--fetchmore {
+    padding: 0;
+  }
+}
+.flexRow--fetchmore {
+  padding-right: 11px;
+}
+.flexRow--fetchmore .flexRowContent--fetchmore {
+  margin: 10px auto;
+}
+.flexRow--search-result {
+  margin-top: 13px;
+}
+.flexRow--shelf-not-found .flexRow--container__shelf-row {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1024px) {
+  .flexRow--shelf-not-found .flexRow--container__shelf-row {
+    margin-bottom: 10px;
+  }
+}
+.flexRowContent--filter-mobile {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRow--orderByAndSwitcher {
+    padding-right: 11px !important;
+  }
+}
+.flexRow--shelf-not-found {
+  margin: 0 auto;
+  max-width: 1260px;
+  padding: 0 5px;
+  width: 100%;
+}
+.flexRow--title-departament {
+  display: block;
+}
+.flexRow--contentmobile-search :global(.vtex-store-components-3-x-container) {
+  padding-left: 0;
+  padding-right: 0;
+}
+.flexRow--filter-mobile :global(.vtex-store-components-3-x-container) {
+  padding: 0;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRow--row-infos-search {
+    margin-bottom: 11px;
+  }
+}
+.flexRow--empty-search-banner {
+  margin: 0 auto;
+  max-width: 1292px;
+  padding: 0 16px;
+  width: 100%;
+  padding-top: 26px;
+}
+.flexRow--empty-search-banner :global(.vtex-store-components-3-x-imageElement--banner-departamento-mobile) {
+  --horizontal-padding-mobile: 16px;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRow--empty-search-banner {
+    padding-top: 12px;
+  }
+  .flexRow--empty-search-banner :global(.vtex-store-components-3-x-imageElementLink--banner-departamento) {
+    margin-right: 0;
+  }
+}
+
+.flexCol--filterCol {
+  max-width: 285px;
+  padding-right: 26px;
+}
+.flexCol--text-seo-departament {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1026px) {
+  .flexRowContent--title-departament {
+    justify-content: flex-start;
+  }
+}

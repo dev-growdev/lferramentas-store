@@ -1,0 +1,131 @@
+.btnActiveModal {
+  background: none;
+  border: none;
+  color: #347D40;
+  padding: 10px 15px 8px;
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+}
+
+.modalPagamentoOverlay {
+  width: 100vw;
+  height: 110vh;
+  background-color: rgba(0, 0, 0, 0.376);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.modalPagamentoContainer {
+  position: relative;
+  width: fit-content;
+  width: 100%;
+  max-width: 90%;
+  margin: auto;
+  top: 8%;
+  border-radius: 0px;
+  background: rgb(255, 255, 255);
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.btnCloseModalPagamento {
+  position: absolute;
+  top: 19px;
+  right: 17px;
+  background: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+.btnCloseModalPagamento * {
+  fill: #347D40;
+  color: #347D40;
+}
+
+.titleModalPagamento {
+  margin: 0 0 35px 0;
+  color: #717171;
+  font-weight: 600;
+}
+
+.modalPagamentoTabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalPagamentoTabsList {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 2px solid #E2E2E2;
+}
+
+.modalPagamentoTabHead {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.modalPagamentoTabHead:hover .labelModalPagamento p {
+  color: #2C55CC;
+  font-weight: 500;
+}
+
+.modalPagamentoTabHead:hover .imgModalPagamento.svgModalPagamento {
+  fill: #2C55CC;
+}
+
+.imgModalPagamento {
+  height: 20px;
+}
+
+.labelModalPagamento {
+  font-weight: 500;
+  font-size: 11px;
+}
+
+.modalPagamentoTabHead .tabActive {
+  color: #347D40;
+  position: relative;
+}
+
+.modalPagamentoTabHead .labelModalPagamento.tabActive::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  height: 3px;
+  background-color: #347D40;
+  transform: translate(-50%);
+}
+
+.modalPagamentoTabHead .imgModalPagamento.tabActive svg path,
+.modalPagamentoTabHead .imgModalPagamento.tabActive svg rect {
+  fill: #347D40;
+}
+
+
+@media(min-width:1024px) {
+  .modalPagamentoContainer {
+    max-width: 100%;
+  }
+
+  .modalPagamentoOverlay {
+    height: 100vh;
+  }
+
+  .btnActiveModal {
+    padding-left: 0;
+  }
+}

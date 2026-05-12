@@ -1,0 +1,23 @@
+{
+  "flex-layout.row#product-identifier": {
+    "title": "Container Identificador",
+    "props": {
+      "blockClass": "container__product-identifier",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "product-identifier.product#pdp",
+      "product-rating-summary",
+      "flex-layout.row#pdp-share"
+    ]
+  },
+  "product-identifier.product#pdp": {
+    "props": {
+      "idField": "skuReferenceId",
+      "label": "custom",
+      "customLabel": "Cód"
+    }
+  }
+} 

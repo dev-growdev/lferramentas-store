@@ -1,0 +1,77 @@
+
+.countdownContainer {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-right: 12px;
+}
+
+.countdownPlpItem {
+  border-radius: 12px;
+}
+
+.countdownPlpContainer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 0px;
+}
+
+.countdownPlpContainerLeft {
+  color: #FFE72E;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 33px;
+}
+
+.countdownPlpContainerRight {
+  display: flex;
+  gap: 10px;
+}
+
+.countDownPlpNumbers {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  width: 86px;
+  justify-content: center;
+}
+
+.countdownPlpNumberContent {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 46px;
+}
+
+.countdownPlpText {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+}
+
+@media (max-width: 1024px) {
+  .countdownPlpContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .countdownPlpContainer {
+    gap: 5px;
+  }
+  .countdownPlpNumberContent {
+    font-size: 26px;
+    line-height: normal;
+  }
+  .countdownPlpText {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .countdownContainer {
+    margin-right: 0;
+  }
+
+  .countDownPlpNumbers {
+    width: 74px;
+  }
+}

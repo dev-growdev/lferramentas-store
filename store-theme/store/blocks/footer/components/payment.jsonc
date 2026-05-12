@@ -1,0 +1,120 @@
+{
+  "flex-layout.row#footer-payment-methods": {
+    "title": "Ícones de Métodos de Pagamento",
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "blockClass": "footer-payment-methods",
+      "fullWidth": true
+    },
+    "children": [
+      "image-new-custom#visa",
+      "image-new-custom#mastercard",
+      "image-new-custom#diners-club",
+      "image-new-custom#elo",
+      "image-new-custom#amex",
+      "image-new-custom#hipercard",
+      "image-new-custom#boleto",
+      "image-new-custom#transferencia",
+      "image-new-custom#pix"
+    ]
+  },
+  "image-new-custom#amex": {
+    "title": "Ícone Método de Pagamento - 1",
+    "props": {
+      "maxWidth": "27px",
+      "maxHeight": "19px",
+      "width": "100%",
+      "alt": "Ícone Amex",
+      "blockClass": ["payment-flags-icons"],
+      "src": "assets/icons/amex.svg"
+    }
+  },
+  "image-new-custom#mastercard": {
+    "title": "Ícone Método de Pagamento - 2",
+    "props": {
+      "maxWidth": "27px",
+      "maxHeight": "16px",
+      "width": "100%",
+      "alt": "Ícone Mastercard",
+      "blockClass": ["payment-flags-icons"],
+      "src": "assets/icons/mastercard.svg"
+    }
+  },
+  "image-new-custom#visa": {
+    "title": "Ícone Método de Pagamento - 3",
+    "props": {
+      "maxWidth": "34px",
+      "maxHeight": "10px",
+      "width": "100%",
+      "alt": "Ícone Visa",
+      "blockClass": ["payment-flags-icons"],
+      "src": "assets/icons/visa.svg"
+    }
+  },
+  "image-new-custom#hipercard": {
+    "title": "Ícone Método de Pagamento - 4",
+    "props": {
+      "maxWidth": "36px",
+      "maxHeight": "15px",
+      "width": "100%",
+      "alt": "Ícone Hipercard",
+      "blockClass": ["payment-flags-icons"],
+      "src": "assets/icons/hipercard.svg"
+    }
+  },
+  "image-new-custom#elo": {
+    "title": "Ícone Método de Pagamento - 5",
+    "props": {
+      "maxWidth": "33px",
+      "maxHeight": "13px",
+      "width": "100%",
+      "alt": "Ícone Elo",
+      "blockClass": ["payment-flags-icons"],
+      "src": "assets/icons/elo.svg"
+    }
+  },
+  "image-new-custom#diners-club": {
+    "title": "Ícone Método de Pagamento - 6",
+    "props": {
+      "maxWidth": "30px",
+      "maxHeight": "19px",
+      "width": "100%",
+      "alt": "Ícone Diners Club",
+      "blockClass": ["payment-flags-icons"],
+      "src": "assets/icons/diners.svg"
+    }
+  },
+  "image-new-custom#transferencia": {
+    "title": "Ícone Método de Pagamento - 7",
+    "props": {
+      "maxWidth": "72px",
+      "maxHeight": "22px",
+      "width": "100%",
+      "alt": "Ícone Transferência",
+      "blockClass": ["payment-flags-icons"],
+      "src": "assets/icons/transferencia-bancaria.svg"
+    }
+  },
+  "image-new-custom#pix": {
+    "title": "Ícone Método de Pagamento - 8",
+    "props": {
+      "maxWidth": "24px",
+      "maxHeight": "23px",
+      "width": "100%",
+      "alt": "Ícone Pix",
+      "blockClass": ["payment-flags-icons"],
+      "src": "assets/icons/pix.svg"
+    }
+  },
+  "image-new-custom#boleto": {
+    "title": "Ícone Método de Pagamento - 9",
+    "props": {
+      "maxWidth": "37px",
+      "maxHeight": "24px",
+      "width": "100%",
+      "alt": "Ícone Boleto",
+      "blockClass": ["payment-flags-icons"],
+      "src": "assets/icons/boleto.svg"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+
+  "product-specification-group#measures-table": {
+    "props": {
+      "filter": {
+        "type": "show",
+        "specificationGroups": [
+          "Medidas do Produto"
+        ]
+      }
+    },
+    "children": [
+      "flex-layout.row#spec-group"
+    ]
+  }
+}

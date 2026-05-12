@@ -1,0 +1,74 @@
+/* PDP Layout */
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+@media only screen and (max-width: 1023px) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--container__product-available) {
+    flex-direction: column;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--container__product-available) > :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+    /* Element already has width in it's inline style */
+    width: 100% !important;
+  }
+}
+:global(.vtex-flex-layout-0-x-flexRowContent--container__shipping-simulator) input {
+  padding-left: 0;
+  background-size: 83px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+:global(.vtex-flex-layout-0-x-flexRowContent--container__shipping-simulator) input:not([value=""]) {
+  background-image: none;
+}
+
+:global(.vtex-store-components-3-x-carouselGaleryThumbs) :global(.swiper-container-vertical) > :global(.swiper-wrapper),
+:global(.lfmaquinaseferramentas-custom-apps-0-x-carouselGaleryThumbs) :global(.swiper-container-vertical) > :global(.swiper-wrapper) {
+  align-items: baseline;
+}
+
+:global(.yourviews-yourviewsreviews-1-x-inlineRating) {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+:global(.yourviews-yourviewsreviews-0-x-reviewsReviewItem) ul:has(:global(.yourviews-yourviewsreviews-0-x-reviewsCustomerPhotos)) {
+  grid-column: 2/3;
+  margin: 0;
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--container__description-pdp) :global(.vtex-flex-layout-0-x-stretchChildrenWidth):empty {
+  display: none;
+}
+
+:global(.render-route-store-product) :global(.vtex-sticky-layout-0-x-wrapper--container__header-desktop),
+:global(.render-route-store-product) :global(.vtex-sticky-layout-0-x-wrapper--container__header-mobile) {
+  background: #ffffff;
+}
+
+/* Availbility Notify */
+:global(.vtex-availability-notify-1-x-success):global(.c-danger) {
+  color: #d20404;
+}
+:global(.vtex-availability-notify-1-x-success):global(.c-success) {
+  color: #0eaa38;
+}
+
+@media only screen and (min-width: 1024px) {
+  :global(.vtex-store-components-3-x-carouselGaleryThumbs > div.swiper-container),
+  :global(.lfmaquinaseferramentas-custom-apps-0-x-carouselGaleryThumbs
+      > div.swiper-container) {
+    max-height: 550px;
+    position: static;
+  }
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formContainer) h3 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  line-height: 1.1875rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}

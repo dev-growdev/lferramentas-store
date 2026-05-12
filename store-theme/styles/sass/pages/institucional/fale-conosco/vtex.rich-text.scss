@@ -1,0 +1,68 @@
+@import "../../../global";
+
+.paragraph {
+  &--contact-us {
+    &-info-box {
+      &-title {
+        margin: 0;
+        @include textConfig($black, 16, $fontBold, 21, center, initial, 0);
+      }
+
+      &-phone { 
+        @include textConfig($primary-color, 16, $fontBold, 16, center, initial, 0);
+      }
+
+      &-email {
+        display: inline-block;
+        @include textConfig($dark-gray, 16, $fontBold, 22, center, initial, 0);
+
+        .link {
+          text-decoration: none;
+          @include textConfig($dark-gray, 16, $fontBold, 22, center, initial, 0);
+        }
+      }
+
+      &-email,
+      &-phone {
+        margin: 0;
+      }
+    }
+
+    &-opening-hours {
+      &-title {
+        margin: 0;
+        @include textConfig($dark-gray, 12, $fontBold, 20, center, initial, 0);
+      }
+
+      &--01,
+      &--02 {
+        margin: 0;
+        @include textConfig($dark-gray, 12, $fontRegular, 20, center, initial, 0);
+      }
+
+    }
+  }
+}
+
+.container {
+  &--contact-us {
+    &-info-box {
+
+      &-title,
+      &-email,
+      &-phone {
+        justify-content: center;
+      }
+    }
+
+    &-opening-hours {
+
+      &-title,
+      &--01,
+      &--02 {
+        justify-content: center;
+      }
+
+    }
+  }
+}

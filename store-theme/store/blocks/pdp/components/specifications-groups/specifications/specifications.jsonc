@@ -1,0 +1,114 @@
+{
+  "conditional-spec-group#specifications-pdp": {
+    "props": {
+      "blockClass": [
+        "measures"
+      ],
+      "propertyName": "Especificações"
+    },
+    "children": [
+      "flex-layout.row#specifications-pdp"
+    ]
+  },
+  "flex-layout.row#specifications-pdp": {
+    "title": "Especificações",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "specifications"
+      ],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#specifications-pdp"
+    ]
+  },
+  "flex-layout.col#specifications-pdp": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "specifications"
+      ],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#specifications-pdp-content"
+    ]
+  },
+  "flex-layout.row#specifications-pdp-content": {
+    "title": "Especificações",
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "specifications-content"
+      ],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#specifications-pdp-content"
+    ]
+  },
+  "flex-layout.col#specifications-pdp-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "specifications-content"
+      ],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "disclosure-layout#specifications-pdp-content"
+    ]
+  },
+  "disclosure-layout#specifications-pdp-content": {
+    "props": {
+      "initialVisibility": "visible",
+      "blockClass": [
+        "generic-specification-group-content",
+        "specifications-content"
+      ]
+    },
+    "children": [
+      "disclosure-trigger#specifications-pdp-content",
+      "disclosure-content#specifications-pdp-content"
+    ]
+  },
+  "disclosure-trigger#specifications-pdp-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "specifications-content"
+      ]
+    },
+    "children": [
+      "rich-text#specifications-pdp-title"
+    ]
+  },
+  "disclosure-content#specifications-pdp-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "specifications-content"
+      ]
+    },
+    "children": [
+      "product-specification-group#specifications-table"
+    ]
+  },
+  "rich-text#specifications-pdp-title": {
+    "title": "Especificações - Título",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "generic-specification-group-title",
+        "specifications",
+        "specifications-title"
+      ],
+      "text": "##### Especificações"
+    }
+  }
+}

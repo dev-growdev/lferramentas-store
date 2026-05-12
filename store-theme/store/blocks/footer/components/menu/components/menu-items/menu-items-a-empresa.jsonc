@@ -1,0 +1,37 @@
+{
+  "rich-text#link-a-empresa-01": {
+    "title": "Menu Link 01",
+    "props": {
+      "blockClass": ["footer-submenu-item", "footerSubmenuItem--to-replace"],
+      "text": "##### [Sobre Nós](/sobre-nos)"
+    }
+  },
+  "rich-text#link-a-empresa-02": {
+    "title": "Menu Link 02",
+    "props": {
+      "blockClass": ["footer-submenu-item", "footerSubmenuItem--to-replace"],
+      "text": "##### [Nossas Lojas](/nossas-lojas)"
+    }
+  },
+  "rich-text#link-a-empresa-03": {
+    "title": "Menu Link 03",
+    "props": {
+      "blockClass": ["footer-submenu-item", "footerSubmenuItem--to-replace"],
+      "text": "##### <a href='http://ajuda.lfmaquinaseferramentas.com.br/hc/pt-br/articles/360051506314-Politíca-de-Privacidade' target='_blank' class='vtex-rich-text-0-x-paragraph--footer-submenu-item'>Privacidade e Segurança</a>"
+    }
+  },
+  "rich-text#link-a-empresa-04": {
+    "title": "Menu Link 04",
+    "props": {
+      "blockClass": ["footer-submenu-item", "footerSubmenuItem--to-replace"],
+      "text": "##### <a href='https://grupogg10.com.br/trabalhe-conosco/' target='_blank' class='vtex-rich-text-0-x-paragraph--footer-submenu-item'>Trabalhe Conosco</a>"
+    }
+  },
+  "rich-text#link-a-empresa-05": {
+    "title": "Menu Link 05",
+    "props": {
+      "blockClass": ["footer-submenu-item", "footerSubmenuItem--to-replace"],
+      "text": "##### <a href='/institucional/representantes' target='_blank' class='vtex-rich-text-0-x-paragraph--footer-submenu-item'>Representantes</a>"
+    }
+  }
+}

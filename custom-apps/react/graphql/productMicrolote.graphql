@@ -1,0 +1,19 @@
+query ProductMicrolote($productUniqueIdentifier: ProductUniqueIdentifier){
+    product(identifier: $productUniqueIdentifier){
+        productId
+        productName
+        items{
+            images{
+                imageUrl
+            }
+            sellers{
+                commertialOffer{
+                    Price
+                    AvailableQuantity
+                }
+              
+            }
+        }
+                
+    }
+}

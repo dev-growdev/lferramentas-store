@@ -1,0 +1,80 @@
+{
+  "toggle-layout#shelf-05": {
+    "title": "Ativar/Desativar - Vitrine 05",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "flex-layout.row#shelf-05"
+    ]
+  },
+  "flex-layout.row#shelf-05": {
+    "title": "Vitrine 05",
+    "props": {
+      "blockClass": [
+        "container__shelf-row",
+        "grid1252",
+        "grid-mobile"
+      ],
+      "fullWidth": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.col#shelf-05"
+    ]
+  },
+  "flex-layout.col#shelf-05": {
+    "props": {
+      "blockClass": "container__shelf-col",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.row#shelf-05-title",
+      "flex-layout.row#shelf-demo-05"
+    ]
+  },
+  "flex-layout.row#shelf-05-title": {
+    "props": {
+      "blockClass": "container__shelf-row-text",
+      "fullWidth": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#shelf-title-05",
+      "rich-text#shelf-link-05"
+    ]
+  },
+  "rich-text#shelf-title-05": {
+    "title": "Título",
+    "props": {
+      "text": "## Versatilidade em kits de ferramentas",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "rich-text#shelf-link-05": {
+    "title": "Link",
+    "props": {
+      "text": "[Ver mais](/ferramentas-e-epis/ferramentas-manuais/kit-de-ferramentas)",
+      "blockClass": "shelfLink"
+    }
+  },
+  "flex-layout.row#shelf-demo-05": {
+    "children": [
+      "list-context.product-list#demo5"
+    ]
+  },
+  "list-context.product-list#demo5": {
+    "blocks": [
+      "product-summary.shelf#main"
+    ],
+    "children": [
+      "slider-layout#demo-products"
+    ],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "installmentCriteria": "MAX_WITHOUT_INTEREST",
+      "hideUnavailableItems": true,
+      "category": ""
+    }
+  }
+}

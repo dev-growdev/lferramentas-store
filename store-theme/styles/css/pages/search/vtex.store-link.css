@@ -1,0 +1,30 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.link--cta-back-to-home {
+  display: flex;
+  margin: 0 16px;
+  max-width: 400px;
+  background-color: #555a44;
+  color: #ffffff;
+  border: 1px solid #555a44;
+  transition: all 500ms ease-in-out;
+}
+.link--cta-back-to-home:hover, .link--cta-back-to-home:active {
+  background-color: #6c7748;
+  border: 1px solid #6c7748;
+}
+@media only screen and (min-width: 428px) {
+  .link--cta-back-to-home {
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1026px) {
+  .link--cta-back-to-home {
+    max-width: 250px;
+  }
+}
+
+.label--cta-back-to-home {
+  text-transform: initial;
+}

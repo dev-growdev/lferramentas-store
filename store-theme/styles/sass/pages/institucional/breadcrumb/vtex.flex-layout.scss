@@ -1,0 +1,15 @@
+@import "../../../global";
+
+.flexRow {
+  &--inst-breadcrumb-container {
+    @include grid();
+    margin-top: 16px;
+  }
+}
+
+.flexRowContent {
+  &--inst-breadcrumb-container {
+    @include display-flex(center, flex, flex-start, row);
+    gap: 6px;
+  }
+}

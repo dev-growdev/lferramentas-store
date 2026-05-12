@@ -1,0 +1,47 @@
+{
+  "rich-text#text-lp-bf-categories": {
+    "title": "Texto da secção de categorias",
+    "props": {
+      "blockClass": "text-lp-bf-categories",
+      "text": "Você busca por ferramentas e máquinas de qualidade, preço justo e não perde uma boa promoção? A Black Friday 2024 na LF Máquinas e Ferramentas é o momento perfeito para melhorar a sua coleção de equipamentos.",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#text-lp-bf-benefits": {
+    "title": "Texto da secção de categorias",
+    "props": {
+      "blockClass": "text-lp-bf-categories",
+      "text": "A LF Máquinas e Ferramentas tem ofertas imbatíveis nesta época do ano, com uma ampla variedade de produtos, que vão desde ferramentas manuais até equipamentos elétricos de última geração.",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "link#lp-bf-coupons": {
+    "title": "Link para a página de Cupons",
+    "props": {
+      "blockClass": "lp-bf-coupons",
+      "href": "/cupons-de-desconto",
+      "target": "_self"
+    },
+    "children": ["rich-text#lp-bf-coupons"]
+  },
+  "rich-text#lp-bf-coupons": {
+    "title": "Texto do link para a página de Cupons",
+    "props": {
+      "blockClass": "link-lp-bf-coupons",
+      "text": "Clique aqui para conferir regras e saber como utilizar o seu cupom de desconto.",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#lp-bf-slider-brand": {
+    "title": "Texto abaixo das marcas em slider",
+    "props": {
+      "blockClass": "lp-bf-slider-brand",
+      "text": "Aproveite a oportunidade para comprar produtos das principais marcas do mercado como **Bosch**, **Dewalt**, **Esab**, **Goar**, \n **Karcher** e **Makita** com preços que você nunca viu antes!",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  }
+}

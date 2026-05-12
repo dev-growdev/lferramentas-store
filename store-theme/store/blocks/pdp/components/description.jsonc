@@ -1,0 +1,21 @@
+{
+  "flex-layout.row#description": {
+    "title": "Container Descrição",
+    "props": {
+      "blockClass": "container__description-pdp",
+      "fullWidth": true,
+      "colSizing": "equal",
+      "experimentalHideEmptyCols": true
+    },
+    "children": [
+      "product-description",
+      "conditional-spec-group#measures-table"
+    ]
+  },
+  "product-description": {
+    "props": {
+      "collapseContent": false,
+      "title": "Descrição"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "store.custom#inst-page-about-us": {
+    "blocks": [
+      "toggle-layout#inst-banner",
+      "flex-layout.row#inst-breadcrumb-about-us",
+      "flex-layout.row#inst-body-about-us"
+    ]
+  },
+  "flex-layout.row#inst-body-about-us": {
+    "title": "Container Sobre Nós",
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": [
+        "inst-body", 
+        "inst-body--about-us"
+      ]
+    },
+    "children": [
+      "flex-layout.col#inst-menu",
+      "flex-layout.col#inst-content-and-title-about-us"
+    ]
+  },
+  "flex-layout.col#inst-content-and-title-about-us": {
+    "title": "Container Título e Conteúdo",
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": ["inst-content-container"]
+    },
+    "children": [
+      "rich-text#inst-title-about-us",
+      "rich-text#inst-subtitle-about-us",
+      "rich-text#inst-text-about-us-01",
+      "rich-text#inst-text-about-us-02",
+      "rich-text#inst-text-about-us-03",
+      "rich-text#inst-text-about-us-04",
+      "rich-text#inst-text-about-us-05",
+      "rich-text#inst-text-about-us-06",
+      "rich-text#inst-text-about-us-07",
+      "rich-text#inst-text-about-us-08",
+      "rich-text#inst-text-about-us-09",
+      "rich-text#inst-text-about-us-10"
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+.summary-vendedor-wrap {
+  width: 100%;
+
+  .summary-vendedor {
+    border: 1px solid #c9c9c9;
+    background-color: rgba(0,0,0,0);
+    border-radius: 8px;
+  }
+
+	.add-vendedor-button {
+		border: 1px solid $medium-gray;
+    background-color: transparent;
+    border-radius: 8px;
+    color: $black; 
+    height: 40px;
+    width: 100%;
+    font-weight: 700;
+		font-family: $primaryFont;
+	}
+
+  .vendedor-form {
+    padding: 12px 12px 15px;
+  }
+
+	input.vendedor-value {
+		border: none;
+    background-color: #fff;
+    height: 40px;
+    width: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    box-shadow: none;
+    border-radius: 8px;
+    color: #303030;
+    font-family: $primaryFont;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-transform: initial;
+
+    &:focus-visible {
+      background-color: #E8F0FE;
+    }
+
+		&::placeholder {
+			color: #656565;
+			font-family: $primaryFont;
+			font-size: 13.5px;
+			line-height: 16.2;
+		}
+	}
+
+  .vendedor-setted {
+    display: flex;
+    gap: 8px;
+    padding-top: 8px;
+
+    .mudar-vendedor {
+      order: 2;
+      font-family: $primaryFont;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0em;
+      color: #CD3C26;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .container-cod-coupon > p,
+  .codigo-vendedor {
+    font-family: $primaryFont;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0em;
+    color: #303030;
+    padding-left: 3px;
+    margin: 0;
+  }
+
+  .container-cod-coupon > p {
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+	.vendedor-add {
+		outline: none;
+    border: none;
+    box-shadow: none;
+    background: $green;
+    border-radius: 8px;
+    height: 40px;
+    width: 38px;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 700;
+		padding: 0 10.5px;
+    font-family: $primaryFont;
+	}
+
+	.vendedor-label label {
+		color: #000;
+    font-family: $primaryFont;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: initial;
+	}
+
+	.content-input-vendedor {
+		display: flex;
+    gap: 5px;
+	}
+}

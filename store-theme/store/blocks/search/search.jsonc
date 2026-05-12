@@ -1,0 +1,15 @@
+{
+  "store.search": {
+    "blocks": [
+      "search-result-layout#result-search"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "installmentCriteria": "MAX_WITHOUT_INTEREST"
+      }
+    }
+  }
+}

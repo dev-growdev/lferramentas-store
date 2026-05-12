@@ -1,0 +1,304 @@
+@charset "UTF-8";
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.portalContainer {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.accessCodeOptionBtn :global(.vtex-button__label) :first-child {
+  display: none;
+}
+.accessCodeOptionBtn :global(.vtex-button__label)::after {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  content: "Código de acesso por e-mail";
+}
+
+.accountOptions {
+  text-align: center;
+}
+.accountOptions :nth-child(2n), .accountOptionsSectionTitle {
+  display: none;
+}
+.accountOptions :first-child :nth-child(2n),
+.accountOptions :first-child :nth-child(3n) {
+  height: 2.5rem;
+  width: 100%;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  line-height: 0.875rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  align-items: center;
+  background: transparent;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #b2b2b2;
+  justify-content: center;
+  margin-bottom: 0.625rem;
+}
+.accountOptions :first-child :nth-child(2n),
+.accountOptions :first-child :nth-child(3n) {
+  display: flex;
+}
+.accountOptions > :first-child {
+  margin-bottom: 1rem;
+}
+
+.arrowUp {
+  left: 45%;
+  top: -0.1875rem;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.backButton :global(.vtex-button__label) {
+  color: #000000;
+}
+.backButton :global(.vtex-button):hover, .backButton :global(.vtex-button):focus {
+  background: transparent;
+}
+
+.button {
+  background-color: #ffffff;
+  text-transform: capitalize;
+}
+
+.box {
+  left: -6.25rem;
+  right: auto !important;
+  top: 1.0625rem;
+}
+
+.container :global(.vtex-button__label) {
+  height: auto;
+  width: max-content;
+  padding: 0;
+  margin: 0 0.625rem;
+}
+.container :global(.vtex-button) {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.container :global(.vtex-button):hover, .container :global(.vtex-button):focus {
+  background-color: transparent;
+}
+
+.content {
+  padding: 0.9375rem 1.625rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+}
+.content--accountOptions {
+  margin-top: 0.0625rem;
+}
+.contentContainer {
+  margin: 0;
+}
+.contentContainer .contentForm {
+  min-width: 15.625rem;
+}
+.content--emailAndPassword .contentFormVisible {
+  padding-left: 0rem;
+}
+.contentForm {
+  height: auto;
+  width: 100%;
+  padding: 0;
+}
+
+.contentContainer {
+  border-radius: 16px;
+}
+
+.emailPasswordOptionBtn :global(.vtex-button__label) {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+
+.formTitle {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+
+.label,
+.profile {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+.label::before,
+.profile::before {
+  content: url("data:image/svg+xml,%3Csvg width='19' height='22' viewBox='0 0 19 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_9_13007)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.357 12.571H5.5C4.04131 12.571 2.64237 13.1505 1.61092 14.1819C0.579466 15.2134 0 16.6123 0 18.071V19.642C-5.6222e-08 20.2672 0.248298 20.8668 0.690292 21.309C1.13229 21.7512 1.73179 21.9997 2.35699 22H16.5C17.1251 22 17.7246 21.7517 18.1667 21.3097C18.6087 20.8676 18.857 20.2681 18.857 19.643V18.071C18.857 16.6123 18.2775 15.2134 17.2461 14.1819C16.2146 13.1505 14.8157 12.571 13.357 12.571ZM5.5 14.143H13.357C14.399 14.143 15.3984 14.5569 16.1352 15.2938C16.8721 16.0306 17.286 17.03 17.286 18.072V19.643C17.2861 19.7463 17.2659 19.8485 17.2264 19.9439C17.187 20.0394 17.1291 20.1261 17.0561 20.1991C16.9831 20.2721 16.8964 20.33 16.8009 20.3694C16.7055 20.4089 16.6033 20.4291 16.5 20.429H2.35699C2.14853 20.429 1.94861 20.3462 1.80121 20.1988C1.6538 20.0514 1.571 19.8515 1.571 19.643V18.071C1.57126 17.0291 1.98534 16.03 2.72214 15.2934C3.45894 14.5568 4.45814 14.143 5.5 14.143ZM9.429 0C8.3412 0 7.27784 0.32257 6.37337 0.926918C5.4689 1.53127 4.76394 2.39025 4.34766 3.39524C3.93137 4.40023 3.82246 5.5061 4.03468 6.573C4.2469 7.63989 4.77073 8.6199 5.53992 9.38909C6.30911 10.1583 7.28911 10.6821 8.356 10.8943C9.4229 11.1065 10.5288 10.9976 11.5338 10.5813C12.5387 10.1651 13.3977 9.46011 14.0021 8.55564C14.6064 7.65117 14.929 6.5878 14.929 5.5C14.929 4.04131 14.3495 2.64236 13.3181 1.61091C12.2866 0.579462 10.8877 0 9.429 0ZM9.429 1.571C10.2061 1.571 10.9657 1.80143 11.6118 2.23315C12.258 2.66488 12.7616 3.27851 13.0589 3.99644C13.3563 4.71437 13.4341 5.50436 13.2825 6.26651C13.1309 7.02866 12.7567 7.72874 12.2072 8.27822C11.6577 8.8277 10.9577 9.2019 10.1955 9.3535C9.43336 9.50511 8.64336 9.4273 7.92543 9.12992C7.2075 8.83254 6.59388 8.32896 6.16216 7.68283C5.73043 7.03671 5.5 6.27708 5.5 5.5C5.50027 4.45805 5.9143 3.45884 6.65108 2.72207C7.38785 1.9853 8.38705 1.57126 9.429 1.571Z' fill='%23FFE72E'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_9_13007'%3E%3Crect width='18.857' height='22' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.logoutButton {
+  background-color: #008345;
+  border: 0.0625rem solid #008345;
+  border-radius: 0.5rem;
+  color: #ffffff !important;
+  height: 3rem;
+  width: 100%;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition-property: background-color, border-color;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in-out;
+}
+.logoutButton:hover {
+  background-color: #005a30;
+  border-color: #005a30;
+}
+
+.profile {
+  max-width: 30vw;
+  text-align: left;
+  white-space: break-spaces;
+}
+
+.oauthLabel {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+
+.options {
+  min-width: 18.3125rem;
+}
+.optionsList {
+  margin: 0;
+}
+.optionsListItem {
+  margin-bottom: 0.625rem;
+}
+.optionsListItem :global(.vtex-button) {
+  background: transparent;
+  cursor: pointer;
+  border: 0.0625rem solid #b2b2b2;
+  border-radius: 0.5rem;
+}
+
+.loading {
+  min-width: 18.3125rem;
+  background-color: #ffffff;
+}
+
+.contentAlwaysWithOptions .loginOptionsContainer {
+  height: auto;
+  width: 100%;
+}
+@media only screen and (min-width: 640px) {
+  .contentAlwaysWithOptions .loginOptionsContainer {
+    margin-right: 1.25rem;
+  }
+}
+@media only screen and (min-width: 1026px) {
+  .contentAlwaysWithOptions .loginOptionsContainer {
+    margin-right: 6.25rem;
+  }
+}
+.contentAlwaysWithOptions .contentForm {
+  min-width: 304px;
+}
+
+.formFooter {
+  border: none;
+}
+
+.inputContainer :global(.vtex-input-prefix__group) {
+  border: 1px solid #000000;
+  border-radius: 8px;
+  color: #303030;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+.inputContainer :global(.vtex-styleguide-9-x-input) {
+  background-color: #ffffff;
+}
+.inputContainer :global(.vtex-styleguide-9-x-input)::placeholder {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 15px;
+  line-height: 0.9375rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.dontHaveAccount,
+.forgotPasswordLink {
+  color: #000000;
+}
+
+/* TODO: Move logic to specific file */
+/* Header Fix */
+@media only screen and (min-width: 1026px) {
+  :global(.vtex-store-components-3-x-portalWrapper) > :first-child,
+  :global(.vtex-store-components-3-x-portalWrapper) > :first-child > :first-child {
+    left: 0 !important;
+    top: 18px !important;
+    z-index: 2;
+    width: inherit;
+  }
+}
+:global(.vtex-search-2-x-biggy-autocomplete):not(:has(:global(.vtex-search-2-x-tileList))) :global(.vtex-search-2-x-itemList--suggestion) :global(.vtex-search-2-x-itemListTitle) {
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 1025px) {
+  :global(.vtex-search-2-x-itemListItem) > ul {
+    display: none;
+  }
+}

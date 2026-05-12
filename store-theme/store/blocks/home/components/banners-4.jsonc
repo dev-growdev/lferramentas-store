@@ -1,0 +1,78 @@
+{
+  "toggle-layout#banners-4": {
+    "title": "Ativar/Desativar - Banner Triplo 2",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "flex-layout.row#banners-4"
+    ]
+  },
+  "flex-layout.row#banners-4": {
+    "title": "Banner Triplo 2",
+    "props": {
+      "blockClass": [
+        "banners",
+        "banners-4"
+      ],
+      "colSizing": "auto",
+      "fullWidth": "true"
+    },
+    "children": [
+      "image-new-custom#banner-7",
+      "image-new-custom#banner-8",
+      "image-new-custom#banner-9"
+    ]
+  },
+  "image-new-custom#banner-7": {
+    "title": "Banner Home 7",
+    "props": {
+      "blockClass": [
+        "banners"
+      ],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "397px",
+      "height": "223px",
+      "src": "/assets/vtex.file-manager-graphql/images/987cf3b5-bbae-4d01-b615-f88d1259ed3d___43dbdde9edb79e23c9dcb0de3b01c30f.png",
+      "alt": "",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image-new-custom#banner-8": {
+    "title": "Banner Home 8",
+    "props": {
+      "blockClass": [
+        "banners"
+      ],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "397px",
+      "height": "223px",
+      "src": "/assets/vtex.file-manager-graphql/images/912cdad9-19a5-4031-8465-4bee91bb6769___972297bdfa33d0bf6729ac1d7247c11c.png",
+      "alt": "",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image-new-custom#banner-9": {
+    "title": "Banner Home 9",
+    "props": {
+      "blockClass": [
+        "banners"
+      ],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "397px",
+      "height": "223px",
+      "src": "/assets/vtex.file-manager-graphql/images/84919ac9-89c4-4867-b543-f68b03df39cd___fb90e1d1454cc606512803ba6fff57eb.png",
+      "alt": "",
+      "link": {
+        "url": "/"
+      }
+    }
+  }
+}

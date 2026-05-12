@@ -1,0 +1,115 @@
+{
+  "conditional-spec-group#tires-specifications": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "tires-specifications"
+      ],
+      "propertyName": "Especificações Pneus"
+    },
+    "children": [
+      "flex-layout.row#tires-specifications"
+    ]
+  },
+  "flex-layout.row#tires-specifications": {
+    "title": "Especificações Pneus",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "tires-specifications"
+      ],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#tires-specifications"
+    ]
+  },
+  "flex-layout.col#tires-specifications": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "tires-specifications"
+      ],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#tires-specifications-content"
+    ]
+  },
+  "flex-layout.row#tires-specifications-content": {
+    "title": "Especificações Pneus",
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "tires-specifications-content"
+      ],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#tires-specifications-content"
+    ]
+  },
+  "flex-layout.col#tires-specifications-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "tires-specifications-content"
+      ],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "disclosure-layout#tires-specifications-content"
+    ]
+  },
+  "disclosure-layout#tires-specifications-content": {
+    "props": {
+      "initialVisibility": "visible",
+      "blockClass": [
+        "generic-specification-group-content",
+        "tires-specifications-content"
+      ]
+    },
+    "children": [
+      "disclosure-trigger#tires-specifications-content",
+      "disclosure-content#tires-specifications-content"
+    ]
+  },
+  "disclosure-trigger#tires-specifications-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "tires-specifications-content"
+      ]
+    },
+    "children": [
+      "rich-text#tires-specifications-title"
+    ]
+  },
+  "disclosure-content#tires-specifications-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "tires-specifications-content"
+      ]
+    },
+    "children": [
+      "product-specification-group#tires-specifications"
+    ]
+  },
+  "rich-text#tires-specifications-title": {
+    "title": "Especificações Pneus - Título",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "generic-specification-group-title",
+        "tires-specifications",
+        "tires-specifications-title"
+      ],
+      "text": "##### Especificações Pneus"
+    }
+  }
+}

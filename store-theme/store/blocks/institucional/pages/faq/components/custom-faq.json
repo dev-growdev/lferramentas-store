@@ -1,0 +1,34 @@
+{
+  "custom-faq": {
+    "props": {
+      "align": "start",
+      "questions": [
+        {
+          "__editorItemTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin semper sagittis?",
+          "response": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare gravida purus, a tincidunt enim iaculis id. Fusce accumsan ultrices mattis. Cras vitae nunc nec quam mollis vestibulum quis in magna. Aliquam mauris erat, fermentum sit amet elementum nec, semper ut purus.",
+          "colorQIcon": false
+        },
+        {
+          "__editorItemTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin semper sagittis?",
+          "response": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare gravida purus, a tincidunt enim iaculis id. Fusce accumsan ultrices mattis. Cras vitae nunc nec quam mollis vestibulum quis in magna. Aliquam mauris erat, fermentum sit amet elementum nec, semper ut purus.",
+          "colorQIcon": false
+        },
+        {
+          "__editorItemTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin semper sagittis?",
+          "response": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare gravida purus, a tincidunt enim iaculis id. Fusce accumsan ultrices mattis. Cras vitae nunc nec quam mollis vestibulum quis in magna. Aliquam mauris erat, fermentum sit amet elementum nec, semper ut purus.",
+          "colorQIcon": false
+        },
+        {
+          "__editorItemTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin semper sagittis?",
+          "response": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare gravida purus, a tincidunt enim iaculis id. Fusce accumsan ultrices mattis. Cras vitae nunc nec quam mollis vestibulum quis in magna. Aliquam mauris erat, fermentum sit amet elementum nec, semper ut purus.",
+          "colorQIcon": false
+        },
+        {
+          "__editorItemTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin semper sagittis?",
+          "response": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare gravida purus, a tincidunt enim iaculis id. Fusce accumsan ultrices mattis. Cras vitae nunc nec quam mollis vestibulum quis in magna. Aliquam mauris erat, fermentum sit amet elementum nec, semper ut purus.",
+          "colorQIcon": false
+        }
+      ]
+    }
+  }
+}

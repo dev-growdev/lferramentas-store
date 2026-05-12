@@ -1,0 +1,174 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+@media only screen and (min-width: 1026px) {
+  .flexCol--container__prices-col {
+    margin: 0 0 10px;
+  }
+}
+.flexCol--quickview__mainImages {
+  position: relative;
+}
+.flexCol--quickview__mainImages .flexRow--container__flags-row {
+  bottom: auto;
+  left: auto;
+  margin: auto;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 1;
+}
+.flexCol--quickview__mainImages .flexRowContent--container__highlights-row {
+  flex-direction: column;
+}
+.flexCol--quickview__mainImages .flexRowContent--container__highlights-row .stretchChildrenWidth {
+  flex-direction: column;
+}
+.flexCol--quickview__mainImages .flexRowContent--container__flags-row {
+  flex-direction: column;
+}
+
+.flexRow--available__shelf :global(.vtex-store-components-3-x-container),
+.flexRow--container__name :global(.vtex-store-components-3-x-container) {
+  padding: 0;
+}
+
+.flexRowContent--container__list-price {
+  min-height: 16px;
+}
+.flexRowContent--available__shelf {
+  flex-direction: column;
+}
+@media only screen and (max-width: 1024px) {
+  .flexRowContent--button--primary {
+    margin-top: 8px;
+  }
+}
+.flexRowContent--button--primary .stretchChildrenWidth:first-child {
+  width: 100% !important;
+}
+.flexRowContent--container__highlights-row-bottom-desk {
+  display: none;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRowContent--container__highlights-row-bottom-desk {
+    display: block;
+    min-height: 22px;
+    margin: 5px 0;
+  }
+}
+.flexRowContent--container__main-selling-price-savings {
+  min-height: 20px;
+  justify-content: flex-start;
+}
+.flexRowContent--container__main-selling-price-savings .stretchChildrenWidth {
+  align-items: center;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRowContent--container__main-selling-price-savings .stretchChildrenWidth {
+    align-items: end;
+  }
+}
+.flexRowContent--container__main-selling-price-savings .stretchChildrenWidth:last-child {
+  margin-left: auto;
+}
+
+.flexRow--main-summary-buy-btn {
+  margin-top: 13px;
+}
+.flexRow--main-summary-buy-btn :global(.vtex-button) {
+  cursor: pointer;
+  background-color: #008345;
+  border: 1px solid #008345;
+  height: 100%;
+  width: 100%;
+}
+.flexRow--main-summary-buy-btn :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 370px) {
+  .flexRow--main-summary-buy-btn :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20px;
+    line-height: 1.25rem;
+    letter-spacing: 0rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .flexRow--main-summary-buy-btn :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    line-height: 1.25rem;
+    letter-spacing: 0rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+.flexRow--main-summary-buy-btn :global(.vtex-button) :global(.vtex-button__label) {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.flexRow--main-summary-buy-btn :global(.vtex-button):hover {
+  background-color: #005a30;
+  border-color: #005a30;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRow--main-summary-buy-btn {
+    margin-top: 10px;
+  }
+}
+.flexRow--main-summary-buy-btn :global(.vtex-button) {
+  border: none;
+  border-radius: 8px;
+  transition-property: background, border-radius;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.flexRow--main-summary-buy-btn :global(.vtex-button):hover {
+  background: #005a30 !important;
+}
+.flexRow--main-summary-buy-btn :global(.vtex-button) :global(.vtex-button__label) {
+  /* Element has padding-top and padding-bottom in it's inline style */
+  padding: 0;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRow--main-summary-buy-btn :global(.vtex-button) :global(.vtex-button__label) {
+    padding: 5px 5.5px !important;
+  }
+}
+.flexRow--main-summary-buy-btn :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+  font-family: "Mulish", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRow--main-summary-buy-btn :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+    letter-spacing: 0.6px;
+    font-size: 13px;
+  }
+}
+
+.flexColChild--prodsum-container-prices:last-child {
+  min-height: 14px;
+  line-height: 0;
+  margin-top: 4px;
+}

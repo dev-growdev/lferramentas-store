@@ -1,0 +1,29 @@
+.avisoFrete {
+  &-content {
+    border-radius: 11px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    margin-bottom: 30px;
+    padding: 20px 50px;
+
+    @include mq('992') {
+      @include size(298px, auto);
+      padding: 20px;
+    }
+  }
+
+  &-texto {
+    @include size(95%, auto);
+    @include textConfig($black, $primaryFont, 16, $fontRegular, 25, center, initial, 0);
+    margin: 0 auto;
+
+    @include mq('992') {
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  &-destaque {
+    @include textConfig($primary-color, $primaryFont, 16, $fontBold, 25, center, initial, 0);
+    font-style: italic;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "rich-text#title-coupons": {
+    "title": "Título Principal",
+    "props": {
+      "blockClass": "title-coupons",
+      "text": "Escolha um cupom de desconto para sua primeira compra:",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  }
+}

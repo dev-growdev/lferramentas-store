@@ -1,0 +1,366 @@
+@import '../../global';
+
+.tileListItem {
+  width: 100% !important;
+
+  & :global(.vtex-product-summary-2-x-nameContainer) {
+    padding-bottom: 0;
+    padding-top: 0.125rem;
+    text-align: left;
+  }
+
+  & :global(.vtex-product-summary-2-x-priceContainer) {
+    padding-top: 0;
+    text-align: left;
+  }
+
+  & :global(.vtex-product-summary-2-x-imageWrapper) {
+    text-align: left;
+    margin: 0 0.5rem 0 0;
+  }
+
+  & :global(.vtex-product-summary-2-x-imageNormal) {
+    border-radius: 8px;
+    width: 5.625rem !important;
+    height: 5.625rem !important;
+    object-fit: contain;
+  }
+
+  & :global(.vtex-store-components-3-x-discountInsideContainer) {
+    right: auto;
+    left: 0;
+    background-color: $yellow;
+    color: $black02;
+    border-radius: 0.125rem;
+  }
+
+  .element {
+    display: grid;
+    grid-template-columns: minmax(auto, 5.5625rem) 1fr;
+
+    .information {
+      row-gap: 0.5rem;
+    }
+
+    .imageContainer {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.tileListList {
+  justify-content: center;
+  order: 2;
+  flex-direction: column !important;
+  margin: 0.375rem 0 1rem 0;
+}
+
+.tileListSeeMore {
+  @include textConfig($white, 14, $fontBold, 31, left, none, 0);
+}
+
+.itemList {
+  font-family: $primaryFont;
+}
+
+.itemListTitle {
+  width: auto;
+  border-top: 0.0625rem solid $medium-grey;
+  @include textConfig($white, 14, $fontBold, 31, left, none, 0);
+  margin: 0 {
+    left: 1rem;
+    right: 1rem;
+  }
+  padding: 1.25rem 1.25rem 0 0.25rem;
+
+  @include mq('1026') {
+    margin: 0 {
+      left: 1rem;
+    }
+  }
+}
+
+.itemList--history {
+  .itemListTitle {
+    margin: {
+      left: 0;
+      right: 1rem;
+    }
+  }
+
+  .itemListLink {
+    padding-left: 0.25rem;
+
+    &:hover {
+      padding-left: 0.25rem;
+    }
+  }
+}
+
+.tileList {
+  overflow: auto;
+  padding-top: 1rem;
+
+  @include mq('1026') {
+    padding-top: 0;
+    overflow: hidden;
+  }
+
+  @include mq('992') {
+    padding-left: 1.25rem;
+  }
+}
+
+.sellingPrice {
+  @include mq('992', max) {
+    @include textConfig($black, 16, $fontBold, 22, left, none, -16);
+  }
+}
+
+.productBrand {
+  @include textConfig($black, 12, $fontRegular, 14, left, none, 0);
+
+  @include mq('992', max) {
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    overflow: hidden;
+  }
+}
+
+.biggy-autocomplete-wrapper {
+  width: calc(100vw - 10vw);
+
+  @include mq('1026') {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .biggy-js-container--hidden {
+    pointer-events: none;
+    padding: 0;
+  }
+}
+
+.biggy-autocomplete {
+  padding: 0;
+  width: 100%;
+  border-top: 0;
+  border-radius: 0 0 0.625rem 0.625rem;
+  background: $dark-grey;
+  box-shadow: none;
+  position: relative;
+  top: 0;
+
+  @include mq('1026') {
+    padding: 0.3125rem 0 1.25rem 0;
+    max-width: 42.75rem;
+  }
+
+  @include mq('992', max) {
+    right: 0;
+    flex-direction: column !important;
+  }
+}
+
+.history-and-top-wrapper {
+}
+
+.itemListSubItemLink {
+  color: $lighest-grey;
+  padding-left: 2rem !important;
+  transition: 0.2s ease-in-out {
+    property: color, background-color;
+  }
+
+  &:hover {
+    color: $dark-grey;
+  }
+}
+
+.itemListList {
+  .itemListItem {
+    .itemListIcon {
+      @include display-flex(center, flex, center, row);
+      @include size(1.25rem !important);
+      line-height: initial;
+      padding-right: 0.8125rem;
+    }
+
+    .itemListLink {
+      @include display-flex(center, flex, flex-start, row);
+      line-height: unset;
+      height: unset;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      background-color: unset;
+    }
+  }
+}
+
+.itemListIcon {
+  &::before {
+    content: '';
+    background-image: $icon-history;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include size(1.0938rem, 1rem);
+    position: absolute;
+  }
+}
+
+.itemListPrefix {
+  @include textConfig($yellow, 13, $fontExtraBold, 31, left, none, 0);
+  margin-right: 1rem;
+  width: auto;
+}
+
+.itemListIcon :global(.vtex__icon-clock),
+.biggy-autocomplete :global(.vtex-modal-layout-0-x-triggerContainer--quickview),
+.close-btn {
+  display: none;
+}
+
+.tileListFooter {
+  display: flex;
+  justify-content: left;
+
+  .tileListSeeMore {
+    height: initial;
+    @include font-size(14);
+    font-weight: $fontBold;
+  }
+}
+
+.itemListLinkTitle {
+  @include textConfig($lighest-grey, 13, $fontRegular, 31, left, none, 0);
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.tileList {
+  border: none;
+  min-height: 9.375rem;
+  @include display-flex(inherit, flex, space-between, column);
+  padding: 0.625rem 1rem 0 1.25rem;
+
+  .tileListTitle {
+    display: none;
+  }
+
+  @include mq('1026') {
+    padding-top: 1.25rem;
+    margin-right: 1rem;
+    border-top: 0.0625rem solid $medium-grey;
+  }
+}
+
+.tileListTitle {
+  @include textConfig($primary-color, 12, $fontBold, 17, left, none, 40);
+  margin: 0.3125rem 0 0 0;
+  padding: 0;
+}
+
+.listPrice {
+  .currencyContainer {
+    @include textConfig($dark-gray, 22, $fontRegular, 22, left, none, -12);
+  }
+
+  .currencyContainer {
+    font-weight: normal;
+  }
+
+  margin-bottom: 0;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer--desktop)
+  :global(.vtex-store-components-3-x-portalWrapper--desktop)
+  .tileListList
+  .tileListItem {
+  padding: 0;
+  position: relative;
+  top: initial !important;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer)
+  .tileListList
+  .tileListItem
+  :global(.vtex-product-summary-2-x-container--vitrine) {
+  padding: 0.625rem;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer)
+  .tileListList
+  .tileListItem
+  :global(.vtex-product-summary-2-x-container--vitrine)
+  :global(.vtex-stack-layout-0-x-stackContainer),
+:global(.vtex-store-components-3-x-searchBarInnerContainer)
+  .tileListList
+  .tileListItem
+  :global(.vtex-product-summary-2-x-container--vitrine)
+  :global(.vtex-stack-layout-0-x-stackContainer)
+  :first-child {
+  top: 0 !important;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer)
+  .tileListList
+  .tileListItem
+  :global(.vtex-product-summary-2-x-container--vitrine)
+  :global(.vtex-flex-layout-0-x-flexRow--botao-add-cart) {
+  display: none;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer)
+  .tileListList
+  .tileListItem
+  :global(.vtex-product-summary-2-x-container--vitrine)
+  :global(.vtex-product-price-1-x-sellingPriceValue--summary),
+  :global(.vtex-product-price-1-x-spotPriceValue--summary) {
+  @include font-size(15);
+  color: $black02;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer)
+  .tileListList
+  .tileListItem
+  :global(.vtex-product-summary-2-x-container--vitrine)
+  :global(.vtex-product-price-1-x-installments) {
+  @include font-size(12);
+  margin-bottom: 0;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer)
+  .tileListList
+  .tileListItem
+  .element {
+  background-color: transparent;
+
+  @include mq('1026') {
+    padding: 0.75rem;
+  }
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer)
+  .tileListList
+  .tileListItem
+  .element
+  .imageContainer {
+  height: 80px;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer--opened)
+  :global(.vtex-input-prefix__group) {
+  border-radius: 0.625rem 0.625rem 0 0 !important;
+}

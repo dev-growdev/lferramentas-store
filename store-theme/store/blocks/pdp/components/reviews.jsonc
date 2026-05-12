@@ -1,0 +1,17 @@
+{
+    "flex-layout.row#reviews-pdp": {
+      "title": "Avaliações",
+      "props": {
+        "blockClass": ["container__reviews-pdp"],
+        "fullWidth": true,
+        "preserveLayoutOnMobile": true,
+        "preventVerticalStretch": true
+      },
+      "children": ["product-reviews"]
+    },
+    "product-reviews#pdp": {
+      "props": {
+        "blockClass": ["pdp"]
+      }
+    }
+  }

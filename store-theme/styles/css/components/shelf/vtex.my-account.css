@@ -1,0 +1,76 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+:global(.vtex-shelf-1-x-arrowLeft),
+:global(.vtex-slider-layout-0-x-sliderLeftArrow) {
+  background: url('data:image/svg+xml,<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="29.5" y="29.5" width="29" height="29" rx="4.5" transform="rotate(-180 29.5 29.5)" fill="white" stroke="%23EBE6D7"/><g clip-path="url(%23clip0_2714_8243)"><path d="M15.18 19.7097C15.58 19.3197 15.58 18.6797 15.18 18.2897L12.8 15.9097L20 15.9097C20.55 15.9097 21 15.4597 21 14.9097C21 14.3597 20.55 13.9097 20 13.9097L12.8 13.9097L15.18 11.5297C15.57 11.1397 15.57 10.4997 15.18 10.1097C14.79 9.71969 14.15 9.71969 13.76 10.1097L9.68 14.1997C9.28 14.5997 9.28 15.2397 9.68 15.6297L13.76 19.6997C14.15 20.0897 14.79 20.0897 15.18 19.6997L15.18 19.7097Z" fill="%23555A44"/></g><defs><clipPath id="clip0_2714_8243"><rect width="11.62" height="10.21" fill="white" transform="translate(21 20) rotate(-180)"/></clipPath></defs></svg>') !important;
+  background-repeat: no-repeat !important;
+  background-position: center;
+  height: 30px;
+  width: 31px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: all 400ms;
+}
+:global(.vtex-shelf-1-x-arrowLeft) :global(.vtex-slider-layout-0-x-caretIcon),
+:global(.vtex-shelf-1-x-arrowLeft) :global(.vtex-shelf-1-x-caretIcon),
+:global(.vtex-slider-layout-0-x-sliderLeftArrow) :global(.vtex-slider-layout-0-x-caretIcon),
+:global(.vtex-slider-layout-0-x-sliderLeftArrow) :global(.vtex-shelf-1-x-caretIcon) {
+  display: none;
+}
+:global(.vtex-shelf-1-x-arrowLeft):hover:hover,
+:global(.vtex-slider-layout-0-x-sliderLeftArrow):hover:hover {
+  background: #000000 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+:global(.vtex-shelf-1-x-arrowLeft):hover:hover::after,
+:global(.vtex-slider-layout-0-x-sliderLeftArrow):hover:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.82 0.290312C5.42 0.680312 5.42 1.32031 5.82 1.71031L8.2 4.09031H1C0.45 4.09031 0 4.54031 0 5.09031C0 5.64031 0.45 6.09031 1 6.09031H8.2L5.82 8.47031C5.43 8.86031 5.43 9.50031 5.82 9.89031C6.21 10.2803 6.85 10.2803 7.24 9.89031L11.32 5.80031C11.72 5.40031 11.72 4.76031 11.32 4.37031L7.24 0.300312C6.85 -0.0896875 6.21 -0.0896875 5.82 0.300312V0.290312Z' fill='%23FFE72E'/%3E%3C/svg%3E%0A") no-repeat center;
+}
+:global(.vtex-shelf-1-x-arrowLeft):hover::after,
+:global(.vtex-slider-layout-0-x-sliderLeftArrow):hover::after {
+  rotate: 180deg;
+}
+
+:global(.vtex-shelf-1-x-arrowRight),
+:global(.vtex-slider-layout-0-x-sliderRightArrow) {
+  background: url('data:image/svg+xml,<svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.900391" y="0.5" width="29" height="29" rx="4.5" fill="white" stroke="%23EBE6D7"/><g clip-path="url(%23clip0_2714_8239)"><path d="M15.2204 10.2903C14.8204 10.6803 14.8204 11.3203 15.2204 11.7103L17.6004 14.0903H10.4004C9.85039 14.0903 9.40039 14.5403 9.40039 15.0903C9.40039 15.6403 9.85039 16.0903 10.4004 16.0903H17.6004L15.2204 18.4703C14.8304 18.8603 14.8304 19.5003 15.2204 19.8903C15.6104 20.2803 16.2504 20.2803 16.6404 19.8903L20.7204 15.8003C21.1204 15.4003 21.1204 14.7603 20.7204 14.3703L16.6404 10.3003C16.2504 9.91031 15.6104 9.91031 15.2204 10.3003V10.2903Z" fill="%23555A44"/></g><defs><clipPath id="clip0_2714_8239"><rect width="11.62" height="10.21" fill="white" transform="translate(9.40039 10)"/></clipPath></defs></svg>') !important;
+  background-repeat: no-repeat !important;
+  background-position: center;
+  height: 30px;
+  width: 31px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: all 400ms;
+}
+:global(.vtex-shelf-1-x-arrowRight) :global(.vtex-slider-layout-0-x-caretIcon),
+:global(.vtex-shelf-1-x-arrowRight) :global(.vtex-shelf-1-x-caretIcon),
+:global(.vtex-slider-layout-0-x-sliderRightArrow) :global(.vtex-slider-layout-0-x-caretIcon),
+:global(.vtex-slider-layout-0-x-sliderRightArrow) :global(.vtex-shelf-1-x-caretIcon) {
+  display: none;
+}
+:global(.vtex-shelf-1-x-arrowRight):hover:hover,
+:global(.vtex-slider-layout-0-x-sliderRightArrow):hover:hover {
+  background: #000000 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+:global(.vtex-shelf-1-x-arrowRight):hover:hover::after,
+:global(.vtex-slider-layout-0-x-sliderRightArrow):hover:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.82 0.290312C5.42 0.680312 5.42 1.32031 5.82 1.71031L8.2 4.09031H1C0.45 4.09031 0 4.54031 0 5.09031C0 5.64031 0.45 6.09031 1 6.09031H8.2L5.82 8.47031C5.43 8.86031 5.43 9.50031 5.82 9.89031C6.21 10.2803 6.85 10.2803 7.24 9.89031L11.32 5.80031C11.72 5.40031 11.72 4.76031 11.32 4.37031L7.24 0.300312C6.85 -0.0896875 6.21 -0.0896875 5.82 0.300312V0.290312Z' fill='%23FFE72E'/%3E%3C/svg%3E%0A") no-repeat center;
+}

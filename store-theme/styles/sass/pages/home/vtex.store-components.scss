@@ -1,0 +1,71 @@
+@import "../../global";
+
+.infoCardContainer--info-card-home {
+  @include grid();
+
+  .infoCardTextContainer {
+    padding: 20px;
+
+    .infoCardHeadline,
+    .infoCardCallActionContainer {
+      margin: 0;
+    }
+
+    .infoCardHeadline {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.imageElementLink--avanti-flag {
+  padding-bottom: 4px;
+}
+
+.imageElementLink {
+  line-height: 0;
+
+  &--main-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &--banner-top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.imageElement {
+  &--banner-top-bar {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &--main-banner {
+    @include mq("450") {
+      width: unset;
+      aspect-ratio: 15 / 14;
+    }
+
+    @include mq("1025", max) {
+      height: 364px;
+    }
+
+    @include mq("1026") {
+      width: 100%;
+      aspect-ratio: unset;
+      border-radius: 13px;
+    }
+  }
+
+  &--category-item {
+    border-radius: 21px;
+  }
+
+  &--deals {
+    display: block;
+  }
+}

@@ -1,0 +1,91 @@
+mutation ADD_ITEM($items: [ItemInput]) {
+  addToCart(items: $items) {
+    value
+    items {
+      additionalInfo {
+        brandName
+      }
+      assemblyOptions {
+        parentPrice
+      }
+      availability
+      attachmentOfferings {
+        name
+        required
+        schema
+      }
+      attachments {
+        name
+        content
+      }
+      bundleItems {
+        id
+      }
+      detailUrl
+      id
+      imageUrls {
+        at1x
+        at2x
+        at3x
+      }
+      detailUrl
+      listPrice
+      manualPrice
+      measurementUnit
+      name
+      offerings {
+        id
+      }
+      parentAssemblyBinding
+      parentItemIndex
+      price
+      productCategories
+      productCategoryIds
+      productId
+      productRefId
+      quantity
+      refId
+      seller
+      sellingPrice
+      sellingPriceWithAssemblies
+      skuName
+      skuSpecifications {
+        fieldName
+        fieldValues
+      }
+      uniqueId
+      unitMultiplier
+      priceTags {
+        identifier
+        isPercentual
+        name
+        rawValue
+        value
+      }
+    }
+    loggedIn
+    allowManualPrice
+    canEditData
+    userProfileId
+    userType
+    totalizers {
+      id
+      name
+      value
+    }
+    clientProfileData {
+      email
+      firstName
+      lastName
+      phone
+      isCorporate
+      corporateDocument
+      corporateName
+      corporatePhone
+      document
+      documentType
+      stateInscription
+      tradeName
+    }
+  }
+}

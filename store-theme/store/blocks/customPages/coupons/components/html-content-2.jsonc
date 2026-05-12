@@ -1,0 +1,40 @@
+{
+  "toggle-layout#html-content-coupons-2": {
+    "title": "Ativar/Desativar - Conteúdo HTML",
+    "props": {
+      "renderChildren": false,
+      "blockClass": "html-content-coupons"
+    },
+    "children": ["flex-layout.row#html-content-coupons-2"]
+  },
+  "flex-layout.row#html-content-coupons-2": {
+    "children": ["flex-layout.col#html-content-coupons-2"],
+    "props": {
+      "blockClass": ["html-content-coupons", "html-content-coupons-2"]
+    }
+  },
+  "flex-layout.col#html-content-coupons-2": {
+    "children": [
+      "responsive-layout.desktop#coupons-2",
+      "responsive-layout.mobile#coupons-2"
+    ],
+    "props": {
+      "blockClass": "html-content-coupons"
+    }
+  },
+  "responsive-layout.desktop#coupons-2": {
+    "title": "Desktop",
+    "children": ["html-content#coupons-2"]
+  },
+  "responsive-layout.mobile#coupons-2": {
+    "title": "Mobile",
+    "children": ["html-content#coupons-2"]
+  },
+  "html-content#coupons-2": {
+    "title": "Conteúdo HTML",
+    "props": {
+      "blockClass": "html-content-coupons",
+      "content": "<a href='/' target='__blank'> Conteudo teste do campo HTML inferior</a>"
+    }
+  }
+}

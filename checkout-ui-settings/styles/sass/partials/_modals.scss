@@ -1,0 +1,280 @@
+.float-help {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  font-family: $primaryFont;
+
+  @media (max-width: 768px) {
+  }
+
+  .float-help-backdrop {
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s linear all;
+    &.open-float-help {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+  }
+
+  .container-links {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 395px;
+    height: 100vh;
+    background: #fff;
+    transform: translate3d(100%, 0, 0);
+    visibility: hidden;
+    transition: transform 0.5s;
+    transition: 0.5s linear all;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      position: fixed;
+      transform: translate3d(0%, 100%, 0);
+    }
+
+    &.open-float-help {
+      visibility: visible;
+      transform: translate3d(0%, 0, 0);
+      transition: transform 0.5s;
+      @media (max-width: 768px) {
+        overflow: auto;
+        width: 100%;
+        position: fixed;
+        transform: translate3d(0%, 0%, 0);
+      }
+    }
+    .header-float-help-modal {
+      background: $primary-color;
+      padding: 17px 16px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      .title-conainer-links {
+        font-family: 'Mulish';
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 1.25rem;
+        letter-spacing: 0rem;
+        line-height: 16px;
+        text-transform: uppercase;
+      }
+
+      .close-modal-float-help {
+        border: none;
+        outline: none;
+        background: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        padding: 0;
+        cursor: pointer;
+      }
+    }
+
+    .body-float-help {
+      padding: 44px 20px;
+      flex: 1;
+      overflow-y: auto;
+      scrollbar-width: 6px;
+      scrollbar-color: #888;
+
+      /* width */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+
+      @media only screen and (max-width: 576px) {
+        padding: 48px 24px;
+      }
+
+      .lista-links-float {
+        height: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        row-gap: 24px;
+        justify-content: space-between;
+      }
+
+      .open-zen-desk {
+        cursor: pointer;
+      }
+      .link-float {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .info-h {
+          font-family: 'Mulish';
+          font-style: normal;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 1rem;
+          color: #4d4d4d;
+          display: block;
+        }
+
+        .right-info-link {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .link-title {
+            font-family: 'Mulish';
+            font-style: normal;
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 1.25rem;
+            color: #000000;
+            display: block;
+            margin-bottom: 8px;
+          }
+
+          .link-text {
+            font-family: 'Mulish';
+            font-style: normal;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1rem;
+            color: #4d4d4d;
+            display: block;
+          }
+        }
+
+        .icon-link {
+          margin-right: 9px;
+        }
+
+        .href-link-float {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          &:hover {
+            text-decoration: none !important;
+          }
+
+          .icon-link {
+            margin-right: 9px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bttns-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  flex-direction: column;
+  right: 0;
+  bottom: 70px;
+  z-index: 98;
+
+  .button-open-modal {
+    display: flex;
+  }
+  .whatsapp {
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+    gap: 10px;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 45px;
+    flex-direction: row;
+    bottom: 0;
+    z-index: 99999;
+  }
+
+  .open-float-links,
+  .open-whatsapp {
+    width: 48px;
+    height: 48px;
+    background-image: url('https://www.lfmaquinaseferramentas.com.br/arquivos/icon-help-float-lf.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: #ffe62b;
+    outline: none;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-right: 29px;
+    margin-bottom: 24px;
+    @media (max-width: 767px) {
+      margin: 0;
+      width: 24px;
+      height: 24px;
+      background-size: 11px;
+    }
+  }
+  .open-whatsapp {
+    background-image: url('https://gpneus.vteximg.com.br/arquivos/icon-wpp.png');
+    background-color: transparent;
+    margin-bottom: 10px;
+    @media (max-width: 767px) {
+      background-size: 23px;
+      margin-bottom: 0;
+    }
+  }
+  .mobile-text-atendimento {
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+      margin-left: 7.66px;
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 17px;
+      color: #000000;
+    }
+  }
+  .mobile-text-whatsapp {
+    text-decoration: none;
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+      margin-left: 7.66px;
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 17px;
+      color: #000000;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.minicart-empty__container {
+  display: flex;
+}
+
+.flexCol--minicart__list--right {
+  justify-content: space-between;
+}
+
+.flexColChild--minicart-empty__container {
+  display: flex;
+  height: auto !important;
+}
+
+.flexRowContent--minicart__list--priceRow {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 9px;
+}
+.flexRowContent--minicart__list--priceRow .stretchChildrenWidth {
+  padding: 0;
+}
+.flexRowContent--minicart__list--products {
+  padding: 0 0 24px 0;
+}
+.flexRowContent--minicart__list--remove {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.flexRowContent--footer__minicart--container {
+  padding: 16px;
+  box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.08);
+}
+.flexRowContent--footer__minicart--container .flexColChild {
+  text-align: center;
+}

@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.title {
+  font-size: 0;
+  margin: 0 0 16px 0;
+}
+.title::after {
+  content: "Produto indisponível";
+  color: #303030;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  line-height: 1.375rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.notifyLabel {
+  font-size: 0;
+  margin: 0 0 16px 0;
+}
+.notifyLabel::after {
+  content: "Quer ser avisado quando este produto chegar?";
+  color: #303030;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.form .content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+.input {
+  margin: 0 0 16px 0;
+}
+.input :global(.vtex-input) {
+  display: block;
+}
+.input :global(.vtex-input) :global(.vtex-input-prefix__group) {
+  display: block;
+  height: unset;
+  border: 1px solid #dfdfdf;
+  border-radius: 8px;
+}
+.input :global(.vtex-input) :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
+  padding: 13px 22px;
+  background: #ffffff;
+}
+.input :global(.vtex-input) :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input), .input :global(.vtex-input) :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input)::placeholder {
+  color: #303030;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  line-height: 20px;
+}
+.input :global(.vtex-input) :global(.vtex-input__error) {
+  margin: 8px 0 0 0;
+  color: #d20404;
+}
+
+.submit {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+.submit :global(.vtex-button) {
+  cursor: pointer;
+  background-color: #008345;
+  border: 1px solid #008345;
+  height: 100%;
+  width: 100%;
+}
+.submit :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 370px) {
+  .submit :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20px;
+    line-height: 1.25rem;
+    letter-spacing: 0rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .submit :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    line-height: 1.25rem;
+    letter-spacing: 0rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+.submit :global(.vtex-button) :global(.vtex-button__label) {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.submit :global(.vtex-button):hover {
+  background-color: #005a30;
+  border-color: #005a30;
+}
+.submit :global(.vtex-button) {
+  padding: 13px 0;
+}
+.submit :global(.vtex-button) :global(.vtex-button__label) {
+  font-size: 0;
+}
+.submit :global(.vtex-button) :global(.vtex-button__label)::before {
+  content: "Avise-me";
+  font-size: 16px;
+}
+
+.success {
+  margin: 8px 0 0 0;
+}
+
+.notiferContainer {
+  margin-top: 24px;
+}

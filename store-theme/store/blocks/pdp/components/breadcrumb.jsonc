@@ -1,0 +1,21 @@
+{
+  "flex-layout.row#product-breadcrumb": {
+    "title": "Container Breadcrumb",
+    "props": {
+      "blockClass": "container__breadcrumb-pdp",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "breadcrumb#pdp"
+    ]
+  },
+  "breadcrumb#pdp": {
+    "props": {
+      "showOnMobile": true,
+      "blockClass": "pdp"
+    }
+  }
+}

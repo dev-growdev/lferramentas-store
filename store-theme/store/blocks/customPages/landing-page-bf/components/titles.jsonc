@@ -1,0 +1,18 @@
+{
+  "rich-text#lp-bf-categories": {
+    "props": {
+      "blockClass": "title-lp-bf",
+      "text": "## Descubra as principais categorias da LF Máquinas e Ferramentas:",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER"
+    }
+  },
+  "rich-text#lp-bf-benefits": {
+    "props": {
+      "blockClass": "title-lp-bf",
+      "text": "## Por que comprar na LF? ",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER"
+    }
+  }
+}

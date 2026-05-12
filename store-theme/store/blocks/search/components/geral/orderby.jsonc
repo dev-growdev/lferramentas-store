@@ -1,0 +1,40 @@
+{
+  "flex-layout.row#searchinfomobile": {
+    "title": "Ordenação e filtros",
+    "children": [
+      "flex-layout.col#orderByMobile",
+      "flex-layout.col#filterMobile"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto",
+      "colJustify": "around",
+      "blockClass": "filter-mobile"
+    }
+  },
+  "flex-layout.row#orderByAndSwitcher": {
+    "children": [
+      "order-by.v2"
+    ],
+    "props": {
+      "horizontalAlign": "right",
+      "preventHorizontalStretch": true,
+      "blockClass": "orderByAndSwitcher",
+      "colGap": 3
+    }
+  },
+  "flex-layout.col#orderByMobile": {
+    "children": [
+      "order-by.v2#mobile"
+    ],
+    "props": {
+      "blockClass": "orderByMobileCol",
+      "width": "48%"
+    }
+  },
+  "order-by.v2#mobile": {
+    "props": {
+      "showOrderTitle": false
+    }
+  }
+}

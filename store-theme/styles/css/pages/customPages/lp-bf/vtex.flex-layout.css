@@ -1,0 +1,150 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+@media only screen and (min-width: 1026px) {
+  .flexRow--banner-coupons-black {
+    margin-top: 60px;
+  }
+}
+.flexRow--lp-bf-container {
+  background: #151515;
+}
+.flexRow--lp-bf-container :global(.vtex-store-components-3-x-container) {
+  padding: 0;
+  max-width: unset;
+}
+.flexRow--lp-bf-social-media {
+  background: #ffe72e;
+  padding: 27px 0;
+  margin-top: 34px;
+}
+.flexRow--lp-bf-faq {
+  margin-bottom: 30px;
+  margin-top: 43px;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRow--lp-bf-faq {
+    margin-top: 72px;
+  }
+}
+.flexRow--lp-bf-deals {
+  margin: 13px auto 40px;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRow--lp-bf-deals {
+    margin: 8px auto 38px;
+  }
+}
+.flexRow--lp-bf-deals-item {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRow--lp-bf-deals-item {
+    padding: 0 8px;
+  }
+}
+.flexRow--lp-bf-form {
+  background: #212427;
+  max-width: 1262px;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-top: 38px;
+  padding: 35px 42px 33px;
+}
+@media (max-width: 1024px) {
+  .flexRow--lp-bf-form {
+    padding: 42px 19px;
+    margin: 38px 16px 0;
+    border-radius: 8px;
+  }
+}
+.flexRow--timer-bf {
+  margin: 0 auto;
+  max-width: 1292px;
+  padding: 0 16px;
+  width: 100%;
+  margin-top: 38px;
+}
+@media only screen and (max-width: 1025px) {
+  .flexRow--lp-bf-social-media-images {
+    margin-top: 14px;
+  }
+}
+
+.flexRowContent--footer-social-media.flexRowContent--lp-bf-social-media-images :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+  margin-right: 67px;
+}
+.flexRowContent--footer-social-media.flexRowContent--lp-bf-social-media-images :global(.vtex-flex-layout-0-x-stretchChildrenWidth):last-child {
+  margin-right: 0;
+}
+@media (max-width: 1024px) {
+  .flexRowContent--footer-social-media.flexRowContent--lp-bf-social-media-images :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+    margin-right: 30px;
+  }
+}
+.flexRowContent--lp-bf-deals, .flexRowContent--lp-bf-faq {
+  margin: 0 auto;
+  max-width: 1292px;
+  padding: 0 16px;
+  width: 100%;
+}
+.flexRowContent--lp-bf-deals-item {
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid #ffe72e;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 17px 6px;
+  height: 100%;
+}
+.flexRowContent--lp-bf-form {
+  gap: 81px;
+}
+.flexRowContent--lp-bf-scrolllayout {
+  overflow-x: auto;
+}
+.flexRowContent--lp-bf-scrolllayout .stretchChildrenWidth {
+  flex-shrink: 0;
+}
+.flexRowContent--lp-bf-promotion-cards {
+  margin: 0 auto;
+  max-width: 1292px;
+  padding: 0 16px;
+  width: 100%;
+  gap: 42px;
+  margin-top: 70px;
+  margin-bottom: 28px;
+}
+@media only screen and (max-width: 1025px) {
+  .flexRowContent--lp-bf-promotion-cards {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.flexRowContent--lp-bf-promotion-card {
+  padding: 0 20px;
+  border: 2px solid #ffe72e;
+  border-radius: 21px;
+  gap: 35px;
+}
+
+.flexCol--lp-bf-promotion-cards-text {
+  padding: 40px 34px 40px 0;
+}
+@media only screen and (max-width: 1025px) {
+  .flexCol--lp-bf-promotion-cards-text {
+    padding: 0;
+    padding-bottom: 35px;
+    text-align: center;
+  }
+}
+
+.flexColChild--lp-bf-form-left {
+  display: flex;
+  justify-content: center;
+}

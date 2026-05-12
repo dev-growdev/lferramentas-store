@@ -1,0 +1,214 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.openIconContainer {
+  padding: 0;
+}
+
+.openIconContainer .minicartIconContainer {
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.5946 20.6616C12.6022 19.7663 12.2784 18.9048 11.6943 18.2669C11.1103 17.6289 10.3144 17.2674 9.48206 17.2618C8.64989 17.2564 7.84984 17.6074 7.25856 18.2375C6.66734 18.8677 6.33363 19.7251 6.33101 20.6202C6.3284 21.5156 6.6573 22.3751 7.24491 23.0092C7.83234 23.643 8.63044 23.9996 9.46282 23.9996C10.2884 23.9996 11.0806 23.6488 11.6673 23.0238C12.2537 22.3986 12.587 21.5496 12.5946 20.6616ZM8.0835 20.6616C8.07588 20.2565 8.21958 19.865 8.48234 19.5747C8.74509 19.2843 9.10507 19.1193 9.48167 19.1165C9.85847 19.1139 10.2204 19.2737 10.4868 19.5602C10.7532 19.8467 10.9017 20.2361 10.8991 20.6412C10.8965 21.0465 10.7431 21.4337 10.4732 21.7163C10.2034 21.9987 9.83941 22.1533 9.46286 22.1451C9.09709 22.1451 8.74613 21.9888 8.48759 21.7107C8.22884 21.4324 8.0835 21.0551 8.0835 20.6616Z' fill='%23FFE72E'/%3E%3Cpath d='M21.2432 20.6622C21.2432 19.7768 20.9163 18.9278 20.3342 18.3019C19.7524 17.6758 18.9631 17.3242 18.14 17.3242C17.317 17.3242 16.5278 17.6758 15.9457 18.3019C15.3639 18.9278 15.0368 19.7768 15.0368 20.6622C15.0368 21.5474 15.3639 22.3964 15.9457 23.0225C16.5278 23.6483 17.317 24.0002 18.14 24.0002C18.9631 24.0002 19.7524 23.6483 20.3342 23.0225C20.9163 22.3964 21.2432 21.5474 21.2432 20.6622ZM16.7609 20.6622C16.7683 20.2711 16.9158 19.8984 17.173 19.622C17.4301 19.3454 17.7767 19.1865 18.14 19.1787C18.5058 19.1787 18.8568 19.335 19.1153 19.6131C19.3741 19.8912 19.5194 20.2687 19.5194 20.6622C19.5272 21.0582 19.3845 21.4405 19.1241 21.7205C18.8638 22.0006 18.5082 22.1543 18.14 22.1457C17.7743 22.1457 17.4235 21.9894 17.165 21.7113C16.9062 21.4329 16.7609 21.0557 16.7609 20.6622Z' fill='%23FFE72E'/%3E%3Cpath d='M22.9958 5.02321H6.27342L5.61241 1.37611C5.57072 1.19695 5.48454 1.03332 5.36309 0.902677C5.24163 0.77203 5.08951 0.679326 4.92296 0.634484L1.90598 0.0164042V0.0161886C1.6777 -0.0295159 1.4418 0.0224404 1.24861 0.160848C1.05541 0.299471 0.920124 0.513765 0.871617 0.758011C0.829729 0.9999 0.878632 1.24977 1.00811 1.45264C1.13738 1.65551 1.3364 1.79478 1.56126 1.83983L4.03227 2.33418L6.1297 13.7079V13.7081C6.27481 14.4801 6.66244 15.1747 7.22744 15.6757C7.79266 16.1765 8.50071 16.4531 9.23288 16.4588H18.6572C19.3423 16.4618 20.0096 16.2253 20.559 15.7851C21.1083 15.3446 21.5098 14.7241 21.7028 14.017L23.8291 6.16672C23.8952 5.88926 23.8425 5.59434 23.6854 5.3632C23.5166 5.14114 23.2621 5.01567 22.9957 5.02321H22.9958ZM20.0364 13.5226C19.9582 13.849 19.779 14.137 19.5283 14.3392C19.2776 14.5414 18.9705 14.6458 18.6572 14.6352H9.23292C8.90162 14.6352 8.58074 14.5121 8.32399 14.2868C8.06745 14.0615 7.89128 13.7479 7.82493 13.3988L6.61816 6.87749H21.8465L20.0364 13.5226Z' fill='%23FFE72E'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 28px;
+  width: 28px;
+}
+@media only screen and (min-width: 1024px) {
+  .openIconContainer .minicartIconContainer {
+    height: 25px;
+    width: 25px;
+  }
+}
+.openIconContainer .minicartIconContainer .cartIcon {
+  display: none;
+}
+.openIconContainer :global(.vtex-button):hover, .openIconContainer :global(.vtex-button):focus {
+  background-color: transparent;
+}
+
+.minicartContainer :global(.vtex-button__label) {
+  padding: 0 !important;
+}
+
+.minicartQuantityBadge {
+  background-color: #ffe72e;
+  border: 1px solid #ffe72e;
+  padding: 2px 6px;
+  width: 4px;
+  right: -8px;
+  height: auto;
+  top: -0.5rem;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 13px;
+  line-height: 0.8125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.drawer {
+  display: block;
+  height: 100%;
+  width: 100% !important;
+  background-color: #ffffff;
+}
+@media only screen and (min-width: 768px) {
+  .drawer {
+    max-width: 395px !important;
+  }
+}
+.drawerContent {
+  position: relative;
+  overflow-y: hidden;
+  height: 100%;
+}
+
+.minicartTitle {
+  font-size: 0;
+  text-align: center;
+  padding: 17px 16px;
+  background-color: #000000;
+  margin: 0;
+}
+.minicartTitle::after {
+  content: "Meu Carrinho";
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.closeIconContainer {
+  bottom: auto;
+  left: auto;
+  margin: auto;
+  position: absolute;
+  right: 4px;
+  top: 5px;
+}
+
+.closeIcon {
+  background: url("assets/icons/icon-close-white.svg") center no-repeat;
+  height: 12px;
+  width: 12px;
+}
+.closeIcon :first-child {
+  display: none;
+}
+
+.minicartCheckoutButton--footer__minicart {
+  height: 48px;
+  margin: 16px 0;
+}
+.minicartCheckoutButton--footer__minicart :global(.vtex-button) {
+  cursor: pointer;
+  background-color: #008345;
+  border: 1px solid #008345;
+  height: 100%;
+  width: 100%;
+}
+.minicartCheckoutButton--footer__minicart :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 370px) {
+  .minicartCheckoutButton--footer__minicart :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20px;
+    line-height: 1.25rem;
+    letter-spacing: 0rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .minicartCheckoutButton--footer__minicart :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    line-height: 1.25rem;
+    letter-spacing: 0rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+.minicartCheckoutButton--footer__minicart :global(.vtex-button) :global(.vtex-button__label) {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.minicartCheckoutButton--footer__minicart :global(.vtex-button):hover {
+  background-color: #005a30;
+  border-color: #005a30;
+}
+.minicartCheckoutButton--footer__minicart :global(.vtex-button__label) {
+  font-size: 0 !important;
+  min-height: 0;
+}
+.minicartCheckoutButton--footer__minicart :global(.vtex-button__label)::after {
+  content: "Finalizar pedido";
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.minicartCheckoutButton--footer__minicart :global(.vtex-button) {
+  border-radius: 8px;
+  transition: all 300ms ease-in-out;
+}
+.minicartCheckoutButton--footer__minicart :global(.vtex-button):hover {
+  background-color: #005a30;
+}
+
+.minicartSummary--footer__minicart,
+.minicartCheckoutButton--footer__minicart {
+  padding: 0;
+}
+
+.minicartProductListContainer {
+  margin-top: 16px;
+  padding: 0 16px;
+}
+.minicartProductListContainer::-webkit-scrollbar {
+  width: 4px;
+}
+.minicartProductListContainer::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 100px;
+}
+.minicartProductListContainer::-webkit-scrollbar-track {
+  background-color: #ffe72e;
+  border-radius: 100px;
+}
+
+.minicartSideBarContentWrapper,
+.childrenContainer {
+  height: 100% !important;
+}
+
+.overlay {
+  background-color: #303030;
+}

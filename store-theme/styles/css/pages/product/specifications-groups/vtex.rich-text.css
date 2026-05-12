@@ -1,0 +1,96 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.heading--generic-specification-group,
+.paragraph--generic-specification-group {
+  margin: 0;
+}
+
+.heading--generic-specification-group-title {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 0;
+  font-weight: bold;
+}
+@media only screen and (min-width: 1024px) {
+  .heading--generic-specification-group-title {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    line-height: 1.5625rem;
+    letter-spacing: 0rem;
+    text-align: left;
+    text-transform: initial;
+    font-weight: bold;
+  }
+}
+
+.link--generic-specification-group,
+.heading--generic-specification-group-text {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.link--generic-specification-group {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .link--generic-specification-group-link {
+    font-weight: 400;
+  }
+}
+.heading--generic-specification-group-text {
+  margin: 0 0 6px 0;
+}
+
+.paragraph--generic-specification-group-text {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 0 0 14px 0;
+}
+
+.paragraph--generic-specification-group-manual-link-text {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin: 0 4px 0 0;
+}
+@media only screen and (min-width: 360px) {
+  .paragraph--generic-specification-group-manual-link-text {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 16px;
+    line-height: 1rem;
+    letter-spacing: 0rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 8px 0 0;
+  }
+}

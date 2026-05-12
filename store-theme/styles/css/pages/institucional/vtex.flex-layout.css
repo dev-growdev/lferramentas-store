@@ -1,0 +1,30 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.flexRow--inst-body {
+  margin: 0 auto;
+  max-width: 1292px;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.flexRowContent--inst-body {
+  align-items: stretch;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1025px) {
+  .flexRowContent--inst-body {
+    flex-direction: row;
+  }
+  .flexRowContent--inst-body .stretchChildrenWidth:last-child {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .flexCol--inst-content-container {
+    margin-top: 24px;
+  }
+}

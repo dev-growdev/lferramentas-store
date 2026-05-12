@@ -1,0 +1,99 @@
+{
+  //autocomplete product-summary
+  "flex-layout.row#product-summary-selling-price-savings": {
+    "title": "Container Preço De Venda E Economia",
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "blockClass": "container__selling-price-savings"
+    },
+    "children": [
+      "product-spot-price#product-summary",
+      "conditional-measurement-unit#autocomplete-summary-unit-measurement"
+    ]
+  },
+  "product-spot-price#product-summary": {
+    "props": {
+      "blockClass": "container__selling-price",
+      "hasMeasurementUnit": true,
+      "message": "{spotPriceValue}"
+    }
+  },
+  "product-selling-price#product-summary": {
+    "props": {
+      "blockClass": "container__selling-price",
+      "hasMeasurementUnit": true,
+      "message": "/{measurementUnit}"
+    }
+  },
+  "product-spot-price-savings#product-summary": {
+    "title": "Flag de Desconto",
+    "props": {
+      "blockClass": "container__price-savings",
+      "markers": ["discount"],
+      "message": "-{spotPriceSavingsPercentage}"
+    }
+  },
+
+  // TODO: remove this later
+  "product-spot-price-savings#summary": {
+    "title": "Flag de Desconto",
+    "props": {
+      "blockClass": "container__price-savings",
+      "markers": ["discount"],
+      "message": "-{spotPriceSavingsPercentage}"
+    }
+  },
+  //main product summary
+  "flex-layout.row#main-product-summary-selling-price-savings": {
+    "title": "Container Preço De Venda E Economia",
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto",
+      "blockClass": "container__main-selling-price-savings",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "product-spot-price#main-product-summary",
+      "conditional-measurement-unit#summary-unit-measurement",
+      "rich-text#main-product-summary",
+      "product-spot-price-savings#main-product-summary"
+    ]
+  },
+  "product-spot-price#main-product-summary": {
+    "props": {
+      "blockClass": "container__main-selling-price",
+      "message": "{spotPriceValue}"
+    }
+  },
+  "product-selling-price#main-product-summary": {
+    "props": {
+      "blockClass": "container__main-selling-price",
+      "message": "/{measurementUnit}"
+    }
+  },
+  "rich-text#main-product-summary": {
+    "props": {
+      "text": "&nbsp;no Pix",
+      "blockClass": "container__main-selling-price"
+    }
+  },
+  "product-spot-price-savings#main-product-summary": {
+    "title": "Flag de Desconto",
+    "props": {
+      "blockClass": "container__main-price-savings",
+      "markers": ["discount"],
+      "message": "-{spotPriceSavingsPercentage}"
+    }
+  },
+
+  // TODO: remove later
+  "product-selling-price#summary": {
+    "props": {
+      "blockClass": "container__main-selling-price",
+      "hasMeasurementUnit": false,
+      "message": "{sellingPriceValue}/{measurementUnit}"
+    }
+  }
+}

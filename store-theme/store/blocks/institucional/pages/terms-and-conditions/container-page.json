@@ -1,0 +1,41 @@
+{
+  "store.custom#inst-page-work-with-us": {
+    "blocks": [
+      "toggle-layout#inst-banner",
+      "flex-layout.row#inst-breadcrumb-work-with-us",
+      "flex-layout.row#inst-body-work-with-us"
+    ]
+  },
+  "flex-layout.row#inst-body-work-with-us": {
+    "title": "Container Política de Entrega",
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": [
+        "inst-body",
+        "inst-body--payment-methods"
+      ]
+    },
+    "children": [
+      "flex-layout.col#inst-menu",
+      "flex-layout.col#inst-content-and-title-work-with-us"
+    ]
+  },
+  "flex-layout.col#inst-content-and-title-work-with-us": {
+    "title": "Container Título e Conteúdo",
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "inst-content-container"
+      ]
+    },
+    "children": [
+      "rich-text#inst-title-work-with-us",
+      "rich-text#inst-text-work-with-us-01",
+      "rich-text#inst-text-work-with-us-02",
+      "rich-text#inst-text-work-with-us-03",
+      "rich-text#inst-text-work-with-us-04"
+    ]
+  }
+}

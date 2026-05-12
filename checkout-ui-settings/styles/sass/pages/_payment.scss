@@ -1,0 +1,427 @@
+.orderform-template-holder:has(#client-profile-data > .step.active) {
+  #payment-data {
+    float: right;
+  }
+}
+
+#payment-data {
+  float: right;
+
+  @include mq("1024") {
+    float: left;
+  }
+
+  .link-gift-card {
+    left: 0;
+    margin: 0 {
+      bottom: 16px;
+    }
+    text-decoration: underline;
+
+    @include mq("1024") {
+      top: -36px;
+    }
+
+    a {
+      @include textConfig(
+        $black,
+        $primaryFont,
+        14,
+        $fontRegular,
+        16,
+        left,
+        initial,
+        0
+      );
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  .gift-card-section {
+    margin-top: 16px !important;
+  }
+
+  .step {
+    border: none;
+    border-radius: 8px;
+    background: $white;
+    padding: 24px 16px;
+    box-sizing: border-box;
+
+    .accordion {
+      &-heading {
+        .accordion-toggle {
+          padding: 0;
+          @include display-flex(center, flex-start, row);
+          @include textConfig(
+            $black,
+            $primaryFont,
+            16,
+            $fontExtraBold,
+            18,
+            left,
+            calc,
+            0
+          );
+
+          .icon-credit-card {
+            margin-right: 8px;
+            @include size(22px, 17px);
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='16' viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.8044 0.353516H3.19554C2.34723 0.354743 1.53417 0.692687 0.934943 1.29314C0.335715 1.8936 -0.000542164 2.70743 6.93409e-07 3.55574V12.4446C-0.000557335 13.2929 0.335715 14.1067 0.934943 14.7072C1.53417 15.3077 2.34723 15.6456 3.19554 15.6468H16.8044C17.6527 15.6456 18.4658 15.3077 19.065 14.7072C19.6642 14.1066 20.0005 13.2929 19.9999 12.4446V3.55574C20.0005 2.70743 19.6642 1.89357 19.065 1.29314C18.4658 0.692716 17.6527 0.354744 16.8044 0.353516ZM3.19554 1.35574H16.8044C17.3871 1.35641 17.9456 1.58856 18.357 2.00117C18.7683 2.41377 18.9989 2.97306 18.9977 3.55574V3.6313H0.997715V3.55574C0.996599 2.97237 1.22763 2.41243 1.64 1.9996C2.0524 1.58689 2.612 1.35517 3.19546 1.35574H3.19554ZM16.8044 14.6446H3.19554C2.61283 14.6439 2.05437 14.4118 1.64297 13.9992C1.2316 13.5865 1.001 13.0273 1.00223 12.4446V6.66689H19.0022V12.4446C19.0033 13.028 18.7723 13.5879 18.3599 14.0007C17.9475 14.4135 17.3879 14.6452 16.8045 14.6446H16.8044Z' fill='%23FFE72E'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: contain;
+            display: block;
+
+            &::before {
+              display: none;
+            }
+          }
+
+          span[data-i18n="paymentData.payment"] {
+            line-height: 16px;
+          }
+
+          .link-box-edit {
+            opacity: 1;
+            padding: 0;
+            top: 0;
+            right: -5px;
+
+            .icon-edit {
+              @include size(20px);
+              background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.796241 16.0003H13.514C13.7251 16.0003 13.9276 15.9166 14.0769 15.7676C14.2262 15.6185 14.31 15.4165 14.31 15.2057V9.22619C14.31 8.9424 14.1583 8.68006 13.912 8.53806C13.6657 8.39616 13.3622 8.39616 13.116 8.53806C12.8696 8.68009 12.7178 8.9424 12.7178 9.22619V14.4111H1.59229V3.28638L6.03056 3.28651C6.31502 3.28651 6.57781 3.13506 6.71997 2.8891C6.86227 2.64327 6.86227 2.34034 6.71997 2.09454C6.57781 1.84872 6.31499 1.69727 6.03056 1.69727H0.796191C0.585032 1.69727 0.382467 1.78096 0.233233 1.92993C0.0838537 2.07903 0 2.28107 0 2.49184V15.2058C0 15.4166 0.0838537 15.6186 0.233233 15.7677C0.382474 15.9167 0.585025 16.0004 0.796191 16.0004L0.796241 16.0003Z' fill='%234D4D4D'/%3E%3Cpath d='M11.504 0.763006L5.61283 6.68295C5.51051 6.78161 5.43513 6.90467 5.39389 7.04061L4.53801 10.5171C4.49914 10.649 4.4972 10.7891 4.53218 10.9221C4.56731 11.0552 4.63811 11.1761 4.73709 11.2719C4.88897 11.4265 5.09736 11.5127 5.3142 11.5104L5.49329 11.4706L8.97623 10.5965H8.97637C9.11104 10.5627 9.23459 10.4941 9.33455 10.3979L15.2456 4.47795C15.7328 3.98075 16.0039 3.31188 16.0001 2.61651C15.9964 1.92104 15.7182 1.25504 15.2257 0.763123C14.7301 0.274252 14.0615 0 13.3649 0C12.6681 0 11.9995 0.274234 11.5039 0.763123L11.504 0.763006ZM14.1112 1.89542L14.1113 1.89528C14.3033 2.09191 14.4108 2.35573 14.4108 2.63041C14.4108 2.90506 14.3033 3.16877 14.1113 3.3654L14.0715 3.40517L12.5987 1.93508L12.6385 1.89531C12.8301 1.69369 13.0964 1.57951 13.3749 1.57951C13.6533 1.57951 13.9196 1.69369 14.1114 1.89531L14.1112 1.89542ZM8.35935 9.10663L6.40893 9.60327L6.88663 7.65647L11.4642 3.04766L12.937 4.51775L8.35935 9.10663Z' fill='%234D4D4D'/%3E%3C/svg%3E%0A");
+              background-repeat: no-repeat;
+              background-position: left center;
+              background-size: contain;
+              display: block;
+
+              &::before {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      &-inner {
+        padding: 0;
+
+        .notification {
+          margin: 20px 0 0 0;
+          @include textConfig(
+            $black,
+            $primaryFont,
+            14,
+            $fontRegular,
+            16,
+            left,
+            initial,
+            0
+          );
+        }
+      }
+    }
+
+    .box-step {
+      .form-step {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 16px;
+        @include mq("1024") {
+          margin-top: 52px;
+        }
+
+        .payment-group {
+          width: 100%;
+          margin-top: 0;
+
+          @include mq("768") {
+            width: 40%;
+          }
+
+          .payment-group-list-btn {
+            width: 100%;
+          }
+        }
+
+        .steps-view {
+          width: 100%;
+          box-sizing: border-box;
+          padding: 16px;
+          border-radius: 8px;
+          background-color: $light-gray;
+
+          @include mq("768") {
+            border-radius: 0 8px 8px 8px;
+            max-width: 60%;
+          }
+        }
+
+        // pix
+
+        .box-payment-pix {
+          .payment-pix {
+            &-step-number {
+              @include textConfig(
+                $black,
+                $primaryFont,
+                16,
+                $fontBold,
+                16,
+                center,
+                initial,
+                0
+              );
+            }
+
+            &-step-text {
+              @include textConfig(
+                $black,
+                $primaryFont,
+                12,
+                $fontRegular,
+                18,
+                center,
+                initial,
+                0
+              );
+            }
+
+            &-step1-text {
+              font-size: 0;
+
+              &::before {
+                content: "Clique em 'Finalizar pedido' para gerar o código QR";
+                font-size: 12px;
+              }
+            }
+
+            &-mobile {
+              .payment-pix-info {
+                @include textConfig(
+                  $black,
+                  $primaryFont,
+                  14,
+                  $fontRegular,
+                  18,
+                  center,
+                  initial,
+                  0
+                );
+              }
+            }
+          }
+        }
+
+        // boleto
+
+        .bankInvoicePaymentGroup {
+          .payment-description {
+            @include textConfig(
+              $black,
+              $primaryFont,
+              14,
+              $fontRegular,
+              18,
+              left,
+              initial,
+              0
+            );
+            margin: 0;
+          }
+
+          .sight {
+            margin: 14px 0 0 0;
+            @include textConfig(
+              $black,
+              $primaryFont,
+              16,
+              $fontBold,
+              18,
+              left,
+              initial,
+              0
+            );
+          }
+        }
+      }
+
+      .payment-group-item {
+        padding: 0;
+        margin: 0;
+        border: 1px solid $light-gray-02;
+        box-sizing: border-box;
+        border-radius: 8px;
+        background: transparent;
+        margin-top: 6px;
+
+        @include mq("768") {
+          border-radius: 8px 0 0 8px;
+        }
+
+        .payment-group-item-text {
+          margin: 0;
+          background-origin: content-box;
+          padding: 16px;
+          @include textConfig(
+            $black,
+            $primaryFont,
+            14,
+            $fontRegular,
+            16,
+            left,
+            initial,
+            0
+          );
+        }
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        @include mq("768") {
+          &:not(.payment-group-item.active) {
+            border-right: none;
+          }
+        }
+      }
+
+      #payment-group-creditCardPaymentGroup {
+        .payment-group-item-text {
+          background-size: 1.5rem;
+          background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyMCAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjgwNDQgMEgzLjE5NTU0QzIuMzQ3MjMgMC4wMDEyMjc2OSAxLjUzNDE3IDAuMzM5MTcxIDAuOTM0OTQzIDAuOTM5NjI5QzAuMzM1NzE1IDEuNTQwMDkgLTAuMDAwNTQyMTY0IDIuMzUzOTEgNi45MzQwOWUtMDcgMy4yMDIyM1YxMi4wOTExQy0wLjAwMDU1NzMzNSAxMi45Mzk0IDAuMzM1NzE1IDEzLjc1MzEgMC45MzQ5NDMgMTQuMzUzN0MxLjUzNDE3IDE0Ljk1NDEgMi4zNDcyMyAxNS4yOTIxIDMuMTk1NTQgMTUuMjkzM0gxNi44MDQ0QzE3LjY1MjcgMTUuMjkyMSAxOC40NjU4IDE0Ljk1NDEgMTkuMDY1IDE0LjM1MzdDMTkuNjY0MiAxMy43NTMxIDIwLjAwMDUgMTIuOTM5NCAxOS45OTk5IDEyLjA5MTFWMy4yMDIyM0MyMC4wMDA1IDIuMzUzOTEgMTkuNjY0MiAxLjU0MDA2IDE5LjA2NSAwLjkzOTYyOUMxOC40NjU4IDAuMzM5MiAxNy42NTI3IDAuMDAxMjI4NTcgMTYuODA0NCAwWk0zLjE5NTU0IDEuMDAyMjNIMTYuODA0NEMxNy4zODcxIDEuMDAyOSAxNy45NDU2IDEuMjM1MDQgMTguMzU3IDEuNjQ3NjZDMTguNzY4MyAyLjA2MDI2IDE4Ljk5ODkgMi42MTk1NCAxOC45OTc3IDMuMjAyMjNWMy4yNzc3OUgwLjk5NzcxNVYzLjIwMjIzQzAuOTk2NTk5IDIuNjE4ODYgMS4yMjc2MyAyLjA1ODkxIDEuNjQgMS42NDYwOUMyLjA1MjQgMS4yMzMzNyAyLjYxMiAxLjAwMTY2IDMuMTk1NDYgMS4wMDIyM0gzLjE5NTU0Wk0xNi44MDQ0IDE0LjI5MTFIMy4xOTU1NEMyLjYxMjgzIDE0LjI5MDQgMi4wNTQzNyAxNC4wNTgzIDEuNjQyOTcgMTMuNjQ1N0MxLjIzMTYgMTMuMjMyOSAxLjAwMSAxMi42NzM4IDEuMDAyMjMgMTIuMDkxMVY2LjMxMzM3SDE5LjAwMjJWMTIuMDkxMUMxOS4wMDMzIDEyLjY3NDUgMTguNzcyMyAxMy4yMzQ0IDE4LjM1OTkgMTMuNjQ3MkMxNy45NDc1IDE0LjA1OTkgMTcuMzg3OSAxNC4yOTE3IDE2LjgwNDUgMTQuMjkxMUgxNi44MDQ0WiIgZmlsbD0iIzY1NjU2NSIvPgo8L3N2Zz4K");
+        }
+      }
+
+      #payment-group-instantPaymentPaymentGroup[data-name="Pix"] {
+        .payment-group-item-text {
+          background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyNSAyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5LjQyNjkgMTkuMDU1OUMxOC45NDYzIDE5LjA1NzIgMTguNDcwMiAxOC45NjMyIDE4LjAyNjIgMTguNzc5NEMxNy41ODIxIDE4LjU5NTYgMTcuMTc4OSAxOC4zMjU1IDE2LjgzOTkgMTcuOTg0OUwxMy4xMDM5IDE0LjI0ODlDMTIuOTcxNyAxNC4xMjI0IDEyLjc5NTkgMTQuMDUxOCAxMi42MTI5IDE0LjA1MThDMTIuNDMgMTQuMDUxOCAxMi4yNTQgMTQuMTIyNCAxMi4xMjE5IDE0LjI0ODlMOC4zNzE4OSAxNy45OTg5QzguMDMyODIgMTguMzM5NSA3LjYyOTY1IDE4LjYwOTUgNy4xODU2MSAxOC43OTMzQzYuNzQxNTcgMTguOTc3MiA2LjI2NTUgMTkuMDcxMiA1Ljc4NDkxIDE5LjA2OTlINS4wNDU5TDkuNzc3ODkgMjMuODAxOUMxMC40ODc1IDI0LjUxMTQgMTEuNDQ5OSAyNC45MSAxMi40NTM0IDI0LjkxQzEzLjQ1NjkgMjQuOTEgMTQuNDE5MyAyNC41MTE0IDE1LjEyODkgMjMuODAxOUwxOS44NzM5IDE5LjA1NjlMMTkuNDI2OSAxOS4wNTU5WiIgZmlsbD0iIzY1NjU2NSIvPgo8cGF0aCBkPSJNNS43ODU4OSA1LjgzOTYyQzYuMjY2NDcgNS44MzgzNiA2Ljc0MjU1IDUuOTMyMzYgNy4xODY1OCA2LjExNjE5QzcuNjMwNjIgNi4zMDAwMiA4LjAzMzg2IDYuNTcwMDMgOC4zNzI5MiA2LjkxMDYyTDEyLjEyMjkgMTAuNjYwNkMxMi4yNTM5IDEwLjc4OTUgMTIuNDMwMiAxMC44NjE3IDEyLjYxMzkgMTAuODYxN0MxMi43OTc2IDEwLjg2MTcgMTIuOTc0IDEwLjc4OTUgMTMuMTA0OSAxMC42NjA2TDE2Ljg0MDkgNi45MjQ2MkMxNy4xNzk5IDYuNTg0MDMgMTcuNTgzMiA2LjMxNDAyIDE4LjAyNzIgNi4xMzAxOUMxOC40NzEzIDUuOTQ2MzYgMTguOTQ3MyA1Ljg1MjM2IDE5LjQyNzkgNS44NTM2MkgxOS44Nzc5TDE1LjEzMjkgMS4xMDg2MkMxNC43ODE1IDAuNzU3MTQ3IDE0LjM2NDMgMC40NzgzNCAxMy45MDUyIDAuMjg4MTIyQzEzLjQ0NiAwLjA5NzkwMzkgMTIuOTUzOSAwIDEyLjQ1NjkgMEMxMS45NTk5IDAgMTEuNDY3OCAwLjA5NzkwMzkgMTEuMDA4NiAwLjI4ODEyMkMxMC41NDk1IDAuNDc4MzQgMTAuMTMyMyAwLjc1NzE0NyA5Ljc4MDg4IDEuMTA4NjJMNS4wNDU5IDUuODM5NjJINS43ODU4OVoiIGZpbGw9IiM2NTY1NjUiLz4KPHBhdGggZD0iTTIzLjgwMTEgOS43Nzg0M0wyMC45MzQxIDYuOTEwNDNDMjAuODcwNiA2LjkzNjU1IDIwLjgwMjggNi45NTA0NiAyMC43MzQxIDYuOTUxNDRIMTkuNDM0MUMxOC43NTU2IDYuOTUzMzkgMTguMTA1MiA3LjIyMjg5IDE3LjYyNDEgNy43MDE0NEwxMy44ODgxIDExLjQzNzRDMTMuNTUxIDExLjc3MjEgMTMuMDk1MiAxMS45NTk5IDEyLjYyMDEgMTEuOTU5OUMxMi4xNDUxIDExLjk1OTkgMTEuNjg5MyAxMS43NzIxIDExLjM1MjEgMTEuNDM3NEw3LjYwMjExIDcuNjg3NDRDNy4xMjExMSA3LjIwODggNi40NzA2OCA2LjkzOTI4IDUuNzkyMTEgNi45Mzc0NEg0LjE5MjE0QzQuMTI1OTcgNi45MzYzMSA0LjA2MDU2IDYuOTIzMDkgMy45OTkxNSA2Ljg5ODQ0TDEuMTA4MTUgOS43Nzg0M0MwLjM5ODYzNCAxMC40ODgxIDAgMTEuNDUwNSAwIDEyLjQ1MzlDMCAxMy40NTc0IDAuMzk4NjM0IDE0LjQxOTggMS4xMDgxNSAxNS4xMjk0TDMuOTg3MTIgMTguMDA4NEM0LjA0ODU1IDE3Ljk4MzggNC4xMTM5NSAxNy45NzA2IDQuMTgwMTEgMTcuOTY5NEg1Ljc4MDE1QzYuNDU4NyAxNy45Njc1IDcuMTA5MDkgMTcuNjk4IDcuNTkwMTUgMTcuMjE5NEwxMS4zNDAxIDEzLjQ2OTRDMTEuNjgxOCAxMy4xNDM1IDEyLjEzNTkgMTIuOTYxNiAxMi42MDgyIDEyLjk2MTZDMTMuMDgwNCAxMi45NjE2IDEzLjUzNDUgMTMuMTQzNSAxMy44NzYyIDEzLjQ2OTRMMTcuNjEyMSAxNy4yMDU0QzE4LjA5MzIgMTcuNjg0IDE4Ljc0MzYgMTcuOTUzNSAxOS40MjIxIDE3Ljk1NTRIMjAuNzIyMkMyMC43OTA4IDE3Ljk1NjQgMjAuODU4NiAxNy45NzAzIDIwLjkyMjEgMTcuOTk2NEwyMy43ODkxIDE1LjEyOTRDMjQuNDk4NiAxNC40MTk4IDI0Ljg5NzMgMTMuNDU3NCAyNC44OTczIDEyLjQ1MzlDMjQuODk3MyAxMS40NTA1IDI0LjQ5ODYgMTAuNDg4MSAyMy43ODkxIDkuNzc4NDMiIGZpbGw9IiM2NTY1NjUiLz4KPC9zdmc+Cg==");
+        }
+      }
+
+      #payment-group-bankInvoicePaymentGroup {
+        .payment-group-item-text {
+          background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjciIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNyAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI0LjY0MiAxOEgxLjgzMkMxLjM0NjI5IDE3Ljk5OTUgMC44ODA2MTUgMTcuODA2MyAwLjUzNzE2MyAxNy40NjI4QzAuMTkzNzExIDE3LjExOTQgMC4wMDA1MjkzODkgMTYuNjUzNyAwIDE2LjE2OFYxLjgzMkMwLjAwMDUyOTM4OSAxLjM0NjI5IDAuMTkzNzExIDAuODgwNjIyIDAuNTM3MTYzIDAuNTM3MTdDMC44ODA2MTUgMC4xOTM3MTggMS4zNDYyOSAwLjAwMDUyOTM4OSAxLjgzMiAwSDI0LjY0MkMyNS4xMjc3IDAuMDAwNTI5Mzg5IDI1LjU5MzQgMC4xOTM3MTggMjUuOTM2OCAwLjUzNzE3QzI2LjI4MDMgMC44ODA2MjIgMjYuNDczNSAxLjM0NjI5IDI2LjQ3NCAxLjgzMlYxNi4xNjdDMjYuNDczNyAxNi42NTI5IDI2LjI4MDcgMTcuMTE4OCAyNS45MzcyIDE3LjQ2MjVDMjUuNTkzNyAxNy44MDYxIDI1LjEyNzkgMTcuOTk5NSAyNC42NDIgMThaTTEuODMyIDEuMDUwOTlDMS42MjQ5NSAxLjA1MTI2IDEuNDI2NDUgMS4xMzM2NCAxLjI4MDA0IDEuMjgwMDRDMS4xMzM2NCAxLjQyNjQ1IDEuMDUxMjcgMS42MjQ5NSAxLjA1MSAxLjgzMlYxNi4xNjdDMS4wNTEyNyAxNi4zNzQxIDEuMTMzNjQgMTYuNTcyNiAxLjI4MDA0IDE2LjcxOUMxLjQyNjQ1IDE2Ljg2NTQgMS42MjQ5NSAxNi45NDc3IDEuODMyIDE2Ljk0OEgyNC42NDJDMjQuODQ5MSAxNi45NDc3IDI1LjA0NzUgMTYuODY1NCAyNS4xOTQgMTYuNzE5QzI1LjM0MDQgMTYuNTcyNiAyNS40MjI3IDE2LjM3NDEgMjUuNDIzIDE2LjE2N1YxLjgzMkMyNS40MjI3IDEuNjI0OTUgMjUuMzQwNCAxLjQyNjQ1IDI1LjE5NCAxLjI4MDA0QzI1LjA0NzUgMS4xMzM2NCAyNC44NDkxIDEuMDUxMjYgMjQuNjQyIDEuMDUwOTlIMS44MzJaIiBmaWxsPSIjNjU2NTY1Ii8+CjxwYXRoIGQ9Ik0yMy43NTMzIDIuNzIxNjhIMjIuMDY5M1YxNS4zNDU3SDIzLjc1MzNWMi43MjE2OFoiIGZpbGw9IiM2NTY1NjUiLz4KPHBhdGggZD0iTTIxLjIzMjggMi43MjE2OEgxOS41NDg4VjEzLjY2MTdIMjEuMjMyOFYyLjcyMTY4WiIgZmlsbD0iIzY1NjU2NSIvPgo8cGF0aCBkPSJNOC42MDg4IDIuNzIxNjhINi45MjQ4VjEzLjY2MTdIOC42MDg4VjIuNzIxNjhaIiBmaWxsPSIjNjU2NTY1Ii8+CjxwYXRoIGQ9Ik0xNy4wMTYgMi43MjE2OEgxNS4zMzJWMTMuNjYxN0gxNy4wMTZWMi43MjE2OFoiIGZpbGw9IiM2NTY1NjUiLz4KPHBhdGggZD0iTTEzLjU5NDkgMi43MjE2OEgxMS4xMjg5VjEzLjY2MTdIMTMuNTk0OVYyLjcyMTY4WiIgZmlsbD0iIzY1NjU2NSIvPgo8cGF0aCBkPSJNNi4wNzU1OCAyLjcyMTY4SDUuMjY3NThWMTMuNjYxN0g2LjA3NTU4VjIuNzIxNjhaIiBmaWxsPSIjNjU2NTY1Ii8+CjxwYXRoIGQ9Ik0xMC4yNzg3IDIuNzIxNjhIOS40NzA3VjEzLjY2MTdIMTAuMjc4N1YyLjcyMTY4WiIgZmlsbD0iIzY1NjU2NSIvPgo8cGF0aCBkPSJNMTguNjczMiAyLjcyMTY4SDE3Ljg2NTJWMTMuNjYxN0gxOC42NzMyVjIuNzIxNjhaIiBmaWxsPSIjNjU2NTY1Ii8+CjxwYXRoIGQ9Ik00LjM5MjAxIDIuNzIxNjhIMi43MDgwMVYxNS4zNDU3SDQuMzkyMDFWMi43MjE2OFoiIGZpbGw9IiM2NTY1NjUiLz4KPC9zdmc+Cg==");
+        }
+      }
+
+      .payment-group-item.active {
+        background: $light-gray;
+        border: none;
+
+        .payment-group-item-text {
+          font-weight: $fontBold;
+        }
+      }
+    }
+  }
+}
+
+.SecurityEnvironmentIcon {
+  margin-bottom: 10px;
+  background: $light-gray-03 !important;
+  display: flex !important;
+  @include display-flex(center, center, row-reverse);
+  @include size(75px, 30px);
+  padding: 3px 10px !important;
+  border: none;
+  border-radius: 3px !important;
+  @include textConfig(
+    $darkest-gray !important,
+    $primaryFont,
+    12,
+    $fontRegular !important,
+    18,
+    left,
+    initial,
+    0
+  );
+
+  @include mq("768") {
+    inset: 51px 0 auto auto;
+    width: 83px;
+  }
+
+  .payment-environment-icon-text {
+    display: flex !important;
+    width: fit-content !important;
+    flex-direction: row;
+
+    &::before {
+      @include size(20px);
+    }
+  }
+
+  .icon-lock {
+    color: $darkest-gray; 
+    display: block;
+  }
+}
+
+.iframe-credit-card-payment-group {
+  & select {
+    max-width: unset;
+    height: 35px !important;
+  }
+
+  & label {
+    @include textConfig(
+      $black,
+      $primaryFont,
+      14,
+      $fontRegular,
+      18,
+      left,
+      initial,
+      0
+    );
+    text-shadow: none;
+    margin-bottom: 6px;
+  }
+
+  label[for="address-toggle-0"] {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+
+  & input {
+    @include mq("1024", max) {
+      text-align: left;
+
+      &:not(
+          .input-mini,
+          .card-flag-radio,
+          input[type="checkbox"],
+          #creditCardpayment-card-0Number
+        ) {
+        box-sizing: border-box;
+        height: 35px !important;
+      }
+    }
+  }
+
+  #creditCardpayment-card-0Number {
+    width: 64%;
+  }
+
+  .card-flags {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #vtexIdContainer {
+      top: 100% !important;
+  }
+
+  #vtexIdContainer .vtexIdUI {
+      top: 50%;
+      transform: translateY(-50%);
+  }
+}

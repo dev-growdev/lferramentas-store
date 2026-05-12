@@ -1,0 +1,23 @@
+{
+  "flex-layout.row#banner-coupons": {
+    "title": "Banner Principal",
+    "children": ["info-card#coupons"],
+    "props": {
+      "blockClass": "banner-coupons"
+    }
+  },
+  "info-card#coupons": {
+    "props": {
+      "blockClass": "info-card-coupons",
+      "callToActionMode": "none",
+      "fetchpriority": "auto",
+      "headline": "APROVEITE ESSES CUPONS",
+      "id": "info-card-coupons",
+      "imageUrl": "https://lfmaquinaseferramentas.vtexassets.com/assets/vtex.file-manager-graphql/images/76a7da07-4503-4ba9-89e4-7896665e3124___096355ae563909496b6f0a83ac714d0d.png",
+      "isFullModeStyle": true,
+      "preload": true,
+      "subhead": "DE DESCONTO ANTES QUE ACABEM!",
+      "textPosition": "left"
+    }
+  }
+}

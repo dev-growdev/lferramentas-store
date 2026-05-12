@@ -1,0 +1,396 @@
+{
+  "flex-layout.col#scroll-layout-lp-bf": {
+    "title": "Coluna principal do scroll horizontal Black Friday",
+    "props": {
+      "blockClass": "scroll-layout-lp-bf",
+      "width": "100%"
+    },
+    "children": ["rich-text#scroll-lp-bf-title", "custom-horizontal-scroll"]
+  },
+  "rich-text#scroll-lp-bf-title": {
+    "title": "Título principal do carrossel destaques Black Friday",
+    "props": {
+      "blockClass": "scroll-lp-bf-title",
+      "text": "ITENS QUE FORAM SUCESSO NA BLACK FRIDAY LF DE 2024:",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "custom-horizontal-scroll": {
+    "title": "Carrossel horizontal de destaques Black Friday",
+    "children": [
+      "flex-layout.col#lp-bf-scrollcontent-1-left",
+      "flex-layout.col#lp-bf-scrollcontent-1-right",
+      "flex-layout.col#lp-bf-scrollcontent-4-left",
+      "flex-layout.col#lp-bf-scrollcontent-4-right",
+      "flex-layout.col#lp-bf-scrollcontent-2-left",
+      "flex-layout.col#lp-bf-scrollcontent-2-right",
+      "flex-layout.col#lp-bf-scrollcontent-5-left",
+      "flex-layout.col#lp-bf-scrollcontent-5-right",
+      "flex-layout.col#lp-bf-scrollcontent-3-left",
+      "flex-layout.col#lp-bf-scrollcontent-3-right",
+      "flex-layout.col#lp-bf-scrollcontent-6-left",
+      "flex-layout.col#lp-bf-scrollcontent-6-right"
+    ]
+  },
+  "flex-layout.col#lp-bf-scrollcontent-4-left": {
+    "title": "Coluna esquerda 4 do carrossel Black Friday",
+    "children": [
+      "image-new-custom#lp-bf-scrollcontent-4-left-top",
+      "image-new-custom#lp-bf-scrollcontent-4-left-down"
+    ]
+  },
+  "image-new-custom#lp-bf-scrollcontent-4-left-top": {
+    "title": "Imagem superior da coluna esquerda 4",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-left",
+      "height": "auto",
+      "src": "https://placehold.co/300x200",
+      "alt": "Imagem da esquerda 1"
+    }
+  },
+  "image-new-custom#lp-bf-scrollcontent-4-left-down": {
+    "title": "Imagem inferior da coluna esquerda 4",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-left",
+      "height": "auto",
+      "src": "https://placehold.co/300x200",
+      "alt": "Imagem da esquerda 2"
+    }
+  },
+  "flex-layout.col#lp-bf-scrollcontent-4-right": {
+    "title": "Coluna direita 4 do carrossel Black Friday",
+    "children": ["image-new-custom#lp-bf-scrollcontent-4-right"]
+  },
+  "image-new-custom#lp-bf-scrollcontent-4-right": {
+    "title": "Imagem da coluna direita 4",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-right",
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "100%",
+      "height": "auto",
+      "src": "https://placehold.co/300x420",
+      "alt": "Imagem da direita"
+    }
+  },
+  "flex-layout.col#lp-bf-scrollcontent-5-left": {
+    "title": "Coluna esquerda 5 do carrossel Black Friday",
+    "children": [
+      "image-new-custom#lp-bf-scrollcontent-5-left-top",
+      "image-new-custom#lp-bf-scrollcontent-5-left-down"
+    ]
+  },
+  "image-new-custom#lp-bf-scrollcontent-5-left-top": {
+    "title": "Imagem superior da coluna esquerda 5",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-left",
+      "height": "auto",
+      "src": "https://placehold.co/300x200",
+      "alt": "Imagem da esquerda 1"
+    }
+  },
+  "image-new-custom#lp-bf-scrollcontent-5-left-down": {
+    "title": "Imagem inferior da coluna esquerda 5",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-left",
+      "height": "auto",
+      "src": "https://placehold.co/300x200",
+      "alt": "Imagem da esquerda 2"
+    }
+  },
+  "flex-layout.col#lp-bf-scrollcontent-5-right": {
+    "title": "Coluna direita 5 do carrossel Black Friday",
+    "children": ["image-new-custom#lp-bf-scrollcontent-5-right"]
+  },
+  "image-new-custom#lp-bf-scrollcontent-5-right": {
+    "title": "Imagem da coluna direita 5",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-right",
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "100%",
+      "height": "auto",
+      "src": "https://placehold.co/300x420",
+      "alt": "Imagem da direita"
+    }
+  },
+  "flex-layout.col#lp-bf-scrollcontent-6-left": {
+    "title": "Coluna esquerda 6 do carrossel Black Friday",
+    "children": [
+      "image-new-custom#lp-bf-scrollcontent-6-left-top",
+      "image-new-custom#lp-bf-scrollcontent-6-left-down"
+    ]
+  },
+  "image-new-custom#lp-bf-scrollcontent-6-left-top": {
+    "title": "Imagem superior da coluna esquerda 6",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-left",
+      "height": "auto",
+      "src": "https://placehold.co/300x200",
+      "alt": "Imagem da esquerda 1"
+    }
+  },
+  "image-new-custom#lp-bf-scrollcontent-6-left-down": {
+    "title": "Imagem inferior da coluna esquerda 6",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-left",
+      "height": "auto",
+      "src": "https://placehold.co/300x200",
+      "alt": "Imagem da esquerda 2"
+    }
+  },
+  "flex-layout.col#lp-bf-scrollcontent-6-right": {
+    "title": "Coluna direita 6 do carrossel Black Friday",
+    "children": ["image-new-custom#lp-bf-scrollcontent-6-right"]
+  },
+  "image-new-custom#lp-bf-scrollcontent-6-right": {
+    "title": "Imagem da coluna direita 6",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-right",
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "100%",
+      "height": "auto",
+      "src": "https://placehold.co/300x420",
+      "alt": "Imagem da direita"
+    }
+  },
+  "flex-layout.col#lp-bf-scrollcontent-1-left": {
+    "title": "Coluna esquerda 1 do carrossel Black Friday",
+    "children": [
+      "image-new-custom#lp-bf-scrollcontent-1-left-top",
+      "image-new-custom#lp-bf-scrollcontent-1-left-down"
+    ]
+  },
+  "image-new-custom#lp-bf-scrollcontent-1-left-top": {
+    "title": "Imagem superior da coluna esquerda 1",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-left",
+      "height": "auto",
+      "src": "https://placehold.co/300x200",
+      "alt": "Imagem da esquerda 1"
+    }
+  },
+  "image-new-custom#lp-bf-scrollcontent-1-left-down": {
+    "title": "Imagem inferior da coluna esquerda 1",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-left",
+      "height": "auto",
+      "src": "https://placehold.co/300x200",
+      "alt": "Imagem da esquerda 2"
+    }
+  },
+  "flex-layout.col#lp-bf-scrollcontent-1-right": {
+    "title": "Coluna direita 1 do carrossel Black Friday",
+    "children": ["image-new-custom#lp-bf-scrollcontent-1-right"]
+  },
+  "image-new-custom#lp-bf-scrollcontent-1-right": {
+    "title": "Imagem da coluna direita 1",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-right",
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "100%",
+      "height": "auto",
+      "src": "https://placehold.co/600x420",
+      "alt": "Imagem da direita"
+    }
+  },
+  "flex-layout.col#lp-bf-scrollcontent-2-left": {
+    "title": "Coluna esquerda 2 do carrossel Black Friday",
+    "children": [
+      "image-new-custom#lp-bf-scrollcontent-2-left-top",
+      "image-new-custom#lp-bf-scrollcontent-2-left-down"
+    ]
+  },
+  "image-new-custom#lp-bf-scrollcontent-2-left-top": {
+    "title": "Imagem superior da coluna esquerda 2",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-left",
+      "height": "auto",
+      "src": "https://placehold.co/300x200",
+      "alt": "Imagem da esquerda 1"
+    }
+  },
+  "image-new-custom#lp-bf-scrollcontent-2-left-down": {
+    "title": "Imagem inferior da coluna esquerda 2",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-left",
+      "height": "auto",
+      "src": "https://placehold.co/300x200",
+      "alt": "Imagem da esquerda 2"
+    }
+  },
+  "flex-layout.col#lp-bf-scrollcontent-2-right": {
+    "title": "Coluna direita 2 do carrossel Black Friday",
+    "children": ["image-new-custom#lp-bf-scrollcontent-2-right"]
+  },
+  "image-new-custom#lp-bf-scrollcontent-2-right": {
+    "title": "Imagem da coluna direita 2",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-right",
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "100%",
+      "height": "auto",
+      "src": "https://placehold.co/600x420",
+      "alt": "Imagem da direita"
+    }
+  },
+  "flex-layout.col#lp-bf-scrollcontent-3-left": {
+    "title": "Coluna esquerda 3 do carrossel Black Friday",
+    "children": [
+      "image-new-custom#lp-bf-scrollcontent-3-left-top",
+      "image-new-custom#lp-bf-scrollcontent-3-left-down"
+    ]
+  },
+  "image-new-custom#lp-bf-scrollcontent-3-left-top": {
+    "title": "Imagem superior da coluna esquerda 3",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-left",
+      "height": "auto",
+      "src": "https://placehold.co/300x200",
+      "alt": "Imagem da esquerda 1"
+    }
+  },
+  "image-new-custom#lp-bf-scrollcontent-3-left-down": {
+    "title": "Imagem inferior da coluna esquerda 3",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-left",
+      "height": "auto",
+      "src": "https://placehold.co/300x200",
+      "alt": "Imagem da esquerda 2"
+    }
+  },
+  "flex-layout.col#lp-bf-scrollcontent-3-right": {
+    "title": "Coluna direita 3 do carrossel Black Friday",
+    "children": ["image-new-custom#lp-bf-scrollcontent-3-right"]
+  },
+  "image-new-custom#lp-bf-scrollcontent-3-right": {
+    "title": "Imagem da coluna direita 3",
+    "props": {
+      "blockClass": "lp-bf-scrollcontent-right",
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "100%",
+      "height": "auto",
+      "src": "https://placehold.co/600x420",
+      "alt": "Imagem da direita"
+    }
+  },
+  "flex-layout.row#lp-bf-promotion-cards": {
+    "children": [
+      "flex-layout.col#lp-bf-promotion-cards-left",
+      "flex-layout.col#lp-bf-promotion-cards-right"
+    ],
+    "props": {
+      "blockClass": "lp-bf-promotion-cards",
+      "colSizing": "equal"
+    }
+  },
+  "flex-layout.col#lp-bf-promotion-cards-left": {
+    "children": ["flex-layout.row#lp-bf-promotion-cards-left"]
+  },
+  "flex-layout.row#lp-bf-promotion-cards-left": {
+    "children": [
+      "flex-layout.col#lp-bf-promotion-cards-left-1",
+      "flex-layout.col#lp-bf-promotion-cards-right-1"
+    ],
+    "props": {
+      "blockClass": "lp-bf-promotion-card",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "horizontalAlign": "center"
+    }
+  },
+  "flex-layout.col#lp-bf-promotion-cards-left-1": {
+    "children": ["image-new-custom#lp-bf-promotion-cards-left"]
+  },
+  "image-new-custom#lp-bf-promotion-cards-left": {
+    "title": "Imagem da esquerda",
+    "props": {
+      "blockClass": "lp-bf-promotion-cards-left",
+      "width": "224px",
+      "height": "auto",
+      "src": "https://lfmaquinaseferramentas.vtexassets.com/assets/vtex.file-manager-graphql/images/e22b3eb2-e3f1-4458-a333-e26a731af20a___54429b9211f611b54784e64a5e3c4a5c.png",
+      "alt": "Pague com Pix"
+    }
+  },
+  "flex-layout.col#lp-bf-promotion-cards-right-1": {
+    "children": [
+      "rich-text#lp-bf-promotion-cards-right-title",
+      "rich-text#lp-bf-promotion-cards-right-description"
+    ],
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": "lp-bf-promotion-cards-text"
+    }
+  },
+  "rich-text#lp-bf-promotion-cards-right-title": {
+    "title": "Título da promoção",
+    "props": {
+      "text": "PAGUE COM PIX",
+      "blockClass": "lp-bf-promotion-cards-right-title"
+    }
+  },
+  "rich-text#lp-bf-promotion-cards-right-description": {
+    "title": "Descrição da promoção",
+    "props": {
+      "text": "Garanta **5% de desconto** comprando no Pix! Sua compra é aprovada na hora e o despacho do seu pedido é imediato!",
+      "blockClass": "lp-bf-promotion-cards-right-description"
+    }
+  },
+  "flex-layout.col#lp-bf-promotion-cards-right": {
+    "children": ["flex-layout.row#lp-bf-promotion-cards-right"]
+  },
+  "flex-layout.row#lp-bf-promotion-cards-right": {
+    "children": [
+      "flex-layout.col#lp-bf-promotion-cards-left-2",
+      "flex-layout.col#lp-bf-promotion-cards-right-2"
+    ],
+    "props": {
+      "blockClass": "lp-bf-promotion-card",
+      "preventHorizontalStretch": true
+    }
+  },
+  "flex-layout.col#lp-bf-promotion-cards-left-2": {
+    "children": ["image-new-custom#lp-bf-promotion-cards-left-2"]
+  },
+  "image-new-custom#lp-bf-promotion-cards-left-2": {
+    "title": "Imagem da esquerda",
+    "props": {
+      "blockClass": "lp-bf-promotion-cards-left",
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "100%",
+      "height": "auto",
+      "src": "https://lfmaquinaseferramentas.vtexassets.com/assets/vtex.file-manager-graphql/images/e22b3eb2-e3f1-4458-a333-e26a731af20a___54429b9211f611b54784e64a5e3c4a5c.png ",
+      "alt": "Imagem da esquerda"
+    }
+  },
+  "flex-layout.col#lp-bf-promotion-cards-right-2": {
+    "children": [
+      "rich-text#lp-bf-promotion-cards-right-title-2",
+      "rich-text#lp-bf-promotion-cards-right-description-2"
+    ],
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": "lp-bf-promotion-cards-text"
+    }
+  },
+  "rich-text#lp-bf-promotion-cards-right-title-2": {
+    "title": "Título da promoção",
+    "props": {
+      "text": "CUPONS DE DESCONTO.",
+      "blockClass": "lp-bf-promotion-cards-right-title"
+    }
+  },
+  "rich-text#lp-bf-promotion-cards-right-description-2": {
+    "title": "Descrição da promoção",
+    "props": {
+      "text": "Você pode aproveitar *cupons especiais de primeira compra* e conferir diversos outros descontos que serão revelados durante a Black Friday da LF!",
+      "blockClass": "lp-bf-promotion-cards-right-description"
+    }
+  }
+}

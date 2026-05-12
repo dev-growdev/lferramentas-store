@@ -1,0 +1,95 @@
+{
+  "store.custom#lp-bf": {
+    "blocks": ["flex-layout.row#lp-bf"]
+  },
+  "flex-layout.row#lp-bf": {
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": "lp-bf-container"
+    },
+    "children": ["flex-layout.col#lp-bf"]
+  },
+  "flex-layout.col#lp-bf": {
+    "title": "Conteudo da Página",
+    "props": {
+      "blockClass": "lp-bf-container",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.row#inst-breadcrumb-lp-bf",
+      "flex-layout.row#main-banner-lp-bf",
+      "flex-layout.row#timer-bf",
+      "flex-layout.row#lp-bf-form",
+      "__fold__",
+      "toggle-layout#lp-bf-deals",
+      // "toggle-layout#slider-categories-bf",
+      // "flex-layout.row#banner-coupons-black",
+      // "coupons-list#lp-bf",
+      // "link#lp-bf-coupons",
+      // "toggle-layout#slider-brand-lp-bf",
+      "flex-layout.row#scroll-layout-lp-bf",
+      "toggle-layout#shelf-lp-bf",
+      "flex-layout.row#lp-bf-promotion-cards",
+      "flex-layout.row#banner-whatsapp-lp-bf",
+      "flex-layout.row#lp-bf-social-media",
+      "flex-layout.row#lp-bf-faq"
+    ]
+  },
+  "coupons-list#lp-bf": {
+    "props": {
+      "hasSlider": true
+    }
+  },
+  "flex-layout.row#main-banner-lp-bf": {
+    "title": "Banner Full 01",
+    "children": ["list-context.image-list-custom#main-banner-lp-bf"],
+    "props": {
+      "blockClass": [
+        "grid-1252",
+        "container__main-banner-home",
+        "lp-bf-main-banner"
+      ]
+    }
+  },
+  "list-context.image-list-custom#main-banner-lp-bf": {
+    "title": "Lista de Banners",
+    "children": ["slider-layout#main-images-bf"],
+    "props": {
+      "height": 335,
+      "preload": true,
+      "images": [
+        {
+          "image": "https://ghaus.vtexassets.com/assets/vtex.file-manager-graphql/images/1843de08-6f31-47fd-b737-e445eb7554bf___a2621ed7794f23e0a5951327343f52ab.webp",
+          "mobileImage": "https://ghaus.vtexassets.com/assets/vtex.file-manager-graphql/images/761cf107-f94d-466b-8deb-d1aed7f3e0c0___1706d6c41a8b926dca26a4b0377ac163.webp",
+          "description": "Banner 01",
+          "title": "Banner 01",
+          "link": {
+            "url": "/tintas-e-acessorios",
+            "attributeNofollow": false
+          },
+          "height": "335",
+          "width": "100%",
+          "analyticsProperties": "none",
+          "isActive": true
+        }
+      ]
+    }
+  },
+  "slider-layout#main-images-bf": {
+    "title": "Carrossel 01",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": ["carousel", "main-banner"]
+    }
+  },
+  "flex-layout.row#scroll-layout-lp-bf": {
+    "title": "Produtos em Destaque",
+    "children": ["flex-layout.col#scroll-layout-lp-bf"]
+  }
+}

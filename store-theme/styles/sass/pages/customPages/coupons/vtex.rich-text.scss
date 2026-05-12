@@ -1,0 +1,59 @@
+@import '../../../global';
+
+.container {
+  &--how-to-use-coupons {
+    background: $white;
+  }
+
+  &--requirements-coupons-text {
+    margin-top: 10px;
+  }
+}
+
+.paragraph {
+  &--title-coupons {
+    @include textConfig($black, 20, $fontBold, 25, center, initial, 0);
+    margin-top: 39px;
+    margin-bottom: 0;
+    padding: 0 16px;
+
+    @include mq('1026') {
+      @include text(1, $black, $fontBold);
+    }
+  }
+
+  &--how-to-use-coupons {
+    @include textConfig($black, 20, $fontBold, 25, center, initial, 0);
+    margin-top: 39px;
+    margin-bottom: 0;
+
+    @include mq('1026') {
+      font-size: 28px;
+      line-height: 35px;
+    }
+
+    &-card-number {
+      @include textConfig($white, 80, $fontBlack, 100, center, initial, 0);
+      margin: 0 {
+        right: 15px;
+      }
+    }
+
+    &-card-text {
+      @include textConfig($black, 16, $fontRegular, 20, left, initial, 0);
+      margin: 20px 0 0;
+    }
+  }
+
+  &--requirements-coupons {
+    &-title {
+      @include text(2, $black, $fontBold);
+      margin: 0;
+    }
+
+    &-text {
+      @include textConfig($black, 16, $fontRegular, 30, left, initial, 0);
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,671 @@
+#shipping-data {
+  float: right;
+
+  .step {
+    border: none;
+    background: $white;
+    border-radius: 8px;
+    padding: 24px 16px;
+    box-sizing: border-box;
+    min-height: 104px;
+
+    &.active {
+      @include mq('768') {
+        min-height: 170px;
+      }
+    }
+
+    .accordion {
+      &-heading {
+        .accordion-toggle {
+          padding: 0;
+          @include display-flex(center, flex-start, row);
+          @include textConfig($black, $primaryFont, 16, $fontExtraBold, 18, left, capitalize, 0);
+
+          &::after {
+            content: none !important;
+          }
+
+          .icon-home {
+            margin-right: 8px;
+            @include size(26px, 20px);
+            background-image: url("data:image/svg+xml,%3Csvg width='26' height='16' viewBox='0 0 26 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_475_8177)'%3E%3Cpath d='M18.6551 16.0002C18.2671 16.0019 17.8826 15.9267 17.5237 15.779C17.1649 15.6313 16.8389 15.414 16.5646 15.1397C16.2902 14.8653 16.0729 14.5393 15.9252 14.1805C15.7775 13.8217 15.7024 13.4372 15.7041 13.0492H8.26108C8.24105 13.8183 7.92146 14.5491 7.37041 15.086C6.81936 15.6229 6.08044 15.9234 5.31108 15.9234C4.54173 15.9234 3.80279 15.6229 3.25174 15.086C2.70069 14.5491 2.3811 13.8183 2.36107 13.0492H7.96592e-05V1.63617C-0.00205876 1.42034 0.0388766 1.20624 0.120487 1.00642C0.202097 0.806604 0.322737 0.625079 0.47536 0.472456C0.627984 0.319833 0.809523 0.199177 1.00934 0.117567C1.20916 0.0359571 1.42324 -0.00497824 1.63907 -0.00283982H16.0651C16.281 -0.00511214 16.4952 0.0357271 16.6951 0.117277C16.8951 0.198828 17.0767 0.319453 17.2294 0.47209C17.3822 0.624727 17.5029 0.806308 17.5846 1.00619C17.6663 1.20608 17.7072 1.42025 17.7051 1.63617V2.06216H21.1151C21.5993 2.06061 22.0742 2.19504 22.4858 2.45015C22.8974 2.70526 23.229 3.07081 23.4431 3.50517L25.1811 6.94816C25.219 7.04397 25.2413 7.14527 25.2471 7.24817V13.0842H21.5751C21.5775 13.468 21.5036 13.8485 21.3578 14.2037C21.212 14.5588 20.9972 14.8814 20.7257 15.1528C20.4543 15.4243 20.1317 15.6391 19.7766 15.7849C19.4215 15.9307 19.0409 16.0046 18.6571 16.0022L18.6551 16.0002ZM18.6551 14.6882C19.0899 14.6882 19.5069 14.5154 19.8144 14.208C20.1218 13.9005 20.2946 13.4835 20.2946 13.0487C20.2946 12.6139 20.1218 12.1968 19.8144 11.8894C19.5069 11.5819 19.0899 11.4092 18.6551 11.4092C18.2703 11.4141 17.8994 11.5531 17.6061 11.8022C17.5731 11.8682 17.5061 11.9022 17.4751 11.9332C17.2065 12.2307 17.0545 12.6154 17.0471 13.0162C17.0407 13.232 17.0774 13.447 17.1551 13.6485C17.2328 13.8499 17.3498 14.0339 17.4995 14.1896C17.6491 14.3453 17.8283 14.4696 18.0266 14.5552C18.2248 14.6408 18.4381 14.686 18.6541 14.6882H18.6551ZM5.34407 14.6882C5.66824 14.6882 5.98513 14.592 6.25466 14.4119C6.52419 14.2318 6.73426 13.9759 6.85831 13.6764C6.98236 13.3769 7.01483 13.0473 6.95159 12.7294C6.88835 12.4115 6.73224 12.1194 6.50302 11.8902C6.27381 11.661 5.98177 11.5049 5.66384 11.4417C5.3459 11.3784 5.01635 11.4109 4.71686 11.5349C4.41737 11.659 4.16139 11.8691 3.9813 12.1386C3.8012 12.4081 3.70508 12.725 3.70508 13.0492C3.70294 13.2652 3.74397 13.4796 3.82576 13.6796C3.90756 13.8796 4.02847 14.0613 4.18142 14.214C4.33436 14.3666 4.51625 14.4872 4.71642 14.5686C4.91659 14.6501 5.131 14.6907 5.34708 14.6882H5.34407ZM16.0981 1.31117H1.67208C1.62832 1.30855 1.58451 1.31522 1.54352 1.33078C1.50254 1.34633 1.46531 1.37041 1.43431 1.40141C1.40332 1.43241 1.37925 1.46962 1.3637 1.5106C1.34814 1.55159 1.34145 1.59542 1.34407 1.63917V11.7392H2.68808C2.9352 11.2466 3.31442 10.8325 3.78337 10.5431C4.25233 10.2538 4.79252 10.1005 5.34357 10.1005C5.89462 10.1005 6.43481 10.2538 6.90377 10.5431C7.37272 10.8325 7.75195 11.2466 7.99907 11.7392H16.0321C16.1437 11.5199 16.2752 11.3113 16.4251 11.1162V1.63617C16.4251 1.59309 16.4166 1.55044 16.4001 1.51065C16.3836 1.47085 16.3595 1.43469 16.329 1.40423C16.2986 1.37378 16.2624 1.34961 16.2226 1.33313C16.1828 1.31664 16.1402 1.30816 16.0971 1.30816L16.0981 1.31117ZM22.2981 4.09817C22.1832 3.88401 22.0133 3.70431 21.8059 3.57759C21.5985 3.45087 21.3611 3.38169 21.1181 3.37717H17.7371V6.55717H23.5371L22.2981 4.09817ZM23.9701 11.7372V7.86816H17.7371V10.2292C18.032 10.1244 18.3421 10.069 18.6551 10.0652C19.2063 10.0649 19.7467 10.218 20.2158 10.5075C20.6849 10.797 21.0642 11.2113 21.3111 11.7042H23.9671L23.9701 11.7372Z' fill='%23FFE72E'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_475_8177'%3E%3Crect width='25.246' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: contain;
+            display: block;
+
+            &::before {
+              display: none;
+            }
+          }
+
+          .link-box-edit {
+            opacity: 1;
+            padding: 0;
+            top: 0;
+            right: -5px;
+
+            .icon-edit {
+              @include size(20px);
+              background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.796241 16.0003H13.514C13.7251 16.0003 13.9276 15.9166 14.0769 15.7676C14.2262 15.6185 14.31 15.4165 14.31 15.2057V9.22619C14.31 8.9424 14.1583 8.68006 13.912 8.53806C13.6657 8.39616 13.3622 8.39616 13.116 8.53806C12.8696 8.68009 12.7178 8.9424 12.7178 9.22619V14.4111H1.59229V3.28638L6.03056 3.28651C6.31502 3.28651 6.57781 3.13506 6.71997 2.8891C6.86227 2.64327 6.86227 2.34034 6.71997 2.09454C6.57781 1.84872 6.31499 1.69727 6.03056 1.69727H0.796191C0.585032 1.69727 0.382467 1.78096 0.233233 1.92993C0.0838537 2.07903 0 2.28107 0 2.49184V15.2058C0 15.4166 0.0838537 15.6186 0.233233 15.7677C0.382474 15.9167 0.585025 16.0004 0.796191 16.0004L0.796241 16.0003Z' fill='%234D4D4D'/%3E%3Cpath d='M11.504 0.763006L5.61283 6.68295C5.51051 6.78161 5.43513 6.90467 5.39389 7.04061L4.53801 10.5171C4.49914 10.649 4.4972 10.7891 4.53218 10.9221C4.56731 11.0552 4.63811 11.1761 4.73709 11.2719C4.88897 11.4265 5.09736 11.5127 5.3142 11.5104L5.49329 11.4706L8.97623 10.5965H8.97637C9.11104 10.5627 9.23459 10.4941 9.33455 10.3979L15.2456 4.47795C15.7328 3.98075 16.0039 3.31188 16.0001 2.61651C15.9964 1.92104 15.7182 1.25504 15.2257 0.763123C14.7301 0.274252 14.0615 0 13.3649 0C12.6681 0 11.9995 0.274234 11.5039 0.763123L11.504 0.763006ZM14.1112 1.89542L14.1113 1.89528C14.3033 2.09191 14.4108 2.35573 14.4108 2.63041C14.4108 2.90506 14.3033 3.16877 14.1113 3.3654L14.0715 3.40517L12.5987 1.93508L12.6385 1.89531C12.8301 1.69369 13.0964 1.57951 13.3749 1.57951C13.6533 1.57951 13.9196 1.69369 14.1114 1.89531L14.1112 1.89542ZM8.35935 9.10663L6.40893 9.60327L6.88663 7.65647L11.4642 3.04766L12.937 4.51775L8.35935 9.10663Z' fill='%234D4D4D'/%3E%3C/svg%3E%0A");
+              background-repeat: no-repeat;
+              background-position: left center;
+              background-size: contain;
+              display: block;
+
+              &::before {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      &-inner {
+        padding: 0;
+
+        .shipping-summary-info {
+          margin: 20px 0 0 0;
+          @include textConfig($black, $primaryFont, 14, $fontRegular, 16, left, initial, 0);
+        }
+
+        .box-step {
+          .vtex-omnishipping-1-x-addressFormPart1 {
+            display: flex;
+            flex-direction: column;
+
+            & .ship-postalCode {
+              width: 100%;
+              @include display-flex(flex-start, center, row);
+              flex-wrap: wrap;
+              margin: 0;
+              position: relative;
+
+              & label {
+                @include textConfig($black, $primaryFont, 14, $fontBold, 16, left, initial, 0);
+
+                width: 100%;
+                margin-bottom: 8px;
+              }
+
+              & input {
+                @include size(auto !important, 40px);
+                box-sizing: border-box;
+                max-width: none;
+                padding: 0 5px 0 12px;
+                border: 1px solid $black;
+                border-radius: 8px;
+                box-shadow: none;
+                font-family: $primaryFont;
+                flex-grow: 1;
+
+                @include textConfig($black, $primaryFont, 14, $fontRegular, 16, left, initial, 0);
+
+                @include mq('768') {
+                  border: 1px solid $medium-gray;
+                }
+              }
+
+              & small {
+                margin: auto 0 auto 6px;
+                width: fit-content;
+
+                @include mq('768') {
+                  margin: auto 20px auto 10px;
+                }
+
+                a {
+                  @include textConfig($darkest-gray, $primaryFont, 12, $fontBold, 20, left, initial, 0);
+                }
+              }
+
+              .help.error {
+                position: absolute;
+                bottom: -20px;
+              }
+            }
+
+            .vtex-omnishipping-1-x-addressItemOption {
+              border: 1px solid $light-gray-03;
+              box-shadow: none;
+              border-radius: 8px;
+              margin-top: 12px;
+
+              &:first-child {
+                margin-top: 0;
+              }
+
+              &:hover {
+                background: transparent;
+              }
+
+              svg path {
+                fill: $secondary-color;
+              }
+
+              &.vtex-omnishipping-1-x-active {
+                background-color: $light-gray;
+                border: 1px solid transparent;
+              }
+            }
+
+            .vtex-omnishipping-1-x-backToAddressList {
+              @include textConfig($black, $primaryFont, 12, $fontRegular, 16, center, initial, 0);
+              border-color: $black;
+            }
+
+            .address-edit,
+            .address-create {
+              .btn-link {
+                @include textConfig($black, $primaryFont, 12, $fontRegular, 16, center, initial, 0);
+                border-color: $black;
+
+                i {
+                  color: $black;
+                }
+              }
+            }
+          }
+
+          .vtex-omnishipping-1-x-deliveryGroup {
+            .vtex-omnishipping-1-x-leanShippingGroupList {
+              border: none;
+              margin-bottom: 16px;
+
+              > div:not(:last-child) {
+                margin-bottom: 5px;
+              }
+
+              .shp-lean-option {
+                background: $white;
+                border: 1px solid $medium-gray;
+                border-radius: 8px;
+                padding: 14px 16px;
+
+                @include mq('768') {
+                  border: 1px solid $light-gray-03;
+                }
+
+                .vtex-omnishipping-1-x-leanShippingText {
+                  border: none;
+                  @include textConfig($black, $primaryFont, 14, $fontRegular, 16, left, initial, 0);
+                }
+
+                .shp-option-text-price {
+                  padding: 0;
+                  @include textConfig($black, $primaryFont, 13, $fontExtraBold, 23, right, initial, 0);
+                  margin-right: 28px;
+
+                  border-left: 1px solid $white;
+                  padding-left: 25px;
+
+                  @include mq('1024') {
+                    border-left: unset;
+                    padding-left: 0;
+                  }
+                }
+
+                .shp-option-text-label {
+                  @include textConfig($black, $primaryFont, 12, $fontExtraBold, 14, left, initial, 0);
+                }
+
+                .shp-option-text-package {
+                  @include textConfig($black, $primaryFont, 14, $fontRegular, 16, left, initial, 0);
+                }
+              }
+
+              .vtex-omnishipping-1-x-leanShippingIcon svg path {
+                fill: $secondary-color;
+              }
+            }
+
+            .vtex-omnishipping-1-x-shippingSectionTitle {
+              @include textConfig($black, $primaryFont, 14, $fontBold, 16, left, initial, 0);
+            }
+          }
+
+          .vtex-omnishipping-1-x-addressForm {
+            .vtex-omnishipping-1-x-shippingSectionTitle {
+              @include textConfig($black, $primaryFont, 14, $fontBold, 16, left, initial, 0);
+              margin-bottom: 5px;
+            }
+
+            .vtex-omnishipping-1-x-addressSummaryActive {
+              position: relative;
+              border: 1px solid $medium-gray {
+                radius: 8px;
+              }
+
+              &:empty {
+                border: none;
+              }
+
+              .address-summary {
+                margin-bottom: 30px;
+                border: none;
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_303_6636)'%3E%3Cpath d='M11.9985 4.46289L3 12.1774V22.4996C3 22.9136 3.336 23.2496 3.75 23.2496H9.75V17.2496H14.25V23.2496H20.25C20.664 23.2496 21 22.9136 21 22.4996V12.1781L11.9985 4.46289ZM14.25 14.2496H9.75V10.4996H14.25V14.2496Z' fill='%237C7C7B'/%3E%3Cpath d='M11.9984 0.512695L6.74988 5.01195V2.25045H3.74988V7.5837L0.442383 10.4194L1.41888 11.5579L11.9984 2.4882L22.5809 11.5579L23.5574 10.4194L11.9984 0.512695Z' fill='%237C7C7B'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_303_6636'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+
+                @include textConfig($black, $primaryFont, 12, $fontRegular, 14, left, initial, 0);
+              }
+
+              .vtex-omnishipping-1-x-linkEdit {
+                position: absolute;
+                left: 12px;
+                bottom: 16px;
+                @include textConfig($darkest-gray, $primaryFont, 12, $fontBold, 16, left, initial, 0);
+              }
+            }
+          }
+
+          .vtex-omnishipping-1-x-address {
+            & > div {
+              @include display-flex(flex-start, center, row);
+              flex-wrap: wrap;
+
+              .input {
+                width: 100%;
+
+                &.ship-number {
+                  width: 94px;
+                  margin-right: 16px;
+                }
+
+                &.ship-complement {
+                  width: auto;
+                  flex-grow: 1;
+                }
+              }
+
+              & input {
+                @include size(100% !important, 40px);
+                box-sizing: border-box;
+                max-width: none;
+                padding: 0 5px 0 16px;
+                border: 1px solid $black;
+                border-radius: 8px;
+                box-shadow: none;
+                font-family: $primaryFont;
+                background-image: none;
+
+                @include textConfig($black, $primaryFont, 14, $fontRegular, 16, left, initial, 0);
+
+                &::placeholder {
+                  @include textConfig($dark-gray, $primaryFont, 14, $fontRegular, 16, left, initial, 0);
+                }
+
+                @include mq('768') {
+                  border: 1px solid $medium-gray;
+                }
+              }
+
+              & select {
+                height: 40px;
+              }
+
+              & label {
+                margin: 16px 0 5px 0;
+                @include textConfig($black, $primaryFont, 14, $fontBold, 16, left, initial, 0);
+              }
+            }
+          }
+
+          .btn-submit-wrapper {
+            .btn-go-to-payment {
+              background-image: none;
+              background: $green !important;
+              text-shadow: none;
+              box-shadow: none;
+              border: none;
+              border-radius: 8px;
+              @include size(100%, 40px);
+              @include display-flex(center, center, row);
+              box-sizing: border-box;
+              padding: 0;
+              margin: 0;
+              font-size: 0;
+              transition: all 300ms ease-in-out;
+
+              &::before {
+                content: 'Ir para pagamento';
+                @include textConfig($white, $primaryFont, 14, $fontExtraBold, 20, center, uppercase, 0);
+              }
+
+              &:hover {
+                background-color: $green-dark !important;
+              }
+            }
+          }
+        }
+
+        .shipping-summary-placeholder {
+          .shp-summary-group {
+            padding: 0;
+
+            > .shp-summary-group-title {
+              margin-top: 10px;
+              @include textConfig($black, $primaryFont, 14, $fontRegular, 18, left, initial, 0);
+            }
+
+            &-info {
+              border: none;
+              padding: 0;
+              @include textConfig($black, $primaryFont, 14, $fontRegular, 18, left, initial, 0);
+            }
+
+            &-address {
+              margin: 16px 0 14px 0;
+            }
+
+            &-price {
+              align-self: flex-end;
+              padding: 0;
+              @include textConfig($black, $primaryFont, 14, $fontBold, 18, left, initial, 0);
+            }
+          }
+        }
+      }
+    }
+
+    .link-change-shipping {
+      display: none;
+    }
+  }
+
+  .step.active {
+    .accordion-inner {
+      margin-top: 16px;
+      background: transparent;
+    }
+  }
+
+  .shipping-method {
+    &-wrapper {
+      width: 100%;
+      border: none;
+      box-shadow: none;
+
+      .shp-method-option {
+        border: 1px solid $black;
+        border-radius: 8px;
+
+        &-active {
+          border: 1px solid $black;
+        }
+
+        &-text {
+          @include textConfig($white, $primaryFont, 16, $fontExtraBold, 22, center, initial, 0);
+        }
+      }
+
+      #shipping-option {
+        &-delivery {
+          border-right: none;
+          border-radius: 8px 0 0 8px;
+
+          &.shp-method-option-inactive {
+            .shp-method-option-text {
+              color: $black;
+            }
+          }
+        }
+
+        &-pickup-in-point {
+          border-radius: 0 8px 8px 0;
+          border-left: 1px solid transparent;
+
+          &.shp-method-option-active {
+            .shp-method-option-text {
+              color: $white;
+            }
+          }
+
+          .shp-method-option-text {
+            color: $black;
+          }
+        }
+      }
+    }
+
+    &-toggle {
+      border: 1px solid transparent;
+      box-shadow: none;
+      background-color: $black;
+      top: 0;
+
+      &-pickup {
+        border-radius: 0 8px 8px 0;
+      }
+
+      &-delivery {
+        border-radius: 8px 0 0 8px;
+      }
+    }
+  }
+
+  .pickup-point {
+    &-info {
+      border: 1px solid $light-gray-03;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+
+      .pickup-marker-blue > path {
+        fill: $primary-color;
+      }
+    }
+
+    &-name {
+      @include textConfig($green, $primaryFont, 14, $fontBold, 20, left, initial, 0);
+    }
+
+    &-address {
+      .address-summary {
+        @include textConfig($black, $primaryFont, 12, $fontBold, 20, left, initial, 0);
+      }
+    }
+  }
+
+  .button-details-pickup-point {
+    @include textConfig($black, $primaryFont, 12, $fontBold, 20, left, initial, 0);
+    text-decoration: underline;
+  }
+
+  .button-change-pickup-point {
+    border: 1px solid $green;
+    border-radius: 8px;
+    transition: all 200ms ease-in;
+    text-shadow: none;
+    @include textConfig($green, $primaryFont, 12, $fontBold, 20, center, initial, 0);
+
+    &:hover {
+      background-color: $green;
+      color: $white;
+    }
+  }
+
+  .vtex-omnishipping-1-x-shippingSectionTitle {
+    @include textConfig($black, $primaryFont, 14, $fontBold, 16, left, initial, 0);
+  }
+
+  .shp-lean {
+    border: none;
+  }
+
+  .shp-lean-option-active {
+    background: $light-gray !important;
+    border: 1px solid transparent !important;
+    border-radius: 8px;
+
+    .vtex-omnishipping-1-x-svg > path {
+      fill: $primary-color;
+    }
+
+    .shp-option-text {
+      border: none;
+      @include textConfig($black, $primaryFont, 14, $fontRegular, 16, left, initial, 0);
+
+      &-price {
+        @include textConfig($light-green, $primaryFont, 13, $fontBold, 23, right, initial, 0);
+      }
+    }
+  }
+
+  .ask-for-geolocation {
+    &-title {
+      @include textConfig($black, $primaryFont, 14, $fontRegular, 16, center, initial, 0);
+    }
+
+    &-subtitle {
+      @include textConfig($black, $primaryFont, 12, $fontRegular, 16, center, initial, 0);
+    }
+
+    &-image-ask {
+      margin: 16px 0;
+
+      svg {
+        fill: $light-green;
+
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    &-cta {
+      margin: 0;
+    }
+  }
+
+  .btn-ask-for-geolocation-cta {
+    width: 100%;
+    background-color: $green;
+    box-shadow: none;
+    border: none;
+    border-radius: 8px;
+    text-shadow: none;
+    transition: all 200ms ease-in;
+    background-image: none;
+    @include textConfig($white, $primaryFont, 14, $fontBold, 23, center, initial, 0);
+
+    &:hover {
+      background-color: $light-green;
+    }
+  }
+}
+
+.vtex-omnishipping-1-x-btnDelivery {
+  background-color: $green !important;
+  @include textConfig($white, $primaryFont, 14, $fontBold, 23, center, initial, 0);
+  padding: 12.5px 0 !important;
+  transition: background-color 300ms ease-in-out;
+
+  &:hover {
+    background-color: $green-dark !important;
+  }
+}
+
+.popup-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-pj-alert {
+  background: white;
+  padding: 2rem 2.5rem 2.9375rem;
+  border-radius: 4px;
+  width: 90%;
+  max-width: 531px;
+  position: relative;
+  text-align: center;
+
+  @include mq('768') {
+    width: 100%;
+    padding: 2rem 3.25rem;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #4d4d4d;
+    cursor: pointer;
+  }
+
+  .popup-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+
+    @include mq('768') {
+      margin-bottom: 9px;
+    }
+  }
+
+  .popup-title {
+    @include textConfig($black, $primaryFont, 18, $fontSemiBold, 20, center, initial, 0);
+    margin-bottom: 10px;
+  }
+
+  .popup-text {
+    @include textConfig($black, $primaryFont, 14, $fontRegular, 20, center, initial, 0);
+    margin-bottom: 14px;
+  }
+
+  .popup-question {
+    @include textConfig($black, $primaryFont, 14, $fontRegular, 20, center, initial, 0);
+    margin-bottom: 15px;
+  }
+
+  .popup-actions {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 17px;
+
+    @include mq('768') {
+      flex-direction: row;
+      gap: 13px;
+    }
+
+    .btn-outline {
+      background: white;
+      border-radius: 8px;
+      border: 1px solid #b2b2b2;
+      cursor: pointer;
+      flex: 1;
+      padding: 0.875rem 1.2rem;
+      white-space: nowrap;
+
+      @include textConfig(#4d4d4d, $primaryFont, 16, $fontExtraBold, 20, center, initial, 0);
+    }
+
+    .btn-primary {
+      background: #008345;
+      border-radius: 8px;
+      border: 1px solid #008345;
+      cursor: pointer;
+      flex: 1;
+      padding: 0.875rem 1.2rem;
+      transition: background 300ms ease-in, border-color 300ms ease-in;
+      white-space: nowrap;
+
+      @include textConfig($white, $primaryFont, 16, $fontExtraBold, 20, center, initial, 0);
+
+      &:hover {
+        background: #005a30;
+        border-color: #005a30;
+      }
+    }
+  }
+}

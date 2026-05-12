@@ -1,0 +1,79 @@
+.cart-fixed-transition {
+  margin-top: 30px;
+
+  @include mq('992') {
+    @include size(100%);
+    margin: 0;
+  }
+
+  h2 {
+    @include textConfig($black, $primaryFont, 16, $fontBold, 27, right, initial, 20);
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    margin-bottom: 0;
+    padding: 0 0 0 30px;
+  }
+
+  .summary-cart-template-holder {
+    .cart {
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $light-gray-04;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $black;
+      }
+
+    }
+  }
+
+  .cart-active .table .totalizers-list .srp-summary-result {
+    width: 372px;
+    display: flex;
+  }
+
+  @media (min-width: 1025px) {
+    .cart-active .table .totalizers-list .srp-summary-result {
+      width: 319px;
+      display: flex;
+    }
+
+    .table .totalizers-list .Items {
+      width: 255px;
+      display: flex;
+      margin: 0;
+    }
+
+    &.affix {
+      position: relative;
+      top: 0;
+    }
+
+    .srp-delivery-info .srp-delivery-select-container {
+      width: 255px;
+    }
+  }
+}
+
+.cart-fixed {
+  @include mq('992') {
+    height: auto !important;
+  }
+}
+
+.mini-cart {
+
+  .summary-template-holder {
+    padding: 0;
+    background: transparent;
+  }
+
+  .payment-submit-wrap {
+    margin: 0;
+  }
+}

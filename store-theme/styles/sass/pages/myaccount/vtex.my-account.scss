@@ -1,0 +1,838 @@
+@import '../../global/';
+
+:global(.vtex-account) {
+  padding: 0 16px;
+
+  :global(.vtex-button:hover) {
+    background: none;
+  }
+
+  @include mq('1024') {
+    @include grid();
+  }
+
+  .newsletterBoxContainer > div {
+    padding: {
+      right: 0;
+      bottom: 10px;
+    }
+  }
+
+  .menu {
+    min-width: initial;
+    max-width: 100%;
+    height: 100%;
+    padding: 40px 20px 60px 0;
+
+    @include mq('640') {
+      margin: 0;
+      padding: 0;
+      margin-right: 50px;
+    }
+
+    @include mq('1024') {
+      margin-right: 70px;
+    }
+
+    :global(.vtex-my-account-1-x-userInfo) {
+      margin: 0 0 29px 0;
+    }
+
+    :global(.vtex-account_menu-link),
+    :global(.vtex-my-account-1-x-menuLink) {
+      @include textConfig($dark-grey, 14, $fontRegular, 17, left, initial, 0);
+      padding: 0 0 16px 0px;
+      margin: 0;
+      border: none;
+
+      &:hover,
+      &:global(.b--action-primary) {
+        color: $black;
+        font-weight: $fontBold;
+      }
+    }
+
+    .userGreeting,
+    .userName {
+      @include textConfig(
+        $primary-color,
+        16,
+        $fontExtraBold,
+        20,
+        left,
+        initial,
+        0
+      );
+      margin: 0;
+    }
+  }
+
+  :global(.vtex-my-account-1-x-userImage) {
+    background: url("data:image/svg+xml,%3Csvg width='66' height='66' viewBox='0 0 66 66' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M33 66C51.2254 66 66 51.2254 66 33C66 14.7746 51.2254 0 33 0C14.7746 0 0 14.7746 0 33C0 51.2254 14.7746 66 33 66Z' fill='%23F5F5F5'/%3E%3Cg opacity='0.4'%3E%3Cpath d='M55.2608 51.3837C54.6138 50.2629 53.8051 49.2436 52.8608 48.3587C51.8564 47.4471 50.6866 46.7363 49.4148 46.2647C48.0074 45.7417 46.5161 45.4811 45.0148 45.4957C44.1424 45.5868 43.3146 45.9266 42.6298 46.4747C41.9148 46.9297 41.0778 47.4467 40.1448 48.0247C39.1327 48.6084 38.0534 49.067 36.9308 49.3907C34.3738 50.21 31.6248 50.21 29.0678 49.3907C27.9463 49.0666 26.8681 48.6079 25.8568 48.0247C24.9328 47.4537 24.0948 46.9327 23.3688 46.4747C22.685 45.9262 21.8577 45.5863 20.9858 45.4957C19.4843 45.4823 17.993 45.744 16.5858 46.2677C15.3136 46.7398 14.1433 47.4505 13.1378 48.3617C12.1956 49.2441 11.3871 50.2591 10.7378 51.3747C10.0864 52.4796 9.55253 53.6496 9.1448 54.8657C9.0698 55.0957 9.0358 55.3387 8.9668 55.5717C12.0445 58.8624 15.7653 61.4859 19.8987 63.2795C24.032 65.0731 28.4896 65.9986 32.9953 65.9986C37.501 65.9986 41.9586 65.0731 46.0919 63.2795C50.2252 61.4859 53.9461 58.8624 57.0238 55.5717C56.9558 55.3417 56.9238 55.1047 56.8488 54.8777C56.4448 53.66 55.9125 52.4888 55.2608 51.3837Z' fill='%23656565'/%3E%3Cpath d='M22.8836 16.2037C22.8226 16.2647 22.7586 16.3267 22.6966 16.3907C20.0705 19.0706 18.5996 22.6731 18.5996 26.4252C18.5996 30.1773 20.0705 33.7798 22.6966 36.4597C23.9874 37.7762 25.5278 38.822 27.2277 39.5359C28.9276 40.2498 30.7528 40.6176 32.5966 40.6176C34.4403 40.6176 36.2655 40.2498 37.9654 39.5359C39.6653 38.822 41.2057 37.7762 42.4966 36.4597C45.1224 33.7797 46.5931 30.1772 46.5931 26.4252C46.5931 22.6732 45.1224 19.0707 42.4966 16.3907C39.9203 13.7655 36.4068 12.2711 32.7288 12.236C29.0508 12.2009 25.5095 13.6281 22.8836 16.2037Z' fill='%23656565'/%3E%3C/g%3E%3C/svg%3E%0A")
+      center no-repeat;
+    border-radius: 50%;
+
+    :global(svg) {
+      display: none;
+    }
+  }
+
+  :global(.vtex-account__page-body),
+  :global(.vtex-pageHeader__container) {
+    padding: 0;
+  }
+
+  :global(.vtex-account__page-body) {
+    :global(main.flex.flex-column-s.flex-row-ns) {
+      @include mq('768') {
+        display: flex;
+        flex-direction: column;
+
+        &:global(> div) {
+          width: 100%;
+        }
+      }
+
+      @include mq('1024') {
+        flex-direction: row;
+      }
+    }
+  }
+
+  :global(.vtex-account__page) {
+    width: 100%;
+    margin-left: 0;
+    margin: 34px 0 54px 0;
+
+    @include mq('768') {
+      margin: 0;
+    }
+  }
+
+  :global(.vtex-pageHeader__container) > div {
+    @include mq('1024') {
+      margin-top: 0;
+    }
+
+    :global(.vtex-pageHeader__title) {
+      @include text(4, $black, $fontExtraBold);
+    }
+  }
+
+  .profile {
+    > main {
+      margin-top: 10px;
+      gap: 16px;
+
+      @include mq('1024') {
+        margin-top: 18px;
+        gap: 20px;
+      }
+
+      > div {
+        border-radius: 8px;
+        border: 1px solid $white;
+        height: fit-content;
+      }
+    }
+  }
+
+  .profileBoxContainer {
+    :global(> div) {
+      padding: 0;
+    }
+  }
+
+  .boxContainer {
+    border: none;
+    position: relative;
+  }
+
+  .boxContainerBody {
+    padding: 25px 16px 0;
+
+    @include mq('768') {
+      padding: 20px;
+    }
+
+    :global(.vtex-input__label) {
+      @include text(5, $black, $fontBold);
+    }
+
+    :global(.address-summary .c-link.pointer) {
+      @include text(4, $black, $fontBold);
+      text-decoration: underline;
+    }
+
+    :global(.vtex-input-prefix__group) {
+      border: none;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      @include size(100%, 40px);
+      background: $white;
+
+      :global(input) {
+        background-color: $white;
+      }
+    }
+
+    .firstNameSubContainer,
+    .lastNameSubContainer,
+    .documentsSubContainer,
+    .emailContainer,
+    .genderSubContainer,
+    .dateOfBirthSubContainer,
+    .phoneNumberSubContainer {
+      margin-bottom: 18px;
+
+      @include mq('1024') {
+        margin-bottom: 36px;
+      }
+    }
+
+    .dataEntryLabel {
+      @include text(5, $black, $fontBold);
+      margin-bottom: 0;
+    }
+
+    .dataEntryChildren {
+      @include text(5, $dark-grey-02, $fontRegular);
+    }
+
+    .newsletterContainerTitle {
+      margin-bottom: 15px;
+      @include text(5, $black, $fontBold);
+    }
+
+    .newsletterContainerMessage,
+    .passwordBox :global(.vtex-checkbox__label) {
+      @include textConfig(
+        $dark-grey-02,
+        14,
+        $fontRegular,
+        19,
+        left,
+        initial,
+        0
+      );
+    }
+
+    .newsletterContainerMessage {
+      padding: 0;
+      margin-bottom: 18px;
+    }
+
+    .passwordBox {
+      :global(.vtex-checkbox__label) {
+        color: $dark-grey;
+      }
+
+      :global(.vtex-checkbox__line-container) {
+        @include display-flex(center, flex, center, row);
+      }
+
+      :global(.vtex-checkbox__inner-container) {
+        border-radius: 4px;
+        border: 1px solid $dark-grey;
+
+        &:global(.b--action-primary) {
+          background-color: $dark-grey;
+        }
+      }
+    }
+
+    :global(.vtex-dropdown__label) {
+      @include text(5, $black, $fontBold);
+    }
+
+    :global(.vtex-dropdown__container) {
+      border: 1px solid $dark-grey-02;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      @include size(100%, 40px);
+      background: $white;
+    }
+
+    :global(.vtex-address-form__postalCode-forgottenURL) {
+      :global(a) {
+        @include text(5, $black, $fontBold);
+        text-decoration: underline;
+      }
+    }
+
+    :global(.vtex-profile-form-3-x-profileContainer) {
+      @include button-primary();
+
+      :global(.vtex-button) {
+        @include size(100%, 48px);
+      }
+
+      :global(.vtex-profile-form-3-x-styleguideInput) {
+        padding-bottom: 15px;
+      }
+
+      :global(.vtex-input__label) {
+        @include text(5, $black, $fontBold);
+        font-family: $primaryFont;
+      }
+
+      :global(.vtex-input-prefix__group input),
+      :global(div.br2.bw1.relative.bg-white.ba) {
+        border: 1px solid $dark-grey-02;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        @include size(100%, 40px);
+      }
+
+      :global(.vtex-profile-form-3-x-toggleBusinessButtonWrapper) {
+        :global(.vtex-button) {
+          background: none;
+          border: none;
+          @include text(5, $black, $fontBold);
+          text-align: center;
+          text-decoration: underline;
+          font-family: $primaryFont;
+        }
+      }
+    }
+  }
+
+  .addressCreate,
+  .addressEdit {
+    @include button-primary();
+
+    :global(.vtex-button) {
+      height: 40px;
+
+      &:global(.bg-danger) {
+        background-color: $white;
+        border-color: $red;
+
+        :global(.vtex-button__label) {
+          color: $red;
+        }
+
+        &:hover {
+          background-color: $red;
+
+          :global(.vtex-button__label) {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .addressList {
+    .addressBox {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      > div {
+        width: 100%;
+
+        @include mq('1024') {
+          width: auto;
+        }
+      }
+
+      :global(.address-summary) {
+        @include text(5, $dark-grey, $fontRegular);
+        line-height: 29px;
+      }
+    }
+    .boxContainer {
+      border: 1px solid $white {
+        radius: 8px;
+      }
+      min-height: 232px;
+      width: 100%;
+
+      @include mq('1024') {
+        min-width: 407px;
+      }
+
+      .boxContainerBody {
+        padding: 16px;
+
+        :global(.lighter) {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .boxContainerFooter {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    :global(.vtex-button) {
+      border: 0;
+      height: 20px;
+      margin-bottom: 8px;
+      min-height: unset;
+
+      @include text(5, $dark-grey, $fontBold);
+    }
+  }
+
+  :global(.vtex-pageHeader-link__container) {
+    margin: 0 0 23px 0;
+
+    svg {
+      display: none;
+    }
+
+    span {
+      @include textConfig($dark-grey, 16, $fontBold, 20, left, initial, 0);
+      margin: 0;
+
+      &::before {
+        content: $icon-backbutton-arrow;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  // Hide My Account Sections
+  :global(.vtex-my-account-1-x-menuLinks) {
+    div > div:has([href='#/insurances']),
+    div > div:has([href='#/subscriptions']) {
+      display: none;
+    }
+  }
+}
+
+:global(.vtex-my-orders-app-3-x-orderHeader),
+:global(.vtex-my-orders-app-3-x-orderCard),
+:global(.vtex-my-orders-app-3-x-orderBody) {
+  border: none;
+
+  :global(div.cf.fr.db.w-100.w-30-ns.pt0-xl.pt5) {
+    @include mq('640') {
+      padding: 0;
+    }
+  }
+}
+
+:global(.vtex-my-orders-app-3-x-orderCard) {
+  border: 1px solid $white;
+  border-radius: 8px;
+  margin: 18px 0 25px;
+}
+
+:global(.vtex-my-orders-app-3-x-orderBody) {
+  padding: 24px 16px 16px;
+
+  @include mq('640') {
+    padding: 24px 16px;
+  }
+}
+
+:global(.vtex-my-orders-app-3-x-orderHeaderLabel) {
+  @include text(5, $black, $fontBold);
+}
+
+:global(.vtex-my-orders-app-3-x-orderId),
+:global(.vtex-my-orders-app-3-x-orderProductName),
+:global(.vtex-my-orders-app-3-x-orderHeaderValue) {
+  @include text(5, $dark-grey, $fontRegular);
+}
+
+:global(.vtex-my-orders-app-3-x-orderProductName) {
+  color: $black;
+}
+
+:global(.vtex-my-orders-app-3-x-orderId) {
+  @include mq('640') {
+    margin: 0;
+  }
+}
+
+:global(.vtex-my-orders-app-3-x-orderProductShipping) {
+  @include text(5, $dark-grey, $fontRegular);
+  margin: 3px 0 7px;
+
+  @include mq('640') {
+    margin: 7px 0;
+  }
+}
+
+:global(.vtex-my-orders-app-3-x-orderHeader) {
+  border-bottom: 1px solid $white;
+  padding: 20px 16px 16px;
+
+  @include mq('640') {
+    :global(> div) {
+      width: auto;
+    }
+
+    :global(div.absolute.dn.dib-ns.ml3.mt2) {
+      display: none;
+    }
+  }
+
+  :global(div.fl.mt3.mt0-ns.w-25-ns.w-100-s) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    @include mq('640') {
+      flex-direction: column;
+      float: right;
+      margin-top: 0;
+    }
+
+    :global(div.tr-ns.mt2-ns) {
+      position: relative;
+      line-height: 1;
+
+      @include mq('640') {
+        margin-top: 3px;
+      }
+    }
+
+    :global(div.bg-warning),
+    :global(div.bg-danger),
+    :global(div.bg-success),
+    :global(div.bg-muted-1) {
+      padding: 0;
+      background: none;
+
+      :global(span) {
+        @include text(5, $yellow, $fontBold);
+        background: none;
+      }
+    }
+
+    :global(div.bg-danger) {
+      :global(span) {
+        color: $red;
+      }
+    }
+
+    :global(div.bg-success) {
+      margin: 0;
+
+      :global(span) {
+        color: $success-green;
+      }
+    }
+
+    :global(div.bg-muted-1) {
+      :global(span) {
+        color: $dark-grey-02;
+      }
+    }
+  }
+
+  :global(div.fr.fl-ns.w-50) {
+    @include mq('640') {
+      margin-left: 94px;
+    }
+
+    :global(.vtex-my-orders-app-3-x-orderHeaderLabel),
+    :global(.vtex-my-orders-app-3-x-orderHeaderValue) {
+      @include mq('640', max) {
+        text-align: right;
+      }
+    }
+  }
+}
+
+:global(.vtex-my-orders-app-3-x-orderProduct) {
+  padding: 0;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: initial;
+
+  :global(div.v-top.dib.w-20.h-auto) {
+    margin-right: 8px;
+    width: auto;
+
+    img {
+      aspect-ratio: 1;
+      border-radius: 8px;
+      height: 64px;
+    }
+  }
+}
+
+:global(.vtex-my-orders-app-3-x-reorderBtn),
+:global(.vtex-my-orders-app-3-x-cancelBtn),
+:global(.vtex-my-orders-app-3-x-detailsBtn),
+:global(.vtex-my-orders-app-3-x-invoiceBtn) {
+  @include text(5, $black, $fontBold);
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  @include mq('640') {
+    justify-content: flex-end;
+  }
+}
+
+:global(.vtex-my-orders-app-3-x-detailsBtn) {
+  @include text(5, $dark-grey, $fontBold);
+  background-color: transparent;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 0;
+
+  :global(.db.pv2) {
+    padding: 0;
+  }
+}
+
+:global(.vtex-my-orders-app-3-x-reorderBtn) {
+  @include text(5, $black, $fontBold);
+
+  :global(svg) {
+    fill: $black;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+:global(.vtex-my-orders-app-3-x-invoiceBtn) {
+  color: $blue;
+}
+
+:global(.vtex-my-orders-app-3-x-cancelBtn) {
+  color: $red;
+}
+
+:global(.vtex-my-orders-app-3-x-orderProductQuantity),
+:global(.vtex-my-orders-app-3-x-orderProductValue) {
+  @include text(5, $black, $fontBold);
+}
+
+:global(.vtex-pageHeader__children) {
+  margin-bottom: 15px;
+}
+
+:global(.vtex-pageHeader__container) {
+  @include mq('768') {
+    :global(div.c-on-base.flex.flex-wrap.flex-row) {
+      margin: 0;
+    }
+  }
+
+  @include mq('1024') {
+    :global(.vtex-pageHeader-link__container) {
+      display: none;
+    }
+  }
+}
+
+:global(.vtex-my-cards-1-x-newCardButton),
+:global(.newAddressButton) {
+  @include mq('768') {
+    position: relative;
+  }
+
+  :global(.vtex-button) {
+    @include text(4, $dark-grey, $fontBold);
+    background: none;
+    border: none;
+    margin-top: 10px;
+    min-height: unset;
+
+    @include mq('768') {
+      margin: 0;
+    }
+
+    :global(.vtex-button__label) {
+      padding: 0 !important;
+    }
+  }
+}
+
+:global(.vtex-my-authentication-1-x-authenticationScreen_container) {
+  margin: 18px 0 40px;
+
+  :global(> div),
+  :global(> section) {
+    border: 1px solid $white !important                       {
+      radius: 8px !important;
+    }
+  }
+
+  @include mq('1024') {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 {
+      top: 18px;
+    }
+    :global(> div),
+    :global(> section) {
+      margin: 0;
+      position: relative;
+      width: calc(50% - 10px);
+    }
+
+    :global(> div) {
+      margin-right: 20px;
+    }
+  }
+
+  :global(.vtex-my-authentication-1-x-box_container) {
+    border: none;
+    position: relative;
+    @include textConfig($black, 16, $fontBold, 18, left, initial, 0);
+
+    :global(.vtex-my-authentication-1-x-maskedPassword_content),
+    :global(.vtex-my-authentication-1-x-loginSessionsBox_content) {
+      @include text(5, $dark-grey, $fontRegular);
+    }
+
+    :global(.vtex-my-authentication-1-x-box_footer) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      :global(.vtex-button) {
+        width: auto;
+        @include text(5, $dark-grey, $fontBold);
+      }
+    }
+
+    :global(.vtex-my-authentication-1-x-codeInput_container),
+    :global(.vtex-my-authentication-1-x-newPassInput_container) {
+      :global(.vtex-input__label) {
+        @include text(5, $black, $fontBold);
+      }
+
+      :global(.vtex-input-prefix__group) {
+        border: 1px solid $dark-grey-02;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        @include size(100%, 40px);
+        background: $white;
+
+        :global(input),
+        :global(.vtex-input__suffix) {
+          background: $white;
+        }
+      }
+    }
+
+    :global(.vtex-my-authentication-1-x-resendCodeButton_container) {
+      @include button-secondary();
+      height: 40px;
+    }
+
+    :global(.vtex_my-authentication_savePassButton_container) {
+      @include button-primary();
+      height: 40px;
+    }
+
+    :global(.vtex_my-authentication_maskedPassword_title),
+    :global(.vtex_my-authentication_loginSessionsBox_title) {
+      @include textConfig($black, 16, $fontBold, 18, left, initial, 0);
+      margin-bottom: 18px;
+    }
+  }
+}
+
+:global(.vtex_my-authentication_loginSessions_list) {
+  margin-top: 18px;
+  > div:first-child {
+    padding-left: 0;
+  }
+}
+//Order Defails
+:global(div.fl.w-40-ns.pv3.pl0) {
+  @include text(5, $black, $fontRegular);
+  width: 100%;
+
+  @include mq('768') {
+    width: 40%;
+  }
+
+  :global(time) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  :global(div.bg-warning),
+  :global(div.bg-danger),
+  :global(div.bg-success),
+  :global(div.bg-muted-1) {
+    background: none;
+    border: none;
+    padding: 0;
+
+    :global(span) {
+      @include text(5, $yellow, $fontBold);
+    }
+  }
+
+  :global(div.bg-danger) {
+    :global(span) {
+      color: $red;
+    }
+  }
+
+  :global(div.bg-success) {
+    :global(span) {
+      color: $success-green;
+    }
+  }
+
+  :global(div.bg-muted-1) {
+    :global(span) {
+      color: $dark-grey-02;
+    }
+  }
+}
+
+:global(ul.list.tl.tr-ns.ma0.pa0-s) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mq('768') {
+    float: right;
+  }
+
+  :global(.db.dib-ns.mr7-ns.mb5.mb0-ns) {
+    :global(svg) {
+      fill: $red;
+    }
+  }
+
+  :global(a) {
+    @include text(5, $red, $fontBold);
+  }
+}
+
+:global(.lfmaquinaseferramentas-custom-apps-0-x-optinCheckAllInput),
+:global(.lfmaquinaseferramentas-custom-apps-0-x-optinCheckbox),
+:global(.lfmaquinaseferramentas-custom-apps-0-x-optinCheckbox--false) {
+  &:checked {
+    background-color: $dark-gray;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDExIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik05LjEwNjA2IDAuNUM3LjM4NjExIDIuMTkzNDMgNS42NjQ2NiAzLjg4MDM1IDMuOTQxOTggNS41NzM5MUwxLjQxMTU1IDMuNDk5MzFMMCA1LjE2MjQzTDMuMzA1MDEgNy44Njg1MUw0LjA3OTYzIDguNUw0Ljc5MTA5IDcuODAwOTZDNi43NDggNS44NzQxIDguNzA2MjggMy45NTc5OSAxMC42NjY3IDIuMDI3OTdMOS4xMDU5IDAuNTAwMTI5TDkuMTA2MDYgMC41WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==');
+    background-size: 9px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+/* Cards Section */
+@import './sections/cards';

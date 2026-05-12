@@ -1,0 +1,30 @@
+{
+  "rich-text#inst-text-privacy-and-security-01": {
+    "title": "Texto 01",
+    "props": {
+      "text": "Lorem ipsum dolor sit amet. Id cumque quia est voluptatem quas quo magni nemo in commodi consequuntur cum veritatis nulla ea velit mollitia. Eum illo deleniti et delectus facilis ut nulla rerum sit enim perspiciatis et ipsam omnis ut quaerat optio et quia itaque.",
+      "blockClass": "inst-text"
+    }
+  },
+  "rich-text#inst-text-privacy-and-security-02": {
+    "title": "Texto 02",
+    "props": {
+      "text": "Lorem ipsum dolor sit amet. Id cumque quia est voluptatem quas quo magni nemo in commodi consequuntur cum veritatis nulla ea velit mollitia. Eum illo deleniti et delectus facilis ut nulla rerum sit enim perspiciatis et ipsam omnis ut quaerat optio et quia itaque.",
+      "blockClass": "inst-text"
+    }
+  },
+  "rich-text#inst-text-privacy-and-security-03": {
+    "title": "Texto 03",
+    "props": {
+      "text": "Lorem ipsum dolor sit amet. Id cumque quia est voluptatem quas quo magni nemo in commodi consequuntur cum veritatis nulla ea velit mollitia. Eum illo deleniti et delectus facilis ut nulla rerum sit enim perspiciatis et ipsam omnis ut quaerat optio et quia itaque.",
+      "blockClass": "inst-text"
+    }
+  },
+  "rich-text#inst-text-privacy-and-security-04": {
+    "title": "Texto 04",
+    "props": {
+      "text": "Lorem ipsum dolor sit amet. Id cumque quia est voluptatem quas quo magni nemo in commodi consequuntur cum veritatis nulla ea velit mollitia. Eum illo deleniti et delectus facilis ut nulla rerum sit enim perspiciatis et ipsam omnis ut quaerat optio et quia itaque.",
+      "blockClass": "inst-text"
+    }
+  }
+}

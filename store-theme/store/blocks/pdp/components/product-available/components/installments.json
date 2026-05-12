@@ -1,0 +1,15 @@
+{
+  "flex-layout.row#installments": {
+    "title": "Container Parcelas",
+    "props": {
+      "blockClass": "container__installments",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "conditional-measurement-unit#installments-pdp-square-meter",
+      "payment-modal"
+    ]
+  }
+}

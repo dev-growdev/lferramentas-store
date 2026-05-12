@@ -1,0 +1,9 @@
+{
+  "rich-text#inst-title-payment-methods": {
+    "title": "Título Principal",
+    "props": {
+      "text": "Formas de pagamento",
+      "blockClass": "inst-title"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.optin {
+	&Container {
+		@include display-flex(flex-start, flex, center, column);
+
+		@include mq("1026") {
+			padding-left: 15px;
+			width: 75%;
+		}
+	}
+
+	&Title {
+		@include textConfig($dark-gray, 14, $fontBold, 20, left, initial, 0);
+		margin-bottom: 3px;
+	}
+
+	&Subtitle {
+		@include textConfig($dark-gray, 12, $fontRegular, 20, left, initial, 0);
+		margin-bottom: 16px;
+	}
+
+	&CheckAll {
+		&Input {
+			margin-right: 8px;
+			border: 1px solid $dark-gray;
+			border-radius: 4px;
+			outline: none;
+			appearance: none;
+			@include size(16px);
+			cursor: pointer;
+		}
+
+		&Label {
+			@include textConfig($dark-gray, 14, $fontRegular, 20, left, initial, 0);
+		}
+	}
+
+	&Checkbox {
+		border: 1px solid $dark-gray;
+		border-radius: 4px;
+		outline: none;
+		appearance: none;
+		@include size(16px);
+		cursor: pointer;
+
+		&Wrapper {
+			width: 100%;
+			@include display-flex(center, flex, space-between, row);
+			margin-top: 16px;
+		}
+
+		&Title {
+			@include textConfig($dark-gray, 14, $fontBold, 16, left, initial, 0);
+		}
+
+		&Container {
+			@include display-flex(center, flex, center, row);
+		}
+
+		&Label {
+			@include textConfig($dark-gray, 14, $fontRegular, 16, left, initial, 0);
+			margin-left: 5px;
+		}
+
+		&--false {
+			margin-left: 36px;
+			border: 1px solid $dark-gray;
+			border-radius: 4px;
+			outline: none;
+			appearance: none;
+			@include size(16px);
+			cursor: pointer;
+		}
+	}
+}

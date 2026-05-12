@@ -1,0 +1,334 @@
+.floorcalc {
+  &-wrapper {
+    @include border-radius();
+    @include display-flex(center, flex, center, row);
+    margin-bottom: 16px;
+    border: 1px solid $dark-green;
+    cursor: pointer;
+
+    .floorcalc-modal-title-icon {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &-button-trigger {
+    background-color: transparent;
+    border: 0;
+    margin-left: 7px;
+    padding: 16px 0;
+    @include text(5, $dark-green, $fontBold);
+    font-size: 13px;
+    font-family: $primaryFont;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  &-overflow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $dark-gray;
+    opacity: 0.5;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+  }
+
+  &-modal {
+    position: fixed;
+    top: 50%;
+    bottom: 50%;
+    margin: auto;
+    background: $white;
+    z-index: 1010;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    @include size(90%, max-content);
+
+    @include mq("480") {
+      @include size(480px, max-content);
+    }
+
+    &__header {
+      @include display-flex(center, flex, flex-start, row);
+    }
+
+    &__title {
+      @include text(4, $black02);
+      margin-left: 8px;
+    }
+
+    &-close {
+      background-color: transparent;
+      border: 0;
+      padding: 0;
+      line-height: inherit;
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      cursor: pointer;
+    }
+
+    &-subTitle {
+      margin-top: 16px;
+      display: block;
+      @include text(4, $black02, $fontRegular);
+      text-align: center;
+
+      @include mq("480") {
+        margin-top: 24px;
+      }
+    }
+
+    &-body {
+      margin: 16px 0;
+      padding: 16px;
+      border: 1px solid $light-gray-06;
+      border-radius: 4px;
+
+      @include mq("480") {
+        padding: 24px;
+      }
+
+      &__title {
+        @include text(4, $black02);
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      &__container-input {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__element-versus {
+        @include text(4, $black02);
+        margin: 0 0 12px;
+      }
+
+      &__double-input,
+      &__single-input {
+        flex-wrap: wrap;
+        @include display-flex(flex-end, flex, space-between, row);
+
+        .floorcalc-modal-text {
+          @include text(4, $black02);
+          text-align: center;
+          margin-bottom: 8px;
+          display: block;
+        }
+
+        .floorcalc-modal-input {
+          @include size(131px, 44px);
+          background-color: $white02;
+          border: 1px solid $light-gray-06;
+          border-radius: 4px;
+          padding: 0 0 0 16px;
+          @include text(4, $black02, $fontRegular);
+          font-family: $primaryFont;
+          appearance: textfield;
+          -webkit-appearance: textfield;
+          -moz-appearance: textfield;
+          outline: none;
+
+          &::placeholder {
+            @include text(4, $black02, $fontRegular);
+            font-family: $primaryFont;
+            opacity: 0.5;
+          }
+
+          &::-webkit-inner-spin-button,
+          &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          @include mq("480") {
+            @include size(172px, 44px);
+          }
+        }
+      }
+
+      &__single-input {
+        justify-content: center;
+      }
+
+      &__or {
+        position: relative;
+        width: 100%;
+        border: 1px solid $light-gray-06;
+        margin: 35px 0 25px;
+        @include display-flex(center, flex, flex-start, row);
+
+        &-text {
+          @include text(4, $black02);
+          background: $white;
+          @include size(60px, 20px);
+          text-align: center;
+          @include abs-position(0, auto, 0, 50%);
+          transform: translateX(-50%);
+          z-index: 1;
+        }
+      }
+    }
+
+    &-footer {
+      &__primary-button {
+        cursor: pointer;
+        background-color: $dark-green;
+        border: 1px solid $dark-green;
+        @include size(100%, 44px);
+        @include border-radius();
+        @include textConfig($white, 16, $fontBold, 20, center, initial, 0);
+        letter-spacing: 0.1rem;
+        font-family: $secondaryFont;
+        @include transition();
+
+        &:hover {
+          border-color: $primary-color;
+          background-color: $primary-color;
+        }
+
+        :global(.vtex-button) {
+          cursor: pointer;
+          background-color: $dark-green;
+          border: 1px solid $dark-green;
+          @include size(100%);
+
+          :global(.vtex-add-to-cart-button-0-x-buttonText) {
+            @include textConfig($white, 16, $fontBold, 20, center, initial, 0);
+            letter-spacing: 0.1rem;
+            font-family: $secondaryFont;
+          }
+
+          :global(.vtex-button__label) {
+            @include textConfig($white, 16, $fontBold, 20, center, initial, 0);
+            font-family: $secondaryFont;
+            letter-spacing: 0.1rem;
+          }
+
+          &:hover {
+            border-color: $primary-color;
+            background-color: $primary-color;
+          }
+        }
+      }
+
+      &__secondary-button {
+        background-color: $white;
+        border-radius: 4px;
+        border: 1px solid $primary-color;
+        @include text(4, $primary-color);
+        @include size(100%, 44px);
+        text-align: center;
+        margin: 8px 0;
+
+        @include mq("480") {
+          @include size(215px, 44px);
+          margin: 0;
+          cursor: pointer;
+        }
+      }
+
+      &__final-result-1,
+      &__final-result-2,
+      &__final-result-3 {
+        @include display-flex(center, flex, space-between, row);
+      }
+
+      &__final-result-1 {
+        @include text(4, $dark-gray-03, $fontRegular);
+      }
+
+      &__final-result-2 {
+        @include text(4, $primary-color);
+        margin: 4px 0;
+      }
+
+      &__final-result-3 {
+        @include text(4, $black02);
+      }
+
+      &__warning {
+        background-color: $sand;
+        border-radius: 4px;
+        border: 0;
+        margin: 16px 0 8px;
+        padding: 8px 0;
+        @include display-flex(center, flex, center, row);
+
+        @include mq("480") {
+          margin: 20px 0;
+        }
+
+        &-icon {
+          background-image: url("data:image/svg+xml,%3Csvg width='13' height='18' viewBox='0 0 13 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6365 1.49006C9.88921 0.87121 9.01409 0.428144 8.07503 0.193188C7.13597 -0.0417674 6.15666 -0.062687 5.20855 0.131956C3.94612 0.388704 2.78788 1.01724 1.8808 1.93781C0.973723 2.85838 0.358681 4.02949 0.113713 5.30256C-0.0651778 6.2571 -0.0326705 7.23962 0.208916 8.18005C0.450502 9.12048 0.895216 9.99565 1.51134 10.7432C2.08314 11.3928 2.41089 12.2236 2.43767 13.0912V15.5456C2.43767 16.1965 2.6945 16.8208 3.15167 17.2811C3.60883 17.7414 4.22887 18 4.8754 18H8.12569C8.77221 18 9.39226 17.7414 9.84942 17.2811C10.3066 16.8208 10.5634 16.1965 10.5634 15.5456V13.2466C10.5907 12.2887 10.9402 11.3686 11.5548 10.6368C12.6315 9.29569 13.1391 7.58092 12.9671 5.86513C12.7952 4.14935 11.9577 2.57121 10.6365 1.4737V1.49006ZM8.93826 15.5456C8.93826 15.7626 8.85265 15.9707 8.70027 16.1241C8.54788 16.2775 8.3412 16.3637 8.12569 16.3637H4.8754C4.65989 16.3637 4.45321 16.2775 4.30082 16.1241C4.14843 15.9707 4.06282 15.7626 4.06282 15.5456V14.7275H8.93826V15.5456ZM10.2953 9.62231C9.47822 10.598 9.00153 11.8166 8.93826 13.0912H7.31312V10.6368C7.31312 10.4198 7.22751 10.2117 7.07512 10.0583C6.92273 9.90486 6.71605 9.81866 6.50054 9.81866C6.28504 9.81866 6.07835 9.90486 5.92597 10.0583C5.77358 10.2117 5.68797 10.4198 5.68797 10.6368V13.0912H4.06282C4.04138 11.8379 3.58092 10.6325 2.7627 9.68776C2.22286 9.03652 1.85985 8.25555 1.70905 7.421C1.55825 6.58644 1.62482 5.72678 1.90226 4.92584C2.1797 4.1249 2.65855 3.41001 3.29211 2.85088C3.92568 2.29175 4.69233 1.90747 5.51733 1.7355C6.22634 1.58852 6.95897 1.60234 7.66201 1.77597C8.36506 1.9496 9.02088 2.27868 9.58186 2.73931C10.1428 3.19994 10.5949 3.78057 10.9052 4.43904C11.2156 5.0975 11.3764 5.81729 11.376 6.54613C11.382 7.66686 10.9998 8.75465 10.2953 9.62231Z' fill='%23CD3C26'/%3E%3C/svg%3E%0A");
+          @include size(27px, 18px);
+          background-repeat: no-repeat;
+          margin: 0 16px;
+
+          @include mq("1024") {
+            @include size(18px);
+          }
+        }
+
+        &-text {
+          @include text(5, $primary-color, $fontRegular)
+        }
+      }
+
+      &__error {
+        @include text(4, $red-01, $fontSemiBold);
+        margin: 8px auto 0;
+        @include display-flex(center, flex, center, row);
+      }
+
+      &__multi-option {
+        display: block;
+        margin: 21px 0;
+
+        .floorcalc-modal-footer__option-ten,
+        .floorcalc-modal-footer__option-fifteen {
+          display: inline-block;
+          @include text(5, $black02, $fontRegular);
+          vertical-align: middle;
+          cursor: pointer;
+
+          &::before {
+            content: '';
+            display: inline-block;
+            @include size(17px);
+            border: 1px solid $black02;
+            border-radius: 4px;
+            margin-right: 8px;
+            vertical-align: middle;
+          }
+
+          &--active {
+            &::before {
+              background-color: $black02;
+              content: url("data:image/svg+xml,%3Csvg class='vtex__icon-check ' width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='none'%3E%3Cpath d='M10.8 4.4L9.4 3L5.4 7L3.4 5L2 6.4L5.4 9.8L10.8 4.4Z' fill='%23fff'%3E%3C/path%3E%3C/svg%3E");
+              text-align: center;
+            }
+          }
+        }
+
+        .floorcalc-modal-footer__option-fifteen {
+          margin-top: 21px;
+        }
+      }
+    }
+  }
+}
+
+:global(.vtex-product-summary-2-x-containerNormal) {
+  .floorcalc-wrapper {
+    margin: 8px 0 0;
+
+    @include mq("1024") {
+      margin: 0;
+    }
+  }
+}

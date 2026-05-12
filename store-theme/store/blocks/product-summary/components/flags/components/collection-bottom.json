@@ -1,0 +1,24 @@
+{
+    "vtex.product-highlights@2.x:product-highlights#collection-bottom": {
+        "title": "Container Coleção Laranja",
+        "props": {
+            "type": "collection"
+        },
+        "children": [
+            "product-highlight-wrapper#collection-bottom"
+        ]
+    },
+    "product-highlight-wrapper#collection-bottom": {
+        "props": {
+            "blockClass": "collection__bottom"
+        },
+        "children": [
+            "product-highlight-text#collection-bottom"
+        ]
+    },
+    "product-highlight-text#collection-bottom": {
+        "props": {
+            "message": "{highlightName}"
+        }
+    }
+}

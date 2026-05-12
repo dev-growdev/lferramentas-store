@@ -1,0 +1,9 @@
+{
+  "rich-text#inst-title-contact-us": {
+    "title": "Título Principal",
+    "props": {
+      "text": "Fale conosco",
+      "blockClass": "inst-title"
+    }
+  }
+}

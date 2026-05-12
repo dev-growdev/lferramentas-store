@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap');
+
+.btnActiveModal {
+  background: none;
+  border: none;
+  color: #303030;
+  font-weight: 700;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: 'Figtree', sans-serif;
+  padding: 10px 0 0 0;
+  margin: 0;
+  @media (min-width: 1026px) {
+    padding: 0 0 0 8px;
+    text-decoration: none;
+  }
+}
+
+.modalPagamentoOverlay {
+  margin-bottom: 20px;
+  width: 100vw;
+  height: 110vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 999;
+  padding: 0 20px;
+}
+
+.modalPagamentoContainer {
+  position: relative;
+  pointer-events: all;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 100%;
+  max-width: 465px;
+  min-height: 468px;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0px;
+  background: rgb(255, 255, 255);
+  padding: 25px;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.modalPagamentoTabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalPagamentoTabsList {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalPagamentoTabHead {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  height: 70px;
+  max-height: 70px;
+  min-height: 70px;
+  width: 105px;
+}
+
+.modalPagamentoTabHead:nth-child(2) {
+  margin: 0 25px;
+}
+
+.imgModalPagamento {
+  height: 20px;
+}
+
+.labelModalPagamento p {
+  margin: 10px 0;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.labelModalPagamento {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.modalPagamentoTabHead .tabActive {
+  color: #000;
+  position: relative;
+}
+
+.modalPagamentoTabHead .tabActive p {
+  font-weight: 700;
+  color: #000;
+}
+
+.modalPagamentoTabHead .labelModalPagamento.tabActive::after {
+  content: '';
+  width: 100px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  border-radius: 10px;
+  height: 3px;
+  background-color: #ffe72e;
+  transform: translate(-50%);
+}
+
+.modalPagamentoTabHead .imgModalPagamento.tabActive svg path,
+.modalPagamentoTabHead .imgModalPagamento.tabActive svg rect {
+  fill: #000;
+}
+
+@media (min-width: 1024px) {
+  .modalPagamentoOverlay {
+    height: 100vh;
+  }
+  .btnActiveModal {
+    padding-left: 0;
+  }
+}
+.modalPagamentoOverlay .modalPagamentoContainer {
+  padding: 0 16px 16px;
+}
+
+@media (min-width: 400px) {
+  .modalPagamentoOverlay .modalPagamentoContainer {
+    padding: 0 24px 24px;
+  }
+}
+
+.modalPagamentoOverlay .containerHeaderTitle,
+.modalPagamentoOverlay .containerHeaderTitle * {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  background: unset;
+  line-height: 0;
+}
+.modalPagamentoOverlay .containerHeaderTitle button {
+  cursor: pointer;
+}
+.modalPagamentoOverlay .containerHeaderTitle {
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  min-height: 55px;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin-bottom: 20px;
+  margin-left: -24px;
+  margin-right: -24px;
+}
+.modalPagamentoOverlay .containerHeaderTitle .titleModalPagamento {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #303030;
+}
+.modalPagamentoOverlay .tabContent {
+  font-size: 14px;
+  overflow: hidden;
+  padding: 0;
+  line-height: 140%;
+}
+
+@media (min-width: 992px) {
+  .modalPagamentoOverlay .tabContent {
+    max-height: 678px;
+  }
+}
+
+.modalPagamentoOverlay .tabContent::-webkit-scrollbar {
+  width: 6px;
+}
+.modalPagamentoOverlay .tabContent::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  border-radius: 8px;
+}
+.modalPagamentoOverlay .tabContent::-webkit-scrollbar-thumb {
+  background: #cd3c26;
+  border-radius: 8px;
+}
+.modalPagamentoOverlay .tabContent table * {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 13px;
+}
+.modalPagamentoOverlay .tabContent .textPrice {
+  font-weight: 600;
+}
+.modalPagamentoOverlay .textPriceBoleto {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.containerCartaoCredito td {
+  position: relative;
+}
+.containerCartaoCredito .tablePaymentCard > :first-child > :nth-child(2) {
+  max-width: 100px;
+}
+
+.containerCartaoCredito td strong {
+  display: none;
+  color: #cd3c26;
+  font-weight: 600;
+}
+@media (min-width: 500px) {
+  .containerCartaoCredito td strong {
+    margin-left: 3px;
+  }
+}
+.containerCartaoCredito .label {
+  font-weight: 700;
+}
+.containerCartaoCredito .cards {
+  line-height: 0;
+}
+.containerCartaoCredito .cards ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+}
+.containerCartaoCredito .cards ul,
+.containerCartaoCredito .cards ul * {
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.containerCartaoCredito .cards ul {
+  width: 100%;
+}
+
+.containerCartaoCredito .cards ul img {
+  height: 16px;
+  width: 38px;
+  object-fit: contain;
+  margin: 0 auto 8px auto;
+}
+
+.containerCartaoCredito .cards ul li {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.containerCartaoCredito .cards ul li span {
+  text-align: center;
+  font-size: 12px;
+  line-height: 13px;
+}
+
+.mainOverlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.376);
+  position: fixed;
+  top: 0;
+  pointer-events: all;
+  left: 0;
+  z-index: 999;
+}
+
+.tabContent::-webkit-scrollbar {
+  width: 6px;
+}
+.tabContent::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  border-radius: 18px;
+}
+.tabContent::-webkit-scrollbar-thumb {
+  background: #cd3c26;
+  border-radius: 8px;
+}

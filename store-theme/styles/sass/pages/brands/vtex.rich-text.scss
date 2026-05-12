@@ -1,0 +1,21 @@
+@import '../../global/';
+
+.wrapper {
+  &--shop-by-brand-title {
+    width: 100%;
+  }
+}
+
+.heading,
+.paragraph {
+  &--shop-by-brand-title {
+    @include textConfig($black, 20, $fontBold, 26, center, initial, 0);
+    margin: 26px 0 16px ;
+
+    @include mq('1026') {
+      font-size: 26px;
+      line-height: 34px;
+      margin: 16px 0 30px;
+    }
+  }
+}

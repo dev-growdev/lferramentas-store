@@ -1,0 +1,59 @@
+.freeShippingContainer {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 21px;
+  }
+  
+  .freeShippingLabel {
+    color: black;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+  .freeShippingBar {
+    height: 4px;
+    max-width: 100%;
+    background: #dbe1e8;
+    position: relative;
+    margin-top: 8px;
+    border-radius: 25px;
+  }
+  
+  .freeShippingBarColor {
+    height: 4px;
+    border-radius: 25px;
+    background: #555A44;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: width 1s;
+  }
+  
+  .iconFrete {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .iconFrete svg {
+    position: absolute;
+    bottom: -4px;
+    right: -10px;
+  }
+  
+  .freeShippingLabel {
+    font-family: 'Figtree';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000;
+    text-align: left;
+  }
+
+  .freeShippingMissingAmount {
+    font-weight: 700;
+    color: #CD3C26;
+  }
+  

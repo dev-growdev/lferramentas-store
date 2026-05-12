@@ -1,0 +1,213 @@
+@import '../../global/';
+
+.container {
+  padding: 0;
+  margin-bottom: 20px;
+
+  @include mq('1025') {
+    width: calc(100% - 20px);
+
+    & :global(.vtex-reviews-and-ratings-2-x-summaryContainer) {
+      display: none;
+    }
+
+    & :global(.vtex-flex-layout-0-x-flexRowContent--ratings-mobile) {
+      & :global(.vtex-reviews-and-ratings-2-x-summaryContainer) {
+        display: flex !important;
+        justify-content: flex-end;
+        align-items: baseline;
+      }
+    }
+  }
+}
+
+.reviewsHeading {
+  @include textConfig($primary-color, 16, $fontSemiBold, 19, left, initial, 0);
+  border-bottom: 0px !important;
+}
+
+.writeReviewButton {
+  @include textConfig($black02, 14, $fontRegular, 18, left, initial, 0);
+
+  &:hover {
+    color: $black02;
+  }
+}
+
+.reviewCommentsContainer {
+  & :first-child {
+    border-width: 1px;
+    @include font-size(14);
+    font-weight: $fontRegular;
+  }
+}
+
+.reviewComment {
+  .reviewCommentMessage {
+    margin-top: 10px;
+  }
+}
+
+.reviewsOrderBy {
+  & :global(.vtex-dropdown__caption) {
+    @include textConfig($black, 10, $fontBold, 7, center, uppercase, 20);
+  }
+
+  & :global(.vtex-dropdown__container) {
+    border-radius: 5px;
+    border: 1px solid $light-gray-01;
+  }
+}
+
+.inlineContainer {
+  margin-left: 0rem;
+  justify-content: center;
+  display: flex;
+  margin-top: 11px;
+
+  /* Prevent layout shift when loading */
+  min-height: 23px;
+
+  @include mq("1026") {
+    margin-top: 0;
+  }
+}
+
+.reviewsPaging {
+  & :first-child:nth-child(odd) {
+    @include textConfig($white, 12, $fontSemiBold, 14, left, initial, 10);
+  }
+
+  & :global(.vtex__icon-caret-left) {
+    width: 8px;
+    height: 7px;
+    color: $white;
+  }
+
+  .reviewComment {
+    border-bottom: 1px solid $light-gray-02;
+  }
+
+  & :global(.vtex__icon-caret-right) {
+    width: 8px;
+    height: 7px;
+    color: $white;
+  }
+
+  & :global(.vtex-button) {
+    border-radius: 50px;
+    background: $primary-color;
+  }
+}
+
+.star--filled {
+  color: $yellow;
+}
+
+.star--empty {
+  color: $yellow;
+}
+
+.review__comment {
+  border: 0px;
+  border-color: none;
+}
+
+.reviewCommentUser {
+  @include textConfig($black, 14, $fontSemiBold, 14, left, initial, 40);
+}
+
+.reviewsRatingCount,
+.reviewsRatingAverage {
+  @include textConfig($dark-gray-02, 12, $fontSemiBold, 14, left, initial, 40);
+}
+
+.writeReviewContainer {
+  .loginLink {
+    @include textConfig($black, 12, $fontSemiBold, 14, left, initial, 40);
+    text-decoration: underline;
+    padding: 0;
+  }
+}
+
+.reviewCommentMessage,
+.reviewInfo,
+.reviewDateSubmitted,
+.reviewDateValue,
+.reviewAuthorBy,
+.reviewAuthorName {
+  @include textConfig($black, 12, $fontMedium !important, 14, left, initial, 40);
+  font-size: 12px !important;
+}
+
+
+.summaryContainer {
+
+  &,
+  & :first-child {
+    font-size: 18px;
+    line-height: 22px;
+
+    @include mq('1025') {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
+
+
+.summaryTotalReviews {
+  @include textConfig($black, 12, $fontSemiBold, 14, left, initial, 40);
+}
+
+.formSection {
+  @include button-primary();
+
+  & :global(.vtex-button) {
+    border-radius: 8px;
+    @include transition();
+  }
+}
+
+.reviewsOrderBy {
+  :global(.vtex-dropdown__arrow) {
+    color: $primary-color;
+  }
+
+  :global(.vtex-styleguide-9-x-dropdown) {
+    margin-right: 20px;
+  }
+}
+
+.formContainer {
+  background-color: $white;
+  box-shadow: none;
+  padding: 0;
+  max-width: 600px;
+
+  :global(.vtex-card) {
+    background-color: $white;
+    box-shadow: none !important;
+    padding: 0;
+  }
+
+  :global(.vtex-input__label),
+  :global(.vtex-textarea__label) {
+    @include font-size(14);
+  }
+
+  :global(.vtex-textarea__label) {
+    margin-top: 8px;
+  }
+
+  :global(.vtex-styleguide-9-x-input),
+  :global(.vtex-textarea__input) {
+    background-color: $white;
+  }
+
+  :global(.vtex-textarea__input),
+  :global(.vtex-input-prefix__group) {
+    border: 1px solid $light-gray-07;
+    border-radius: 10px;
+  }
+}

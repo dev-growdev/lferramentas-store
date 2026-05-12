@@ -1,0 +1,112 @@
+.containerSliderRelated {
+}
+
+.slide {
+  padding: 0 5px;
+}
+
+.paginationDotsContainer {
+  margin: 0;
+  top: unset;
+  bottom: 25px;
+}
+
+.paginationDot {
+  background-color: white;
+  height: 7px !important;
+  width: 7px !important;
+  border: 1px solid #4D4D4D;
+}
+.paginationDot--isActive {
+  background: #ffe72e;
+}
+.slideChildrenContainer {
+  padding: 5px 0;
+}
+.sliderLayoutContainer {
+  padding-bottom: 50px;
+}
+
+.sliderArrows {
+  background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='15' transform='rotate(-180 15 15)' fill='%23656565'/%3E%3Cpath d='M14.4665 20L15.8946 18.5814L12.7967 15.4835L21 15.4835L21 13.4811L12.7967 13.4811L15.8946 10.3831L14.4665 8.9646L8.96138 14.4823L14.4665 20Z' fill='white'/%3E%3C/svg%3E%0A") !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30px;
+  width: 30px;
+}
+
+.sliderLeftArrow {
+  background: url('data:image/svg+xml,<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="29.5" y="29.5" width="29" height="29" rx="4.5" transform="rotate(-180 29.5 29.5)" fill="white" stroke="%23EBE6D7"/><g clip-path="url(%23clip0_2714_8243)"><path d="M15.18 19.7097C15.58 19.3197 15.58 18.6797 15.18 18.2897L12.8 15.9097L20 15.9097C20.55 15.9097 21 15.4597 21 14.9097C21 14.3597 20.55 13.9097 20 13.9097L12.8 13.9097L15.18 11.5297C15.57 11.1397 15.57 10.4997 15.18 10.1097C14.79 9.71969 14.15 9.71969 13.76 10.1097L9.68 14.1997C9.28 14.5997 9.28 15.2397 9.68 15.6297L13.76 19.6997C14.15 20.0897 14.79 20.0897 15.18 19.6997L15.18 19.7097Z" fill="%23555A44"/></g><defs><clipPath id="clip0_2714_8243"><rect width="11.62" height="10.21" fill="white" transform="translate(21 20) rotate(-180)"/></clipPath></defs></svg>') !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 31px;
+  height: 30px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 5px;
+  transition: all 400ms;
+}
+
+.sliderLeftArrow:hover {
+  background: url('data:image/svg+xml,<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" transform="matrix(-1,1.2246467991473532e-16,-1.2246467991473532e-16,-1,0,0)"><rect x="0.5" y="0.5" width="29" height="29" rx="4.5" fill="%23555A44" stroke="%23EBE6D7"></rect><g clip-path="url(%23clip0_1708_12847)"><path d="M14.82 10.2903C14.42 10.6803 14.42 11.3203 14.82 11.7103L17.2 14.0903H10C9.45 14.0903 9 14.5403 9 15.0903C9 15.6403 9.45 16.0903 10 16.0903H17.2L14.82 18.4703C14.43 18.8603 14.43 19.5003 14.82 19.8903C15.21 20.2803 15.85 20.2803 16.24 19.8903L20.32 15.8003C20.72 15.4003 20.72 14.7603 20.32 14.3703L16.24 10.3003C15.85 9.91031 15.21 9.91031 14.82 10.3003V10.2903Z" fill="%23EBE6D7"></path></g><defs><clipPath id="clip0_1708_12847"><rect width="11.62" height="10.21" fill="white" transform="translate(9 10)"></rect></clipPath></defs></svg>') !important;
+}
+
+.sliderRightArrow {
+  background: url('data:image/svg+xml,<svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.900391" y="0.5" width="29" height="29" rx="4.5" fill="white" stroke="%23EBE6D7"/><g clip-path="url(%23clip0_2714_8239)"><path d="M15.2204 10.2903C14.8204 10.6803 14.8204 11.3203 15.2204 11.7103L17.6004 14.0903H10.4004C9.85039 14.0903 9.40039 14.5403 9.40039 15.0903C9.40039 15.6403 9.85039 16.0903 10.4004 16.0903H17.6004L15.2204 18.4703C14.8304 18.8603 14.8304 19.5003 15.2204 19.8903C15.6104 20.2803 16.2504 20.2803 16.6404 19.8903L20.7204 15.8003C21.1204 15.4003 21.1204 14.7603 20.7204 14.3703L16.6404 10.3003C16.2504 9.91031 15.6104 9.91031 15.2204 10.3003V10.2903Z" fill="%23555A44"/></g><defs><clipPath id="clip0_2714_8239"><rect width="11.62" height="10.21" fill="white" transform="translate(9.40039 10)"/></clipPath></defs></svg>') !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 31px;
+  height: 30px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 5px;
+  transition: all 400ms;
+}
+
+.sliderRightArrow:hover {
+  background: url('data:image/svg+xml,<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="29" height="29" rx="4.5" fill="%23555A44" stroke="%23EBE6D7"/><g clip-path="url(%23clip0_1708_12847)"><path d="M14.82 10.2903C14.42 10.6803 14.42 11.3203 14.82 11.7103L17.2 14.0903H10C9.45 14.0903 9 14.5403 9 15.0903C9 15.6403 9.45 16.0903 10 16.0903H17.2L14.82 18.4703C14.43 18.8603 14.43 19.5003 14.82 19.8903C15.21 20.2803 15.85 20.2803 16.24 19.8903L20.32 15.8003C20.72 15.4003 20.72 14.7603 20.32 14.3703L16.24 10.3003C15.85 9.91031 15.21 9.91031 14.82 10.3003V10.2903Z" fill="%23EBE6D7"/></g><defs><clipPath id="clip0_1708_12847"><rect width="11.62" height="10.21" fill="white" transform="translate(9 10)"/></clipPath></defs></svg>') !important;
+}
+.sliderArrows:hover {
+  opacity: 1;
+}
+
+.sliderArrows:disabled {
+  opacity: 0.4;
+}
+
+.sliderArrows:disabled:hover {
+  opacity: 0.4;
+}
+
+.caretIcon {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .containerSliderRelated {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .sliderRightArrow {
+    right: 20px;
+  }
+
+  .sliderLeftArrow {
+    left: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sliderRightArrow {
+    right: -5px;
+  }
+
+  .sliderLeftArrow {
+    left: -5px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .containerSliderRelated {
+    padding: 0;
+  }
+}

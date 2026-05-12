@@ -1,0 +1,22 @@
+{
+  "link#solicitar-cotacao-link": {
+    "title": "Link de Soliticar Cotação",
+    "props": {
+      "blockClass": "quote-link",
+      "buttonProps": {
+        "variant": "primary",
+        "size": "regular"
+      },
+      "displayMode": "button",
+      "href": "https://ajuda.lfmaquinaseferramentas.com.br/hc/pt-br/requests/new?ticket_form_id=9506437163671",
+      "label": "Solicitar Cotação",
+      "target": "_blank"
+    }
+  },
+  "flex-layout.row#solicitar-cotacao-link": {
+    "props": {
+      "blockClass": "footer-solicitar-cotacao"
+    },
+    "children": ["link#solicitar-cotacao-link"]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "store.custom#collections": {
+    "blocks": [
+      "search-result-layout.customQuery#collections"
+    ]
+  },
+  "search-result-layout.customQuery#collections": {
+    "title": "Página de Coleções",
+    "blocks": [
+      "search-result-layout.desktop#departamento",
+      "search-result-layout.mobile#departamento",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "context": {
+        "maxItemsPerPage": 20,
+        "mapField": "productClusterIds",
+        "queryField": "167",
+        "hideUnavailableItems": false,
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "default"
+      }
+    }
+  }
+}

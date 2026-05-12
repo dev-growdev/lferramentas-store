@@ -1,0 +1,33 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.container--empty__minicart--titulo, .container--empty__minicart--text {
+  margin: 0 auto;
+}
+
+.wrapper--empty__minicart--text {
+  width: 100%;
+}
+
+.paragraph--empty__minicart--titulo {
+  padding: 0 20px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+.paragraph--empty__minicart--text {
+  padding: 0 20px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}

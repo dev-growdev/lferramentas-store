@@ -1,0 +1,1547 @@
+{
+  "definitions": {
+    "GlobalProvider": {
+      "type": "object",
+      "title": "APP de flags",
+      "label": "selecione o quadrante",
+      "properties": {
+        "schemaAppFlagCustom": {
+          "title": "App Flags Gerenciaveis",
+          "type": "object",
+          "properties": {
+            "quadrantTopRight": {
+              "title": "Quadrante Superior - Direita",
+              "type": "array",
+              "maxItems": 1,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "__editorItemTitle": {
+                    "title": "Quadrante - Direita",
+                    "type": "string",
+                    "disabled": true,
+                    "default": "configurar quadrante"
+                  },
+                  "_screen_config_position": {
+                    "$ref": "app:lfmaquinaseferramentas.custom-flags#/PositioningContainerRef"
+                  },
+                  "collection": {
+                    "$ref": "app:lfmaquinaseferramentas.custom-flags#/CollectionRef"
+                  }
+                }
+              }
+            },
+            "quadrantTopLeft": {
+              "title": "Quadrante Superior - Esquerda",
+              "type": "array",
+              "maxItems": 1,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "__editorItemTitle": {
+                    "title": "Quadrante - Esquerda",
+                    "type": "string",
+                    "disabled": true,
+                    "default": "configurar quadrante"
+                  },
+                  "_screen_config_position": {
+                    "$ref": "app:lfmaquinaseferramentas.custom-flags#/PositioningContainerRef"
+                  },
+                  "collection": {
+                    "$ref": "app:lfmaquinaseferramentas.custom-flags#/CollectionRef"
+                  }
+                }
+              }
+            },
+            "quadrantBottom": {
+              "title": "Quadrante - Inferior",
+              "type": "array",
+              "maxItems": 1,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "__editorItemTitle": {
+                    "type": "string",
+                    "disabled": true,
+                    "title": "Quadrante - Inferior",
+                    "default": "configurar quadrante"
+                  },
+                  "_screen_config_position": {
+                    "$ref": "app:lfmaquinaseferramentas.custom-flags#/PositioningBottomContainerRef"
+                  },
+                  "collection": {
+                    "$ref": "app:lfmaquinaseferramentas.custom-flags#/CollectionBottomRef"
+                  }
+                }
+              }
+            },
+            "quadrantTopRightMobile": {
+              "title": "Mobile - Quadrante Superior - Direita",
+              "type": "array",
+              "maxItems": 1,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "__editorItemTitle": {
+                    "title": "Mobile - Quadrante - Direita",
+                    "type": "string",
+                    "disabled": true,
+                    "default": "configurar quadrante"
+                  },
+                  "_screen_config_position": {
+                    "$ref": "app:lfmaquinaseferramentas.custom-flags#/PositioningContainerRef"
+                  },
+                  "collection": {
+                    "$ref": "app:lfmaquinaseferramentas.custom-flags#/CollectionRef"
+                  }
+                }
+              }
+            },
+            "quadrantTopLeftMobile": {
+              "title": "Mobile - Quadrante Superior - Esquerda",
+              "type": "array",
+              "maxItems": 1,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "__editorItemTitle": {
+                    "title": "Mobile - Quadrante - Esquerda",
+                    "type": "string",
+                    "disabled": true,
+                    "default": "configurar quadrante"
+                  },
+                  "_screen_config_position": {
+                    "$ref": "app:lfmaquinaseferramentas.custom-flags#/PositioningContainerRef"
+                  },
+                  "collection": {
+                    "$ref": "app:lfmaquinaseferramentas.custom-flags#/CollectionRef"
+                  }
+                }
+              }
+            },
+            "quadrantBottomMobile": {
+              "title": "Mobile - Quadrante - Inferior",
+              "type": "array",
+              "maxItems": 1,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "__editorItemTitle": {
+                    "type": "string",
+                    "disabled": true,
+                    "title": "Mobile - Quadrante - Inferior",
+                    "default": "configurar quadrante"
+                  },
+                  "_screen_config_position": {
+                    "$ref": "app:lfmaquinaseferramentas.custom-flags#/PositioningBottomContainerRef"
+                  },
+                  "collection": {
+                    "$ref": "app:lfmaquinaseferramentas.custom-flags#/CollectionBottomRef"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "CollectionRef": {
+    "title": "Lista De Flags",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "dependencies": {
+        "typeContent": {
+          "oneOf": [
+            {
+              "properties": {
+                "typeContent": {
+                  "enum": [
+                    "image"
+                  ]
+                },
+                "items": {
+                  "title": "Configurar Imagem",
+                  "minItems": 0,
+                  "type": "array",
+                  "maxItems": 1,
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "src": {
+                        "title": "Imagem",
+                        "type": "string",
+                        "widget": {
+                          "ui:widget": "image-uploader"
+                        }
+                      },
+                      "alt": {
+                        "title": "Texto Alternativo",
+                        "type": "string",
+                        "default": "Imagem"
+                      },
+                      "commonPropsBetweenContentAndImage": {
+                        "type": "object",
+                        "properties": {
+                          "width": {
+                            "title": "Largura",
+                            "type": "string",
+                            "enum": [
+                              "auto",
+                              "20px",
+                              "25px",
+                              "30px",
+                              "35px",
+                              "40px",
+                              "45px",
+                              "50px",
+                              "55px",
+                              "60px",
+                              "65px",
+                              "70px",
+                              "75px",
+                              "80px",
+                              "85px",
+                              "90px",
+                              "95px",
+                              "100px",
+                              "105px",
+                              "110px",
+                              "115px",
+                              "120px",
+                              "125px",
+                              "130px",
+                              "135px",
+                              "140px",
+                              "145px",
+                              "150px",
+                              "155px",
+                              "160px",
+                              "165px",
+                              "170px",
+                              "175px",
+                              "180px",
+                              "185px",
+                              "190px",
+                              "195px",
+                              "200px"
+                            ],
+                            "enumNames": [
+                              "Largura automática",
+                              "20",
+                              "25",
+                              "30",
+                              "35",
+                              "40",
+                              "45",
+                              "50",
+                              "55",
+                              "60",
+                              "65",
+                              "70",
+                              "75",
+                              "80",
+                              "85",
+                              "90",
+                              "95",
+                              "100",
+                              "105",
+                              "110",
+                              "115",
+                              "120",
+                              "125",
+                              "130",
+                              "135",
+                              "140",
+                              "145",
+                              "150",
+                              "155",
+                              "160",
+                              "165",
+                              "170",
+                              "175",
+                              "180",
+                              "185",
+                              "190",
+                              "195",
+                              "200"
+                            ],
+                            "default": "auto",
+                            "ui:widget": "select"
+                          },
+                          "height": {
+                            "title": "Altura",
+                            "description": "Altura do conteúdo. Exemplo: 50. Caso o conteúdo seja maior que a altura definida, ele será cortado. Caso não seja passado nenhum valor, o conteúdo assumira o tamanho original.",
+                            "type": "string",
+                            "enum": [
+                              "auto",
+                              "20px",
+                              "25px",
+                              "30px",
+                              "35px",
+                              "40px",
+                              "45px",
+                              "50px",
+                              "55px",
+                              "60px",
+                              "65px",
+                              "70px",
+                              "75px",
+                              "80px"
+                            ],
+                            "enumNames": [
+                              "Altura automática",
+                              "20",
+                              "25",
+                              "30",
+                              "35",
+                              "40",
+                              "45",
+                              "50",
+                              "55",
+                              "60",
+                              "65",
+                              "70",
+                              "75",
+                              "80"
+                            ],
+                            "default": "auto",
+                            "ui:widget": "select"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "properties": {
+                "typeContent": {
+                  "enum": [
+                    "createContent"
+                  ]
+                },
+                "items": {
+                  "title": "Configurar Conteúdo",
+                  "minItems": 0,
+                  "type": "array",
+                  "maxItems": 1,
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "__editorItemTitle": {
+                        "title": "Titulo Identificação Site Editor",
+                        "type": "string",
+                        "description": "Opcional. Esse titulo será usado para identificar a flag na visualização da lista de flags",
+                        "default": "flag custom"
+                      },
+                      "text": {
+                        "title": "Texto",
+                        "type": "string",
+                        "description": "Texto que será exibido na badge",
+                        "default": "Black Friday"
+                      },
+                      "fontWeight": {
+                        "title": "Peso Da Fonte",
+                        "description": "O peso da fonte que sera exibida na badge. Caso não seja informado, o peso padrão será 400",
+                        "type": "string",
+                        "default": "400",
+                        "enum": [
+                          "200",
+                          "400",
+                          "700"
+                        ],
+                        "enumNames": [
+                          "light",
+                          "medium",
+                          "bold"
+                        ]
+                      },
+                      "fontSize": {
+                        "title": "Tamanho Da Fonte",
+                        "type": "string",
+                        "enum": [
+                          "12px",
+                          "14px",
+                          "16px",
+                          "18px"
+                        ],
+                        "enumNames": [
+                          "12",
+                          "14",
+                          "16",
+                          "18",
+                          "20"
+                        ],
+                        "default": "12px"
+                      },
+                      "color": {
+                        "title": "Cor da Fonte",
+                        "type": "string",
+                        "description": "Cor do texto que será exibido na flag.",
+                        "default": "#FFFFFF",
+                        "widget": {
+                          "ui:widget": "color"
+                        }
+                      },
+                      "backgroundColor": {
+                        "title": "Cor de Fundo",
+                        "type": "string",
+                        "description": "Cor de fundo da flag.",
+                        "default": "#000000",
+                        "widget": {
+                          "ui:widget": "color"
+                        }
+                      },
+                      "borderRadius": {
+                        "title": "Arredondamento",
+                        "type": "string",
+                        "description": "O conteúdo da badge será arredondado. Caso não seja informado, o conteúdo não será arredondado",
+                        "enum": [
+                          "0px",
+                          "4px",
+                          "8px",
+                          "15px / 50%"
+                        ],
+                        "enumNames": [
+                          "Sem Arredondamento",
+                          "Minimo",
+                          "Medio",
+                          "Maximo"
+                        ],
+                        "ui:widget": "select"
+                      },
+                      "commonPropsBetweenContentAndImage": {
+                        "type": "object",
+                        "properties": {
+                          "width": {
+                            "title": "Largura",
+                            "type": "string",
+                            "enum": [
+                              "auto",
+                              "20px",
+                              "25px",
+                              "30px",
+                              "35px",
+                              "40px",
+                              "45px",
+                              "50px",
+                              "55px",
+                              "60px",
+                              "65px",
+                              "70px",
+                              "75px",
+                              "80px",
+                              "85px",
+                              "90px",
+                              "95px",
+                              "100px",
+                              "105px",
+                              "110px",
+                              "115px",
+                              "120px",
+                              "125px",
+                              "130px",
+                              "135px",
+                              "140px",
+                              "145px",
+                              "150px",
+                              "155px",
+                              "160px",
+                              "165px",
+                              "170px",
+                              "175px",
+                              "180px",
+                              "185px",
+                              "190px",
+                              "195px",
+                              "200px"
+                            ],
+                            "enumNames": [
+                              "Largura automática",
+                              "20",
+                              "25",
+                              "30",
+                              "35",
+                              "40",
+                              "45",
+                              "50",
+                              "55",
+                              "60",
+                              "65",
+                              "70",
+                              "75",
+                              "80",
+                              "85",
+                              "90",
+                              "95",
+                              "100",
+                              "105",
+                              "110",
+                              "115",
+                              "120",
+                              "125",
+                              "130",
+                              "135",
+                              "140",
+                              "145",
+                              "150",
+                              "155",
+                              "160",
+                              "165",
+                              "170",
+                              "175",
+                              "180",
+                              "185",
+                              "190",
+                              "195",
+                              "200"
+                            ],
+                            "default": "auto",
+                            "ui:widget": "select"
+                          },
+                          "height": {
+                            "title": "Altura",
+                            "description": "Altura do conteúdo. Exemplo: 50. Caso o conteúdo seja maior que a altura definida, ele será cortado. Caso não seja passado nenhum valor, o conteúdo assumirá o tamanho original.",
+                            "type": "string",
+                            "enum": [
+                              "auto",
+                              "20px",
+                              "25px",
+                              "30px",
+                              "35px",
+                              "40px",
+                              "45px",
+                              "50px",
+                              "55px",
+                              "60px",
+                              "65px",
+                              "70px",
+                              "75px",
+                              "80px"
+                            ],
+                            "enumNames": [
+                              "Altura automática",
+                              "20",
+                              "25",
+                              "30",
+                              "35",
+                              "40",
+                              "45",
+                              "50",
+                              "55",
+                              "60",
+                              "65",
+                              "70",
+                              "75",
+                              "80"
+                            ],
+                            "default": "auto",
+                            "ui:widget": "select"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "properties": {
+                "typeContent": {
+                  "enum": [
+                    false
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "properties": {
+        "__editorItemTitle": {
+          "title": "Titulo",
+          "type": "string",
+          "description": "Campo opcional. Ele será utilizado para identificar a Flag atual na lista de flags.",
+          "default": "Conteúdo Padrão"
+        },
+        "isActive": {
+          "title": "Exibir Conteúdo",
+          "type": "boolean",
+          "description": "Defina se o conteúdo será exibido ou não.",
+          "default": true
+        },
+        "priority": {
+          "title": "Prioridade",
+          "type": "number",
+          "default": "0"
+        },
+        "withoutLink": {
+          "title": "Desativar sistema de vinculações e fazer com que o conteúdo seja exibido em todos os produtos",
+          "type": "boolean"
+        },
+        "_screen_config_links": {
+          "title": "Configurar Vinculações Do Conteúdo",
+          "minItems": 1,
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "title": "Conteúdo",
+            "type": "object",
+            "properties": {
+              "__editorItemTitle": {
+                "type": "string",
+                "disabled": true,
+                "title": "Vinculações do Conteúdo",
+                "default": "editar vinculações"
+              },
+              "linksByBrand": {
+                "title": "Vinculações por Marca",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "marca"
+                    },
+                    "value": {
+                      "title": "Id Marca",
+                      "type": "number",
+                      "description": "O ID da Marca que será vinculada ao produto.",
+                      "default": "123"
+                    }
+                  }
+                }
+              },
+              "linksByPromotionDiscount": {
+                "title": "Vinculações por Promoção De Desconto",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "promoção"
+                    },
+                    "value": {
+                      "title": "Nome Promoção",
+                      "type": "string",
+                      "description": "O nome da promoção que será vinculada ao produto.",
+                      "default": "20% de desconto"
+                    }
+                  }
+                }
+              },
+              "linksByCategory": {
+                "title": "Vinculações por Categoria",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "categoria"
+                    },
+                    "value": {
+                      "title": "Id Produto",
+                      "type": "number",
+                      "description": "O ID da marca que será vinculada ao produto.",
+                      "default": "123"
+                    }
+                  }
+                }
+              },
+              "linksByProduct": {
+                "title": "Vinculações por id do Produto",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "produto"
+                    },
+                    "value": {
+                      "title": "Id Produto",
+                      "type": "number",
+                      "description": "O ID do produto que será vinculada ao produto.",
+                      "default": "123"
+                    }
+                  }
+                }
+              },
+              "linksByCollection": {
+                "title": "Vinculações por Coleção",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "coleção"
+                    },
+                    "value": {
+                      "title": "Id Coleção",
+                      "type": "number",
+                      "description": "O ID da coleção que será vinculada ao produto.",
+                      "default": "123"
+                    }
+                  }
+                }
+              },
+              "linksBySpecification": {
+                "title": "Vinculações por Especificação",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "especificação"
+                    },
+                    "name": {
+                      "title": "Nome Especificação",
+                      "type": "string",
+                      "description": "O nome da especificação que será vinculada ao produto.",
+                      "default": "123"
+                    },
+                    "value": {
+                      "title": "Valor Especificação",
+                      "type": "string",
+                      "description": "O valor da especificação que será vinculada ao produto.",
+                      "default": "123"
+                    }
+                  }
+                }
+              },
+              "linksByVariation": {
+                "title": "Vinculações por Variação",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "variação"
+                    },
+                    "name": {
+                      "title": "Nome Variação",
+                      "type": "string",
+                      "description": "O nome da variação que será vinculada ao produto.",
+                      "default": "123"
+                    },
+                    "value": {
+                      "title": "Valor Variação",
+                      "type": "string",
+                      "description": "O valor da variação que será vinculada ao produto.",
+                      "default": "123"
+                    }
+                  }
+                }
+              },
+              "linksBySKU": {
+                "title": "Vinculações por id do SKU",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "sku"
+                    },
+                    "value": {
+                      "title": "ID do sku",
+                      "type": "string",
+                      "description": "ID do sku para vinculação da flag.",
+                      "default": "123"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "typeContent": {
+          "title": "Tipo da flag",
+          "type": "string",
+          "enum": [
+            "image",
+            "createContent"
+          ],
+          "default": "image",
+          "enumNames": [
+            "Imagem",
+            "Criar o meu próprio conteúdo"
+          ],
+          "widget": {
+            "ui:widget": "radio"
+          }
+        }
+      }
+    }
+  },
+  "CollectionBottomRef": {
+    "title": "Lista De Flags",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "dependencies": {
+        "typeContent": {
+          "oneOf": [
+            {
+              "properties": {
+                "typeContent": {
+                  "enum": [
+                    "image"
+                  ]
+                },
+                "items": {
+                  "title": "Configurar Imagem",
+                  "minItems": 0,
+                  "type": "array",
+                  "maxItems": 1,
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "src": {
+                        "title": "Imagem",
+                        "type": "string",
+                        "widget": {
+                          "ui:widget": "image-uploader"
+                        }
+                      },
+                      "alt": {
+                        "title": "Texto Alternativo",
+                        "type": "string",
+                        "default": "Imagem"
+                      },
+                      "commonPropsBetweenContentAndImage": {
+                        "type": "object",
+                        "properties": {
+                          "width": {
+                            "title": "Largura",
+                            "type": "string",
+                            "enum": [
+                              "auto",
+                              "widthRestOfLine",
+                              "widthAllLine",
+                              "widthHalfLine",
+                              "widthOneThird",
+                              "20px",
+                              "25px",
+                              "30px",
+                              "35px",
+                              "40px",
+                              "45px",
+                              "50px",
+                              "55px",
+                              "60px",
+                              "65px",
+                              "70px",
+                              "75px",
+                              "80px",
+                              "85px",
+                              "90px",
+                              "95px",
+                              "100px",
+                              "105px",
+                              "110px",
+                              "115px",
+                              "120px",
+                              "125px",
+                              "130px",
+                              "135px",
+                              "140px",
+                              "145px",
+                              "150px",
+                              "155px",
+                              "160px",
+                              "165px",
+                              "170px",
+                              "175px",
+                              "180px",
+                              "185px",
+                              "190px",
+                              "195px",
+                              "200px"
+                            ],
+                            "enumNames": [
+                              "ocupar somente o espaço do conteúdo",
+                              "ocupar todo o espaço restante da linha",
+                              "ocupar toda a linha",
+                              "ocupar metade da linha",
+                              "ocupar 1/3 da linha",
+                              "20",
+                              "25",
+                              "30",
+                              "35",
+                              "40",
+                              "45",
+                              "50",
+                              "55",
+                              "60",
+                              "65",
+                              "70",
+                              "75",
+                              "80",
+                              "85",
+                              "90",
+                              "95",
+                              "100",
+                              "105",
+                              "110",
+                              "115",
+                              "120",
+                              "125",
+                              "130",
+                              "135",
+                              "140",
+                              "145",
+                              "150",
+                              "155",
+                              "160",
+                              "165",
+                              "170",
+                              "175",
+                              "180",
+                              "185",
+                              "190",
+                              "195",
+                              "200"
+                            ],
+                            "default": "auto",
+                            "ui:widget": "select"
+                          },
+                          "height": {
+                            "title": "Altura",
+                            "description": "Altura do conteúdo. Exemplo: 50. Caso o conteúdo seja maior que a altura definida, ele será cortado. Caso não seja passado nenhum valor, o conteúdo assumira o tamanho original.",
+                            "type": "string",
+                            "enum": [
+                              "auto",
+                              "20px",
+                              "25px",
+                              "30px",
+                              "35px",
+                              "40px",
+                              "45px",
+                              "50px",
+                              "55px",
+                              "60px",
+                              "65px",
+                              "70px",
+                              "75px",
+                              "80px"
+                            ],
+                            "enumNames": [
+                              "Altura Automatica",
+                              "20",
+                              "25",
+                              "30",
+                              "35",
+                              "40",
+                              "45",
+                              "50",
+                              "55",
+                              "60",
+                              "65",
+                              "70",
+                              "75",
+                              "80"
+                            ],
+                            "default": "auto",
+                            "ui:widget": "select"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "properties": {
+                "typeContent": {
+                  "enum": [
+                    "createContent"
+                  ]
+                },
+                "items": {
+                  "title": "Configurar Conteúdo",
+                  "minItems": 0,
+                  "type": "array",
+                  "maxItems": 1,
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "__editorItemTitle": {
+                        "title": "Titulo Identificação Site Editor",
+                        "type": "string",
+                        "description": "Opcional. Esse titulo será usado para identificar a flag na visualização da lista de flags",
+                        "default": "flag custom"
+                      },
+                      "text": {
+                        "title": "Texto",
+                        "type": "string",
+                        "description": "Texto que será exibido na badge",
+                        "default": "Black Friday"
+                      },
+                      "fontWeight": {
+                        "title": "Peso Da Fonte",
+                        "description": "O peso da fonte que sera exibida na badge. Caso não seja informado, o peso padrão será 400",
+                        "type": "string",
+                        "default": "400",
+                        "enum": [
+                          "200",
+                          "400",
+                          "700"
+                        ],
+                        "enumNames": [
+                          "light",
+                          "medium",
+                          "bold"
+                        ]
+                      },
+                      "fontSize": {
+                        "title": "Tamanho Da Fonte",
+                        "type": "string",
+                        "enum": [
+                          "12px",
+                          "14px",
+                          "16px",
+                          "18px"
+                        ],
+                        "enumNames": [
+                          "12",
+                          "14",
+                          "16",
+                          "18",
+                          "20"
+                        ],
+                        "default": "12px"
+                      },
+                      "color": {
+                        "title": "Cor da Fonte",
+                        "type": "string",
+                        "description": "Cor do texto que será exibido na flag.",
+                        "default": "#FFFFFF",
+                        "widget": {
+                          "ui:widget": "color"
+                        }
+                      },
+                      "backgroundColor": {
+                        "title": "Cor de Fundo",
+                        "type": "string",
+                        "description": "Cor de fundo da flag.",
+                        "default": "#000000",
+                        "widget": {
+                          "ui:widget": "color"
+                        }
+                      },
+                      "borderRadius": {
+                        "title": "Arredondamento",
+                        "type": "string",
+                        "description": "O conteúdo da badge será arredondado. Caso não seja informado, o conteúdo não será arredondado",
+                        "enum": [
+                          "0px",
+                          "4px",
+                          "8px",
+                          "15px / 50%"
+                        ],
+                        "enumNames": [
+                          "Sem Arredondamento",
+                          "Minimo",
+                          "Medio",
+                          "Maximo"
+                        ],
+                        "ui:widget": "select"
+                      },
+                      "commonPropsBetweenContentAndImage": {
+                        "type": "object",
+                        "properties": {
+                          "width": {
+                            "title": "Largura",
+                            "type": "string",
+                            "enum": [
+                              "auto",
+                              "widthRestOfLine",
+                              "widthAllLine",
+                              "widthHalfLine",
+                              "widthOneThird",
+                              "20px",
+                              "25px",
+                              "30px",
+                              "35px",
+                              "40px",
+                              "45px",
+                              "50px",
+                              "55px",
+                              "60px",
+                              "65px",
+                              "70px",
+                              "75px",
+                              "80px",
+                              "85px",
+                              "90px",
+                              "95px",
+                              "100px",
+                              "105px",
+                              "110px",
+                              "115px",
+                              "120px",
+                              "125px",
+                              "130px",
+                              "135px",
+                              "140px",
+                              "145px",
+                              "150px",
+                              "155px",
+                              "160px",
+                              "165px",
+                              "170px",
+                              "175px",
+                              "180px",
+                              "185px",
+                              "190px",
+                              "195px",
+                              "200px"
+                            ],
+                            "enumNames": [
+                              "ocupar somente o espaço do conteúdo",
+                              "ocupar todo o espaço restante da linha",
+                              "ocupar toda a linha",
+                              "ocupar metade da linha",
+                              "ocupar 1/3 da linha",
+                              "20",
+                              "25",
+                              "30",
+                              "35",
+                              "40",
+                              "45",
+                              "50",
+                              "55",
+                              "60",
+                              "65",
+                              "70",
+                              "75",
+                              "80",
+                              "85",
+                              "90",
+                              "95",
+                              "100",
+                              "105",
+                              "110",
+                              "115",
+                              "120",
+                              "125",
+                              "130",
+                              "135",
+                              "140",
+                              "145",
+                              "150",
+                              "155",
+                              "160",
+                              "165",
+                              "170",
+                              "175",
+                              "180",
+                              "185",
+                              "190",
+                              "195",
+                              "200"
+                            ],
+                            "default": "auto",
+                            "ui:widget": "select"
+                          },
+                          "height": {
+                            "title": "Altura",
+                            "description": "Altura do conteúdo. Exemplo: 50. Caso o conteúdo seja maior que a altura definida, ele será cortado. Caso não seja passado nenhum valor, o conteúdo assumira o tamanho original.",
+                            "type": "string",
+                            "enum": [
+                              "auto",
+                              "20px",
+                              "25px",
+                              "30px",
+                              "35px",
+                              "40px",
+                              "45px",
+                              "50px",
+                              "55px",
+                              "60px",
+                              "65px",
+                              "70px",
+                              "75px",
+                              "80px"
+                            ],
+                            "enumNames": [
+                              "Altura Automatica",
+                              "20",
+                              "25",
+                              "30",
+                              "35",
+                              "40",
+                              "45",
+                              "50",
+                              "55",
+                              "60",
+                              "65",
+                              "70",
+                              "75",
+                              "80"
+                            ],
+                            "default": "auto",
+                            "ui:widget": "select"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "properties": {
+                "typeContent": {
+                  "enum": [
+                    false
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "properties": {
+        "__editorItemTitle": {
+          "title": "Titulo",
+          "type": "string",
+          "description": "Campo opcional. Ele será utilizado para identificar a Flag atual na lista de flags.",
+          "default": "Conteúdo Padrão"
+        },
+        "isActive": {
+          "title": "Exibir Conteúdo",
+          "type": "boolean",
+          "description": "Defina se o conteúdo será exibido ou não.",
+          "default": true
+        },
+        "priority": {
+          "title": "Prioridade",
+          "type": "number",
+          "default": "0"
+        },
+        "withoutLink": {
+          "title": "Desativar sistema de vinculações e fazer com que o conteúdo seja exibido em todos os produtos",
+          "type": "boolean"
+        },
+        "_screen_config_links": {
+          "title": "Configurar Vinculações Do Conteúdo",
+          "minItems": 1,
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "title": "Conteúdo",
+            "type": "object",
+            "properties": {
+              "__editorItemTitle": {
+                "type": "string",
+                "disabled": true,
+                "title": "Vinculações do Conteúdo",
+                "default": "editar vinculações"
+              },
+              "linksByBrand": {
+                "title": "Vinculações por Marca",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "marca"
+                    },
+                    "value": {
+                      "title": "Id Marca",
+                      "type": "number",
+                      "description": "O ID da Marca que será vinculada ao produto.",
+                      "default": "123"
+                    }
+                  }
+                }
+              },
+              "linksByPromotionDiscount": {
+                "title": "Vinculações por Promoção De Desconto",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "promoção"
+                    },
+                    "value": {
+                      "title": "Nome Promoção",
+                      "type": "string",
+                      "description": "O nome da promoção que será vinculada ao produto.",
+                      "default": "20% de desconto"
+                    }
+                  }
+                }
+              },
+              "linksByCategory": {
+                "title": "Vinculações por Categoria",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "categoria"
+                    },
+                    "value": {
+                      "title": "Id Produto",
+                      "type": "number",
+                      "description": "O ID da marca que será vinculada ao produto.",
+                      "default": "123"
+                    }
+                  }
+                }
+              },
+              "linksByProduct": {
+                "title": "Vinculações por id do Produto",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "produto"
+                    },
+                    "value": {
+                      "title": "Id Produto",
+                      "type": "number",
+                      "description": "O ID do produto que será vinculada ao produto.",
+                      "default": "123"
+                    }
+                  }
+                }
+              },
+              "linksByCollection": {
+                "title": "Vinculações por Coleção",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "coleção"
+                    },
+                    "value": {
+                      "title": "Id Coleção",
+                      "type": "number",
+                      "description": "O ID da coleção que será vinculada ao produto.",
+                      "default": "123"
+                    }
+                  }
+                }
+              },
+              "linksBySpecification": {
+                "title": "Vinculações por Especificação",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "especificação"
+                    },
+                    "name": {
+                      "title": "Nome Especificação",
+                      "type": "string",
+                      "description": "O nome da especificação que será vinculada ao produto.",
+                      "default": "123"
+                    },
+                    "value": {
+                      "title": "Valor Especificação",
+                      "type": "string",
+                      "description": "O valor da especificação que será vinculada ao produto.",
+                      "default": "123"
+                    }
+                  }
+                }
+              },
+              "linksByVariation": {
+                "title": "Vinculações por Variação",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "variação"
+                    },
+                    "name": {
+                      "title": "Nome Variação",
+                      "type": "string",
+                      "description": "O nome da variação que será vinculada ao produto.",
+                      "default": "123"
+                    },
+                    "value": {
+                      "title": "Valor Variação",
+                      "type": "string",
+                      "description": "O valor da variação que será vinculada ao produto.",
+                      "default": "123"
+                    }
+                  }
+                }
+              },
+              "linksBySKU": {
+                "title": "Vinculações por id do SKU",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "__editorItemTitle": {
+                      "title": "Titulo Identificação Site Editor",
+                      "type": "string",
+                      "description": "Opcional. Esse titulo será usado para identificar qual foi a vinculação criada para que o match ocorra pelo HTML e também para facilitar a visualização na lista de vinculações",
+                      "default": "sku"
+                    },
+                    "value": {
+                      "title": "ID do sku",
+                      "type": "string",
+                      "description": "ID do sku para vinculação da flag.",
+                      "default": "123"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "typeContent": {
+          "title": "Tipo da flag",
+          "type": "string",
+          "enum": [
+            "image",
+            "createContent"
+          ],
+          "default": "image",
+          "enumNames": [
+            "Imagem",
+            "Criar o meu próprio conteúdo"
+          ],
+          "widget": {
+            "ui:widget": "radio"
+          }
+        }
+      }
+    }
+  },
+  "PositioningContainerRef": {
+    "title": "Espaçamento",
+    "type": "object",
+    "properties": {
+      "horizontalDistance": {
+        "title": "Distância Horizontal",
+        "type": "string",
+        "enum": [
+          "0px",
+          "5px",
+          "10px",
+          "15px",
+          "20px",
+          "25px",
+          "30px"
+        ],
+        "enumNames": [
+          "Não Aplicar",
+          "5",
+          "10",
+          "15",
+          "20",
+          "25",
+          "30"
+        ],
+        "default": "0px",
+        "ui:widget": "select"
+      },
+      "verticalDistance": {
+        "title": "Distância Vertical",
+        "type": "string",
+        "enum": [
+          "0px",
+          "5px",
+          "10px",
+          "15px",
+          "20px",
+          "25px",
+          "30px"
+        ],
+        "enumNames": [
+          "Não Aplicar",
+          "5",
+          "10",
+          "15",
+          "20",
+          "25",
+          "30"
+        ],
+        "default": "0px",
+        "ui:widget": "select"
+      }
+    }
+  },
+  "PositioningBottomContainerRef": {
+    "title": "Configurar Posicionamento",
+    "type": "object",
+    "properties": {
+      "positionFlow": {
+        "title": "Posicionamento Do Fluxo",
+        "description": "O Conteúdo será posicionado em qual sentido?",
+        "type": "string",
+        "enum": [
+          "leftToRight",
+          "rightToLeft"
+        ],
+        "enumNames": [
+          "Esquerda para Direita",
+          "Direita para Esquerda"
+        ],
+        "widget": {
+          "ui:widget": "select"
+        }
+      }
+    }
+  }
+}

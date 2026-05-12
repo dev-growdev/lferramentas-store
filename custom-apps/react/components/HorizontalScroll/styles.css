@@ -1,0 +1,44 @@
+.horizontalScroll {
+  display: flex;
+  scrollbar-width: none;
+  gap: 20px;
+  background-color: #ffe72e;
+  padding-left: 5%;
+  padding-right: 0;
+  position: relative;
+
+  > * {
+    flex: 0 0 auto;
+    width: auto !important;
+    pointer-events: none;
+    gap: 20px;
+    background-color: #ffe72e;
+  }
+}
+
+.horizontalScroll::after {
+  content: '';
+  display: block;
+  flex: 0 0 auto;
+  width: 5%;
+  height: 1px;
+}
+
+.horizontalScrollContainer {
+  background-color: #ffe72e;
+  padding-bottom: 104px;
+  padding-top: 20px;
+}
+
+.horizontalScrollContainer::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.horizontalScrollHint {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  gap: 10px;
+  white-space: nowrap;
+}

@@ -1,0 +1,158 @@
+@import "./global";
+
+.variants {
+  margin: 0 0 4px 0;
+
+  .title {
+    margin: 0 0 8px 0;
+
+    @include textConfig($dark-gray, 14, $fontBold, 16, left, initial, 0);
+  }
+
+  .var-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @include border-radius();
+
+    $text-color: $dark-green;
+    $unavailable-text-color: $dark-gray;
+
+    .img__anchor {
+      display: grid;
+      justify-items: center;
+      gap: 4px;
+      min-width: 54px;
+
+      margin: 0 12px 12px 0;
+
+      color: $text-color;
+      text-decoration: none;
+
+      &--unavailable {
+        color: $unavailable-text-color;
+      }
+
+      &--isActive {
+        color: $text-color;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .img_wrap {
+      display: block;
+
+      padding: 5px;
+
+      background: $white;
+
+      border: 0.5px solid $light-gray-05;
+      @include border-radius();
+
+      &--unavailable {
+        border-color: $light-gray-05;
+      }
+
+      &--isActive {
+        border: 2px solid $primary-color;
+
+        cursor: not-allowed;
+      }
+    }
+
+    .img {
+      display: block;
+
+      &--unavailable {
+        opacity: 0.5;
+      }
+
+      &--isActive {
+        opacity: 1;
+      }
+    }
+
+    .specValue {
+      @include text(5, $text-color, $fontRegular);
+
+      &--unavailable {
+        color: $unavailable-text-color;
+      }
+
+      &--isActive {
+        color: $text-color;
+        font-weight: $fontSemiBold;
+      }
+    }
+  }
+}
+
+.skeleton {
+  position: relative;
+
+  overflow: hidden;
+
+  background: $light-gray-06;
+  @include border-radius();
+
+  &::after {
+    content: '';
+
+    @include abs-position(0, 0, 0, 0);
+
+    transform: translateX(-100%);
+    background: linear-gradient(90deg,
+        rgba($white, 0) 0,
+        rgba($white, 0.2) 20%,
+        rgba($white, 0.5) 60%,
+        rgba($white, 0));
+
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
+
+
+.loading {
+  display: grid;
+  gap: 8px;
+
+  margin: 0 0 16px 0;
+
+  &List {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50px);
+    grid-template-rows: 70px;
+    gap: 12px;
+
+  }
+
+  &Item {
+    display: grid;
+    justify-items: center;
+    gap: 4px;
+  }
+
+  .skeleton--title {
+    @include size(100%, 20px);
+
+    max-width: 70px;
+  }
+
+  .skeleton--item-image {
+    @include size(52px);
+  }
+
+  .skeleton--item-text {
+    @include size(40px, 14px);
+  }
+}

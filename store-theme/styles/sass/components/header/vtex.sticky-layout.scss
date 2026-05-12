@@ -1,0 +1,71 @@
+@import '../../global';
+
+.wrapper--container__header-mobile {
+  .container--container__header-mobile {
+    background-color: $black;
+
+    :global(.vtex-store-components-3-x-sizeMobile) {
+      display: flex;
+      max-width: fit-content;
+      max-height: fit-content;
+    }
+  }
+}
+
+.container--container__header-desktop {
+  background-color: $primary-color;
+
+  :global(.vtex-flex-layout-0-x-flexRowContent--main-header) {
+    flex-direction: column;
+
+    @include mq('1024') {
+      flex-direction: row;
+    }
+  }
+
+  :global(.vtex-store-components-3-x-logoContainer) {
+    padding: 0;
+  }
+
+  :global(.vtex-minicart-2-x-minicartContainer) {
+    :global(.vtex-button__label) {
+      padding: 0;
+    }
+  }
+}
+
+.wrapper--container__header-mobile--stuck {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
+}
+
+.wrapper--container__header-mobile {
+  opacity: 0;
+  height: 0 !important;
+}
+
+.wrapper--container__header-mobile--stuck {
+  opacity: 1;
+  height: unset;
+
+  :global(.vtex-search-2-x-biggy-autocomplete-wrapper) {
+    width: calc(100vw - 40px);
+    margin-right: -60px;
+  }
+}
+
+.container--container__header-mobile {
+  display: flex;
+  height: 72px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+
+  :global(.vtex-store-components-3-x-searchBarContainer) {
+    padding-bottom: unset !important;
+  }
+
+  :global(.vtex-minicart-2-x-openIconContainer) :global(.vtex-button__label) {
+    padding-left: unset !important;
+    padding-right: unset !important;
+  }
+}

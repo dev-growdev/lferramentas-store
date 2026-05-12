@@ -1,0 +1,9 @@
+{
+  "rich-text#inst-title-privacy-and-security": {
+    "title": "Título Principal",
+    "props": {
+      "text": "Privacidade e Segurança",
+      "blockClass": "inst-title"
+    }
+  }
+}

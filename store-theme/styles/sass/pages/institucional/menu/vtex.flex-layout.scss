@@ -1,0 +1,18 @@
+@import "../../../global";
+
+.flexCol {
+  &--inst-menu-desktop-container {
+    padding-right: 50px;
+  }
+
+  &--wrapper__menu-institucional {
+    margin-top: 16px;
+    margin-bottom: 24px;
+
+    @include mq('1025') {
+      margin: 24px 50px 0 0;
+      width: auto;
+      width: 165px !important;
+    }
+  }
+}

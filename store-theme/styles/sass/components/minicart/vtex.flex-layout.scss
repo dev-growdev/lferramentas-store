@@ -1,0 +1,53 @@
+@import '../../global';
+
+.minicart-empty {
+  &__container {
+    display: flex;
+  }
+}
+
+.flexCol {
+  &--minicart__list--right {
+    justify-content: space-between;
+  }
+}
+
+.flexColChild-- {
+  &minicart-empty__ {
+    &container {
+      display: flex;
+      height: auto !important;
+    }
+  }
+}
+
+.flexRowContent-- {
+  &minicart__ {
+    &list {
+      &--priceRow {
+        @include display-flex(flex-end, flex, space-between, row);
+        margin-top: 9px;
+
+        .stretchChildrenWidth {
+          padding: 0;
+        }
+      }
+
+      &--products {
+        padding: 0 0 24px 0;
+      }
+      &--remove {
+        @include display-flex(flex-start, flex, space-between, row);
+      }
+    }
+  }
+  &footer__minicart {
+    &--container {
+      padding: 16px;
+      box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.08);
+      .flexColChild {
+        text-align: center;
+      }
+    }
+  }
+}

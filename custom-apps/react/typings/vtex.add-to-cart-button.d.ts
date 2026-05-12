@@ -1,0 +1,1 @@
+declare module 'vtex.add-to-cart-button'

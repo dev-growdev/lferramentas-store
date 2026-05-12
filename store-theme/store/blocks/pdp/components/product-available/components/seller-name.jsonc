@@ -1,0 +1,12 @@
+{
+  "flex-layout.row#seller-name": {
+    "title": "Nome do Seller Marketplace",
+    "props": {
+      "blockClass": "container__seller-name",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": ["seller-name"]
+  }
+}

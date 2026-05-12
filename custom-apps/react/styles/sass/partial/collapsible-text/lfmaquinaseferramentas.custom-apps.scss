@@ -1,0 +1,69 @@
+.container,
+.wrapper,
+.heading {
+  width: 100%;
+}
+
+.headingLevel1,
+.headingLevel2,
+.clps-title-container .paragraph {
+  @include text(4, $dark-gray-01, $fontBold);
+  text-align: center;
+  margin: 10px 0 20px 0;
+
+  @include mq('1024') {
+    @include text(3, $dark-gray-01, $fontBold);
+    text-align: center;
+  }
+}
+
+.clps-subtitle-container {
+
+  .paragraph,
+  .heading {
+    margin: 0 0 10px 0;
+
+    @include text(5, $dark-gray-01, $fontBold);
+    text-align: center;
+  }
+}
+
+.paragraph,
+.headingLevel3,
+.headingLevel4,
+.headingLevel5,
+.headingLevel6 {
+  @include text(5, $dark-gray-01, $fontRegular);
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.clps-collapsed {
+
+  .paragraph,
+  .heading {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis
+  }
+}
+
+.link {
+  color: $primary-color;
+}
+
+.clps-button {
+  @include text(5, $primary-color, $fontBold);
+  text-decoration: underline;
+
+  display: block;
+
+  padding: 0;
+  margin: 0 auto 0 auto;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+}

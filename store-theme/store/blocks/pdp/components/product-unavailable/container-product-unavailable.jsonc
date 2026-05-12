@@ -1,0 +1,31 @@
+{
+  "flex-layout.row#product-unavailable": {
+    "title": "Caso Produto Indisponivel",
+    "props": {
+      "blockClass": [
+        "container__buy-box-product",
+        "container__product-unavailable"
+      ]
+    },
+    "children": [
+      "flex-layout.col#stack",
+      "flex-layout.col#right-col-if-product-unavailable"
+    ]
+  },
+  "flex-layout.col#right-col-if-product-unavailable": {
+    "title": "Container Informações Do Produto",
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": "container__info-product"
+    },
+    "children": [
+      "flex-layout.row#product-name",
+      "product-name-sku-helper",
+      "flex-layout.row#product-identifier",
+      "flex-layout.row#product-similar-variants",
+      "flex-layout.row#sku-selector",
+      "rich-text#empty",
+      "flex-layout.row#availability"
+    ]
+  }
+}

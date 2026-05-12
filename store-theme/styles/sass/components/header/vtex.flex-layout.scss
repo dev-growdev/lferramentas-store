@@ -1,0 +1,131 @@
+@import '../../global';
+
+.flexRow {
+  &--header-notification {
+    background-color: $yellow;
+  }
+
+  &--main-header,
+  &--desktop-menu {
+    background-color: $black;
+  }
+}
+
+.flexRow {
+  &--container__search-mobile {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+
+.flexRowContent {
+  &--main-header {
+    @include grid();
+    padding: 16px;
+    background-color: $black;
+    justify-content: space-between;
+    align-items: center;
+
+    &-mobile {
+      padding: 20px {
+        bottom: 24px;
+      }
+      background-color: $black;
+      justify-content: space-between;
+    }
+  }
+}
+
+.flexRowContent--container__product-summary-search {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 8px;
+}
+
+.flexCol--container__product-summary-search {
+  width: 100% !important;
+
+  .stretchChildrenWidth {
+    justify-content: left;
+  }
+
+  :global(.vtex-product-summary-2-x-productBrand) {
+    font-size: 13px;
+    font-weight: $fontSemiBold;
+    line-height: 16px;
+    min-height: auto;
+    color: $white;
+
+    min-height: 32px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    margin: 0 0 16px 0;
+  }
+
+  :global(.vtex-product-price-1-x-listPriceValue),
+  :global(.vtex-product-price-1-x-listPrice--prodsum) {
+    @include textConfig($white, 12, $fontRegular, 14);
+    margin: 0 0 4px 0;
+  }
+
+  :global(.vtex-product-price-1-x-sellingPrice--container__selling-price),
+  :global(.vtex-product-price-1-x-sellingPriceValue--container__selling-price),
+  :global(.vtex-product-price-1-x-currencyContainer--container__selling-price),
+  :global(.vtex-product-price-1-x-spotPriceValue--container__selling-price) {
+    @include textConfig($white, 16, $fontBlack, 20);
+  }
+
+  .flexRowContent--available__shelf-search {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 12px;
+
+    @include button-primary();
+
+    :global(.vtex-button) {
+      position: unset;
+      border-radius: 8px;
+
+      @include mq('1026') {
+        min-width: 126px;
+      }
+
+      :global(.vtex-add-to-cart-button-0-x-buttonText) {
+        font-size: 14px;
+
+        @include mq('360') {
+          font-size: 16px;
+        }
+      }
+    }
+
+    :global(.vtex-button__label) {
+      padding: 10px 2px !important;
+
+      @include mq('360') {
+        padding: 10px 8px !important;
+      }
+
+      @include mq('390') {
+        padding: 10px 18px !important;
+      }
+    }
+
+    .flexCol--container__search-prices-col {
+      margin: 0 4px 0 0;
+
+      @include mq('360') {
+        font-size: 8px;
+      }
+    }
+  }
+}
+
+.flexCol--container__content-header-col {
+  background-color: $black;
+}

@@ -1,0 +1,25 @@
+.containerStock {
+  border-radius: 8px;
+  background: #FFE72E;
+  color: #000;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  padding: 10px 6px;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  height: 40px;
+  margin-top: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.container strong {
+  font-weight: 700;
+}
+
+.containerStockIcon {
+  line-height: 0;
+}

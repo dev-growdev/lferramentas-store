@@ -1,0 +1,47 @@
+{
+  "flex-layout.col#filter": {
+    "children": [
+      "filter-navigator.v3"
+    ],
+    "props": {
+      "blockClass": "filterCol"
+    }
+  },
+  "flex-layout.col#filterMobile": {
+    "children": [
+      "filter-navigator.v3#mobile"
+    ],
+    "props": {
+      "blockClass": "filterMobileCol",
+      "width": "48%"
+    }
+  },
+  "filter-navigator.v3#mobile": {
+    "props": {
+      "blockClass": "filter-nav",
+      "filtersTitleHtmlTag": "p",
+      "initiallyCollapsed": true,
+      "updateOnFilterSelectionOnMobile": true,
+      "navigationTypeOnMobile": "collapsible",
+      "priceRangeLayout": "slider",
+      "showClearByFilter": true
+    },
+    "blocks": [
+      "sidebar-close-button"
+    ]
+  },
+  "filter-navigator.v3": {
+    "props": {
+      "blockClass": "filter-nav",
+      "filtersTitleHtmlTag": "p",
+      "initiallyCollapsed": true,
+      "navigationTypeOnMobile": "collapsible",
+      "appliedFiltersOverview": "hide",
+      "priceRangeLayout": "slider",
+      "showClearByFilter": true
+    },
+    "blocks": [
+      "sidebar-close-button"
+    ]
+  }
+}

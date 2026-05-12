@@ -1,0 +1,7 @@
+@import "../../global";
+
+:global(.ts-footerstamp) {
+    @include mq('1026') {
+        margin-right: 24px;
+    }
+}

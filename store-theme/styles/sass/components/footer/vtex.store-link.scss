@@ -1,0 +1,22 @@
+@import '../../global';
+
+.buttonLink {
+  &--quote-link {
+    @include textConfig($white, 13, $fontExtraBold, 14, center, uppercase, 0);
+    border-radius: 8px;
+    margin-right: auto;
+    margin-top: 28px;
+    min-height: 2.6875rem;
+    width: fit-content !important;
+
+    @include mq('1024') {
+      margin-right: unset;
+    }
+  }
+}
+
+.label {
+    &--quote-link {
+        line-height: 16px;
+    }
+}

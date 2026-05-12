@@ -1,0 +1,117 @@
+{
+	"minicart-product-list": {
+		"title": "Minicart Item",
+		"blocks": [
+			"product-list#minicart"
+		],
+		"props": {
+			"blockClass": "minicart"
+		}
+	},
+	"product-list#minicart": {
+		"title": "Minicart Item Container",
+		"props": {
+			"blockClass": "minicart"
+		},
+		"blocks": [
+			"product-list-content-mobile"
+		]
+	},
+	"product-list-content-mobile": {
+		"props": {
+			"blockClass": "minicart"
+		},
+		"children": [
+			"flex-layout.row#mainCartProdRow"
+		]
+	},
+	"flex-layout.row#mainCartProdRow": {
+		"title": "Minicart Item Conteúdo",
+		"props": {
+			"blockClass": "minicart__list--products",
+			"preventVerticalStretch": true,
+			"preventHorizontalStretch": true,
+			"preserveLayoutOnMobile": true,
+			"colGap": 3
+		},
+		"children": [
+			"product-list-image#header",
+			"flex-layout.col#cartRightCol"
+		]
+	},
+	"product-list-image#header": {
+		"title": "Minicart Item Imagem",
+		"props": {
+			"blockClass": "minicart"
+		}
+	},
+	"flex-layout.col#cartRightCol": {
+		"title": "Minicart Item Infos",
+		"props": {
+			"blockClass": "minicart__list--right",
+			"preventVerticalStretch": true,
+			"width": "grow"
+		},
+		"children": [
+			"flex-layout.row#nameAndDelete",
+			"flex-layout.row#quantity-price"
+		]
+	},
+	"flex-layout.col#remove-button": {
+		"children": [
+			"remove-button"
+		],
+		"props": {
+			"blockClass": "minicart__list--remove"
+		}
+	},
+	"flex-layout.row#quantity-price": {
+		"title": "Minicart Item Quantidade-Preço",
+		"props": {
+			"blockClass": "minicart__list--priceRow",
+			"colSizing": "auto"
+		},
+		"children": [
+			"quantity-selector#cart",
+			"custom-minicart-price"
+		]
+	},
+	"flex-layout.row#nameAndDelete": {
+		"title": "Minicart Item Nome-Remover",
+		"props": {
+			"blockClass": "minicart__list--remove",
+			"preventHorizontalStretch": true,
+			"preventVerticalStretch": true
+		},
+		"children": [
+			"flex-layout.col#prodListColName",
+			"flex-layout.col#remove-button"
+		]
+	},
+	"flex-layout.col#prodListColName": {
+		"props": {
+			"blockClass": "minicart__list--name"
+		},
+		"children": [
+			"vtex.product-list:product-name#cart",
+			"product-variations"
+		]
+	},
+	"vtex.product-list:product-name#cart": {
+		"props": {
+			"blockClass": "minicart"
+		}
+	},
+	"quantity-selector#cart": {
+		"props": {
+			"mode": "stepper",
+			"blockClass": "minicart"
+		}
+	},
+	"price#cart": {
+		"props": {
+			"blockClass": "minicart",
+			"showListPrice": true
+		}
+	}
+}

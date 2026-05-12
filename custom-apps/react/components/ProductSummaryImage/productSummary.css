@@ -1,0 +1,108 @@
+.containerInline .imageContainer {
+  max-width: 30%;
+}
+
+.containerInline .imageContainer > img {
+  max-height: 100%;
+}
+
+.container {
+}
+.containerSmall {
+}
+.containerInline {
+}
+.containerInlinePrice {
+}
+.information {
+}
+.element {
+}
+.image {
+}
+.buyButtonContainer {
+}
+.buyButton {
+}
+.description {
+}
+.quantityStepperContainer {
+}
+.imageInline {
+  max-height: 7rem;
+}
+
+.isHidden {
+  visibility: hidden;
+}
+
+.containerNormal {
+}
+
+.nameContainer {
+}
+
+.clearLink {
+}
+
+.aspectRatio {
+  padding-top: 100%;
+  background: center / contain no-repeat;
+}
+
+.priceContainer {
+}
+
+.SKUSelectorContainer {
+}
+
+.attachmentListContainer {
+}
+
+.attachmentItemContainer {
+}
+
+.imageNormal {
+  max-height: 17.56rem;
+}
+
+.addToListBtn {
+}
+
+.imagePlaceholder {
+}
+
+.attachmentChildrenContainer {
+}
+
+.imageStackContainer {
+}
+
+.hoverEffect {
+}
+
+.hoverEffect:hover .hoverImage {
+  display: inline;
+}
+
+.hoverEffect:hover .mainImageHovered {
+  opacity: 0;
+}
+
+.hoverImage {
+}
+
+.priceSpinner {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #4d4d4d;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

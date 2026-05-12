@@ -1,0 +1,40 @@
+{
+  "flex-layout.row#container-flags-pdp": {
+    "title": "Container Flags",
+    "props": {
+      "blockClass": "container__flags-row",
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#container-highlights-pdp"
+    ]
+  },
+  "flex-layout.row#container-highlights-pdp": {
+    "title": "Container Flags",
+    "props": {
+      "blockClass": "container__highlights-row",
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "preventHorizontalStretch": false,
+      "preventVerticalStretch": false
+    },
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#collection-generic"
+    ]
+  },
+  "product-spot-price-savings#flag-discount-pdp": {
+    "props": {
+      "markers": [
+        "discount"
+      ],
+      "blockClass": [
+        "container__main-price-savings",
+        "container__pdp-price-savings"
+      ],
+      "message": "-{spotPriceSavingsPercentage}"
+    }
+  }
+}

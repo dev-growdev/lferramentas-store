@@ -1,0 +1,11 @@
+{
+  "form-input.textarea#inst-contact-us-input-message": {
+    "props": {
+      "blockClass": [
+        "inst-contact-us-input",
+        "inst-contact-us-input-message"
+      ],
+      "pointer": "#/properties/message"
+    }
+  }
+}

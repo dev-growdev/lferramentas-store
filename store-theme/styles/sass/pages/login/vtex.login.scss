@@ -1,0 +1,52 @@
+@import '../../global';
+
+.contentAlwaysWithOptions {
+  @include grid();
+
+  @include mq('1026', max) {
+    max-width: calc(100% - 2rem);
+  }
+
+  .formFooter {
+    .sendButton {
+      width: 100%;
+    }
+  }
+}
+
+.formFooter {
+  .sendButton {
+    @include button-primary();
+    @include size(fit-content, auto);
+    cursor: pointer;
+    background-color: $success-green;
+    border: 1px solid $success-green;
+    border-radius: 8px;
+
+    :global(.vtex-button) {
+      border: none;
+    }
+
+    :global(.t-small) {
+      @include textConfig($white, 12, $fontExtraBold, 16, center, uppercase, 0);
+
+      @include mq('370') {
+        @include textConfig(
+          $white,
+          14,
+          $fontExtraBold,
+          20,
+          center,
+          uppercase,
+          0
+        );
+      }
+    }
+  }
+}
+
+:global(.vtex-store-components-3-x-productDescriptionText) {
+  a {
+    display: inline !important;
+  }
+}

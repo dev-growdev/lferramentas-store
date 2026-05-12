@@ -1,0 +1,360 @@
+@mixin desktop() {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
+/* From Ghaus */
+
+$font-size: 16;
+$line-height: 16;
+$font-units: ('rem', 'em', 'px', '%', 'pt', 'ch');
+
+// Fonts
+@function has-font-unit($value) {
+  @return index($font-units, unit($value)) !=null;
+}
+
+@mixin font-size($size-value: $font-size) {
+  @if (has-font-unit($size-value)) {
+    font-size: $size-value;
+  } @else {
+    font-size: #{$size-value}px;
+  }
+}
+
+//  Define a base da fonte que pretende utilizar (valores ja são convertidos em rem).
+//  @mixin Font Size
+//  @section Font
+//  @param $size-value Seta o tamanho da fonte definido na variavel '$font-size'
+//  @example
+//    @include font-size($font-size);
+//    @include font-size(16);
+
+@mixin line-height($size-value: $line-height) {
+  line-height: $size-value + px;
+  line-height: calc($size-value / $line-height) + rem;
+}
+
+@mixin letter-spacing($letterspacing) {
+  letter-spacing: calc($letterspacing / 1000) + rem;
+}
+
+//  @mixin Fonte Padrão
+//  @example
+//  @include textConfig($black, 16, $fontRegular, 16, left, initial, 100);
+
+@mixin textConfig(
+  $color: $black,
+  $fontSize: $font-size,
+  $fontWeight: $fontRegular,
+  $line-height: $line-height,
+  $textAlign: left,
+  $textTransform: initial,
+  $letterspacing: 0
+) {
+  color: $color;
+  @include font-size($fontSize);
+  font-weight: $fontWeight;
+  @include line-height($line-height);
+  @include letter-spacing($letterspacing);
+  text-align: $textAlign;
+  text-transform: $textTransform;
+}
+
+//  @mixin Fonte Título Padrão
+//  @example
+//  @include text(2);
+@mixin text($tag: 2, $color: $black, $weight: $fontSemiBold) {
+  @if $tag ==1 {
+    @include textConfig($color, 32, $weight, 40);
+  }
+
+  @if $tag ==2 {
+    @include textConfig($color, 24, $weight, 30);
+  }
+
+  @if $tag ==3 {
+    @include textConfig($color, 20, $weight, 25);
+  }
+
+  @if $tag ==4 {
+    @include textConfig($color, 16, $weight, 20);
+  }
+
+  @if $tag ==5 {
+    @include textConfig($color, 14, $weight, 20);
+  }
+
+  @if $tag ==6 {
+    @include textConfig($color, 12, $weight, 14);
+  }
+}
+
+//  Define o 'width' e 'height' do elemento.
+//  @mixin Size Elements
+//  @section Size
+//  @param $width Largura a ser definido
+//  @param $height Altura a ser definido
+//  @example
+//   @include size(10px);
+//   @include size(auto, 2px);
+
+@mixin size($width, $height: $width) {
+  @if _is-size($height) {
+    height: $height;
+  } @else {
+    @error '`#{$height}` is not a valid length for the `$height` argument '+'in the `size` mixin.';
+  }
+
+  @if _is-size($width) {
+    width: $width;
+  } @else {
+    @error '`#{$width}` is not a valid length for the `$width` argument '+'in the `size` mixin.';
+  }
+}
+
+// *  Define o breakpoin minimo pro desenvolvimento.
+//  * @mixin Breakpoints responsivos
+//  * @example
+//  *  @include mq('tablet-wide') {
+//         padding-top: 4rem;
+//         font-size: 2.4rem;
+//     }
+//  */
+
+$breakpoints: (
+  '360': 360px,
+  '370': 370px,
+  '375': 375px,
+  '390': 390px,
+  '400': 400px,
+  '414': 414px,
+  '428': 428px,
+  '450': 450px,
+  '480': 480px,
+  '640': 640px,
+  '714': 714px,
+  '768': 768px,
+  '992': 992px,
+  '1000': 1000px,
+  '1024': 1024px,
+  '1025': 1025px,
+  '1026': 1026px,
+  '1200': 1200px,
+  '1300': 1300px,
+  '1320': 1320px,
+  '1253': 1253px,
+  '1350': 1350px,
+  '1440': 1440px,
+  '1500': 1500px,
+  '1800': 1800px,
+);
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type ==max {
+      $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+//  Define posicionamento absoluto.
+//  @mixin Position Absolute
+//  @example
+//  @include abs-position(100px, 100px, auto, auto);
+
+@mixin abs-position($top, $right, $bottom, $left) {
+  bottom: $bottom;
+  left: $left;
+  margin: auto;
+  position: absolute;
+  right: $right;
+  top: $top;
+}
+
+// @example
+// @include display-flex(center,flex,center,row);
+
+@mixin display-flex($align, $display, $justify, $direction) {
+  align-items: $align;
+  display: $display;
+  justify-content: $justify;
+
+  @if ($direction) {
+    flex-direction: $direction;
+  } @else {
+    flex-direction: row;
+  }
+}
+
+@mixin grid($max-width: 1292px, $padding: 0 16px, $margin: 0 auto) {
+  margin: $margin;
+  max-width: $max-width;
+  padding: $padding;
+  width: 100%;
+}
+
+@mixin transition() {
+  transition: all 300ms ease-in-out;
+}
+
+@mixin button-primary() {
+  :global(.vtex-button) {
+    cursor: pointer;
+    background-color: $success-green;
+    border: 1px solid $success-green;
+    @include size(100%);
+
+    :global(.vtex-add-to-cart-button-0-x-buttonText) {
+      @include textConfig($white, 12, $fontExtraBold, 16, center, uppercase, 0);
+
+      @include mq('370') {
+        @include textConfig(
+          $white,
+          14,
+          $fontExtraBold,
+          20,
+          center,
+          uppercase,
+          0
+        );
+      }
+
+      @include mq('1024') {
+        @include textConfig(
+          $white,
+          16,
+          $fontExtraBold,
+          20,
+          center,
+          uppercase,
+          0
+        );
+      }
+    }
+
+    :global(.vtex-button__label) {
+      @include textConfig($white, 16, $fontExtraBold, 20, center, uppercase, 0);
+    }
+
+    &:hover {
+      background-color: $success-dark-green;
+      border-color: $success-dark-green;
+    }
+  }
+}
+
+@mixin button-secondary() {
+  :global(.vtex-button) {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid $primary-color;
+    @include size(100%);
+
+    :global(.vtex-add-to-cart-button-0-x-buttonText),
+    :global(.vtex-button__label) {
+      @include textConfig(
+        $primary-color,
+        14,
+        $fontBold,
+        20,
+        center,
+        initial,
+        0
+      );
+    }
+
+    &:hover {
+      background-color: $primary-color;
+
+      :global(.vtex-add-to-cart-button-0-x-buttonText),
+      :global(.vtex-button__label) {
+        color: $white;
+      }
+    }
+  }
+}
+
+@mixin button-primary-white-bg() {
+  :global(.vtex-button) {
+    cursor: pointer;
+    background-color: $white;
+    border: 1px solid $dark-gray-03;
+    @include size(100%);
+
+    :global(.vtex-add-to-cart-button-0-x-buttonText) {
+      @include textConfig($white, 16, $fontBold, 20, center, initial, 0);
+    }
+
+    :global(.vtex-button__label) {
+      @include textConfig($dark-green, 16, $fontBold, 20, center, initial, 0);
+    }
+
+    &:hover {
+      background-color: $dark-green;
+      border-color: $dark-green;
+
+      :global(.vtex-button__label) {
+        color: $white;
+      }
+    }
+  }
+}
+
+@mixin border-radius() {
+  border-radius: 8px;
+}
+
+@mixin link-button-secondary() {
+  background-color: $white;
+  border: 1px solid $primary-color;
+  border-radius: 10px;
+  @include size(100%);
+  @include textConfig($primary-color, 16, $fontBold, 16, left, initial, 0);
+  transition: {
+    property: background-color, border-color;
+    duration: 300ms;
+    timing-function: ease-in-out;
+  }
+
+  &:hover {
+    background-color: $primary-color;
+    color: $white;
+    font-weight: $fontBold;
+  }
+}
+
+@mixin input-general() {
+  :global(.vtex-input-prefix__group) {
+    border: 1px solid $primary-color;
+    @include border-radius();
+    @include text(4, $black02);
+  }
+}
+
+@mixin dataArrow() {
+  &:hover {
+    background: $black !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.82 0.290312C5.42 0.680312 5.42 1.32031 5.82 1.71031L8.2 4.09031H1C0.45 4.09031 0 4.54031 0 5.09031C0 5.64031 0.45 6.09031 1 6.09031H8.2L5.82 8.47031C5.43 8.86031 5.43 9.50031 5.82 9.89031C6.21 10.2803 6.85 10.2803 7.24 9.89031L11.32 5.80031C11.72 5.40031 11.72 4.76031 11.32 4.37031L7.24 0.300312C6.85 -0.0896875 6.21 -0.0896875 5.82 0.300312V0.290312Z' fill='%23FFE72E'/%3E%3C/svg%3E%0A")
+        no-repeat center;
+    }
+  }
+}

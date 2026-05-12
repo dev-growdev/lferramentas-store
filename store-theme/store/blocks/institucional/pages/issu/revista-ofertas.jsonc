@@ -1,0 +1,23 @@
+{
+  "store.custom#issu-revista-ofertas": {
+    "blocks": [
+      "flex-layout.row#row-issu-revista-ofertas"
+    ]
+  },
+  "flex-layout.row#row-issu-revista-ofertas": {
+    "children": [
+      "flex-layout.col#col-issu-revista-ofertas"
+    ],
+    "props": {
+      "blockClass": "content-issu"
+    }
+  },
+  "flex-layout.col#col-issu-revista-ofertas": {
+    "children": [
+      "issu-app"
+    ],
+    "props": {
+      "blockClass": "content-issu-app"
+    }
+  }
+}

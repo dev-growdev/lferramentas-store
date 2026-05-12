@@ -1,0 +1,114 @@
+{
+  "conditional-spec-group#included-items": {
+    "props": {
+      "blockClass": [
+        "measures"
+      ],
+      "propertyName": "Itens Inclusos"
+    },
+    "children": [
+      "flex-layout.row#included-items"
+    ]
+  },
+  "flex-layout.row#included-items": {
+    "title": "Itens inclusos",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "included-items"
+      ],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#included-items"
+    ]
+  },
+  "flex-layout.col#included-items": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "included-items"
+      ],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#included-items-content"
+    ]
+  },
+  "flex-layout.row#included-items-content": {
+    "title": "Itens inclusos",
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "included-items-content"
+      ],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#included-items-content"
+    ]
+  },
+  "flex-layout.col#included-items-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "included-items-content"
+      ],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "disclosure-layout#included-items-content"
+    ]
+  },
+  "disclosure-layout#included-items-content": {
+    "props": {
+      "initialVisibility": "visible",
+      "blockClass": [
+        "generic-specification-group-content",
+        "included-items-content"
+      ]
+    },
+    "children": [
+      "disclosure-trigger#included-items-content",
+      "disclosure-content#included-items-content"
+    ]
+  },
+  "disclosure-trigger#included-items-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "included-items-content"
+      ]
+    },
+    "children": [
+      "rich-text#included-items-title"
+    ]
+  },
+  "disclosure-content#included-items-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "included-items-content"
+      ]
+    },
+    "children": [
+      "product-specification-group#included-items"
+    ]
+  },
+  "rich-text#included-items-title": {
+    "title": "Itens inclusos - Título",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "generic-specification-group-title",
+        "included-items",
+        "included-items-title"
+      ],
+      "text": "##### Itens inclusos"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import '../../global';
+
+.paragraph {
+  &--inst {
+    &-title {
+      @include textConfig($black, 16, $fontExtraBold, 20, left, initial, 0);
+      font-family: $tertiaryFont;
+      margin: 0;
+      @include mq('1024') {
+        font-size: 20px;
+      }
+    }
+    &-text {
+      @include textConfig($dark-grey, 14, $fontRegular, 24, left, initial, 0);
+      margin: 14px 0 0 0;
+
+      &__10 {
+        @include font-size(16);
+      }
+    }
+
+    &-contact-us-description {
+      text-wrap: balance;
+    }
+  }
+}

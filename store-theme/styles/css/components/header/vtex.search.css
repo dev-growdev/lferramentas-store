@@ -1,0 +1,374 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.tileListItem {
+  width: 100% !important;
+}
+.tileListItem :global(.vtex-product-summary-2-x-nameContainer) {
+  padding-bottom: 0;
+  padding-top: 0.125rem;
+  text-align: left;
+}
+.tileListItem :global(.vtex-product-summary-2-x-priceContainer) {
+  padding-top: 0;
+  text-align: left;
+}
+.tileListItem :global(.vtex-product-summary-2-x-imageWrapper) {
+  text-align: left;
+  margin: 0 0.5rem 0 0;
+}
+.tileListItem :global(.vtex-product-summary-2-x-imageNormal) {
+  border-radius: 8px;
+  width: 5.625rem !important;
+  height: 5.625rem !important;
+  object-fit: contain;
+}
+.tileListItem :global(.vtex-store-components-3-x-discountInsideContainer) {
+  right: auto;
+  left: 0;
+  background-color: #ffe72e;
+  color: #303030;
+  border-radius: 0.125rem;
+}
+.tileListItem .element {
+  display: grid;
+  grid-template-columns: minmax(auto, 5.5625rem) 1fr;
+}
+.tileListItem .element .information {
+  row-gap: 0.5rem;
+}
+.tileListItem .element .imageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.tileListList {
+  justify-content: center;
+  order: 2;
+  flex-direction: column !important;
+  margin: 0.375rem 0 1rem 0;
+}
+
+.tileListSeeMore {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 31px;
+  line-height: 1.9375rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: none;
+}
+
+.itemList {
+  font-family: "Mulish", sans-serif;
+}
+
+.itemListTitle {
+  width: auto;
+  border-top: 0.0625rem solid #b2b2b2;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 31px;
+  line-height: 1.9375rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: none;
+  margin: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1.25rem 1.25rem 0 0.25rem;
+}
+@media only screen and (min-width: 1026px) {
+  .itemListTitle {
+    margin: 0;
+    margin-left: 1rem;
+  }
+}
+
+.itemList--history .itemListTitle {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+.itemList--history .itemListLink {
+  padding-left: 0.25rem;
+}
+.itemList--history .itemListLink:hover {
+  padding-left: 0.25rem;
+}
+
+.tileList {
+  overflow: auto;
+  padding-top: 1rem;
+}
+@media only screen and (min-width: 1026px) {
+  .tileList {
+    padding-top: 0;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .tileList {
+    padding-left: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .sellingPrice {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    line-height: 1.375rem;
+    letter-spacing: -0.016rem;
+    text-align: left;
+    text-transform: none;
+  }
+}
+
+.productBrand {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  line-height: 0.875rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: none;
+}
+@media only screen and (max-width: 991px) {
+  .productBrand {
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    overflow: hidden;
+  }
+}
+
+.biggy-autocomplete-wrapper {
+  width: 90vw;
+}
+@media only screen and (min-width: 1026px) {
+  .biggy-autocomplete-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+.biggy-autocomplete-wrapper .biggy-js-container--hidden {
+  pointer-events: none;
+  padding: 0;
+}
+
+.biggy-autocomplete {
+  padding: 0;
+  width: 100%;
+  border-top: 0;
+  border-radius: 0 0 0.625rem 0.625rem;
+  background: #4d4d4d;
+  box-shadow: none;
+  position: relative;
+  top: 0;
+}
+@media only screen and (min-width: 1026px) {
+  .biggy-autocomplete {
+    padding: 0.3125rem 0 1.25rem 0;
+    max-width: 42.75rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .biggy-autocomplete {
+    right: 0;
+    flex-direction: column !important;
+  }
+}
+
+.itemListSubItemLink {
+  color: #f2f1f0;
+  padding-left: 2rem !important;
+  transition: 0.2s ease-in-out;
+  transition-property: color, background-color;
+}
+.itemListSubItemLink:hover {
+  color: #4d4d4d;
+}
+
+.itemListList .itemListItem .itemListIcon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 1.25rem !important;
+  width: 1.25rem !important;
+  line-height: initial;
+  padding-right: 0.8125rem;
+}
+.itemListList .itemListItem .itemListLink {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  line-height: unset;
+  height: unset;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  background-color: unset;
+}
+
+.itemListIcon::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.72612 7.71758L10.9667 9.91668C11.1327 10.0827 11.2157 10.2625 11.2157 10.4561C11.2157 10.6497 11.1327 10.8226 10.9667 10.9747C10.8146 11.1407 10.6417 11.2237 10.4481 11.2237C10.2544 11.2237 10.0815 11.1407 9.9294 10.9747L7.54358 8.65116C7.44677 8.55435 7.37416 8.4437 7.32575 8.31922C7.27734 8.19475 7.25314 8.06336 7.25314 7.92505V4.54342C7.25314 4.32212 7.32229 4.14232 7.4606 4.00402C7.59891 3.86571 7.77871 3.79655 8 3.79655C8.20746 3.79655 8.38035 3.86571 8.51866 4.00402C8.65696 4.14232 8.72612 4.32212 8.72612 4.54342V7.71758ZM7.7303 15.9953C5.76633 15.9953 4.07897 15.3798 2.66823 14.1489C1.25749 12.918 0.379231 11.362 0.0334615 9.48101C-0.0356923 9.20439 0.00234218 8.94507 0.147566 8.70303C0.292789 8.46099 0.510624 8.32614 0.801071 8.29848C1.03619 8.27082 1.25403 8.31577 1.45458 8.43333C1.65512 8.55089 1.78997 8.72032 1.85913 8.94161C2.1634 10.38 2.83766 11.5902 3.88188 12.5722C4.92611 13.5542 6.20891 14.0452 7.7303 14.0452C9.43149 14.0452 10.8733 13.447 12.0559 12.2506C13.2384 11.0543 13.8297 9.60549 13.8297 7.9043C13.8297 6.24461 13.235 4.84078 12.0455 3.69282C10.8561 2.54487 9.41766 1.97089 7.7303 1.97089C6.91428 1.97089 6.1363 2.14032 5.39635 2.47917C4.65641 2.81803 4.0029 3.2779 3.43584 3.85879H4.43165C4.63912 3.85879 4.81546 3.9314 4.96068 4.07663C5.10591 4.22185 5.17852 4.40511 5.17852 4.6264C5.17852 4.84769 5.10591 5.02749 4.96068 5.1658C4.81546 5.30411 4.63912 5.37326 4.43165 5.37326H1.40271C1.11226 5.37326 0.873682 5.27991 0.686967 5.09319C0.500251 4.90648 0.406893 4.67481 0.406893 4.39819V1.41074C0.406893 1.20328 0.479505 1.02694 0.624728 0.881713C0.769951 0.73649 0.946294 0.663878 1.15376 0.663878C1.37505 0.663878 1.55485 0.73649 1.69316 0.881713C1.83146 1.02694 1.90062 1.20328 1.90062 1.41074V2.63477C2.66131 1.81875 3.54303 1.17562 4.54576 0.705371C5.54849 0.235124 6.61001 0 7.7303 0C8.83676 0 9.88099 0.210919 10.863 0.632759C11.845 1.0546 12.699 1.62512 13.4251 2.34432C14.1512 3.06352 14.7287 3.90374 15.1574 4.86498C15.5862 5.82622 15.8006 6.86008 15.8006 7.96654C15.8006 9.073 15.5862 10.1138 15.1574 11.0888C14.7287 12.0639 14.1512 12.9145 13.4251 13.6406C12.699 14.3667 11.845 14.9407 10.863 15.3626C9.88099 15.7844 8.83676 15.9953 7.7303 15.9953Z' fill='%23FFE72E'/%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1rem;
+  width: 1.0938rem;
+  position: absolute;
+}
+
+.itemListPrefix {
+  color: #ffe72e;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 31px;
+  line-height: 1.9375rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: none;
+  margin-right: 1rem;
+  width: auto;
+}
+
+.itemListIcon :global(.vtex__icon-clock),
+.biggy-autocomplete :global(.vtex-modal-layout-0-x-triggerContainer--quickview),
+.close-btn {
+  display: none;
+}
+
+.tileListFooter {
+  display: flex;
+  justify-content: left;
+}
+.tileListFooter .tileListSeeMore {
+  height: initial;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.itemListLinkTitle {
+  color: #f2f1f0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 31px;
+  line-height: 1.9375rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: none;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.itemListLinkTitle::first-letter {
+  text-transform: uppercase;
+}
+
+.tileList {
+  border: none;
+  min-height: 9.375rem;
+  align-items: inherit;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0.625rem 1rem 0 1.25rem;
+}
+.tileList .tileListTitle {
+  display: none;
+}
+@media only screen and (min-width: 1026px) {
+  .tileList {
+    padding-top: 1.25rem;
+    margin-right: 1rem;
+    border-top: 0.0625rem solid #b2b2b2;
+  }
+}
+
+.tileListTitle {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 17px;
+  line-height: 1.0625rem;
+  letter-spacing: 0.04rem;
+  text-align: left;
+  text-transform: none;
+  margin: 0.3125rem 0 0 0;
+  padding: 0;
+}
+
+.listPrice {
+  margin-bottom: 0;
+}
+.listPrice .currencyContainer {
+  color: #303030;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+  line-height: 1.375rem;
+  letter-spacing: -0.012rem;
+  text-align: left;
+  text-transform: none;
+}
+.listPrice .currencyContainer {
+  font-weight: normal;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer--desktop) :global(.vtex-store-components-3-x-portalWrapper--desktop) .tileListList .tileListItem {
+  padding: 0;
+  position: relative;
+  top: initial !important;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer) .tileListList .tileListItem :global(.vtex-product-summary-2-x-container--vitrine) {
+  padding: 0.625rem;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer) .tileListList .tileListItem :global(.vtex-product-summary-2-x-container--vitrine) :global(.vtex-stack-layout-0-x-stackContainer),
+:global(.vtex-store-components-3-x-searchBarInnerContainer) .tileListList .tileListItem :global(.vtex-product-summary-2-x-container--vitrine) :global(.vtex-stack-layout-0-x-stackContainer) :first-child {
+  top: 0 !important;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer) .tileListList .tileListItem :global(.vtex-product-summary-2-x-container--vitrine) :global(.vtex-flex-layout-0-x-flexRow--botao-add-cart) {
+  display: none;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer) .tileListList .tileListItem :global(.vtex-product-summary-2-x-container--vitrine) :global(.vtex-product-price-1-x-sellingPriceValue--summary),
+:global(.vtex-product-price-1-x-spotPriceValue--summary) {
+  font-size: 15px;
+  color: #303030;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer) .tileListList .tileListItem :global(.vtex-product-summary-2-x-container--vitrine) :global(.vtex-product-price-1-x-installments) {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer) .tileListList .tileListItem .element {
+  background-color: transparent;
+}
+@media only screen and (min-width: 1026px) {
+  :global(.vtex-store-components-3-x-searchBarInnerContainer) .tileListList .tileListItem .element {
+    padding: 0.75rem;
+  }
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer) .tileListList .tileListItem .element .imageContainer {
+  height: 80px;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer--opened) :global(.vtex-input-prefix__group) {
+  border-radius: 0.625rem 0.625rem 0 0 !important;
+}

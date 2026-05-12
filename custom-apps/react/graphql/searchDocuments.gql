@@ -1,0 +1,8 @@
+query searchExistingEmail($acronym: String, $fields: [String], $where: String, $account: String) {
+  documents(acronym: $acronym, account: $account, fields: $fields, where: $where) @context(provider: "vtex.store-graphql") {
+    fields {
+      key
+			value
+    }
+  }
+}

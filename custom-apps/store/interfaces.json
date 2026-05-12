@@ -1,0 +1,224 @@
+{
+  "custom-faq": {
+    "component": "CustomFaq",
+    "render": "client",
+    "content": {
+      "$ref": "app:lfmaquinaseferramentas.custom-apps#/definitions/CustomFaq"
+    }
+  },
+  "image-new-custom": {
+    "component": "Image",
+    "render": "server",
+    "content": {
+      "$ref": "app:lfmaquinaseferramentas.custom-apps#/definitions/ImageCustom"
+    }
+  },
+  "image-slider-custom": {
+    "component": "ImageSlider",
+    "content": {
+      "properties": {
+        "images": {
+          "$ref": "app:lfmaquinaseferramentas.custom-apps#/definitions/ImagesCustom"
+        }
+      }
+    }
+  },
+  "image-list-custom": {
+    "component": "ImageListWithoutContext",
+    "content": {
+      "properties": {
+        "images": {
+          "$ref": "app:lfmaquinaseferramentas.custom-apps#/definitions/ImagesCustom"
+        }
+      }
+    }
+  },
+  "list-context.image-list-custom": {
+    "component": "ImageList",
+    "composition": "children",
+    "allowed": "*",
+    "content": {
+      "properties": {
+        "images": {
+          "$ref": "app:lfmaquinaseferramentas.custom-apps#/definitions/ImagesCustom"
+        }
+      }
+    }
+  },
+  "product-summary-image-custom": {
+    "component": "ProductSummaryImage"
+  },
+  "helper-product-sku": {
+    "component": "HelperProductSKU"
+  },
+  "scroll-anchor": {
+    "component": "ScrollAnchor"
+  },
+  "meta-tag": {
+    "component": "MetaTag"
+  },
+  "add-to-cart-button-custom": {
+    "component": "AddToCartButton"
+  },
+  "change-tag-helper": {
+    "component": "ChangeTagHelper"
+  },
+  "shipping-minicart": {
+    "component": "MinicartShippingWrapper"
+  },
+  "custom-wrapper-skeleton": {
+    "component": "WrapperCustomSkeleton",
+    "composition": "children"
+  },
+  "hydration-wrapper": {
+    "component": "HydrationWrapper",
+    "composition": "children",
+    "hydration": "on-view",
+    "allowed": "*"
+  },
+  "related-shelf-custom": {
+    "component": "RelatedShelf",
+    "required": ["product-summary"]
+  },
+  "similar-products-variants-helper": {
+    "component": "SimilarProductsVariantsHelper",
+    "composition": "children"
+  },
+  "specification-custom": {
+    "component": "SpecificationCustom"
+  },
+  "seller-name": {
+    "component": "SellerName"
+  },
+  "avanti-sku-selector": {
+    "component": "SKUSelector",
+    "composition": "children"
+  },
+  "inst-menu": {
+    "component": "InstMenu",
+    "render": "client"
+  },
+  "html-content": {
+    "component": "CustomHTMLContent",
+    "render": "client",
+    "content": {
+      "$ref": "app:lfmaquinaseferramentas.custom-apps#/definitions/CustomHTMLContent"
+    }
+  },
+  "optin-fields": {
+    "component": "OptinFields"
+  },
+  "trigger-floorcalculator": {
+    "component": "FloorCalculator"
+  },
+  "collapsible-text": {
+    "component": "CollapsibleText"
+  },
+  "product-property-link": {
+    "component": "ProductPropertyLink",
+    "composition": "children"
+  },
+  "conditional-spec-group": {
+    "component": "ConditionalSpecGroup",
+    "composition": "children"
+  },
+  "conditional-sku-selector": {
+    "component": "ConditionalSKUSelector"
+  },
+  "payment-modal": {
+    "component": "PaymentModal",
+    "render": "client"
+  },
+  "cookies-warning": {
+    "component": "CookiesWarning"
+  },
+  "conditional-measurement-unit": {
+    "component": "ConditionaMeasurementUnit"
+  },
+  "custom-installments": {
+    "component": "CustomInstallments"
+  },
+  "ebit": {
+    "component": "Ebit"
+  },
+  "product-name-sku-helper": {
+    "component": "ProductNameSkuHelper"
+  },
+  "modal-confirm-buy": {
+    "component": "ModalConfirmBuy",
+    "render": "server"
+  },
+  "issu-app": {
+    "component": "IssuRevista"
+  },
+  "pdp-stock": {
+    "component": "PdpStock"
+  },
+  "selo-ra": {
+    "component": "RaScript"
+  },
+  "confi-badge": {
+    "component": "ConfiBadge"
+  },
+  "loja-confiavel-badge": {
+    "component": "LojaConfiavelBadge"
+  },
+  "inst-representates": {
+    "component": "InstRepresentates"
+  },
+  "inst-our-stores": {
+    "component": "InstOurStores"
+  },
+  "shop-by-brand": {
+    "component": "ShopByBrand"
+  },
+  "product-images-custom": {
+    "component": "ProductImages",
+    "render": "server"
+  },
+  "coupons-list": {
+    "component": "CouponsList"
+  },
+  "news-bf": {
+    "component": "NewsletterBlackFriday"
+  },
+  "timer-bf": {
+    "component": "TimerBf"
+  },
+  "custom-minicart-price": {
+    "component": "CustomMinicartPrice"
+  },
+  "custom-minicart-total-price": {
+    "component": "CustomMinicartTotalPrice"
+  },
+  "custom-add-to-cart-function": {
+    "component": "AddToCartFunction"
+  },
+  "banner-collection-pdp": {
+    "component": "BannerCollectionPdp"
+  },
+  "insider-confirmation-tag": {
+    "component": "InsiderConfirmationTag"
+  },
+  "countdown-pdp-custom": {
+    "component": "CountdownByCollection"
+  },
+  "countdown-plp-custom": {
+    "component": "CountdownPlp"
+  },
+  "login-event": {
+    "component": "LoginEvent"
+  },
+  "custom-link": {
+    "component": "CustomLink"
+  },
+  "custom-horizontal-scroll": {
+    "component": "HorizontalScroll",
+    "composition": "children",
+    "allowed": "*",
+    "render": "client"
+  },
+  "get-product-info-custom": {
+    "component": "GetProductInfo"
+  }
+}

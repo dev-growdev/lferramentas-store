@@ -1,0 +1,41 @@
+{
+  "rich-text#link-atendimento-01": {
+    "title": "Menu Link 01",
+    "props": {
+      "blockClass": ["footer-submenu-item", "footerSubmenuItem--to-replace"],
+      "text": "##### <a href='https://api.whatsapp.com/send?1=pt_BR&phone=555131030100' target='_blank' class='vtex-rich-text-0-x-paragraph--footer-submenu-item'>Comprar pelo WhatsApp</a>"
+    }
+  },
+  "rich-text#link-atendimento-02": {
+    "title": "Menu Link 02",
+    "props": {
+      "blockClass": ["footer-submenu-item", "footerSubmenuItem--to-replace"],
+      "text": "##### <a href='https://ajuda.lfmaquinaseferramentas.com.br/hc/pt-br/requests/new?ticket_form_id=360002750054' target='_blank' class='vtex-rich-text-0-x-paragraph--footer-submenu-item'>Enviar mensagem</a>"
+    }
+  },
+  "rich-text#link-atendimento-03": {
+    "title": "Menu Link 03",
+    "props": {
+      "blockClass": ["footer-submenu-item", "footerSubmenuItem--to-replace"],
+      "text": "##### <a href='https://lfmaquinaseferramentas.troque.app.br' target='_blank' class='vtex-rich-text-0-x-paragraph--footer-submenu-item'>Solicitar troca</a>"
+    }
+  },
+  "rich-text#link-atendimento-04": {
+    "title": "Menu Link 04",
+    "props": {
+      "blockClass": ["footer-submenu-item", "footerSubmenuItem--to-replace"],
+      "text": "##### **Telefone:** (51) 3103-0100"
+    }
+  },
+  "rich-text#link-atendimento-horario": {
+    "title": "Horário de funcionamento",
+    "props": {
+      "blockClass": [
+        "footer-submenu-item",
+        "footerSubmenuItem--to-replace",
+        "footer-submenu-item-horario"
+      ],
+      "text": "**Segunda à Quinta:** 08:00 às 18:00 \n **Sexta-feira:** 08:00 às 17:00"
+    }
+  }
+}

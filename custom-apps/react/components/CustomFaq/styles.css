@@ -1,0 +1,66 @@
+.containerDepartments {
+  height: 40px;
+  overflow: hidden;
+}
+
+.containerDepartmentsActive {
+  height: auto;
+}
+
+.containerDepartmentsActive .containerQuestion {
+  animation: accordionDown .5s forwards;
+}
+
+@keyframes accordionDown {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.containerDepartmentsTitle {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.containerDepartmentsTitle::after {
+  content: url(https://lfmaquinaseferramentas.vteximg.com.br/arquivos/arrow-accordion-faq.svg);
+  width: 9.8px;
+  height: 5.91px;
+  display: flex;
+  position: relative;
+  top: -5px;
+}
+
+.containerDepartmentsActive .containerDepartmentsTitle::after{
+  transform: rotate(180deg);
+  top: 6px;
+}
+
+.textinfos{
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  color: #000;
+  text-align: left;
+}
+
+
+.customFaq-icon {
+  max-width: 16px;
+  max-height: 16px;
+}
+
+.customFaq-ResponseText p {
+  margin: 0;
+}

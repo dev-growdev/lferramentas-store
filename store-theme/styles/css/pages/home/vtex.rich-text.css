@@ -1,0 +1,149 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.container--container__seo--title, .container--container__seo--text {
+  display: block;
+  text-align: center;
+}
+
+.heading--container__seo--title {
+  font-family: "Mulish", sans-serif;
+  color: #303030;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin: 0 0 19px;
+}
+@media only screen and (min-width: 1026px) {
+  .heading--container__seo--title {
+    font-size: 20px;
+    line-height: 22px;
+    line-height: 1.375rem;
+  }
+}
+.heading--container__seo--text {
+  margin: 0;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+.heading--shelfTitle {
+  font-family: "Mulish", sans-serif;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin-bottom: 14px;
+  margin-top: 14px;
+}
+@media only screen and (min-width: 1026px) {
+  .heading--shelfTitle {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 12px;
+  }
+}
+
+.container--title-categories-home {
+  justify-content: center;
+  width: 100%;
+}
+.container--title-categories-home .heading--title-categories-home {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  .container--title-categories-home .heading--title-categories-home {
+    margin-bottom: 20px;
+  }
+}
+
+.container--deals {
+  margin-left: 10px;
+  font-family: "Mulish", sans-serif;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: inherit;
+}
+@media only screen and (min-width: 640px) {
+  .container--deals {
+    margin-right: 20px;
+  }
+}
+
+.paragraph--deals {
+  font-family: "Mulish", sans-serif;
+  margin: 0;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: inherit;
+}
+.paragraph--shelfLink {
+  margin: 14px 0;
+  line-height: 20px;
+  line-height: 1.25rem;
+  white-space: nowrap;
+}
+@media only screen and (min-width: 1026px) {
+  .paragraph--shelfLink {
+    margin: 14px 0 11px;
+  }
+}
+.paragraph--title-categories-item {
+  cursor: pointer;
+  margin: 4px 0 0 0;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: inherit;
+}
+
+.link--shelfLink {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+@media only screen and (min-width: 1026px) {
+  .link--shelfLink {
+    text-decoration: none;
+  }
+}

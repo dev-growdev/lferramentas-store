@@ -1,0 +1,54 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.heading--header-floating-buttons-customer-support-title,
+.paragraph--header-floating-buttons-customer-support-title {
+  margin: 0;
+}
+
+.wrapper--header-floating-buttons-customer-support-title {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  line-height: 16px;
+}
+
+.heading--header-floating-buttons-customer-support-title {
+  font-size: inherit;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.container--customer-support-item {
+  max-width: 270px;
+  margin: 0 auto 0 0;
+}
+
+.heading--customer-support-item {
+  margin: 0 0 8px 0;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.paragraph--customer-support-item {
+  margin: 0;
+  color: #4d4d4d;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}

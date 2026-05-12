@@ -1,0 +1,168 @@
+.optin-custom {
+  margin-top: 10px;
+}
+
+.optin-custom * {
+  font-family: Mulish;
+  font-style: normal;
+}
+
+.optin-radio {
+  display: flex;
+  align-items: center !important;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  height: 25px !important;
+}
+
+.optin-radio-options {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.optin-radio-options input[type="radio"] {
+  outline: none;
+  margin-right: 5px;
+}
+
+#opt-in-sms,
+#opt-in-whatsapp,
+#opt-in-email {
+  &--false {
+    margin-left: 36px;
+  }
+}
+
+.optin-title {
+  @include textConfig(
+    $black,
+    $primaryFont,
+    14,
+    $fontRegular,
+    20,
+    left,
+    initial,
+    0
+  );
+  margin-bottom: 10px !important;
+}
+
+.optin-subtitle,
+label[for="optin-check-all"] {
+  @include textConfig(
+    $black,
+    $primaryFont,
+    12,
+    $fontRegular,
+    20,
+    left,
+    initial,
+    0
+  );
+  color: $black !important;
+  font-size: 12px !important;
+  margin-bottom: 16px;
+
+  .optin-text {
+    font-weight: $fontRegular;
+  }
+}
+
+.optin-subtitle {
+  margin-bottom: 16px !important;
+  line-height: 20px !important;
+}
+
+label[for="optin-check-all"] {
+  padding-left: 24px;
+}
+
+.optin-text,
+.optin-radio label {
+  @include textConfig(
+    $black,
+    $primaryFont,
+    14,
+    $fontRegular,
+    16,
+    left,
+    initial,
+    0
+  );
+
+  font-size: 14px !important;
+}
+
+.optin-text {
+  font-weight: $fontBold;
+}
+
+#optin-check-all,
+.optin-radio-options input[type="radio"] {
+  border: 1px solid $black;
+  border-radius: 4px;
+  flex-basis: auto !important;
+  outline: none;
+  appearance: none;
+  @include size(16px);
+
+  &:checked {
+    background-color: $black;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDExIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik05LjEwNjA2IDAuNUM3LjM4NjExIDIuMTkzNDMgNS42NjQ2NiAzLjg4MDM1IDMuOTQxOTggNS41NzM5MUwxLjQxMTU1IDMuNDk5MzFMMCA1LjE2MjQzTDMuMzA1MDEgNy44Njg1MUw0LjA3OTYzIDguNUw0Ljc5MTA5IDcuODAwOTZDNi43NDggNS44NzQxIDguNzA2MjggMy45NTc5OSAxMC42NjY3IDIuMDI3OTdMOS4xMDU5IDAuNTAwMTI5TDkuMTA2MDYgMC41WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==");
+    background-size: 9px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+#optin-check-all {
+  margin-left: -24px;
+}
+
+.optin-custom {
+  margin-top: 0;
+
+  > .optin-radio {
+    max-width: 100%;
+  }
+
+  .optin-title,
+  .option-subtitle,
+  .optin-text {
+    @include textConfig(
+      $black,
+      $primaryFont,
+      14,
+      $fontRegular,
+      20,
+      left,
+      initial,
+      0
+    );
+  }
+
+  .option-subtitle {
+    font-size: 12px;
+  }
+
+  .optin-radio {
+    .optin-text {
+      font-weight: $fontExtraBold;
+    }
+
+    &-options {
+      align-items: center;
+      width: fit-content;
+
+      input {
+        margin-top: 0;
+      }
+
+      label {
+        white-space: nowrap;
+      }
+    }
+  }
+}

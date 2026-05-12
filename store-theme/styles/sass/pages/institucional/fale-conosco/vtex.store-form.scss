@@ -1,0 +1,16 @@
+@import "../../../global";
+
+.formSubmitButton {
+  @include button-primary();
+  margin: 16px auto;
+  max-width: 180px;
+
+  @include mq("1024") {
+    margin: 16px 0 16px auto;
+  }
+
+  :global(.vtex-button) {
+    padding: 8px 0;
+    @include border-radius();
+  }
+}

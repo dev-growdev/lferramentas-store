@@ -1,0 +1,45 @@
+{
+  "flex-layout.row#empty-search": {
+    "title": "Conteúdo Página Busca Vazia",
+    "children": ["not-found"],
+    "props": {
+      "fullWidth": true,
+      "blockClass": "not-found"
+    }
+  },
+  "not-found": {
+    "props": {
+      "blockClass": "not-found"
+    }
+  },
+  "flex-layout.row#shelf-not-found": {
+    "title": "Carrossel de Produtos",
+    "children": ["flex-layout.row#shelf-01"],
+    "props": {
+      "blockClass": "shelf-not-found",
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#empty-search-banner": {
+    "title": "Banner Busca Vazia",
+    "children": [
+      "responsive-layout.desktop#empty-search-banner",
+      "responsive-layout.mobile#empty-search-banner"
+    ],
+    "props": {
+      "blockClass": "empty-search-banner",
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "experimentalHideEmptyCols": true,
+      "horizontalAlign": "center"
+    }
+  },
+  "responsive-layout.desktop#empty-search-banner": {
+    "title": "Desktop",
+    "children": ["toggle-layout#banner-departamento"]
+  },
+  "responsive-layout.mobile#empty-search-banner": {
+    "title": "Mobile",
+    "children": ["toggle-layout#banner-departamento-mobile"]
+  }
+}

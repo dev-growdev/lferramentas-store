@@ -1,0 +1,25 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.wrapper--header-notification {
+  width: 100%;
+  text-align: center;
+  margin: 0.25rem 0;
+}
+
+.link--header-notification,
+.paragraph--header-notification {
+  margin: 0;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  line-height: 1.375rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: none;
+}
+
+.strong--header-notification {
+  font-weight: 900;
+}

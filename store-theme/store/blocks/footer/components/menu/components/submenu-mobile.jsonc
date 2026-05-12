@@ -1,0 +1,120 @@
+{
+  "disclosure-layout#atendimento-submenu": {
+    "props": {
+      "blockClass": "footer-submenu",
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#atendimento-submenu",
+      "disclosure-content#atendimento-submenu"
+    ]
+  },
+  "disclosure-trigger#atendimento-submenu": {
+    "props": {
+      "blockClass": "footer-submenu"
+    },
+    "children": [
+      "rich-text#atendimento-footer"
+    ]
+  },
+  "disclosure-content#atendimento-submenu": {
+    "props": {
+      "blockClass": "footer-submenu"
+    },
+    "children": [
+      "flex-layout.col#atendimento-submenu"
+    ]
+  }, 
+  "flex-layout.col#atendimento-submenu": {
+    "title": "Menu 01",
+    "children": [
+      "rich-text#link-atendimento-01",
+      "rich-text#link-atendimento-02",
+      "rich-text#link-atendimento-03",
+      "rich-text#link-atendimento-04",
+      "rich-text#link-atendimento-horario"
+    ],
+    "props": {
+      "blockClass": "collumn__institutional--menu"
+    }
+  },
+  "disclosure-layout#a-empresa-submenu": {
+    "props": {
+      "blockClass": "footer-submenu",
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#a-empresa-submenu",
+      "disclosure-content#a-empresa-submenu"
+    ]
+  },
+  "disclosure-trigger#a-empresa-submenu": {
+    "props": {
+      "blockClass": "footer-submenu"
+    },
+    "children": [
+      "rich-text#a-empresa-footer"
+    ]
+  },
+  "disclosure-content#a-empresa-submenu": {
+    "props": {
+      "blockClass": "footer-submenu"
+    },
+    "children": [
+      "flex-layout.col#a-empresa-submenu"
+    ]
+  },
+  "flex-layout.col#a-empresa-submenu": {
+    "title": "Menu 02",
+    "children": [
+      "rich-text#link-a-empresa-01",
+      "rich-text#link-a-empresa-02",
+      "rich-text#link-a-empresa-03",
+      "rich-text#link-a-empresa-04",
+      "rich-text#link-a-empresa-05"
+    ],
+    "props": {
+      "blockClass": "collumn__institutional--menu"
+    }
+  },
+  "disclosure-layout#politicas-submenu": {
+    "props": {
+      "blockClass": "footer-submenu",
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#politicas-submenu",
+      "disclosure-content#politicas-submenu"
+    ]
+  },
+  "disclosure-trigger#politicas-submenu": {
+    "props": {
+      "blockClass": "footer-submenu"
+    },
+    "children": [
+      "rich-text#politicas-footer"
+    ]
+  },
+  "disclosure-content#politicas-submenu": {
+    "props": {
+      "blockClass": "footer-submenu"
+    },
+    "children": [
+      "flex-layout.col#politicas-submenu"
+    ]
+  },
+  "flex-layout.col#politicas-submenu": {
+    "title": "Menu 03",
+    "children": [
+      "rich-text#link-politicas-01",
+      "rich-text#link-politicas-02",
+      "rich-text#link-politicas-03",
+      "rich-text#link-politicas-04",
+      "rich-text#link-politicas-05",
+      "rich-text#link-politicas-06"
+    ],
+    "props": {
+      "blockClass": "collumn__institutional--menu"
+    }
+  }
+}

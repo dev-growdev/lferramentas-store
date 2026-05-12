@@ -1,0 +1,66 @@
+{
+  "condition-layout.product#instructions-manual": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": { 
+            "name": "Download"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#instructions-manual"
+    }
+  },
+  "flex-layout.row#instructions-manual": {
+    "title": "Suporte Técnico",
+    "props": {
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "product-property-link#tech-support-manual"
+    ]
+  },
+  "product-property-link#tech-support-manual": {
+    "title": "Suporte Técnico - Download Manual",
+    "props": {
+      "blockClass": [
+        "tech-support-manual"
+      ],
+      "propertyName": "Download"
+    },
+    "children": [
+      "rich-text#tech-support-manual-link-text",
+      "image-new-custom#tech-support-manual-link-text"
+    ]
+  },
+  "rich-text#tech-support-manual-link-text": {
+    "title": "Suporte Técnico - Download Manual Texto",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "generic-specification-group-manual-link-text",
+        "tech-support",
+        "tech-support-manual-link-text"
+      ],
+      "text": "Download do manual do fabricante"
+    }
+  },
+  "image-new-custom#tech-support-manual-link-text": {
+    "title": "Suporte Técnico - Download Manual Ícone",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "generic-specification-group-manual-link-text",
+        "tech-support",
+        "tech-support-manual-link-text"
+      ],
+      "maxWidth": "16px",
+      "maxHeight": "17px",
+      "width": "100%",
+      "src": "assets/icons/icon-download.svg" 
+    }
+  }
+}

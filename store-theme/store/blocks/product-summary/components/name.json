@@ -1,0 +1,13 @@
+{
+  "flex-layout.row#product-summary-name": {
+    "title": "Container Nome Do Produto",
+    "props": {
+      "blockClass": "container__name",
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": ["product-summary-name"]
+  }
+}
+ 

@@ -1,0 +1,26 @@
+{
+  "flex-layout.row#inst-breadcrumb-shipping-policy": {
+    "title": "Conteúdo Breadcrumb",
+    "props": {
+      "blockClass": [
+        "inst-breadcrumb-container"
+      ],
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "rich-text#inst-breadcrumb-home",
+      "image-new-custom#inst-breadcrumb-arrow",
+      "rich-text#inst-breadcrumb-term-shipping-policy"
+    ]
+  },
+  "rich-text#inst-breadcrumb-term-shipping-policy": {
+    "title": "Texto Nome Da Pagina",
+    "props": {
+      "blockClass": "inst-breadcrumb-term",
+      "text": "Política de Entrega"
+    }
+  }
+}

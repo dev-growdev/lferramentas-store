@@ -1,0 +1,23 @@
+@import '../../global/';
+
+.wrapper {
+  &--header-notification {
+    width: 100%;
+    text-align: center;
+    margin: 0.25rem 0;
+  }
+}
+
+.link, 
+.paragraph {
+  &--header-notification {
+    margin: 0;
+    @include textConfig($black, 14, $fontBold, 22, center, none, 0);
+  }
+}
+
+.strong {
+  &--header-notification {
+    font-weight: $fontBlack;
+  }
+}

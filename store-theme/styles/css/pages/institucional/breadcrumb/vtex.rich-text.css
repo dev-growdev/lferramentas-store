@@ -1,0 +1,30 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.paragraph--inst-breadcrumb-home {
+  margin: 0;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  line-height: 1.1875rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+.paragraph--inst-breadcrumb-home--link {
+  text-decoration: none;
+  color: #000000;
+}
+.paragraph--inst-breadcrumb-term {
+  margin: 0;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  line-height: 1.1875rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  font-weight: 700;
+}

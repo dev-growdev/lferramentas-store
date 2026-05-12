@@ -1,0 +1,30 @@
+{
+  "rich-text#inst-breadcrumb-home": {
+    "title": "Texto Nome Da Home",
+    "props": {
+      "blockClass": "inst-breadcrumb-home",
+      "text": "<a class='vtex-rich-text-0-x-paragraph--inst-breadcrumb-home--link' href='/'>Início</a>"
+    }
+  },
+  "image-new-custom#inst-breadcrumb-arrow": {
+    "title": "Ícone Seta",
+    "props": {
+      "blockClass": "inst-breadcrumb-arrow",
+      "src": "data:image/svg+xml,%3Csvg width='5' height='7' viewBox='0 0 5 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.85546e-09 0.873926L0.892023 -0.00146485L4.37695 3.5001L0.892023 7.00166L1.29882e-08 6.12627L2.62617 3.5001L1.85546e-09 0.873926Z' fill='black'/%3E%3C/svg%3E%0A"
+    }
+  },
+  "rich-text#inst-breadcrumb-home-black": {
+    "title": "Texto Nome Da Home",
+    "props": {
+      "blockClass": ["inst-breadcrumb-home", "inst-breadcrumb-home-black"],
+      "text": "<a class='vtex-rich-text-0-x-paragraph--inst-breadcrumb-home--link' href='/'>Início</a>"
+    }
+  },
+  "image-new-custom#inst-breadcrumb-arrow-black": {
+    "title": "Ícone Seta",
+    "props": {
+      "blockClass": ["inst-breadcrumb-arrow", "inst-breadcrumb-arrow-black"],
+      "src": "data:image/svg+xml,%3Csvg width='5' height='7' viewBox='0 0 5 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.85546e-09 0.873926L0.892023 -0.00146485L4.37695 3.5001L0.892023 7.00166L1.29882e-08 6.12627L2.62617 3.5001L1.85546e-09 0.873926Z' fill='white'/%3E%3C/svg%3E%0A"
+    }
+  }
+}

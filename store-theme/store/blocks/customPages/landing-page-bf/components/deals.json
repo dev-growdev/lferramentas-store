@@ -1,0 +1,181 @@
+{
+  "toggle-layout#lp-bf-deals": {
+    "title": "Ativar/Desativar - Mosaico de Ofertas",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "rich-text#lp-bf-benefits",
+      "flex-layout.row#lp-bf-deals",
+      "rich-text#text-lp-bf-benefits"
+    ]
+  },
+  "flex-layout.row#lp-bf-deals": {
+    "title": "Mosaico de Ofertas",
+    "props": {
+      "blockClass": "lp-bf-deals",
+      "fullWidth": true
+    },
+    "children": ["slider-layout#lp-bf-deals"]
+  },
+  "slider-layout#lp-bf-deals": {
+    "children": [
+      "flex-layout.row#lp-bf-deals01",
+      "flex-layout.row#lp-bf-deals02",
+      "flex-layout.row#lp-bf-deals03",
+      "flex-layout.row#lp-bf-deals04",
+      "flex-layout.row#lp-bf-deals05"
+    ],
+    "props": {
+      "blockClass": "lp-bf-deals",
+      "infinite": false,
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 5,
+        "mobile": 1
+      },
+      "centerMode": {
+        "phone": "to-the-left",
+        "desktop": "disabled"
+      },
+      "centerModeSlidesGap": 16,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "mobileOnly"
+    }
+  },
+  "flex-layout.row#lp-bf-deals01": {
+    "children": ["image-new-custom#lp-bf-deal-1", "rich-text#lp-bf-deal-1"],
+    "props": {
+      "blockClass": ["lp-bf-deals-item"],
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
+  "image-new-custom#lp-bf-deal-1": {
+    "title": "Mosaico Home Imagem 01",
+    "props": {
+      "blockClass": ["lp-bf-deals"],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "60px",
+      "height": "60px",
+      "src": "/assets/vtex.file-manager-graphql/images/53a04942-a926-4528-ba7c-023eed3ffb20___526e66b7e8128393671f30cdf8b66aab.svg",
+      "alt": "mosaico home imagem 1"
+    }
+  },
+  "rich-text#lp-bf-deal-1": {
+    "title": "Mosaico Home Texto 01",
+    "props": {
+      "text": "35 anos \n de história",
+      "blockClass": "lp-bf-deals"
+    }
+  },
+  "flex-layout.row#lp-bf-deals02": {
+    "children": ["image-new-custom#lp-bf-deal-2", "rich-text#lp-bf-deal-2"],
+    "props": {
+      "blockClass": ["lp-bf-deals-item"],
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
+  "image-new-custom#lp-bf-deal-2": {
+    "title": "Mosaico Home Imagem 02",
+    "props": {
+      "blockClass": ["lp-bf-deals"],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "60px",
+      "height": "60px",
+      "src": "/assets/vtex.file-manager-graphql/images/4fda6245-31af-45ac-bcee-eaa10a4074c0___25438f068c48590386c22df0c2a9501b.svg",
+      "alt": "mosaico home imagem 2"
+    }
+  },
+  "rich-text#lp-bf-deal-2": {
+    "title": "Mosaico Home Texto 02",
+    "props": {
+      "text": "Melhores marcas \n do mercado!",
+      "blockClass": "lp-bf-deals"
+    }
+  },
+  "flex-layout.row#lp-bf-deals03": {
+    "children": ["image-new-custom#lp-bf-deal-3", "rich-text#lp-bf-deal-3"],
+    "props": {
+      "blockClass": ["lp-bf-deals-item"],
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
+  "image-new-custom#lp-bf-deal-3": {
+    "title": "Mosaico Home Imagem 03",
+    "props": {
+      "blockClass": ["lp-bf-deals"],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "60px",
+      "height": "60px",
+      "src": "/assets/vtex.file-manager-graphql/images/eebca17c-ac85-4249-8bd3-788aff5b1232___120d404887b130d70a016c590c47db83.svg",
+      "alt": "mosaico home imagem 3"
+    }
+  },
+  "rich-text#lp-bf-deal-3": {
+    "title": "Mosaico Home Texto 03",
+    "props": {
+      "text": "Compre no site \n e retire na loja",
+      "blockClass": "lp-bf-deals"
+    }
+  },
+  "flex-layout.row#lp-bf-deals04": {
+    "children": ["image-new-custom#lp-bf-deal-4", "rich-text#lp-bf-deal-4"],
+    "props": {
+      "blockClass": ["lp-bf-deals-item"],
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
+  "image-new-custom#lp-bf-deal-4": {
+    "title": "Mosaico Home Imagem 04",
+    "props": {
+      "blockClass": ["lp-bf-deals"],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "60px",
+      "height": "60px",
+      "src": "/assets/vtex.file-manager-graphql/images/34c50c14-72f9-4724-acef-25f8f484e255___bc4784c0c701c85f1ad67a715d27166b.svg",
+      "alt": "mosaico home imagem 4"
+    }
+  },
+  "rich-text#lp-bf-deal-4": {
+    "title": "Mosaico Home Texto 04",
+    "props": {
+      "text": "Tudo em até \n 10x sem juros",
+      "blockClass": "lp-bf-deals"
+    }
+  },
+  "flex-layout.row#lp-bf-deals05": {
+    "children": ["image-new-custom#lp-bf-deal-5", "rich-text#lp-bf-deal-5"],
+    "props": {
+      "blockClass": ["lp-bf-deals-item"],
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
+  "image-new-custom#lp-bf-deal-5": {
+    "title": "Mosaico Home Imagem 05",
+    "props": {
+      "blockClass": ["lp-bf-deals"],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "60px",
+      "height": "60px",
+      "src": "/assets/vtex.file-manager-graphql/images/54e6612e-2ffa-4f9c-8aae-2b838ea46a98___e6b4d82f9accefd351fde30be31e5622.svg",
+      "alt": "mosaico home imagem 5"
+    }
+  },
+  "rich-text#lp-bf-deal-5": {
+    "title": "Mosaico Home Texto 05",
+    "props": {
+      "text": "Frete Grátis \n acima de R$ 799",
+      "blockClass": "lp-bf-deals"
+    }
+  }
+}

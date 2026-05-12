@@ -1,0 +1,49 @@
+{
+  "flex-layout.row#selling-price": {
+    "title": "Container Preço De Venda",
+    "props": {
+      "blockClass": "container__selling-price",
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "product-spot-price",
+      "product-selling-price#pdp",
+      "conditional-measurement-unit#pdp-square-meter"
+    ]
+  },
+  "product-spot-price": {
+    "props": {
+      "message": "{spotPriceValue}"
+    }
+  },
+
+  "product-selling-price#pdp": {
+    "props": {
+      "hasMeasurementUnit": true,
+      "message": "/{measurementUnit}"
+    }
+  },
+  "conditional-measurement-unit#pdp-square-meter": {
+    "props": {
+      "measurementUnits": [
+        "m",
+        "M",
+        "m2",
+        "M2",
+        "m²",
+        "M²"
+      ],
+      "type": "show",
+      "Then": "product-selling-price#pdp-square-meter"
+    }
+  },
+  "product-selling-price#pdp-square-meter": {
+    "props": {
+      "blockClass": [
+        "pdp-square-meter"
+      ],
+      "message": "{sellingPriceWithUnitMultiplier}/caixa com {unitMultiplier}{measurementUnit}"
+    }
+  }
+}

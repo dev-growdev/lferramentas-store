@@ -1,0 +1,27 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.buttonLink--quote-link {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 14px;
+  line-height: 0.875rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 8px;
+  margin-right: auto;
+  margin-top: 28px;
+  min-height: 2.6875rem;
+  width: fit-content !important;
+}
+@media only screen and (min-width: 1024px) {
+  .buttonLink--quote-link {
+    margin-right: unset;
+  }
+}
+
+.label--quote-link {
+  line-height: 16px;
+}

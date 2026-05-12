@@ -1,0 +1,46 @@
+@import '../../../global/';
+
+.drawer--customer-support {
+  max-width: 395px !important;
+  background-color: $white;
+}
+
+.openIconContainer--customer-support {
+  padding: 0;
+
+  margin: 0 0 8px 0;
+}
+
+.overlay--customer-support {
+  background: $dark-gray;
+}
+
+.drawerHeader--customer-support {
+  @include display-flex(center, flex, center, row);
+  background: $primary-color;
+  padding: 17px 16px;
+  position: relative;
+
+  .closeIconButton {
+    padding: 6px;
+
+    position: absolute;
+    right: 10px;
+
+    &::before {
+      content: '';
+
+      display: block;
+      @include size(12px);
+
+      background-image: url(assets/icons/icon-close-white.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    & :first-child {
+      display: none;
+    }
+  }
+}

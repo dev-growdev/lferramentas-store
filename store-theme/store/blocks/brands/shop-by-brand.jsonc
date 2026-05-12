@@ -1,0 +1,25 @@
+{
+  "store.custom#shop-by-brand": {
+    "blocks": ["flex-layout.row#shop-by-brand"]
+  },
+  "flex-layout.row#shop-by-brand": {
+    "props": {
+      "blockClass": ["shop-by-brand"]
+    },
+    "children": ["flex-layout.col#shop-by-brand"]
+  },
+  "flex-layout.col#shop-by-brand": {
+    "children": [
+      "flex-layout.row#shop-by-brand-breadcrumb",
+      "rich-text#shop-by-brand",
+      "shop-by-brand"
+    ] 
+  },
+  "rich-text#shop-by-brand": {
+    "title": "Título da Página",
+    "props": {
+      "text": "# Compre por marca",
+      "blockClass": "shop-by-brand-title"
+    }
+  }
+}

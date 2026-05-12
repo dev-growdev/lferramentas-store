@@ -1,0 +1,39 @@
+{
+  "flex-layout.row#buy-button": {
+    "title": "Container Botão De Compra",
+    "props": {
+      "blockClass": "container__buy-button",
+      "fullWidth": true,
+      "preserveLayoutOnMobile": true,
+      "htmlId": "buy-button-pdp"
+    },
+    "children": [
+      "flex-layout.col#product-quantity",
+      "flex-layout.col#buy-pdp"
+    ]
+  },
+  "flex-layout.col#buy-pdp": {
+    "title": "Container Seletor Quantidade",
+    "props": {
+      "blockClass": "container__product-quantity",
+      "preserveLayoutOnMobile": true,
+      "width": {
+        "mobile": "65%",
+        "desktop": "65%"
+      }
+    },
+    "children": [
+      "add-to-cart-button#pdp",
+      "modal-confirm-buy"
+    ]
+  },
+  "add-to-cart-button#pdp": {
+    "props": {
+      "addToCartFeedback": "customEvent",
+      "customPixelEventId": "add-to-cart-button",
+      "text": "Adicionar ao carrinho",
+      "unavailableText": "Produto Indisponível",
+      "isOneClickBuy": false
+    }
+  }
+}

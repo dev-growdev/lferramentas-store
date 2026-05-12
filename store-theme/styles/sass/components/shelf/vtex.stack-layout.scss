@@ -1,0 +1,63 @@
+@import "../../global";
+
+.stackItem {
+  &--container {
+    &__price-savings {
+      @include abs-position(5px, 0, auto, 5px);
+    }
+
+    &__highlights-row {
+      @include abs-position(7px, auto, auto, 0);
+    }
+
+    &__highlights-row-bottom-mob {
+      @include abs-position(auto, auto, -11px, auto);
+      width: 100%;
+
+      @include mq("1026") {
+        display: none;
+      }
+    }
+
+    &__custom-flag {
+      pointer-events: none;
+      width: calc(100% + 16px);
+      height: 100%;
+      margin: -6px -8px -8px;
+    }
+
+    &__custom-flag-pdp {
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      right: 0;
+      left: unset;
+      padding: 0;
+
+      @include mq("640") {
+        width: calc(100% - 116px);
+      }
+    }
+  }
+
+  &--prodsum-wishlist {
+    @include abs-position(0px, 0px, auto, auto);
+  }
+
+  &--pdp-wishlist {
+    @include abs-position(8px, 8px, auto, auto);
+  }
+
+  &--container__flags-row {
+    @include abs-position(8px, auto, auto, 8px);
+
+    @include mq("640") {
+      left: calc(20% + 30px);
+    }
+
+    @include mq("1026") {
+      left: 131px;
+    }
+  }
+}

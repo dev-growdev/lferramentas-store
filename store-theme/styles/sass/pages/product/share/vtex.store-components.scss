@@ -1,0 +1,105 @@
+@import '../../../global/';
+
+.shareContainer {
+  @include display-flex(center, flex, space-between, row);
+
+  margin: 8px 0 16px 0;
+}
+
+.shareLabel {
+  @include text(6, $dark-gray, $fontRegular);
+  font-size: 0;
+
+  @include display-flex(center, flex, center, row);
+  margin: 0 8px 0 0;
+
+  &::before {
+    content: '';
+
+    display: inline-block;
+    @include size(13px, 12px);
+
+    margin: 0 6px 0 0;
+
+    background-image: url('/arquivos/icon-share-io.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &::after {
+    content: 'Compartilhe:';
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 0.875rem;
+    letter-spacing: 0rem;
+    text-align: left;
+    text-transform: initial;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+.shareButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 25px);
+  gap: 8px;
+}
+
+.shareSocialButton {
+  background-color: #4D4D4D !important;
+  border-radius: 4px;
+
+  @include display-flex(center, flex, center, row);
+
+  margin: 0;
+
+  height: 25px;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &--facebook {
+    &::before {
+      content: '' ;
+      background-image: url('/arquivos/icon-share-facebook.png');
+      width: 19px;
+      height: 15px;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-position: center;
+    }
+  }
+
+  &--whatsapp {
+    &::before {
+      content: '' ;
+      background-image: url('/arquivos/icon-share-whatsapp.png');
+      width: 19px;
+      height: 15px;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-position: center;
+    }
+  }
+}
+
+.shareSocialIcon {
+  &,
+  & :nth-child(odd),
+  & :nth-child(even) {
+    color: transparent;
+    fill: transparent;
+  }
+}
+
+.shareSocialIcon {
+  display: none;
+}

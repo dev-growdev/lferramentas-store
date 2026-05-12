@@ -1,0 +1,146 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
+.logoContainer {
+  display: block;
+  margin-right: 2rem;
+  padding: 0;
+}
+
+.logoImage {
+  display: block;
+}
+
+.searchBarContainer {
+  padding: 0;
+  padding-bottom: 16px;
+}
+@media only screen and (min-width: 1026px) {
+  .searchBarContainer {
+    margin: auto;
+    padding: 0;
+  }
+}
+.searchBarContainer .autoCompleteOuterContainer {
+  width: 100%;
+}
+.searchBarContainer .autoCompleteOuterContainer :global(.vtex-input) {
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 0;
+}
+@media only screen and (min-width: 1026px) {
+  .searchBarContainer .autoCompleteOuterContainer :global(.vtex-input) {
+    align-self: center;
+    min-width: 200px;
+  }
+}
+.searchBarContainer .resultsList {
+  position: fixed;
+  right: 50%;
+  left: 50%;
+  width: 90vw;
+  transform: translateX(-50%);
+}
+@media only screen and (min-width: 1026px) {
+  .searchBarContainer .resultsList {
+    bottom: auto;
+    left: unset;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: auto;
+    width: 285px;
+    transform: unset;
+  }
+}
+.searchBarContainer :global(.vtex-input-prefix__group) {
+  background-color: #4d4d4d;
+  border: none;
+  border-radius: 0.625rem;
+  height: 2.5rem;
+  width: 100%;
+  max-width: 42.75rem;
+}
+.searchBarContainer :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
+  background-color: #4d4d4d;
+  color: #b2b2b2;
+  color: #b2b2b2;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+.searchBarContainer :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input)::placeholder {
+  color: #b2b2b2;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+@media only screen and (max-width: 1024px) {
+  .searchBarContainer :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input)::placeholder {
+    letter-spacing: -0.2px;
+  }
+}
+.searchBarContainer :global(.vtex-input-prefix__group) :global(.vtex-input__suffix) {
+  background-color: #4d4d4d;
+}
+@media only screen and (max-width: 1024px) {
+  .searchBarContainer :global(.vtex-input-prefix__group) :global(.vtex-input__suffix) {
+    padding: 0 8px;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .searchBarInnerContainer .portalContainer {
+    z-index: 11 !important;
+  }
+  .searchBarInnerContainer .portalContainer,
+  .searchBarInnerContainer .portalWrapper {
+    position: absolute !important;
+    width: 100%;
+  }
+  .searchBarInnerContainer .portalWrapper :global(.vtex-search-2-x-biggy-autocomplete-wrapper) {
+    width: 100%;
+  }
+}
+
+.searchBarIcon {
+  width: 22px;
+  background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.43478 15.8696C12.5409 15.8696 15.8696 12.5409 15.8696 8.43478C15.8696 4.32867 12.5409 1 8.43478 1C4.32867 1 1 4.32867 1 8.43478C1 12.5409 4.32867 15.8696 8.43478 15.8696Z' stroke='%23FFE72E' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M13.5217 14.3047L18.2174 19.0003' stroke='%23FFE72E' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round'/%3E%3C/svg%3E%0A") no-repeat center;
+  padding: 0;
+}
+.searchBarIcon .searchIcon {
+  display: none;
+}
+
+@media only screen and (min-width: 1026px) {
+  .sizeDesktop {
+    padding-right: 3rem;
+    padding-left: 0;
+  }
+}
+
+.sizeMobile {
+  max-width: 131px;
+  margin: auto;
+}
+
+.imageElement--container-icon-wishlist {
+  align-items: center;
+  display: flex;
+  padding: 0 10px;
+  height: 100%;
+}

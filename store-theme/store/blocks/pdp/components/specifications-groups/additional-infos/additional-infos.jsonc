@@ -1,0 +1,115 @@
+{
+  "conditional-spec-group#additional-infos": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "additional-infos"
+      ],
+      "propertyName": "Informações Adicionais"
+    },
+    "children": [
+      "flex-layout.row#additional-infos"
+    ]
+  },
+  "flex-layout.row#additional-infos": {
+    "title": "Informações Adicionais",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "additional-infos"
+      ],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#additional-infos"
+    ]
+  },
+  "flex-layout.col#additional-infos": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "additional-infos"
+      ],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#additional-infos-content"
+    ]
+  },
+  "flex-layout.row#additional-infos-content": {
+    "title": "Informações Adicionais",
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "additional-infos-content"
+      ],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#additional-infos-content"
+    ]
+  },
+  "flex-layout.col#additional-infos-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "additional-infos-content"
+      ],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "disclosure-layout#additional-infos-content"
+    ]
+  },
+  "disclosure-layout#additional-infos-content": {
+    "props": {
+      "initialVisibility": "visible",
+      "blockClass": [
+        "generic-specification-group-content",
+        "additional-infos-content"
+      ]
+    },
+    "children": [
+      "disclosure-trigger#additional-infos-content",
+      "disclosure-content#additional-infos-content"
+    ]
+  },
+  "disclosure-trigger#additional-infos-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "additional-infos-content"
+      ]
+    },
+    "children": [
+      "rich-text#additional-infos-title"
+    ]
+  },
+  "disclosure-content#additional-infos-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "additional-infos-content"
+      ]
+    },
+    "children": [
+      "product-specification-group#additional-infos"
+    ]
+  },
+  "rich-text#additional-infos-title": {
+    "title": "Informações Adicionais - Título",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "generic-specification-group-title",
+        "additional-infos",
+        "additional-infos-title"
+      ],
+      "text": "##### Informações Adicionais"
+    }
+  }
+}

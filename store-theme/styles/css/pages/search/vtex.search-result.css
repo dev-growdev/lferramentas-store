@@ -1,0 +1,1136 @@
+@charset "UTF-8";
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.searchResultContainer {
+  padding: 0;
+}
+
+.container--layout {
+  margin: 0 auto;
+  max-width: 1292px;
+  padding: 0 16px;
+  width: 100%;
+  padding: 26px 11.2px 0;
+}
+@media only screen and (min-width: 1026px) {
+  .container--layout {
+    padding: 12px 5px 0 16px;
+  }
+}
+.container--layout--result-search .galleryTitle--layout {
+  font-family: "Mulish", sans-serif;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin: 16px 0 28px;
+}
+@media only screen and (min-width: 1026px) {
+  .container--layout--result-search .galleryTitle--layout {
+    margin: 28px 0 29px;
+    font-size: 20px;
+    line-height: 22px;
+    line-height: 1.375rem;
+  }
+}
+.container--layout--result-search .galleryTitle--layout::before {
+  color: #000000;
+  content: 'Resultado de busca para "';
+  font-weight: 400;
+}
+.container--layout--result-search .galleryTitle--layout::after {
+  content: '"';
+  color: #000000;
+  font-weight: 400;
+}
+.container--layout--department .galleryTitle--layout {
+  font-family: "Mulish", sans-serif;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  line-height: 1.5625rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 16px 0 26px;
+}
+@media only screen and (min-width: 1026px) {
+  .container--layout--department .galleryTitle--layout {
+    color: #000000;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    line-height: 2.5rem;
+    letter-spacing: 0rem;
+    text-align: left;
+    text-transform: initial;
+    margin: 10px 0 17px 11px;
+  }
+}
+.container--layout .galleryItem--normal {
+  padding: 0.3rem 0.3rem 19.2px 0.3rem;
+}
+@media only screen and (min-width: 1026px) {
+  .container--layout .galleryItem--normal {
+    padding: 11px 11px 19.2px 11px;
+  }
+}
+.container--layout .totalProducts--layout {
+  border: 0;
+  padding: 16px 0 16.2px;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+@media only screen and (min-width: 1026px) {
+  .container--layout .totalProducts--layout {
+    margin-left: 11px;
+    text-align: left;
+  }
+}
+.container--layout .totalProducts--layout .totalProductsMessage {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: lowercase;
+}
+.container--layout .totalProducts--layout .totalProductsMessage::after {
+  content: " encontrados";
+}
+@media only screen and (min-width: 1026px) {
+  .container--layout .filter {
+    padding-bottom: 8px;
+  }
+}
+.container--layout .filterAccordionBreadcrumbs {
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (min-width: 1026px) {
+  .container--layout .orderByDropdown {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+.container--layout .orderByButton {
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  height: 48px;
+  width: 100%;
+  background-color: #ffffff;
+  flex-direction: row-reverse;
+}
+@media only screen and (min-width: 768px) {
+  .container--layout .orderByButton {
+    align-items: baseline;
+    justify-content: flex-start;
+    padding-bottom: 0;
+    padding-top: 13px;
+  }
+}
+@media only screen and (min-width: 1026px) {
+  .container--layout .orderByButton {
+    justify-content: space-between;
+    height: 48px;
+    width: 185px;
+    padding: 0 14px 0 16px;
+    align-items: center;
+  }
+}
+.container--layout .orderByText {
+  font-size: 0px;
+  line-height: 0px;
+  line-height: 0rem;
+  display: block;
+}
+.container--layout .orderByText::after {
+  content: "Ordenar por:";
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+@media only screen and (min-width: 768px) {
+  .container--layout .orderByText {
+    margin-bottom: 0;
+    padding-right: 25px;
+  }
+}
+@media only screen and (min-width: 1026px) {
+  .container--layout .orderByText {
+    display: none;
+  }
+}
+.container--layout .orderByMobileCol {
+  align-items: center;
+  display: flex;
+}
+.container--layout .buttonShowMore--fetch-more :global(.vtex-button), .container--layout .buttonShowMore--fetch-previous :global(.vtex-button) {
+  margin: 30px 0px;
+  height: 52px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  border-radius: 5px;
+  border: 0;
+}
+.container--layout .buttonShowMore--fetch-more :global(.vtex-button):hover, .container--layout .buttonShowMore--fetch-previous :global(.vtex-button):hover {
+  background-color: #555a44;
+  opacity: 0.8;
+}
+@media only screen and (min-width: 768px) {
+  .container--layout .buttonShowMore--fetch-more :global(.vtex-button), .container--layout .buttonShowMore--fetch-previous :global(.vtex-button) {
+    max-width: 376px;
+    height: 48px;
+    width: 100%;
+  }
+}
+.container--layout .buttonShowMore--fetch-more :global(.vtex-button__label) {
+  font-size: 0;
+}
+.container--layout .buttonShowMore--fetch-more :global(.vtex-button__label)::before {
+  content: "Ver Mais";
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: autopx;
+  line-height: calc(auto / 16)rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.container--layout .buttonShowMore--fetch-previous :global(.vtex-button__label) {
+  font-size: 0;
+}
+.container--layout .buttonShowMore--fetch-previous :global(.vtex-button__label)::before {
+  content: "Ver Anteriores";
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: autopx;
+  line-height: calc(auto / 16)rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gallery--grid {
+  padding: 0;
+  margin: 0;
+}
+
+.galleryTitle--layout {
+  font-family: "Mulish", sans-serif;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  line-height: 1.5625rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 16px 0 26px;
+}
+@media only screen and (min-width: 1026px) {
+  .galleryTitle--layout {
+    color: #000000;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    line-height: 2.5rem;
+    letter-spacing: 0rem;
+    text-align: left;
+    text-transform: initial;
+    margin: 10px 0 17px 11px;
+  }
+}
+
+.accordionFilterItemOptions {
+  margin-left: -2rem;
+  overflow: auto;
+}
+.accordionFilterItemOptions .filter__container--priceRange {
+  padding: 0;
+  border: none;
+  height: 60px;
+}
+.accordionFilterItemOptions .filter__container--priceRange .filterAvailable {
+  display: none;
+}
+.accordionFilterItemOptions .filter__container--priceRange .filterTemplateOverflow {
+  padding: 0;
+}
+.accordionFilterItemOptions .filter__container--priceRange .filterTemplateOverflow .priceRangeInputWrapper {
+  flex-wrap: wrap;
+}
+.accordionFilterItemOptions .filter__container--priceRange .filterTemplateOverflow .priceRangeInputWrapper .priceRangeInput {
+  width: calc(50% - 10px);
+}
+.accordionFilterItemOptions .filter__container--priceRange .filterTemplateOverflow .priceRangeInputWrapper :global(.vtex-button) {
+  height: 35px;
+  width: 100%;
+  background: #000000;
+  border-radius: 4px;
+  border: 0;
+  box-shadow: none;
+  margin: 10px 0;
+}
+
+.accordionFilterContainer--filter-nav {
+  margin-left: -2rem;
+  overflow-x: hidden;
+  border-top: 1px solid #f2f1f0;
+}
+.accordionFilterContainer--marca {
+  display: none;
+}
+.accordionFilterContainer--categoria {
+  border-top: none;
+}
+
+.accordionFilterOpen {
+  margin: 0 0 8px -2rem;
+  padding: 0;
+  overflow: auto;
+}
+.accordionFilterOpen--filter-nav--marca {
+  display: none;
+}
+
+.accordionFilter {
+  padding-bottom: 130px;
+}
+
+.caretIcon--filter-nav {
+  height: 16px;
+  width: 16px;
+  color: #000000;
+}
+@media only screen and (min-width: 1026px) {
+  .caretIcon--filter-nav {
+    color: #000000;
+  }
+}
+.caretIcon--filter-nav :first-child {
+  transform: translate(4px, 7.5px);
+}
+@media only screen and (min-width: 1026px) {
+  .caretIcon--filter-nav :first-child {
+    transform: translate(4px, 4.5px);
+  }
+}
+
+.accordionFilterOpen--filter-nav .filterAccordionItemBox,
+.filterItem--filter-nav .filterAccordionItemBox {
+  border: 0;
+  min-height: auto;
+  padding: 0px 0px 18px 0px;
+}
+.accordionFilterOpen--filter-nav :global(.vtex-checkbox__label),
+.filterItem--filter-nav :global(.vtex-checkbox__label) {
+  margin-left: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .accordionFilterOpen--filter-nav :global(.vtex-checkbox__label),
+  .filterItem--filter-nav :global(.vtex-checkbox__label) {
+    margin-left: 9px;
+    margin-right: 9px;
+  }
+}
+.accordionFilterOpen--filter-nav :global(.vtex-checkbox__inner-container),
+.accordionFilterOpen--filter-nav :global(.vtex-checkbox__box-wrapper),
+.accordionFilterOpen--filter-nav :global(.vtex-checkbox__box),
+.filterItem--filter-nav :global(.vtex-checkbox__inner-container),
+.filterItem--filter-nav :global(.vtex-checkbox__box-wrapper),
+.filterItem--filter-nav :global(.vtex-checkbox__box) {
+  height: 18px;
+  width: 18px;
+  border: 0;
+  border-radius: 4px;
+}
+.accordionFilterOpen--filter-nav :global(.vtex-checkbox__inner-container),
+.filterItem--filter-nav :global(.vtex-checkbox__inner-container) {
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+.accordionFilterOpen--filter-nav :global(.vtex__icon-check),
+.filterItem--filter-nav :global(.vtex__icon-check) {
+  height: 18px;
+  width: 18px;
+  background-color: #4d4d4d;
+  border: 0;
+  border-radius: 4px;
+}
+.accordionFilterOpen--filter-nav :global(.vtex-checkbox__label),
+.filterItem--filter-nav :global(.vtex-checkbox__label) {
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 15px;
+  line-height: 0.9375rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+@media only screen and (min-width: 1026px) {
+  .accordionFilterOpen--filter-nav :global(.vtex-checkbox__label),
+  .filterItem--filter-nav :global(.vtex-checkbox__label) {
+    color: #4d4d4d;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    line-height: 1.125rem;
+    letter-spacing: 0rem;
+    text-align: left;
+    text-transform: initial;
+    font-family: "Mulish", sans-serif;
+  }
+}
+.accordionFilterOpen :global(.vtex-checkbox__line-container),
+.filterItem :global(.vtex-checkbox__line-container) {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (min-width: 1026px) {
+  .accordionFilterOpen :global(.vtex-checkbox__line-container),
+  .filterItem :global(.vtex-checkbox__line-container) {
+    margin-bottom: 8px;
+  }
+}
+.accordionFilterOpen :global(.vtex-checkbox__container),
+.accordionFilterOpen :global(.vtex-checkbox__inner-container),
+.accordionFilterOpen :global(.vtex-checkbox__input),
+.filterItem :global(.vtex-checkbox__container),
+.filterItem :global(.vtex-checkbox__inner-container),
+.filterItem :global(.vtex-checkbox__input) {
+  height: 18px;
+  width: 18px;
+  margin-right: 0;
+  flex-shrink: 0;
+}
+
+.filter__container--filter-nav {
+  padding: 0;
+  border: none;
+}
+.filter__container--selectedFilters {
+  order: -1;
+  margin-bottom: 24px;
+}
+.filter__container--marca {
+  display: none;
+}
+
+.filterMessage {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0.02rem;
+  text-align: left;
+  text-transform: initial;
+  border-bottom: 1px solid #f2f1f0;
+  font-family: "Mulish", sans-serif;
+  margin: 0 0 24px;
+  padding-bottom: 16px;
+}
+
+@media only screen and (min-width: 1026px) {
+  .filterTemplateOverflow {
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1026px) {
+  .filterTemplateOverflow :global(.vtex-slider-container) {
+    padding: 0 10.5px 0 6px;
+  }
+}
+.filterTemplateOverflow--filter-nav :global(.vtex-slider__selector),
+.filterTemplateOverflow--filter-nav :global(.vtex-slider__base-internal) {
+  background-color: #ffe72e;
+}
+.filterTemplateOverflow--filter-nav :global(.vtex-slider__values-container) {
+  justify-content: space-between;
+}
+.filterTemplateOverflow--filter-nav :global(.vtex-slider__dash) {
+  display: none;
+}
+.filterTemplateOverflow--filter-nav :global(.vtex-slider__left-value),
+.filterTemplateOverflow--filter-nav :global(.vtex-slider__right-value) {
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  text-transform: initial;
+}
+.filterTemplateOverflow::-webkit-scrollbar {
+  width: 4px;
+}
+.filterTemplateOverflow::-webkit-scrollbar-thumb {
+  background-color: #4d4d4d;
+  border-radius: 100px;
+}
+.filterTemplateOverflow::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 100px;
+}
+
+.filterIcon {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" fill="none"><path d="M14.999 6.375C13.8296 6.375 12.7588 5.68652 12.2705 4.62109H0V2.625H12.0933C12.436 1.2998 13.6313 0.374023 14.999 0.374023C16.3667 0.374023 17.5615 1.2998 17.9048 2.625H20.9976V4.62109H17.7271C17.2393 5.68652 16.1685 6.375 14.999 6.375ZM14.999 1.87305C14.1724 1.87305 13.4995 2.5459 13.4995 3.37305C13.4995 4.19922 14.1724 4.87207 14.999 4.87207C15.8257 4.87207 16.4985 4.19922 16.4985 3.37305C16.4985 2.5459 15.8257 1.87305 14.999 1.87305Z" fill="%23303030"/><path d="M4.99854 12.625C3.73145 12.625 2.59473 11.8203 2.17041 10.6221H0V8.62012H2.17041C2.59326 7.42676 3.72998 6.62402 4.99854 6.62402C6.26709 6.62402 7.40381 7.42578 7.82666 8.62012H20.9976V10.6221H7.82666C7.40234 11.8203 6.26514 12.625 4.99854 12.625ZM4.99854 8.12305C4.17188 8.12305 3.49902 8.7959 3.49902 9.62305C3.49902 10.4492 4.17188 11.1221 4.99854 11.1221C5.8252 11.1221 6.49805 10.4492 6.49805 9.62305C6.49805 8.7959 5.8252 8.12305 4.99854 8.12305Z" fill="%23303030"/><path d="M12.9995 18.625C11.731 18.625 10.5928 17.8203 10.168 16.6221H0V14.6201H10.168C10.5942 13.4268 11.7324 12.624 12.9995 12.624C14.2681 12.624 15.4048 13.4258 15.8276 14.6201H20.9976V16.6221H15.8276C15.4033 17.8203 14.2661 18.625 12.9995 18.625ZM12.9995 14.123C12.1729 14.123 11.5 14.7959 11.5 15.623C11.5 16.4492 12.1729 17.1221 12.9995 17.1221C13.8262 17.1221 14.499 16.4492 14.499 15.623C14.499 14.7959 13.8262 14.123 12.9995 14.123Z" fill="%23303030"/></svg>');
+  background-repeat: no-repeat;
+  height: 19px;
+  width: 21px;
+}
+@media only screen and (min-width: 1026px) {
+  .filterIcon {
+    background-image: none;
+    height: unset;
+    width: unset;
+    padding: 0;
+  }
+}
+.filterIcon :first-child {
+  display: none;
+}
+@media only screen and (min-width: 1026px) {
+  .filterIcon :first-child {
+    display: block;
+  }
+}
+
+.filtersWrapper--filter-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterSelected--filter-nav {
+  padding-top: 0;
+}
+.filterSelected--filter-nav .filterTitleSpan--filter-nav {
+  color: #000000;
+}
+
+.showingProducts {
+  margin-top: 11.8px;
+  padding: 0 0.3rem;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: normal;
+}
+@media only screen and (min-width: 1026px) {
+  .showingProducts {
+    padding: 0 11px 0 0;
+  }
+}
+
+.progressBarContainer {
+  padding: 0 0.3rem;
+}
+@media only screen and (min-width: 1026px) {
+  .progressBarContainer {
+    padding: 0 11px 0 0;
+  }
+}
+.progressBarContainer .progressBarFiller {
+  background-color: #ffe72e;
+}
+.progressBarContainer .progressBar {
+  background-color: #b2b2b2;
+}
+.progressBarContainer .progressBarFiller,
+.progressBarContainer .progressBar {
+  height: 3px;
+  max-width: 229px;
+}
+
+.buttonShowMore :global(.vtex-button) {
+  justify-content: center;
+  padding: 15px 0;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  transition-property: background-color, border-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+  background-color: #008345;
+  border: 1px solid #008345;
+}
+.buttonShowMore :global(.vtex-button):hover {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 700;
+}
+.buttonShowMore :global(.vtex-button):hover {
+  background-color: #005a30;
+  border-color: #005a30;
+}
+.buttonShowMore :global(.vtex-button) :global(.vtex-button__label) {
+  font-size: 0;
+  padding: 0;
+}
+.buttonShowMore :global(.vtex-button) :global(.vtex-button__label)::after {
+  content: "Carregar mais produtos";
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.buttonShowMore :global(.vtex-button):hover :global(.vtex-button__label)::after {
+  color: #ffffff;
+}
+@media only screen and (min-width: 1024px) {
+  .buttonShowMore {
+    max-width: 242px;
+    margin: 0 auto;
+  }
+}
+
+.searchNotFound {
+  margin: 0 auto;
+  max-width: 1260px;
+  padding: 0 16px;
+  width: 100%;
+  height: unset;
+}
+.searchNotFoundOops--not-found {
+  display: none;
+}
+.searchNotFoundTextListLine {
+  margin: 16px 0 27px;
+  font-size: 0px;
+}
+@media only screen and (min-width: 1026px) {
+  .searchNotFoundTextListLine {
+    margin: 40px 0 27px;
+  }
+}
+.searchNotFoundTextListLine::before {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+  line-height: 1.0625rem;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  text-transform: initial;
+  content: 'Não encontramos resultados para "';
+}
+@media only screen and (min-width: 1024px) {
+  .searchNotFoundTextListLine::before {
+    font-size: 20px;
+  }
+}
+.searchNotFoundTextListLine::after {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 17px;
+  line-height: 1.0625rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  content: '"';
+}
+@media only screen and (min-width: 1024px) {
+  .searchNotFoundTextListLine::after {
+    font-size: 20px;
+  }
+}
+.searchNotFoundTextListLine .searchNotFoundTerm {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 17px;
+  line-height: 1.0625rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+@media only screen and (min-width: 1024px) {
+  .searchNotFoundTextListLine .searchNotFoundTerm {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .searchNotFoundTextListLine {
+    width: 100%;
+  }
+}
+.searchNotFoundInfo {
+  padding: 0;
+  margin-bottom: 26px;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  line-height: 1.0625rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+@media only screen and (min-width: 1026px) {
+  .searchNotFoundInfo {
+    margin-bottom: 23.4px;
+  }
+}
+.searchNotFoundInfo--search-not-found {
+  padding: 0;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .searchNotFoundInfo--search-not-found {
+    align-items: flex-start;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .searchNotFoundInfo {
+    flex-flow: row wrap;
+  }
+}
+.searchNotFoundWhatDoIDo {
+  font-size: 0px;
+  max-width: 305px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+}
+.searchNotFoundWhatDoIDo::before {
+  content: "O que devo fazer?";
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  line-height: 1.75rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 0;
+}
+@media only screen and (min-width: 1024px) {
+  .searchNotFoundWhatDoIDo::before {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .searchNotFoundWhatDoIDo {
+    width: 50%;
+    text-align: right;
+    padding-right: 28px;
+    margin-right: 0;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: unset;
+  }
+}
+.searchNotFoundWhatToDoDotsContainer--not-found {
+  max-width: 305px;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+@media only screen and (min-width: 1024px) {
+  .searchNotFoundWhatToDoDotsContainer {
+    width: 50%;
+    margin-left: 0;
+    max-width: unset;
+  }
+}
+.searchNotFoundWhatToDoDots--not-found {
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  line-height: 1.3125rem;
+  letter-spacing: 0.01rem;
+  text-align: left;
+  text-transform: initial;
+}
+.searchNotFoundWhatToDoDots--not-found::before {
+  content: "- ";
+}
+@media only screen and (min-width: 768px) {
+  .searchNotFoundWhatToDoDots--not-found {
+    text-align: left;
+  }
+}
+
+.orderByDropdown {
+  padding: 0;
+}
+@media only screen and (min-width: 1026px) {
+  .orderByDropdown::before {
+    content: "Ordenar por:";
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    line-height: 1rem;
+    letter-spacing: 0.01rem;
+    text-align: center;
+    text-transform: initial;
+    margin-right: 16px;
+  }
+}
+
+.orderByOptionsContainer {
+  top: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  z-index: 6;
+}
+@media only screen and (min-width: 1026px) {
+  .orderByOptionsContainer {
+    max-width: 185px;
+  }
+}
+
+.orderByOptionItem {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  line-height: 1.1875rem;
+  letter-spacing: 0.01rem;
+  text-align: left;
+  text-transform: initial;
+  background-color: #ffffff;
+  font-family: "Mulish", sans-serif;
+}
+.orderByOptionItem--selected {
+  background-color: #ececec;
+}
+@media only screen and (min-width: 1026px) {
+  .orderByOptionItem {
+    font-family: "Mulish", sans-serif;
+  }
+}
+.orderByOptionItem:first-child {
+  border-radius: 8px 8px 0 0;
+}
+.orderByOptionItem:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+.filterPopupTitle {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  line-height: 1.1875rem;
+  letter-spacing: 0.01rem;
+  text-align: left;
+  text-transform: initial;
+  display: flex;
+  flex-direction: column;
+  order: 2;
+  height: auto;
+  width: 100%;
+}
+@media only screen and (min-width: 1026px) {
+  .filterPopupTitle {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    line-height: 1.125rem;
+    letter-spacing: 0.01rem;
+    text-align: left;
+    text-transform: initial;
+  }
+}
+
+.filterPopupArrowIcon {
+  z-index: 5;
+  color: #000000;
+  padding: 0 0 0 16px;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (min-width: 1026px) {
+  .filterPopupArrowIcon .caretIcon {
+    height: 16px;
+    width: 16px;
+  }
+  .filterPopupArrowIcon .caretIcon :first-child {
+    transform: translate(2px, 4.5px);
+  }
+}
+
+.filterPopupButton {
+  background-color: #ffffff;
+  padding: 0;
+  align-items: inherit;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: inherit;
+  height: 48px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.filterAccordionBreadcrumbs {
+  border: 0;
+  background-color: #ffffff;
+  height: unset;
+  padding-bottom: 3px;
+}
+
+.sidebar {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.filterButtonsBox {
+  border: 0;
+  padding: 33px 16px;
+  background-color: #ffffff;
+  height: unset;
+  box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterClearButtonWrapper--filter-nav {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  width: 48.88%;
+}
+.filterClearButtonWrapper--filter-nav :global(.vtex-button) {
+  border: 1px solid #b2b2b2;
+  max-width: 225px;
+  height: 48px;
+  width: 100%;
+  border-radius: 8px;
+}
+.filterClearButtonWrapper--filter-nav :global(.vtex-button__label) {
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 22px;
+  line-height: 1.375rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.filterApplyButtonWrapper--filter-nav {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 48.88%;
+}
+.filterApplyButtonWrapper--filter-nav :global(.vtex-button) {
+  background-color: #008345;
+  border: 1px solid #008345;
+  max-width: 225px;
+  height: 48px;
+  width: 100%;
+  border-radius: 8px;
+}
+.filterApplyButtonWrapper--filter-nav :global(.vtex-button):hover {
+  background-color: #005a30;
+  border-color: #005a30;
+}
+.filterApplyButtonWrapper--filter-nav :global(.vtex-button__label) {
+  font-size: 0;
+}
+.filterApplyButtonWrapper--filter-nav :global(.vtex-button__label)::after {
+  font-family: "Mulish", sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 22px;
+  line-height: 1.375rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+  content: "Filtrar";
+}
+
+.filterBreadcrumbsText--filter-nav {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0.02rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.accordionFilterItemTag {
+  margin-left: 14px;
+}
+.accordionFilterItemTag :global(.vtex-tag) {
+  border: 1px solid #656565;
+  padding: 4px 8px;
+  background-color: transparent;
+  border-radius: 24px;
+  color: #7c7c7b;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 12px;
+  line-height: 0.75rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+
+.closeIconButton--closeFilter {
+  bottom: auto;
+  left: initial;
+  margin: auto;
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  display: flex;
+  padding-right: 0;
+}
+
+.closeIcon {
+  height: 24px;
+  width: 24px;
+}
+.closeIcon--close-filter {
+  color: #000000;
+}
+
+.accordionFilterContent--filter-nav {
+  padding: 16px 16px 24px;
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.filterBreadcrumbsContent {
+  padding: 8px 0 0 0;
+}
+
+.filterBreadcrumbsItemName--filter-nav {
+  padding-left: 0;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: autopx;
+  line-height: calc(auto / 16)rem;
+  letter-spacing: 0.03rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.accordionFilterItem--filter-nav {
+  min-height: auto;
+  padding: 0;
+  border-bottom: none;
+}
+
+@media only screen and (min-width: 1026px) {
+  .filters--layout {
+    background-color: #ffffff;
+    padding: 10px 5.5px 16px 10.5px;
+    border-radius: 12px;
+    width: 205px;
+  }
+}
+
+.filterTitleSpan {
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0.02rem;
+  text-align: left;
+  text-transform: initial;
+  font-family: "Mulish", sans-serif;
+}
+.filterTitleSpan--filter-nav {
+  font-weight: 800;
+}
+.filterTitleSpan :global(.vtex-tag) {
+  border: 1px solid #707070;
+  padding: 4px 8px;
+  background-color: transparent;
+  border-radius: 24px;
+  color: #707070;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 12px;
+  line-height: 0.75rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin-left: 4px;
+}
+
+@media only screen and (min-width: 1026px) {
+  .filterContent {
+    padding-right: 4.5px;
+  }
+}
+
+.orderByButton .filterPopupArrowIcon {
+  width: 10px;
+  height: 7px;
+  background: url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.4498 2.86143e-09L10.7998 1.37565L5.39981 6.75L-0.000194547 1.37565L1.3498 2.003e-08L5.39981 4.05L9.4498 2.86143e-09Z' fill='%234D4D4D'/%3E%3C/svg%3E%0A") no-repeat center;
+}
+.orderByButton .filterPopupArrowIcon .caretIcon {
+  display: none;
+}
+
+.filterPopupButton .filterPopupArrowIcon--filter-nav {
+  padding-right: 11px;
+}

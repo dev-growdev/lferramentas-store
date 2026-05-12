@@ -1,0 +1,169 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.removeButton {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='16' viewBox='0 0 18 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.03833 1.99043V3.0622H11.0957V1.99043H7.03833ZM13.0862 3.0622V0.91866C13.0862 0.411298 12.6749 0 12.1675 0H5.96656C5.45919 0 5.04789 0.411298 5.04789 0.91866V3.0622H4.05268H2.06225H1.14359C1.05903 3.0622 0.990479 3.13075 0.990479 3.21531V4.89952C0.990479 4.98408 1.05903 5.05263 1.14359 5.05263H2.06225V15.0813C2.06225 15.5887 2.47355 16 2.98091 16H15.1532C15.6605 16 16.0718 15.5887 16.0718 15.0813V5.05263H16.9139C16.9985 5.05263 17.067 4.98408 17.067 4.89952V3.21531C17.067 3.13075 16.9985 3.0622 16.9139 3.0622H16.0718H14.0814H13.0862ZM5.04789 5.05263H4.05268V14.0096H14.0814V5.05263H13.0862H11.0957H7.03833H5.04789ZM6.04311 6.96651H8.1101V13.0144H6.04311V6.96651ZM12.091 6.96651H10.024V13.0144H12.091V6.96651Z' fill='%23656565'/%3E%3C/svg%3E%0A");
+  color: transparent !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-right: 0;
+}
+
+.removeButtonContainer {
+  position: relative;
+  right: 0;
+  top: -6px;
+}
+
+.productImageContainer--minicart {
+  width: max-content !important;
+}
+
+.productImage--minicart,
+.productImageAnchor--minicart {
+  width: 90px;
+  max-height: 90px;
+  object-fit: contain;
+  border-radius: 0;
+  display: block;
+}
+
+.productName--minicart {
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 5px;
+  max-width: 210px;
+}
+
+.productVariationsItem {
+  color: #4d4d4d;
+}
+
+.quantitySelectorWrapper--minicart {
+  justify-content: center;
+}
+
+.quantitySelectorContainer--minicart {
+  border: 1px solid #b2b2b2;
+  border-radius: 8px;
+  max-width: 120px !important;
+  width: 120px !important;
+  margin-right: 10px;
+}
+.quantitySelectorContainer--minicart .inputContainer {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  line-height: 1.4375rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  width: 60px;
+  background-color: transparent;
+  border: none;
+  flex-grow: 0;
+  outline: none;
+  padding: 0;
+}
+.quantitySelectorContainer--minicart .inputContainer :first-child,
+.quantitySelectorContainer--minicart .inputContainer :nth-child(2n) {
+  outline: none;
+  font-family: "Mulish", sans-serif;
+  color: #000000;
+}
+
+.quantitySelectorButton--minicart {
+  height: 38px;
+  width: initial;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0.02rem;
+  text-align: right;
+  text-transform: initial;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+.quantitySelectorButton--minicart:focus, .quantitySelectorButton--minicart:hover {
+  background-color: transparent;
+}
+.quantitySelectorIncrease--minicart :first-child {
+  display: none;
+}
+.quantitySelectorIncrease--minicart::after {
+  content: "+";
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: right;
+  text-transform: initial;
+  height: 18px;
+  width: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+}
+.quantitySelectorDecrease--minicart :first-child {
+  display: none;
+}
+.quantitySelectorDecrease--minicart::after {
+  content: "-";
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: right;
+  text-transform: initial;
+  height: 18px;
+  width: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productPriceContainer--minicart {
+  text-align: right;
+}
+.productPriceContainer--minicart .currencyContainer {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: right;
+  text-transform: initial;
+}
+.productPriceContainer--minicart .price {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: right;
+  text-transform: initial;
+  width: unset;
+}

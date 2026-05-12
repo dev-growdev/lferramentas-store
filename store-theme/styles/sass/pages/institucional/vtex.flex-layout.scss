@@ -1,0 +1,31 @@
+@import "../../global";
+
+.flexRow {
+  &--inst-body {
+    @include grid();
+  }
+}
+
+.flexRowContent {
+  &--inst-body {
+    @include display-flex(stretch, flex, flex-start, column);
+
+    @include mq("1025") {
+      flex-direction: row;
+
+      .stretchChildrenWidth {
+        &:last-child {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+.flexCol {
+  &--inst-content-container {
+    @include mq("1025") {
+      margin-top: 24px;
+    }
+  }
+}

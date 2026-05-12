@@ -1,0 +1,46 @@
+:global([data-testid='cancel-button']) {
+  border: solid 1px #555a44;
+}
+
+:global(#modalConfirmContainer) :global(.vtex-modal__modal) {
+  max-width: 530px;
+}
+
+:global(.vtex-modal__confirmation) {
+  margin-top: 1em;
+  justify-content: center;
+}
+
+.modalConfirmTitle {
+  font-size: 1.2em;
+}
+
+.modalConfirmProductContainer {
+  border-bottom: 1px solid #f2f1f0;
+  gap: 8px;
+  margin-bottom: 8px;  
+}
+
+.modalConfirmProductIcon {
+  display: block;
+}
+
+.modalConfirmProductName {
+  color: #000;
+}
+
+.modalConfirmProductVariation {
+}
+
+.modalConfirmProductVariationName {
+}
+
+.modalConfirmProductVariationValue {
+}
+
+.modalConfirmProductQuantity {
+  flex-shrink: 0;
+}
+
+.modalConfirmDescription {
+}

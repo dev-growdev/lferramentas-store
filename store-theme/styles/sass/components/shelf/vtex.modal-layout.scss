@@ -1,0 +1,36 @@
+@import "../../global";
+
+.triggerContainer {
+  &--quickview {
+     :global(.vtex-store-icons-0-x-expandIcon) {
+      vertical-align: middle;
+    }
+
+     :global(.vtex-store-components-3-x-imageElement) {
+      max-width: 24px;
+      max-height: 24px;
+      object-fit: contain;
+      vertical-align: middle;
+     }
+  }
+}
+
+.actionsContainer {
+  &--quickview {
+    border: 0;
+    box-shadow: none;
+    padding: 0 16px 20px;
+  }
+}
+
+.actionsContentWrapper {
+  &--quickview {
+    border: 0;
+    box-shadow: none;
+
+    & :global(.vtex-store-link-0-x-buttonLink) {
+      @include transition();
+      @include link-button-secondary();
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "flex-layout.row#lp-bf-faq": {
+    "props": {
+      "blockClass": "lp-bf-faq"
+    },
+    "children": ["flex-layout.col#lp-bf-faq"]
+  },
+
+  "flex-layout.col#lp-bf-faq": {
+    "children": [
+      "rich-text#lp-bf-faq",
+      "disclosure-layout#lp-bf-first",
+      "disclosure-layout#lp-bf-second",
+      "disclosure-layout#lp-bf-third"
+    ]
+  },
+
+  "rich-text#lp-bf-faq": {
+    "props": {
+      "blockClass": "lp-bf-faq-title",
+      "text": "## Dúvidas frequentes sobre a Black Friday na LF Máquinas e Ferramentas:",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+
+  "disclosure-layout-group#lp-bf-group": {
+    "children": []
+  },
+
+  "disclosure-layout#lp-bf-first": {
+    "children": [
+      "disclosure-trigger#lp-bf-first",
+      "disclosure-content#lp-bf-first"
+    ]
+  },
+  "disclosure-trigger#lp-bf-first": {
+    "props": {
+      "blockClass": "lp-bf-question",
+      "as": "div"
+    },
+    "children": [
+      "rich-text#lp-bf-question1",
+      "disclosure-state-indicator#lp-bf-icon"
+    ]
+  },
+  "disclosure-content#lp-bf-first": {
+    "props": {
+      "blockClass": "lp-bf-answer"
+    },
+    "children": ["rich-text#lp-bf-answer1"]
+  },
+  "rich-text#lp-bf-question1": {
+    "props": {
+      "text": "O que é e quando será a Black Friday 2024 na LF Máquinas e Ferramentas?",
+      "blockClass": "lp-bf-faq-question"
+    }
+  },
+  "rich-text#lp-bf-answer1": {
+    "props": {
+      "text": "Call us at the number (212) 1234-1234.",
+      "blockClass": "lp-bf-faq-answer"
+    }
+  },
+
+  "disclosure-layout#lp-bf-second": {
+    "children": [
+      "disclosure-trigger#lp-bf-second",
+      "disclosure-content#lp-bf-second"
+    ]
+  },
+  "disclosure-trigger#lp-bf-second": {
+    "props": {
+      "blockClass": "lp-bf-question",
+      "as": "div"
+    },
+    "children": [
+      "rich-text#lp-bf-question2",
+      "disclosure-state-indicator#lp-bf-icon"
+    ]
+  },
+  "disclosure-content#lp-bf-second": {
+    "props": {
+      "blockClass": "lp-bf-answer"
+    },
+    "children": ["rich-text#lp-bf-answer2"]
+  },
+  "rich-text#lp-bf-question2": {
+    "props": {
+      "text": "Os produtos em promoção possuem garantia?",
+      "blockClass": "lp-bf-faq-question"
+    }
+  },
+  "rich-text#lp-bf-answer2": {
+    "props": {
+      "text": "After logging into your account, you can find this info at the link Orders.",
+      "blockClass": "lp-bf-faq-answer"
+    }
+  },
+
+  "disclosure-layout#lp-bf-third": {
+    "children": [
+      "disclosure-trigger#lp-bf-third",
+      "disclosure-content#lp-bf-third"
+    ]
+  },
+  "disclosure-trigger#lp-bf-third": {
+    "props": {
+      "blockClass": "lp-bf-question",
+      "as": "div"
+    },
+    "children": [
+      "rich-text#lp-bf-question3",
+      "disclosure-state-indicator#lp-bf-icon"
+    ]
+  },
+  "disclosure-content#lp-bf-third": {
+    "props": {
+      "blockClass": "lp-bf-answer"
+    },
+    "children": ["rich-text#lp-bf-answer3"]
+  },
+  "rich-text#lp-bf-question3": {
+    "props": {
+      "text": "É possível aproveitar as promoções da Black Friday nas lojas físicas?",
+      "blockClass": "lp-bf-faq-question"
+    }
+  },
+  "rich-text#lp-bf-answer3": {
+    "props": {
+      "text": "Call us at the number (212) 1234-1234.",
+      "blockClass": "lp-bf-faq-answer"
+    }
+  },
+
+  "disclosure-state-indicator#lp-bf-icon": {
+    "props": {
+      "Show": "icon-caret#down",
+      "Hide": "icon-caret#up"
+    }
+  }
+}

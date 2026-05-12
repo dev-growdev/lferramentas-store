@@ -1,0 +1,296 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.container {
+  padding: 0;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 1025px) {
+  .container {
+    width: calc(100% - 20px);
+  }
+  .container :global(.vtex-reviews-and-ratings-2-x-summaryContainer) {
+    display: none;
+  }
+  .container :global(.vtex-flex-layout-0-x-flexRowContent--ratings-mobile) :global(.vtex-reviews-and-ratings-2-x-summaryContainer) {
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+}
+
+.reviewsHeading {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  line-height: 1.1875rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  border-bottom: 0px !important;
+}
+
+.writeReviewButton {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+.writeReviewButton:hover {
+  color: #303030;
+}
+
+.reviewCommentsContainer :first-child {
+  border-width: 1px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.reviewComment .reviewCommentMessage {
+  margin-top: 10px;
+}
+
+.reviewsOrderBy :global(.vtex-dropdown__caption) {
+  color: #000000;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 7px;
+  line-height: 0.4375rem;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.reviewsOrderBy :global(.vtex-dropdown__container) {
+  border-radius: 5px;
+  border: 1px solid #d1d1d1;
+}
+
+.inlineContainer {
+  margin-left: 0rem;
+  justify-content: center;
+  display: flex;
+  margin-top: 11px;
+  /* Prevent layout shift when loading */
+  min-height: 23px;
+}
+@media only screen and (min-width: 1026px) {
+  .inlineContainer {
+    margin-top: 0;
+  }
+}
+
+.reviewsPaging :first-child:nth-child(odd) {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  line-height: 0.875rem;
+  letter-spacing: 0.01rem;
+  text-align: left;
+  text-transform: initial;
+}
+.reviewsPaging :global(.vtex__icon-caret-left) {
+  width: 8px;
+  height: 7px;
+  color: #ffffff;
+}
+.reviewsPaging .reviewComment {
+  border-bottom: 1px solid #cecfce;
+}
+.reviewsPaging :global(.vtex__icon-caret-right) {
+  width: 8px;
+  height: 7px;
+  color: #ffffff;
+}
+.reviewsPaging :global(.vtex-button) {
+  border-radius: 50px;
+  background: #000000;
+}
+
+.star--filled {
+  color: #ffe72e;
+}
+
+.star--empty {
+  color: #ffe72e;
+}
+
+.review__comment {
+  border: 0px;
+  border-color: none;
+}
+
+.reviewCommentUser {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  line-height: 0.875rem;
+  letter-spacing: 0.04rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.reviewsRatingCount,
+.reviewsRatingAverage {
+  color: #707070;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  line-height: 0.875rem;
+  letter-spacing: 0.04rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.writeReviewContainer .loginLink {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  line-height: 0.875rem;
+  letter-spacing: 0.04rem;
+  text-align: left;
+  text-transform: initial;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.reviewCommentMessage,
+.reviewInfo,
+.reviewDateSubmitted,
+.reviewDateValue,
+.reviewAuthorBy,
+.reviewAuthorName {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 500 !important;
+  line-height: 14px;
+  line-height: 0.875rem;
+  letter-spacing: 0.04rem;
+  text-align: left;
+  text-transform: initial;
+  font-size: 12px !important;
+}
+
+.summaryContainer, .summaryContainer :first-child {
+  font-size: 18px;
+  line-height: 22px;
+}
+@media only screen and (min-width: 1025px) {
+  .summaryContainer, .summaryContainer :first-child {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.summaryTotalReviews {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  line-height: 0.875rem;
+  letter-spacing: 0.04rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.formSection :global(.vtex-button) {
+  cursor: pointer;
+  background-color: #008345;
+  border: 1px solid #008345;
+  height: 100%;
+  width: 100%;
+}
+.formSection :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 370px) {
+  .formSection :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20px;
+    line-height: 1.25rem;
+    letter-spacing: 0rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .formSection :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    line-height: 1.25rem;
+    letter-spacing: 0rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+.formSection :global(.vtex-button) :global(.vtex-button__label) {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.formSection :global(.vtex-button):hover {
+  background-color: #005a30;
+  border-color: #005a30;
+}
+.formSection :global(.vtex-button) {
+  border-radius: 8px;
+  transition: all 300ms ease-in-out;
+}
+
+.reviewsOrderBy :global(.vtex-dropdown__arrow) {
+  color: #000000;
+}
+.reviewsOrderBy :global(.vtex-styleguide-9-x-dropdown) {
+  margin-right: 20px;
+}
+
+.formContainer {
+  background-color: #ffffff;
+  box-shadow: none;
+  padding: 0;
+  max-width: 600px;
+}
+.formContainer :global(.vtex-card) {
+  background-color: #ffffff;
+  box-shadow: none !important;
+  padding: 0;
+}
+.formContainer :global(.vtex-input__label),
+.formContainer :global(.vtex-textarea__label) {
+  font-size: 14px;
+}
+.formContainer :global(.vtex-textarea__label) {
+  margin-top: 8px;
+}
+.formContainer :global(.vtex-styleguide-9-x-input),
+.formContainer :global(.vtex-textarea__input) {
+  background-color: #ffffff;
+}
+.formContainer :global(.vtex-textarea__input),
+.formContainer :global(.vtex-input-prefix__group) {
+  border: 1px solid #c5c2c2;
+  border-radius: 10px;
+}

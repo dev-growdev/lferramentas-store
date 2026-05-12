@@ -1,0 +1,114 @@
+@import '../../global/';
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .arrow,
+  .link,
+  .homeLink,
+  .term {
+    padding: 0;
+  }
+
+  .caretIcon {
+    margin: 0 5px;
+  }
+
+  .homeLink {
+    margin: 0;
+    font-size: 14px;
+    color: #000;
+  }
+
+  // last links
+  .term {
+    margin-left: 5px;
+  }
+
+  .arrow {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.homeLink {
+  .homeIcon {
+    display: none;
+  }
+
+  &::before {
+    content: 'Início';
+    @include textConfig($black, 14, $fontRegular, 20, left, initial, 0);
+  }
+}
+
+.link {
+  font-family: $primaryFont;
+  @include textConfig($black, 14, $fontExtraBold, 16, left, initial, 0);
+
+  &:hover {
+    color: $black;
+  }
+
+  &--pdp {
+    font-weight: $fontRegular;
+  }
+}
+
+.term {
+  font-family: $secondaryFont;
+  @include textConfig($black, 14, $fontBold, 16, left, initial, 0);
+
+  &--pdp {
+    display: none;
+  }
+}
+
+.arrow {
+  .caretIcon {
+    content: '';
+    background: url("data:image/svg+xml,%3Csvg width='5' height='9' viewBox='0 0 5 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.376953 1.87393L1.26898 0.998535L4.75391 4.5001L1.26898 8.00166L0.376953 7.12627L3.00312 4.5001L0.376953 1.87393Z' fill='%23000000'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    @include size(5px, 7px);
+    background-position: center;
+    margin-top: 1px;
+
+    & :first-child {
+      display: none;
+    }
+  }
+
+  &--pdp {
+    display: inline-flex;
+    align-items: center;
+
+    .link {
+      max-width: 85px;
+      display: inline-block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+
+      &--3 {
+        max-width: unset;
+      }
+    }
+
+    @include mq('640') {
+      display: initial;
+
+      .link {
+        max-width: unset;
+        display: initial;
+      }
+    }
+  }
+}
+
+.termArrow {
+  &--pdp {
+    display: none !important;
+  }
+}

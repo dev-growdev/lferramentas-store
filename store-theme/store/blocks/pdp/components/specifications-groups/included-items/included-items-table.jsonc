@@ -1,0 +1,15 @@
+{
+  "product-specification-group#included-items": {
+    "props": {
+      "filter": {
+        "type": "show",
+        "specificationGroups": [
+          "Itens Inclusos"
+        ]
+      }
+    },
+    "children": [
+      "flex-layout.row#spec-group-no-title"
+    ]
+  }
+}

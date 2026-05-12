@@ -1,0 +1,18 @@
+export const CSS_HANDLES = [
+  'inst-stores--filterContainer',
+  'inst-stores--filterTitle',
+  'inst-stores--select',
+  'inst-stores--option',
+  'inst-stores--list',
+  'inst-stores--listItem',
+  'inst-stores--listItemContainer',
+  'inst-stores--listItemState',
+  'inst-stores--listItemCity',
+  'inst-stores--listItemName',
+  'inst-stores--listItemAddress',
+  'inst-stores--listItemPhone',
+  'inst-stores--listItemEmail',
+  'inst-stores--button',
+  'inst-stores--icon-inactive',
+  'inst-stores--listItemImage',
+] as const

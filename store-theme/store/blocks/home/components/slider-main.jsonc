@@ -1,0 +1,79 @@
+{
+  "flex-layout.row#main-banner": {
+    "title": "Banner Full 01",
+    "children": ["list-context.image-list-custom#main-banner"],
+    "props": {
+      "blockClass": ["grid-1252", "container__main-banner-home"]
+    } 
+  }, 
+  "list-context.image-list-custom#main-banner": {
+    "title": "Lista de Banners",
+    "children": ["slider-layout#main-images"],
+    "props": {
+      "height": 335,
+      "preload": true,
+      "images": [
+        {
+          "image": "https://ghaus.vtexassets.com/assets/vtex.file-manager-graphql/images/1843de08-6f31-47fd-b737-e445eb7554bf___a2621ed7794f23e0a5951327343f52ab.webp",
+          "mobileImage": "https://ghaus.vtexassets.com/assets/vtex.file-manager-graphql/images/761cf107-f94d-466b-8deb-d1aed7f3e0c0___1706d6c41a8b926dca26a4b0377ac163.webp",
+          "description": "Banner 01",
+          "title": "Banner 01",
+          "link": {
+            "url": "/tintas-e-acessorios",
+            "attributeNofollow": false
+          },
+          "height": "335",
+          "width": "100%",
+          "analyticsProperties": "none",
+          "isActive": true
+        },
+        {
+          "loading": "lazy",
+          "image": "https://ghaus.vtexassets.com/assets/vtex.file-manager-graphql/images/1843de08-6f31-47fd-b737-e445eb7554bf___a2621ed7794f23e0a5951327343f52ab.webp",
+          "mobileImage": "https://ghaus.vtexassets.com/assets/vtex.file-manager-graphql/images/761cf107-f94d-466b-8deb-d1aed7f3e0c0___1706d6c41a8b926dca26a4b0377ac163.webp",
+          "description": "Banner 02",
+          "title": "Banner 02",
+          "link": {
+            "url": "/tintas-e-acessorios",
+            "attributeNofollow": false
+          },
+          "height": "335",
+          "width": "100%",
+          "analyticsProperties": "none",
+          "isActive": true
+        },
+        {
+          "loading": "lazy",
+          "image": "https://ghaus.vtexassets.com/assets/vtex.file-manager-graphql/images/1843de08-6f31-47fd-b737-e445eb7554bf___a2621ed7794f23e0a5951327343f52ab.webp",
+          "mobileImage": "https://ghaus.vtexassets.com/assets/vtex.file-manager-graphql/images/761cf107-f94d-466b-8deb-d1aed7f3e0c0___1706d6c41a8b926dca26a4b0377ac163.webp",
+          "description": "Banner 03",
+          "title": "Banner 03",
+          "link": {
+            "url": "/tintas-e-acessorios",
+            "attributeNofollow": false
+          },
+          "height": "335",
+          "width": "100%",
+          "analyticsProperties": "none",
+          "isActive": true
+        }
+      ]
+    }
+  },
+  "slider-layout#main-images": {
+    "title": "Carrossel 01",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "autoplay": {
+        "timeout": 5000
+      },
+      "blockClass": ["carousel", "main-banner"]
+    }
+  }
+}

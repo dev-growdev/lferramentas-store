@@ -1,0 +1,13 @@
+{
+  "flex-layout.row#how-to-use-coupons": {
+    "title": "Cards - Como usar os cupons",
+    "children": [
+      "flex-layout.col#how-to-use-coupons-card-1",
+      "flex-layout.col#how-to-use-coupons-card-2",
+      "flex-layout.col#how-to-use-coupons-card-3"
+    ],
+    "props": {
+      "blockClass": "how-to-use-coupons"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.propertyLink--tech-support-manual {
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: 12px 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background: #008345;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+@media only screen and (min-width: 360px) {
+  .propertyLink--tech-support-manual {
+    padding: 12px 24px;
+  }
+}

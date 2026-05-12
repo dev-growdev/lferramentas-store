@@ -1,0 +1,113 @@
+{
+  "flex-layout.row#lp-bf-social-media": {
+    "title": "Redes sociais",
+    "children": ["flex-layout.col#lp-bf-social-media"],
+    "props": {
+      "blockClass": ["lp-bf-social-media"],
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.col#lp-bf-social-media": {
+    "children": [
+      "rich-text#lp-bf-social-media",
+      "flex-layout.row#lp-bf-social-media-images"
+    ],
+    "props": {
+      "blockClass": ["lp-bf-social-media"]
+    }
+  },
+  "rich-text#lp-bf-social-media": {
+    "title": "Título Redes sociais",
+    "props": {
+      "text": "#### Conheça nossas redes sociais:",
+      "blockClass": "lp-bf-social-media-title",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "flex-layout.row#lp-bf-social-media-images": {
+    "title": "Footer - Redes sociais",
+    "props": {
+      "blockClass": ["footer-social-media", "lp-bf-social-media-images"],
+      "fullWidth": true,
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "image-new-custom#lp-bf-facebook",
+      "image-new-custom#lp-bf-instagram",
+      "image-new-custom#lp-bf-youtube",
+      "image-new-custom#lp-bf-linkedin",
+      "image-new-custom#lp-bf-last-social-media"
+    ]
+  },
+  "image-new-custom#lp-bf-instagram": {
+    "title": "Ícone Rede Social - 1",
+    "props": {
+      "width": "49px",
+      "height": "49px",
+      "alt": "Ícone do Instagram",
+      "blockClass": ["social-media-icons", "social-media-icons-lp-bf", "social-media-icons-lp-bf--instagram"],
+      "src": "assets/icons/instagram.svg",
+      "link": {
+        "url": "https://www.instagram.com/lfmaquinas.oficial/",
+        "newTab": true
+      }
+    }
+  },
+  "image-new-custom#lp-bf-facebook": {
+    "title": "Ícone Rede Social - 2",
+    "props": {
+      "width": "29px",
+      "height": "56px",
+      "alt": "Ícone do Facebook",
+      "blockClass": ["social-media-icons", "social-media-icons-lp-bf", "social-media-icons-lp-bf--facebook"],
+      "src": "assets/icons/facebook.svg",
+      "link": {
+        "url": "https://www.facebook.com/lfmaquinaseferramentas.oficial/",
+        "newTab": true
+      }
+    }
+  },
+  "image-new-custom#lp-bf-youtube": {
+    "title": "Ícone Rede Social - 3",
+    "props": {
+      "width": "50px",
+      "height": "35px",
+      "alt": "Ícone do Youtube",
+      "blockClass": ["social-media-icons", "social-media-icons-lp-bf", "social-media-icons-lp-bf--youtube"],
+      "src": "assets/icons/youtube-logo.svg",
+      "link": {
+        "url": "https://www.youtube.com/channel/UCPi68EcrKYbVyI92wUYaVMA",
+        "newTab": true
+      }
+    }
+  },
+  "image-new-custom#lp-bf-linkedin": {
+    "title": "Ícone Rede Social - 4",
+    "props": {
+      "width": "45px",
+      "height": "45px",
+      "alt": "Ícone do linkedin",
+      "blockClass": ["social-media-icons", "social-media-icons-lp-bf", "social-media-icons-lp-bf--linkedin"],
+      "src": "assets/icons/linkedin.svg",
+      "link": {
+        "url": "https://www.linkedin.com/company/lfm%C3%A1quinaseferramentas",
+        "newTab": true
+      }
+    }
+  },
+  "image-new-custom#lp-bf-last-social-media": {
+    "title": "Ícone Rede Social - 5",
+    "props": {
+      "width": "43px",
+      "height": "42px",
+      "alt": "Ícone do Blog",
+      "blockClass": ["social-media-icons", "social-media-icons-lp-bf", "social-media-icons-lp-bf--blog"],
+      "src": "assets/icons/social-media-icon.svg",
+      "link": {
+        "url": "https://blog.lfmaquinaseferramentas.com.br/",
+        "newTab": true
+      }
+    }
+  }
+}

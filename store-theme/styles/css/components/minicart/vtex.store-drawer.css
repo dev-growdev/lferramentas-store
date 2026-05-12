@@ -1,0 +1,20 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.closeIconButton--footer__minicart {
+  width: fit-content;
+  color: #4d4d4d;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  font-family: "Mulish", sans-serif;
+  padding: 0;
+}
+.closeIconButton--footer__minicart::before {
+  content: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.50518 11.5176L6.93326 10.099L3.83532 7.00109L12.0386 7.00109L12.0386 4.99866L3.83532 4.99867L6.93326 1.90073L5.50518 0.482177L1.57301e-05 5.99988L5.50518 11.5176Z' fill='%234D4D4D'/%3E%3C/svg%3E%0A");
+  margin-right: 8px;
+}

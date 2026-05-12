@@ -1,0 +1,15 @@
+{
+  "product-specification-group#tires-specifications": {
+    "props": {
+      "filter": {
+        "type": "show",
+        "specificationGroups": [
+          "Especificações Pneus"
+        ]
+      }
+    },
+    "children": [
+      "flex-layout.row#spec-group-no-title"
+    ]
+  }
+}

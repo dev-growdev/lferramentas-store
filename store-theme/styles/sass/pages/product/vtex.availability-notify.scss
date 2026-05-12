@@ -1,0 +1,93 @@
+@import '../../global/';
+
+.title {
+  font-size: 0;
+
+  margin: 0 0 16px 0;
+
+  &::after {
+    content: 'Produto indisponível';
+    @include textConfig($dark-gray, 20, $fontBold, 22, left, initial, 0);
+  }
+}
+
+.notifyLabel {
+  font-size: 0;
+
+  margin: 0 0 16px 0;
+
+  &::after {
+    content: 'Quer ser avisado quando este produto chegar?';
+    @include textConfig($dark-gray, 14, $fontRegular, 18, left, initial, 0);
+  }
+}
+
+.form {
+  .content {
+    @include display-flex(center, flex, center, column);
+
+    margin: 0;
+  }
+}
+
+.input {
+  margin: 0 0 16px 0;
+
+  :global(.vtex-input) {
+    display: block;
+
+    :global(.vtex-input-prefix__group) {
+      display: block;
+      height: unset;
+
+      border: 1px solid $light-gray-10;
+      @include border-radius();
+
+      :global(.vtex-styleguide-9-x-input) {
+        padding: 13px 22px;
+
+        background: $white;
+
+        &,
+        &::placeholder {
+          @include text(4, $dark-gray, $fontRegular);
+          line-height: 20px;
+        }
+      }
+    }
+
+    :global(.vtex-input__error) {
+      margin: 8px 0 0 0;
+      color: $red;
+    }
+  }
+}
+
+.submit {
+  @include size(100%);
+  @include button-primary();
+
+  margin: 0;
+
+  & :global(.vtex-button) {
+    padding: 13px 0;
+
+    & :global(.vtex-button__label) {
+      font-size: 0;
+
+      &::before {
+        content: 'Avise-me';
+
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.success {
+  margin: 8px 0 0 0;
+}
+
+.notiferContainer {
+  margin-top: 24px;
+}

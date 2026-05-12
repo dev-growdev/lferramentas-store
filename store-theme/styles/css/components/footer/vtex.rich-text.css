@@ -1,0 +1,133 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.container--success-state {
+  background-color: #000000;
+  padding: 38px 16px;
+  border-radius: 8px;
+}
+@media only screen and (min-width: 1026px) {
+  .container--success-state {
+    padding: 0;
+  }
+}
+
+.heading--footer-submenu-item,
+.paragraph--footer-submenu-item {
+  font-family: "Mulish", sans-serif;
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  line-height: 1.75rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 0;
+  text-decoration: none;
+}
+.heading--footer-description-text,
+.paragraph--footer-description-text {
+  font-family: "Mulish", sans-serif;
+  color: #4d4d4d;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin: 0;
+  text-wrap: balance;
+}
+.heading--footer-item-title,
+.paragraph--footer-item-title {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+}
+.heading--newsletter-title,
+.paragraph--newsletter-title {
+  color: #ffe72e;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  line-height: 1.375rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin: 0;
+  font-family: "Sora", sans-serif;
+}
+@media only screen and (min-width: 1026px) {
+  .heading--newsletter-title,
+  .paragraph--newsletter-title {
+    font-size: 22px;
+    line-height: 26px;
+    line-height: 1.625rem;
+    text-align: left;
+    margin-right: 33px;
+    font-family: "Mulish", sans-serif;
+  }
+}
+.heading--newsletter-title :nth-child(2n),
+.paragraph--newsletter-title :nth-child(2n) {
+  font-weight: 700;
+}
+.heading--success-state,
+.paragraph--success-state {
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0.01rem;
+  text-align: center;
+  text-transform: initial;
+  font-family: "Mulish", sans-serif;
+}
+.heading--company-text,
+.paragraph--company-text {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  font-family: "Mulish", sans-serif;
+  margin: 0;
+}
+
+.link--footer-submenu-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper--footer-description-text {
+  margin: 0 auto;
+}
+.wrapper--newsletter-title {
+  margin: 0 auto;
+}
+.wrapper--success-state {
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1026px) {
+  .container--footer-item-title {
+    display: flex;
+  }
+  .container--footer-item-title-atendimento {
+    width: calc(100% - 30px);
+  }
+}

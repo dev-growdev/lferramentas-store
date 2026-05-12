@@ -1,0 +1,38 @@
+{
+  "store.custom#inst-page-contact-us": {
+    "blocks": [
+      "toggle-layout#inst-banner",
+      "flex-layout.row#inst-breadcrumb-contact-us",
+      "flex-layout.row#inst-body-contact-us"
+    ]
+  },
+  "flex-layout.row#inst-body-contact-us": {
+    "title": "Container Fale Conosco",
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": [
+        "inst-body",
+        "inst-body--contact-us"
+      ]
+    },
+    "children": [
+      "flex-layout.col#inst-menu",
+      "flex-layout.col#inst-content-and-title-contact-us"
+    ]
+  },
+  "flex-layout.col#inst-content-and-title-contact-us": {
+    "title": "Container Título e Conteúdo",
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "inst-content-container"
+      ]
+    },
+    "children": [
+      "rich-text#inst-title-contact-us", 
+      "flex-layout.row#inst-contact-us-container"
+    ]
+  }
+}

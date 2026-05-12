@@ -1,0 +1,35 @@
+{
+  "toggle-layout#inst-banner": {
+    "title": "Mostrar/Esconder Banner",
+    "props": {
+      "renderChildren": false
+    },
+    "children": [
+      "responsive-layout.desktop#inst-banner"
+    ]
+  },
+  "responsive-layout.desktop#inst-banner": {
+    "children": [
+      "flex-layout.row#inst-banner-container"
+    ]
+  },
+  "flex-layout.row#inst-banner-container": {
+    "title": "Banner principal",
+    "props": {
+      "fullWidth": true,
+      "blockClass": [
+        "container__banner-institucional"
+      ]
+    },
+    "children": [
+      "image-new-custom#inst-banner"
+    ]
+  },
+  "image-new-custom#inst-banner": {
+    "title": "Imagem",
+    "props": {
+      "blockClass": "banner-institucional",
+      "src": "https://placehold.co/1366x767"
+    }
+  }
+}

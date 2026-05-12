@@ -1,0 +1,86 @@
+{
+  "flex-layout.col#inst-menu": {
+    "title": "Menus de Navegação da Página",
+    "props": {
+      "blockClass": "wrapper__menu-institucional"
+    },
+    "children": [
+      "inst-menu"
+    ]
+  },
+  "app--global-context.provider": {
+    "props": {
+      "instMenu": [
+        {
+          "items": [
+            {
+              "type": "titulo",
+              "__editorItemTitle": "Institucional",
+              "text": "Institucional"
+            },
+            {
+              "type": "rota",
+              "__editorItemTitle": "Sobre Nós",
+              "text": "Sobre nós",
+              "href": "sobre-nos"
+            },
+            {
+              "type": "rota",
+              "__editorItemTitle": "Nossas lojas",
+              "text": "Nossas lojas",
+              "href": "/nossas-lojas"
+            },
+            {
+              "type": "rota",
+              "__editorItemTitle": "Privacidade e segurança",
+              "text": "Privacidade e segurança",
+              "href": "http://ajuda.lfmaquinaseferramentas.com.br/hc/pt-br/articles/360051506314-Politíca-de-Privacidade"
+            },
+            {
+              "type": "rota",
+              "__editorItemTitle": "Trabalhe Conosco",
+              "text": "Trabalhe Conosco",
+              "href": "https://grupogg10.com.br/trabalhe-conosco/"
+            },
+            {
+              "type": "titulo",
+              "__editorItemTitle": "Central de ajuda",
+              "text": "Central de ajuda"
+            },
+            {
+              "type": "rota",
+              "__editorItemTitle": "Fale conosco",
+              "text": "Fale conosco",
+              "href": "/fale-conosco"
+            },
+            {
+              "type": "rota",
+              "__editorItemTitle": "Política de Entrega",
+              "text": "Política de Entrega",
+              "href": "https://saclf.zendesk.com/hc/pt-br/categories/360003122333-Entrega-e-Prazo"
+            },
+            {
+              "type": "rota",
+              "__editorItemTitle": "Trocas e devoluções",
+              "text": "Trocas e devoluções",
+              "href": "https://saclf.zendesk.com/hc/pt-br/categories/360003125233-Trocas-e-Devolu%C3%A7%C3%B5es"
+            },
+            {
+              "type": "rota",
+              "__editorItemTitle": "Formas de pagamentos",
+              "text": "Formas de pagamentos",
+              "href": "https://saclf.zendesk.com/hc/pt-br/categories/360003111993-Formas-de-pagamento"
+            },
+            {
+              "type": "rota",
+              "__editorItemTitle": "Perguntas frequentes",
+              "text": "Perguntas frequentes",
+              "href": "https://ajuda.lfmaquinaseferramentas.com.br/hc/pt-br"
+            }
+          ]
+        }
+      ],
+      "FlagsAppContext": "app-flags-global-context"
+    }
+  }
+}

@@ -1,0 +1,349 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.wrapper--text-lp-bf-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 0 16px;
+}
+@media only screen and (min-width: 1026px) {
+  .wrapper--text-lp-bf-categories {
+    padding: 0;
+  }
+}
+.wrapper--lp-bf-form-text-1, .wrapper--lp-bf-form-text-2, .wrapper--lp-bf-promotion-cards-right-title, .wrapper--lp-bf-promotion-cards-right-description, .wrapper--scroll-lp-bf-title {
+  width: 100%;
+}
+.wrapper--scroll-lp-bf-title {
+  padding-top: 45px;
+  margin-top: 45px;
+  background-color: #ffe72e;
+}
+
+.heading--shelfTitle.heading--title-brand-lp-bf, .heading--shelfTitle.heading--title-shelf-lp-bf {
+  color: #ffffff;
+  margin-top: 40px;
+}
+@media only screen and (min-width: 1026px) {
+  .heading--shelfTitle.heading--title-brand-lp-bf, .heading--shelfTitle.heading--title-shelf-lp-bf {
+    margin-top: 72px;
+  }
+}
+.heading--lp-bf-social-media-title {
+  color: #151515;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  line-height: 1.4375rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin: 0;
+}
+@media only screen and (min-width: 1026px) {
+  .heading--lp-bf-social-media-title {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+.heading--lp-bf-faq-title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  line-height: 1.4375rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin: 0;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 1026px) {
+  .heading--lp-bf-faq-title {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+.heading--title-lp-bf {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  line-height: 1.4375rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin: 42px 0 0;
+}
+@media only screen and (min-width: 1026px) {
+  .heading--title-lp-bf {
+    margin: 51px 0 17px;
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+
+.paragraph--inst-breadcrumb-home.paragraph--inst-breadcrumb-home-black {
+  color: #ffffff;
+}
+.paragraph--inst-breadcrumb-home.paragraph--inst-breadcrumb-home-black .paragraph--inst-breadcrumb-home--link {
+  color: #ffffff;
+}
+.paragraph--inst-breadcrumb-term.paragraph--lp-bf-breadcrumb {
+  color: #ffffff;
+  font-weight: 800;
+}
+.paragraph--title-categories-item.paragraph--title-categories-item-lp-bf {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 19px;
+}
+.paragraph--text-lp-bf-categories {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin: 0;
+  max-width: 1000px;
+}
+@media only screen and (min-width: 1026px) {
+  .paragraph--text-lp-bf-categories {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.paragraph--link-lp-bf-coupons {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin: 27px 0 0;
+  padding: 0 16px;
+}
+@media only screen and (min-width: 1026px) {
+  .paragraph--link-lp-bf-coupons {
+    font-size: 18px;
+    line-height: 23px;
+    padding: 0;
+  }
+  .paragraph--link-lp-bf-coupons:hover {
+    text-decoration: underline;
+  }
+}
+.paragraph--lp-bf-slider-brand {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin: 0;
+  padding: 0 16px 0 8px;
+}
+@media only screen and (min-width: 1026px) {
+  .paragraph--lp-bf-slider-brand {
+    font-size: 18px;
+    line-height: 23px;
+    padding: 0;
+  }
+}
+.paragraph--lp-bf-faq-question {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 0;
+}
+@media only screen and (min-width: 1026px) {
+  .paragraph--lp-bf-faq-question {
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+  }
+}
+.paragraph--lp-bf-faq-answer {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 0;
+}
+@media only screen and (min-width: 1026px) {
+  .paragraph--lp-bf-faq-answer {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+.paragraph--lp-bf-deals {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  line-height: 1.375rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 0;
+}
+@media only screen and (max-width: 1023px) {
+  .paragraph--lp-bf-deals {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.paragraph--lp-bf-form-text-1 {
+  margin: 0 auto;
+  margin-bottom: 13px;
+  font-family: "Mulish", sans-serif;
+  color: #ffe72e;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  max-width: 583px;
+}
+.paragraph--lp-bf-form-text-2 {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+}
+@media (max-width: 1024px) {
+  .paragraph--lp-bf-form-text-2 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+.paragraph--timer-bf-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  color: rgb(255, 255, 255);
+  font-family: "Mulish", sans-serif;
+  margin-bottom: 20px;
+  margin-top: 0;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .paragraph--timer-bf-title {
+    font-size: 20px;
+    line-height: 25px;
+    width: auto;
+    padding: 0px 10px;
+  }
+}
+.paragraph--timer-bf-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  color: rgb(255, 255, 255);
+  font-family: "Mulish", sans-serif;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 26px;
+}
+@media (max-width: 1024px) {
+  .paragraph--timer-bf-text {
+    font-size: 16px;
+    line-height: 20px;
+    width: auto;
+    padding: 0px 34px;
+    margin-bottom: 20px;
+  }
+}
+.paragraph--lp-bf-promotion-cards-right-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 22px;
+  line-height: 1.375rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+@media only screen and (max-width: 1025px) {
+  .paragraph--lp-bf-promotion-cards-right-title {
+    text-align: center;
+    width: 100%;
+  }
+}
+.paragraph--lp-bf-promotion-cards-right-description {
+  margin: 0;
+  margin-top: 8px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  line-height: 1.375rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  max-width: 286px;
+}
+@media only screen and (max-width: 1025px) {
+  .paragraph--lp-bf-promotion-cards-right-description {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.paragraph--scroll-lp-bf-title {
+  color: #000000;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 35px;
+  line-height: 2.1875rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+@media only screen and (max-width: 1025px) {
+  .paragraph--scroll-lp-bf-title {
+    font-size: 18px;
+    line-height: 21px;
+    max-width: 308px;
+    margin: auto;
+  }
+}
+
+.italic--lp-bf-promotion-cards-right-description {
+  font-style: normal;
+  text-decoration: underline;
+}
+
+.container--timer-bf-title, .container--timer-bf-text {
+  justify-content: center;
+}
+
+.link--lp-bf-promotion-cards-right-description {
+  color: white !important;
+}

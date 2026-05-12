@@ -1,0 +1,30 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) {
+  background: #151515;
+}
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.vtex-rich-text-0-x-paragraph--deals),
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.vtex-rich-text-0-x-heading--shelfTitle),
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.vtex-rich-text-0-x-link--shelfLink),
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.vtex-rich-text-0-x-paragraph--title-categories-item),
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.yourviews-yourviewsreviews-1-x-title),
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.yourviews-yourviewsreviews-1-x-newTestimonialItemWrapper
+            .yourviews-yourviewsreviews-1-x-userName),
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.lfmaquinaseferramentas-custom-apps-0-x-clps-subtitle-container
+            .lfmaquinaseferramentas-custom-apps-0-x-heading),
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.lfmaquinaseferramentas-custom-apps-0-x-headingLevel3) {
+  color: #ffffff;
+}
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.yourviews-yourviewsreviews-1-x-newTestimonialItemWrapper
+            .yourviews-yourviewsreviews-1-x-userLocalization) {
+  color: #b2b2b2;
+}
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.yourviews-yourviewsreviews-1-x-newTestimonialUserImage) {
+  background: white;
+  border-radius: 50%;
+  padding: 3px;
+}
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.lfmaquinaseferramentas-custom-apps-0-x-headingLevel2) {
+  color: #ffe72e;
+}

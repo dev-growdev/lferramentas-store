@@ -1,0 +1,26 @@
+{
+  "flex-layout.row#shop-by-brand-breadcrumb": {
+    "title": "Conteúdo Breadcrumb",
+    "props": {
+      "blockClass": [
+        "inst-breadcrumb-container"
+      ],
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "rich-text#inst-breadcrumb-home",
+      "image-new-custom#inst-breadcrumb-arrow",
+      "rich-text#shop-by-brand-breadcrumb"
+    ]
+  },
+  "rich-text#shop-by-brand-breadcrumb": {
+    "title": "Texto Nome Da Pagina",
+    "props": {
+      "blockClass": "inst-breadcrumb-term",
+      "text": "Compre por marca"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "rich-text#inst-text-about-us-01": {
+    "title": "Texto 01",
+    "props": {
+      "text": "Somos a resposta para quem procura soluções relacionadas a suprimentos para indústria em toda sua cadeia ou para realizar diferentes trabalhos manuais - seja o profissional, o hobbista ou as pequenas, médias e grandes empresas em diversos setores. Fornecemos os mais diferentes itens voltados ao mercado MRO (Manutenção, Reparos e Operações). Temos os equipamentos, as máquinas, as ferramentas e as mais diversas soluções que fazem uma operação industrial acontecer e desempenhar o seu trabalho da melhor maneira. E também temos tudo para que o profissional autônomo e a pequena empresa desenvolvam os seus projetos com a melhor qualidade. Vamos do micro ao macro para contribuir com o desempenho, desenvolvimento, crescimento, produtividade e qualidade de todos aqueles que trabalham com máquinas, ferramentas e outros produtos relacionados.",
+      "blockClass": "inst-text"
+    }
+  },
+  "rich-text#inst-text-about-us-02": {
+    "title": "Texto 02",
+    "props": {
+      "text": "Uma empresa com história consolidada e em crescimento. Fundada em 29 de julho de 1989, na cidade gaúcha de Caxias do Sul, nestes mais de 30 anos de experiência conquistamos a confiança e credibilidade de nossos clientes através da qualidade dos produtos e do atendimento diferenciado. Nosso apoio vai além da venda das melhores soluções, já que nossa equipe técnica está à disposição para resolver problemas, tirar dúvidas e desenvolver projetos em conjunto com o cliente.",
+      "blockClass": "inst-text"
+    }
+  },
+  "rich-text#inst-text-about-us-03": {
+    "title": "Texto 03",
+    "props": {
+      "text": "Com uma logística rápida, eficiente e estruturada com uso de tecnologia, possuímos dois Centros de Distribuição, um em Dois Irmãos/RS e outro em Joinville/SC, com capacidade para armazenar os mais de 50 mil itens comercializados e a fim de facilitar e agilizar o atendimento aos clientes.",
+      "blockClass": "inst-text"
+    }
+  },
+  "rich-text#inst-text-about-us-04": {
+    "title": "Texto 04",
+    "props": {
+      "text": "**Formada por equipes altamente qualificadas, somos multi canais de vendas:**",
+      "blockClass": "inst-text"
+    }
+  },
+  "rich-text#inst-text-about-us-05": {
+    "title": "Texto 05",
+    "props": {
+      "text": "- E-commerce: contamos com a melhor plataforma do mercado e uma equipe focada em proporcionar a melhor experiência de compra e entrega, além de manter o cliente informado das novidades e ofertas disponíveis",
+      "blockClass": "inst-text"
+    }
+  },
+  "rich-text#inst-text-about-us-06": {
+    "title": "Texto 06",
+    "props": {
+      "text": "- Equipe de Vendas em Lojas: espaços ideais para quem deseja tanto um acompanhamento e sugestões na hora da compra, tendo a certeza de que está adquirindo um produto que vai suprir sua necessidade, ou para quem prefere ver e até experimentar o produto antes de comprar. Com toda a infraestrutura e capacidade total de pronto atendimento, contamos com amplas lojas em Caxias do Sul/RS, Porto Alegre/RS, Joinville/SC e Curitiba/PR.",
+      "blockClass": "inst-text"
+    }
+  },
+
+  "rich-text#inst-text-about-us-07": {
+    "title": "Texto 07",
+    "props": {
+      "text": "- Televendas: para os clientes que buscam um ótimo atendimento de forma ágil, com a comodidade de fazer suas compras pelo telefone e a certeza da entrega rápida.",
+      "blockClass": "inst-text"
+    }
+  },
+
+  "rich-text#inst-text-about-us-08": {
+    "title": "Texto 08",
+    "props": {
+      "text": "- Vendas Externas: através de um time de especialistas em produtos que são grandes conhecedores do mercado, fazemos as visitas diretamente às instalações do cliente para apresentar sempre a melhor alternativa e construir as melhores soluções e negociações.",
+      "blockClass": "inst-text"
+    }
+  },
+
+  "rich-text#inst-text-about-us-09": {
+    "title": "Texto 9",
+    "props": {
+      "text": "Dispomos, ainda, de uma Central Técnica de promotores atuantes nas nossas principais linhas de produtos, oferecendo demonstrações, treinamentos, serviço de suporte e tudo que for necessário para prover a melhor solução em máquinas e ferramentas. \n \n Somos uma empresa dinâmica e moderna que cultiva os valores do relacionamento e do compromisso com seus clientes através da excelência no atendimento.",
+      "blockClass": "inst-text"
+    }
+  },
+
+  "rich-text#inst-text-about-us-10": {
+    "title": "Texto 10",
+    "props": {
+      "text": "**LF Máquinas e Ferramentas, especialista no fornecimento de suprimentos industriais e profissionais.**",
+      "blockClass": ["inst-text", "inst-text__10"]
+    }
+  }
+}

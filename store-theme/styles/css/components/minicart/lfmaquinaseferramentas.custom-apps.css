@@ -1,0 +1,60 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.custom-minicart-list-price {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: right;
+  text-transform: initial;
+  text-decoration: line-through;
+}
+
+.custom-minicart-spot-price {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: right;
+  text-transform: initial;
+}
+
+.custom-minicart-selling-price {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: right;
+  text-transform: initial;
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: #f0f0f0;
+  height: 44px;
+}
+.skeleton::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0));
+  animation: shimmer 2s infinite;
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

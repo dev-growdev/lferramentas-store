@@ -1,0 +1,49 @@
+{
+  "flex-layout.col#how-to-use-coupons-card-1": {
+    "title": "Card 1",
+    "children": [
+      "flex-layout.row#how-to-use-coupons-card-text-1",
+      "flex-layout.row#how-to-use-coupons-card-image-1"
+    ],
+    "props": {
+      "blockClass": "how-to-use-coupons-card"
+    }
+  },
+  "flex-layout.row#how-to-use-coupons-card-image-1": {
+    "props": {
+      "blockClass": "how-to-use-coupons-card-image"
+    },
+    "children": ["image-new-custom#how-to-use-coupons-card-image-1"]
+  },
+  "flex-layout.row#how-to-use-coupons-card-text-1": {
+    "children": [
+      "rich-text#how-to-use-coupons-card-number-1",
+      "rich-text#how-to-use-coupons-card-text-1"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "rich-text#how-to-use-coupons-card-number-1": {
+    "title": "Número",
+    "props": {
+      "text": "1.",
+      "blockClass": "how-to-use-coupons-card-number"
+    }
+  },
+  "rich-text#how-to-use-coupons-card-text-1": {
+    "title": "Texto",
+    "props": {
+      "text": "Escolha o produto e adicione no **Carrinho**. Em seu carrinho de compras, procure o campo **“Adicionar cupom de desconto”** que fica na lateral direita.",
+      "blockClass": "how-to-use-coupons-card-text"
+    }
+  },
+  "image-new-custom#how-to-use-coupons-card-image-1": {
+    "props": {
+      "blockClass": "how-to-use-coupons-card-image",
+      "alt": "Compartilhe o link de sua compra",
+      "src": "/assets/vtex.file-manager-graphql/images/d36f4623-fe49-4ad4-8a2c-cdb2f3b63e96___7a55dcc1f205c40d3c2c987f8827ff63.png"
+    }
+  }
+}

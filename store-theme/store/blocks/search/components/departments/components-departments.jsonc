@@ -1,0 +1,84 @@
+{
+  "toggle-layout#banner-departamento": {
+    "title": "Ativar/Desativar Banner Departamento?",
+    "props": {
+      "renderChildren": true
+    },
+    "children": ["image-new-custom#banner-departamento"]
+  },
+  "image-new-custom#banner-departamento": {
+    "title": "Banner Departamento",
+    "props": {
+      "blockClass": ["banner-departamento"],
+      "maxHeight": "200",
+      "width": "1259",
+      "height": "200",
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "loading": "eager",
+      "src": "/assets/vtex.file-manager-graphql/images/a86374ff-23bc-447b-a576-1dbc219f1611___d7324287be52a074c4687d45a56ad1e4.png",
+      "link": {
+        "url": "#",
+        "newTab": false
+      }
+    }
+  },
+  "toggle-layout#banner-departamento-mobile": {
+    "title": "Ativar/Desativar Banner Departamento?",
+    "props": {
+      "renderChildren": true
+    },
+    "children": ["image-new-custom#banner-departamento-mobile"]
+  },
+  "image-new-custom#banner-departamento-mobile": {
+    "title": "Banner Departamento",
+    "props": {
+      "blockClass": ["banner-departamento-mobile"],
+      "maxHeight": "200",
+      "width": "390",
+      "height": "200",
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "loading": "eager",
+      "src": "https://lfmaquinaseferramentas.vtexassets.com/assets/vtex.file-manager-graphql/images/be831456-ce2f-4dc5-8e87-2db1e7ec46c4___fc3e0a3f406902a3959ab521085fc5c4.png"
+    }
+  },
+  "flex-layout.row#searchtitle-departament": {
+    "title": "Título Departamento",
+    "children": ["search-title.v2"],
+    "props": {
+      "horizontalAlign": "center",
+      "colSizing": "auto",
+      "blockClass": "title-departament",
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#result-departament": {
+    "title": "Produtos Departamento",
+    "children": [
+      "flex-layout.col#filter",
+      "flex-layout.col#content-departament"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "search-result"
+    }
+  },
+  "flex-layout.col#content-departament": {
+    "title": "Conteúdo Departamento",
+    "children": [
+      "flex-layout.row#searchtitle-departament",
+      "flex-layout.row#row-infos-search",
+      "back-to-top-button",
+      "flex-layout.row#products",
+      "search-products-count-per-page",
+      "search-products-progress-bar",
+      "flex-layout.row#fetchmore"
+    ],
+    "props": {
+      "width": "grow",
+      "preventVerticalStretch": true
+    }
+  }
+}

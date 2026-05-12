@@ -1,0 +1,161 @@
+@import '../../global';
+
+.openIconContainer {
+  padding: 0;
+}
+
+.openIconContainer {
+  .minicartIconContainer {
+    background: $icon-minicart;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include size(28px);
+
+    @include mq('1024') {
+      @include size(25px);
+    }
+
+    .cartIcon {
+      display: none;
+    }
+  }
+
+  :global(.vtex-button) {
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}
+
+.minicartContainer {
+  :global(.vtex-button__label) {
+    padding: 0 !important;
+  }
+}
+
+.minicartQuantityBadge {
+  background-color: $secondary-color;
+  border: 1px solid $secondary-color;
+  padding: 2px 6px;
+  width: 4px;
+  right: -8px;
+  height: auto;
+  top: -0.5rem;
+
+  @include textConfig($primary-color, 12, $fontExtraBold, 13, left, uppercase);
+}
+
+.drawer {
+  display: block;
+  height: 100%;
+
+  @include mq('768') {
+    max-width: 395px !important;
+  }
+
+  width: 100% !important;
+  background-color: $white;
+
+  &Content {
+    position: relative;
+    overflow-y: hidden;
+    height: 100%;
+  }
+}
+
+.minicartTitle {
+  font-size: 0;
+  text-align: center;
+  padding: 17px 16px;
+  background-color: $primary-color;
+  margin: 0;
+
+  &::after {
+    content: 'Meu Carrinho';
+    @include textConfig($white, 14, $fontExtraBold, 16, center, uppercase);
+  }
+}
+
+.closeIconContainer {
+  @include abs-position(5px, 4px, auto, auto);
+}
+
+.closeIcon {
+  background: url('assets/icons/icon-close-white.svg') center no-repeat;
+  @include size(12px);
+
+  :first-child {
+    display: none;
+  }
+}
+
+.minicartCheckoutButton--footer {
+  &__minicart {
+    @include button-primary();
+    height: 48px;
+    margin: 16px 0;
+
+    :global(.vtex-button__label) {
+      font-size: 0 !important;
+      min-height: 0;
+
+      &::after {
+        content: 'Finalizar pedido';
+        @include textConfig(
+          $white,
+          16,
+          $fontExtraBold,
+          20,
+          center,
+          uppercase,
+          0
+        );
+      }
+    }
+
+    :global(.vtex-button) {
+      border-radius: 8px;
+      @include transition();
+
+      &:hover {
+        background-color: $success-dark-green;
+      }
+    }
+  }
+}
+
+.minicartSummary,
+.minicartCheckoutButton {
+  &--footer__minicart {
+    padding: 0;
+  }
+}
+
+.minicartProductListContainer {
+  margin-top: 16px;
+  padding: 0 16px;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+
+    &-thumb {
+      background-color: $primary-color;
+      border-radius: 100px;
+    }
+
+    &-track {
+      background-color: $secondary-color;
+      border-radius: 100px;
+    }
+  }
+}
+
+.minicartSideBarContentWrapper,
+.childrenContainer {
+  height: 100% !important;
+}
+
+.overlay {
+  background-color: $dark-gray;
+}

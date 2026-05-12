@@ -1,0 +1,24 @@
+{
+  "flex-layout.row#header-floating-buttons": {
+    "title": "Botões Flutuantes",
+    "props": {
+      "blockClass": ["header-floating-buttons"],
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#header-floating-buttons"]
+  },
+  "flex-layout.col#header-floating-buttons": {
+    "props": {
+      "blockClass": ["header-floating-buttons"],
+      "preventVerticalStretch": true,
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "drawer#header-floating-buttons-customer-support",
+      "image-new-custom#header-floating-buttons-whatsapp"
+    ]
+  }
+}

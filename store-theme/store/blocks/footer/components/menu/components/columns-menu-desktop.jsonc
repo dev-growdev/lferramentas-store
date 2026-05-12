@@ -1,0 +1,89 @@
+{
+  "flex-layout.col#footer-menu-desktop-01": {
+    "title": "Menu - Coluna 1",
+    "children": [
+      "rich-text#atendimento-footer",
+      "flex-layout.col#atendimento-submenu"
+    ],
+    "props": { 
+      "blockClass": [
+        "footerMenuDesktop",
+        "footer-atendimento"
+      ],
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.col#footer-menu-desktop-02": {
+    "title": "Menu - Coluna 2",
+    "children": [
+      "rich-text#a-empresa-footer",
+      "flex-layout.col#a-empresa-submenu"      
+    ],
+    "props": {
+      "blockClass": "footerMenuDesktop",
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.col#footer-menu-desktop-03": {
+    "title": "Menu - Coluna 3",
+    "children": [
+      "rich-text#politicas-footer",
+      "flex-layout.col#politicas-submenu"
+    ],
+    "props": {
+      "blockClass": "footerMenuDesktop",
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.col#footer-social-media": {
+    "title": "Coluna 4 - Redes sociais",
+    "children": [
+      "rich-text#social-media",
+      "flex-layout.row#footer-social-media",
+      "link#solicitar-cotacao-link"
+    ], 
+    "props": {
+      "blockClass": [
+        "footerMenuDesktop",
+        "social-media"
+      ],
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.row#footer-revista-ofertas": {
+    "children": [
+      "flex-layout.col#revista-ofertas"
+    ],
+    "props": { 
+      "blockClass": "footer-row-revista-ofertas"
+    }
+  },
+  "flex-layout.col#revista-ofertas": {
+    "title": "container revista de ofertas",
+    "children": [
+      "rich-text#revista-ofertas",
+      "image-list#revista-ofertas"
+    ],
+    "props": {
+      "blockClass": "footer-col-revista-ofertas"
+    }
+  },
+  "image-list#revista-ofertas": {
+    "title": "card revista de ofertas",
+    "props": {
+      "blockClass": [
+        "image-card-revista-ofertas"
+      ],
+      "images": [ 
+        {
+          "maxHeight": 164,
+          "image": "/assets/vtex.file-manager-graphql/images/a47da96c-896e-423b-9f53-31830bad961b___738fe555d5c7ce88eeb0e843f17542e6.png",
+          "mobileImage": "/assets/vtex.file-manager-graphql/images/465ccf7a-f7fc-4b4f-b66b-666d2cebce71___59c5d0ddab1531d445e693baa6657f30.png",
+          "link": {
+            "url": "/issu/"
+          }
+        }
+      ]
+    }
+  }
+}

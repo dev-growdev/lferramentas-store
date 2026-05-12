@@ -1,0 +1,34 @@
+{
+  "flex-layout.row#general-buy-button": {
+    "title": "Buy Button",
+    "props": {
+      "blockClass": "button--primary",
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": false,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "add-to-cart-button"
+    ]
+  },
+  "flex-layout.row#main-summary-buy-button": {
+    "title": "Buy Button",
+    "props": {
+      "blockClass": "main-summary-buy-btn",
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": false,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "add-to-cart-button#main-summary"
+    ]
+  },
+  "add-to-cart-button#main-summary": {
+    "props": {
+      "text": "Adicionar ao carrinho",
+      "isOneClickBuy": false,
+      "addToCartFeedback": "customEvent",
+      "customPixelEventId": "add-to-cart-button"
+    }
+  }
+}

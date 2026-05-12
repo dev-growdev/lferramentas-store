@@ -1,0 +1,29 @@
+{
+  "store.custom#representates": {
+    "blocks": [
+      "toggle-layout#inst-banner",
+      "flex-layout.row#inst-breadcrumb-representantes",
+      "flex-layout.row#inst-body-representantes"
+    ]
+  },
+  "flex-layout.row#inst-body-representantes": {
+    "title": "Container Representantes",
+    "props": {
+      "colSizing": "auto",
+      "fullWidth": true,
+      "blockClass": ["inst-body", "inst-body--representantes"]
+    },
+    "children": [
+      "flex-layout.col#inst-menu",
+      "flex-layout.col#inst-content-and-title-representantes"
+    ]
+  },
+  "flex-layout.col#inst-content-and-title-representantes": {
+    "title": "Container Título e Conteúdo",
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": ["inst-content-container"]
+    },
+    "children": ["rich-text#inst-title-representates", "inst-representates"]
+  }
+}

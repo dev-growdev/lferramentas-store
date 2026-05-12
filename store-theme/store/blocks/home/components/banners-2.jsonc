@@ -1,0 +1,134 @@
+{
+  "toggle-layout#banners-2": {
+    "title": "Ativar/Desativar - Banner Triplo 1",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "responsive-layout.desktop#banners-2",
+      "responsive-layout.mobile#banners-2"
+    ]
+  },
+  "responsive-layout.desktop#banners-2": {
+    "children": ["flex-layout.row#banners-2"]
+  },
+  "flex-layout.row#banners-2": {
+    "title": "Banner Triplo 1 - Desktop",
+    "props": {
+      "blockClass": ["banners", "banners-2"],
+      "colSizing": "auto",
+      "fullWidth": "true"
+    },
+    "children": [
+      "image-new-custom#banner-2",
+      "image-new-custom#banner-3",
+      "image-new-custom#banner-4"
+    ]
+  },
+  "image-new-custom#banner-2": {
+    "title": "Banner Home 2",
+    "props": {
+      "blockClass": ["banners"],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "343px",
+      "height": "270px",
+      "src": "/assets/vtex.file-manager-graphql/images/39b8a38c-50ea-40e7-90a9-4177eea8487a___d77c0441c49a34006b9248375719824e.png",
+      "alt": "Soldador",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image-new-custom#banner-3": {
+    "title": "Banner Home 3",
+    "props": {
+      "blockClass": ["banners"],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "343px",
+      "height": "159px",
+      "src": "/assets/vtex.file-manager-graphql/images/902d7ec4-eff1-491b-97eb-7d2a6df1d1d9___d17e3ec03e7e81c5b6049f194a25733d.png",
+      "alt": "Marceneiro",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image-new-custom#banner-4": {
+    "title": "Banner Home 4",
+    "props": {
+      "blockClass": ["banners"],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "343px",
+      "height": "200px",
+      "src": "/assets/vtex.file-manager-graphql/images/1170e4b8-4471-4ad6-a950-126f0550f566___9027cd177830593d25eaf578daf4d999.png",
+      "alt": "Serralheiro",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "responsive-layout.mobile#banners-2": {
+    "children": ["flex-layout.row#banners-2-mobile"]
+  },
+  "flex-layout.row#banners-2-mobile": {
+    "title": "Banner Triplo 1 - Mobile",
+    "props": {
+      "blockClass": ["banners", "banners-2"],
+      "colSizing": "auto",
+      "fullWidth": "true"
+    },
+    "children": [
+      "image-new-custom#banner-2-mobile",
+      "image-new-custom#banner-3-mobile",
+      "image-new-custom#banner-4-mobile"
+    ]
+  },
+  "image-new-custom#banner-2-mobile": {
+    "title": "Banner Home 2",
+    "props": {
+      "blockClass": ["banners"],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "343px",
+      "height": "270px",
+      "src": "/assets/vtex.file-manager-graphql/images/39b8a38c-50ea-40e7-90a9-4177eea8487a___d77c0441c49a34006b9248375719824e.png",
+      "alt": "Soldador",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image-new-custom#banner-3-mobile": {
+    "title": "Banner Home 3",
+    "props": {
+      "blockClass": ["banners"],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "343px",
+      "height": "159px",
+      "src": "/assets/vtex.file-manager-graphql/images/902d7ec4-eff1-491b-97eb-7d2a6df1d1d9___d17e3ec03e7e81c5b6049f194a25733d.png",
+      "alt": "Marceneiro",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image-new-custom#banner-4-mobile": {
+    "title": "Banner Home 4",
+    "props": {
+      "blockClass": ["banners"],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "343px",
+      "height": "200px",
+      "src": "/assets/vtex.file-manager-graphql/images/1170e4b8-4471-4ad6-a950-126f0550f566___9027cd177830593d25eaf578daf4d999.png",
+      "alt": "Serralheiro",
+      "link": {
+        "url": "/"
+      }
+    }
+  }
+}

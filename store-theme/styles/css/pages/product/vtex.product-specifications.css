@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.groupName {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 0 0 16px 0;
+}
+@media only screen and (min-width: 1024px) {
+  .groupName {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    line-height: 1.5625rem;
+    letter-spacing: 0rem;
+    text-align: left;
+    text-transform: initial;
+  }
+}
+
+.specificationName {
+  color: #303030;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+  line-height: 1.1875rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+:global(.vtex-flex-layout-0-x-flexRow--container__description-pdp) .specificationName {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  line-height: 1.0625rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+.specificationValue {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  line-height: 1.0625rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+:global(.vtex-flex-layout-0-x-flexRow--container__description-pdp) .specificationValue {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  line-height: 1.0625rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  white-space: pre;
+}
+
+.specificationName {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 14px;
+  line-height: 22px;
+}
+.specificationName[data-specification-name=Peso] .specificationName[data-specification-name=Altura]::before, .specificationName[data-specification-name=Largura]::before, .specificationName[data-specification-name=Comprimento]::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 18px;
+  width: 18px;
+  margin: 0 10px 0 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.specificationName[data-specification-name=Altura]::before {
+  display: none;
+}
+.specificationName[data-specification-name=Largura]::before {
+  display: none;
+}
+.specificationName[data-specification-name=Comprimento]::before {
+  display: none;
+}
+.specificationName[data-specification-name=Peso]::before {
+  display: none;
+}
+
+.specificationValue {
+  word-wrap: break-word;
+  word-break: break-word;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+}
+.specificationValue:not(:last-child)::after {
+  /* '\00a0' is the character for white-space */
+  content: ", ";
+}

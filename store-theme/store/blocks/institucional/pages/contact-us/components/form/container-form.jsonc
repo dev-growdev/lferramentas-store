@@ -1,0 +1,43 @@
+{
+  "flex-layout.row#inst-contact-us-container": {
+    "title": "Container Formulário Fale Conosco",
+    "props": {
+      "blockClass": "inst-contact-us-container",
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#form-and-text"]
+  },
+  "flex-layout.col#form-and-text": {
+    "title": "Container Descrição e Fomulário",
+    "children": [
+      "rich-text#contact-us-description",
+      "form#inst-contact-us-form"
+    ],
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": "inst-form-and-text"
+    }
+  },
+  "rich-text#contact-us-description": {
+    "title": "Texto Descrição",
+    "props": {
+      "text": "Você pode entrar em contato com nossa Central de Atendimento pelo canal abaixo ou pelo **WhatsApp (51) 3103-0100**, disponível de segunda à quinta das 08h às 18h e sexta das 08h às 17h. Estamos à disposição para ajudar!",
+      "blockClass": ["inst-text", "inst-contact-us-description"]
+    }
+  },
+  "form#inst-contact-us-form": {
+    "title": "Formulário Fale Conosco",
+    "props": {
+      "entity": "faleconoscolf",
+      "schema": "faleconoscolf",
+      "blockClass": "inst-contact-us-form"
+    },
+    "blocks": ["form-success#inst-contact-us"],
+    "children": [
+      "form-input.text#inst-contact-us-input-name",
+      "form-input.text#inst-contact-us-input-email",
+      "form-input.textarea#inst-contact-us-input-message",
+      "form-submit#inst-contact-us-form-button"
+    ]
+  }
+}

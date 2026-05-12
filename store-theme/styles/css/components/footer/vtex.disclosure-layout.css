@@ -1,0 +1,48 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.trigger--footer-submenu {
+  box-shadow: none;
+  background: transparent;
+  border: 0;
+  width: 100%;
+  margin: 0;
+  padding: 16px 0;
+  transition: all ease-in-out 300ms;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.trigger--footer-submenu::after {
+  content: "";
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5 3.17937e-09L12 1.5285L6 7.5L3.23978e-09 1.5285L1.5 2.22556e-08L6 4.5L10.5 3.17937e-09Z' fill='black'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 12px;
+  width: 12px;
+  transition: all ease-in-out 200ms;
+}
+.trigger--footer-submenu--visible::after {
+  transform: rotate(180deg);
+}
+
+.content--footer-submenu {
+  transition: opacity 300ms ease-in-out, height 300ms ease-in-out, transform 300ms ease-in-out;
+  opacity: 0;
+  height: 0;
+  transform: translate3d(0, -10%, 0);
+}
+.content--footer-submenu[data-enter] {
+  opacity: 1;
+  height: auto;
+  transform: translate3d(0, 0, 0);
+}
+.content--footer-submenu[data-leave] {
+  height: 0;
+  overflow: hidden;
+}
+.content--footer-submenu--visible {
+  padding-bottom: 32px;
+}

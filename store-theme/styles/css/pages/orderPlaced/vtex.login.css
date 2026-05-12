@@ -1,0 +1,56 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+:global(.vtex-order-placed-2-x-orderOptionsWrapper) > div:not(:global(.vtex-order-placed-2-x-myOrdersButton),
+:global(.vtex-order-placed-2-x-updateOrderButton)) :global(.vtex-button) {
+  background: transparent;
+  height: 48px;
+}
+:global(.vtex-order-placed-2-x-orderOptionsWrapper) > div:not(:global(.vtex-order-placed-2-x-myOrdersButton),
+:global(.vtex-order-placed-2-x-updateOrderButton)) :global(.vtex-button):hover {
+  border: none;
+}
+:global(.vtex-order-placed-2-x-orderOptionsWrapper) > div:not(:global(.vtex-order-placed-2-x-myOrdersButton),
+:global(.vtex-order-placed-2-x-updateOrderButton)) :global(.vtex-button__label) {
+  color: #4d4d4d;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: none;
+}
+:global(.vtex-order-placed-2-x-orderOptionsWrapper) > div:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+:global(.vtex-order-placed-2-x-orderPaymentItem) p:not(:global(.vtex-order-placed-2-x-paymentGroup)) {
+  color: #7c7c7b;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 4px 0;
+}
+
+:global(.vtex-order-placed-2-x-addressContainer) {
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 400 18;
+  line-height: leftpx;
+  line-height: calc(left / 16)rem;
+  letter-spacing: 0rem;
+  text-align: initial;
+  text-transform: 0;
+}
+
+@media only screen and (min-width: 1026px) {
+  :global(.vtex-order-placed-2-x-orderPlacedWrapper) :global(.w-80-ns) {
+    width: 100%;
+  }
+}

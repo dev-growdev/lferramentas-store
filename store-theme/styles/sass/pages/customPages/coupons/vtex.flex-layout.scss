@@ -1,0 +1,76 @@
+@import '../../../global';
+
+.flexRow {
+  &--banner-coupons,
+  &--html-content-coupons,
+  &--how-to-use-coupons,
+  &--banner-middle-coupons,
+  &--requirements-coupons {
+    margin: 0;
+    margin-top: 26px;
+
+    :global(.vtex-store-components-3-x-container) {
+      padding: 0;
+    }
+  }
+
+  &--banner-middle-coupons {
+    margin-top: 16px;
+    background: linear-gradient(to bottom, $white02 54%, $white 46%);
+
+    @include mq('1026') {
+      background: linear-gradient(to bottom, $white02 65%, $white 35%);
+    }
+  }
+
+  &--how-to-use-coupons {
+    margin: 0;
+    padding: 26px 0 22px;
+    background: $white;
+  }
+
+  &--html-content-coupons-2 {
+    margin: 0;
+    padding: 22px 0 27px;
+    background: $white;
+  }
+
+  &--requirements-coupons {
+    margin-top: 38px;
+  }
+}
+
+.flexRowContent {
+  &--banner-coupons,
+  &--html-content-coupons,
+  &--how-to-use-coupons,
+  &--banner-middle-coupons,
+  &--requirements-coupons {
+    @include grid();
+  }
+
+  &--how-to-use-coupons {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include mq('1026') {
+      flex-direction: row;
+      gap: 70px;
+    }
+  }
+}
+
+.flexCol {
+  &--how-to-use-coupons-card {
+    background-color: $lighest-grey;
+    border-radius: 15px;
+    padding: 28px 22px 33px;
+    gap: 22px;
+
+    @include mq('1026') { 
+      padding: 18px 44px 22px;
+
+    }
+  }
+}

@@ -1,0 +1,101 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.container,
+.wrapper,
+.heading {
+  width: 100%;
+}
+
+.headingLevel1,
+.headingLevel2,
+.clps-title-container .paragraph {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 10px 0 20px 0;
+}
+@media only screen and (min-width: 1024px) {
+  .headingLevel1,
+  .headingLevel2,
+  .clps-title-container .paragraph {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 25px;
+    line-height: 1.5625rem;
+    letter-spacing: 0rem;
+    text-align: left;
+    text-transform: initial;
+    text-align: center;
+  }
+}
+
+.clps-subtitle-container .paragraph,
+.clps-subtitle-container .heading {
+  margin: 0 0 10px 0;
+  color: #707070;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  text-align: center;
+}
+
+.paragraph,
+.headingLevel3,
+.headingLevel4,
+.headingLevel5,
+.headingLevel6 {
+  color: #707070;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  text-align: center;
+  margin: 0 0 24px 0;
+}
+
+.clps-collapsed .paragraph,
+.clps-collapsed .heading {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link {
+  color: #000000;
+}
+
+.clps-button {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  text-decoration: underline;
+  display: block;
+  padding: 0;
+  margin: 0 auto 0 auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

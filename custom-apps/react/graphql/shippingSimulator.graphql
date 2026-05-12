@@ -1,0 +1,11 @@
+query Shipping($postalCode:String, $items: [ShippingItem]){
+  shipping(country: "BRA", postalCode: $postalCode, items: $items) {
+    logisticsInfo {
+      slas {
+        name
+        price
+        shippingEstimate
+      }
+    }
+  }
+}

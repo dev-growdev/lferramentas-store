@@ -1,0 +1,91 @@
+{
+  "flex-layout.col#contact-us-info-box": {
+    "title": "Container Informações Fale Conosco",
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "inst-body--box"
+      ]
+    },
+    "children": [
+      "rich-text#contact-us-info-title",
+      "flex-layout.row#contact-us-info-box-contacts",
+      "flex-layout.row#contact-us-info-box-opening-hours"
+    ]
+  },
+  "rich-text#contact-us-info-title": {
+    "title": "Título Contatos",
+    "props": {
+      "text": "Central de Atendimento",
+      "blockClass": "contact-us-info-box-title"
+    }
+  },
+  "flex-layout.row#contact-us-info-box-contacts": {
+    "title": "Container Contatos",
+    "props": {
+      "preventHorizontalStretch": false,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "contact-us-info-box-contacts"
+    },
+    "children": [
+      "rich-text#contact-us-info-phone",
+      "rich-text#contact-us-info-email"
+    ]
+  },
+  "rich-text#contact-us-info-phone": {
+    "title": "Texto Telefone de Contato",
+    "props": {
+      "text": "Telefone: (00) 1234-5678",
+      "blockClass": "contact-us-info-box-phone"
+    }
+  },
+  "rich-text#contact-us-info-email": {
+    "title": "Texto Email de Contato",
+    "props": {
+      "text": "E-mail: exemplo@exemplo.com.br",
+      "blockClass": "contact-us-info-box-email"
+    }
+  },
+  "flex-layout.row#contact-us-info-box-opening-hours": {
+    "title": "Container Horário de Atendimento",
+    "props": {
+      "preventHorizontalStretch": false,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "contact-us-info-box-opening-hours"
+    },
+    "children": [
+      "rich-text#contact-us-opening-hours-title",
+      "rich-text#contact-us-opening-hours-01",
+      "rich-text#contact-us-opening-hours-02"
+    ]
+  },
+  "rich-text#contact-us-opening-hours-title": {
+    "title": "Titulo Atendimento",
+    "props": {
+      "text": "Horário de atendimento:",
+      "blockClass": "contact-us-opening-hours-title"
+    }
+  },
+  "rich-text#contact-us-opening-hours-01": {
+    "title": "Horário 1",
+    "props": {
+      "text": "Segunda a Sábado: 07h00 às 23h00",
+      "blockClass": [
+        "contact-us-opening-hours",
+        "contact-us-opening-hours--01"
+      ]
+    }
+  },
+  "rich-text#contact-us-opening-hours-02": {
+    "title": "Horário 2",
+    "props": {
+      "text": "Domingos e Feriados: 07h00 às 21h00",
+      "blockClass": [
+        "contact-us-opening-hours",
+        "contact-us-opening-hours--02"
+      ]
+    }
+  }
+}

@@ -1,0 +1,224 @@
+@import '../../global';
+
+.orderPlacedWrapper {
+  @include grid();
+  padding: 22px 0 0;
+
+  @include mq('1026') {
+    padding-top: 40px;
+  }
+}
+
+.confirmationTitle {
+  @include text(2, $black, $fontExtraBold);
+  margin-top: 0;
+  text-align: center;
+
+  @include mq('1026', max) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.confirmationMessage {
+  margin: 27px auto 0;
+  @include textConfig($dark-grey, 14, $fontRegular, 18, center, initial, 0);
+
+  width: 90%;
+
+  @include mq('1026') {
+    margin: 18px auto 0;
+    width: 80%;
+  }
+}
+
+.section {
+  &--confirmation {
+    margin: 0;
+  }
+
+  &--notices {
+    margin-bottom: 31px;
+
+    @include mq('1026') {
+      margin-bottom: 25px;
+    }
+  }
+
+  &--paymentMethods,
+  &--deliveryPackages {
+    border-color: $white;
+  }
+
+  &--pickupPackages {
+    border-color: $white;
+
+    &:empty {
+      border: none;
+    }
+  }
+}
+
+.noticeListItem {
+  @include textConfig($dark-grey, 14, $fontRegular, 18, center, initial, 0);
+  padding: 0;
+  padding-top: 16px;
+  border: none;
+
+  @include mq('1026') {
+    padding-top: 9px;
+  }
+}
+
+.orderWrapper {
+  border-top: 1px solid $white;
+  padding-top: 24px;
+}
+
+.orderNumber {
+  @include textConfig($black, 20, $fontExtraBold, 25, left, initial, 0);
+  margin-bottom: 26px;
+
+  @include mq('1026') {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 6px;
+  }
+}
+
+.orderDatetime {
+  @include textConfig($dark-grey-02, 14, $fontSemiBold, 18, left, initial, 0);
+}
+
+.customerInfoListContainer {
+  padding-top: 9px;
+
+  @include mq('1026') {
+    padding-top: 0;
+  }
+
+  .customerInfoListName,
+  .customerInfoListEmail,
+  .customerInfoListDocument,
+  .customerInfoListPhone {
+    @include textConfig($dark-grey-02, 14, $fontRegular, 18, left, initial, 0);
+    padding: 0;
+  }
+
+  .customerInfoListEmail,
+  .customerInfoListDocument,
+  .customerInfoListPhone {
+    margin-top: 6px;
+  }
+}
+
+.orderOptionsWrapper {
+  .myOrdersButton,
+  .updateOrderButton {
+    @include button-primary();
+
+    :global(.vtex-button) {
+      border-radius: 8px;
+      height: 48px;
+    }
+  }
+}
+
+.paymentGroup {
+  @include textConfig($black, 14, $fontSemiBold, 18, left, initial, 0);
+  margin: 24px 0 4px;
+
+  @include mq('1026') {
+    margin: 16px 0 4px;
+  }
+}
+
+.orderPaymentItem {
+  @include textConfig($dark-grey-02, 14, $fontSemiBold, 18, left, initial, 0);
+  padding-bottom: 26px;
+}
+
+.package--delivery {
+  margin: 24px 0 16px;
+}
+
+.packageDeliveryTitle {
+  @include textConfig($black, 14, $fontBold, 18, left, initial, 0);
+}
+
+.packageShippingEstimate,
+.packageSLA {
+  @include textConfig($dark-grey-02, 14, $fontRegular, 18, left, initial, 0);
+}
+
+.productList,
+.totalList {
+  max-width: 373px;
+}
+
+.productInfoColumn {
+  line-height: 15px;
+}
+
+.productList {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.productWrapper {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(2, min-content);
+  text-align: left;
+}
+
+.productImageColumn {
+  grid-row: -1/1;
+  margin-right: 16px;
+  margin-bottom: 0;
+}
+
+.productImageWrapper {
+  height: 64px;
+  width: 64px;
+}
+
+.productPrice {
+  @include textConfig($black, 12, $fontExtraBold, 15, left, initial, 0);
+  align-items: end;
+  display: flex;
+  height: auto;
+  margin-top: 5px;
+  width: 100%;
+
+  @include mq('1026') {
+    margin-top: 8px;
+  }
+}
+
+.productQuantity {
+  display: none;
+}
+
+.productName {
+  @include textConfig($dark-grey, 12, $fontSemiBold, 15, left, initial, 0);
+}
+
+.totalList {
+  margin-top: 16px;
+}
+
+.totalListItem {
+  padding: 4px 0;
+}
+
+.totalListItemLabel,
+.totalListItemValue {
+  @include textConfig($black, 14, $fontRegular, 22, left, initial, 0);
+}
+
+.totalListItem:last-child .totalListItemLabel,
+.totalListItem:last-child .totalListItemValue {
+  @include textConfig($black, 16, $fontExtraBold, 22, left, initial, 0);
+}

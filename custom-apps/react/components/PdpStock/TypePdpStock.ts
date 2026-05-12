@@ -1,0 +1,3 @@
+type TypePdpStock = {
+  quantidade: number
+}

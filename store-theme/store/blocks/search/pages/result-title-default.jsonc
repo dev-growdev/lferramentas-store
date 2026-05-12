@@ -1,0 +1,76 @@
+{
+  "search-result-layout#result-title-default": {
+    "title": "Página Resultado de Busca",
+    "blocks": [
+      "search-result-layout.desktop#result-title-default",
+      "search-result-layout.mobile#result-title-default",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "blockClass": "department"
+    }
+  },
+  "search-result-layout.desktop#result-title-default": { 
+    "title": "Página Resultado de Busca Desktop",
+    "children": [
+      "flex-layout.row#search-breadcrumb",
+      "toggle-layout#banner-departamento",
+      "flex-layout.row#result-title-default",
+      "flex-layout.row#text-seo-search"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": false,
+      "defaultGalleryLayout": "grid"
+    }
+  },
+  "search-result-layout.mobile#result-title-default": {
+    "title": "Página Resultado de Busca Mobile",
+    "children": [
+      "flex-layout.row#search-breadcrumb", 
+      "toggle-layout#banner-departamento-mobile",
+      "flex-layout.row#searchtitle-departament",
+      "flex-layout.row#searchinfomobile",
+      "flex-layout.row#productCount",
+      "flex-layout.row#contentmobile",
+      "search-products-count-per-page",
+      "search-products-progress-bar",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#text-seo-search"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "mobileLayout": {
+        "mode1": "normal",
+        "mode2": "normal"
+      },
+      "defaultGalleryLayout": "grid"
+    }
+  },
+  "flex-layout.row#result-title-default": {
+    "children": [
+      "flex-layout.col#filter",
+      "flex-layout.col#content-result-title-default"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "search-result"
+    }
+  },
+  "flex-layout.col#content-result-title-default": {
+    "children": [
+      "flex-layout.row#searchtitle-departament",
+      "flex-layout.row#row-infos-search",
+      "back-to-top-button",
+      "flex-layout.row#products",
+      "search-products-count-per-page",
+      "search-products-progress-bar",
+      "flex-layout.row#fetchmore"
+    ],
+    "props": {
+      "width": "grow",
+      "preventVerticalStretch": true
+    }
+  }
+} 

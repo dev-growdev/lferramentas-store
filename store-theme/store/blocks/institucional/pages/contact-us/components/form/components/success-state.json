@@ -1,0 +1,30 @@
+{
+  "form-success#inst-contact-us": {
+    "children": [
+      "flex-layout.row#inst-contact-us-success-state"
+    ]
+  },
+
+  "flex-layout.row#inst-contact-us-success-state": {
+    "title": "Container Do Conteudo Que Sera Exibido Ao Enviar O Formulario Com Sucesso",
+    "props": {
+      "blockClass": "inst-contact-us-success-state",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "rich-text#inst-contact-us-success-state-text"
+    ]
+  },
+
+  "rich-text#inst-contact-us-success-state-text": {
+    "title": "Texto Sucesso",
+    "props": {
+      "text": "Ficamos muito felizes com o seu contato. Responderemos você em breve.",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "inst-contact-us-success-state-text"
+    }
+  }
+}

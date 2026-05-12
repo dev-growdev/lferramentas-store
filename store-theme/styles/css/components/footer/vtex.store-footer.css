@@ -1,0 +1,11 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.footerLayout {
+  margin-top: 32px;
+}
+@media only screen and (min-width: 1026px) {
+  .footerLayout {
+    margin-top: 50px;
+  }
+}

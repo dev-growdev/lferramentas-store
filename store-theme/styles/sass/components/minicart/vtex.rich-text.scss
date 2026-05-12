@@ -1,0 +1,23 @@
+@import "../../global";
+
+.container--empty__minicart {
+  &--titulo,
+  &--text {
+    margin: 0 auto;
+  }
+}
+
+.wrapper--empty__minicart--text {
+  width: 100%;
+}
+
+.paragraph--empty__minicart {
+  &--titulo {
+    padding: 0 20px;
+    @include textConfig($black, 16, $fontBold, 18, center, initial, 0);
+  }
+  &--text {
+    padding: 0 20px;
+    @include textConfig($black, 16, $fontMedium, 18, center, initial, 0);
+  }
+}

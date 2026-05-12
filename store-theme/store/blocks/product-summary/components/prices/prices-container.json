@@ -1,0 +1,25 @@
+{
+  "flex-layout.row#product-summary-container-prices": {
+    "title": "Container Preços",
+    "props": {
+      "blockClass": "container__prices-row",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#product-summary-container-prices"
+    ]
+  }, 
+  "flex-layout.col#product-summary-container-prices": {
+    "props": {
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "prodsum-container-prices"
+    },
+    "children": [
+      "flex-layout.row#product-summary-list-price",
+      "flex-layout.row#main-product-summary-selling-price-savings",
+      "custom-installments"
+    ]
+  }
+} 

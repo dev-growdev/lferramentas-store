@@ -1,0 +1,112 @@
+@import '../../global';
+
+.container {
+  &--container__ {
+    &seo {
+      &--title,
+      &--text {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.heading-- {
+  &container__ {
+    &seo {
+      &--title {
+        font-family: $tertiaryFont;
+        @include textConfig($black02, 16, $fontBold, 18, center, initial, 0);
+        margin: 0 0 19px;
+
+        @include mq('1026') {
+          @include font-size(20);
+          @include line-height(22);
+        }
+      }
+    }
+  }
+
+  &container__ {
+    &seo {
+      &--text {
+        margin: 0;
+        @include textConfig($black02, 14, $fontRegular, 18, center, initial, 0);
+      }
+    }
+  }
+
+  &shelfTitle {
+    font-family: $tertiaryFont;
+    @include textConfig($black, 16, $fontExtraBold, 20, left, initial, 0);
+    margin: {
+      bottom: 14px;
+      top: 14px;
+    }
+
+    @include mq('1026') {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.container--title-categories-home {
+  justify-content: center;
+  width: 100%;
+
+  .heading--title-categories-home {
+    @include textConfig($black, 16, 700, 16, center);
+    margin: 0 auto;
+
+    @include mq('1024') {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.container {
+  &--deals {
+    margin-left: 10px;
+    font-family: $tertiaryFont;
+    @include textConfig($black, 14, $fontBold, 16, left, inherit);
+
+    @include mq('640') {
+      margin-right: 20px;
+    }
+  }
+}
+
+.paragraph {
+  &--deals {
+    font-family: $tertiaryFont;
+    margin: 0;
+    @include textConfig($black, 16, $fontBold, 20, left, inherit);
+  }
+
+  &--shelfLink {
+    margin: 14px 0;
+    @include line-height(20);
+    white-space: nowrap;
+
+    @include mq('1026') {
+      margin: 14px 0 11px;
+    }
+  }
+
+  &--title-categories-item {
+    cursor: pointer;
+    margin: 4px 0 0 0;
+    @include textConfig($black, 13, $fontRegular, 16, center, inherit);
+  }
+}
+
+.link--shelfLink {
+  @include textConfig($black, 14, $fontBold, 20, left, initial, 0);
+
+  @include mq('1026') {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,39 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.flexCol--header-floating-buttons {
+  pointer-events: all;
+  position: fixed;
+  bottom: 100px;
+  right: 4px;
+  width: auto;
+  height: auto;
+  z-index: 20;
+}
+@media only screen and (min-width: 1024px) {
+  .flexCol--header-floating-buttons {
+    right: 30px;
+    bottom: 46px;
+  }
+}
+
+.flexCol--customer-support {
+  padding: 44px 20px;
+}
+@media (max-height: 610px) {
+  .flexCol--customer-support {
+    padding: 20px 20px;
+  }
+}
+@media (min-height: 611px) and (max-height: 700px) {
+  .flexCol--customer-support {
+    padding: 30px 20px;
+  }
+}
+
+.flexRow--customer-support-item {
+  margin: 0 0 62px 0;
+}
+.flexRow--customer-support-item-06 {
+  margin: 0;
+}

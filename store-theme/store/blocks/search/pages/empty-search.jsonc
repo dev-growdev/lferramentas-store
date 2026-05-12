@@ -1,0 +1,13 @@
+{
+  "search-not-found-layout": {
+    "title": "Página Busca Vazia",
+    "children": [
+      "flex-layout.row#empty-search-banner",
+      "flex-layout.row#empty-search",
+      "flex-layout.row#shelf-not-found"
+    ],
+    "props": {
+      "blockClass": "empty-search-notfound"
+    }
+  }
+}

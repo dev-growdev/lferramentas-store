@@ -1,0 +1,59 @@
+{
+  "flex-layout.row#container-highlights": {
+    "title": "Container Flags",
+    "props": {
+      "blockClass": "container__highlights-row",
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.col#container-highlights"
+    ]
+  },
+  "flex-layout.col#container-highlights": {
+    "props": {
+      "blockClass": "container__highlights-col",
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#collection-generic"
+    ]
+  },
+  "flex-layout.row#container-highlights-bottom-mob": {
+    "title": "Container Flags",
+    "props": {
+      "blockClass": "container__highlights-row-bottom-mob",
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.col#container-highlights-bottom"
+    ]
+  },
+  "flex-layout.row#container-highlights-bottom-desk": {
+    "title": "Container Flags",
+    "props": {
+      "blockClass": "container__highlights-row-bottom-desk",
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.col#container-highlights-bottom"
+    ]
+  },
+  "flex-layout.col#container-highlights-bottom": {
+    "props": {
+      "blockClass": "container__highlights-col",
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#collection-bottom"
+    ]
+  }
+}

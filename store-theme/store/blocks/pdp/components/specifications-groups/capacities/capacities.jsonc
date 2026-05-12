@@ -1,0 +1,115 @@
+{
+  "conditional-spec-group#capacities": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "capacities"
+      ],
+      "propertyName": "Capacidades"
+    },
+    "children": [
+      "flex-layout.row#capacities"
+    ]
+  },
+  "flex-layout.row#capacities": {
+    "title": "Capacidades",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "capacities"
+      ],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#capacities"
+    ]
+  },
+  "flex-layout.col#capacities": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "capacities"
+      ],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#capacities-content"
+    ]
+  },
+  "flex-layout.row#capacities-content": {
+    "title": "Capacidades",
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "capacities-content"
+      ],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#capacities-content"
+    ]
+  },
+  "flex-layout.col#capacities-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "capacities-content"
+      ],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "disclosure-layout#capacities-content"
+    ]
+  },
+  "disclosure-layout#capacities-content": {
+    "props": {
+      "initialVisibility": "visible",
+      "blockClass": [
+        "generic-specification-group-content",
+        "capacities-content"
+      ]
+    },
+    "children": [
+      "disclosure-trigger#capacities-content",
+      "disclosure-content#capacities-content"
+    ]
+  },
+  "disclosure-trigger#capacities-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "capacities-content"
+      ]
+    },
+    "children": [
+      "rich-text#capacities-title"
+    ]
+  },
+  "disclosure-content#capacities-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "capacities-content"
+      ]
+    },
+    "children": [
+      "product-specification-group#capacities"
+    ]
+  },
+  "rich-text#capacities-title": {
+    "title": "Capacidades - Título",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "generic-specification-group-title",
+        "capacities",
+        "capacities-title"
+      ],
+      "text": "##### Capacidades"
+    }
+  }
+}

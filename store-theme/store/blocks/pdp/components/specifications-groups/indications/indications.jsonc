@@ -1,0 +1,114 @@
+{
+  "conditional-spec-group#indications": {
+    "props": {
+      "blockClass": [
+        "measures"
+      ],
+      "propertyName": "Indicação"
+    },
+    "children": [
+      "flex-layout.row#indications"
+    ]
+  },
+  "flex-layout.row#indications": {
+    "title": "Indicações",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "indications"
+      ],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#indications"
+    ]
+  },
+  "flex-layout.col#indications": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "indications"
+      ],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#indications-content"
+    ]
+  },
+  "flex-layout.row#indications-content": {
+    "title": "Indicações",
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "indications-content"
+      ],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#indications-content"
+    ]
+  },
+  "flex-layout.col#indications-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "indications-content"
+      ],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "disclosure-layout#indications-content"
+    ]
+  },
+  "disclosure-layout#indications-content": {
+    "props": {
+      "initialVisibility": "visible",
+      "blockClass": [
+        "generic-specification-group-content",
+        "indications-content"
+      ]
+    },
+    "children": [
+      "disclosure-trigger#indications-content",
+      "disclosure-content#indications-content"
+    ]
+  },
+  "disclosure-trigger#indications-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-group-content",
+        "indications-content"
+      ]
+    },
+    "children": [
+      "rich-text#indications-title"
+    ]
+  },
+  "disclosure-content#indications-content": {
+    "props": {
+      "blockClass": [
+        "generic-specification-content",
+        "indications-content"
+      ]
+    },
+    "children": [
+      "product-specification-group#indications"
+    ]
+  },
+  "rich-text#indications-title": {
+    "title": "Indicações - Título",
+    "props": {
+      "blockClass": [
+        "generic-specification-group",
+        "generic-specification-group-title",
+        "indications",
+        "indications-title"
+      ],
+      "text": "##### Indicações"
+    }
+  }
+}

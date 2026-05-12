@@ -1,0 +1,46 @@
+{
+  "store.custom#inst-page-faq": {
+    "blocks": [
+      "toggle-layout#inst-banner",
+      "flex-layout.row#inst-breadcrumb-faq",
+      "flex-layout.row#inst-body-faq"
+    ]
+  },
+  "flex-layout.row#inst-body-faq": {
+    "title": "Container Perguntas Frequentes",
+    "props": {
+      "colSizing": "auto",
+      "fullWidth": true,
+      "blockClass": [
+        "inst-body",
+        "inst-body--faq"
+      ]
+    },
+    "children": [
+      "flex-layout.col#inst-menu",
+      "flex-layout.col#inst-content-and-title-faq"
+    ]
+  },
+  "flex-layout.col#inst-content-and-title-faq": {
+    "title": "Container Título e Conteúdo",
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "inst-content-container"
+      ]
+    },
+    "children": [
+      "rich-text#inst-title-faq",
+      "flex-layout.row#inst-custom-faq-container"
+    ]
+  },
+  "flex-layout.row#inst-custom-faq-container": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "inst-custom-faq-container"
+    },
+    "children": [
+      "custom-faq"
+    ]
+  }
+}

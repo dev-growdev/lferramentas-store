@@ -1,0 +1,9 @@
+{
+  "rich-text#inst-title-representates": {
+    "title": "Título Principal",
+    "props": {
+      "text": "Representantes",
+      "blockClass": "inst-title"
+    }
+  }
+}

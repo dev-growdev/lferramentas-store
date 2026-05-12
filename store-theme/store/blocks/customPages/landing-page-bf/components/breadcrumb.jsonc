@@ -1,0 +1,24 @@
+{
+  "flex-layout.row#inst-breadcrumb-lp-bf": {
+    "title": "Conteúdo Breadcrumb",
+    "props": {
+      "blockClass": ["inst-breadcrumb-container", "lp-bf-breadcrumb"],
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "rich-text#inst-breadcrumb-home-black",
+      "image-new-custom#inst-breadcrumb-arrow-black",
+      "rich-text#inst-breadcrumb-term-lp-bf"
+    ]
+  },
+  "rich-text#inst-breadcrumb-term-lp-bf": {
+    "title": "Texto Nome Da Pagina",
+    "props": {
+      "blockClass": ["inst-breadcrumb-term", "lp-bf-breadcrumb"],
+      "text": "Black Friday"
+    }
+  }
+}

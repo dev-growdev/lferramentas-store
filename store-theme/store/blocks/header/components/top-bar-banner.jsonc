@@ -1,0 +1,31 @@
+{
+  "toggle-layout#top-bar-banner": {
+    "title": "Toggle Banner Topo",
+    "children": [
+      "image-new-custom#banner-top-bar"
+    ],
+    "props": {
+      "renderChildren": false,
+      "blockClass": [
+        "banner-top-bar"
+      ]
+    }
+  },
+  "image-new-custom#banner-top-bar": {
+    "title": "Banner Topo",
+    "props": {
+      "blockClass": [
+        "banner-top-bar"
+      ],
+      "maxHeight": 50,
+      "src": "https://placehold.co/1920x30",
+      "link": {
+        "url": "",
+        "newTab": false
+      },
+      "width": 1920,
+      "height": 30,
+      "preload": true
+    }
+  }
+}

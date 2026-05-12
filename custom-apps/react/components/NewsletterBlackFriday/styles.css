@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+.bfForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.bfFormInputs {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.bfFormCheckboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 28px;
+  margin-inline: auto;
+}
+
+.bfFormMultipleCheckbox {
+  gap: 22px;
+  justify-content: center;
+  margin-bottom: 21px;
+}
+
+.bfFormInputs input {
+  width: 434px;
+  height: 48px;
+  background: #1c1f21;
+  border: 1px solid #5e5e5e;
+  border-radius: 8px;
+  padding-left: 20px;
+  color: rgba(242, 241, 240, 1);
+  font-family: 'Mulish', sans-serif;
+}
+
+.bfFormInputs input:-webkit-autofill,
+.bfFormInputs input:-webkit-autofill:hover,
+.bfFormInputs input:-webkit-autofill:focus,
+.bfFormInputs input:-webkit-autofill:active {
+  -webkit-text-fill-color: rgba(242, 241, 240, 1) !important;
+  -webkit-box-shadow: 0 0 0 30px #1c1f21 inset !important;
+}
+
+.bfFormInputs input:focus {
+  outline: none;
+  border: 1px solid rgba(255, 231, 46, 1);
+}
+
+.checkboxLabel input[type='checkbox'] {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid rgba(178, 178, 178, 1);
+  min-width: 16px;
+  min-height: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+}
+
+.checkboxLabel input[type='checkbox']::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  top: 0px;
+  left: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.checkboxLabel input[type='checkbox']:checked::after {
+  opacity: 1;
+}
+
+.checkboxLabel {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(178, 178, 178, 1);
+  line-height: 17px;
+  font-family: 'Mulish', sans-serif;
+}
+
+.checkboxLabelMultiple {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Mulish', sans-serif;
+  color: #fff;
+  cursor: pointer;
+}
+
+.checkboxLabel a {
+  color: currentColor;
+}
+
+.bfFormSubmit {
+  display: flex;
+  justify-content: center;
+}
+
+.bfFormButtonSubmit {
+  width: 260px;
+  height: 48px;
+  background: rgba(0, 131, 69, 1);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 131, 69, 1);
+  transition: 0.3s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: 'Mulish', sans-serif;
+
+  transition: background-color 0.3s ease-in, border 0.3s ease-in;
+}
+
+.bfFormButtonSubmit:hover {
+  background-color: #005a30;
+  border: 1px solid #005a30;
+}
+
+.bfFormTitle {
+  margin: 60px auto;
+  margin-bottom: 13px;
+  font-family: 'Mulish', sans-serif;
+  color: #ffe72e;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  max-width: 583px;
+}
+
+.bfFormAuxiliaryText {
+  color: rgba(242, 241, 240, 1);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Mulish', sans-serif;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .bfFormInputs {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+
+  .bfFormInputs input {
+    width: 100%;
+  }
+
+  .bfFormCheckboxGroup {
+    gap: 12px;
+  }
+
+  .bfFormTitle {
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+
+  .bfFormMultipleCheckbox {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 26px;
+  }
+}

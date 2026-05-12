@@ -1,0 +1,99 @@
+{
+  "toggle-layout#banners-6": {
+    "title": "Ativar/Desativar - Banner Duplo 2",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "responsive-layout.desktop#banners-6",
+      "responsive-layout.mobile#banners-6"
+    ]
+  },
+  "responsive-layout.desktop#banners-6": {
+    "children": ["flex-layout.row#banners-6"]
+  },
+  "flex-layout.row#banners-6": {
+    "title": "Banner Duplo 2 - Desktop",
+    "props": {
+      "blockClass": ["banners", "banners-3"],
+      "colSizing": "auto",
+      "fullWidth": "true"
+    },
+    "children": ["image-new-custom#banner-13", "image-new-custom#banner-14"]
+  },
+  "image-new-custom#banner-13": {
+    "title": "Banner Home 13",
+    "props": {
+      "blockClass": ["banners"],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "343px",
+      "height": "112px",
+      "src": "/assets/vtex.file-manager-graphql/images/98717da3-3363-4c46-b7c4-81a0c19a6eca___1488ee124a449caace4c2ce0251f6b7c.png",
+      "alt": "Pedreiro",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image-new-custom#banner-14": {
+    "title": "Banner Home 14",
+    "props": {
+      "blockClass": ["banners"],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "343px",
+      "height": "158px",
+      "src": "/assets/vtex.file-manager-graphql/images/f162cc03-64b6-468d-bfef-e3ae9d8ada1c___e596344793059f1bb6717ca95872a6f8.png",
+      "alt": "Mecanico",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "responsive-layout.mobile#banners-6": {
+    "children": ["flex-layout.row#banners-6-mobile"]
+  },
+  "flex-layout.row#banners-6-mobile": {
+    "title": "Banner Duplo 2 - Mobile",
+    "props": {
+      "blockClass": ["banners", "banners-3"],
+      "colSizing": "auto",
+      "fullWidth": "true"
+    },
+    "children": [
+      "image-new-custom#banner-13-mobile",
+      "image-new-custom#banner-14-mobile"
+    ]
+  },
+  "image-new-custom#banner-13-mobile": {
+    "title": "Banner Home 13",
+    "props": {
+      "blockClass": ["banners"],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "343px",
+      "height": "112px",
+      "src": "/assets/vtex.file-manager-graphql/images/98717da3-3363-4c46-b7c4-81a0c19a6eca___1488ee124a449caace4c2ce0251f6b7c.png",
+      "alt": "Pedreiro",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image-new-custom#banner-14-mobile": {
+    "title": "Banner Home 14",
+    "props": {
+      "blockClass": ["banners"],
+      "experimentalPreventLayoutShift": true,
+      "experimentalSetExplicitDimensions": true,
+      "width": "343px",
+      "height": "158px",
+      "src": "/assets/vtex.file-manager-graphql/images/f162cc03-64b6-468d-bfef-e3ae9d8ada1c___e596344793059f1bb6717ca95872a6f8.png",
+      "alt": "Mecanico",
+      "link": {
+        "url": "/"
+      }
+    }
+  }
+}

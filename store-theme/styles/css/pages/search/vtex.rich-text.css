@@ -1,0 +1,82 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.container--shelf-not-found-title {
+  display: block;
+  text-align: center;
+}
+.container--shelf-not-found-title .paragraph--shelf-slider-title {
+  color: #000000;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  line-height: 1.625rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  text-transform: initial;
+}
+
+.heading--text-seo-departament-title {
+  margin-top: 55px;
+  color: #303030;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0.062rem;
+  text-align: center;
+  text-transform: initial;
+  font-family: "Mulish", sans-serif;
+}
+@media only screen and (min-width: 1026px) {
+  .heading--text-seo-departament-title {
+    margin-top: 52px;
+    font-size: 20px;
+    line-height: 26px;
+    line-height: 1.625rem;
+  }
+}
+.heading--text-seo-departament {
+  margin-top: 4px;
+  color: #656565;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+
+.container--not-found-title, .container--not-found {
+  margin: 0 auto;
+  max-width: 1292px;
+  padding: 0 16px;
+  width: 100%;
+}
+.container--not-found-title {
+  margin-top: 40px;
+}
+
+.paragraph--not-found-title {
+  color: #303030;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+  line-height: 1.625rem;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  text-transform: initial;
+  margin: 0;
+}
+.paragraph--not-found {
+  color: #303030;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  line-height: 1.375rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  margin: 30px 0;
+}

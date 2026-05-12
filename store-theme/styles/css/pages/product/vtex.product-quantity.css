@@ -1,0 +1,54 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.quantitySelectorContainer {
+  height: 100%;
+  margin: 0 6px 0 0;
+}
+.quantitySelectorContainer .availableQuantityContainer {
+  display: none;
+}
+
+.quantitySelectorStepper {
+  border: 1px solid #555a44;
+  border-radius: 8px;
+}
+.quantitySelectorStepper, .quantitySelectorStepper :global(.vtex-numeric-stepper-container), .quantitySelectorStepper :global(.vtex-numeric-stepper-wrapper) {
+  height: 100%;
+  width: 100%;
+}
+.quantitySelectorStepper :global(.vtex-numeric-stepper-container) {
+  padding: 4px 15px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.quantitySelectorStepper :global(.vtex-numeric-stepper-wrapper), .quantitySelectorStepper :global(.vtex-numeric-stepper-container), .quantitySelectorStepper :global(.vtex-numeric-stepper__input), .quantitySelectorStepper :global(.vtex-numeric-stepper__plus-button), .quantitySelectorStepper :global(.vtex-numeric-stepper__minus-button) {
+  border: 0;
+  box-shadow: none;
+  background-color: transparent;
+}
+.quantitySelectorStepper :global(.vtex-numeric-stepper__input) {
+  flex: 1;
+  overflow: hidden;
+  color: #303030;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+}
+.quantitySelectorStepper :global(.vtex-numeric-stepper__plus-button), .quantitySelectorStepper :global(.vtex-numeric-stepper__minus-button) {
+  width: unset !important;
+  color: #555a44;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  line-height: 1.625rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}

@@ -1,0 +1,8 @@
+@import "../../../global";
+
+.paragraph {
+  &--inst-menu-mobile-subtitle {
+    @include textConfig($black, 16, $fontBold, 21, left, initial, 0);
+    margin: 24px 0 8px 0;
+  }
+}

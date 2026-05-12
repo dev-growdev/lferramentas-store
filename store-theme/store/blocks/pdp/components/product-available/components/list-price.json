@@ -1,0 +1,35 @@
+{
+  "flex-layout.row#list-price-savings-with-price-savings": {
+    "title": "Container Preço De Lista E Desconto",
+
+    "props": {
+      "blockClass": "container__list-price-savings-with-price-savings",
+      "colGap": 3,
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "experimentalHideEmptyCols": true
+    },
+    "children": [
+      "conditional-measurement-unit#product-list-price",
+      "product-spot-price-savings#flag-discount-pdp"
+    ]
+  },
+  "conditional-measurement-unit#product-list-price": {
+    "props": {
+      "measurementUnits": ["m", "M", "m2", "M2", "m²", "M²"],
+      "type": "show",
+      "Then": "product-list-price#measurement-unit",
+      "Else": "product-list-price"
+    }
+  },
+  "product-list-price#measurement-unit": {
+    "props": {
+      "message": "{listPriceValue}/{measurementUnit}"
+    }
+  },
+  "product-list-price": {
+    "props": {
+      "message": "{listPriceValue}"
+    }
+  }
+}

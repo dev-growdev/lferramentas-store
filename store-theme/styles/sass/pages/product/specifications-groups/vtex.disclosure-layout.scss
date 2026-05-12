@@ -1,0 +1,39 @@
+@import '../../../global/';
+
+.trigger--generic-specification-group-content {
+  background: none;
+  border: none;
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  @include display-flex(center, flex, space-between, row);
+
+  cursor: pointer;
+
+  &--visible {
+    margin: 0 0 18px 0;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    @include size(15px, 9px);
+
+    // background-image: url(assets/icons/icon-arrow-down-primary.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    transform: none;
+    transition: 200ms ease;
+
+    @include mq("1026") {
+      @include size(18px, 12px);
+    }
+  }
+
+  &--visible::after {
+    transform: rotate(180deg);
+  }
+}

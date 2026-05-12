@@ -1,0 +1,107 @@
+@import '../../global';
+
+.container {
+  &--success-state {
+    background-color: $primary-color;
+    padding: 38px 16px;
+    border-radius: 8px;
+
+    @include mq('1026') {
+      padding: 0;
+    }
+  }
+}
+
+.heading,
+.paragraph {
+  &--footer-submenu-item {
+    font-family: $primaryFont;
+    @include textConfig($dark-grey, 14, $fontRegular, 28, left, initial, 0);
+    margin: 0;
+    text-decoration: none;
+  }
+
+  &--footer-description-text {
+    font-family: $primaryFont;
+    @include textConfig($dark-grey, 12, $fontRegular, 18, center, initial, 0);
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  &--footer-item-title {
+    @include textConfig($primary-color, 16, $fontBold, 20, center, initial, 0);
+    margin: 0;
+    font-family: $primaryFont;
+  }
+
+  &--newsletter-title {
+    @include textConfig(
+      $secondary-color,
+      17,
+      $fontRegular,
+      22,
+      center,
+      initial,
+      0
+    );
+    margin: 0;
+    font-family: $secondaryFont;
+
+    @include mq('1026') {
+      @include font-size(22);
+      @include line-height(26);
+      text-align: left;
+      margin-right: 33px;
+      font-family: $primaryFont;
+    }
+
+    & :nth-child(2n) {
+      font-weight: $fontBold;
+    }
+  }
+
+  &--success-state {
+    text-align: center;
+    @include textConfig($white, 14, $fontRegular, 18, center, initial, 10);
+    font-family: $tertiaryFont;
+  }
+
+  &--company-text {
+    @include textConfig($dark-gray, 14, $fontRegular, 18, center, initial, 0);
+    font-family: $primaryFont;
+    margin: 0;
+  }
+}
+
+.link {
+  &--footer-submenu-item {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.wrapper {
+  &--footer-description-text {
+    margin: 0 auto;
+  }
+
+  &--newsletter-title {
+    margin: 0 auto;
+  }
+
+  &--success-state {
+    margin: 0 auto;
+  }
+}
+
+.container {
+  &--footer-item-title {
+    @include mq('1026') {
+      display: flex;
+
+      &-atendimento {
+        width: calc(100% - 30px);
+      }
+    }
+  }
+}

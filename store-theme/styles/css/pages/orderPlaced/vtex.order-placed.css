@@ -1,0 +1,380 @@
+/* Icons */
+/* Ghaus vars */
+/* From Ghaus */
+.orderPlacedWrapper {
+  margin: 0 auto;
+  max-width: 1292px;
+  padding: 0 16px;
+  width: 100%;
+  padding: 22px 0 0;
+}
+@media only screen and (min-width: 1026px) {
+  .orderPlacedWrapper {
+    padding-top: 40px;
+  }
+}
+
+.confirmationTitle {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 30px;
+  line-height: 1.875rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin-top: 0;
+  text-align: center;
+}
+@media only screen and (max-width: 1025px) {
+  .confirmationTitle {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.confirmationMessage {
+  margin: 27px auto 0;
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  width: 90%;
+}
+@media only screen and (min-width: 1026px) {
+  .confirmationMessage {
+    margin: 18px auto 0;
+    width: 80%;
+  }
+}
+
+.section--confirmation {
+  margin: 0;
+}
+.section--notices {
+  margin-bottom: 31px;
+}
+@media only screen and (min-width: 1026px) {
+  .section--notices {
+    margin-bottom: 25px;
+  }
+}
+.section--paymentMethods, .section--deliveryPackages {
+  border-color: #ffffff;
+}
+.section--pickupPackages {
+  border-color: #ffffff;
+}
+.section--pickupPackages:empty {
+  border: none;
+}
+
+.noticeListItem {
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: initial;
+  padding: 0;
+  padding-top: 16px;
+  border: none;
+}
+@media only screen and (min-width: 1026px) {
+  .noticeListItem {
+    padding-top: 9px;
+  }
+}
+
+.orderWrapper {
+  border-top: 1px solid #ffffff;
+  padding-top: 24px;
+}
+
+.orderNumber {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 25px;
+  line-height: 1.5625rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin-bottom: 26px;
+}
+@media only screen and (min-width: 1026px) {
+  .orderNumber {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 6px;
+  }
+}
+
+.orderDatetime {
+  color: #7c7c7b;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.customerInfoListContainer {
+  padding-top: 9px;
+}
+@media only screen and (min-width: 1026px) {
+  .customerInfoListContainer {
+    padding-top: 0;
+  }
+}
+.customerInfoListContainer .customerInfoListName,
+.customerInfoListContainer .customerInfoListEmail,
+.customerInfoListContainer .customerInfoListDocument,
+.customerInfoListContainer .customerInfoListPhone {
+  color: #7c7c7b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  padding: 0;
+}
+.customerInfoListContainer .customerInfoListEmail,
+.customerInfoListContainer .customerInfoListDocument,
+.customerInfoListContainer .customerInfoListPhone {
+  margin-top: 6px;
+}
+
+.orderOptionsWrapper .myOrdersButton :global(.vtex-button),
+.orderOptionsWrapper .updateOrderButton :global(.vtex-button) {
+  cursor: pointer;
+  background-color: #008345;
+  border: 1px solid #008345;
+  height: 100%;
+  width: 100%;
+}
+.orderOptionsWrapper .myOrdersButton :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText),
+.orderOptionsWrapper .updateOrderButton :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 370px) {
+  .orderOptionsWrapper .myOrdersButton :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText),
+  .orderOptionsWrapper .updateOrderButton :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20px;
+    line-height: 1.25rem;
+    letter-spacing: 0rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .orderOptionsWrapper .myOrdersButton :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText),
+  .orderOptionsWrapper .updateOrderButton :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText) {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    line-height: 1.25rem;
+    letter-spacing: 0rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+.orderOptionsWrapper .myOrdersButton :global(.vtex-button) :global(.vtex-button__label),
+.orderOptionsWrapper .updateOrderButton :global(.vtex-button) :global(.vtex-button__label) {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.orderOptionsWrapper .myOrdersButton :global(.vtex-button):hover,
+.orderOptionsWrapper .updateOrderButton :global(.vtex-button):hover {
+  background-color: #005a30;
+  border-color: #005a30;
+}
+.orderOptionsWrapper .myOrdersButton :global(.vtex-button),
+.orderOptionsWrapper .updateOrderButton :global(.vtex-button) {
+  border-radius: 8px;
+  height: 48px;
+}
+
+.paymentGroup {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  margin: 24px 0 4px;
+}
+@media only screen and (min-width: 1026px) {
+  .paymentGroup {
+    margin: 16px 0 4px;
+  }
+}
+
+.orderPaymentItem {
+  color: #7c7c7b;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  padding-bottom: 26px;
+}
+
+.package--delivery {
+  margin: 24px 0 16px;
+}
+
+.packageDeliveryTitle {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.packageShippingEstimate,
+.packageSLA {
+  color: #7c7c7b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.productList,
+.totalList {
+  max-width: 373px;
+}
+
+.productInfoColumn {
+  line-height: 15px;
+}
+
+.productList {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.productWrapper {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(2, min-content);
+  text-align: left;
+}
+
+.productImageColumn {
+  grid-row: -1/1;
+  margin-right: 16px;
+  margin-bottom: 0;
+}
+
+.productImageWrapper {
+  height: 64px;
+  width: 64px;
+}
+
+.productPrice {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 15px;
+  line-height: 0.9375rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+  align-items: end;
+  display: flex;
+  height: auto;
+  margin-top: 5px;
+  width: 100%;
+}
+@media only screen and (min-width: 1026px) {
+  .productPrice {
+    margin-top: 8px;
+  }
+}
+
+.productQuantity {
+  display: none;
+}
+
+.productName {
+  color: #4d4d4d;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  line-height: 0.9375rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.totalList {
+  margin-top: 16px;
+}
+
+.totalListItem {
+  padding: 4px 0;
+}
+
+.totalListItemLabel,
+.totalListItemValue {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  line-height: 1.375rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}
+
+.totalListItem:last-child .totalListItemLabel,
+.totalListItem:last-child .totalListItemValue {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 22px;
+  line-height: 1.375rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: initial;
+}

@@ -1,0 +1,47 @@
+{
+  "store.home": {
+    "blocks": [
+      "flex-layout.row#main-banner",
+      /* You can make references to blocks defined in other files.
+       * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
+      "toggle-layout#deals",
+      "toggle-layout#banners-2",
+      "toggle-layout#banners-3",
+      "__fold__",
+      "toggle-layout#shelf-01",
+      "toggle-layout#shelf-02",
+      "toggle-layout#slider-categories-home",
+      "toggle-layout#shelf-03",
+      "toggle-layout#banners-4",
+      "hydration-wrapper#hydrated-components",
+      "yv-testimonials",
+      "toggle-layout#text-seo-home"
+    ]
+  },
+  "hydration-wrapper#hydrated-components": {
+    "children": [
+      "toggle-layout#shelf-04",
+      "toggle-layout#shelf-05",
+      "toggle-layout#banners-5",
+      "toggle-layout#banners-6",
+      "toggle-layout#shelf-06",
+      "toggle-layout#slider-brand-home",
+      "toggle-layout#shelf-07",
+      "toggle-layout#shelf-08"
+    ]
+  },
+
+  "info-card#home": {
+    "props": {
+      "id": "info-card-home",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
+      "headline": "Clearance Sale",
+      "callToActionText": "DISCOVER",
+      "callToActionUrl": "/sale/d",
+      "blockClass": "info-card-home",
+      "textAlignment": "center"
+    }
+  }
+}

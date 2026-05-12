@@ -1,0 +1,73 @@
+@import '../../../global/';
+
+.flexRow-- {
+  &generic-specification-group-content {
+    @include border-radius();
+    border: 1px solid $light-gray-09;
+
+    padding: 16px;
+
+    @include mq('1024') {
+      padding: 20px;
+    }
+  }
+
+
+  &measures,
+  &measures-table {
+    @include mq('1024') {
+      height: 100%;
+    }
+  }
+}
+
+.flexRowContent-- {
+  &generic-specification-group {
+    @include grid();
+
+    padding-top: 12px;
+
+    @include mq('1024') {
+      padding-top: 20px;
+    }
+  }
+
+  &measures {
+    margin-top: 12px;
+
+    padding: 0;
+
+    @include mq('1024') {
+      margin-top: 0;
+      padding-left: 20px;
+
+      height: 100%;
+    }
+  }
+
+  &tech-support {
+    padding-bottom: 30px;
+
+    @include mq('1024') {
+      padding-bottom: 34px;
+    }
+
+    .stretchChildrenWidth {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+
+  &container__reviews-pdp {
+    @include grid();
+    padding-top: 12px;
+
+    @include mq('1024') {
+      padding-top: 20px;
+    }
+  }
+}
+
+.flexRowContent--container__specification-name-no-title {
+  display: none;
+}

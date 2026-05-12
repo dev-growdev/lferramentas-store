@@ -1,0 +1,21 @@
+{
+  "admin/editor.custom-faq.title": "admin/editor.custom-faq.title",
+  "admin/editor.custom-faq-question.title": "admin/editor.custom-faq-question.title",
+  "admin/editor.custom-faq-question.desc": "admin/editor.custom-faq-question.desc",
+  "admin/editor.custom-faq-question": "admin/editor.custom-faq-question",
+  "admin/editor.custom-faq-response": "admin/editor.custom-faq-response",
+  "admin/editor.custom-faq-response.desc": "admin/editor.custom-faq-response.desc",
+  "admin/editor.custom-faq-direction": "admin/editor.custom-faq-direction",
+  "admin/editor.custom-faq-justify": "admin/editor.custom-faq-justify",
+  "admin/editor.custom-faq-align": "admin/editor.custom-faq-align",
+  "admin/editor.custom-faq-closePrev": "admin/editor.custom-faq-closePrev",
+  "admin/editor.custom-faq-closePrev.desc": "admin/editor.custom-faq-closePrev.desc",
+  "admin/editor.custom-faq-iconColor": "admin/editor.custom-faq-iconColor",
+  "admin/editor.custom-faq-iconColor.desc": "admin/editor.custom-faq-iconColor.desc",
+  "admin/editor.custom-faq-icon": "admin/editor.custom-faq-icon",
+  "admin/editor.custom-faq-colorQ": "admin/editor.custom-faq-colorQ",
+  "admin/editor.custom-faq-colorQ.desc": "admin/editor.custom-faq-colorQ.desc",
+  "admin/editor.custom-faq-colorR": "admin/editor.custom-faq-colorR",
+  "admin/editor.custom-faq-colorR.desc": "admin/editor.custom-faq-colorR.desc",
+  "admin/editor.custom-faq-colorQIcon": "admin/editor.custom-faq-colorQIcon"
+}

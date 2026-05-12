@@ -1,0 +1,16 @@
+{
+  "flex-layout.row#rating-summary": {
+    "title": "Container Avaliação",
+
+    "props": {
+      "blockClass": "container__rating-summary",
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": ["product-rating-summary"]
+  }
+}
