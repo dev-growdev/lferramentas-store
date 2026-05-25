@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [3.8.19] - 2026-05-25
+
 ## [3.5.0] - 2025-04-09
 
 - **07** - Add `toggle-layout#banner-departamento-mobile` to all mobile PLPs and `toggle-layout#banner-departamento` to missing PLPs (brand and search). Also add banner for empty-search layout.
