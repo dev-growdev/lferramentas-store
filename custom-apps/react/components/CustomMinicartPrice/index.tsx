@@ -30,6 +30,12 @@ const CustomMinicartPrice = React.memo(() => {
   const unitMultiplier = item?.unitMultiplier ?? 1
   const quantity = item?.quantity ?? 1
   const sellingPrice = item?.sellingPrice * quantity
+  const pixTotalPrice = price !== undefined ? price * unitMultiplier * quantity : undefined
+
+  const hasPixDiscount =
+    pixTotalPrice !== undefined &&
+    pixTotalPrice > 0 &&
+    pixTotalPrice < sellingPrice
 
   useEffect(() => {
     const pixId = '125'
@@ -40,14 +46,21 @@ const CustomMinicartPrice = React.memo(() => {
 
   return (
     <div>
-      {price !== undefined && (
+      {hasPixDiscount && (
+        <>
+          <div className={handles['custom-minicart-spot-price']}>
+            {priceFormatted(price, unitMultiplier)} <span> ou</span>
+          </div>
+          <div className={handles['custom-minicart-selling-price']}>
+            {priceFormatted(sellingPrice)} a prazo
+          </div>
+        </>
+      )}
+      {!hasPixDiscount && (
         <div className={handles['custom-minicart-spot-price']}>
-          {priceFormatted(price, unitMultiplier)} <span> ou</span>
+          {priceFormatted(sellingPrice)}
         </div>
       )}
-      <div className={handles['custom-minicart-selling-price']}>
-        {priceFormatted(sellingPrice)} a prazo
-      </div>
     </div>
   )
 })

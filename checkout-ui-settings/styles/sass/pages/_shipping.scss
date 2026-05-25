@@ -9,6 +9,26 @@
     box-sizing: border-box;
     min-height: 104px;
 
+    &.active.input-error {
+
+      #ship-postalCode {
+        border: 1px solid #ff4d4f !important;
+      }
+
+      .cep-error {
+        color: #ff4d4f;
+        font-size: 12px;
+        margin-top: 4px;
+        display: block;
+      }
+
+      .vtex-omnishipping-1-x-deliveryGroup,
+      .vtex-omnishipping-1-x-addressForm,
+      .vtex-omnishipping-1-x-submitPaymentButton {
+        display: none !important;
+      }
+    }
+
     &.active {
       @include mq('768') {
         min-height: 170px;
@@ -71,6 +91,14 @@
         }
 
         .box-step {
+          .input-error {
+            &::before {
+              content: 'CEP não encontrado.';
+              font-size: 11px;
+              color: #C62828;
+            }
+          }
+
           .vtex-omnishipping-1-x-addressFormPart1 {
             display: flex;
             flex-direction: column;
@@ -250,6 +278,7 @@
               }
 
               .vtex-omnishipping-1-x-linkEdit {
+                display: none !important;
                 position: absolute;
                 left: 12px;
                 bottom: 16px;

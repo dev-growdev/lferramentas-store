@@ -21,6 +21,7 @@
       // "get-product-info",
       // "get-website-info",
       // "get-product-info-custom",
+      "cep-validator",
       "flex-layout.row#banner-principal-pdp",
       "flex-layout.row#product-breadcrumb",
       "condition-layout.product#availability",

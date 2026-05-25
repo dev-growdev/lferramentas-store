@@ -220,5 +220,8 @@
   },
   "get-product-info-custom": {
     "component": "GetProductInfo"
+  },
+  "cep-validator": {
+    "component": "CepValidator"
   }
 }
