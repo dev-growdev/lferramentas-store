@@ -50,6 +50,125 @@ try {
     }, 300)
   }
 
+  function showCepError($input) {
+    const $wrapper = $input.closest('.step.accordion-group.shipping-data.active')
+    const $wrapperSecond = $input.closest('.vtex-shipping-preview-0-x-postalCodeForgotten')
+    const $wrapperThird = $input.closest('.vtex-omnishipping-1-x-addressFormPart1')
+
+    $input.addClass('input-error cep-invalid')
+    $wrapper.addClass('input-error cep-invalid')
+    $wrapperSecond.addClass('input-error cep-invalid')
+    $wrapperThird.addClass('input-error cep-invalid')
+
+    $('#cart-shipping-calculate').prop('disabled', true)
+
+    hideShippingResults($input)
+  }
+
+  function removeCepError($input) {
+    const $wrapper = $input.closest('.step.accordion-group.shipping-data.active')
+
+    $input.removeClass('input-error cep-invalid')
+    $wrapper.removeClass('input-error cep-invalid')
+
+    $input.next('.cep-error').remove()
+
+    $('#cart-shipping-calculate').prop('disabled', false)
+  }
+
+  function hideShippingResults($input) {
+    const $section = $input.closest('[class*="step accordion-group shipping-data"], [class*="addressFormPart1"]')
+    $section.find('[class*="shippingOptions"], [class*="deliveryOptions"], [class*="addressForm"]').hide()
+  }
+
+  function showShippingResults($input) {
+    const $section = $input.closest('[class*="step accordion-group shipping-data"], [class*="addressFormPart1"]')
+    $section.find('[class*="shippingOptions"], [class*="deliveryOptions"], [class*="addressForm"]').show()
+  }
+
+  function formatCep(value) {
+    const cep = value.replace(/\D/g, '')
+
+    if (cep.length <= 5) {
+      return cep
+    }
+
+    return cep.substring(0, 5) + '-' + cep.substring(5, 8)
+  }
+
+  function validateCep($input, abortController) {
+    let cep = $input.val().replace(/\D/g, '')
+
+    if (cep.length !== 8) return
+
+    fetch(`https://viacep.com.br/ws/${cep}/json/`, {
+      signal: abortController.signal,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.erro) {
+          showCepError($input)
+          hideShippingResults($input)
+        } else {
+          removeCepError($input)
+          showShippingResults($input)
+        }
+      })
+      .catch((err) => {
+        if (err.name === 'AbortError') return
+        showCepError($input)
+        hideShippingResults($input)
+      })
+  }
+
+  function cepValidation() {
+    let debounceTimer
+    let currentAbortController = null
+
+    $(document).on('keyup', '#ship-postalCode, #cart-shipping-postal-code', function () {
+      const $input = $(this)
+      let formattedCep = formatCep($input.val())
+      $input.val(formattedCep)
+
+      let cep = formattedCep.replace(/\D/g, '')
+
+      // Cancela requisição anterior imediatamente
+      if (currentAbortController) {
+        currentAbortController.abort()
+        currentAbortController = null
+      }
+
+      clearTimeout(debounceTimer)
+      $('#cart-shipping-calculate').prop('disabled', true)
+
+      // Esconde resultados anteriores da VTEX a cada nova digitação
+      hideShippingResults($input)
+
+      if (cep.length === 8) {
+        debounceTimer = setTimeout(() => {
+          currentAbortController = new AbortController()
+          validateCep($input, currentAbortController)
+        }, 400)
+      }
+    })
+  }
+
+  function validatePrefilledCep() {
+    const $cepInput = $('#ship-postalCode, #cart-shipping-postal-code')
+
+    if ($cepInput.length) {
+      let formattedCep = formatCep($cepInput.val())
+      $cepInput.val(formattedCep)
+
+      let cep = formattedCep.replace(/\D/g, '')
+
+      if (cep.length === 8) {
+        const abortController = new AbortController()
+        validateCep($cepInput, abortController)
+      }
+    }
+  }
+
   function updateSteps() {
     // timeline
     let steps = ['cart', 'email', 'profile', 'shipping', 'payment']
@@ -94,17 +213,36 @@ try {
     })
   }
 
+  $(window).on('orderFormUpdated.vtex', function () {
+    setTimeout(() => {
+      validatePrefilledCep();
+    }, 1000);
+  });
+
   $(window).on('hashchange', () => {
     updateSteps()
+    cepValidation();
+
+    setTimeout(() => {
+      validatePrefilledCep();
+    }, 1000);
   })
 
   $(document).on('change', function () {
     setPlaceholder()
+    cepValidation()
+    setTimeout(() => {
+      validatePrefilledCep();
+    }, 1000);
   })
 
   $(document).ready(function () {
     updateSteps()
     openShipping()
+
+    setTimeout(() => {
+      validatePrefilledCep();
+    }, 1000);
   })
 } catch (e) {
   console.log(e)
@@ -456,7 +594,6 @@ function handlePixPrice() {
       $('.cart-totalizers tfoot').append(normalRowHtml)
     }
 
-    // Se houver Pix, insere/atualiza acima do preço normal
     if (pixPrice && !arePixPricesEqual) {
       const pixRowHtml = `
         <tr class="pix-price-row">
@@ -486,6 +623,48 @@ function handlePixPrice() {
   } catch (error) {
     console.error('Erro ao lidar com o preço do PIX:', error)
   }
+}
+
+function hideEqualPrices() {
+  const rows = document.querySelectorAll('td.quantity-price')
+  const monetaryCells = document.querySelectorAll('td.monetary')
+
+  rows.forEach((row) => {
+    const totalPrice = row.querySelector('.total-price')
+    const totalPriceSpan = row.querySelector('.total-price span')
+    const totalSellingPrice = row.querySelector('.total-selling-price')
+
+    if (!totalPrice || !totalSellingPrice) return
+
+    const spotText = totalPrice.childNodes[0]?.textContent?.trim()
+    const sellingText = totalSellingPrice.childNodes[0]?.textContent?.trim()
+
+    if (spotText && sellingText && spotText === sellingText) {
+      totalSellingPrice.style.display = 'none'
+      totalPriceSpan.style.display = 'none'
+    } else {
+      totalSellingPrice.style.display = ''
+    }
+  })
+
+  monetaryCells.forEach((cell) => {
+    const subtotalProduct = cell.querySelector('p.subtotal-product')
+    const subtotalProductSpan = cell.querySelector('p.subtotal-product span')
+    const prazoSpan = subtotalProduct?.nextElementSibling
+
+    if (!subtotalProduct || !prazoSpan) return
+
+    const spotText = subtotalProduct.childNodes[0]?.textContent?.trim()
+
+    const prazoText = prazoSpan.textContent?.replace('a prazo', '').trim()
+
+    if (spotText && prazoText && spotText === prazoText) {
+      prazoSpan.style.display = 'none'
+      subtotalProductSpan.style.display = 'none'
+    } else {
+      prazoSpan.style.display = ''
+    }
+  })
 }
 
 function handleEnderecoNaNotaModal() {
@@ -556,8 +735,20 @@ $(window).on('load hashchange', function () {
   handlePixPrice()
 }) */
 
+const observer = new MutationObserver(() => {
+  hideEqualPrices()
+})
+
+observer.observe(document.body, {
+  childList: true,
+  subtree: true,
+})
+
+
+
 $(document).ready(function () {
   vendedores.init()
+  hideEqualPrices()
   checkMarketingData()
   shareCart()
   floatHelpCheckout()

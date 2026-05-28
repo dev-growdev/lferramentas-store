@@ -1,7 +1,7 @@
 {
   "vendor": "lfmaquinaseferramentas",
   "name": "custom-apps",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "title": "custom-apps",
   "description": "custom-apps",
   "builders": {

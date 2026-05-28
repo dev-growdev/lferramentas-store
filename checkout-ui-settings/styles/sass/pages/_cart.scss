@@ -588,6 +588,16 @@
           }
 
           .srp-postal-code__form {
+            .input-error small {
+              display: grid;
+
+              &::before {
+                content: 'CEP não encontrado.';
+                font-size: 11px;
+                color: #C62828;
+              }
+            }
+
             .vtex-shipping-preview-0-x-postalCodeForgotten {
               margin: 0 0 24px 0;
               @include display-flex(flex-start, center, row);
@@ -598,6 +608,17 @@
 
               & label {
                 display: none;
+              }
+
+              .input-error {
+                border: 1px solid #C62828 !important;
+              }
+
+              .cep-error {
+                color: #ff4d4f;
+                font-size: 12px;
+                margin-top: 4px;
+                display: block;
               }
 
               & > .input {

@@ -16,6 +16,12 @@ const Boleto = () => {
     }
   }, [selectedItem])
 
+  const sellingPriceInCents =
+    (selectedItem?.sellers[0].commertialOffer.Price ?? 0) * 100
+
+  const resolvedPrice =
+    price !== undefined && price > 0 ? price : sellingPriceInCents || undefined
+
   const priceFormatted = (price: number | undefined) => {
     if (price === undefined) return
     return `R$ ${(price / 100).toLocaleString('pt-BR', {
@@ -25,7 +31,7 @@ const Boleto = () => {
   }
 
   const calculateDiscount = (price: number | undefined) => {
-    const listPrice = selectedItem?.sellers[0].commertialOffer.ListPrice
+    const listPrice = selectedItem?.sellers[0].commertialOffer.Price
     if (
       price === undefined ||
       listPrice === undefined ||
@@ -40,11 +46,13 @@ const Boleto = () => {
       <div className={style.tabContent}>
         <div className={style.tabWrapper}>
           <span className={style.textPriceBoleto}>
-            {price && <>{priceFormatted(price)} à vista no boleto </>}
+            {resolvedPrice && (
+              <>{priceFormatted(resolvedPrice)} à vista no boleto </>
+            )}
           </span>
-          {price && calculateDiscount(price) && (
+          {resolvedPrice && calculateDiscount(resolvedPrice) && (
             <span className={style.textDesconto}>
-              (Economize {calculateDiscount(price)})
+              (Economize {calculateDiscount(resolvedPrice)})
             </span>
           )}
         </div>
