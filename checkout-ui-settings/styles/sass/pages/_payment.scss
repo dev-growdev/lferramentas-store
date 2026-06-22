@@ -417,7 +417,7 @@
 
 @media (max-width: 1024px) {
   #vtexIdContainer {
-      top: 100% !important;
+    position: fixed !important;
   }
 
   #vtexIdContainer .vtexIdUI {
