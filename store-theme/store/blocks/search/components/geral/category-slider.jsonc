@@ -2,7 +2,7 @@
   "toggle-layout#category-slider-search-mobile": {
     "title": "Ativar/Desativar 2.3 Departamento com carrossel de categorias",
     "props": {
-      "renderChildren": true
+      "renderChildren": false
     },
     "children": [
       "flex-layout.row#row-slider-category-search"
@@ -11,7 +11,7 @@
   "toggle-layout#category-slider-search": {
     "title": "Ativar/Desativar 2.2 Departamento com carrossel de categorias",
     "props": {
-      "renderChildren": true
+      "renderChildren": false
     },
     "children": [
       "flex-layout.row#row-slider-category-search"
