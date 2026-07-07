@@ -1,7 +1,7 @@
 {
   "vendor": "lfmaquinaseferramentas",
   "name": "custom-flags",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "title": "Custom Flags",
   "description": "Custom Flags of this store",
   "builders": {
@@ -17,9 +17,7 @@
     "vtex.session-client": "1.x",
     "vtex.product-context": "0.x"
   },
-  "registries": [
-    "smartcheckout"
-  ],
+  "registries": ["smartcheckout"],
   "policies": [],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
