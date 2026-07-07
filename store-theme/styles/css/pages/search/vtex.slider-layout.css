@@ -39,7 +39,8 @@
   top: 25%;
 }
 .sliderLayoutContainer--categorias-slider-search .paginationDot--categorias-slider-search {
-  background: #b2b2b2;
+  background: #fff;
+  border: 0.0625rem solid #4d4d4d;
 }
 .sliderLayoutContainer--categorias-slider-search .paginationDot--categorias-slider-search--isActive {
   background: #ffe72e;

@@ -49,7 +49,8 @@
   }
 
   .paginationDot--categorias-slider-search {
-    background: #b2b2b2;
+    background: #fff;
+    border: 0.0625rem solid #4d4d4d;
 
     &--isActive {
       background: #ffe72e;
