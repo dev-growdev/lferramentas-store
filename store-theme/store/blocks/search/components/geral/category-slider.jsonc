@@ -1,0 +1,110 @@
+{
+  "toggle-layout#category-slider-search-mobile": {
+    "title": "Ativar/Desativar 2.3 Departamento com carrossel de categorias",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "flex-layout.row#row-slider-category-search"
+    ]
+  },
+  "toggle-layout#category-slider-search": {
+    "title": "Ativar/Desativar 2.2 Departamento com carrossel de categorias",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "flex-layout.row#row-slider-category-search"
+    ]
+  },
+  "flex-layout.row#row-slider-category-search": {
+    "title": "carrossel de categorias conteudo",
+    "children": [
+      "list-context.info-card-list#slider-category-search"
+    ],
+    "props": {
+      "fullWidth": true,
+      "blockClass": [
+        "row-slider-category-search"
+      ]
+    }
+  },
+  "list-context.info-card-list#slider-category-search": {
+    "children": [
+      "slider-layout#slider-categorys"
+    ],
+    "props": {
+      "infoCards": [
+        {
+          "id": "blocos",
+          "headline": "Blocos e Tijolos",
+          "imageUrl": "https://tumelerosaintgobain.vtexassets.com/assets/vtex.file-manager-graphql/images/a0a5161e-4b21-4936-b9fe-07bc7a3d8c70___c3cc2fba4a99de4c936661a612905299.png",
+          "isFullModeStyle": false,
+          "callToActionMode": "hidden",
+          "textPosition": "center",
+          "imageActionUrl": "/blocos-e-tijolos"
+        },
+        {
+          "id": "telhas",
+          "headline": "Telhas, Calhas e Rufos",
+          "imageUrl": "https://tumelerosaintgobain.vtexassets.com/assets/vtex.file-manager-graphql/images/d2b862ed-5c53-456c-a2ef-2277e1f44a45___64b6b53fe61c971b904f220b1320d3a6.png",
+          "callToActionMode": "hidden",
+          "textPosition": "center",
+          "imageActionUrl": "/telhas"
+        },
+        {
+          "id": "impermeabilizantes",
+          "headline": "Impermeabilizantes",
+          "imageUrl": "https://tumelerosaintgobain.vtexassets.com/assets/vtex.file-manager-graphql/images/5efc576d-345b-430a-ba06-a219edb1619d___66599a2deb6164e0d837b6f95e3dbcd5.png",
+          "callToActionMode": "hidden",
+          "textPosition": "center",
+          "imageActionUrl": "/impermeabilizantes"
+        },
+        {
+          "id": "ferramentas-construcao",
+          "headline": "Ferramentas para construção",
+          "imageUrl": "https://tumelerosaintgobain.vtexassets.com/assets/vtex.file-manager-graphql/images/2b495159-091a-4037-a60c-19d6af38730b___793fe523241d6de21ff875b3ffae5bb6.png",
+          "callToActionMode": "hidden",
+          "textPosition": "center",
+          "imageActionUrl": "/ferramentas-construcao"
+        },
+        {
+          "id": "forros-acabamentos",
+          "headline": "Forros e Acabamentos",
+          "imageUrl": "https://tumelerosaintgobain.vtexassets.com/assets/vtex.file-manager-graphql/images/d5b8bf89-261e-45ca-8e18-b9e10f7ae36f___6afc16bba20880412a369168164ef8a2.png",
+          "callToActionMode": "hidden",
+          "textPosition": "center",
+          "imageActionUrl": "/forros-e-acabamentos"
+        },
+        {
+          "id": "betoneiras",
+          "headline": "Betoneiras",
+          "imageUrl": "https://tumelerosaintgobain.vtexassets.com/assets/vtex.file-manager-graphql/images/be2ca4b8-a8fa-4176-a2e9-a4dc2ce9f2d5___1d256c703d147e5b30edd84f46e53848.png",
+          "callToActionMode": "hidden",
+          "textPosition": "center",
+          "imageActionUrl": "/betoneiras"
+        }
+      ]
+    }
+  },
+  "slider-layout#slider-categorys": {
+    "props": {
+      "blockClass": [
+        "categorias-slider-search"
+      ],
+      "infinite": true,
+      "itemsPerPage": {
+        "desktop": 6,
+        "tablet": 4,
+        "mobile": 2
+      },
+      "centerMode": {
+        "phone": "to-the-left",
+        "desktop": "disabled"
+      },
+      "centerModeSlidesGap": 16,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "mobileOnly"
+    }
+  }
+}

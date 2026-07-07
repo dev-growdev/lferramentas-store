@@ -76,6 +76,14 @@
     margin-right: 0;
   }
 }
+.flexRow--row-slider-category-search {
+  margin-top: 3rem;
+}
+@media screen and (max-width: 1024px) {
+  .flexRow--row-slider-category-search {
+    margin-top: 1rem;
+  }
+}
 
 .flexCol--filterCol {
   max-width: 285px;

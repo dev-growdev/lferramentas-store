@@ -582,6 +582,30 @@
           "title": "Desativar sistema de vinculações e fazer com que o conteúdo seja exibido em todos os produtos",
           "type": "boolean"
         },
+        "scheduling": {
+          "title": "Agendamento",
+          "type": "object",
+          "properties": {
+            "dateStart": {
+              "title": "Exibir a partir de",
+              "description": "Data e hora de início da exibição da flag. Deixe vazio para exibir sempre.",
+              "type": "string",
+              "format": "date-time",
+              "widget": {
+                "ui:widget": "datetime"
+              }
+            },
+            "dateEnd": {
+              "title": "Expirar em",
+              "description": "Data e hora em que a flag deixará de ser exibida. Deixe vazio para não expirar.",
+              "type": "string",
+              "format": "date-time",
+              "widget": {
+                "ui:widget": "datetime"
+              }
+            }
+          }
+        },
         "_screen_config_links": {
           "title": "Configurar Vinculações Do Conteúdo",
           "minItems": 1,
@@ -1250,6 +1274,30 @@
         "withoutLink": {
           "title": "Desativar sistema de vinculações e fazer com que o conteúdo seja exibido em todos os produtos",
           "type": "boolean"
+        },
+        "scheduling": {
+          "title": "Agendamento",
+          "type": "object",
+          "properties": {
+            "dateStart": {
+              "title": "Exibir a partir de",
+              "description": "Data e hora de início da exibição da flag. Deixe vazio para exibir sempre.",
+              "type": "string",
+              "format": "date-time",
+              "widget": {
+                "ui:widget": "datetime"
+              }
+            },
+            "dateEnd": {
+              "title": "Expirar em",
+              "description": "Data e hora em que a flag deixará de ser exibida. Deixe vazio para não expirar.",
+              "type": "string",
+              "format": "date-time",
+              "widget": {
+                "ui:widget": "datetime"
+              }
+            }
+          }
         },
         "_screen_config_links": {
           "title": "Configurar Vinculações Do Conteúdo",

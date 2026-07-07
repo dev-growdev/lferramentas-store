@@ -1,0 +1,46 @@
+.sliderLayoutContainer--categorias-slider-search .sliderTrack--categorias-slider-search {
+  align-items: baseline;
+}
+.sliderLayoutContainer--categorias-slider-search .sliderTrack--categorias-slider-search .slide--categorias-slider-search {
+  width: 210px;
+}
+.sliderLayoutContainer--categorias-slider-search .sliderTrack--categorias-slider-search .infoCardHeadline--categorias-slider-search {
+  font-size: 14px;
+  font-family: "Mulish", sans-serif;
+  text-align: center;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.sliderLayoutContainer--categorias-slider-search .sliderTrack--categorias-slider-search .infoCardHeadline--categorias-slider-search:hover {
+  font-weight: 700;
+}
+.sliderLayoutContainer--categorias-slider-search .sliderTrack--categorias-slider-search .infoCardContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  object-fit: contain;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center;
+  will-change: transform;
+}
+.sliderLayoutContainer--categorias-slider-search .sliderTrack--categorias-slider-search .infoCardContainer:hover {
+  transform: scale(1.03);
+}
+.sliderLayoutContainer--categorias-slider-search .sliderTrack--categorias-slider-search .infoCardImageContainer,
+.sliderLayoutContainer--categorias-slider-search .sliderTrack--categorias-slider-search .infoCardTextContainer {
+  width: auto;
+}
+@media screen and (max-width: 768px) {
+  .sliderLayoutContainer--categorias-slider-search .sliderTrack--categorias-slider-search .infoCardImage--categorias-slider-search {
+    width: 131px;
+  }
+}
+.sliderLayoutContainer--categorias-slider-search .sliderLeftArrow--categorias-slider-search,
+.sliderLayoutContainer--categorias-slider-search .sliderRightArrow--categorias-slider-search {
+  top: 25%;
+}
+.sliderLayoutContainer--categorias-slider-search .paginationDot--categorias-slider-search {
+  background: #b2b2b2;
+}
+.sliderLayoutContainer--categorias-slider-search .paginationDot--categorias-slider-search--isActive {
+  background: #ffe72e;
+}

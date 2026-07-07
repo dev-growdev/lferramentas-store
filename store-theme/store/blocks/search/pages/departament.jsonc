@@ -26,6 +26,7 @@
     "children": [
       "flex-layout.row#search-breadcrumb",
       "toggle-layout#banner-departamento",
+      "toggle-layout#category-slider-search",
       "countdown-plp-custom",
       "flex-layout.row#result-departament",
       "flex-layout.row#text-seo-search"
@@ -50,6 +51,7 @@
     "children": [
       "flex-layout.row#search-breadcrumb",
       "toggle-layout#banner-departamento-mobile",
+      "toggle-layout#category-slider-search-mobile",
       "countdown-plp-custom",
       "flex-layout.row#searchtitle-departament",
       "flex-layout.row#searchinfomobile",

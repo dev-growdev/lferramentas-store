@@ -1,0 +1,59 @@
+.sliderLayoutContainer--categorias-slider-search {
+  .sliderTrack--categorias-slider-search {
+    align-items: baseline;
+
+    .slide--categorias-slider-search {
+      width: 210px;
+    }
+
+    .infoCardHeadline--categorias-slider-search {
+      font-size: 14px;
+      font-family: "Mulish", sans-serif;
+      text-align: center;
+      transition: transform .35s cubic-bezier(.25, .46, .45, .94);
+
+      &:hover {
+        font-weight: 700;
+      }
+    }
+
+    .infoCardContainer {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      object-fit: contain;
+      transition: transform .35s cubic-bezier(.25, .46, .45, .94);
+      transform-origin: center;
+      will-change: transform;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+
+    .infoCardImageContainer,
+    .infoCardTextContainer {
+      width: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      .infoCardImage--categorias-slider-search {
+        width: 131px;
+      }
+    }
+  }
+
+  .sliderLeftArrow--categorias-slider-search,
+  .sliderRightArrow--categorias-slider-search {
+    top: 25%;
+  }
+
+  .paginationDot--categorias-slider-search {
+    background: #b2b2b2;
+
+    &--isActive {
+      background: #ffe72e;
+    }
+  }
+}
+
