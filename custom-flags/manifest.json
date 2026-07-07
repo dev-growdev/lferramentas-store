@@ -1,7 +1,7 @@
 {
   "vendor": "lfmaquinaseferramentas",
   "name": "custom-flags",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "title": "Custom Flags",
   "description": "Custom Flags of this store",
   "builders": {
