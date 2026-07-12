@@ -53,6 +53,10 @@
 
   &--title-departament {
     display: block;
+
+    @media screen and (max-width: 768px) {
+      margin-top: -1rem;
+    }
   }
 
   &--contentmobile-search {
@@ -92,7 +96,7 @@
   }
 
   &--row-slider-category-search {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 
     @media screen and (max-width: 1024px) {
       margin-top: 1rem;

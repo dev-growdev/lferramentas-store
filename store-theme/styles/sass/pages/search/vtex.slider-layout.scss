@@ -2,8 +2,14 @@
   .sliderTrack--categorias-slider-search {
     align-items: baseline;
 
-    .slide--categorias-slider-search {
-      width: 210px;
+    @media screen and (min-width: 768px) {
+      justify-content: center;
+      margin: auto;
+
+      .slide--categorias-slider-search {
+        width: 210px !important;
+        height: 160px;
+      }
     }
 
     .infoCardHeadline--categorias-slider-search {
@@ -11,6 +17,7 @@
       font-family: "Mulish", sans-serif;
       text-align: center;
       transition: transform .35s cubic-bezier(.25, .46, .45, .94);
+      margin-top: 14px;
 
       &:hover {
         font-weight: 700;
@@ -55,6 +62,10 @@
     &--isActive {
       background: #ffe72e;
     }
+  }
+
+  .paginationDotsContainer--categorias-slider-search {
+    margin-bottom: 2rem;
   }
 }
 
