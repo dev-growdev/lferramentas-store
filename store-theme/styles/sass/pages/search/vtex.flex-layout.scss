@@ -53,6 +53,10 @@
 
   &--title-departament {
     display: block;
+
+    @media screen and (max-width: 768px) {
+      margin-top: -1rem;
+    }
   }
 
   &--contentmobile-search {
@@ -88,6 +92,14 @@
       :global(.vtex-store-components-3-x-imageElementLink--banner-departamento) { 
         margin-right: 0;
       }
+    }
+  }
+
+  &--row-slider-category-search {
+    margin-top: 1.5rem;
+
+    @media screen and (max-width: 1024px) {
+      margin-top: 1rem;
     }
   }
 }

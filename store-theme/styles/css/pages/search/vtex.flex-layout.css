@@ -46,6 +46,11 @@
 .flexRow--title-departament {
   display: block;
 }
+@media screen and (max-width: 768px) {
+  .flexRow--title-departament {
+    margin-top: -1rem;
+  }
+}
 .flexRow--contentmobile-search :global(.vtex-store-components-3-x-container) {
   padding-left: 0;
   padding-right: 0;
@@ -74,6 +79,14 @@
   }
   .flexRow--empty-search-banner :global(.vtex-store-components-3-x-imageElementLink--banner-departamento) {
     margin-right: 0;
+  }
+}
+.flexRow--row-slider-category-search {
+  margin-top: 1.5rem;
+}
+@media screen and (max-width: 1024px) {
+  .flexRow--row-slider-category-search {
+    margin-top: 1rem;
   }
 }
 

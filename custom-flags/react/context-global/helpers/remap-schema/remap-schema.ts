@@ -5,8 +5,8 @@ import {
   schema_site_editor_default_screen_config_position,
   schema_site_editor_remapped_custom_flag,
   schema_site_editor_remapped_custom_quadrant,
-  schema_site_editor_remapped_root_custom_app_badge_custom
-} from '../../_interfaces'
+  schema_site_editor_remapped_root_custom_app_badge_custom,
+} from '../../_interfaces';
 import {
   RemapperContentContent,
   RemapperContentImage,
@@ -14,18 +14,35 @@ import {
   RemapperQuadrantTopLeft,
   RemapperStylesApp,
   RemapperQuadrantTopRight,
-  RemappperQuadrantHorizontal
-} from '../../_interfaces'
-import { SortMatchs } from '../sort-matchs/sort-matchs'
-import { FilterLinks } from '../filter-links'
-import { DEV_VAR_MAX_ITEMS_ON_QUADRANTS } from '../../dev-vars'
+  RemappperQuadrantHorizontal,
+} from '../../_interfaces';
+import { SortMatchs } from '../sort-matchs/sort-matchs';
+import { FilterLinks } from '../filter-links';
+import { DEV_VAR_MAX_ITEMS_ON_QUADRANTS } from '../../dev-vars';
 
 export class RemapSchema {
-  constructor(
-    private readonly schema: schema_site_editor_default_root_app_badge_custom,
-    private readonly Filter: FilterLinks,
-    private readonly SortMatchs: SortMatchs
-  ) {
+  constructor(private readonly schema: schema_site_editor_default_root_app_badge_custom, private readonly Filter: FilterLinks, private readonly SortMatchs: SortMatchs) {}
+
+  public isSchedulingValid(scheduling?: { dateStart?: string; dateEnd?: string }): boolean {
+    if (!scheduling) {
+      return true;
+    }
+
+    const now = new Date();
+
+    if (scheduling.dateStart) {
+      const start = new Date(scheduling.dateStart);
+      if (isNaN(start.getTime())) return true; // data inválida = ignora
+      if (now < start) return false; // ainda não começou
+    }
+
+    if (scheduling.dateEnd) {
+      const end = new Date(scheduling.dateEnd);
+      if (isNaN(end.getTime())) return true; // data inválida = ignora
+      if (now > end) return false; // já expirou
+    }
+
+    return true;
   }
 
   public remapQuadrantHorizontal(): RemappperQuadrantHorizontal {
@@ -35,8 +52,8 @@ export class RemapSchema {
       alignItems: 'center',
       columnGap: '5px',
       rowGap: '5px',
-      flexWrap: 'wrap'
-    }
+      flexWrap: 'wrap',
+    };
   }
 
   public remapQuadrantTopLeft(attribute: schema_site_editor_default_screen_config_position): RemapperQuadrantTopLeft {
@@ -46,8 +63,8 @@ export class RemapSchema {
       maxWidth: '50%',
       display: 'flex',
       flexDirection: 'column',
-      rowGap: '5px'
-    }
+      rowGap: '5px',
+    };
   }
 
   public remapQuadrantTopRight(attribute: schema_site_editor_default_screen_config_position): RemapperQuadrantTopRight {
@@ -57,25 +74,25 @@ export class RemapSchema {
       maxWidth: '50%',
       display: 'flex',
       flexDirection: 'column',
-      rowGap: '5px'
-    }
+      rowGap: '5px',
+    };
   }
 
   public remapQuadrantBottom(attribute: schema_site_editor_default_screen_config_position): RemapperQuadrantBottom {
-    let attributeVariation = null
+    let attributeVariation = null;
 
     if (attribute?.positionFlow === 'leftToRight') {
       attributeVariation = {
         left: attribute?.horizontalDistance,
-        flexDirection: 'row'
-      }
+        flexDirection: 'row',
+      };
     }
 
     if (attribute?.positionFlow === 'rightToLeft') {
       attributeVariation = {
         right: attribute?.horizontalDistance,
-        flexDirection: 'row-reverse'
-      }
+        flexDirection: 'row-reverse',
+      };
     }
 
     if (attribute?.positionFlow === 'center') {
@@ -83,8 +100,8 @@ export class RemapSchema {
         left: '50%',
         transform: 'translateX(-50%)',
         flexDirection: 'row',
-        justifyContent: 'center'
-      }
+        justifyContent: 'center',
+      };
     }
 
     return {
@@ -97,8 +114,8 @@ export class RemapSchema {
       justifyContent: 'space-between',
       columnGap: '5px',
       flexWrap: 'wrap',
-      ...attributeVariation
-    }
+      ...attributeVariation,
+    };
   }
 
   public remapQuadrantHorizontalMobile(): RemappperQuadrantHorizontal {
@@ -108,8 +125,8 @@ export class RemapSchema {
       alignItems: 'center',
       columnGap: '5px',
       rowGap: '5px',
-      flexWrap: 'wrap'
-    }
+      flexWrap: 'wrap',
+    };
   }
 
   public remapQuadrantTopLeftMobile(attribute: schema_site_editor_default_screen_config_position): RemapperQuadrantTopLeft {
@@ -119,8 +136,8 @@ export class RemapSchema {
       maxWidth: '50%',
       display: 'flex',
       flexDirection: 'column',
-      rowGap: '5px'
-    }
+      rowGap: '5px',
+    };
   }
 
   public remapQuadrantTopRightMobile(attribute: schema_site_editor_default_screen_config_position): RemapperQuadrantTopRight {
@@ -130,34 +147,33 @@ export class RemapSchema {
       maxWidth: '50%',
       display: 'flex',
       flexDirection: 'column',
-      rowGap: '5px'
-    }
+      rowGap: '5px',
+    };
   }
 
   public remapQuadrantBottomMobile(attribute: schema_site_editor_default_screen_config_position): RemapperQuadrantBottom {
-    let attributeVariation = null
+    let attributeVariation = null;
 
     if (attribute?.positionFlow === 'leftToRight') {
       attributeVariation = {
         left: attribute?.horizontalDistance,
-        flexDirection: 'row'
-      }
+        flexDirection: 'row',
+      };
     }
 
     if (attribute?.positionFlow === 'rightToLeft') {
       attributeVariation = {
         right: attribute?.horizontalDistance,
-        flexDirection: 'row-reverse'
-      }
+        flexDirection: 'row-reverse',
+      };
     }
     if (attribute?.positionFlow === 'center') {
       attributeVariation = {
         left: '50%',
         transform: 'translateX(-50%)',
         flexDirection: 'row',
-        justifyContent: 'center'
-
-      }
+        justifyContent: 'center',
+      };
     }
 
     return {
@@ -170,8 +186,8 @@ export class RemapSchema {
       justifyContent: 'space-between',
       columnGap: '5px',
       flexWrap: 'wrap',
-      ...attributeVariation
-    }
+      ...attributeVariation,
+    };
   }
 
   public remapContentImage(attribute: schema_site_editor_default_option_image): RemapperContentImage {
@@ -179,20 +195,20 @@ export class RemapSchema {
       src: attribute?.src,
       alt: attribute?.alt,
       width: attribute?.commonPropsBetweenContentAndImage?.width ?? 'auto',
-      height: attribute?.commonPropsBetweenContentAndImage?.height ?? 'auto'
-    }
+      height: attribute?.commonPropsBetweenContentAndImage?.height ?? 'auto',
+    };
   }
 
   public remapContentContent(attribute: schema_site_editor_default_option_content): RemapperContentContent {
-    let widthPropertie: any = null
+    let widthPropertie: any = null;
 
-    const attributeWidth = attribute?.commonPropsBetweenContentAndImage?.width
+    const attributeWidth = attribute?.commonPropsBetweenContentAndImage?.width;
 
-    const containFlexSpaceOnAttribute = attributeWidth?.includes('width', 0)
-    const sanitizeWidth = attributeWidth || 'auto'
+    const containFlexSpaceOnAttribute = attributeWidth?.includes('width', 0);
+    const sanitizeWidth = attributeWidth || 'auto';
 
     if (!containFlexSpaceOnAttribute) {
-      widthPropertie = { width: sanitizeWidth }
+      widthPropertie = { width: sanitizeWidth };
     }
 
     return {
@@ -209,42 +225,42 @@ export class RemapSchema {
       alignItems: 'center',
       justifyContent: 'center',
       textAlign: 'center',
-      zIndex: 10
-    }
+      zIndex: 10,
+    };
   }
 
   public remapStylesApp(attribute: schema_site_editor_default_option_content, quadrant: keyof schema_site_editor_default_root_app_badge_custom): RemapperStylesApp {
-    let widthPropertie: any = null
-    const attributeWidth = attribute?.commonPropsBetweenContentAndImage?.width
+    let widthPropertie: any = null;
+    const attributeWidth = attribute?.commonPropsBetweenContentAndImage?.width;
 
-    const containFlexSpaceOnAttribute = attributeWidth?.includes('width', 0)
+    const containFlexSpaceOnAttribute = attributeWidth?.includes('width', 0);
 
     if (containFlexSpaceOnAttribute && (quadrant === 'quadrantBottom' || quadrant === 'quadrantBottomMobile')) {
       if (attributeWidth === 'widthRestOfLine') {
-        widthPropertie = { flexGrow: '1' }
+        widthPropertie = { flexGrow: '1' };
       }
 
       if (attributeWidth === 'widthAllLine') {
-        widthPropertie = { flexBasis: 'calc(100%)' }
+        widthPropertie = { flexBasis: 'calc(100%)' };
       }
 
       if (attributeWidth === 'widthHalfLine') {
-        widthPropertie = { flexBasis: 'calc(50% - 5px)' }
+        widthPropertie = { flexBasis: 'calc(50% - 5px)' };
       }
 
       if (attributeWidth === 'widthOneThird') {
-        widthPropertie = { flexBasis: 'calc(33% - 5px)' }
+        widthPropertie = { flexBasis: 'calc(33% - 5px)' };
       }
 
       return {
         containerBadge: {
-          ...widthPropertie
-        }
-      }
+          ...widthPropertie,
+        },
+      };
     } else {
       return {
-        containerBadge: {}
-      }
+        containerBadge: {},
+      };
     }
   }
 
@@ -258,86 +274,100 @@ export class RemapSchema {
         quadrantBottomMobile: null,
         quadrantTopLeftMobile: null,
         quadrantTopRightMobile: null,
-        quadrantHorizontalMobile: null
-      } as any
+        quadrantHorizontalMobile: null,
+      } as any;
     }
 
     return {
-      // @ts-ignore
-      ...Object?.keys(this?.schema)?.reduce((acc: schema_site_editor_remapped_root_custom_app_badge_custom, key: keyof schema_site_editor_default_root_app_badge_custom) => {
-        const currentQuadrantContainer = this?.schema?.[key]?.[0]
+      ...(Object.keys(this.schema) as Array<keyof schema_site_editor_default_root_app_badge_custom>).reduce<schema_site_editor_remapped_root_custom_app_badge_custom>(
+        (acc, key): schema_site_editor_remapped_root_custom_app_badge_custom => {
+          const currentQuadrantContainer = this?.schema?.[key]?.[0];
 
-        if (key === '__editorItemTitle' as any) {
-          return null
-        }
+          if (key === ('__editorItemTitle' as any)) {
+            return acc;
+          }
 
-        if (!currentQuadrantContainer) {
+          if (!currentQuadrantContainer) {
+            return {
+              ...(acc ?? {}),
+              [key]: null,
+            } as schema_site_editor_remapped_root_custom_app_badge_custom;
+          }
+
+          const attributeContainerFlag = currentQuadrantContainer?._screen_config_position;
+
           return {
             ...acc,
-            [key]: null
-          }
-        }
-
-        const attributeContainerFlag = currentQuadrantContainer?._screen_config_position
-
-        return {
-          ...acc,
-          [key]: {
-            name: key,
-            dataHTMLOnContainerFlag: {
-              style: {
-                position: 'absolute',
-                ...(key === 'quadrantHorizontal' && this?.remapQuadrantHorizontal()),
-                ...(key === 'quadrantTopLeft' && this?.remapQuadrantTopLeft(attributeContainerFlag)),
-                ...(key === 'quadrantTopRight' && this?.remapQuadrantTopRight(attributeContainerFlag)),
-                ...(key === 'quadrantBottom' && this?.remapQuadrantBottom(attributeContainerFlag)),
-                ...(key === 'quadrantHorizontalMobile' && this?.remapQuadrantHorizontalMobile()),
-                ...(key === 'quadrantTopLeftMobile' && this?.remapQuadrantTopLeftMobile(attributeContainerFlag)),
-                ...(key === 'quadrantTopRightMobile' && this?.remapQuadrantTopRightMobile(attributeContainerFlag)),
-                ...(key === 'quadrantBottomMobile' && this?.remapQuadrantBottomMobile(attributeContainerFlag))
-              }
-            },
-
-            listOfFlags: currentQuadrantContainer?.collection
-              ?.map(collection => this?.Filter?.filter(collection))
-              ?.filter(Boolean)
-              ?.map((collection) => ({
-                priority: Number(collection?.priority),
-                quadrantOwner: key,
-                currentCollection: {
-                  typeContent: collection?.typeContent,
-
-                  styles: {
-                    ...collection?.items?.[0]
-                  }
+            [key]: {
+              name: key,
+              dataHTMLOnContainerFlag: {
+                style: {
+                  position: 'absolute',
+                  ...(key === 'quadrantHorizontal' && this?.remapQuadrantHorizontal()),
+                  ...(key === 'quadrantTopLeft' && this?.remapQuadrantTopLeft(attributeContainerFlag)),
+                  ...(key === 'quadrantTopRight' && this?.remapQuadrantTopRight(attributeContainerFlag)),
+                  ...(key === 'quadrantBottom' && this?.remapQuadrantBottom(attributeContainerFlag)),
+                  ...(key === 'quadrantHorizontalMobile' && this?.remapQuadrantHorizontalMobile()),
+                  ...(key === 'quadrantTopLeftMobile' && this?.remapQuadrantTopLeftMobile(attributeContainerFlag)),
+                  ...(key === 'quadrantTopRightMobile' && this?.remapQuadrantTopRightMobile(attributeContainerFlag)),
+                  ...(key === 'quadrantBottomMobile' && this?.remapQuadrantBottomMobile(attributeContainerFlag)),
                 },
-                HTMLAttributes: collection?.HTMLMatch,
-                stylesApp: this.remapStylesApp((collection?.items as schema_site_editor_default_option_content[])?.[0], key),
-                badgesStyles: {
-                  ...collection?.typeContent === 'image' && this?.remapContentImage((collection?.items as schema_site_editor_default_option_image[])?.[0]),
+              },
+              listOfFlags: currentQuadrantContainer?.collection
+                ?.map((collection) => {
+                  const filtered = this?.Filter?.filter(collection);
+                  return filtered;
+                })
+                ?.filter(Boolean)
+                ?.filter((collection) => {
+                  const result = this?.isSchedulingValid(collection?.scheduling);
+                  return result;
+                })
+                ?.map(
+                  (collection) =>
+                    ({
+                      priority: Number(collection?.priority),
+                      quadrantOwner: key,
+                      currentCollection: {
+                        typeContent: collection?.typeContent,
 
-                  ...collection?.typeContent === 'createContent' && this?.remapContentContent((collection?.items as schema_site_editor_default_option_content[])?.[0])
-                }
-              } as schema_site_editor_remapped_custom_flag))
-              // @ts-ignore
-              ?.sort((a, b) => this?.SortMatchs
-                .sort(Number(a?.priority), Number(b?.priority),
-                  currentQuadrantContainer?._screen_config_priority?.[0]?.isInverted,
-                  currentQuadrantContainer?._screen_config_priority?.[0]?.prioritySystemOnQuadrant))
-              ?.slice(0, DEV_VAR_MAX_ITEMS_ON_QUADRANTS?.[key] ?? 10)
-          } as schema_site_editor_remapped_custom_quadrant
-        } as schema_site_editor_remapped_root_custom_app_badge_custom
-      }, {
-        quadrantBottom: null,
-        quadrantTopLeft: null,
-        quadrantTopRight: null,
-        quadrantHorizontal: null,
-        quadrantBottomMobile: null,
-        quadrantTopLeftMobile: null,
-        quadrantTopRightMobile: null,
-        quadrantHorizontalMobile: null,
-      })
+                        styles: {
+                          ...collection?.items?.[0],
+                        },
+                      },
+                      HTMLAttributes: collection?.HTMLMatch,
+                      stylesApp: this.remapStylesApp((collection?.items as schema_site_editor_default_option_content[])?.[0], key),
+                      badgesStyles: {
+                        ...(collection?.typeContent === 'image' && this?.remapContentImage((collection?.items as schema_site_editor_default_option_image[])?.[0])),
 
-    }
+                        ...(collection?.typeContent === 'createContent' && this?.remapContentContent((collection?.items as schema_site_editor_default_option_content[])?.[0])),
+                      },
+                    } as schema_site_editor_remapped_custom_flag)
+                )
+                // @ts-ignore
+                ?.sort((a, b) =>
+                  this?.SortMatchs.sort(
+                    Number(a?.priority),
+                    Number(b?.priority),
+                    currentQuadrantContainer?._screen_config_priority?.[0]?.isInverted,
+                    currentQuadrantContainer?._screen_config_priority?.[0]?.prioritySystemOnQuadrant
+                  )
+                )
+                ?.slice(0, DEV_VAR_MAX_ITEMS_ON_QUADRANTS?.[key] ?? 10),
+            } as schema_site_editor_remapped_custom_quadrant,
+          } as schema_site_editor_remapped_root_custom_app_badge_custom;
+        },
+        {
+          quadrantBottom: null,
+          quadrantTopLeft: null,
+          quadrantTopRight: null,
+          quadrantHorizontal: null,
+          quadrantBottomMobile: null,
+          quadrantTopLeftMobile: null,
+          quadrantTopRightMobile: null,
+          quadrantHorizontalMobile: null,
+        }
+      ),
+    };
   }
 }
