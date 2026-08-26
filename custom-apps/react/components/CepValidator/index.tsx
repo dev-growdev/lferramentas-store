@@ -1,7 +1,7 @@
 import { useEffect, useRef, useCallback } from 'react'
 
-interface ViaCEPResponse {
-  erro?: boolean
+interface OpenCEPResponse {
+  error?: boolean
   logradouro?: string
   bairro?: string
   localidade?: string
@@ -146,10 +146,10 @@ const CepValidator = () => {
     showLoading()
 
     try {
-      const res = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
-      const data: ViaCEPResponse = await res.json()
+      const res = await fetch(`https://opencep.com/v1/${cep}`)
+      const data: OpenCEPResponse = await res.json()
 
-      if (data.erro) {
+      if (data.error) {
         showError('CEP não encontrado. Verifique e tente novamente.')
       } else {
         cepIsValidRef.current = true
