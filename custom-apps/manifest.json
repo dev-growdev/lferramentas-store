@@ -1,7 +1,7 @@
 {
   "vendor": "lfmaquinaseferramentas",
   "name": "custom-apps",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "title": "custom-apps",
   "description": "custom-apps",
   "builders": {
@@ -43,9 +43,7 @@
     "vtex.store-icons": "0.x",
     "vtex.modal-layout": "0.x"
   },
-  "registries": [
-    "smartcheckout"
-  ],
+  "registries": ["smartcheckout"],
   "policies": [],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
