@@ -1,3 +1,175 @@
+(function ($) {
+  "use strict";
+ 
+  if (!$) {
+    return;
+  }
+ 
+  // Domínio bloqueado. Qualquer e-mail que termine com este sufixo é bloqueado.
+  var BLOCKED_DOMAIN = "@babyeat.food";
+ 
+  var EMAIL_INPUT_SELECTOR = "#client-email";
+  var MODAL_SELECTOR = "#vtex-email-block-modal";
+  var PAYMENT_HASH_FRAGMENT = "/payment";
+  var CART_HASH = "#/cart";
+ 
+  // Guarda o último e-mail conhecido (via input ou orderForm), usado
+  // para decidir se o usuário pode permanecer na etapa de pagamento.
+  var lastKnownEmail = null;
+ 
+  function isBlocked(email) {
+    if (!email) return false;
+    email = email.trim().toLowerCase();
+    return email.endsWith(BLOCKED_DOMAIN);
+  }
+ 
+  function isOnPaymentStep() {
+    return window.location.hash.indexOf(PAYMENT_HASH_FRAGMENT) !== -1;
+  }
+ 
+  function redirectToCart() {
+    if (window.location.hash !== CART_HASH) {
+      window.location.hash = CART_HASH;
+    }
+  }
+ 
+  // ---- Modal --------------------------------------------------------------
+ 
+  function showModal() {
+    if ($(MODAL_SELECTOR).length) return;
+ 
+    var $overlay = $(
+      '<div id="vtex-email-block-modal" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:99999;">' +
+        '<div style="background:#fff;border-radius:8px;padding:24px;max-width:340px;width:90%;text-align:center;font-family:inherit;box-shadow:0 8px 24px rgba(0,0,0,0.2);">' +
+          '<h3 style="margin:0 0 12px;color:#a30000;">Não foi possível continuar</h3>' +
+          '<p style="margin:0 0 20px;color:#333;font-size:14px;">Por favor, utilize outro e-mail para continuar sua compra.</p>' +
+          '<button id="vtex-email-block-btn" style="background:#a30000;color:#fff;border:none;border-radius:4px;padding:10px 20px;cursor:pointer;font-weight:bold;">Trocar e-mail</button>' +
+        "</div>" +
+      "</div>"
+    );
+ 
+    $("body").append($overlay);
+ 
+    $overlay.find("#vtex-email-block-btn").on("click", function () {
+      $overlay.remove();
+      var $input = $(EMAIL_INPUT_SELECTOR);
+      if ($input.length) {
+        $input
+          .val("")
+          // Dispara o evento input para que o knockout do checkout também
+          // limpe seu próprio estado interno (observable "email").
+          .trigger("input")
+          .trigger("focus");
+      }
+    });
+  }
+ 
+  // Ponto único chamado por todas as validações: decide se precisa
+  // mostrar o modal e/ou redirecionar, com base no e-mail mais recente
+  // conhecido e na etapa atual (hash) da URL.
+  function enforceGuard(email) {
+    lastKnownEmail = email;
+ 
+    if (!isBlocked(email)) return;
+    if (!isOnPaymentStep()) return;
+ 
+    showModal();
+    redirectToCart();
+  }
+ 
+  // ---- Validação 1: campo #client-email -----------------------------
+  // Cobre tanto a digitação manual (blur) quanto o cenário de o campo já
+  // vir preenchido/alterado sem que o usuário interaja diretamente com
+  // ele (autofill do navegador, preenchido via outra tela, valor setado
+  // programaticamente pelo próprio checkout, etc). Por isso, além do
+  // blur, mantemos uma checagem periódica leve do valor atual do input.
+ 
+  function onEmailBlur() {
+    var $input = $(EMAIL_INPUT_SELECTOR);
+    if ($input.length) {
+      enforceGuard($input.val());
+    }
+  }
+ 
+  function attachListener() {
+    var $input = $(EMAIL_INPUT_SELECTOR);
+    if ($input.length && !$input.data("emailCheckAttached")) {
+      $input.data("emailCheckAttached", true);
+      $input.on("blur", onEmailBlur);
+    }
+  }
+ 
+  // O campo #client-email pode ser renderizado um pouco depois do load
+  // (checkout é SPA). Tenta anexar algumas vezes nos primeiros segundos,
+  // sem ficar observando o DOM continuamente.
+  var attempts = 0;
+  var attachInterval = setInterval(function () {
+    attachListener();
+    attempts++;
+    if ($(EMAIL_INPUT_SELECTOR).length || attempts > 20) {
+      clearInterval(attachInterval);
+    }
+  }, 500);
+ 
+  // Checagem periódica do valor do input, independente de interação do
+  // usuário. Também serve como rede de segurança: se o usuário navegar
+  // para #/payment com um e-mail já bloqueado (sem disparar blur), essa
+  // checagem detecta em até 1s e redireciona.
+  var INPUT_POLL_INTERVAL_MS = 1000;
+  setInterval(function () {
+    var $input = $(EMAIL_INPUT_SELECTOR);
+    if ($input.length) {
+      enforceGuard($input.val());
+    } else if (lastKnownEmail) {
+      // Campo de e-mail não está mais no DOM (usuário avançou de etapa),
+      // mas ainda temos o último valor conhecido -> continua validando
+      // contra a etapa atual.
+      enforceGuard(lastKnownEmail);
+    }
+  }, INPUT_POLL_INTERVAL_MS);
+ 
+  // ---- Validação 2: e-mail direto no orderForm ---------------------------
+  // Cobre cenários em que o e-mail já vem preenchido (cliente logado,
+  // e-mail salvo/carregado automaticamente, ou inserido em outra etapa/
+  // tela) e o campo #client-email não necessariamente dispara "blur".
+ 
+  function checkOrderFormEmail(orderForm) {
+    if (!orderForm || !orderForm.clientProfileData) return;
+    enforceGuard(orderForm.clientProfileData.email);
+  }
+ 
+  // 2a. Escuta o evento nativo do checkout disparado sempre que o
+  // orderForm é atualizado (troca de etapa, autofill, login, etc).
+  $(window).on("orderFormUpdated.vtex", function (event, orderForm) {
+    checkOrderFormEmail(orderForm);
+  });
+ 
+  // 2b. Checagem inicial ao carregar a página, cobrindo o caso do
+  // e-mail já vir preenchido desde o início (ex: checkout iniciado com
+  // sessão/carrinho de um cliente já identificado).
+  var orderFormAttempts = 0;
+  var orderFormInterval = setInterval(function () {
+    if (window.vtexjs && window.vtexjs.checkout && window.vtexjs.checkout.orderForm) {
+      checkOrderFormEmail(window.vtexjs.checkout.orderForm);
+      clearInterval(orderFormInterval);
+    }
+    orderFormAttempts++;
+    if (orderFormAttempts > 20) {
+      clearInterval(orderFormInterval);
+    }
+  }, 500);
+ 
+  // ---- Validação 3: mudança de etapa (hash da URL) -----------------------
+  // Cobre o caso do usuário navegar direto para #/payment (ex: voltar
+  // pelo histórico do navegador, link direto, etc) com o e-mail já
+  // bloqueado conhecido de checagens anteriores.
+  $(window).on("hashchange", function () {
+    if (lastKnownEmail) {
+      enforceGuard(lastKnownEmail);
+    }
+  });
+})(window.$ || window.jQuery);
+
 $(document).ready(function productImageSize() {
   // melhora a qualidade da imagem dos produtos no carrinho
   var imgs = setInterval(() => {
