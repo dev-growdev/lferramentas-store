@@ -1,6 +1,23 @@
 /* Icons */
 /* Ghaus vars */
 /* From Ghaus */
+:global(.lfmaquinaseferramentas-custom-apps-0-x-spotPriceValue) {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  text-transform: none;
+  font-family: #000000;
+}
+@media only screen and (min-width: 1026px) {
+  :global(.lfmaquinaseferramentas-custom-apps-0-x-spotPriceValue) {
+    font-size: 18px;
+  }
+}
+
 :global(.vtex-account) {
   padding: 0 16px;
 }
