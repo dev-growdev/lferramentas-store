@@ -55,7 +55,7 @@
       "preventVerticalStretch": true
     },
     "children": [
-      "product-spot-price#main-product-summary",
+      "custom-pdp-spot-price",
       "conditional-measurement-unit#summary-unit-measurement",
       "rich-text#main-product-summary",
       "product-spot-price-savings#main-product-summary"

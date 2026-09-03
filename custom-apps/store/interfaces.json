@@ -191,6 +191,9 @@
   "custom-minicart-total-price": {
     "component": "CustomMinicartTotalPrice"
   },
+  "custom-pdp-spot-price": {
+    "component": "CustomPdpSpotPrice"
+  },
   "custom-add-to-cart-function": {
     "component": "AddToCartFunction"
   },

@@ -7,15 +7,10 @@
       "preventHorizontalStretch": true
     },
     "children": [
-      "product-spot-price",
+      "custom-pdp-spot-price",
       "product-selling-price#pdp",
       "conditional-measurement-unit#pdp-square-meter"
     ]
-  },
-  "product-spot-price": {
-    "props": {
-      "message": "{spotPriceValue}"
-    }
   },
 
   "product-selling-price#pdp": {

@@ -1,5 +1,14 @@
 @import '../../global/';
 
+:global(.lfmaquinaseferramentas-custom-apps-0-x-spotPriceValue) {
+  @include textConfig($black, 14, $fontExtraBold, 16, left, none, 0);
+    font-family: $primary-color; 
+
+  @include mq('1026') {
+    @include font-size(18);
+  }
+}
+
 :global(.vtex-account) {
   padding: 0 16px;
 

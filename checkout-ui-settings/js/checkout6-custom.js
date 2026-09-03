@@ -101,12 +101,12 @@ try {
 
     if (cep.length !== 8) return
 
-    fetch(`https://viacep.com.br/ws/${cep}/json/`, {
+    fetch(`https://opencep.com/v1/${cep}`, {
       signal: abortController.signal,
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.erro) {
+        if (data.error) {
           showCepError($input)
           hideShippingResults($input)
         } else {
