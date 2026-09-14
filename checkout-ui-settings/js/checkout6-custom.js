@@ -96,30 +96,30 @@ try {
     return cep.substring(0, 5) + '-' + cep.substring(5, 8)
   }
 
-  function validateCep($input, abortController) {
-    let cep = $input.val().replace(/\D/g, '')
+  // function validateCep($input, abortController) {
+  //   let cep = $input.val().replace(/\D/g, '')
 
-    if (cep.length !== 8) return
+  //   if (cep.length !== 8) return
 
-    fetch(`https://opencep.com/v1/${cep}`, {
-      signal: abortController.signal,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.error) {
-          showCepError($input)
-          hideShippingResults($input)
-        } else {
-          removeCepError($input)
-          showShippingResults($input)
-        }
-      })
-      .catch((err) => {
-        if (err.name === 'AbortError') return
-        showCepError($input)
-        hideShippingResults($input)
-      })
-  }
+  //   fetch(`https://opencep.com/v1/${cep}`, {
+  //     signal: abortController.signal,
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       if (data.error) {
+  //         showCepError($input)
+  //         hideShippingResults($input)
+  //       } else {
+  //         removeCepError($input)
+  //         showShippingResults($input)
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       if (err.name === 'AbortError') return
+  //       showCepError($input)
+  //       hideShippingResults($input)
+  //     })
+  // }
 
   function cepValidation() {
     let debounceTimer
@@ -130,44 +130,44 @@ try {
       let formattedCep = formatCep($input.val())
       $input.val(formattedCep)
 
-      let cep = formattedCep.replace(/\D/g, '')
+      // let cep = formattedCep.replace(/\D/g, '')
 
-      // Cancela requisição anterior imediatamente
-      if (currentAbortController) {
-        currentAbortController.abort()
-        currentAbortController = null
-      }
+      // // Cancela requisição anterior imediatamente
+      // if (currentAbortController) {
+      //   currentAbortController.abort()
+      //   currentAbortController = null
+      // }
 
       clearTimeout(debounceTimer)
       $('#cart-shipping-calculate').prop('disabled', true)
 
       // Esconde resultados anteriores da VTEX a cada nova digitação
-      hideShippingResults($input)
+      // hideShippingResults($input)
 
-      if (cep.length === 8) {
-        debounceTimer = setTimeout(() => {
-          currentAbortController = new AbortController()
-          validateCep($input, currentAbortController)
-        }, 400)
-      }
-    })
+      // if (cep.length === 8) {
+      //   debounceTimer = setTimeout(() => {
+      //     currentAbortController = new AbortController()
+      //     validateCep($input, currentAbortController)
+      //   }, 400)
+      // }
+    });
   }
 
-  function validatePrefilledCep() {
-    const $cepInput = $('#ship-postalCode, #cart-shipping-postal-code')
+  // function validatePrefilledCep() {
+  //   const $cepInput = $('#ship-postalCode, #cart-shipping-postal-code')
 
-    if ($cepInput.length) {
-      let formattedCep = formatCep($cepInput.val())
-      $cepInput.val(formattedCep)
+  //   if ($cepInput.length) {
+  //     let formattedCep = formatCep($cepInput.val())
+  //     $cepInput.val(formattedCep)
 
-      let cep = formattedCep.replace(/\D/g, '')
+  //     let cep = formattedCep.replace(/\D/g, '')
 
-      if (cep.length === 8) {
-        const abortController = new AbortController()
-        validateCep($cepInput, abortController)
-      }
-    }
-  }
+  //     if (cep.length === 8) {
+  //       const abortController = new AbortController()
+  //       validateCep($cepInput, abortController)
+  //     }
+  //   }
+  // }
 
   function updateSteps() {
     // timeline
@@ -213,36 +213,17 @@ try {
     })
   }
 
-  $(window).on('orderFormUpdated.vtex', function () {
-    setTimeout(() => {
-      validatePrefilledCep();
-    }, 1000);
-  });
-
   $(window).on('hashchange', () => {
     updateSteps()
-    cepValidation();
-
-    setTimeout(() => {
-      validatePrefilledCep();
-    }, 1000);
   })
 
   $(document).on('change', function () {
     setPlaceholder()
-    cepValidation()
-    setTimeout(() => {
-      validatePrefilledCep();
-    }, 1000);
   })
 
   $(document).ready(function () {
     updateSteps()
     openShipping()
-
-    setTimeout(() => {
-      validatePrefilledCep();
-    }, 1000);
   })
 } catch (e) {
   console.log(e)
