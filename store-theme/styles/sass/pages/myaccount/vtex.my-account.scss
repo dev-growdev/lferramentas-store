@@ -572,6 +572,10 @@
   }
 }
 
+:global(.vtex-my-orders-app-3-x-cancelBtn) {
+  display: none !important;
+}
+
 :global(.vtex-my-orders-app-3-x-reorderBtn),
 :global(.vtex-my-orders-app-3-x-cancelBtn),
 :global(.vtex-my-orders-app-3-x-detailsBtn),
