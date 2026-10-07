@@ -404,64 +404,140 @@ var optin = {
   },
 }
 
-function addShowPessoaFisicaFormButton() {
-  const isMobile = window.innerWidth < 1024
-  const buttonText = isMobile ? 'Comprar com CPF (Pessoa Física)' : 'Realizar compra com CPF (Pessoa Física)'
-  const hasButton = $('#button-show-pf')?.length > 0
+/**
+ * Transforma os links nativos de pessoa física/jurídica em um segmented control
+ * acima do e-mail e reorganiza os campos de pessoa jurídica:
+ * CNPJ -> Razão Social -> Nome Fantasia -> Inscrição Estadual + Telefone -> Isento.
+ *
+ * Os campos da corporate-info-box ficam dentro de blocos `ko if:` (ex.: a IE some do
+ * DOM ao marcar "Isento"), por isso eles são buscados de novo a cada ativação e o
+ * Telefone é ancorado no .clearfix, que fica fora desses blocos.
+ */
+function handleCorporateFieldsLayout() {
+  const clientInfo = document.querySelector('.box-client-info')
+  const corporateLink = clientInfo?.querySelector('#is-corporate-client')
+  const corporateToggle = corporateLink?.closest('ul')
+  const notice = clientInfo?.querySelector('.box-client-info-pf > .client-notice')
+  const phoneBox = clientInfo?.querySelector('[data-bind*="phoneTemplate"]')
 
-  if (hasButton) {
+  if (!corporateToggle || !notice || !phoneBox || corporateToggle.dataset.layoutBound === 'true') {
     return
   }
 
-  const buttonHtml = `
-    <button class="button-show-pf" id="button-show-pf" type="button">
-      <span>
-        ${buttonText}
-      </span>
-    </button>
-  `
+  corporateToggle.dataset.layoutBound = 'true'
+  corporateToggle.classList.add('corporate-toggle')
+  notice.after(corporateToggle)
+  // aba CPF primeiro também no DOM, para a ordem do Tab seguir a ordem visual
+  corporateLink.before(corporateToggle.querySelector('#not-corporate-client'))
 
-  const container = $('.box-client-info .row-fluid')
-  container?.prepend(buttonHtml)
+  const clientProfile = ko.dataFor(corporateLink)
+  const phoneOrigin = { parent: phoneBox.parentElement, nextSibling: phoneBox.nextElementSibling }
+  const toggleLinks = corporateToggle.querySelectorAll('#is-corporate-client, #not-corporate-client')
 
-  $('#button-show-pf').on('click', showPfForm)
-}
+  function setPressed(isCorporate) {
+    toggleLinks.forEach((link) => {
+      const isPressed = link.id === 'is-corporate-client' ? isCorporate : !isCorporate
+      link.setAttribute('aria-pressed', String(isPressed))
+    })
+  }
 
-function addClientProfileNotice() {
-  const noticeElement = `
-    <p class="client-notice notice" data-i18n="clientProfileData.notice">
-      Solicitamos apenas as informações essenciais para a realização da compra.
-    </p>
-  `
+  function activate() {
+    const corporateInfoBox = clientInfo.querySelector('.corporate-info-box')
+    const companyName = corporateInfoBox?.querySelector('.client-company-name')
+    const clearfix = corporateInfoBox?.querySelector(':scope > .clearfix')
 
-  const buttonContainer = $('.box-client-info .row-fluid')
+    if (!companyName || !clearfix) return
 
-  buttonContainer?.prepend(noticeElement)
-}
+    corporateInfoBox.querySelectorAll('.client-company-document').forEach((companyDocument) => {
+      corporateInfoBox.insertBefore(companyDocument, companyName)
+    })
+    clearfix.before(phoneBox)
 
-function showPfForm() {
-  const pfForm = $('.box-client-info .box-client-info-pf')
-  const goToShippingButton = $('#go-to-shipping')
-  const optinContainer = $('.checkout-optin')
-  const showPfButton = $('#button-show-pf')
-  const oldMessage = $('.box-client-info .row-fluid > .client-notice')
-  const pjButtonsContainer = $('.corporate-hide-link')
+    clientInfo.classList.add('is-corporate-fields')
+    setPressed(true)
+  }
 
-  pfForm.show()
-  goToShippingButton.show()
-  optinContainer.show()
+  function deactivate() {
+    phoneOrigin.parent.insertBefore(phoneBox, phoneOrigin.nextSibling)
 
-  showPfButton?.hide()
-  oldMessage?.remove()
-  pjButtonsContainer.addClass('has-margin-bottom')
-}
+    clientInfo.classList.remove('is-corporate-fields')
+    setPressed(false)
+  }
 
-function handlePessoaJuridicaEvent() {
-  const button = $('#is-corporate-client')
-
-  button.on('click', () => {
-    showPfForm()
+  // Os links já têm href="#" (ativados por Enter); o Space completa o comportamento de
+  // role="button". A VTEX põe tabindex="17" no link de CNPJ, o que o tira da ordem do Tab
+  toggleLinks.forEach((link) => {
+    link.setAttribute('role', 'button')
+    link.setAttribute('tabindex', '0')
+    link.addEventListener('keydown', (event) => {
+      if (event.key === ' ') {
+        event.preventDefault()
+        link.click()
+      }
+    })
   })
+
+  // Os dois links ficam sempre visíveis e o toggleCorporate nativo apenas inverte o
+  // estado, então o clique na aba já ativa não pode chegar até a VTEX. O preventDefault
+  // é necessário porque sem o handler do knockout o href="#" leva o router ao carrinho
+  corporateToggle.addEventListener(
+    'click',
+    (event) => {
+      const link = event.target.closest('#is-corporate-client, #not-corporate-client')
+      if (link && (link.id === 'is-corporate-client') === clientProfile.isCorporate()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+    },
+    true
+  )
+
+  clientProfile.isCorporate.subscribe((isCorporate) => (isCorporate ? activate() : deactivate()))
+
+  if (clientProfile.isCorporate()) {
+    activate()
+  } else {
+    setPressed(false)
+  }
+}
+
+const STICKY_FINISH_PURCHASE_HASHES = ['#/profile', '#/shipping', '#/payment']
+
+/**
+ * Barra fixa "Finalizar compra" no mobile. O checkout.disablePaymentButton só trava
+ * o clique duplo durante o envio (fica habilitado com o pagamento em branco), então o
+ * sinal de "pronto" é o hash: o router só chega em #/payment depois de validar
+ * Dados Pessoais e Entrega.
+ */
+function updateStickyFinishPurchase() {
+  let stickyBar = document.querySelector('.sticky-finish-purchase')
+
+  if (!stickyBar) {
+    $('body').append(`
+      <div class="sticky-finish-purchase">
+        <p class="sticky-finish-purchase__notice">Complete os dados para finalizar a compra</p>
+        <button class="sticky-finish-purchase__btn" type="button">Finalizar compra</button>
+      </div>
+    `)
+
+    stickyBar = document.querySelector('.sticky-finish-purchase')
+    stickyBar.querySelector('.sticky-finish-purchase__btn').addEventListener('click', () => {
+      document.querySelector('#payment-data-submit[data-bind*="isPaymentButtonVisible"]')?.click()
+    })
+  }
+
+  const hash = window.location.hash
+  const isVisible = STICKY_FINISH_PURCHASE_HASHES.includes(hash)
+
+  stickyBar.classList.toggle('is-visible', isVisible)
+  document.body.classList.toggle('has-sticky-finish-purchase', isVisible)
+
+  if (!isVisible) return
+
+  const isUnlocked = hash === '#/payment'
+
+  stickyBar.querySelector('.sticky-finish-purchase__btn').disabled = !isUnlocked
+  stickyBar.querySelector('.sticky-finish-purchase__notice').hidden = isUnlocked
 }
 
 /**
@@ -479,50 +555,6 @@ function handleGoToShippingVisibility() {
   if (goToPaymentButton?.length && !goToPaymentButtonHasDisplayNone) {
     goToShippingButton?.hide()
   }
-}
-
-function checkPersonalData() {
-  const userEmail = $('#client-email').val()
-  const userName = $('#client-first-name').val()
-  const userLastName = $('#client-last-name').val()
-  const userDocument = $('#client-document').val()
-  const userPhone = $('#client-phone').val()
-
-  if (!userEmail || !userName || !userLastName || !userDocument || !userPhone) {
-    return false
-  }
-
-  return true
-}
-
-function checkCorporateData() {
-  const userCorporateName = $('#client-company-name').val()
-  const userCnpj = $('#client-company-document').val()
-
-  if (!userCnpj || !userCorporateName) {
-    return false
-  }
-
-  return true
-}
-
-function handleProfileForm() {
-  const hasPersonalData = checkPersonalData()
-  const hasCorporateData = checkCorporateData()
-
-  if (hasPersonalData && !hasCorporateData) {
-    showPfForm()
-    return
-  }
-
-  if (hasCorporateData) {
-    showPfForm()
-    return
-  }
-
-  addShowPessoaFisicaFormButton()
-  addClientProfileNotice()
-  handlePessoaJuridicaEvent()
 }
 
 function handlePixPrice() {
@@ -699,7 +731,7 @@ $(window).on('load hashchange', function () {
       } else setTimeout(timeoutOptin, 50)
     }
     timeoutOptin()
-    handleProfileForm()
+    waitUntilExists('#is-corporate-client', handleCorporateFieldsLayout)
   }
 
   if (window.location.hash == '#/shipping') {
@@ -709,6 +741,7 @@ $(window).on('load hashchange', function () {
   }
 
   handleGoToShippingVisibility()
+  updateStickyFinishPurchase()
 })
 
 // call this handlePixPrice() on ajaxStop
