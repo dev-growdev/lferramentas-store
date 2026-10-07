@@ -1,0 +1,57 @@
+.sticky-finish-purchase {
+  display: none;
+
+  @media (max-width: 768px) {
+    &.is-visible {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      position: fixed;
+      left: 0;
+      right: 0;
+      // fica acima da barra fixa de Whatsapp/Atendimento (.bttns-wrapper)
+      bottom: 45px;
+      z-index: 99998;
+      padding: 10px 16px;
+      background: $white;
+      border-top: 1px solid $light-gray-01;
+      box-shadow: 0 -2px 8px $rgba-black;
+      box-sizing: border-box;
+    }
+  }
+
+  &__notice {
+    margin: 0;
+    @include textConfig($dark-gray-01, $primaryFont, 12, $fontRegular, 16, center, initial, 0);
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  &__btn {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 44px;
+    border: none;
+    border-radius: 8px;
+    background: $green !important;
+    @include textConfig($white, $primaryFont, 14, $fontExtraBold, 20, center, uppercase, 0);
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out;
+
+    &:disabled {
+      background: $light-gray-03 !important;
+      color: $dark-gray-01 !important;
+      opacity: 1;
+      cursor: not-allowed;
+    }
+  }
+}
+
+body.has-sticky-finish-purchase {
+  @media (max-width: 768px) {
+    padding-bottom: 140px;
+  }
+}
