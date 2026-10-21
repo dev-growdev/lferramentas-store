@@ -209,6 +209,10 @@
   "countdown-plp-custom": {
     "component": "CountdownPlp"
   },
+  "shelf-countdown": {
+    "component": "ShelfCountdown",
+    "render": "client"
+  },
   "login-event": {
     "component": "LoginEvent"
   },
