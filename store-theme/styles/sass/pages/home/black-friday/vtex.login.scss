@@ -47,3 +47,27 @@
     }
   }
 }
+
+// Vitrine destaque - versão black (inverte fundo preto/amarelo)
+// Aninhado no mesmo container do bloco acima para vencer a especificidade dele
+:global(.render-route-store-home) {
+  :global(.black-friday) {
+    :global(.flex.flex-grow-1.w-100.flex-column) {
+      :global(.vtex-flex-layout-0-x-flexRow--shelf-highlight) {
+        background-color: $yellow;
+
+        :global(.vtex-rich-text-0-x-heading--shelfTitle),
+        :global(.vtex-rich-text-0-x-link--shelfLink),
+        :global(.lfmaquinaseferramentas-custom-apps-0-x-shelfCountdownContainer) {
+          color: $black;
+        }
+
+        // Tag "% de desconto" do topo do card: preta com texto amarelo
+        :global(.vtex-product-price-1-x-spotPriceSavings--shelf-highlight-top) {
+          background-color: $black;
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
