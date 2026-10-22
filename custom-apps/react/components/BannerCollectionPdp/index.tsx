@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import React, { useRef, useEffect, useMemo } from 'react'
+import React, { useRef, useEffect, useMemo, useState } from 'react'
 import { useProduct } from 'vtex.product-context'
 import { useCssHandles } from 'vtex.css-handles'
 import { SliderLayout } from 'vtex.slider-layout'
@@ -18,6 +18,8 @@ type Banner = {
   promotionId?: string
   promotionName?: string
   promotionPosition?: string
+  startDate?: string
+  endDate?: string
 }
 
 type CollectionBanner = {
@@ -36,29 +38,66 @@ const CSS_HANDLES = [
   'carouselContainer',
 ] as const
 
+const parseDate = (value?: string) => {
+  if (!value) return null
+  const date = new Date(value)
+  return isNaN(date.getTime()) ? null : date
+}
+
+const isScheduled = (banner: Banner) =>
+  !!parseDate(banner.startDate) || !!parseDate(banner.endDate)
+
+const isWithinSchedule = (banner: Banner, now: Date | null) => {
+  if (!isScheduled(banner)) return true
+  if (!now) return false
+  const start = parseDate(banner.startDate)
+  const end = parseDate(banner.endDate)
+  if (start && now < start) return false
+  if (end && now > end) return false
+  return true
+}
+
 const BannerCollectionPdp = ({ collectionBanners }: Props) => {
   const handles: any = useCssHandles(CSS_HANDLES)
   const productContext = useProduct()
   const intl = useIntl()
   const { push } = usePixel()
 
-  const productCollections = productContext?.product?.productClusters?.map(
-    cluster => cluster.id
+  // Banners agendados só são avaliados no navegador, para não depender do cache do SSR
+  const [now, setNow] = useState<Date | null>(null)
+
+  useEffect(() => {
+    setNow(new Date())
+  }, [])
+
+  const productClusters = productContext?.product?.productClusters
+
+  const productCollections = useMemo(
+    () => productClusters?.map(cluster => cluster.id),
+    [productClusters]
   )
 
-  const matchingCollection = useMemo(() => {
-    return collectionBanners.find(
-      collection =>
-        collection.isActive &&
-        productCollections?.includes(collection.collectionId)
-    )
+  const matchingBanners = useMemo(() => {
+    return (collectionBanners ?? [])
+      .filter(
+        collection =>
+          collection.isActive &&
+          productCollections?.includes(collection.collectionId) &&
+          Array.isArray(collection.banners)
+      )
+      .reduce<Banner[]>(
+        (banners, collection) => banners.concat(collection.banners),
+        []
+      )
   }, [productCollections, collectionBanners])
 
   const bannersToDisplay = useMemo(() => {
-    return matchingCollection && Array.isArray(matchingCollection.banners)
-      ? matchingCollection.banners.filter(banner => banner.isActive)
-      : []
-  }, [matchingCollection])
+    return matchingBanners.filter(
+      banner => banner.isActive && isWithinSchedule(banner, now)
+    )
+  }, [matchingBanners, now])
+
+  const hasMultipleBanners = bannersToDisplay.length > 1
 
   const sliderLayoutProps = {
     itemsPerPage: {
@@ -72,8 +111,8 @@ const BannerCollectionPdp = ({ collectionBanners }: Props) => {
       phone: 'disabled',
     },
     infinite: true,
-    showNavigationArrows: 'desktopOnly',
-    showPaginationDots: 'mobileOnly',
+    showNavigationArrows: hasMultipleBanners ? 'desktopOnly' : 'never',
+    showPaginationDots: hasMultipleBanners ? 'always' : 'never',
     blockClass: 'carousel',
   }
 
@@ -170,7 +209,7 @@ const BannerCollectionPdp = ({ collectionBanners }: Props) => {
       >
         {bannersToDisplay.map((banner, index) => (
           <div
-            key={`${banner.id}+${banner.desktopImage}+${index}`}
+            key={`${banner.id}-${index}`}
             className={handles.carouselContainer}
             data-banner-id={`${banner.promotionName}-${banner.promotionId}`} // Adiciona atributos para identificar os banners
             data-banner-index={index}
@@ -289,6 +328,26 @@ BannerCollectionPdp.schema = {
                   title: 'Ativar/Desativar Apenas Este Banner',
                   type: 'boolean',
                   default: true,
+                },
+                startDate: {
+                  title: 'Exibir a partir de',
+                  description:
+                    'Data e hora de início da exibição do banner. Deixe vazio para exibir imediatamente.',
+                  type: 'string',
+                  format: 'date-time',
+                  widget: {
+                    'ui:widget': 'datetime',
+                  },
+                },
+                endDate: {
+                  title: 'Expirar em',
+                  description:
+                    'Data e hora em que o banner deixará de ser exibido. Deixe vazio para não expirar.',
+                  type: 'string',
+                  format: 'date-time',
+                  widget: {
+                    'ui:widget': 'datetime',
+                  },
                 },
                 analyticsProperties: {
                   title: 'Evento do Analytics',
