@@ -155,3 +155,8 @@
     }
   }
 }
+
+// Reserva o espaço das estrelas (YourViews carrega depois) para o card não "pular"
+.flexRow--container__rating {
+  min-height: 20px;
+}
