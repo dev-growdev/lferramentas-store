@@ -5,6 +5,7 @@
       /* You can make references to blocks defined in other files.
        * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
       "toggle-layout#deals",
+      "toggle-layout#shelf-highlight",
       "toggle-layout#banners-2",
       "toggle-layout#banners-3",
       "__fold__",

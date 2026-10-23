@@ -313,3 +313,69 @@
     align-items: center;
   }
 }
+
+/*
+*  Vitrine destaque (fundo full width + cronômetro)
+*  Versão black em pages/home/black-friday/vtex.login.scss
+*/
+.flexRow--shelf-highlight {
+  background-color: $black;
+  padding: 20px 0 8px;
+
+  @include mq('1026') {
+    padding: 28px 0 16px;
+  }
+
+  :global(.vtex-rich-text-0-x-heading--shelfTitle),
+  :global(.vtex-rich-text-0-x-link--shelfLink) {
+    color: $white;
+  }
+
+  :global(.vtex-rich-text-0-x-heading--shelfTitle) {
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  :global(.vtex-rich-text-0-x-paragraph--shelfLink) {
+    margin: 0;
+  }
+}
+
+// Mobile: título + "Ver mais" na 1ª linha e cronômetro full na 2ª
+// Desktop: título, cronômetro e "Ver mais" na mesma linha
+.flexRowContent--shelf-highlight-header {
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 14px;
+
+  // "Ver mais" fica sobre a linha do título no mobile
+  :global(.vtex-rich-text-0-x-container--shelfLink) {
+    position: absolute;
+    top: 0;
+    right: 5px;
+  }
+
+  @include mq('1026') {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+
+    :global(.vtex-rich-text-0-x-container--shelfLink) {
+      position: static;
+    }
+  }
+}
+
+.flexRowContent--shelf-highlight-title-group {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+
+  @include mq('1026') {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+}
