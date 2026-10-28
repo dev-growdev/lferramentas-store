@@ -17,3 +17,27 @@
     margin-right: 8px;
   }
 }
+
+.headerLink {
+  @include textConfig($white, 13, $fontRegular, 15, left, initial, 0);
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  max-width: 109px;
+  text-decoration: none;
+}
+
+.headerLinkIconContainer {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.headerLinkIcon {
+  @include size(24px);
+  object-fit: contain;
+}
+
+.headerLinkText {
+  max-width: 77px;
+  white-space: normal;
+}

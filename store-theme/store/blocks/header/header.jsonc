@@ -53,19 +53,21 @@
     "children": [
       "flex-layout.col#logo-desktop",
       "search-bar",
-      "custom-link#corporate-selling",
+      "header-link#corporate-selling",
       "login",
       "menu-item#wishlist",
       "minicart.v2"
     ]
   },
-  "custom-link#corporate-selling": {
+  "header-link#corporate-selling": {
+    "title": "Venda para Empresas",
     "props": {
-      "to": "https://ajuda.lfmaquinaseferramentas.com.br/hc/pt-br/requests/new?ticket_form_id=9506437163671",
+      "isActive": true,
       "text": "Venda para Empresas e Licitações",
+      "href": "https://ajuda.lfmaquinaseferramentas.com.br/hc/pt-br/requests/new?ticket_form_id=9506437163671",
+      "icon": "assets/icons/corporate.svg",
       "openInNewTab": true,
-      "noFollow": true,
-      "blockClass": "venda-para-empresas"
+      "noFollow": true
     }
   },
   "flex-layout.col#logo-desktop": {
