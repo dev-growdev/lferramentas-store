@@ -28,3 +28,16 @@
 :global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.lfmaquinaseferramentas-custom-apps-0-x-headingLevel2) {
   color: #ffe72e;
 }
+
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.vtex-flex-layout-0-x-flexRow--shelf-highlight) {
+  background-color: #ffe72e;
+}
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.vtex-flex-layout-0-x-flexRow--shelf-highlight) :global(.vtex-rich-text-0-x-heading--shelfTitle),
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.vtex-flex-layout-0-x-flexRow--shelf-highlight) :global(.vtex-rich-text-0-x-link--shelfLink),
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.vtex-flex-layout-0-x-flexRow--shelf-highlight) :global(.lfmaquinaseferramentas-custom-apps-0-x-shelfCountdownContainer) {
+  color: #000000;
+}
+:global(.render-route-store-home) :global(.black-friday) :global(.flex.flex-grow-1.w-100.flex-column) :global(.vtex-flex-layout-0-x-flexRow--shelf-highlight) :global(.vtex-product-price-1-x-spotPriceSavings--shelf-highlight-top) {
+  background-color: #000000;
+  color: #ffe72e;
+}

@@ -1,0 +1,141 @@
+{
+  "toggle-layout#shelf-highlight": {
+    "title": "Ativar/Desativar - Vitrine Destaque",
+    "props": {
+      "renderChildren": true
+    },
+    "children": [
+      "flex-layout.row#shelf-highlight"
+    ]
+  },
+  "flex-layout.row#shelf-highlight": {
+    "title": "Vitrine Destaque",
+    "props": {
+      "blockClass": [
+        "container__shelf-row",
+        "shelf-highlight"
+      ],
+      "fullWidth": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.col#shelf-highlight"
+    ]
+  },
+  "flex-layout.col#shelf-highlight": {
+    "props": {
+      "blockClass": "container__shelf-col",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.row#shelf-highlight-title",
+      "flex-layout.row#shelf-highlight-products"
+    ]
+  },
+  "flex-layout.row#shelf-highlight-title": {
+    "props": {
+      "blockClass": [
+        "container__shelf-row-text",
+        "shelf-highlight-header"
+      ],
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "flex-layout.row#shelf-highlight-title-group",
+      "rich-text#shelf-highlight-link"
+    ]
+  },
+  "flex-layout.row#shelf-highlight-title-group": {
+    "props": {
+      "blockClass": "shelf-highlight-title-group",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "rich-text#shelf-highlight-title",
+      "shelf-countdown#shelf-highlight"
+    ]
+  },
+  "rich-text#shelf-highlight-title": {
+    "title": "Título",
+    "props": {
+      "text": "## Ofertas em destaque",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "shelf-countdown#shelf-highlight": {
+    "title": "Cronômetro",
+    "props": {
+      "targetDate": "",
+      "hideWhenExpired": true
+    }
+  },
+  "rich-text#shelf-highlight-link": {
+    "title": "Link",
+    "props": {
+      "text": "[Ver mais](/ofertas)",
+      "blockClass": "shelfLink"
+    }
+  },
+  "flex-layout.row#shelf-highlight-products": {
+    "children": [
+      "list-context.product-list#shelf-highlight"
+    ]
+  },
+  "list-context.product-list#shelf-highlight": {
+    "blocks": [
+      "product-summary.shelf#shelf-highlight"
+    ],
+    "children": [
+      "slider-layout#shelf-highlight-products"
+    ],
+    "props": {
+      "orderBy": "",
+      "installmentCriteria": "MAX_WITHOUT_INTEREST",
+      "hideUnavailableItems": true,
+      "collection": "",
+      "maxItems": 12
+    }
+  },
+  // Mesmo card das demais vitrines, com a tag de desconto no topo
+  "product-summary.shelf#shelf-highlight": {
+    "children": [
+      "product-spot-price-savings#shelf-highlight-top",
+      "stack-layout#prodsum",
+      "flex-layout.row#container-highlights-bottom-desk",
+      "flex-layout.row#product-summary-rating",
+      "flex-layout.row#product-summary-name",
+      "condition-layout.product#availability-product-summary"
+    ],
+    "props": {
+      "blockClass": "main"
+    }
+  },
+  "product-spot-price-savings#shelf-highlight-top": {
+    "title": "Tag de desconto (topo do card)",
+    "props": {
+      "blockClass": "shelf-highlight-top",
+      "markers": ["discount"],
+      "message": "{spotPriceSavingsPercentage} de desconto"
+    }
+  },
+  "slider-layout#shelf-highlight-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 2
+      },
+      "showNavigationArrows": "desktopOnly",
+      "infinite": true,
+      "fullWidth": true,
+      "blockClass": [
+        "container__shelf-slider",
+        "carousel",
+        "grid1252"
+      ]
+    }
+  }
+}

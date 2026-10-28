@@ -94,3 +94,26 @@
     }
   }
 }
+
+// Vitrine destaque: tag de desconto no topo do card (cores do tema black em pages/home/black-friday)
+:global(.vtex-flex-layout-0-x-flexRow--shelf-highlight) {
+  .spotPriceSavings--shelf-highlight-top {
+    display: block;
+    margin: -12px -8px 8px;
+    padding: 4px 8px;
+    border-radius: 10px 10px 0 0;
+    background-color: $yellow;
+    @include textConfig($black, 12, $fontExtraBold, 16, center, initial, 0);
+
+    @include mq('1026') {
+      margin: -6px -8px 8px;
+      @include font-size(14);
+      @include line-height(18);
+    }
+  }
+
+  // a tag ao lado do preço sai, pois agora fica no topo
+  .spotPriceSavings--container__main-price-savings {
+    display: none;
+  }
+}

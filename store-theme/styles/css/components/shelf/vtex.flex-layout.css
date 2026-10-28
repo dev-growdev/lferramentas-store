@@ -172,3 +172,7 @@
   line-height: 0;
   margin-top: 4px;
 }
+
+.flexRow--container__rating {
+  min-height: 20px;
+}

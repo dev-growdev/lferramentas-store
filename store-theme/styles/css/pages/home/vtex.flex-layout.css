@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Icons */
 /* Ghaus vars */
 /* From Ghaus */
@@ -312,4 +313,65 @@
 
 .flexRowContent--deals-item {
   align-items: center;
+}
+
+/*
+*  Vitrine destaque (fundo full width + cronômetro)
+*  Versão black em pages/home/black-friday/vtex.login.scss
+*/
+.flexRow--shelf-highlight {
+  background-color: #000000;
+  padding: 20px 0 8px;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRow--shelf-highlight {
+    padding: 28px 0 16px;
+  }
+}
+.flexRow--shelf-highlight :global(.vtex-rich-text-0-x-heading--shelfTitle),
+.flexRow--shelf-highlight :global(.vtex-rich-text-0-x-link--shelfLink) {
+  color: #ffffff;
+}
+.flexRow--shelf-highlight :global(.vtex-rich-text-0-x-heading--shelfTitle) {
+  margin: 0;
+  white-space: nowrap;
+}
+.flexRow--shelf-highlight :global(.vtex-rich-text-0-x-paragraph--shelfLink) {
+  margin: 0;
+}
+
+.flexRowContent--shelf-highlight-header {
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 14px;
+}
+.flexRowContent--shelf-highlight-header :global(.vtex-rich-text-0-x-container--shelfLink) {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRowContent--shelf-highlight-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  .flexRowContent--shelf-highlight-header :global(.vtex-rich-text-0-x-container--shelfLink) {
+    position: static;
+  }
+}
+
+.flexRowContent--shelf-highlight-title-group {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+@media only screen and (min-width: 1026px) {
+  .flexRowContent--shelf-highlight-title-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
 }
