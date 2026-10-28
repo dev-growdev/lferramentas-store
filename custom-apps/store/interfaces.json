@@ -219,6 +219,9 @@
   "custom-link": {
     "component": "CustomLink"
   },
+  "header-link": {
+    "component": "HeaderLink"
+  },
   "custom-horizontal-scroll": {
     "component": "HorizontalScroll",
     "composition": "children",
