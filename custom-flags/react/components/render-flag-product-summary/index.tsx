@@ -5,15 +5,27 @@ import { useCssHandles } from 'vtex.css-handles'
 import styles from './styles.css'
 import { GlobalContext } from '../../context-global'
 import { schema_site_editor_remapped_root_custom_app_badge_custom } from '../../context-global/_interfaces'
+import { useFullProductClusters } from '../../hooks/useFullProductClusters'
 interface IProps {
   variation: string;
   keysToMatch: Array<keyof schema_site_editor_remapped_root_custom_app_badge_custom>;
 }
 
+const CSS_HANDLES = ["containerQuadrantFlagsAvanti"]
+
 export const RenderFlagProductSummary = ({ variation, keysToMatch }: IProps) => {
   const { getCollectionFlagRemapped } = useContext(GlobalContext)
+  const handles = useCssHandles(CSS_HANDLES)
 
-  const collectionsRemapped = getCollectionFlagRemapped(useProduct())
+  const productContext = useProduct()
+  const product = productContext?.product as any
+  const productClusters = useFullProductClusters(product?.productId, product?.productClusters)
+
+  const collectionsRemapped = getCollectionFlagRemapped(
+    product && productClusters !== product.productClusters
+      ? { ...productContext, product: { ...product, productClusters } }
+      : productContext
+  )
 
   if (!collectionsRemapped) {
     return null
@@ -21,14 +33,9 @@ export const RenderFlagProductSummary = ({ variation, keysToMatch }: IProps) => 
 
   const { quadrants, refinedData } = collectionsRemapped
 
-
-
   if (!quadrants || !refinedData) {
     return null
   }
-
-  const CSS_HANDLES = ["containerQuadrantFlagsAvanti"]
-  const handles = useCssHandles(CSS_HANDLES)
 
   return (
     <div className={handles.containerQuadrantFlagsAvanti}>

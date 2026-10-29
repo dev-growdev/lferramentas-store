@@ -12,13 +12,18 @@ export class PickCollectionField implements PPicker {
       return null
     }
 
-    const pickValidArray = input?.product?.clusterHighlights?.length > input?.product?.productClusters?.length
-      ?
-      input?.product?.clusterHighlights
-      :
-      input?.product?.productClusters
+    // Une as duas listas: productClusters pode vir truncado na listagem,
+    // e clusterHighlights pode conter coleções que ficaram de fora dele.
+    const allCollections = [
+      ...(input?.product?.productClusters ?? []),
+      ...(input?.product?.clusterHighlights ?? [])
+    ]
 
-    const data = pickValidArray?.map((collection) => ({
+    const uniqueCollections = allCollections.filter(
+      (collection, index) => allCollections.findIndex(item => String(item?.id) === String(collection?.id)) === index
+    )
+
+    const data = uniqueCollections.map((collection) => ({
       name: collection?.name,
       value: collection?.id
     }))
