@@ -44,6 +44,9 @@
 }
 
 :global(.yourviews-yourviewsreviews-1-x-newTestimonialItemWrapper) {
+  display: flex !important;
+  flex-direction: column;
+
   @include mq('1026', max) {
     padding-bottom: 0;
     max-width: unset;
@@ -70,14 +73,17 @@
     padding: 0 8px;
   }
 
+  // O app renderiza o bloco do usuário (nome/cidade) como irmão do card,
+  // então card + usuário são estilizados como um único card branco
   :global(.yourviews-yourviewsreviews-1-x-newTestimonialItem) {
     background-color: #fff;
-    border-radius: 0.75rem;
+    border-radius: 0.75rem 0.75rem 0 0;
     border: none;
-    min-width: 280px;
+    min-width: 0;
     min-height: unset;
     box-shadow: none;
-    padding: 14px 20px;
+    padding: 14px 20px 0;
+    flex: 1;
     justify-content: space-between;
     gap: 10px;
   }
@@ -93,7 +99,10 @@
     flex-wrap: nowrap;
     gap: 14px;
     justify-content: center;
-    margin: 10px 20px;
+    margin: 0;
+    padding: 12px 20px 16px;
+    background-color: #fff;
+    border-radius: 0 0 0.75rem 0.75rem;
   }
 
   :global(.yourviews-yourviewsreviews-1-x-newTestimonialUserInfos) {
@@ -134,6 +143,85 @@
 }
 
 :global(.yourviews-yourviewsreviews-1-x-sliderWrapper) {
+  // Core do slick: o app carrega o slick.min.css via CDN e, quando ele não
+  // carrega, os slides quebram em grade (com os clones duplicados).
+  // Mantido aqui para o carrossel ficar sempre em uma linha.
+  :global(.slick-slider) {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+  }
+
+  :global(.slick-list) {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  :global(.slick-slider .slick-track),
+  :global(.slick-slider .slick-list) {
+    transform: translate3d(0, 0, 0);
+  }
+
+  :global(.slick-track) {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    margin: 0;
+
+    // Com menos avaliações que slidesToShow o slick não rola (trilha fica em
+    // translate3d(0,0,0)) e os clones do loop infinito apareceriam duplicados
+    &[style*='translate3d(0px, 0px, 0px)'] :global(.slick-cloned) {
+      display: none;
+    }
+  }
+
+  :global(.slick-slide) {
+    float: left;
+    height: auto;
+    min-height: 1px;
+
+    > div,
+    :global(.yourviews-yourviewsreviews-1-x-newTestimonialItemWrapper) {
+      height: 100%;
+    }
+  }
+
+  :global(.slick-dots) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+
+    li button {
+      font-size: 0;
+      line-height: 0;
+      border: 0;
+      background: transparent;
+      padding: 0;
+      cursor: pointer;
+
+      &::before {
+        display: block;
+        position: static;
+      }
+    }
+  }
+
+  :global(.slick-arrow) {
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+    border: 0;
+    cursor: pointer;
+  }
+
   // Slide styles
   :global(.slick-dots) {
     @include mq('1026') {
