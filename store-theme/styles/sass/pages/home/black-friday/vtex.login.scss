@@ -13,12 +13,32 @@
       :global(.vtex-rich-text-0-x-paragraph--title-categories-item),
       :global(.yourviews-yourviewsreviews-1-x-title),
       :global(
+          .yourviews-yourviewsreviews-1-x-newTestimonialItemWrapper
+            .yourviews-yourviewsreviews-1-x-userName
+        ),
+      :global(
           .lfmaquinaseferramentas-custom-apps-0-x-clps-subtitle-container
             .lfmaquinaseferramentas-custom-apps-0-x-heading
         ),
       :global(.lfmaquinaseferramentas-custom-apps-0-x-headingLevel3) {
         color: $white;
       }
+
+      // Yourviews
+      :global(
+          .yourviews-yourviewsreviews-1-x-newTestimonialItemWrapper
+            .yourviews-yourviewsreviews-1-x-userLocalization
+        ) {
+        color: $medium-grey;
+      }
+
+      :global(.yourviews-yourviewsreviews-1-x-newTestimonialUserImage) {
+        background: white;
+        border-radius: 50%;
+        padding: 3px;
+      }
+
+      // End of Yourviews
 
       // SEO text
       :global(.lfmaquinaseferramentas-custom-apps-0-x-headingLevel2) {

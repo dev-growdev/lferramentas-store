@@ -5,7 +5,7 @@
         "tinyMobile": 1,
         "mobile": 1,
         "desktop": 2,
-        "bigDesktop": 4
+        "bigDesktop": 3
       },
       "slidesToScroll": {
         "tinyMobile": 1,
