@@ -12,9 +12,16 @@
       "flex-layout.row#selling-price",
       "condition-layout.product#pix-text",
       "flex-layout.row#installments",
+      "pdp-interactive-coupon",
       "trigger-floorcalculator",
       "flex-layout.row#buy-button"
     ]
+  },
+  "pdp-interactive-coupon": {
+    "title": "Cupom interativo PDP",
+    "props": {
+      "coupons": []
+    }
   },
   "condition-layout.product#pix-text": {
     "props": {

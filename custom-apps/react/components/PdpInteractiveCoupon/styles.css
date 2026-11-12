@@ -1,0 +1,105 @@
+/* Paleta LF: amarelo #ffe72e, preto #000, verde #008345, texto #303030, erro #d20404 */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin: 4px 0 16px;
+}
+
+.coupon {
+  display: inline-flex;
+  align-items: stretch;
+  min-height: 32px;
+  padding: 0;
+  border: 1px solid #ffe72e;
+  border-radius: 4px;
+  background: #ffffff;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: inherit;
+  transition: box-shadow 0.15s ease;
+}
+
+.coupon:not(:disabled):hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.coupon:not(:disabled):hover .tag {
+  background: #f5d800;
+}
+
+.coupon:disabled {
+  cursor: default;
+}
+
+.coupon:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  background: #ffe72e;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.code {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.containerLoading .coupon {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+.containerApplied .coupon {
+  min-width: 180px;
+  border-color: #008345;
+  background: #008345;
+}
+
+.appliedLabel {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 12px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.checkIcon {
+  font-weight: 700;
+}
+
+.containerError .coupon {
+  border-color: #d20404;
+}
+
+.containerError .tag,
+.containerError .coupon:not(:disabled):hover .tag {
+  background: #d20404;
+  color: #ffffff;
+}
+
+.errorMessage {
+  margin: 0;
+  color: #d20404;
+  font-size: 12px;
+}

@@ -179,6 +179,9 @@
   "coupons-list": {
     "component": "CouponsList"
   },
+  "pdp-interactive-coupon": {
+    "component": "PdpInteractiveCoupon"
+  },
   "news-bf": {
     "component": "NewsletterBlackFriday"
   },
