@@ -17,7 +17,8 @@
       "flex-layout.row#header-floating-buttons",
       "meta-tag",
       "custom-add-to-cart-function",
-      "login-event"
+      "login-event",
+      "growdev-chat#loja"
     ]
   },
 
@@ -99,7 +100,8 @@
       "flex-layout.row#header-floating-buttons",
       "meta-tag",
       "custom-add-to-cart-function",
-      "login-event"
+      "login-event",
+      "growdev-chat#loja"
     ]
   },
   "sticky-layout#header-mobile": {
