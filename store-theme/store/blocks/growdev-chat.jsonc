@@ -1,0 +1,15 @@
+{
+  "growdev-chat#loja": {
+    "title": "Assistente LF TECH",
+    "props": {
+      "assistantName": "LF TECH",
+      "launcherLabel": "Fale com a LF TECH",
+      "launcherOffset": { "right": 100, "bottom": 46 },
+      "theme": { "accent": "#ffe72e", "font": "Mulish, sans-serif" },
+      "pdp": {
+        "buttonText": "Adicionar ao carrinho",
+        "title": "Tire sua dúvida com a LF TECH"
+      }
+    }
+  }
+}

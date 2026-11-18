@@ -75,7 +75,8 @@
     "lfmaquinaseferramentas.custom-apps": "0.x",
     "lfmaquinaseferramentas.context-global": "0.x",
     "lfmaquinaseferramentas.custom-flags": "0.x",
-    "lfmaquinaseferramentas.similar-products-variants": "0.x"
+    "lfmaquinaseferramentas.similar-products-variants": "0.x",
+    "lfmaquinaseferramentas.growdev-chat": "0.x"
   },
   "peerDependencies": {
     "vtex.wish-list": "1.x",
